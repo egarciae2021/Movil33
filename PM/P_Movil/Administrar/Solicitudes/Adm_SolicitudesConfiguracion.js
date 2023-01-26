@@ -4066,7 +4066,7 @@ $(function () {
 			width: 50
 			}
 			,
-			/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA qwe*/
+			/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA corregidos*/
 			{
 				name: 'Desistema',
 				index: 'Desistema',
