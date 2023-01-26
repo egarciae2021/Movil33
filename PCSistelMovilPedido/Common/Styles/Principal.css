@@ -1,0 +1,68 @@
+﻿.czDLGIcon
+{
+    padding-right: 10px;
+    width: 32px;
+    height: 32px;
+    padding-bottom: 10px;
+    background-repeat: no-repeat;
+}
+
+.czDLGText
+{
+    padding-right: 20px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    font-size: 11px;
+}
+
+.czDLGBtn
+{
+    margin-right: 5px;
+    border: 1px solid #666;
+    background-color: #52A8E5;
+    color: #FFFFFF;
+    font-weight: bold;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 4px 10px;
+    outline: 0;
+    -webkit-appearance: none;
+    cursor: pointer;
+    float: right;
+    font-size: 11px;
+}
+
+.czDLGBtn:hover
+{
+    color: #003F59;
+    background-color: #DCECF4;
+    font-size: 11px;
+}
+
+.czWarning
+{
+    background-image: url('../../Common/Images/Mensajes/warning.png');
+}
+
+.czInformation
+{
+    background-image: url('../../Common/Images/Mensajes/information.png');
+}
+
+.czConfirm
+{
+    background-image: url('../../Common/Images/Mensajes/question.png');
+}
+
+.czError
+{
+    background-image: url('../../Common/Images/Mensajes/error.png');
+}
+.czStop
+{
+    background-image: url('../../Common/Images/Mensajes/information.png');
+}
+
+

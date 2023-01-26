@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<CRutasXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <pbx>C:\PcsistelNet\pbx\</pbx>
+  <backup>C:\Pcsistelnet\backup\</backup>
+  <backupcaptura>C:\PcsistelNet\BackupCaptura\</backupcaptura>
+  <excepciones>C:\PcsistelNet\Excepciones\</excepciones>
+</CRutasXML>

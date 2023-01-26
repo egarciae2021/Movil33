@@ -1,0 +1,39 @@
+2022/09/21 09:11:49.527,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/09/21 09:11:49.533,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/09/21 09:11:49.533,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/09/21 09:11:57.241,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/21 09:11:57.242,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/21 09:11:57.242,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/21 09:12:02.031,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/21 09:12:02.031,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/21 09:12:02.031,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/21 09:12:09.947,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/21 09:12:09.947,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/21 09:12:09.947,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/21 09:12:20.300,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/21 09:12:20.300,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/21 09:12:20.300,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/21 09:12:23.796,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/21 09:12:23.796,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/21 09:12:23.796,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/21 09:12:36.746,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:36.746,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:36.746,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:36.755,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:36.755,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:36.755,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/21 09:12:54.697,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:12:54.697,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:12:54.697,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:01.616,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:01.616,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:01.616,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:06.573,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/21 09:13:06.573,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/21 09:13:06.573,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/21 09:13:48.472,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:48.472,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:48.472,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/21 09:13:52.845,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/21 09:13:52.845,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/21 09:13:52.845,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039

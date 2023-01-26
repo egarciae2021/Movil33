@@ -1,0 +1,56 @@
+﻿
+ .dvChatContador {
+        border-radius: 5px;
+        position: absolute;
+        background-color: #E04343;
+        width: 20px;
+        height: 20px;
+        right: 8px;
+        /*left: 265px;*/
+        margin-top: 5px;
+        color: white;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 20px;
+    }
+
+.itemChatSeleccionado {
+    /*background-color: #F3F3F3;*/
+    border-radius: 5px;
+    background-color: #2AB1E0;
+    width: 290px;
+    /*height: 20px;*/
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.itemChat {
+    /*background-color: #F3F3F3;*/
+    border-radius: 5px;
+    background-color: #D5EAF9;
+    width: 290px;
+    /*height: 20px;*/
+    color: black;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: hand;
+    cursor: pointer;
+}
+
+    .itemChat:hover {
+        border-radius: 5px;
+        background-color: #416C73;
+        width: 290px;
+        /*height: 20px;*/
+        color: white;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 20px;
+        cursor: hand;
+        cursor: pointer;
+    }

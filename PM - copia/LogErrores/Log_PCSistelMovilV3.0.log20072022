@@ -1,0 +1,342 @@
+2022/07/20 09:15:46.190,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:15:46.198,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:15:46.198,[7],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:15:55.421,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:15:55.421,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:15:55.421,[6],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:15:59.023,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.023,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.023,[7],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.042,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.042,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.042,[9],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:15:59.066,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:15:59.066,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:15:59.066,[8],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:17:22.217,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:17:22.217,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:17:22.217,[6],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:17:28.462,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:17:28.462,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:17:28.462,[6],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:17:29.789,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.789,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.789,[12],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.797,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.797,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.797,[8],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:17:29.832,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:17:29.832,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:17:29.832,[5],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:26:11.418,[21],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:26:11.418,[21],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:26:11.418,[21],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:26:20.288,[25],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:26:20.288,[25],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:26:20.288,[25],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:26:23.087,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.087,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.087,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.097,[25],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.097,[25],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.097,[25],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:26:23.122,[42],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:26:23.122,[42],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:26:23.122,[42],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:33:47.420,[41],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:33:47.420,[41],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:33:47.420,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:33:56.375,[41],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:33:56.375,[41],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:33:56.375,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:33:57.864,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.864,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.864,[64],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.872,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.872,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.872,[66],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:33:57.899,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:33:57.899,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:33:57.899,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:37:10.461,[41],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:37:10.461,[41],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:37:10.461,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:37:16.599,[69],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:37:16.599,[69],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:37:16.599,[69],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:37:17.860,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.861,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.861,[57],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.877,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.877,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.877,[41],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:37:17.910,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:37:17.910,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:37:17.910,[66],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:38:22.300,[57],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:38:22.300,[57],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:38:22.300,[57],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:38:30.161,[63],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:38:30.161,[63],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:38:30.161,[63],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:38:32.055,[40],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.055,[40],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.055,[40],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.064,[63],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.065,[63],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.065,[63],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:38:32.096,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:38:32.096,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:38:32.096,[50],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:53:24.742,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:53:24.754,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:53:24.754,[10],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:53:32.431,[14],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:53:32.432,[14],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:53:32.432,[14],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:53:35.581,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:53:35.581,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:53:35.581,[10],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:53:35.616,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:53:35.616,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:53:35.616,[11],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:54:37.613,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:54:37.613,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:54:37.613,[9],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:54:44.491,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:54:44.491,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:54:44.491,[9],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:54:45.867,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.867,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.867,[17],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.876,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.876,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.876,[10],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:54:45.897,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:54:45.898,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:54:45.898,[8],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:00.092,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:56:00.092,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:56:00.092,[11],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:56:07.278,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:07.279,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:07.279,[9],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:10.275,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:10.275,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:10.275,[24],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:32.268,[19],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 09:56:32.268,[19],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 09:56:32.268,[19],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 09:56:40.541,[17],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:40.541,[17],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:40.541,[17],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 09:56:43.221,[25],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.221,[25],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.221,[25],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.229,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.230,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.230,[18],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 09:56:43.255,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:43.255,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 09:56:43.255,[21],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:24:39.720,[78],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:24:39.720,[78],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:24:39.720,[78],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:24:45.818,[88],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:24:45.819,[88],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:24:45.819,[88],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:24:47.296,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.296,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.296,[85],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.305,[88],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.305,[88],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.305,[88],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:24:47.339,[98],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:24:47.339,[98],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:24:47.339,[98],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:25:42.269,[87],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:25:42.269,[87],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:25:42.269,[87],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:25:48.465,[87],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:25:48.465,[87],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:25:48.465,[87],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:25:49.723,[96],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.723,[96],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.723,[96],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.733,[98],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.733,[98],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.733,[98],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:25:49.760,[88],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:25:49.760,[88],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:25:49.760,[88],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:33:53.544,[80],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:33:53.544,[80],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:33:53.544,[80],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:33:55.560,[84],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:33:55.560,[84],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:33:55.560,[84],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:34:01.555,[84],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:34:01.555,[84],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:34:01.555,[84],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:34:02.839,[84],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.839,[84],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.839,[84],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.847,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.847,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.847,[73],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:34:02.872,[80],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:34:02.872,[80],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:34:02.872,[80],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:35:38.794,[73],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:35:38.794,[73],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:35:38.794,[73],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:35:48.676,[69],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:35:48.676,[69],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:35:48.676,[69],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:35:51.578,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.578,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.578,[75],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.586,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.586,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.586,[73],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:35:51.611,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:35:51.611,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:35:51.611,[69],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:36:17.008,[78],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:36:17.008,[78],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:36:17.008,[78],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:36:25.441,[75],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:36:25.441,[75],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:36:25.441,[75],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:36:28.075,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.075,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.075,[78],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.085,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.085,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.085,[71],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:36:28.130,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:36:28.130,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:36:28.130,[68],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:37:29.311,[50],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:37:29.311,[50],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:37:29.311,[50],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:37:37.763,[50],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:37:37.763,[50],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:37:37.763,[50],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:37:40.418,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.419,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.419,[69],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.430,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.430,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.430,[50],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:37:40.455,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:37:40.455,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:37:40.455,[66],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:40:52.681,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.487020645639723
+2022/07/20 10:40:52.681,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.487020645639723
+2022/07/20 10:40:52.681,[50],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.487020645639723
+2022/07/20 10:53:04.162,[72],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:53:04.162,[72],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:53:04.162,[72],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:53:13.702,[63],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:53:13.702,[63],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:53:13.702,[63],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:53:16.514,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.514,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.514,[22],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.522,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.522,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.522,[74],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:53:16.554,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:53:16.554,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:53:16.554,[31],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:57:24.570,[26],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 10:57:24.570,[26],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 10:57:24.571,[26],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 10:57:32.611,[26],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:57:32.611,[26],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:57:32.611,[26],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 10:57:35.347,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.347,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.347,[18],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.356,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.356,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.356,[27],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 10:57:35.385,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:57:35.385,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 10:57:35.385,[26],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:01:37.233,[16],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 16:01:37.244,[16],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 16:01:37.244,[16],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 16:01:45.150,[30],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:01:45.151,[30],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:01:45.151,[30],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:01:48.882,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.882,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.882,[33],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.886,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.886,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.886,[16],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:01:48.955,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:01:48.955,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:01:48.956,[18],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:06:57.849,[26],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 16:06:57.849,[26],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 16:06:57.849,[26],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 16:07:07.896,[28],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:07:07.896,[28],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:07:07.896,[28],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:07:11.027,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.027,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.027,[24],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.039,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.039,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.039,[33],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos_Clave.aspx?inCod=108&inTip=3&inTipOri=1
+2022/07/20 16:07:11.093,[40],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:07:11.093,[40],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:07:11.093,[40],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx
+2022/07/20 16:10:22.385,[46],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/07/20 16:10:22.385,[46],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/07/20 16:10:22.385,[46],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/07/20 16:10:28.489,[61],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2022/07/20 16:10:28.489,[61],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2022/07/20 16:10:28.489,[61],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2022/07/20 16:11:24.791,[24],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/20 16:11:24.791,[24],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/20 16:11:24.791,[24],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/20 16:11:30.209,[22],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/20 16:11:30.209,[22],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/20 16:11:30.209,[22],INFO  ,Componente - test - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/20 16:11:32.827,[24],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/20 16:11:32.827,[24],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/20 16:11:32.827,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/20 16:11:40.715,[28],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:11:40.715,[28],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:11:40.715,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/20 16:11:43.625,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/20 16:11:43.625,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/20 16:11:43.625,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/20 16:12:04.545,[24],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Usuario&inCod=42&inTip=3&inTipOri=0
+2022/07/20 16:12:04.545,[24],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Usuario&inCod=42&inTip=3&inTipOri=0
+2022/07/20 16:12:04.545,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Usuario&inCod=42&inTip=3&inTipOri=0
+2022/07/20 16:12:07.969,[24],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/07/20 16:12:07.970,[24],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/07/20 16:12:07.970,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/07/20 16:12:10.286,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_Usuario.aspx?vcTab=SEG_Usuario
+2022/07/20 16:12:10.286,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_Usuario.aspx?vcTab=SEG_Usuario
+2022/07/20 16:12:10.286,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_Usuario.aspx?vcTab=SEG_Usuario
+2022/07/20 16:12:13.253,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=
+2022/07/20 16:12:13.253,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=
+2022/07/20 16:12:13.253,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=
+2022/07/20 16:12:24.836,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:12:24.836,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:12:24.837,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:12:24.838,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:12:24.838,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:12:24.838,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2022/07/20 16:14:19.167,[28],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/07/20 16:14:19.167,[28],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/07/20 16:14:19.167,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/07/20 16:14:21.805,[21],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2022/07/20 16:14:21.805,[21],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2022/07/20 16:14:21.805,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx

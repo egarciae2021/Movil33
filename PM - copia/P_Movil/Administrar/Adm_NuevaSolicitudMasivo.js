@@ -1,0 +1,5144 @@
+﻿var ModelosNuevosSeleccionados = "";
+var PlanesSeleccionados = "";
+var CuentasNuevosSeleccionados = "";
+
+var ListaPlanPorModelos = null;
+
+var ListaPlanPorGrupos = null;
+var ListaPlanPorGruposOptions = "";
+
+var ListaCuentas = null;
+var ListaCuentasOptions = "";
+
+var inTipoCostoReposicion = 1; //0=Sólo Penalidad; 1=Equipo+Penalidad; 2=Sólo Equipo(para cambio)
+var $contents;
+var arMeses = [{ valor: 1, mes: 'Enero' }, { valor: 2, mes: 'Febrero' }, { valor: 3, mes: 'Marzo' }, { valor: 4, mes: 'Abril' }, { valor: 5, mes: 'Mayo' }, { valor: 6, mes: 'Junio' }, { valor: 7, mes: 'Julio' }, { valor: 8, mes: 'Agosto' }, { valor: 9, mes: 'Septiembre' }, { valor: 10, mes: 'Octubre' }, { valor: 11, mes: 'Noviembre' }, { valor: 12, mes: 'Diciembre' }];
+var arMesesShort = [{ valor: 1, mes: 'Ene' }, { valor: 2, mes: 'Feb' }, { valor: 3, mes: 'Mar' }, { valor: 4, mes: 'Abr' }, { valor: 5, mes: 'May' }, { valor: 6, mes: 'Jun' }, { valor: 7, mes: 'Jul' }, { valor: 8, mes: 'Ago' }, { valor: 9, mes: 'Sep' }, { valor: 10, mes: 'Oct' }, { valor: 11, mes: 'Nov' }, { valor: 12, mes: 'Dic' }];
+var arValTipos = [];
+var arNombreTipos = [];
+
+var codDispTemp = '';
+var codIMEITemp = '';
+var lstUbicaciones = [];
+var contenidoTab = '';
+var arIndexTabMostrados = [];
+var arTabMostrados = [];
+var valAvance = true;
+var msgValidacionGrilla = '';
+//variables para resumen
+var ResumenModeloSeleccionado = '';
+var ResumenNombreModeloGaleria = '';
+var ResumenNombreOperador = '';
+var ResumenNombrePlan = '';
+var ResumenCostoReferencial = '';
+var ResumenCostoExtra = '';
+var ResumenFechaFinContrato = '';
+var ResumenNuevo = true;
+var ResumenPlanActual = '';
+var ResumenTipoLinea = '';
+//variables financiamietno
+var MesCuo = "0";
+var MesesCuotas = '';
+var NumMinCuo = "0";
+var NumMaxCuo = "0";
+var MinPerGra = '0';
+var MaxPerGra = '0';
+//fin variables para resumen
+var permiteLinea = false;
+var tabPlanesVisible = true;
+var arContenidos = [];
+var dataItem;
+//SERVICIOS
+var arServiciosActuales = [];
+//AMPLIACION
+var codOpeAutoCompPlanes = '';
+var codPlanActual = '';
+var tblServicio;
+var textServicios = '';
+var textPaquetes = '';
+var newKendoGrid = true;
+var lstServiciosCuenta;
+//CONDICIONES
+var tieneContrato = false;
+var acuerdo = true;
+//MENSAJE
+var MensajeValidTipo = 'w'; //w=palabras; c=caracteres; //tipo de validación
+var MensajeValidCant = '2'; //cantidad minima ingresada
+var MensajeValidCantMax = '5000';
+//ADJUNTOS
+var AdjuntosCantidad = '2'; //cantidad de archivos adjutnso que se pueden agregar
+var AdjuntosExtensiones = 'txt,pdf'; //formatos validos a agregar
+var AdjutnosTamanoTipo = 'i'; //t=total; i=individual; //tipo de validación
+var AdjuntosTamanoMaxNum = '2'; //cantidad del tamaño de adjuntos
+var AdjuntosTamanoMedida = 'mb'; //medida de validación de tamaño
+//NAVEGACION
+var ultimoTab = '';
+var blUsarPrecio = 1;  // 1 = Precio Lista ; 0 = Precio Especial
+
+//JHERRERA 20160823: Se pidió cambio para chile
+var inMostrarNumCuotas = 0;
+
+//OBJETOS
+function empleado() {
+    this.P_vcCod;
+    this.vcNom;
+    this.vcVal;
+}
+//COSTO DE MODELO DE DISPOSITIVO
+var PreciosOperador = [];
+var inCodOpe = -1;
+//INDEX TAB ACTUAL
+var indexTab;
+var oCulturaLocal = window.parent.parent.oCulturaUsuario;
+var indiceTab;
+var vcRutaCondiciones = "";
+var biEsPer = false;
+var tbSolicitud;
+
+//carpeta de dominio
+var CarpetaDiminio = '';
+
+var tbAmpPaquetes;
+$(function () {
+    //    $("#divFinanciamiento").hide();
+
+    CarpetaDiminio = window.top.$("#hdfCodigoDominio").val() != '' ? '/' + window.top.$("#hdfCodigoDominio").val() : '';
+    indiceTab = window.parent.tab.tabs("option", "selected");
+    if ($("#hdfEsModal").val() == "0") {
+        indexTab = window.parent.tab.tabs("option", "selected");
+        indiceTab = window.parent.tab.tabs("option", "selected");
+    } else {
+        $("#tdEstadosCreacion").hide();
+    }
+
+    $(window).resize(function (a, c) {
+        DimPosElementos();
+    });
+    DimPosElementos();
+    $("#ddlEstadoCreacion").change(function () {
+        if ($("#ddlEstadoCreacion").val() == "32") {
+            $("#lblMensajeEstado").html("Solicitud en espera de iniciar el ciclo respectivo.");
+        } else if ($("#ddlEstadoCreacion").val() == "33") {
+            $("#lblMensajeEstado").html("Solicitud lista para iniciar el proceso respectivo.");
+        } else if ($("#ddlEstadoCreacion").val() == "34") {
+            $("#lblMensajeEstado").html("Solicitud en espera de ser procesada por un especialista.");
+        }
+    });
+
+    if ($("#hdfAdmin").val() == "0") {
+        $("#btnBusquedaEmpleado").hide();
+    }
+    $("input:checkbox,input:radio,input:file").uniform();
+    $(".btnNormal").button({});
+    //ActivarCombokendo("#ddlTipoSolicitud", "200");
+    combokendoFormar("ddlTipoSolicitud", "200");
+    combokendoFormar("ddlTipoServicio", "150");
+    $("#ddlTipoSolicitud").data("kendoComboBox").select(-1);
+    $("#btnEquiSol").hide();
+    $("#btnAtras").hide();
+    $("#btnSiguiente").hide();
+    $("#dvCreacionEstado").hide();
+    $("#btnFinalizar").hide();
+    //$("#ddlTipoSolicitud").kendoComboBox({ enable: false });
+
+
+
+    var dataGrilla = new kendo.data.DataSource({
+        data: []
+    });
+
+    //TABS
+    tbSolicitud = $("#tbSolicitud").tabs({
+        select: function (event, ui) {
+            var numTabs = $("#tbSolicitud").tabs("length");
+            var tabActual = tbSolicitud.tabs('option', 'selected');
+            var tabSeleccionado = ui.index;
+            var idTabSeleccionado = ui.panel.id;
+            //actualizar captura planes
+            //alert(idTabSeleccionado + ", " + codDispTemp + ", " + $("#hdfCodModDis").val());
+            if (idTabSeleccionado == "tabResumen") {
+                resumen();
+            }
+            if (idTabSeleccionado == "tabPaquetes") {
+                if (codIMEITemp != $("#hdfLineaSel").val()) {
+                    codIMEITemp = $("#hdfLineaSel").val();
+                    LimpiarTabPaquetes();
+                }
+                paquetes();
+            }
+            if (idTabSeleccionado == 'tabDispositivos') {
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+            } else {
+                $("#lblMensajeVerificacion").html('');
+            }
+            //alert("plan \nTemp: " + codDispTemp + "\nhdf: " + $("#hdfCodModDis").val());
+            if (idTabSeleccionado == 'tabPlanes') {
+                //alert($("#hdfCodModDis").val() + ", " + ResumenNombreModeloGaleria);
+                $("#txtModeloSeleccionado").val(ResumenNombreModeloGaleria);
+                $("#txtModeloSeleccionado").attr("title", ResumenNombreModeloGaleria);
+                if ($("#txtCostoModelo").val() == '') {
+                    $("#txtCostoModelo").val("Seleccione operador");
+                }
+            }
+            if (idTabSeleccionado == 'tabServicios') {
+                setCaptura('Servicios', fnValidarCambiosEnActivacionDeServicios());
+            }
+            if (codDispTemp != $("#hdfCodModDis").val()) {
+                codDispTemp = $("#hdfCodModDis").val();
+                if (idTabSeleccionado == 'tabPlanes') {
+                    $("#hdfCodPlan").val('');
+                    $("#ddlOperador").data("kendoComboBox").select(0);
+                    $("#ddlPlan").data("kendoComboBox").select(0);
+                    $("#ddlPlan").data("kendoComboBox").enable(false);
+                    $("#txtCostoModelo").val("Seleccione operador");
+                    $("#trDetalle").hide();
+                    setCaptura('Planes', false);
+                }
+                //$("#hdfCodModDis").val(codDispTemp);
+                //alert($("#hdfCodModDis").val());
+            }
+            //actualizar captura de modelo desde galeria
+            if (codIMEITemp != $("#hdfCodImeiSel").val()) {
+                //alerta("galeria - " + codIMEITemp + " - " + $("#hdfCodImeiSel").val());
+                //$("#hdfCodModDis").val('');
+                if (idTabSeleccionado == "tabGaleria") {
+                    $("#hdfCodModDis").val('');
+                    $("#hdfCodImeiSel").val(codIMEITemp);
+                    //$("#ifGaleria").attr("src", "");
+                    var tipoSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+                    var permLIn = permiteLinea ? '1' : '0';
+                    var codPlanSel = $("#hdfCodPlanSel").val();
+                    $("#ifGaleria").attr("src", "");
+
+                    $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&tipSol=" + tipoSolicitud + "&lin=" + permLIn + "&plan=" + codPlanSel + "&inCodOpe=" + inCodOpe);
+                }
+            }
+            //alerta("numero tabs = " + numTabs + "\n tab actual index = " + tabActual + " \n tab seleccionado index " + tabSeleccionado + "\nidTabSeleccionado -> " + idTabSeleccionado);
+            if (tabSeleccionado == numTabs - 1) {
+                $("#btnAtras").show();
+                $("#btnSiguiente").hide();
+                $("#btnFinalizar").show();
+                $("#dvCreacionEstado").show();
+                $("#btnFinalizar").button("option", "disabled", false);
+            } else if (tabSeleccionado == 0) {
+                $("#btnAtras").hide();
+                $("#btnSiguiente").show();
+                $("#dvCreacionEstado").hide();
+                $("#btnFinalizar").hide();
+            } else {
+                $("#btnAtras").show();
+                $("#btnSiguiente").show();
+                $("#dvCreacionEstado").hide();
+                $("#btnFinalizar").hide();
+            }
+            //varificar captura de datos por pestaña
+
+            //setCaptura(idTabSeleccionado.substring(3), verificarCaptura(idTabSeleccionado.substring(3)));
+            if (verificarCaptura(idTabSeleccionado.substring(3))) {
+                if (tabSeleccionado == numTabs - 1) {
+                    $("#btnFinalizar").button("option", "disabled", false);
+                } else {
+                    $("#btnSiguiente").button("option", "disabled", false);
+                }
+            } else {
+                if (tabSeleccionado == numTabs - 1) {
+                    $("#btnFinalizar").button("option", "disabled", true);
+                } else {
+                    $("#btnSiguiente").button("option", "disabled", true);
+                }
+            }
+
+            if (tieneContrato) {
+                if (acuerdo) {
+                    $("#btnFinalizar").button("option", "disabled", false);
+                } else {
+                    $("#btnFinalizar").button("option", "disabled", true);
+                }
+            }
+
+            //JHERRERA 20150311: Nueva configuración (botón refrescar)
+            //            var tabSelection = tbSolicitud.tabs('option', 'selected');
+            //            if (arContenidos[0].mostrarRefrescar) {
+            if (arContenidos[tabSeleccionado].mostrarRefrescar) {
+                $('#btnRefrescar').show();
+            } else {
+                $('#btnRefrescar').hide();
+            }
+
+        },
+        add: function (event, ui) {
+            $(ui.panel).append($("#div" + contenidoTab).html());
+            $(".btnNormal").button({});
+            var altoContenidoTab = $("#tbSolicitud").css("height");
+            switch (contenidoTab) {
+                case "LineasEmpleados":
+                    grillaLineas();
+                    break;
+                case ("Dispositivos"):
+                    grillaDispositivos();
+                    break;
+                case ("Mensaje"):
+                    mensajeKendo();
+                    break;
+                case ("Galeria"):
+                    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+                    if (tipsol == 2) {
+                        var permLIn = permiteLinea ? '1' : '0';
+                        $("#ifGaleria").css("height", parseInt(altoContenidoTab) - 40);
+                        $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=@x@&tipSol=" + tipsol + "&lin=" + permLIn);
+                    }
+                    setCaptura('Galeria', true);
+                    break;
+                case ("Servicios"):
+                    servicios();
+                    break;
+                case ("Planes"):
+                    planes();
+                    tabPlanesVisible = true;
+                    break;
+                case ("Condiciones"):
+                    condiciones();
+                    break;
+                case ("SolicitudPersonalizada"):
+                    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+                    $("#ifSolPer").css("height", parseInt($("#tbSolicitud").css("height")) - 35);
+                    $("#ifSolPer").attr("src", "Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&inTipSol=" + tipsol + "&biAdmin=" + $("#hdfAdmin").val());
+                    break;
+                    //case ("Paquetes"):                                                                                                               
+                    //    alert("KJLJ");                                                                                                               
+                    //    break;                                                                                                               
+                    //case ("Resumen"):                                                                                                               
+                    //    resumen();                                                                                                               
+                    //    break;                                                                                                               
+            }
+        }
+    }); //FIN TABS
+
+    $("#tbSolicitud").tabs("option", "active", 1);
+    //$("#txtEmpleado").focus();
+    $("#btnQuitarEmpleado").click(function () {
+        //var rowid = $('#grid').jqGrid('getGridParam', 'selrow');
+        var rowsId = $('#grid').jqGrid("getGridParam", "selarrrow");
+
+        if (rowsId.length == 0) {
+            alerta("Seleccione un registro");
+        }
+        else {
+            confirmacion("Se quitarán los ítems seleccionados. ¿Desea continuar?", function () {
+                var rowData;
+                var i = 0;
+                do {
+                    rowData = $("#grid").getRowData(rowsId[0]);
+                    for (var j = 0; j < ListaEmpleados.length; j++) {
+                        if (ListaEmpleados[j].P_vcCod == rowData.CodEmpleado) {
+                            ListaEmpleados.splice(j, 1);
+                            break;
+                        }
+                    }
+                    $('#grid').jqGrid('delRowData', rowsId[0]); //Al eliminar el registro el objeto rowsId se actualiza...
+                    i++;
+                } while (rowsId.length > 0);
+                ActualizarComboModeloActual_Filtro();
+                ActualizarComboCuenta_Filtro();
+                $(".ui-pg-selbox").change();
+            });
+        }
+    });
+    $("#btnQuitarErrados").click(function () {
+        confirmacion("Se quitarán todos los registros observados. ¿Desea continuar?", function () {
+            //var lista = $("#grid").getDataIDs(); //Obtiene toda lista de la paginación actual
+            var lista = $.extend(true, {}, [$('#grid').getGridParam('data')])[0];  //Obtiene toda la lista incluida la paginación
+            var rowData;
+            for (i = 0; i < lista.length; i++) {
+                rowData = lista[i];
+                if (rowData.Observacion != "" && rowData.Observacion != "OK") {
+                    for (var j = 0; j < ListaEmpleados.length; j++) {
+                        if (ListaEmpleados[j].P_vcCod == rowData.CodEmpleado) {
+                            ListaEmpleados.splice(j, 1);
+                            break;
+                        }
+                    }
+                    for (var k = 0; k < $('#grid').getGridParam('data').length; k++) {
+                        if ($('#grid').getGridParam('data')[k].id == rowData.id) {
+                            $('#grid').getGridParam('data').splice(k, 1);
+                            break;
+                        }
+                    }
+                }
+                //$(".ui-pg-input").val("1");
+                //$(".ui-pg-selbox").change();
+            }
+
+            $("#grid").jqGrid().trigger('reloadGrid', [{ page: 1 }]);
+
+            if ($("#cboModeloActual_Filtro").val() == "(Todos)") {
+                ActualizarComboModeloActual_Filtro();
+            }
+            if ($("#cboCuenta_Filtro").val() == "(Todos)") {
+                ActualizarComboCuenta_Filtro();
+            }
+
+            $(".ui-pg-selbox").change();
+
+        });
+    });
+
+    $("#btnGuardarSolicitudesMasivo").click(function () {
+        GuardarSolicitudesMasivo();
+    });
+
+    $("#btnBusquedaEmpleado").click(function () {
+        //alert($("#hdfCodEmpleado").val());
+        //mostrar seleccion empleado
+        //var $width = 763;
+        //var $height = 510;
+        var $height;
+        if ($(window).height() - 20 > 510) {
+            $height = 510;
+        } else {
+            $height = $(window).height() - 20;
+        }
+
+        var $width;
+        if ($("#hdfDefTipoSolicitud").val() == "30" && $("#hdfEsCulminada").val() == "1") {
+            $width = 685;
+            $('#divSeleccionEmpleado').css("overflow-y", "hidden");
+        }
+        else {
+            $width = 908;
+        }
+        $width += 20;
+
+        var $Pagina = '../Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1';
+        $("#ifSeleccionEmpleado").attr("src", $Pagina);
+
+        $("#ifSeleccionEmpleado").css("width", "910px");
+
+        Modal = $('#divSeleccionEmpleado').dialog({
+            title: "Seleccionar Empleado",
+            width: $width,
+            height: $height,
+            modal: true,
+            resizable: false
+        });
+
+    });
+
+    //JHERRERA 20150311: Nueva configuración (botón refrescar)
+    var vcDiv = '<div id="btnRefrescar" class="Refrescar" title="Volver a cargar página" width="50px" style="right: 5px; top: 2px; margin-top:5px; margin-right: 5px; position: absolute; cursor: pointer; display:none; height: 4px !important;">';
+    vcDiv = vcDiv + '<img src="../../Common/Images/Mantenimiento/Refresh_22x22.png" width="22" height="22">';
+    vcDiv = vcDiv + '</div>';
+    $("#tbSolicitud").append(vcDiv);
+
+    $(".servicio").live("change", function () {
+        if (!fnValidarCambiosEnActivacionDeServicios()) {
+            $("#btnSiguiente").button("option", "disabled", true);
+            fnDesactivarSiguientesVentanas();
+        } else {
+            $("#btnSiguiente").button("option", "disabled", false);
+        }
+    });
+
+    $('#btnRefrescar').click(function () {
+        var tabSelection = tbSolicitud.tabs('option', 'selected');
+        var tabMostrado = arContenidos[tabSelection].contenido;
+        var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+
+        switch (tabMostrado) {
+            case ("Dispositivos"):
+                fnActualizarDispositivos();
+                break;
+            case ("Galeria"):
+                fnActualizarGaleria(tipsol);
+                break;
+            case ("Servicios"):
+                //                servicios();
+                fnActualizarServicios();
+                break;
+            case ("Paquetes"):
+                if (tbAmpPaquetes.jqGrid('getGridParam', 'records') != 0) {
+                    $("#divMsjRefrescarPaquetes").dialog({
+                        title: "Refrescar Paquetes",
+                        modal: true,
+                        buttons: {
+                            "Continuar": function () {
+                                $(this).dialog("close");
+                                fnActualizarPaquetes();
+                            },
+                            "Cancelar": function () {
+                                $(this).dialog("close");
+                            }
+                        },
+                        resizable: false
+                    });
+                } else {
+                    fnActualizarPaquetes();
+                }
+                break;
+            case ("Planes"):
+                fnActualizarPlanes();
+                //                tabPlanesVisible = true;
+                break;
+            case ("Condiciones"):
+                //                condiciones();
+                listarContenidosPorTipoSol(tipsol, 1);
+                break;
+            case ("SolicitudPersonalizada"):
+                $("#lblMsjConfirmacion").text("Se volverá a cargar la página y perderá los cambios que no haya guardado. ¿Desea continuar?");
+                $('#divMsgConfirmar').dialog({
+                    title: "¡Alerta!",
+                    modal: true,
+                    width: 330,
+                    buttons: {
+                        "Si": function () {
+                            $("#ifSolPer").attr("src", "Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&inTipSol=" + tipsol + "&biAdmin=" + $("#hdfAdmin").val());
+                            $(this).dialog("close");
+                        },
+                        "Cancelar": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+                break;
+        }
+    });
+
+    function fnActualizarServicios() {
+        cargarServicios_x_Grupo();
+        fnDesactivarSiguientesVentanas();
+        setCaptura('Servicios', false);
+        $("#btnSiguiente").button("option", "disabled", true);
+    }
+
+    function fnActualizarPaquetes() {
+        $("#hdfCodPlan").val('');
+        if (codIMEITemp != $("#hdfLineaSel").val()) {
+            codIMEITemp = $("#hdfLineaSel").val();
+        }
+        LimpiarTabPaquetes();
+        paquetes();
+
+        var tabSeleccionado = tbSolicitud.tabs('option', 'selected');
+        if (arContenidos[tabSeleccionado].obligatorio) {
+            $("#btnSiguiente").button("option", "disabled", true);
+            fnDesactivarSiguientesVentanas();
+        }
+    }
+
+
+
+    function fnActualizarGaleria(tipoSolicitud) {
+        var permLIn = permiteLinea ? '1' : '0';
+
+        //        if (tipsol == 2) {
+        //            $("#ifGaleria").css("height", parseInt(altoContenidoTab) - 40);
+        //            $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&tipSol=" + tipsol + "&lin=" + permLIn);
+        //        } else {
+        //        $("#lblMensajeVerificacion").html("");
+        $("#hdfCodModDis").val('');
+        $("#hdfCodImeiSel").val(codIMEITemp);
+        var codPlanSel = $("#hdfCodPlanSel").val();
+        if (tipoSolicitud == 2) {
+            $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&tipSol=" + tipoSolicitud + "&lin=" + permLIn);
+            VerificaHabilitadoEmpleado($("#hdfCodEmpleado").val(), "0");
+        } else {
+            $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&tipSol=" + tipoSolicitud + "&lin=" + permLIn + "&plan=" + codPlanSel + "&inCodOpe=" + inCodOpe);
+        }
+        fnDesactivarSiguientesVentanas();
+        $("#btnSiguiente").button("option", "disabled", true);
+        //alert('entro galeria');
+
+        //        }
+    }
+
+    function fnActualizarPlanes() {
+        $("#ddlPlan").data("kendoComboBox").select(0);
+        $("#hdfCodPlan").val('');
+        ResumenNombreOperador = '';
+        ResumenNombrePlan = '';
+
+        $("#trDetalle").hide();
+        planes();
+
+
+        //        var numTabs = $("#tbSolicitud").tabs("length");
+        //        var tabSiguiente = tbSolicitud.tabs('option', 'selected') + 1;
+        //        var arTabDes = []; arIndexTabMostrados = [];
+        //        for (var i = tabSiguiente; i < numTabs; i++) {
+        //            arTabDes.push(i);
+        //            arIndexTabMostrados.push(i);
+        //        }
+        //        tbSolicitud.tabs("option", "disabled", arTabDes);
+
+        var tabSeleccionado = tbSolicitud.tabs('option', 'selected');
+        if (arContenidos[tabSeleccionado].obligatorio) {
+            $("#btnSiguiente").button("option", "disabled", true);
+            fnDesactivarSiguientesVentanas();
+        }
+
+        //        if (verificarCaptura(idTabSeleccionado.substring(3))) {
+        //            $("#btnSiguiente").button("option", "disabled", false);
+        //        } else {
+        //            $("#btnSiguiente").button("option", "disabled", true);
+        //        };
+
+        //        if ($('#btnSiguiente').is(':disabled')) {
+        //            fnDesactivarSiguientesVentanas();
+        //        }
+    }
+
+    function fnActualizarCondiciones(lstContenidos) {
+        if ($(lstContenidos).length > 0) {
+            for (i in lstContenidos) {
+                if (lstContenidos[i].Nombre == 'Condiciones') {
+                    if (lstContenidos[i].vcNomArchivo_Dec != "") {
+                        tieneContrato = true;
+                        vcRutaCondiciones = "P_Movil/Administrar/Temporal/Solicitudes/" + CarpetaDiminio + "/" + lstContenidos[i].vcNomArchivo_Dec;
+                    } else {
+                        vcRutaCondiciones = "";
+                    }
+                    condiciones();
+                    acuerdo = false;
+                    $("#chk-acuerdo").prop('checked', false);
+                    $("#chk-desacuerdo").prop('checked', false);
+                    $("input:checkbox,input:radio,input:file").uniform();
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    fnDesactivarSiguientesVentanas();
+                }
+            }
+        }
+    }
+
+
+    function listarContenidosPorTipoSol(TipoSolicitud, inPestanaBusqueda) {
+        permiteLinea = false;
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitudMasivo.aspx/ListarContenidos",
+            data: "{'inTipSol': '" + TipoSolicitud + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (inPestanaBusqueda == 1) { //Condiciones
+                    fnActualizarCondiciones(result.d);
+                } else if (inPestanaBusqueda == 0) { //Todo
+                    var k = 0;
+                    for (k = 0; k < arContenidos.length; k++) {
+                        removerTab(arContenidos[k].contenido);
+                    }
+                    arContenidos = [];
+                    arIndexTabMostrados = [];
+                    if ($(result.d).length > 0) {
+                        for (i in result.d) {
+                            //eval("arContenidos." + result.d[i].Nombre + " = [];")
+                            //eval('arContenidos.' + result.d[i].Nombre + '.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": result.d[i].Oblig, "capturaCompleta": false });
+                            //arContenidos.ABC.titulo
+
+                            //JHERRERA 20150311: Nueva configuración (botón refrescar)
+                            var biRefrescar = false;
+                            if (result.d[i].btBotRef == "True") { biRefrescar = true; }
+
+                            if (result.d[i].Oblig == 'True') {
+                                if (result.d[i].Nombre == 'Servicios' || result.d[i].Nombre == 'Galeria') {
+                                    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": true, "mostrarRefrescar": biRefrescar });
+                                } else {
+                                    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": false, "mostrarRefrescar": biRefrescar });
+                                }
+                            } else {
+                                arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": false, "capturaCompleta": true, "mostrarRefrescar": biRefrescar });
+                                //if (result.d[i].Nombre == 'Condiciones') {
+                                //    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": false });
+                                //    acuerdo = false;
+                                //} else {
+                                //    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": false, "capturaCompleta": true });
+                                //};
+                            }
+                            if (result.d[i].Nombre == 'Planes') {
+                                permiteLinea = true;
+                            }
+                            if (result.d[i].Nombre == 'Condiciones') {
+                                if (result.d[i].vcNomArchivo_Dec != "") {
+                                    tieneContrato = true;
+                                    vcRutaCondiciones = "P_Movil/Administrar/Temporal/Solicitudes/" + CarpetaDiminio + "/" + result.d[i].vcNomArchivo_Dec;
+                                } else {
+                                    vcRutaCondiciones = "";
+                                }
+                            }
+                            if (result.d[i].Nombre == 'Mensaje') {
+                                MensajeValidTipo = result.d[i].vcTamTip_Msj;
+                                MensajeValidCant = result.d[i].inTamaño_Msj;
+                            }
+                            if (result.d[i].Nombre == 'DocAdjuntos') {
+                                AdjuntosCantidad = result.d[i].inCanTot_Adj;
+                                AdjuntosExtensiones = result.d[i].vcExtPer_Adj;
+                                AdjutnosTamanoTipo = result.d[i].vcTamTip_Adj;
+                                AdjuntosTamanoMedida = result.d[i].vcTamMed_Adj;
+                                AdjuntosTamanoMaxNum = result.d[i].dcTamaño_Adj;
+                                $("#ifDocAdjuntos").attr("src", "Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0&CanMax=" + AdjuntosCantidad + "&ExtPer=" + AdjuntosExtensiones + "&TamTip=" + AdjutnosTamanoTipo + "&TamMax=" + AdjuntosTamanoMaxNum + "&TamMed=" + AdjuntosTamanoMedida);
+                                $("#lblAdjuntosValidCantidad").text(AdjuntosCantidad == '0' || AdjuntosCantidad == '' ? 'Sin límite' : AdjuntosCantidad);
+                                $("#lblAdjutnosValidExtensiones").text(AdjuntosExtensiones != '' ? AdjuntosExtensiones : 'Todas');
+                                if (AdjutnosTamanoTipo == '' || AdjuntosTamanoMaxNum == '' || AdjuntosTamanoMaxNum == '0' || AdjuntosTamanoMedida == '') { //no configurado o permisivo
+                                    $("#lblAdjutnosValidTamanoMax").text('Sin límite');
+                                } else {
+                                    $("#lblAdjutnosValidTamanoMax").text(FormatoNumero(AdjuntosTamanoMaxNum, oCulturaLocal, true) + " " + AdjuntosTamanoMedida + " (" + (AdjutnosTamanoTipo == 't' ? 'Total' : 'Individual') + ")");
+                                }
+                            }
+                        }
+                    }
+                    var idx = -1;
+                    var i = 0;
+                    for (i = 0; i < arContenidos.length; i++) {
+                        contenidoTab = arContenidos[i].contenido;
+                        creartab(arContenidos[i].contenido, arContenidos[i].titulo);
+                        idx = idx + 1;
+                        if (idx != 0) { arIndexTabMostrados.push(idx); }
+                    }
+                    tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                    if (arContenidos.length == 1) {
+                        $("#btnAtras").hide();
+                        $("#btnSiguiente").hide();
+                        $("#dvCreacionEstado").show();
+                        $("#btnFinalizar").show();
+                    } else {
+                        $("#btnAtras").hide();
+                        $("#btnSiguiente").show();
+                        $("#dvCreacionEstado").hide();
+                        $("#btnFinalizar").hide();
+                    }
+
+                    //JHERRERA 20150311: Nueva confiuración (botón refrescar)
+                    try {
+                        var tabSelection = tbSolicitud.tabs('option', 'selected');
+                        //                if (arContenidos[0].mostrarRefrescar) {
+                        if (arContenidos[tabSelection].mostrarRefrescar) {
+                            $('#btnRefrescar').show();
+                        } else {
+                            $('#btnRefrescar').hide();
+                        }
+                    } catch (e) {
+                        $('#btnRefrescar').hide();
+                    }
+                    
+
+                    //if (TipoSolicitud == "4") { // Solicitud Nuevo
+                    //    $("#grillaDispositivos thead [data-field=plan] .k-link").html("Plan / Cuenta de línea")
+                    //}else{
+                    //    $("#grillaDispositivos thead [data-field=plan] .k-link").html("Plan")
+                    //}
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+    //SET TABS
+    //var arIndexTabMostrados = [];
+    //var arTabMostrados = [];
+    //    $("#ddlTipoSolicitud").change(function () {
+    $("#ddlTipoSolicitud").live("change", function () {
+        //        $("#lblMensajeVerificacion").html("");
+        fnChange();
+    }); //FIN SET TABS
+
+    //BOTONES NAVEGACION
+    $("#btnSiguiente").click(function () {
+        $("#lblMensajeVerificacion").html("");
+        var tipoSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+        var tabSelection = tbSolicitud.tabs('option', 'selected');
+        var tabMostrado = arContenidos[tabSelection].contenido;
+
+        ultimoTab = arContenidos[tabSelection + 1].contenido;
+        //if (tabMostrado == "Dispositivos" && (tipoSolicitud == "6" || tipoSolicitud == "7")) {
+        //    CargarServiciosActuales($("#hdfLineaSel").val());
+        //    if (tipoSolicitud == "6") { listarTipoServicio($("#hdfCuentaLinea").val(), $("#hdfLineaSel").val()); };
+        //};
+
+        if (arContenidos[tabSelection + 1].contenido == "Condiciones" || arContenidos[tabSelection + 1].contenido == "Planes") {
+            $("#btnSiguiente").button("option", "disabled", true);
+        }
+        if (arContenidos[tabSelection].contenido == "Condiciones") {
+            if (!acuerdo) {
+                alerta("Debe aceptar las condiciones para poder continuar.");
+                $("#btnSiguiente").button("option", "disabled", true);
+                ultimoTab = arContenidos[tabSelection].contenido;
+                return;
+            }
+        }
+        //if (arContenidos[tabSelection].contenido == "Planes") { //comentado wapumayta 19/08/2014 - la pestaña plan ya no es requerida como obligatoria
+        //    if ($("#hdfCodPlan").val() == '' || $("#hdfCodPlan").val() == undefined || $("#hdfCodPlan").val() == null) {
+        //        alerta("Debe seleccionar un plan antes de continuar.");
+        //        $("#btnSiguiente").button("option", "disabled", true);
+        //        ultimoTab = arContenidos[tabSelection].contenido;
+        //        return;
+        //    };
+        //};
+        //if (arContenidos[tabSelection].contenido = 'Dispositivos') {
+        //    $("#hdfCodImeiSel").val(codIMEITemp);
+        //};
+        //if (arContenidos[tabSelection + 1].contenido == "Galeria") {
+        //    $("#ifGaleria").attr("src", "");
+        //    var permLIn = permiteLinea ? '1' : '0';
+        //    var codPlanSel = $("#hdfCodPlanSel").val();
+        //    //alert(codPlanSel);
+        //    $("#ifGaleria").attr("src", "Adm_GaleriaModDispositivos.aspx?vcCodEmp=" + $("#hdfCodEmpleado").val() + "&tipSol=" + tipoSolicitud + "&lin=" + permLIn + "&plan=" + codPlanSel);
+        //};
+        if (tabMostrado == "Galeria") {
+            //var modelo = $("#ifGaleria")[0].contentWindow.enviarCodMod();
+            var modelo = codDispTemp;
+            var conLinea = $("#ifGaleria")[0].contentWindow.conLinea();
+            //alert("permiteLinea: " + permiteLinea + "\nconLinea: " + conLinea + "\ntabPlanesVisible: " + tabPlanesVisible);
+            //if ($("#hdfCodModDis").val() != modelo) {
+            //    $("#ddlOperador").data("kendoComboBox").select(0);
+            //    $("#ddlPlan").data("kendoComboBox").select(0);
+            //    $("#ddlPlan").data("kendoComboBox").enable(false);
+            //    $("#trDetalle").hide();
+            //    setCaptura('Planes', false);
+            //};
+            //$("#hdfCodModDis").val(modelo);
+            if (permiteLinea && conLinea == 0) { //tiposol permite seleccion de plan && no se solicita disp con plan
+                $("#MsgConfirmacionAvance").dialog({
+                    title: "Confirmación",
+                    modal: true,
+                    buttons: {
+                        "Si": function () {
+                            $(this).dialog("close");
+                            //seguir sin solcitar linea
+                            if (tabPlanesVisible == true) {
+                                removerTab("Planes");
+                                arContenidos = jQuery.grep(arContenidos, function (value) { return value.contenido != 'Planes'; });
+                                tabPlanesVisible = false;
+                            }
+                            arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 1; });
+                            tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                            tbSolicitud.tabs('option', 'selected', tabSelection + 1);
+                            $("#hdfCodModDis").val(codDispTemp);
+                            $("#ifGaleria")[0].contentWindow.desactivarCheckLinea();
+                        },
+                        "No": function () {
+                            $(this).dialog("close");
+                            $("#btnSiguiente").button("option", "disabled", false);
+                        }
+                    },
+                    resizable: false
+                });
+            } else if (permiteLinea && conLinea == 1) { //tiposol permite seleccion de plan && se solicita disp con plan
+                if (!tabPlanesVisible) { //tabPlanes eliminado, volver a crear
+                    //contenidoTab = "Planes";
+                    //arContenidos.push({ contenido: "Planes", titulo: "Planes" });
+                    //arIndexTabMostrados.push(arContenidos.length - 1);
+                    //creartab("Planes", "Planes");
+                    tabPlanesVisible = true;
+                    //arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 1; });
+                    //tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                    //tbSolicitud.tabs('option', 'selected', tabSelection + 1);
+                }
+                arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 1; });
+                tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                tbSolicitud.tabs('option', 'selected', tabSelection + 1);
+            } else if (!permiteLinea) { // tiposol no permite seleccion de plan
+                arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 1; });
+                tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                tbSolicitud.tabs('option', 'selected', tabSelection + 1);
+            } else if (permiteLinea && conLinea == 2) { //tiposol permite seleccion plan && dispositivo seleccionado no soporta linea
+                //alerta("eliminar tab planes");
+                if (tabPlanesVisible == true) {
+                    //removerTab("Planes");
+                    //arContenidos = jQuery.grep(arContenidos, function (value) { return value.contenido != 'Planes' });
+                    arIndexTabMostrados.push(1);
+                    tabPlanesVisible = false;
+                }
+                arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 2; });
+                tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                tbSolicitud.tabs('option', 'selected', tabSelection + 2);
+            }
+        } else {
+            arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != tabSelection + 1; });
+            tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+            tbSolicitud.tabs('option', 'selected', tabSelection + 1);
+
+            if (arContenidos[tabSelection + 1].contenido == "Condiciones" && !acuerdo) {
+                $("#btnSiguiente").button("option", "disabled", true);
+            }
+        }
+        if (arContenidos[tabSelection + 1].contenido == "Planes") {
+            $("#lblOperadorLinea").text($("#hdfNombreOperador").val());
+            $("#lblLineaAmp").text($("#hdfLineaSel").val());
+            $("#lblPlanActual").text($("#hdfPlanLineaSel").val());
+            //if (tipoSolicitud == 7) {
+            //    //alerta("LISTAR PLANES");
+            //    listarPlanes(true);
+            //}
+            //if (tipoSolicitud != 7) {
+            //    codOpeAutoCompPlanes = $("#ddlOperador").data("kendoComboBox").value();
+            //} else {
+            //    codOpeAutoCompPlanes = $("#hdfCodigoOperador").val();
+            //};
+        }
+        if (arContenidos[tabSelection + 1].contenido == "Servicios") {
+            cargarServicios_x_Grupo();
+        }
+        //if (arContenidos[tabSelection + 1].contenido == "Resumen") {
+        //    resumen();
+        //}
+    });
+    $("#btnAtras").click(function () {
+        var tabSelection = tbSolicitud.tabs('option', 'selected');
+        var tabMostrado = arContenidos[tabSelection].contenido;
+        if (tabMostrado == 'Mensaje') {
+            if (tabPlanesVisible) {
+                tbSolicitud.tabs('option', 'selected', tbSolicitud.tabs('option', 'selected') - 1);
+            } else {
+                tbSolicitud.tabs('option', 'selected', tbSolicitud.tabs('option', 'selected') - 2);
+            }
+        } else {
+            tbSolicitud.tabs('option', 'selected', tbSolicitud.tabs('option', 'selected') - 1);
+        }
+
+
+    });
+    $("#btnFinalizar").click(function () {
+        btnFinalizar_click();
+
+    }); //FIN BOTONES NAVEGACION
+
+    function fnFinalizar() {
+        var biPers = "0";
+        var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+        var nTipSol = "es" + tipsol;
+        if (arTiposSolicitud[nTipSol].biPersonalizado == 'True') { biPers = '1'; }
+        var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+        switch (tipsol) {
+            case "1":
+                EnviarSolicitudCambio();
+                break;
+            case "2":
+                EnviarSolicitudNuevo();
+                break;
+            case "3":
+                EnviarSolicitudReposicion();
+                break;
+            case "4":
+                EnviarSolicitudReparacion();
+                break;
+            case "6":
+                EnviarSolicitudActivacion();
+                break;
+            case "7":
+                EnviarSolicitudAmpliacion();
+                break;
+            default:
+                if (biPers == "0") {
+                    alerta("No se pudo completar en envío");
+                }
+                else {
+                    EnviarSolicitudPersonalizada();
+                }
+        }
+    }
+
+    //OTROS BOTONES
+    //CANCELAR
+    $("#btnCancelar").live("click", function () {
+        //CerroMensaje3();
+        CerroMensaje2();
+    });
+
+    //NAVEGACION PESTAÑAS
+    //$(".ui-state-default").click(function () {
+    //    alerta("0870");
+    //});
+
+    //BOTON EQUPO SOLICITADO
+    $("#btnEquiSol").click(function () {
+        //var tipSol = $("#ddlTipoSolicitud").data("kendoComboBox").value(); //comentado 26-11-2014 wapumayta (2674)
+        var tipSol = '0'; // 0 = muestra las soliditudes pendientes de todos los tipos
+        var vcCodEmp = $("#hdfCodEmpleado").val();
+        var vcNumLin = $("#hdfLineaSel").val();
+        var codIMEI = tipSol == '4' ? codDispTemp : codIMEITemp;
+        //alert(vcCodEmp + "\n" + vcNumLin + "\n" + codIMEI + "\n" + tipSol);
+        var v_Width = 0;
+        var v_Height = 0;
+        $.ajax({
+            type: "POST",
+            //url: "Adm_SolicitarDispositivo.aspx/ObtenerCodigoModelo",
+            url: "Adm_NuevaSolicitud.aspx/DetalleSolicitud_Equipo",
+            data: "{'vcCodEmp': '" + vcCodEmp + "'," +
+                    "'vcCodIMEI': '" + codIMEI + "'," +
+                    "'vcTipSol': '" + tipSol + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var oSolicitud = result.d[0];
+                var date = new Date(parseInt(oSolicitud.dtFecSol.slice(6, -2)));
+                var fechaSol = date.getDate() + "/" + (parseInt(date.getMonth()) + 1).toString() + "/" + date.getFullYear();
+
+                $("#txtCodigo").val(oSolicitud.vcCodigo);
+                $("#txtTipo").val(oSolicitud.TipoSolicitud.vcNomTipSol);
+                $("#txtFechaCreacion").val(fechaSol);
+                $("#txtEstadoActual").val(oSolicitud.Estado.vcNom);
+                if (oSolicitud.inTipSol == "2") { //solicitud de nuevo equipo
+                    $("#dvModeloSolicitado").show();
+                    $("#ifEquipoSolic").attr("src", "Mantenimiento/Mnt_NuevoDispositivo.aspx?CodDis=" + oSolicitud.inCodModDis + "&inTipSol=2");
+                    v_Width = 505;
+                    v_Height = 420;
+                } else {
+                    $("#dvModeloSolicitado").hide();
+                    v_Width = 425;
+                    v_Height = 180;
+                }
+                $("#divDispSolicitado").dialog({
+                    title: "Datos Solicitud",
+                    width: v_Width,
+                    height: v_Height,
+                    modal: true,
+                    resizable: false
+                });
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    });
+    //FIN BOTON EQUIPO SOLICITADO
+
+    //detalle de financiamiento
+    $("#imgInfoFinanciamiento").live("click", function () {
+        var wAncho = $(window).width();
+        var wAlto = $(window).height();
+        $("#ifInfoFinanciamiento").attr("width", 550);
+        $("#ifInfoFinanciamiento").attr("height", wAlto - 100);
+        $("#ifInfoFinanciamiento").attr("src", "Mantenimiento/Cam_Mnt_Financiamiento.aspx?Cod=" + $("#hdfIdFInanciamiento").val() + "&FinancSit=0");
+
+        $('#divInfoFinanciamiento').dialog({
+            title: "Detalle de Financiamiento",
+            width: 575, //  690,
+            height: wAlto - 50, //430,
+            modal: true,
+            resizable: false,
+            buttons: {
+                "Cerrar": function () {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+
+    $("#imgAgregarPaquete").live("click", function () {
+        if ($("#ddlAmpPaquetes").val() == "-2" || $("#ddlAmpPaquetes").val() == "-1" || $("#ddlAmpPaquetes").val() == "-3") {
+            if ($("#ddlAmpPaquetes").val() == "-3") {
+                alerta("Seleccione un servicio.");
+            } else if ($("#ddlAmpPaquetes").val() == "-2") {
+                alerta("No hay paquetes para el servicio seleccinado.");
+            } else if ($("#ddlAmpPaquetes").val() == "-1") {
+                alerta("Seleccione un paquete.");
+            }
+            return;
+        }
+        if ($("#hdfAmpCodIlimitado").val() == "true") {
+            alerta("No puede ampliar un servicio Ilimitado.");
+            return;
+        }
+        var ids = tbAmpPaquetes.getDataIDs();
+        var idsExists = false;
+        var vOpcion = $("#ddlAmpPaquetes option[value='" + $("#ddlAmpPaquetes").val() + "']");
+        var DatosPaquete = {
+            P_inCod: $("#hdfAmpCodServ").val(),
+            vcNom: $("#lblAmpNombreServ").text(),
+            vcNomPaqAmp: vOpcion.attr("nombre"),
+            vcCant: $("#ddlAmpPaquetes").val() + " " + vOpcion.attr("medida"),
+            vcCantReal: $("#ddlAmpPaquetes").val(),
+            dcCosto: vOpcion.attr("costo"),
+            dcCostoReal: vOpcion.attr("costo"),
+            inTipoServ: $("#hddAmpTipoServicio").val(),
+            inCodPaqAmp: vOpcion.attr("IdPaqAmp")
+        };
+        if (ids.length > 0) {
+            $.each(ids, function () {
+                if (this == $("#hdfAmpCodServ").val()) {
+                    idsExists = true;
+                }
+            });
+            if (idsExists) {
+                $("#lblMsjConfirmUpdPaquete").text("El paquete '" + DatosPaquete.vcNom + "' ya existe, ¿Desea editarlo?");
+                $("#divMsgConfirmarPaquete").dialog({
+                    title: "Confirmación",
+                    modal: true,
+                    buttons: {
+                        "Si": function () {
+                            $("#tbAmpPaquetes").jqGrid('delRowData', $("#hdfAmpCodServ").val());
+
+                            $("#tbAmpPaquetes").jqGrid('addRowData', $("#hdfAmpCodServ").val(), DatosPaquete);
+                            fnLimpiarDatosServicio();
+
+                            setCaptura("Paquetes", true);
+                            valAvance = true;
+                            HabilitarContinuar();
+                            $(this).dialog("close");
+                        },
+                        "No": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            } else {
+                $("#tbAmpPaquetes").jqGrid('addRowData', $("#hdfAmpCodServ").val(), DatosPaquete);
+                fnLimpiarDatosServicio();
+
+                setCaptura("Paquetes", true);
+                valAvance = true;
+                HabilitarContinuar();
+            }
+        } else {
+            $("#tbAmpPaquetes").jqGrid('addRowData', $("#hdfAmpCodServ").val(), DatosPaquete);
+            fnLimpiarDatosServicio();
+
+            setCaptura("Paquetes", true);
+            valAvance = true;
+            HabilitarContinuar();
+        }
+    });
+    $("#imgQuitarPaquete").live("click", function () {
+        var id = $("#tbAmpPaquetes").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            $("#tbAmpPaquetes").jqGrid('delRowData', id);
+            //validar avance
+            var ids = tbAmpPaquetes.getDataIDs();
+            if (ids.length == 0) {
+                setCaptura("Paquetes", false);
+                valAvance = false;
+                HabilitarContinuar();
+            }
+        } else {
+            alerta("Seleccione un paquete de la grilla.");
+        }
+    });
+
+    //paquetes ampliacion
+    $(".imgAmpliar").live("click", function () {
+        var id = $(this).attr("id").split("-")[1];
+        var datos = $("#tblServicio").jqGrid('getRowData', id);
+        $("#hdfAmpCodServ").val(id);
+        if (datos.dcCan == 'Ilimitado') {
+            $("#hdfAmpCodIlimitado").val('true');
+        } else {
+            $("#hdfAmpCodIlimitado").val('false');
+        }
+        $("#hddAmpTipoServicio").val(datos.inCodTipDat);
+        if (datos.inCodTipDat == "1") {
+            MostrarPaquetesPorTipoServ(datos.inCodTipSer);
+        } else {
+            MostrarPaquetesPorTipoServ(datos.P_inCod);
+        }
+        $("#lblAmpNombreServ").text(datos.vcNom);
+    });
+
+    $("#ddlTipoServicioAmp").live("change", function () {
+        var id = $("#ddlTipoServicioAmp").val();
+        $("#ddlServCuentaTipo").html('');
+        $("#ddlServCuentaTipo").append($("<option></option>").val('-1').text('<Seleccione>'));
+        var bExisteServicio = false;
+        var i = 0;
+        for (i = 0; i < lstServiciosCuenta.length; i++) {
+            if (lstServiciosCuenta[i].TipoServicio.P_inCod == id) {
+                $("#ddlServCuentaTipo").append($("<option></option>").val(lstServiciosCuenta[i].inCodTipDat + "-" + lstServiciosCuenta[i].P_inCod).text(lstServiciosCuenta[i].vcNom));
+                bExisteServicio = true;
+            }
+        }
+        if (!bExisteServicio) {
+            $("#ddlServCuentaTipo").html('');
+            $("#ddlServCuentaTipo").append($("<option></option>").val('-3').text('No hay servicios'));
+        }
+    });
+    $("#ddlServCuentaTipo").live("change", function () {
+        var id = $(this).val().split("-");
+        var nm = $("#ddlServCuentaTipo option[value=" + $(this).val() + "]").text();
+        $("#lblAmpNombreServ").text(nm);
+        $("#hdfAmpCodServ").val(id[1]);
+        $("#hddAmpTipoServicio").val(id[0]);
+        if (id[0] == 1) {
+            MostrarPaquetesPorTipoServ($("#ddlTipoServicioAmp").val(), id[1]);
+        } else {
+            MostrarPaquetesPorTipoServ(id[1], 0);
+        }
+    });
+
+    fnValidarListarTipoSolicitud();
+    //CargarDisenoGrillaDispositivos();
+
+    $(".cboModeloNuevo").live("change", function () {
+
+        var RowId = $(this).attr("rowid");
+        $("#grid").jqGrid("setCell", RowId, "ModeloNuevoSeleccionado", $(this).val());
+
+        //Reemplazar valor de la fila que ya existe...
+        if (ModelosNuevosSeleccionados.indexOf("|" + RowId + "|") >= 0) {
+            var PosSig = 0;
+            PosSig = ModelosNuevosSeleccionados.substring(ModelosNuevosSeleccionados.indexOf("|" + RowId + "|")).indexOf("@");
+            ModelosNuevosSeleccionados = ModelosNuevosSeleccionados.substring(0, ModelosNuevosSeleccionados.indexOf("|" + RowId + "|") + ("|" + RowId + "|").length) +
+                                         $(this).val() +
+                                         ModelosNuevosSeleccionados.substring(ModelosNuevosSeleccionados.indexOf("|" + RowId + "|") + PosSig, ModelosNuevosSeleccionados.length);
+        }
+        else {
+            ModelosNuevosSeleccionados += "|" + RowId + "|" + $(this).val() + "@";
+        }
+
+        ActualizarPlanCombo($(this).attr("id").split("_")[1]);
+    });
+
+    $(".cboPlanNuevo").live("change", function () {
+        var RowId = $(this).attr("rowid");
+        $("#grid").jqGrid("setCell", RowId, "PlanNuevoSeleccionado", $(this).val());
+
+        //Reemplazar valor de la fila que ya existe...
+        if (PlanesSeleccionados.indexOf("|" + RowId + "|") >= 0) {
+            var PosSig = 0;
+            PosSig = PlanesSeleccionados.substring(PlanesSeleccionados.indexOf("|" + RowId + "|")).indexOf("@");
+            PlanesSeleccionados = PlanesSeleccionados.substring(0, PlanesSeleccionados.indexOf("|" + RowId + "|") + ("|" + RowId + "|").length) +
+                                         $(this).val() +
+                                         PlanesSeleccionados.substring(PlanesSeleccionados.indexOf("|" + RowId + "|") + PosSig, PlanesSeleccionados.length);
+        }
+        else {
+            PlanesSeleccionados += "|" + RowId + "|" + $(this).val() + "@";
+        }
+
+    });
+
+
+
+    $(".cboCuentaNuevo").live("change", function () {
+        var RowId = $(this).attr("rowid");
+        $("#grid").jqGrid("setCell", RowId, "CuentaNuevoSeleccionado", $(this).val());
+
+        //Reemplazar valor de la fila que ya existe...
+        if (CuentasNuevosSeleccionados.indexOf("|" + RowId + "|") >= 0) {
+            var PosSig = 0;
+            PosSig = CuentasNuevosSeleccionados.substring(CuentasNuevosSeleccionados.indexOf("|" + RowId + "|")).indexOf("@");
+            CuentasNuevosSeleccionados = CuentasNuevosSeleccionados.substring(0, CuentasNuevosSeleccionados.indexOf("|" + RowId + "|") + ("|" + RowId + "|").length) +
+                                         $(this).val() +
+                                         CuentasNuevosSeleccionados.substring(CuentasNuevosSeleccionados.indexOf("|" + RowId + "|") + PosSig, CuentasNuevosSeleccionados.length);
+        }
+        else {
+            CuentasNuevosSeleccionados += "|" + RowId + "|" + $(this).val() + "@";
+        }
+    });
+
+});
+//FIN INICIO
+
+function creartab(idtab, titulo) {
+    //var heightId = parseInt($("#tbSolicitud")[0].clientHeight) - 40;
+    var heightId = parseInt($("#tbSolicitud").css("height").split(".")[0]) - 35;
+    var Id = '#tab' + idtab;
+    var $panel = tbSolicitud.find(Id);
+    if (!$panel.length) {//En el caso que no exista el tab, lo crea
+        tbSolicitud.tabs("add", Id, titulo);
+        $(Id).css("width", "99%");
+        $(Id).css("height", heightId);
+        $(Id).css("margin-top", "0px");
+        $(Id).css("margin-left", "0px");
+        $(Id).css("margin-bottom", "0px");
+        $(Id).css("margin-right", "0px");
+        $(Id).css("padding-top", "0px");
+        $(Id).css("padding-left", "0px");
+        $(Id).css("padding-bottom", "0px");
+        $(Id).css("padding-right", "0px");
+        $(Id).css("overflow", "auto");
+    }
+}
+
+function removerTab(idtab) {
+    var Id = '#tab' + idtab;
+    var $panel = tbSolicitud.find(Id);
+    if ($panel.length) {//En el caso que exista el tab, lo elimina
+        tbSolicitud.tabs("remove", Id);
+    }
+}
+
+function fnLimpiarTipoSolicitud(biSetDef, biHayDatos) {
+    if ($("#hdfDefTipoSolicitud").val() == "") {
+        $("#ddlTipoSolicitud").data("kendoComboBox").value("-1");
+        //if (biHayDatos) {
+        //    $("#ddlTipoSolicitud").data("kendoComboBox").enable(true);
+        //} else {
+        //    $("#ddlTipoSolicitud").data("kendoComboBox").enable(false);
+        //}
+    } else {
+        //$("#ddlTipoSolicitud").data("kendoComboBox").enable(false);
+        //if (biSetDef) {
+        //    $("#ddlTipoSolicitud").data("kendoComboBox").value($("#hdfDefTipoSolicitud").val());
+        //    fnChange();
+        //} else {
+        $("#ddlTipoSolicitud").data("kendoComboBox").value("-1");
+        //}
+    }
+}
+
+function fnChange() {
+
+    ModelosNuevosSeleccionados = "";
+    PlanesSeleccionados = "";
+    CuentasNuevosSeleccionados = "";
+
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    Cargo_ActualizarComboPlan_Filtro = false;
+
+    var NombreSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").text();
+    var ValorSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    $("#lblTituloSeleccionador").html("Agregar Empleado/Líneas");
+    $("#btnBusquedaEmpleado").show();
+    if (tipsol == "-1") {
+        $("#dvGrillaMasivo").hide();
+        $(".TipoServicio").hide();
+    }
+    else {
+        CargarGrillaMasiva();
+        $(".TipoServicio").hide();
+
+        switch (ValorSolicitud) {
+            case "2": //"Nuevo":
+                $("#grid").jqGrid('showCol', ["Plan", "ModeloNuevo"]);
+                $("#grid").jqGrid('hideCol', ["ModeloActual", "IMEI", "Linea", "Cuenta"]);
+                break;
+            case "1": //"Cambio de Equipo":
+                $("#grid").jqGrid('showCol', ["ModeloActual", "IMEI", "ModeloNuevo"]);
+                $("#grid").jqGrid('hideCol', ["Plan", "Linea", "Cuenta"]);
+
+                $("#cboModeloNuevo_Filtro").css("width", 230);
+                $(".TipoServicio").show();
+                break;
+            case "11": //"Baja":
+                $("#grid").jqGrid('showCol', ["Linea"]);
+                $("#grid").jqGrid('hideCol', ["ModeloActual", "ModeloNuevo", "IMEI", "Plan", "Cuenta"]);
+                break;
+            case "12": //"Cambio de Cuenta":
+                $("#grid").jqGrid('showCol', ["Linea", "Cuenta"]);
+                $("#grid").jqGrid('hideCol', ["ModeloActual", "ModeloNuevo", "IMEI", "Plan"]);
+                break;
+            case "14": //"Cambio de Plan":
+                $("#grid").jqGrid('showCol', ["Linea", "Plan"]);
+                $("#grid").jqGrid('hideCol', ["Cuenta", "ModeloActual", "ModeloNuevo", "IMEI"]);
+                break;
+
+            default:
+
+        }
+        $("#dvGrillaMasivo").show();
+
+    }
+    DimPosElementos();
+}
+
+function fnValidarPermisosCreacionCulminada(tipsol) {
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ValidarPermisosCreacionCulminada",
+        data: "{'IdTipoSolicitud': '" + tipsol + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var lstRes = result.d.split(",");
+
+            if (lstRes[0] == "0") {
+                $("#lblMensajeVerificacion").html("El usuario no puede crear una solicitud ya que no tiene permisos de aprobación para el tipo de solicitud seleccionado.");
+            }
+            else if (lstRes[1] == "0") {
+                $("#lblMensajeVerificacion").html("El usuario no puede crear una solicitud ya que no tiene permisos de asignación para el tipo de solicitud seleccionado.");
+            }
+            else if (lstRes[1] == "0") {
+                $("#lblMensajeVerificacion").html("El usuario no puede crear una solicitud ya que no tiene permisos para culminar el tipo de solicitud seleccionado.");
+            }
+            else {
+                listarContenidosPorTipoSol(tipsol, 0);
+                $("#dvTabs").show();
+            }
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function listarContenidosPorTipoSol(TipoSolicitud, inPestanaBusqueda) {
+    permiteLinea = false;
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitudMasivo.aspx/ListarContenidos",
+        data: "{'inTipSol': '" + TipoSolicitud + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (inPestanaBusqueda == 1) { //Condiciones
+                fnActualizarCondiciones(result.d);
+            } else if (inPestanaBusqueda == 0) { //Todo
+                var k = 0;
+                for (k = 0; k < arContenidos.length; k++) {
+                    removerTab(arContenidos[k].contenido);
+                }
+                arContenidos = [];
+                arIndexTabMostrados = [];
+                if ($(result.d).length > 0) {
+                    for (i in result.d) {
+                        //eval("arContenidos." + result.d[i].Nombre + " = [];")
+                        //eval('arContenidos.' + result.d[i].Nombre + '.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": result.d[i].Oblig, "capturaCompleta": false });
+                        //arContenidos.ABC.titulo
+
+                        //JHERRERA 20150311: Nueva configuración (botón refrescar)
+                        var biRefrescar = false;
+                        if (result.d[i].btBotRef == "True") { biRefrescar = true; }
+
+                        if (result.d[i].Oblig == 'True') {
+                            if (result.d[i].Nombre == 'Servicios' || result.d[i].Nombre == 'Galeria') {
+                                arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": true, "mostrarRefrescar": biRefrescar });
+                            } else {
+                                arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": false, "mostrarRefrescar": biRefrescar });
+                            }
+                        } else {
+                            arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": false, "capturaCompleta": true, "mostrarRefrescar": biRefrescar });
+                            //if (result.d[i].Nombre == 'Condiciones') {
+                            //    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": true, "capturaCompleta": false });
+                            //    acuerdo = false;
+                            //} else {
+                            //    arContenidos.push({ "titulo": result.d[i].Titulo, "contenido": result.d[i].Nombre, "obligatorio": false, "capturaCompleta": true });
+                            //};
+                        }
+                        if (result.d[i].Nombre == 'Planes') {
+                            permiteLinea = true;
+                        }
+                        if (result.d[i].Nombre == 'Condiciones') {
+                            if (result.d[i].vcNomArchivo_Dec != "") {
+                                tieneContrato = true;
+                                vcRutaCondiciones = "P_Movil/Administrar/Temporal/Solicitudes/" + CarpetaDiminio + "/" + result.d[i].vcNomArchivo_Dec;
+                            } else {
+                                vcRutaCondiciones = "";
+                            }
+                        }
+                        if (result.d[i].Nombre == 'Mensaje') {
+                            MensajeValidTipo = result.d[i].vcTamTip_Msj;
+                            MensajeValidCant = result.d[i].inTamaño_Msj;
+                        }
+                        if (result.d[i].Nombre == 'DocAdjuntos') {
+                            AdjuntosCantidad = result.d[i].inCanTot_Adj;
+                            AdjuntosExtensiones = result.d[i].vcExtPer_Adj;
+                            AdjutnosTamanoTipo = result.d[i].vcTamTip_Adj;
+                            AdjuntosTamanoMedida = result.d[i].vcTamMed_Adj;
+                            AdjuntosTamanoMaxNum = result.d[i].dcTamaño_Adj;
+                            $("#ifDocAdjuntos").attr("src", "Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0&CanMax=" + AdjuntosCantidad + "&ExtPer=" + AdjuntosExtensiones + "&TamTip=" + AdjutnosTamanoTipo + "&TamMax=" + AdjuntosTamanoMaxNum + "&TamMed=" + AdjuntosTamanoMedida);
+                            $("#lblAdjuntosValidCantidad").text(AdjuntosCantidad == '0' || AdjuntosCantidad == '' ? 'Sin límite' : AdjuntosCantidad);
+                            $("#lblAdjutnosValidExtensiones").text(AdjuntosExtensiones != '' ? AdjuntosExtensiones : 'Todas');
+                            if (AdjutnosTamanoTipo == '' || AdjuntosTamanoMaxNum == '' || AdjuntosTamanoMaxNum == '0' || AdjuntosTamanoMedida == '') { //no configurado o permisivo
+                                $("#lblAdjutnosValidTamanoMax").text('Sin límite');
+                            } else {
+                                $("#lblAdjutnosValidTamanoMax").text(FormatoNumero(AdjuntosTamanoMaxNum, oCulturaLocal, true) + " " + AdjuntosTamanoMedida + " (" + (AdjutnosTamanoTipo == 't' ? 'Total' : 'Individual') + ")");
+                            }
+                        }
+                    }
+                }
+                var idx = -1;
+                var i = 0;
+                for (i = 0; i < arContenidos.length; i++) {
+                    contenidoTab = arContenidos[i].contenido;
+                    creartab(arContenidos[i].contenido, arContenidos[i].titulo);
+                    idx = idx + 1;
+                    if (idx != 0) { arIndexTabMostrados.push(idx); }
+                }
+                tbSolicitud.tabs("option", "disabled", arIndexTabMostrados);
+                if (arContenidos.length == 1) {
+                    $("#btnAtras").hide();
+                    $("#btnSiguiente").hide();
+                    $("#dvCreacionEstado").show();
+                    $("#btnFinalizar").show();
+                } else {
+                    $("#btnAtras").hide();
+                    $("#btnSiguiente").show();
+                    $("#dvCreacionEstado").hide();
+                    $("#btnFinalizar").hide();
+                }
+
+                //JHERRERA 20150311: Nueva confiuración (botón refrescar)
+                try {
+                    var tabSelection = tbSolicitud.tabs('option', 'selected');
+                    //                if (arContenidos[0].mostrarRefrescar) {
+                    if (arContenidos[tabSelection].mostrarRefrescar) {
+                        $('#btnRefrescar').show();
+                    } else {
+                        $('#btnRefrescar').hide();
+                    }
+                } catch (e) {
+                    $('#btnRefrescar').hide();
+                }
+                
+
+                //if (TipoSolicitud == "4") { // Solicitud Nuevo
+                //    $("#grillaDispositivos thead [data-field=plan] .k-link").html("Plan / Cuenta de línea")
+                //}else{
+                //    $("#grillaDispositivos thead [data-field=plan] .k-link").html("Plan")
+                //}
+            }
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function fnValidarListarTipoSolicitudXGrupoEmpleado() {
+    if ($("#hdfCodEmpleado").val() == "") {
+        return;
+    }
+
+    $("#dvTabs").hide();
+    $("#lblMensajeVerificacion").text('');
+    $("#btnEquiSol").hide();
+    $("#dvCreacionEstado").hide();
+    //botones
+    $("#btnEquiSol").hide();
+    $("#btnAtras").hide();
+    $("#btnSiguiente").hide();
+    $("#btnFinalizar").hide();
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ListarTipoSolicitudXGrupoEmpleado",
+        data: "{'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'," +
+              "'vcTipLin': '" + $("#hdfCodLinTip_X_User").val() + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+            $("#ddlTipoSolicitud").html("");
+            var biSetDefVal = false; var biHayDat = false;
+
+            var items = [{ text: '<Seleccione>', value: -1 }];
+            if ($(result.d).length > 0) {
+                $("#lblMensajeVerificacion").html("");
+                //                    var items = [{ text: '<Seleccione>', value: -1}];
+                if ($(result.d).length > 0) {
+                    biHayDat = true;
+                    $(result.d).each(function () {
+                        if (this.inCodTipSol.toString() != "31") {
+                            items.push({ text: this.vcNomTipSol, value: this.inCodTipSol });
+                        }
+                        if ($("#hdfDefTipoSolicitud").val() == this.inCodTipSol) {
+                            biSetDefVal = true;
+                        }
+                    });
+                }
+            }
+            else {
+                if ($("#hdfCodEmpleado").val() != "") {
+                    $("#lblMensajeVerificacion").html("El grupo actual del usuario no tiene acceso para realizar solicitudes.");
+                }
+            }
+
+            var dataSource = new kendo.data.DataSource({ data: items });
+            $("#ddlTipoSolicitud").data("kendoComboBox").setDataSource(dataSource);
+            //                            $("#ddlTipoSolicitud").data("kendoComboBox").value(-1);
+            //                            $("#ddlTipoSolicitud").data("kendoComboBox").enable(true);
+
+            fnLimpiarTipoSolicitud(biSetDefVal, biHayDat);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+
+function fnValidarListarTipoSolicitud() {
+    $("#dvTabs").hide();
+    $("#lblMensajeVerificacion").text('');
+    $("#btnEquiSol").hide();
+    $("#dvCreacionEstado").hide();
+    //botones
+    $("#btnEquiSol").hide();
+    $("#btnAtras").hide();
+    $("#btnSiguiente").hide();
+    $("#btnFinalizar").hide();
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitudMasivo.aspx/ListarTipoSolicitud",
+        data: "{'vcTipLin': '" + $("#hdfCodLinTip_X_User").val() + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+            $("#ddlTipoSolicitud").html("");
+            var biSetDefVal = false; var biHayDat = false;
+
+            var items = [{ text: '<Seleccione>', value: -1 }];
+            if ($(result.d).length > 0) {
+                $("#lblMensajeVerificacion").html("");
+                //                    var items = [{ text: '<Seleccione>', value: -1}];
+                if ($(result.d).length > 0) {
+                    biHayDat = true;
+                    $(result.d).each(function () {
+                        if (this.inCodTipSol.toString() != "31") {
+                            items.push({ text: this.vcNomTipSol, value: this.inCodTipSol });
+                        }
+                        if ($("#hdfDefTipoSolicitud").val() == this.inCodTipSol) {
+                            biSetDefVal = true;
+                        }
+                    });
+                }
+            }
+            else {
+                if ($("#hdfCodEmpleado").val() != "") {
+                    $("#lblMensajeVerificacion").html("El grupo actual del usuario no tiene acceso para realizar solicitudes.");
+                }
+            }
+
+            var dataSource = new kendo.data.DataSource({ data: items });
+            $("#ddlTipoSolicitud").data("kendoComboBox").setDataSource(dataSource);
+            //                            $("#ddlTipoSolicitud").data("kendoComboBox").value(-1);
+            //                            $("#ddlTipoSolicitud").data("kendoComboBox").enable(true);
+
+            fnLimpiarTipoSolicitud(biSetDefVal, biHayDat);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+
+//FUNCIONES CARGA
+function CargarDispositivos(Empleado) {
+
+    if (Empleado == '') {
+        Empleado = '@x@';
+    }
+    //alert(Empleado);
+    if (Empleado != "") {
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitudMasivo.aspx/ListarDispositivos",
+            data: "{'vcCodEmp': '" + Empleado + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if ($(result.d).length > 0) {
+                    for (i in result.d) {
+                        var estadoMod = result.d[i][0].ModeloDispositivo.btVig ? "Activo" : "Inactivo";
+                        var numrpm = result.d[i][0].rpm ? result.d[i][0].rpm : "No Disponible";
+                        var planLinea;
+                        if (result.d[i][1].TipoAsignacionCredito.P_inCod == 1) { //planes
+                            if (parseInt("0" + result.d[i][2].P_inCod) > 0) {
+                                planLinea = "Plan: " + result.d[i][2].vcNom;
+                            }
+                            else {
+                                planLinea = "Plan: Plan Desconocido";
+                            }
+                        } else if (result.d[i][1].TipoAsignacionCredito.P_inCod == 2) { //cuentas
+                            planLinea = "Cuenta: " + result.d[i][1].P_vcCod;
+                        }
+                        var dtFecUltCam = new Date(parseInt(result.d[i][0].dtFecUltCam.substring(6, 19)));
+                        var dtFecProCam = new Date(parseInt(result.d[i][0].dtFecProCam.substring(6, 19)));
+                        var mesFecUltCam = (parseInt(dtFecUltCam.getMonth()) + 1).toString().length == "1" ? "0" + (parseInt(dtFecUltCam.getMonth()) + 1).toString() : (parseInt(dtFecUltCam.getMonth()) + 1).toString();
+                        var mesFecProCam = (parseInt(dtFecProCam.getMonth()) + 1).toString().length == "1" ? "0" + (parseInt(dtFecProCam.getMonth()) + 1).toString() : (parseInt(dtFecProCam.getMonth()) + 1).toString();
+                        var diaFecUltCam = dtFecUltCam.getDate().toString().length == "1" ? "0" + dtFecUltCam.getDate().toString() : dtFecUltCam.getDate().toString();
+                        var diaFecProCam = dtFecProCam.getDate().toString().length == "1" ? "0" + dtFecProCam.getDate().toString() : dtFecProCam.getDate().toString();
+                        var FecUltCam = diaFecUltCam + "/" + mesFecUltCam + "/" + dtFecUltCam.getFullYear();
+                        var FecProCam = diaFecProCam + "/" + mesFecProCam + "/" + dtFecProCam.getFullYear();
+
+                        //var dtFecFinCont = new Date(parseInt(result.d[i][0].dtFecUltCam.substring(6, 19)));
+                        ////var dtFecFinCont = dtFecFinCont.setMonth(dtFecFinCont.getMonth() + parseInt(result.d[i][0].idCampana))
+                        //var dtFecFinCont = dtFecFinCont.addMonths(18);
+                        //var mesFecFinCont = (parseInt(dtFecFinCont.getMonth()) + 1).toString().length == "1" ? "0" + (parseInt(dtFecFinCont.getMonth()) + 1).toString() : (parseInt(dtFecFinCont.getMonth()) + 1).toString();
+                        //var diaFecFincont = dtFecFinCont.getDate().toString().length == "1" ? "0" + dtFecFinCont.getDate().toString() : dtFecFinCont.getDate().toString();
+                        //var FecFinCon = diaFecFincont + "/" + mesFecFinCont + "/" + dtFecFinCont.getFullYear();
+
+                        var dtFecFinCont = new Date(dtFecUltCam.setMonth(dtFecUltCam.getMonth() + parseInt(result.d[i][0].idCampana)));
+                        var mesFecFinCont = (parseInt(dtFecFinCont.getMonth()) + 1).toString().length == "1" ? "0" + (parseInt(dtFecFinCont.getMonth()) + 1).toString() : (parseInt(dtFecFinCont.getMonth()) + 1).toString();
+                        var diaFecFincont = dtFecFinCont.getDate().toString().length == "1" ? "0" + dtFecFinCont.getDate().toString() : dtFecFinCont.getDate().toString();
+                        var FecFinCon = diaFecFincont + "/" + mesFecFinCont + "/" + dtFecFinCont.getFullYear();
+                        //alert(dtFecFinCont.getDate().toString() + '/' + (dtFecFinCont.getMonth() + 1).toString() + '/' + dtFecFinCont.getFullYear().toString());
+                        var vcCostoRepo;
+                        if (oCulturaLocal.vcSimDec.toString() == ',') {
+                            $("#lblMontoReferencial").text("Monto adicional (" + FormatoNumero(ResumenCostoExtra, oCulturaLocal) + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                            vcCostoRepo = parseFloat(result.d[i][0].costoReposicion) >= 0 ? FormatoNumero(result.d[i][0].costoReposicion.toString().replace('.', ','), oCulturaLocal) : '';
+                        }
+                        else {
+                            vcCostoRepo = parseFloat(result.d[i][0].costoReposicion) >= 0 ? result.d[i][0].costoReposicion : '';
+                        }
+
+                        $("#grillaDispositivos").data("kendoGrid").dataSource.add({
+                            numero: result.d[i][0].vcNum,
+                            modelo: $.trim(result.d[i][0].ModeloDispositivo.vcNom),
+                            rpm: numrpm,
+                            estado: estadoMod,
+                            imgmodelo: result.d[i][0].ModeloDispositivo.vcRutArc,
+                            ultfeccambio: FecUltCam,
+                            tnecesario: result.d[i][0].inNumMesProCam == 1000 ? "Sin política asociada" : result.d[i][0].inNumMesProCam == 0 ? "Ilimitado" : result.d[i][0].inNumMesProCam,
+                            cambiodesde: result.d[i][0].inNumMesProCam == 1000 ? "Sin política asociada" : FecProCam,
+                            minutos: result.d[i][0].inMin,
+                            plan: planLinea,
+                            cuenta: result.d[i][1].P_vcCod,
+                            codIMEI: result.d[i][0].P_vcCodIMEI,
+                            codOper: result.d[i][2].Operador.P_inCodOpe,
+                            nomOper: result.d[i][2].Operador.vcNomOpe,
+                            codModDis: result.d[i][0].ModeloDispositivo.P_inCod,
+                            codPlan: result.d[i][2].P_inCod,
+                            costoRepo: vcCostoRepo //parseFloat(result.d[i][0].costoReposicion) >= 0 ? result.d[i][0].costoReposicion : '' //modificado 21-01-2015
+                            , vcNomEst: result.d[i][0].vcNomEst //agregado 11/04/2014
+                            , inEst: result.d[i][0].inEst
+                            , MesesContrato: result.d[i][0].idCampana //agregado 17-11-2014 wapumayta
+                            , FechaFinContrato: FecFinCon //agregado 18-11-2014 wapumayta
+                        });
+                    }
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+}
+
+//function detailInit(e) {
+//    var detailRow = e.detailRow;
+//    detailRow.find(".tabstrip").kendoTabStrip({
+//        animation: {
+//            open: { effects: "fadeIn" }
+//        }
+//    });
+//};
+
+//function CargarServiciosActuales(Linea) {
+//    if (Linea != "") {
+//        $.ajax({
+//            type: "POST",
+//            url: "Adm_NuevaSolicitud.aspx/MostrarServiciosActuales",
+//            data: "{'vcLin': '" + Linea + "'}",
+//            contentType: "application/json; charset=utf-8",
+//            dataType: "json",
+//            success: function (result) {
+//                if ($(result.d).length > 0) {
+//                    for (var i in result.d) {
+//                        var dcCantidad = result.d[i].dcCan;
+//                        if (result.d[i].dcCan == "0") { dcCantidad = "Ilimitado"; };
+//                        $("#tbServActuales").data("kendoGrid").dataSource.add({
+//                            codigo: result.d[i].P_inCod,
+//                            servicio: result.d[i].vcNom,
+//                            cantidad: dcCantidad
+//                        });
+//                    };
+//                };
+//            },
+//            error: function (xhr, err, thrErr) {
+//                MostrarErrorAjax(xhr, err, thrErr);
+//            }
+//        });
+//    };
+//};
+
+//function listarTipoServicio(codcue, codlin) {
+//    $.ajax({
+//        type: "POST",
+//        url: "Adm_NuevaSolicitud.aspx/ListarServiciosTipoNoUsados",
+//        data: "{'CodCue': '" + codcue + "','CodLin':'" + codlin + "'}",
+//        contentType: "application/json; charset=utf-8",
+//        dataType: "json",
+//        success: function (result) {
+//            lstServicioTipo = result.d;
+//            $("#ddlServicio").html("");
+//            $("#ddlTipoServicio").html("");
+//            var itemsTip = [];
+//            if ($(lstServicioTipo).length > 0) {
+//                itemsTip.push({ text: "--Seleccione--", value: "-1" });
+//                $(lstServicioTipo).each(function () {
+//                    itemsTip.push({ text: this.vcNom, value: this.P_inCod });
+//                    //alerta("text: " + this.vcNom + ", value: " + this.P_inCod);
+//                });
+//            } else {
+//                itemsTip.push({ text: "Sin datos", value: "-2" });
+//            };
+//            var comboTipoDataSource = new kendo.data.DataSource({ data: itemsTip });
+//            $("#ddlTipoServicio").data("kendoComboBox").setDataSource(comboTipoDataSource);
+//            $("#ddlTipoServicio").data("kendoComboBox").select(0)
+//            var comboServDataSource = new kendo.data.DataSource({ data: [{ text: "--Sin datos--", value: "-2"}] });
+//            $("#ddlServicio").data("kendoComboBox").setDataSource(comboServDataSource);
+//            $("#ddlServicio").data("kendoComboBox").select(0)
+//        },
+//        error: function (xhr, err, thrErr) {
+//            MostrarErrorAjax(xhr, err, thrErr);
+//        }
+//    });
+//};
+//
+//function listarServicios(CodCue, CodLin, CodTipServ) {
+//    //alert(CodCue + ", " + CodLin + ", " + CodTipServ);
+//    $.ajax({
+//        type: "POST",
+//        url: "Adm_NuevaSolicitud.aspx/ListarServicios_NoUsados",
+//        data: "{'CodCue': '" + CodCue + "','CodLin':'" + CodLin + "','CodTipServ':'" + CodTipServ + "'}",
+//        contentType: "application/json; charset=utf-8",
+//        dataType: "json",
+//        success: function (result) {
+//            lstServicio = result.d;
+//            var itemsServ = [];
+//            $("#ddlServicio").html("");
+//            if ($(lstServicio).length > 0) {
+//                itemsServ.push({ text: "--Todos--", value: "-1" });
+//                $(lstServicio).each(function () {
+//                    itemsServ.push({ text: this.vcNom, value: this.P_inCod });
+//                });
+//            } else {
+//                itemsServ.push({ text: "--Sin datos--", value: "-2" });
+//            };
+//            var comboServDataSource = new kendo.data.DataSource({ data: itemsServ });
+//            $("#ddlServicio").data("kendoComboBox").destroy();
+//            combokendoFormar("#ddlServicio", 200);
+//            $("#ddlServicio").data("kendoComboBox").setDataSource(comboServDataSource);
+//            $("#ddlServicio").data("kendoComboBox").select(0);
+//        },
+//        error: function (xhr, err, thrErr) {
+//            MostrarErrorAjax(xhr, err, thrErr);
+//        }
+//    });
+//};
+
+function listarOperadores() {
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ListarOperadores",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var itemsOpe = [];
+            if ($(result.d).length > 0) {
+                itemsOpe.push({ text: "--Seleccione--", value: "-1" });
+                $(result.d).each(function () {
+                    itemsOpe.push({ text: this.vcNomOpe, value: this.P_inCodOpe });
+                });
+            } else {
+                itemsOpe.push({ text: "Sin datos", value: "-2" });
+            }
+            var dataSourceOpe = new kendo.data.DataSource({ data: itemsOpe });
+            $("#ddlOperador").data("kendoComboBox").setDataSource(dataSourceOpe);
+            $("#ddlOperador").data("kendoComboBox").select(0);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function listarPlanes(esAmp) {
+    codOpeAutoCompPlanes = $("#ddlTipoSolicitud").data("kendoComboBox").value() == 7 ? $("#hdfCodigoOperador").val() : $("#ddlOperador").data("kendoComboBox").value();
+    //alert($("#hdfCodModDis").val() + ", " + codOpeAutoCompPlanes);
+    //alert("operador: " + codOpeAutoCompPlanes + "\nModelo: " + $("#hdfCodModDis").val());
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ListarPlanesPorOperadorPorModelo",
+        data: "{'inCodOpe': '" + codOpeAutoCompPlanes + "'," +
+                "'inCodMod': '" + $("#hdfCodModDis").val() + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var itemsPlan = [];
+            if ($(result.d).length > 0) {
+                itemsPlan.push({ text: "--Seleccione--", value: "-1" });
+                $(result.d).each(function () {
+                    if (this.F_inCodOpe == codOpeAutoCompPlanes) {
+                        if (this.F_inCodTip == 1) {
+                            itemsPlan.push({ text: this.vcNom, value: this.P_inCod });
+                        }
+                    }
+                });
+            } else {
+                itemsPlan.push({ text: "Sin datos", value: "-2" });
+            }
+            if (itemsPlan.length == 1) {
+                if (itemsPlan[0].value == "-1") {
+                    itemsPlan = [];
+                    itemsPlan.push({ text: "Sin datos", value: "-2" });
+                }
+            }
+            if (!esAmp) {
+                var dataSourcePlan = new kendo.data.DataSource({ data: itemsPlan });
+                $("#ddlPlan").data("kendoComboBox").setDataSource(dataSourcePlan);
+                $("#ddlPlan").data("kendoComboBox").select(0);
+            } else {
+                $("#ddlAmpPlanes").html('');
+                $.each(itemsPlan, function () {
+                    $("#ddlAmpPlanes").append($("<option></option>").val(this.value).text(this.text));
+                });
+                if ($("#hdfCodPlan").val() != '') {
+                    $("#ddlAmpPlanes").val($("#hdfCodPlan").val());
+                }
+            }
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+    //$("input[name='ddlPlan_input']").attr("disabled", true);
+    //$("input[name='ddlOperador_input']").attr("disabled", true);
+}
+
+function cargarServicios_x_Grupo() {
+    var linea = $("#hdfLineaSel").val();
+    var codemp = $("#hdfCodEmpleado").val();
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ListarServicios",
+        data: "{'codEmp': '" + codemp + "'," +
+                "'lin': '" + linea + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if ($(result.d).length != 0) {
+                var item1 = result.d[0].split("-");
+                $("#lblLinea").text($("#hdfLineaSel").val());
+                $("#lblOperador").text(item1[3]);
+                $("#lblGrupoOrigen").text(item1[2]);
+                var dataItems = [];
+                $(result.d).each(function () {
+                    var itemS = this.split("-");
+                    var costo;
+                    if (itemS[6] != '') {
+                        //costo = FormatoNumero(itemS[6],$("#hdfSepMiles").val(),$("#hdfSepDecimal").val(),$("#hdfNumDecimales").val());
+                        costo = itemS[6];
+                    }
+                    if (itemS[6] == 0) {
+                        costo = 'Sin costo';
+                    }
+                    if (itemS[6] == '') {
+                        costo = '';
+                    }
+                    //itemS[7] -> activo
+                    dataItems.push({ codigo: itemS[4], servicio: itemS[0], descripcion: itemS[5], activar: itemS[1], costo: costo, estado: itemS[7] });
+                });
+            } else {
+                alerta("No se encontraron servicio disponibles");
+                dataItems = [];
+                return;
+            }
+            var kendoDataServicios = new kendo.data.DataSource({ data: dataItems });
+            $("#tbServicios").data("kendoGrid").setDataSource(kendoDataServicios);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+//FIN FUNCIONES CARGA
+
+//#region FUNCIONES GENERALES
+function fnDesactivarSiguientesVentanas() {
+    var numTabs = $("#tbSolicitud").tabs("length");
+    var tabSiguiente = tbSolicitud.tabs('option', 'selected') + 1;
+    var arTabDes = []; arIndexTabMostrados = [];
+    var i = tabSiguiente;
+    for (i = tabSiguiente; i < numTabs; i++) {
+        arTabDes.push(i);
+        arIndexTabMostrados.push(i);
+    }
+    tbSolicitud.tabs("option", "disabled", arTabDes);
+}
+//#endregion
+
+//FUNCIONES VALIDACION
+function validarSeleccionGrilla(dataSeleccion) {
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    setCaptura('Dispositivos', true);
+    $("#lblMensajeVerificacion").html('');
+    if (dataSeleccion.inEst != 2) { //dispositivo con estado diferente de Asignado
+        $("#lblMensajeVerificacion").html('Este equipo está en estado "' + dataSeleccion.vcNomEst + '", no puede realizar ninguna solicitud.');
+        $("#btnSiguiente").button("option", "disabled", true);
+        fnDesactivarSiguientesVentanas();
+        $("#btnEquiSol").hide();
+        return;
+    }
+    ResumenCostoExtra = ''; //agregado 15-12-2014 wapuayta
+    switch (tipsol) {
+        case ("1"): //cambio
+            //alert(dataSeleccion.codPlan + ", " + dataSeleccion.cuenta);
+            if (dataSeleccion.codPlan == '0' && dataSeleccion.cuenta == '') {
+                $("#btnSiguiente").button("option", "disabled", true);
+                msgValidacionGrilla = "Dispositivo no cuenta con cuenta/plan";
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+            } else {
+                $("#hdfLineaSel").val(dataSeleccion.numero);
+                //$("#hdfCodImeiSel").val(dataSeleccion.codIMEI);
+                codIMEITemp = dataSeleccion.codIMEI;
+                $("#hdfCodModDisActual").val(dataSeleccion.codModDis);
+                $("#hdfCodPlanSel").val(dataSeleccion.codPlan);
+                VerificaHabilitado(dataSeleccion.codIMEI);
+                inCodOpe = dataSeleccion.codOper;
+            }
+            ResumenModeloSeleccionado = dataSeleccion.modelo;
+            if (oCulturaLocal.vcSimDec.toString() == ',') {
+                ResumenCostoExtra = parseFloat(dataSeleccion.costoRepo) > 0 ? dataSeleccion.costoRepo : '0';
+            } else {
+                ResumenCostoExtra = parseFloat(dataSeleccion.costoRepo) > 0 ? dataSeleccion.costoRepo : '';
+            }
+            ResumenFechaFinContrato = dataSeleccion.FechaFinContrato;
+            break;
+        case ("3"): //reposicion
+            if (dataSeleccion.codPlan == '0' && dataSeleccion.cuenta == '') {
+                $("#btnSiguiente").button("option", "disabled", true);
+                msgValidacionGrilla = "Dispositivo no cuenta con cuenta/plan";
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+            } else {
+                $("#hdfLineaSel").val(dataSeleccion.numero);
+                //$("#hdfCodImeiSel").val(dataSeleccion.codIMEI);
+                codIMEITemp = dataSeleccion.codIMEI;
+                $("#hdfCodPlanSel").val(dataSeleccion.codPlan);
+                $("#hdfCostoReposicion").val(dataSeleccion.costoRepo);
+                //alert(dataSeleccion.costoRepo + 'uno');
+                $("#txtMonto").val(dataSeleccion.costoRepo);
+                VerificaHabilitado(dataSeleccion.codIMEI);
+                inCodOpe = dataSeleccion.codOper;
+            }
+            ResumenFechaFinContrato = dataSeleccion.FechaFinContrato;
+            ResumenModeloSeleccionado = dataSeleccion.modelo;
+            //ResumenCostoReferencial = dataSeleccion.costoRepo;
+            if (oCulturaLocal.vcSimDec.toString() == ',') {
+                ResumenCostoExtra = parseFloat(dataSeleccion.costoRepo) > 0 ? dataSeleccion.costoRepo : '0';
+            } else {
+                ResumenCostoExtra = parseFloat(dataSeleccion.costoRepo) > 0 ? dataSeleccion.costoRepo : '';
+            }
+            break;
+        case ("4"): //reparacion
+            $("#hdfCodModDis").val(dataSeleccion.codIMEI);
+            codDispTemp = dataSeleccion.codIMEI;
+            $("#btnSiguiente").button("option", "disabled", false);
+            setCaptura("Dispositivos", true);
+            $("#hdfLineaSel").val(dataSeleccion.numero);
+            ResumenModeloSeleccionado = dataSeleccion.modelo;
+            VerificaHabilitado(dataSeleccion.codIMEI);
+            break;
+        case ("6"): //activacion
+            if (dataSeleccion.numero == "Dispositivo sin línea") {
+                msgValidacionGrilla = "Dispositivo no cuenta con línea";
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+                $("#btnSiguiente").button("option", "disabled", true);
+            } else {
+                $("#lblMensajeVerificacion").html("");
+                $("#btnSiguiente").button("option", "disabled", false);
+                //setCaptura("Dispositivos", true);
+                VerificarLinea_ActAmp(dataSeleccion.numero, 6);
+                $("#hdfLineaSel").val(dataSeleccion.numero);
+                $("#hdfCuentaLinea").val(dataSeleccion.cuenta);
+                $("#lblLineaSel").text(dataSeleccion.numero);
+            }
+            break;
+        case ("7"): //ampliacion
+            if (dataSeleccion.numero == "Dispositivo sin línea") {
+                msgValidacionGrilla = "Dispositivo no cuenta con línea";
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+                $("#btnSiguiente").button("option", "disabled", true);
+            } else if (dataSeleccion.plan == 'Plan: Plan Desconocido') {
+                msgValidacionGrilla = "Debe de asignarse un plan a la línea antes de continuar.";
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+                $("#btnSiguiente").button("option", "disabled", true);
+            } else {
+                $("#lblMensajeVerificacion").html("");
+                $("#btnSiguiente").button("option", "disabled", false);
+                //$("#hdfCuentaLinea").val(dataSeleccion.cuenta);
+                VerificarLinea_ActAmp(dataSeleccion.numero, 7);
+                $("#hdfPlanLineaSel").val(dataSeleccion.plan.replace('Plan: ', ''));
+                $("#hdfLineaSel").val(dataSeleccion.numero);
+                $("#hdfCodigoOperador").val(dataSeleccion.codOper);
+                $("#hdfNombreOperador").val(dataSeleccion.nomOper);
+                $("#hdfCodModDis").val(dataSeleccion.codModDis);
+                //$("#hdfCodPlanSel").val(dataSeleccion.codPlan);
+                $("#hdfCuentaLinea").val(dataSeleccion.cuenta);
+                //plus
+                $("#hdfCodModDisActual").val(dataSeleccion.modelo);
+                //modelo
+                ResumenModeloSeleccionado = dataSeleccion.modelo;
+                ResumenNombreOperador = dataSeleccion.nomOper;
+                ResumenPlanActual = dataSeleccion.plan.replace('Plan: ', '');
+                codPlanActual = dataSeleccion.codPlan;
+                $("#hdfCodPlan").val('');
+            }
+            break;
+        default:
+            alerta("Error al seleccionar tipo de solicitud, recargue la pagina");
+    }
+}
+
+function VerificaHabilitado(Dispositivo) {
+    if ($("#ddlTipoSolicitud").data("kendoComboBox").value() == "1") {
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitud.aspx/VerificaLineaEmpleadoCambio",
+            data: "{'dcNumLin': '" + Dispositivo + "'," +
+                       "'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $("#btnEquiSol").hide();
+                $("#lblMensajeVerificacion").text('');
+                msgValidacionGrilla = '';
+                if (result.d == "1") {
+                    msgValidacionGrilla = "Hubo un problema al verificar la línea";
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    valAvance = false;
+                } else if (result.d == "2") {
+                    msgValidacionGrilla = "Ya existe una solicitud para este equipo";
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    valAvance = false;
+                    $("#btnEquiSol").show();
+                    setCaptura("Dispositivos", false);
+                } else if (result.d == "3") {
+                    msgValidacionGrilla = "No ha cumplido el tiempo mínimo para realizar cambio de equipo";
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    valAvance = false;
+                } else if (result.d == "4") {
+                    msgValidacionGrilla = "Usted no está incluido en ninguna política de cambio";
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    valAvance = false;
+                } else {
+                    if ($("#hdfCodPlanSel").val() == '0') {
+                        msgValidacionGrilla = "Solo se mostrarán los modelos compatibles con grupo del empleado";
+                    } else {
+                        //msgValidacionGrilla = "Sólo se mostrarán los modelos compatibles al plan del equipo seleccionado";
+                        msgValidacionGrilla = "Sólo se mostrarán los modelos compatibles con el grupo del empleado y el plan del equipo seleccionado";
+                    }
+                    //cambiar estado a captura completa
+                    setCaptura("Dispositivos", true);
+                    $("#btnSiguiente").button("option", "disabled", false);
+                }
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    } else if ($("#ddlTipoSolicitud").data("kendoComboBox").value() == "3" || $("#ddlTipoSolicitud").data("kendoComboBox").value() == "4") {
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitud.aspx/VerificaLineaEmpleadoReposicion",
+            data: "{'dcNumLin': '" + Dispositivo + "'," +
+                           "'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $("#btnEquiSol").hide();
+                $("#lblMensajeVerificacion").html("");
+                msgValidacionGrilla = '';
+                if (result.d == "1") {
+                    msgValidacionGrilla = "Hubo un problema al verificar la linea. Linea no corresponde al empleado.";
+                    valAvance = false;
+                    $("#btnSiguiente").button("option", "disabled", true);
+                }
+                else if (result.d == "2") {
+                    msgValidacionGrilla = "Ya existe una solicitud para este equipo";
+                    valAvance = false;
+                    $("#btnSiguiente").button("option", "disabled", true);
+                    $("#btnEquiSol").show();
+                }
+                else if (result.d == "3") {
+                    msgValidacionGrilla = "Usted no está incluido en ninguna política";
+                    valAvance = false;
+                    $("#btnSiguiente").button("option", "disabled", true);
+                }
+                else {
+                    if ($("#ddlTipoSolicitud").data("kendoComboBox").value() == "3") {
+                        msgValidacionGrilla = "Sólo se mostrarán los modelos compatibles al plan del equipo seleccionado";
+                    }
+                    $("#btnSiguiente").button("option", "disabled", false);
+                }
+                $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+}
+
+function VerificaHabilitadoEmpleado(Empleado, activarBoton) {
+    if (Empleado == "") {
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/VerificaLineaEmpleadoNuevo",
+        data: "{'vcCodEmp': '" + Empleado + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            $("#btnEquiSol").hide();
+            if (result.d == "1") {
+                msgValidacionGrilla = "Ya tiene una solicitud pendiente para adquirir un nuevo equipo";
+                $("#dvCreacionEstado").hide();
+                valAvance = false;
+                $("#btnEquiSol").show();
+            } else if (result.d == "2") {
+                msgValidacionGrilla = "Usted no puede adquirir más equipos porque ha llegado al número máximo de dispositivos configurado para su grupo.";
+                valAvance = false;
+                $("#dvCreacionEstado").hide();
+            } else if (result.d == "3") {
+                msgValidacionGrilla = "Usted no está incluido en ninguna política";
+                valAvance = false;
+                $("#dvCreacionEstado").hide();
+            } else {
+                //mostrar tabs
+                msgValidacionGrilla = '';
+                //$("#dvCreacionEstado").show();
+                if (activarBoton == "1") {
+                    $("#btnSiguiente").button("option", "disabled", false);
+                }
+            }
+
+            $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+//FIN FUNCIONES VALIDACION
+
+//INICIO ADJUNTOS
+function listaUbicaciones(ubicacionesAdjuntos) {
+    lstUbicaciones = ubicacionesAdjuntos;
+    //alert(lstUbicaciones.length);
+}
+function numeroAdjuntos(nAdj) {
+
+    valAvance = true;
+    setCaptura('DocAdjuntos', true);
+    if (nAdj == 0) {
+        //alerta('No se ha adjuntado ningún archivo');
+        $("#lblMensajeVerificacion").html('No se ha adjuntado ningún archivo');
+        if (selContOblig('DocAdjuntos')) {
+            valAvance = false;
+        }
+        setCaptura('DocAdjuntos', false);
+    } else if (nAdj == 1) {
+        //alerta('Se ha cargado 1 adjunto');
+        $("#lblMensajeVerificacion").html('Se ha cargado 1 adjunto');
+    } else {
+        //alerta('Se han cargado ' + nAdj + ' adjuntos.');
+        $("#lblMensajeVerificacion").html('Se han cargado ' + nAdj + ' adjuntos.');
+    }
+    HabilitarContinuar();
+}
+//FIN ADJUNTOS
+
+//INICIO TABS
+function mensajeKendo() {
+    $("#txtMensaje").attr("height", "170px");
+    //var altokendoEditor = altco
+    $("#txtMensaje").kendoEditor({
+        tools: ["bold", "italic", "underline", "strikethrough",
+                            "justifyLeft", "justifyCenter", "justifyRight", "justifyFull",
+                            "insertUnorderedList", "insertOrderedList",
+                            "indent", "outdent",
+        //"fontName", 
+                            "fontSize"
+        ],
+        messages: {
+            bold: "Negritas", italic: "Cursiva", underline: "Subrayado", strikethrough: "Tachado",
+            justifyLeft: "Alinear a la izquierda", justifyCenter: "Centrar", justifyRight: "Alinear a la derecha", justifyFull: "Justificar",
+            insertUnorderedList: "Viñetas", insertOrderedList: "Numeración",
+            indent: "Disminuir sangría", outdent: "Aumentar sangría",
+            fontNameInherit: "(Fuente)", fontSizeInherit: "(Tamaño de fuente)",
+            //fontName: "Fuente", 
+            fontSize: "Tamaño de fuente"
+        },
+        keydown: function (e) {
+            if (parseInt(MensajeValidCantMax) <= parseInt($("#lblNumWordCaracMensaje").text())) {
+                //alert(MensajeValidCantMax);
+                return false;
+            }
+        },
+        keyup: function (e) {
+            if (MensajeValidTipo == 'w') { //validación por tipo palabras
+                $("#lblNumWordCaracMensaje").text(wordCount(this.value()));
+            } else { //validación por caracteres
+                $("#lblNumWordCaracMensaje").text(characterCount(this.value()));
+            }
+            //tamaño máximo por mensaje 
+
+            //mensaje es obligatirio
+            $.each(arContenidos, function () {
+                if (this.contenido == 'Mensaje' && this.obligatorio == true) {
+                    if (parseInt($("#lblNumWordCaracMensaje").text()) >= parseInt(MensajeValidCant)) { //palabras
+                        setCaptura('Mensaje', true);
+                        valAvance = true;
+                        HabilitarContinuar();
+                        //$("#btnSiguiente").button("option", "disabled", false);
+                    } else {
+                        setCaptura('Mensaje', false);
+                        valAvance = false;
+                        DeshabilitarContinuar();
+                        fnDesactivarSiguientesVentanas(); //Agregado Jcamacho 25/09/2015
+                        //$("#btnSiguiente").button("option", "disabled", true);
+                    }
+                }
+            });
+        }
+    });
+
+    $("#btnLimpiarMensaje").click(function () {
+        $("#txtMensaje").data("kendoEditor").value('');
+    });
+
+    var altoContenedor = $("#tbSolicitud").css("height").split(".")[0];
+    $(".k-editor").css("height", parseInt(altoContenedor) - 122);
+
+    if ($.browser.msie) {
+        $(".k-editor").css("height", parseInt(altoContenedor) - 122);
+    } else {
+        $(".k-editor").css("height", parseInt(altoContenedor) - 80);
+    }
+
+}
+
+
+
+function combokendoFormar(control, altura) {
+    $("#" + control).removeClass("ui-widget-content ui-corner-all");
+    $("#" + control).css("padding", "0px");
+    $("#" + control).css("margin", "0px");
+    $("#" + control).kendoComboBox({
+        filter: "contains",
+        suggest: true,
+        height: altura,
+        dataTextField: "text",
+        dataValueField: "value"
+    });
+    $("input[name='" + control + "_input']").attr("disabled", true);
+}
+
+//Finalizar
+function EnviarSolicitudCambio() {
+    var CodModDis = $("#hdfCodModDis").val();
+    var CodEmp = $("#hdfCodEmpleado").val();
+    var NumLin = $("#hdfLineaSel").val();
+    var codIMEI = $("#hdfCodImeiSel").val();
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+
+    var inEstApr = $("#ddlEstadoCreacion").val();
+
+    //var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+    var dcMonto;
+    if ($("#txtMonto").val() == '') {
+        dcMonto = '0';
+    } else {
+        if (oCulturaLocal.vcSimDec.toString() == ',') {
+            dcMonto = parseFloat(ParseFloatMultiPais($("#txtMonto").val(), oCulturaLocal));
+        } else {
+            dcMonto = $("#txtMonto").val();
+        }
+    }
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (inNumeroCuotas == "0" && NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (inNumeroCuotas < NumMinCuo || inNumeroCuotas > NumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (inMesesPeriodoGracia < MinPerGra || inMesesPeriodoGracia > MaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    //alerta("dcMonto -> " + dcMonto + "\ninNumeroCuotas ->" + inNumeroCuotas + "\nvcMesesCuotas -> " + vcMesesCuotas + "\ninMesesPeriodoGracia -> " + inMesesPeriodoGracia);
+
+    var ArchAdj = '';
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+    if (CodModDis == '') {
+        alerta("Debe seleccionar un modelo de disipositivo en la Galeria");
+        return;
+    }
+
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+
+    //alerta("Empleado: " + CodEmp + "\nModelo: " + CodModDis + "\nLinea: " + NumLin + "\nMensaje: " + Desc + "\nAdjuntos: " + ArchAdj + "\nIMEI: " + codIMEI);
+
+    if (ResumenCostoExtra != '' && (inTipoCostoReposicion == 1 || inTipoCostoReposicion == 0)) {
+        $("#lblCostExt_Det1").text(ResumenFechaFinContrato);
+        //$("#lblCostExt_Det2").text(ResumenCostoExtra);
+        if (oCulturaLocal.vcSimDec.toString() == ',') {
+            $("#lblCostExt_Det2").text(FormatoNumero(ResumenCostoExtra, oCulturaLocal));
+        }
+        else {
+            $("#lblCostExt_Det2").text(ResumenCostoExtra);
+        }
+        $('#divMsgConfirmarCostoExtra').dialog({
+            title: inTipoCostoReposicion == 1 ? "¡Costo Extra!" : "¡Costo de Penalidad!",
+            modal: true,
+            width: 330,
+            buttons: {
+                "Si": function () {
+                    $(this).dialog("close");
+                    BloquearPagina(true);
+                    $.ajax({
+                        type: "POST",
+                        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudCambio",
+                        data: "{'codIMEI': '" + codIMEI + "'," +
+                                "'vcNumLin': '" + NumLin + "'," +
+                                "'inCodModDis': '" + CodModDis + "'," +
+                                "'vcArchAdj': '" + ArchAdj + "'," +
+                                "'vcDesSol': '" + Desc + "'," +
+                                "'inEstApr': '" + inEstApr + "'," +
+                                "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                                "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                                "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                                "'dcMonto': '" + dcMonto + "'," +
+                                "'vcCodEmp': '" + CodEmp + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.d != "0") {
+                                //alerta("Su solicitud fue enviada con éxito");
+                                window.parent.ActualizarGrilla();
+                                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+                            } else {
+                                alerta("No hay dispositivos disponible para el modelo seleccionado, por favor elija otro modelo");
+                                BloquearPagina(false);
+                            }
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                        }
+                    });
+                },
+                "Cancelar": function () {
+                    $(this).dialog("close");
+                    BloquearPagina(false);
+                }
+            }
+        });
+    } else {
+        BloquearPagina(true);
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudCambio",
+            data: "{'codIMEI': '" + codIMEI + "'," +
+                   "'vcNumLin': '" + NumLin + "'," +
+                   "'inCodModDis': '" + CodModDis + "'," +
+                   "'vcArchAdj': '" + ArchAdj + "'," +
+                   "'vcDesSol': '" + Desc + "'," +
+                   "'inEstApr': '" + inEstApr + "'," +
+                   "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                   "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                   "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                   "'dcMonto': '" + dcMonto + "'," +
+                   "'vcCodEmp': '" + CodEmp + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.d != "0") {
+                    //alerta("Su solicitud fue enviada con éxito");
+                    window.parent.ActualizarGrilla();
+                    Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+                } else {
+                    alerta("No hay dispositivos disponible para el modelo seleccionado, por favor elija otro modelo");
+                    BloquearPagina(false);
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+}
+
+function EnviarSolicitudNuevo() {
+    var CodModDis = $("#hdfCodModDis").val();
+    var CodEmp = $("#hdfCodEmpleado").val();
+    var ArchAdj = '';
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+    var Plan = $("#hdfCodPlan").val() == '' ? '0' : $("#hdfCodPlan").val();
+
+    var inEstApr = $("#ddlEstadoCreacion").val();
+
+    var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+    //    var dcMonto;
+    //    if ($("#txtMonto").val() == '') {
+    //        dcMonto = '0';
+    //    } else {
+    //        if (oCulturaLocal.vcSimDec.toString() == ',') {
+    //            dcMonto = parseFloat(ParseFloatMultiPais($("#txtMonto").val(), oCulturaLocal));
+    //        } else {
+    //            dcMonto = $("#txtMonto").val();
+    //        }    
+    //    }
+
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (parseInt(inNumeroCuotas) < parseInt(NumMinCuo) || parseInt(inNumeroCuotas) > parseInt(NumMaxCuo)) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (parseInt(inMesesPeriodoGracia) < parseInt(MinPerGra) || parseInt(inMesesPeriodoGracia) > parseInt(MaxPerGra)) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+
+    //comentado 22/08/2014 - wapumayta (RespTck:1374)(plan no sera escogido en la creacion)
+    //var conLinea = $("#ifGaleria")[0].contentWindow.conLinea();
+    //if (conLinea == 1 && Plan == '') {
+    //    alerta("Debe seleccionar un plan.");
+    //    return;
+    //};
+
+    //alerta("Empleado: " + CodEmp + "\nModelo: " + CodModDis + "\nPlan: " + Plan + "\nMensaje: " + Desc + "\nAdjuntos: " + ArchAdj);
+
+    BloquearPagina(true);
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudNuevo",
+        data: "{'inCodModDis': '" + CodModDis + "'," +
+                "'vcNumLin': '" + $("#hdfLineaSel").val() + "'," +
+                "'vcArchAdj': '" + ArchAdj + "'," +
+                "'vcCodPlan': '" + Plan + "'," +
+                "'vcDescSol': '" + Desc + "'," +
+                "'inEstApr': '" + inEstApr + "'," +
+                "'dcMonto': '" + dcMonto + "'," +
+                "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                "'vcCodEmp':'" + CodEmp + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (result.d != "0") {
+                window.parent.ActualizarGrilla();
+                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+            } else {
+                //alerta("No hay dispositivos disponible para el modelo seleccionado, por favor elija otro modelo");
+                alerta("Ya existe una solicitud de nuevo equipo para el empleado.");
+                BloquearPagina(false);
+            }
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function EnviarSolicitudReposicion() {
+    var CodModDis = $("#hdfCodModDis").val();
+    var CodEmp = $("#hdfCodEmpleado").val();
+    var NumLin = $("#hdfLineaSel").val();
+    var CodIMEI = $("#hdfCodImeiSel").val();
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+    var inEstApr = $("#ddlEstadoCreacion").val();
+    //var dcMonto = $("#hdfCostoReposicion").val();
+    var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (inNumeroCuotas == "0" && NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (inNumeroCuotas < NumMinCuo || inNumeroCuotas > NumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (inMesesPeriodoGracia < MinPerGra || inMesesPeriodoGracia > MaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+
+    var ArchAdj = '';
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+    if (CodModDis == '') {
+        alerta("Debe seleccionar un modelo de disipositivo en la Galeria");
+        return;
+    }
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+    //alerta("Modelo: " + CodModDis + "\nEmpleado: " + CodEmp + "\nLinea: " + NumLin + "\nAdjuntos: " + ArchAdj + "\nIMEI: " + CodIMEI + "\nMensaje: " + Desc);
+    BloquearPagina(true);
+    if (ResumenCostoExtra != '' && (inTipoCostoReposicion == 1 || inTipoCostoReposicion == 0)) {
+        $("#lblCostExt_Det1").text(ResumenFechaFinContrato);
+        if (oCulturaLocal.vcSimDec.toString() == ',') {
+            $("#lblCostExt_Det2").text(FormatoNumero(ResumenCostoExtra, oCulturaLocal));
+        }
+        else {
+            $("#lblCostExt_Det2").text(ResumenCostoExtra);
+        }
+
+        $('#divMsgConfirmarCostoExtra').dialog({
+            title: inTipoCostoReposicion == 1 ? "¡Costo Extra!" : "¡Costo de Penalidad!",
+            modal: true,
+            width: 330,
+            buttons: {
+                "Si": function () {
+                    $(this).dialog("close");
+                    BloquearPagina(true);
+                    $.ajax({
+                        type: "POST",
+                        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudReposicion",
+                        data: "{'codIMEI': '" + CodIMEI + "'," +
+                               "'vcNumLin': '" + NumLin + "'," +
+                               "'inCodModDis': '" + CodModDis + "'," +
+                               "'vcArchAdj': '" + ArchAdj + "'," +
+                               "'vcDescSol': '" + Desc + "'," +
+                               "'inEstApr': '" + inEstApr + "'," +
+                               "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                               "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                               "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                               "'dcMonto': '" + dcMonto + "'," +
+                               "'vcCodEmp': '" + CodEmp + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.d != "0") {
+                                window.parent.ActualizarGrilla();
+                                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+                            } else {
+                                alerta("No hay dispositivos disponible para el modelo seleccionado, por favor elija otro modelo");
+                                BloquearPagina(false);
+                            }
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                        }
+                    });
+                },
+                "Cancelar": function () {
+                    $(this).dialog("close");
+                    BloquearPagina(false);
+                }
+            }
+        });
+    } else {
+        $.ajax({
+            type: "POST",
+            url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudReposicion",
+            data: "{'codIMEI': '" + CodIMEI + "'," +
+                   "'vcNumLin': '" + NumLin + "'," +
+                   "'inCodModDis': '" + CodModDis + "'," +
+                   "'vcArchAdj': '" + ArchAdj + "'," +
+                   "'vcDescSol': '" + Desc + "'," +
+                   "'inEstApr': '" + inEstApr + "'," +
+                   "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                   "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                   "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                   "'dcMonto': '" + dcMonto + "'," +
+                   "'vcCodEmp': '" + CodEmp + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.d != "0") {
+                    window.parent.ActualizarGrilla();
+                    Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+                } else {
+                    alerta("No hay dispositivos disponible para el modelo seleccionado, por favor elija otro modelo");
+                    BloquearPagina(false);
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+
+
+}
+function EnviarSolicitudReparacion() {
+    var CodEmp = $("#hdfCodEmpleado").val();
+    var CodDisp = $("#hdfCodModDis").val();
+
+    var CodModDis = $("#hdfCodModDis").val();
+
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+    var NumLin = $("#hdfLineaSel").val();
+    var inEstApr = $("#ddlEstadoCreacion").val();
+    var ArchAdj = '';
+
+    var inEstApr = $("#ddlEstadoCreacion").val();
+    var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (inNumeroCuotas == "0" && NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (inNumeroCuotas < NumMinCuo || inNumeroCuotas > NumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (inMesesPeriodoGracia < MinPerGra || inMesesPeriodoGracia > MaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+    if (Desc == '') {
+        alerta("Debe ingresar el motivo por el que se solicitua la reparación.");
+        return;
+    }
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+    //alerta("Empleado: " + CodEmp + "\nDispositivo: " + CodDisp + "\nDescripcion: " + Desc + "\nAdjuntos: " + ArchAdj);
+    BloquearPagina(true);
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudReparacion",
+        data: "{'vcCodEmp': '" + CodEmp + "'," +
+                "'vcArchAdj': '" + ArchAdj + "'," +
+                "'vcNumLin': '" + NumLin + "'," +
+                "'codIMEI': '" + CodDisp + "'," +
+                "'inEstApr': '" + inEstApr + "'," +
+                "'dcMonto': '" + dcMonto + "'," +
+                "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                "'vcDesSol': '" + Desc + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            $("#txtDescripcion").val("");
+            if (result.d != "0") {
+                window.parent.ActualizarGrilla();
+                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+            } else if (result.d == "0") {
+                alerta("Ya hay una solicitud pendiente para dicho dispositivo");
+                BloquearPagina(false);
+            } else if (result.d == "-1") {
+                alerta("La solicitud no pudo ser enviada, vuelva a intentarlo, si el problema persiste consulte a su administrador");
+                BloquearPagina(false);
+            }
+            $("#txtDescripcion").val("");
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+function EnviarSolicitudActivacion() {
+    var CodEmp = $("#hdfCodEmpleado").val();
+    var NumLin = $("#hdfLineaSel").val();
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+
+    var ArchAdj = '';
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+    var arServ = [];
+    var arCost = [];
+    var filas = $(".fila");
+    var i = 0;
+    for (i = 0; i < filas.length; i++) {
+        var chk = $(filas[i]).find("input");
+        if (chk.is(":checked")) {
+            //arServ.push(chk.attr("id"));
+            arServ.push({ codigo: chk.attr("id"), nombre: $($(filas[i]).find("label")[0]).text() });
+        }
+    }
+
+    var arServDel = jQuery.grep(arServiciosActuales, function (val) {
+        var sum = 0;
+        for (i = 0; i < arServ.length; i++) {
+            //if (val.codigo == arServ[i]) {
+            if (val.codigo == arServ[i].codigo) {
+                sum = sum + 1;
+            }
+        }
+        if (sum == 0) {
+            return val;
+        }
+    });
+    var arServAdd = jQuery.grep(arServ, function (val) {
+        var sum = 0;
+        for (i = 0; i < arServiciosActuales.length; i++) {
+            //if (val.codigo == arServiciosActuales[i]) {
+            if (val.codigo == arServiciosActuales[i].codigo) {
+                sum = sum + 1;
+            }
+        }
+        if (sum == 0) {
+            return val;
+        }
+    });
+
+    if (arServAdd.length == 0 && arServDel.length == 0) {
+        alerta("No ha realizado ningún cambio en sus servicios actuales.");
+        return;
+    }
+    BloquearPagina(true);
+
+    var xmlDetalle = '<?xml version="1.0" encoding="iso-8859-1"?><TABLE>';
+    $.each(arServAdd, function () {
+        xmlDetalle = xmlDetalle + "<DETALLE><IdServicio>" + this.codigo + "</IdServicio><Estado>1</Estado></DETALLE>";
+    });
+    $.each(arServDel, function () {
+        xmlDetalle = xmlDetalle + "<DETALLE><IdServicio>" + this.codigo + "</IdServicio><Estado>0</Estado></DETALLE>";
+    });
+    xmlDetalle = xmlDetalle + "</TABLE>";
+
+    //alert("CodEmpleado: " + CodEmp + "\nLinea: " + NumLin + "\nServicios Actuales: " + arServiciosActuales.join(",") +
+    //    "\nMensaje: " + Desc + "\nAdjuntos: " + ArchAdj + 
+    //    "\nServicios Seleccoinados: " + arServ.join(",") + "\nServicios Agregados: " + arServAdd.join(",") + 
+    //    "\nServicios Quitados: " + arServDel.join(",") + "\nCostos: " + arCost.join(","));
+
+    //alert(arServAdd.length + ", " + arServDel.length);
+
+    var inEstApr = $("#ddlEstadoCreacion").val();
+
+    var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (inNumeroCuotas == "0" && NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (inNumeroCuotas < NumMinCuo || inNumeroCuotas > NumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (inMesesPeriodoGracia < MinPerGra || inMesesPeriodoGracia > MaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudActivacion",
+        data: "{'vcNumLin': '" + NumLin + "'," +
+                "'vcCodEmp': '" + CodEmp + "'," +
+                "'xmlDetalle': '" + xmlDetalle + "'," +
+                "'vcArchAdj': '" + ArchAdj + "'," +
+                "'inEstApr': '" + inEstApr + "'," +
+                "'dcMonto': '" + dcMonto + "'," +
+                "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'," +
+                "'vcDescSol': '" + Desc + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (result.d != '0') {
+                window.parent.ActualizarGrilla();
+                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+            } else if (result.d == '0') {
+                alerta("Ya existe una solicitud para este empleado");
+            }
+            BloquearPagina(false);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function EnviarSolicitudAmpliacion() {
+    var CodEmp = $("#hdfCodEmpleado").val(); //empleado
+    var NumLin = $("#hdfLineaSel").val(); //dispositivo
+    var Desc = '';
+    $.each(arContenidos, function () {
+        if (this.contenido == "Mensaje") {
+            Desc = $("#txtMensaje").data("kendoEditor").value().replace(/'/g, "&#39").replace(/\\/g, "&#92");
+        }
+    });
+    var inEstApr = $("#ddlEstadoCreacion").val();
+    var dcMonto = $("#txtMonto").val() == '' ? '0' : $("#txtMonto").val();
+
+    var inNumeroCuotas = MesCuo == '' ? $("#txtMesesCuotas").val() : MesCuo;
+    var vcMesesCuotas = MesCuo == '' ? '' : MesesCuotas;
+    var inMesesPeriodoGracia = $("#txtPeriodoGracia").val();
+
+    if (inNumeroCuotas == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (inNumeroCuotas == "0" && NumMinCuo != "0" && NumMaxCuo != "0") {
+        if (inNumeroCuotas < NumMinCuo || inNumeroCuotas > NumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (inMesesPeriodoGracia == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (MinPerGra != "0" && MaxPerGra != "0") {
+        if (inMesesPeriodoGracia < MinPerGra || inMesesPeriodoGracia > MaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    var ArchAdj = '';
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|"); // adjuntos
+    }
+    var CodPlan = $("#hdfCodPlan").val();
+
+    //tipo de ampliacion
+    var XMLPaquetes = '';
+    if (codPlanActual != 0) { //linea con cuenta por planes
+        if (CodPlan == '' || CodPlan == '-1' || CodPlan == '-2') {
+            alerta("Plan seleccionado inválido");
+            return;
+        }
+        if (CodPlan == codPlanActual) {
+            alerta("No pude finalizar la solicitud seleccionando el mismo plan actual");
+            return;
+        }
+    } else {
+        XMLPaquetes = '<?xml version="1.0" encoding="iso-8859-1"?><TABLE>';
+        var IdsPaquetes = tbAmpPaquetes.getDataIDs();
+        if (IdsPaquetes.length > 0) {
+            $.each(IdsPaquetes, function (e) {
+                var dataPaquete = tbAmpPaquetes.jqGrid('getRowData', IdsPaquetes[e]);
+                var inCodTipSer = dataPaquete.inTipoServ == '2' ? dataPaquete.P_inCod.toString() : '0';
+                var inCodSer = dataPaquete.inTipoServ == '1' ? dataPaquete.P_inCod.toString() : '0';
+                var inCant = dataPaquete.vcCantReal.toString();
+                var dcCost = dataPaquete.dcCostoReal.toString();
+                var inCodPaqAmp = dataPaquete.inCodPaqAmp.toString();
+                XMLPaquetes += "<DETALLE><IdSolicitud>-1</IdSolicitud><inCodTipSer>" + inCodTipSer + "</inCodTipSer><inCodSer>";
+                XMLPaquetes += inCodSer + "</inCodSer><inCant>" + inCant + "</inCant><dcCost>" + dcCost + "</dcCost>";
+                XMLPaquetes += "<inCodPaqAmp>" + inCodPaqAmp + "</inCodPaqAmp>";
+                XMLPaquetes += "</DETALLE>";
+            });
+        } else {
+            alerta("No ha agregado ningúna paquete de ampliación.");
+            return;
+        }
+        XMLPaquetes += "</TABLE>";
+    }
+
+    dcMonto = ParseFloatMultiPais(dcMonto, oCulturaLocal);
+
+    //alert(XMLPaquetes);
+    //alerta("Empleado: " + CodEmp + "\nLinea: " + NumLin + "\nAdjuntos: " + ArchAdj + "\nPlan Sel: " + CodPlan + "\nXML: " + XMLPaquetes + "\nDesc: " + Desc);
+    BloquearPagina(true);
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudAmpliacion",
+        data: "{'vcNumLin': '" + NumLin + "'," +
+                "'vcCodEmp': '" + CodEmp + "'," +
+                "'vcArchAdj': '" + ArchAdj + "'," +
+                "'CodPlan': '" + CodPlan + "'," +
+                "'vcDescSol': '" + Desc + "'," +
+                "'inEstApr': '" + inEstApr + "'," +
+                "'dcMonto': '" + dcMonto + "'," +
+                "'xmlDetalleAmp':'" + XMLPaquetes + "'," +
+                "'inNumeroCuotas': '" + inNumeroCuotas + "'," +
+                "'vcMesesCuotas': '" + vcMesesCuotas + "'," +
+                "'inMesesPeriodoGracia': '" + inMesesPeriodoGracia + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (result.d != '0') {
+                window.parent.ActualizarGrilla();
+                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+            } else if (result.d == '0') {
+                alerta("Ya existe una solicitud de ampliación para esta línea");
+            }
+            //BloquearPagina(false);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function fnValidarCambiosEnActivacionDeServicios() {
+    var ArchAdj = '';
+    if (lstUbicaciones.length != 0) {
+        ArchAdj = lstUbicaciones.join("|");
+    }
+    var arServ = [];
+    var arCost = [];
+    var filas = $(".fila");
+    var i = 0;
+    for (i = 0; i < filas.length; i++) {
+        var chk = $(filas[i]).find("input");
+        if (chk.is(":checked")) {
+            //arServ.push(chk.attr("id"));
+            arServ.push({ codigo: chk.attr("id"), nombre: $($(filas[i]).find("label")[0]).text() });
+        }
+    }
+
+    var arServDel = jQuery.grep(arServiciosActuales, function (val) {
+        var sum = 0;
+        for (i = 0; i < arServ.length; i++) {
+            //if (val.codigo == arServ[i]) {
+            if (val.codigo == arServ[i].codigo) {
+                sum = sum + 1;
+            }
+        }
+        if (sum == 0) {
+            return val;
+        }
+    });
+    var arServAdd = jQuery.grep(arServ, function (val) {
+        var sum = 0;
+        for (i = 0; i < arServiciosActuales.length; i++) {
+            //if (val.codigo == arServiciosActuales[i]) {
+            if (val.codigo == arServiciosActuales[i].codigo) {
+                sum = sum + 1;
+            }
+        }
+        if (sum == 0) {
+            return val;
+        }
+    });
+
+    if (arServAdd.length == 0 && arServDel.length == 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function CerroMensaje() {
+    if (lstUbicaciones == '') {
+        //window.parent.tab.tabs("remove", window.parent.tab.tabs("option", "selected"));
+        window.parent.tab.tabs("remove", indiceTab);
+        BloquearPagina(false);
+    } else { //limpiar archivos adjuntos si se han agregado
+        $.ajax({
+            type: "POST",
+            url: "Adm_AdjuntarArchivos.aspx/EliminarArchivosTemporales",
+            data: "{'lstArchivos': '" + lstUbicaciones.join("|") + "', 'charSeparador': '|'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                //Mensaje("<br/><h1>Su solicitud cancelada</h1><br/>", document, CerroMensaje2);
+                CerroMensaje2();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+    //BloquearPagina(false);
+}
+
+function CerroMensaje2() {
+    //window.parent.tab.tabs("remove", window.parent.tab.tabs("option", "selected"));
+
+    if ($("#hdfEsCulminada").val() == "1") {
+        window.parent.Modal.dialog("close");
+    } else {
+        indiceTab = window.parent.tab.tabs("option", "selected");
+        window.parent.tab.tabs("remove", indiceTab);
+    }
+
+    BloquearPagina(false);
+}
+
+function CerroMensaje3() {
+    BloquearPagina(false);
+
+    if (lstUbicaciones == '') {
+        Mensaje("<br/><h1>Su solicitud cancelada</h1><br/>", document, CerroMensaje2);
+        //window.parent.tab.tabs("remove", window.parent.tab.tabs("option", "selected"));
+    } else { //limpiar archivos adjuntos si se han agregado
+        $.ajax({
+            type: "POST",
+            url: "Adm_AdjuntarArchivos.aspx/EliminarArchivosTemporales",
+            data: "{'lstArchivos': '" + lstUbicaciones.join("|") + "', 'charSeparador': '|'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                Mensaje("<br/><h1>Su solicitud cancelada</h1><br/>", document, CerroMensaje2);
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+    }
+}
+
+function EnviarSolicitudPersonalizada() {
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    var vcTabla = "";
+    var arSolPer = [];
+    arSolPer = $("#ifSolPer")[0].contentWindow.enviarDatosSolicitudPersonalizada();
+    var nTipSol = "es" + tipsol.toString();
+    vcTabla = arTiposSolicitud[nTipSol].vcTabla;
+    var inEst = $("#ddlEstadoCreacion").val();
+
+    if (arSolPer.inNumCuo == "") {
+        alerta("El número de cuotas es requerido.");
+        return;
+    }
+    if (arSolPer.Meses == "0" && arSolPer.inNumMinCuo != "0" && arSolPer.inNumMaxCuo != "0") {//No es Meses cuotas ni tiene rango establecido
+        if (arSolPer.inNumCuo < arSolPer.inNumMinCuo || arSolPer.inNumCuo > arSolPer.inNumMaxCuo) {
+            alerta("El número de cuotas debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+    if (arSolPer.inPerGra == "") {
+        alerta("El número de meses del periodo de gracia es requerido.");
+        return;
+    }
+    if (arSolPer.inMinPerGra != "0" && arSolPer.inMaxPerGra != "0") {//Es rango de periodo de gracia
+        if (arSolPer.inPerGra < arSolPer.inMinPerGra || arSolPer.inPerGra > arSolPer.inMaxPerGra) {
+            alerta("El número de meses del periodo de gracia debe estar contenido en el rango especificado.");
+            return;
+        }
+    }
+
+    //validad número decimal con 4 enteros
+    if (arSolPer.Vacio == "0") {
+        if (tipsol == "30" && parseFloat(arSolPer.dcMonto.toString().replace(oCulturaLocal.vcSimSepMil, "")) <= 0) {
+            alerta("El monto de la solicitud debe ser mayor a 0.");
+            return;
+        }
+
+        //        JHERRERA 20140812 Valida decimal sin considerar el separador.
+        //        var cantEnteros = arSolPer.dcMonto.toString().split('.')[0]
+        if (parseFloat(arSolPer.dcMonto.toString().replace(oCulturaLocal.vcSimSepMil, "")) > 9999) {
+            alerta("La solicitud no puede contener un monto mayor a " + oCulturaLocal.Moneda.vcSimMon + " 9 999.");
+            return;
+        }
+    }
+
+    if (arSolPer.Vacio == "0") {
+        if ($("#lblMsjConfirmacion").text() != "") {
+            $('#divMsgConfirmar').dialog({
+                title: "¡Alerta!",
+                modal: true,
+                width: 330,
+                buttons: {
+                    "Si": function () {
+                        fnGrabarPrevioSolicitudPersonalizada(arSolPer, tipsol, vcTabla, inEst);
+
+                        $(this).dialog("close");
+                    },
+                    "Cancelar": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        } else {
+            fnGrabarPrevioSolicitudPersonalizada(arSolPer, tipsol, vcTabla, inEst);
+        }
+    } else {
+        alerta("Debe ingresar todos los datos requeridos");
+        BloquearPagina(false);
+    }
+}
+
+function fnGrabarPrevioSolicitudPersonalizada(arSolPer, tipsol, vcTabla, inEst) {
+    BloquearPagina(true);
+
+    if ($("#hdfEsCulminada").val() == "1") {
+        fnGrabarSolicitudPersonalizadaCulminada(arSolPer, tipsol, vcTabla, inEst);
+    } else {
+        fnGrabarSolicitudPersonalizada(arSolPer, tipsol, vcTabla, inEst);
+    }
+}
+
+function fnGrabarSolicitudPersonalizada(arSolPer, tipsol, vcTabla, inEst) {
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudPersonalizada",
+        data: "{'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'," +
+                "'inTipSol': '" + tipsol + "'," +
+                "'vcCamPer': '" + arSolPer.vcCamPer + "'," +
+                "'vcValPer': '" + arSolPer.vcValPer + "'," +
+                "'vcAuditoria': '" + arSolPer.vcAuditoria + "'," +
+                "'biFraccionamiento': '" + arSolPer.biFraccionamiento + "'," +
+                "'vcEsMeses': '" + arSolPer.Meses + "'," +
+                "'vcMeses': '" + arSolPer.inNumCuo + "'," +
+                "'inPerGra': '" + arSolPer.inPerGra + "'," +
+                "'vcTabla': '" + vcTabla + "'," +
+                "'inEst': '" + inEst + "'," +
+                "'dcMonto': '" + arSolPer.dcMonto + "'," +
+                "'vcAdj': '" + arSolPer.vcAdjuntos + "'," +
+                "'inTipoProducto': '" + arSolPer.inTipoProducto + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            if (result.d != '0') {
+                //Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, $("#ddlTipoSolicitud").change());
+                window.parent.ActualizarGrilla();
+                window.scrollTo(0, 0);
+                Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+
+            } else if (result.d == '0') {
+                alert("Hubo un problema con la creación de la solicitud. Por favor contáctese con su administrador de sistemas.");
+                //alerta("Ya existe una solicitud de ampliación para esta línea");
+            }
+            BloquearPagina(false);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function fnGrabarSolicitudPersonalizadaCulminada(arSolPer, tipsol, vcTabla, inEst) {
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/EnviarSolicitudPersonalizadaCulminada",
+        data: "{'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'," +
+                "'inTipSol': '" + tipsol + "'," +
+                "'vcCamPer': '" + arSolPer.vcCamPer + "'," +
+                "'vcValPer': '" + arSolPer.vcValPer + "'," +
+                "'vcAuditoria': '" + arSolPer.vcAuditoria + "'," +
+                "'biFraccionamiento': '" + arSolPer.biFraccionamiento + "'," +
+                "'vcEsMeses': '" + arSolPer.Meses + "'," +
+                "'vcMeses': '" + arSolPer.inNumCuo + "'," +
+                "'inPerGra': '" + arSolPer.inPerGra + "'," +
+                "'vcTabla': '" + vcTabla + "'," +
+                "'inEst': '" + inEst + "'," +
+                "'dcMonto': '" + arSolPer.dcMonto + "'," +
+                "'vcAdj': '" + arSolPer.vcAdjuntos + "'," +
+                "'inTipoProducto': '" + arSolPer.inTipoProducto + "'," +
+                "'inTipoProceso': '" + arSolPer.inTipoProceso + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            var inCodSol = result.d.split(",")[0];
+            var vcCodSol = result.d.split(",")[1];
+            var vcMensaje = result.d.split(",")[2];
+            if (inCodSol > 0) {
+                //$('#" & Me.ClientID & "_dvDetalleBusqueda').dialog('close');")
+                //Mensaje("<br/><h1>Su solicitud fue enviada con éxito</h1><br/>", document, CerroMensaje);
+                //window.parent.Modal.dialog("close");
+
+                BloquearPagina(true);
+                $("#btnFinalizar").hide();
+                $("#btnBusquedaEmpleado").hide();
+                //                $('#txtEmpleado').attr('readonly', true);
+                $("#btnCancelar").button("option", "disabled", false);
+                $("#ifSolPer")[0].contentWindow.BloquearControles();
+                alerta("La solicitud fue creada satisfactoriamente con el <b>código: " + vcCodSol + "</b>");
+            } else if (inCodSol == '0') {
+                alerta("Hubo un problema con la creación de la solicitud. Por favor contáctese con su administrador de sistemas.");
+                BloquearPagina(true);
+            } else if (inCodSol == '-1') {
+                alerta("El usuario no puede crear una solicitud ya que no tiene permisos de aprobación para el tipo de solicitud seleccionado.");
+                BloquearPagina(true);
+            } else if (inCodSol == '-2') {
+                alerta("El usuario no puede crear una solicitud ya que no tiene permisos de asignación para el tipo de solicitud seleccionado.");
+                BloquearPagina(true);
+            } else if (inCodSol == '-3') {
+                alerta("El usuario no puede crear una solicitud ya que no tiene permisos para culminar el tipo de solicitud seleccionado.");
+                BloquearPagina(true);
+            } else if (inCodSol == '-4') {
+                alerta(vcMensaje);
+                BloquearPagina(true);
+            }
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+
+
+
+function MostrarTABSSolicitud() {
+
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    if (tipsol == "2") { // Solicitud Nuevo
+        VerificaHabilitadoEmpleado($("#hdfCodEmpleado").val());
+    }
+    if (tipsol != "1" || tipsol != "2" || tipsol != "3" || tipsol != "4" || tipsol != "6" || tipsol != "7") {
+        biEsPer = true;
+    }
+
+    LimpiarDatosFinanciamiento();
+    $("#btnEquiSol").hide();
+    $("#lblMensajeVerificacion").text('');
+    arServiciosActuales = [];
+    $("#btnSiguiente").button("option", "disabled", true);
+
+    var index = $("#ddlTipoSolicitud").data("kendoComboBox").select();
+    $("#hdfTipoSolicitud").val(tipsol);
+    //temp && hiddens
+    codDispTemp = '';
+    codIMEITemp = '';
+    $("#hdfCodModDis").val('');
+    $("#hdfCodImeiSel").val('');
+    var nTipSol = "es" + tipsol;
+
+    if (tipsol != "-1") {
+        var biPers = "0";
+        if (arTiposSolicitud[nTipSol].biPersonalizado == 'True') { biPers = '1'; }
+
+        //Validación de que esté configurado el responsable de aprobación
+        if (arTiposSolicitud[nTipSol].vcResponsable == "" && arTiposSolicitud[nTipSol].biPropie == "False" && arTiposSolicitud[nTipSol].biUsuEsp == "False" && arTiposSolicitud[nTipSol].biResAre == "False") {
+            if ($("#hdfAdmin").val() == "1") {
+                alerta("Este tipo de solicitud no tiene asignado un responsable de aprobación, modificar la configuración respectiva.");
+            }
+            else {
+                alerta("Este tipo de solicitud no está configurado, comuníquese con su administrador.");
+            }
+            return;
+        }
+        //Validación de que esté configurado el técnico asignado
+        if (arTiposSolicitud[nTipSol].inTecnicoResponsable == "") {
+            if ($("#hdfAdmin").val() == "1") {
+                alerta("Este tipo de solicitud no tiene asignado un especialista responsable, modificar la configuración respectiva.");
+            }
+            else {
+                alerta("Este tipo de solicitud no está configurado, comuníquese con su administrador.");
+            }
+            return;
+        }
+
+        if (biPers == "0") { //Solicitudes de Sistema
+            //tipo de solicitudes del sistemas que requieres financiamiento y no lo tienen
+            //JHERRERA 19/08/2014 Se quitó validación por requerimiento tfs 1646
+            //if (arTiposSolicitud[nTipSol].inTipoFinanciamiento == '0') {
+            //    if ($("#hdfAdmin").val() == "1") {
+            //        alerta("Este tipo de solicitud requiere una forma de pago válida, modificar la configuración respectiva.");
+            //    } else {
+            //        alerta("Este tipo de solicitud no está configurado, comuníquese con su administrador.");
+            //    }
+            //    $("#lblMensajeVerificacion").text('');
+            //    $("#dvTabs").hide();
+            //    return;
+            //}
+
+            //if (arTiposSolicitud[nTipSol].inTipoFinanciamiento == '0') {
+            //    $("#divFinanciamiento").hide();
+            //}
+
+            listarContenidosPorTipoSol(tipsol, 0);
+            //DatosFinanciamiento(tipsol);
+            $("#dvTabs").show();
+        } else { //Solicitudes Personalizadas
+            if ($("#hdfEsCulminada").val() == "1") {
+                fnValidarPermisosCreacionCulminada(tipsol);
+            } else {
+                listarContenidosPorTipoSol(tipsol, 0);
+                $("#dvTabs").show();
+            }
+        }
+
+        //contenido del combo estado de creacion 
+        //$("#dvCreacionEstado").show();
+        $("#lblCreacionEstado").text("Seleccione el estado con que se creará la solicitud");
+        $("#ddlEstadoCreacion").html("");
+        $("#ddlEstadoCreacion").append("<option value='32'>Pendiente</option><option value='33'>Por Aprobar</option>");
+        if ($("#hdfAdmin").val() == "1") {// es administrador
+            $("#ddlEstadoCreacion").append("<option value='34'>Aprobada</option>");
+            //responsables de aprobacion
+        } else if (arTiposSolicitud[nTipSol].biPropie == 'True') { //propietario
+            $("#ddlEstadoCreacion").append("<option value='34'>Aprobada</option>");
+        } else if (arTiposSolicitud[nTipSol].biUsuEsp == 'True' && arTiposSolicitud[nTipSol].vcResponsable != '' && $("#hdfCodEmpleado").val() == arTiposSolicitud[nTipSol].vcResponsable) {//usuario especifico
+            //if () { //es usuario especifico
+            $("#ddlEstadoCreacion").append("<option value='34'>Aprobada</option>");
+            //}
+        } else if (arTiposSolicitud[nTipSol].biResAre == 'True' && $("#hdfJefeArea").val() == "1") { //responsable de area
+            $("#ddlEstadoCreacion").append("<option value='34'>Aprobada</option>");
+        }
+
+        $("#ddlEstadoCreacion").val("33");
+        //fin contenido del combo 
+    } else {
+        $("#lblMensajeVerificacion").text('');
+        $("#dvTabs").hide();
+    }
+
+}
+
+
+var iFila = 0;
+var ListaEmpleados = [];
+function IngresarEmpleados(empleados) {
+    //var divTabs = $(tabOpciones).find("div");
+    //for (i = 0; i < divTabs.length; i++) {
+    //    if (!$(divTabs[i]).hasClass("ui-tabs-hide")) {
+    //        var ifrm = $(divTabs[i]).find(".ifContenido");
+    //        $(ifrm)[0].contentWindow.IngresarEmpleados(empleados);
+    //    }
+    //}
+
+    if (empleados == null) {
+        return;
+    }
+
+    Cargo_ActualizarComboPlan_Filtro = false;
+    var ListaCodigos = "";
+    for (var i = 0; i < empleados.length; i++) {
+        ListaCodigos += empleados[i].P_vcCod + ";";
+    }
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    var NombreSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").text();
+    var IdTipoServicio = $("#ddlTipoServicio").data("kendoComboBox").value();
+
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitudMasivo.aspx/ObtenerModelosMasivo",
+        data: "{'TipoSolicitud':'" + tipsol + "','CodEmpleados': '" + ListaCodigos + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+
+
+            var ListaModelosPorGrupo = result.d[0].split(';');
+            var GruposPorEmpleado = result.d[1].split(';');
+            var ModelosPorEmpleado = result.d[2].split(';');
+
+            //Validaciones por Solicitudes...
+            var ListaValSolicitudExistente = result.d[3].split(';');
+            var ListaValNoTienePolitica = result.d[4].split(';');
+            var ListaValTiempoMinimoCambio = result.d[5].split(';');
+            var ListaValCantidadMaximaNuevo = result.d[6].split(';');
+
+            var ListaLineasPorEmpleado = result.d[8].split(';');
+            ListaPlanPorModelos = result.d[7].split(';');
+            ListaCuentas = result.d[9].split(';');
+            ListaPlanPorGrupos = result.d[10].split(';');
+
+            if (NombreSolicitud == "Cambio de Plan") {
+                $("#cboPlan_Filtro").html("");
+                var ListaExiste = [];
+                var Existe = false;
+                for (var k = 0; k < ListaPlanPorGrupos.length; k++) {
+                    Columnas = ListaPlanPorGrupos[k].split("|");
+                    Existe = false;
+                    for (var i = 0; i < ListaExiste.length; i++) {
+                        if (ListaExiste[i] == Columnas[1]) {
+                            Existe = true;
+                            break;
+                        }
+                    }
+                    if (!Existe) {
+                        ListaExiste.push(Columnas[1]);
+                        $('#cboPlan_Filtro').append($('<option>', {
+                            value: Columnas[1],
+                            text: Columnas[2]
+                        }));
+                    }
+                }
+                if ($('#cboPlan_Filtro').length > 0) {
+                    $('#cboPlan_Filtro').prepend($('<option>', {
+                        value: "-1",
+                        text: "(Seleccione)"
+                    }));
+                }
+                $('#cboPlan_Filtro').val("-1");
+            }
+
+
+            ListaCuentasOptions = "";
+            if (ListaCuentas != "" && ListaCuentas.length > 0) {
+                for (var i = 0; i < ListaCuentas.length; i++) {
+                    Columnas = ListaCuentas[i].split("|");
+                    ListaCuentasOptions += '<option value="' + Columnas[0] + '">' + Columnas[1] + '</option>';
+                }
+            }
+            if (ListaCuentasOptions.length > 0) {
+                ListaCuentasOptions = "<option value=-1>(Seleccione)</option>" + ListaCuentasOptions;
+            }
+
+            var Valores;
+            var Columnas = [];
+            var mListaModelosPorGrupo = [];
+            var Existe = false;
+            var AgregarDefault = false;
+            var mOpcionesNuevo = [];
+            var Options = "";
+            var OptionsActual = "";
+
+            var OptionDefault = '<option value=-1>(Seleccione)</option>';
+            //Para nuevos modelos...
+            for (var i = 0; i < ListaModelosPorGrupo.length; i++) {
+                Columnas = ListaModelosPorGrupo[i].split("|");
+
+                //Validar si existe...
+                Existe = false;
+                Options = "";
+
+                for (var j = 0; j < mListaModelosPorGrupo.length; j++) {
+                    if (mListaModelosPorGrupo[j][0] == Columnas[0]) {
+                        Options = mListaModelosPorGrupo[j][1];
+
+
+                        //if (!AgregarDefault) {
+                        //    ValoresOpciones = new Array();
+                        //    ValoresOpciones[0] = Columnas[1];
+                        //    ValoresOpciones[1] = OptionDefault;
+                        //    ValoresOpciones[2] = Columnas[3];
+                        //    mListaModelosPorGrupo[j][1].unshift(ValoresOpciones);
+                        //    AgregarDefault = true;
+                        //}
+
+                        ValoresOpciones = new Array();
+                        ValoresOpciones[0] = Columnas[1];
+                        ValoresOpciones[1] = '<option value="' + Columnas[1] + '">' + Columnas[2] + '</option>';
+                        ValoresOpciones[2] = Columnas[3];
+                        mListaModelosPorGrupo[j][1].push(ValoresOpciones);
+
+                        //mListaModelosPorGrupo[j][1] += '<option value="' + Columnas[1] + '">' + Columnas[2] + '</option>';
+                        Existe = true;
+                        break;
+                    }
+                    //else {
+                    //    Options = mListaModelosPorGrupo[j][1];
+                    //    if (!AgregarDefault) {
+                    //        ValoresOpciones = new Array();
+                    //        ValoresOpciones[0] = Columnas[1];
+                    //        ValoresOpciones[1] = OptionDefault;
+                    //        ValoresOpciones[2] = Columnas[3];
+                    //        mListaModelosPorGrupo[j][1].unshift(ValoresOpciones);
+                    //        AgregarDefault = true;
+                    //    }
+                    //}
+                }
+                if (!Existe) {
+
+                    Valores = new Array();
+                    Valores[0] = Columnas[0];
+                    Valores[1] = [];
+
+                    ValoresOpciones = new Array();
+                    ValoresOpciones[0] = Columnas[1];
+                    ValoresOpciones[1] = OptionDefault;
+                    ValoresOpciones[2] = Columnas[3];
+                    Valores[1].push(ValoresOpciones);
+                    mListaModelosPorGrupo.push(Valores);
+
+                    ValoresOpciones = new Array();
+                    ValoresOpciones[0] = Columnas[1];
+                    ValoresOpciones[1] = '<option value="' + Columnas[1] + '">' + Columnas[2] + '</option>';
+                    ValoresOpciones[2] = Columnas[3];
+                    Valores[1].push(ValoresOpciones);
+                    mListaModelosPorGrupo.push(Valores);
+
+                    //AgregarDefault = false;
+                }
+            }
+
+
+            var oEmpleado, ExisteEmpleado;
+            for (var i = 0; i < empleados.length; i++) {
+                ExisteEmpleado = false;
+                oEmpleado = empleados[i];
+                //Validar si existe el empleado...
+                for (var j = 0; j < ListaEmpleados.length; j++) {
+                    if (ListaEmpleados[j].P_vcCod == oEmpleado.P_vcCod) {
+                        ExisteEmpleado = true;
+                        break;
+                    }
+                }
+                if (!ExisteEmpleado) {
+                    //Obtener IdGrupo...
+                    Options = "";
+                    for (var k = 0; k < GruposPorEmpleado.length; k++) {
+                        Columnas = GruposPorEmpleado[k].split("|");
+                        if (Columnas[0] == oEmpleado.P_vcCod) {
+                            IdGrupoEmpleado = Columnas[1];
+                            for (var l = 0; l < mListaModelosPorGrupo.length; l++) {
+                                if (mListaModelosPorGrupo[l][0] == IdGrupoEmpleado) {
+                                    var mOpciones = mListaModelosPorGrupo[l][1];
+                                    for (var z = 0; z < mOpciones.length; z++) {
+                                        Options += mOpciones[z][1];
+                                    }
+                                    //Options = mListaModelosPorGrupo[l][1][1].join();
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    }
+
+                    var ObservacionEmpleado = "";
+                    if (Options == "") {
+                        ObservacionEmpleado = "El grupo del usuario no tiene acceso para realizar solicitud";
+                    }
+
+                    //Validaciones...
+                    var ListaValNoTienePolitica = result.d[4].split(';');
+                    var ListaValTiempoMinimoCambio = result.d[5].split(';');
+                    var ListaValCantidadMaximaNuevo = result.d[6].split(';');
+
+                    if (ObservacionEmpleado == "") {
+                        for (var z = 0; z < ListaValSolicitudExistente.length; z++) {
+                            Columnas = ListaValSolicitudExistente[z].split("|");
+                            if (Columnas[0] == oEmpleado.P_vcCod) {
+                                ObservacionEmpleado = "Ya existe una solicitud de este tipo";
+                                break;
+                            }
+                        }
+                    }
+                    if (ObservacionEmpleado == "") {
+                        for (var z = 0; z < ListaValNoTienePolitica.length; z++) {
+                            Columnas = ListaValNoTienePolitica[z];
+                            if (ListaValNoTienePolitica[z] == oEmpleado.P_vcCod) {
+                                ObservacionEmpleado = "No está incluido en ninguna política";
+                                break;
+                            }
+                        }
+                    }
+
+                    var Lineas = "";
+                    if (NombreSolicitud == "Baja" || NombreSolicitud == "Cambio de Cuenta" || NombreSolicitud == "Cambio de Plan") {
+                        for (var x = 0; x < ListaLineasPorEmpleado.length; x++) {
+                            Columnas = ListaLineasPorEmpleado[x].split("|");
+                            Existe = false;
+                            if (Columnas[0] == oEmpleado.P_vcCod) {
+                                Lineas += Columnas[1] + ";";
+                                Existe = true;
+                            }
+                            if (Lineas != "" && Existe == false) {
+                                break;
+                            }
+                        }
+                        if (Lineas.length > 0) {
+                            Lineas = Lineas.substring(0, Lineas.length - 1);
+                        }
+                        if (ObservacionEmpleado == "") {
+                            for (var z = 0; z < ListaValTiempoMinimoCambio.length; z++) {
+                                Columnas = ListaValTiempoMinimoCambio[z];
+                                if (ListaValTiempoMinimoCambio[z] == oEmpleado.P_vcCod) {
+                                    ObservacionEmpleado = "No ha cumplido el tiempo mínimo para realizar cambio de equipo";
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+
+                    var IMEIs = "";
+                    if (tipsol == "1") { //Cambio...
+                        //Buscar modelos del empleado...
+                        OptionsActual = "";
+                        for (var x = 0; x < ModelosPorEmpleado.length; x++) {
+                            Columnas = ModelosPorEmpleado[x].split("|");
+                            Existe = false;
+                            if (Columnas[0] == oEmpleado.P_vcCod && (IdTipoServicio == Columnas[4] || IdTipoServicio == "-1")) {
+                                IMEIs += Columnas[1] + "|" + Columnas[3] + "|" + Columnas[4] + ";";
+                                Existe = true;
+                            }
+                            if (IMEIs != "" && Existe == false) {
+                                break;
+                            }
+                        }
+                        if (IMEIs.length > 0) {
+                            IMEIs = IMEIs.substring(0, IMEIs.length - 1);
+                        }
+                        if (ObservacionEmpleado == "") {
+                            for (var z = 0; z < ListaValTiempoMinimoCambio.length; z++) {
+                                Columnas = ListaValTiempoMinimoCambio[z];
+                                if (ListaValTiempoMinimoCambio[z] == oEmpleado.P_vcCod) {
+                                    ObservacionEmpleado = "No ha cumplido el tiempo mínimo para realizar cambio de equipo";
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if (tipsol == "2") { //Nuevo...
+                        if (ObservacionEmpleado == "") {
+                            for (var z = 0; z < ListaValCantidadMaximaNuevo.length; z++) {
+                                Columnas = ListaValCantidadMaximaNuevo[z];
+                                if (ListaValCantidadMaximaNuevo[z] == oEmpleado.P_vcCod) {
+                                    ObservacionEmpleado = "Tiene el número máximo de dispositivos asignados";
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    if (tipsol == "1" && IMEIs == "")
+                    { }
+                    else {
+                        var ObservacionEmpleadoLocal = "";
+                        ListaEmpleados.push(oEmpleado);
+
+
+
+                        if (Lineas != "") {
+                            var mLineas = Lineas.split(";");
+                            for (var p = 0; p < mLineas.length; p++) {
+                                var Fila;
+                                ObservacionEmpleadoLocal = "";
+                                if (ObservacionEmpleado == "Ya existe una solicitud de este tipo") {
+                                    for (var z = 0; z < ListaValSolicitudExistente.length; z++) {
+                                        Columnas = ListaValSolicitudExistente[z].split("|");
+                                        if (Columnas[0] == oEmpleado.P_vcCod) {
+                                            ObservacionEmpleadoLocal = "Ya existe una solicitud de este tipo";
+                                            break;
+                                        }
+                                    }
+                                }
+                                else {
+                                    ObservacionEmpleadoLocal = ObservacionEmpleado;
+                                }
+
+                                Fila = {
+                                    CodEmpleado: oEmpleado.P_vcCod, Empleado: oEmpleado.vcNom.substring(oEmpleado.vcNom.indexOf("=") + 1, oEmpleado.vcNom.length),
+                                    Linea: mLineas[p].split("|")[0], IMEI: "", ModeloActual: "", ModeloNuevo: "Seleccione",
+                                    OpcionesModeloActual: OptionsActual, OpcionesModeloNuevo: Options, Observacion: ObservacionEmpleadoLocal,
+                                    IdGrupoEmpleado: IdGrupoEmpleado
+                                };
+
+
+                                iFila++;
+                                $("#grid").jqGrid('addRowData', iFila, Fila);
+
+                            }
+                        }
+
+                        else {
+
+                            if (IMEIs != "") {
+                                var mIMEIs = IMEIs.split(";");
+                                for (var p = 0; p < mIMEIs.length; p++) {
+                                    var Fila;
+
+                                    ObservacionEmpleadoLocal = "";
+                                    //ObservacionEmpleado
+                                    if (ObservacionEmpleado == "Ya existe una solicitud de este tipo") {
+                                        for (var z = 0; z < ListaValSolicitudExistente.length; z++) {
+                                            Columnas = ListaValSolicitudExistente[z].split("|");
+                                            if (Columnas[0] == oEmpleado.P_vcCod && mIMEIs[p].split("|")[0] == Columnas[1]) {
+                                                ObservacionEmpleadoLocal = "Ya existe una solicitud de este tipo";
+                                                break;
+                                            }
+                                        }
+                                    }
+                                    else {
+                                        ObservacionEmpleadoLocal = ObservacionEmpleado;
+                                    }
+
+                                    //Validar Options Modelos Nuevos...
+                                    Options = "";
+                                    for (var l = 0; l < mListaModelosPorGrupo.length; l++) {
+                                        if (mListaModelosPorGrupo[l][0] == IdGrupoEmpleado) {
+                                            var mOpciones = mListaModelosPorGrupo[l][1];
+                                            for (var z = 0; z < mOpciones.length; z++) {
+                                                if (mOpciones[z][2] == mIMEIs[p].split("|")[2]) {
+                                                    Options += mOpciones[z][1];
+                                                }
+                                            }
+                                            //Options = mListaModelosPorGrupo[l][1].join();
+                                            break;
+                                        }
+                                    }
+
+                                    if (Options == "") {
+                                        //console.log("1tipsol: " + tipsol);
+                                        Fila = {
+                                            CodEmpleado: oEmpleado.P_vcCod, Empleado: oEmpleado.vcNom.substring(oEmpleado.vcNom.indexOf("=") + 1, oEmpleado.vcNom.length),
+                                            Linea: "---", IMEI: mIMEIs[p].split("|")[0], ModeloActual: mIMEIs[p].split("|")[1], ModeloNuevo: "Seleccione",
+                                            OpcionesModeloActual: OptionsActual, OpcionesModeloNuevo: Options, Observacion: "Validar los permisos por grupo de empleado",
+                                            IdGrupoEmpleado: IdGrupoEmpleado
+                                        };
+                                    }
+                                    else {
+                                        //console.log("2tipsol: " + tipsol);
+                                        Fila = {
+                                            CodEmpleado: oEmpleado.P_vcCod, Empleado: oEmpleado.vcNom.substring(oEmpleado.vcNom.indexOf("=") + 1, oEmpleado.vcNom.length),
+                                            Linea: "---", IMEI: mIMEIs[p].split("|")[0], ModeloActual: mIMEIs[p].split("|")[1], ModeloNuevo: "Seleccione",
+                                            OpcionesModeloActual: OptionsActual, OpcionesModeloNuevo: Options, Observacion: ObservacionEmpleadoLocal,
+                                            IdGrupoEmpleado: IdGrupoEmpleado
+                                        };
+                                    }
+
+                                    iFila++;
+                                    $("#grid").jqGrid('addRowData', iFila, Fila);
+                                }
+                            }
+                            else {
+
+                                if (tipsol == "1" || tipsol == "2") {
+                                    var Fila;
+                                    Fila = {
+                                        CodEmpleado: oEmpleado.P_vcCod, Empleado: oEmpleado.vcNom.substring(oEmpleado.vcNom.indexOf("=") + 1, oEmpleado.vcNom.length),
+                                        Linea: "---", IMEI: "", ModeloActual: "", ModeloNuevo: "Seleccione",
+                                        OpcionesModeloActual: OptionsActual, OpcionesModeloNuevo: Options, Observacion: ObservacionEmpleado,
+                                        IdGrupoEmpleado: IdGrupoEmpleado
+                                    };
+                                    iFila++;
+                                    $("#grid").jqGrid('addRowData', iFila, Fila);
+                                }
+                                //Actualizar combo Planes...
+                                //if (tipsol == "2") { //Nuevo
+                                //    ActualizarPlanCombo(ListaPlanPorModelos, iFila);
+                                //}
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+            ActualizarComboModeloActual_Filtro();
+            ActualizarComboModeloNuevo_Filtro();
+            ActualizarComboCuenta_Filtro();
+
+
+            $(".ui-pg-selbox").change();
+            //$()
+
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+
+
+
+
+
+
+
+
+    //setTimeout(function () {
+    //    for (var i = 0; i < 100; i++) {
+    //        $("#grillaLineas").data("kendoGrid").dataSource.add({
+    //            numero: "987654321" + i.toString(),
+    //            modelo: "Modelo",
+    //            rpm: "123456789",
+    //            estado: "OK",
+    //        });
+    //    }
+    //}, 1000);
+
+
+
+}
+function IngresarEmpleadoUnico(Empleado) {
+
+    ////$("#hdfCodEmpleado").val(Empleado.P_vcCod);
+    ////var arNom = Empleado.vcNom.split('=');
+    ////$("#txtEmpleado").val(Empleado.vcNom);
+    ////$("#dvTabs").hide();
+    ////$("#lblMensajeVerificacion").text('');
+
+    ////fnValidarListarTipoSolicitudXGrupoEmpleado();
+
+}
+
+function DeshabilitarContinuar(vfrom) {
+    //alert("DeshabilitarContinuar");
+    // '1' == Galeria
+    // '2' == ArchivosAdjuntos
+    // '3' == Otros
+    if ($("#btnSiguiente:visible").length > 0) {
+        $("#btnSiguiente").button("option", "disabled", true);
+    } else {
+        $("#btnFinalizar").button("option", "disabled", true);
+    }
+    if (vfrom == "1") {
+        setCaptura('Galeria', false);
+        //$("#hdfCodModDis").val('');
+        //codDispTemp = '';
+    }
+}
+function HabilitarContinuar() {
+    //alert(valAvance);
+    if (valAvance) {
+        if ($("#btnSiguiente:visible").length > 0) {
+            $("#btnSiguiente").button("option", "disabled", false);
+        } else {
+            $("#btnFinalizar").button("option", "disabled", false);
+        }
+    } else {
+        if ($("#btnSiguiente:visible").length > 0) {
+            $("#btnSiguiente").button("option", "disabled", true);
+        } else {
+            $("#btnFinalizar").button("option", "disabled", true);
+        }
+    }
+}
+function verificarCaptura(contenido) {
+    var resultado = true;
+    $.each(arContenidos, function () {
+        if (this.contenido == contenido) {
+            if (this.obligatorio == true && this.capturaCompleta == false) {
+                resultado = false;
+            }
+            //mensaje
+            if (this.contenido == 'Mensaje') {
+                $("#lblMensajeValidCant").text(MensajeValidCant);
+                $("#lblMensajeValidTipo").text(MensajeValidTipo == 'w' ? 'palabras' : 'caracteres');
+                $("#lblMensajeValidTipo2").text(MensajeValidTipo == 'w' ? 'palabras' : 'caracteres');
+                if (this.obligatorio == true) {
+                    $("#dvMensajeObligatorio").show();
+                } else {
+                    $("#dvMensajeObligatorio").hide();
+                }
+            }
+        }
+    });
+    return resultado;
+}
+function setCaptura(contenido, valor) {
+    $.each(arContenidos, function () {
+        if (this.contenido == contenido) {
+            this.capturaCompleta = valor;
+        }
+    });
+}
+function selContOblig(contenido) {
+    var result = false;
+    $.each(arContenidos, function () {
+        if (this.contenido == contenido) {
+            result = this.obligatorio;
+        }
+    });
+    return result;
+}
+function codDispositivoGaleria(codigo, nombreModelo, CostoEquipo, codigoOperador, nombreOperador) {
+    //alert(codigoOperador + ", " + nombreOperador);
+    if (codigoOperador == undefined || codigoOperador == -1) {
+        ResumenNombreOperador = '';
+    } else {
+        ResumenNombreOperador = nombreOperador;
+    }
+    ResumenNombreModeloGaleria = nombreModelo;
+    //alert("CAPTURA DESDE NUEVA SOLIITUD\nCostoEquipo: " + CostoEquipo + "\nnombreModelo: " + nombreModelo);
+    //if (CostoEquipo != "-1" && $("#hdfTipoSolicitud").val() != '3') {
+    //if ($("#hdfTipoSolicitud").val() != '3') {
+    //    ResumenCostoReferencial = CostoEquipo;
+    //} else if ($("#hdfTipoSolicitud").val() == '3') {
+    //    ResumenCostoExtra = CostoEquipo;
+    //}
+    ResumenCostoReferencial = CostoEquipo;
+    //valAvance = true;
+    //alert(message);
+    //if (valAvance) {
+    //    $("#btnSiguiente").button("option", "disabled", false);
+    //};
+    setCaptura('Galeria', true);
+    //alert("codigo: " + codigo + "\nnombre: " + nombreModelo + "\ncosto: " + costoReferencial);
+    if ($("#hdfCodModDis").val() != "") {
+        codDispTemp = $("#hdfCodModDis").val();
+    }
+    //codDispTemp = codigo;
+    $("#hdfCodModDis").val(codigo);
+    //si es el ultimo tab, guarda el codigo de modelo directametne
+    //if (arContenidos[arContenidos.length - 1].contenido == 'Galeria') {
+    //    $("#hdfCodModDis").val(codigo); 
+    //};
+
+}
+function desactivarTabPlanes(valor) {
+    var indexPlan = $("#tbSolicitud").tabs('option', 'selected') + 1;
+    if (valor && $("#hdfTipoSolicitud").val() == '2') { //nuevo, desactivar
+        arIndexTabMostrados.push(indexPlan);
+        tabPlanesVisible = false;
+    } else if (!valor && $("#hdfTipoSolicitud").val() == '2') { //nuevo, activar
+        arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) { return value != indexPlan; });
+        tabPlanesVisible = true;
+    }
+    $("#tbSolicitud").tabs("option", "disabled", arIndexTabMostrados);
+    //desactivarAvance();
+}
+
+//function desactivarAvance() {
+//    var numTabs = $("#tbSolicitud").tabs("length");
+//    var tabActual = $("#tbSolicitud").tabs('option', 'selected');
+//    var arDisabled = []
+//    for (var i = tabActual + 1; i < numTabs; i++) {
+//        arDisabled.push(i);
+//        //arIndexTabMostrados.push(i);
+//        //arIndexTabMostrados = jQuery.grep(arIndexTabMostrados, function (value) {
+//        //    return i == value ? value : i;
+//        //});
+//    };
+//    //alert(arDisabled);
+//    //$("#tbSolicitud").tabs("option", "disbled", arDisabled);
+//};
+
+function TerminarSolicitud() {
+    $("#ddlTipoSolicitud").change();
+    $("#btnFinalizar").button("option", "disabled", true);
+}
+function TerminarSolicitudPersonalizada() {
+    $("#ddlTipoSolicitud").change();
+    //$("#btnFinalizar").button("option", "disabled", true);
+}
+function fnMostrarCodEmp(valor) {
+    if ($("#hdfCodEmpleado").val() != valor) {
+        $("#dvTabs").hide();
+        $("#dvCreacionEstado").hide();
+    }
+    $("#hdfCodEmpleado").val(valor);
+    if (valor != '') {
+        $("#ddlTipoSolicitud").data("kendoComboBox").value(-1);
+        //$("#ddlTipoSolicitud").data("kendoComboBox").enable(true);
+    } else {
+        $("#ddlTipoSolicitud").data("kendoComboBox").value(-1);
+        //$("#ddlTipoSolicitud").data("kendoComboBox").enable(false);
+    }
+
+    //    $("#hdfCodEmpleado").val(ui.item.vcCodEmp);
+    //    $("#hdfGrupOrigEmp").val(ui.item.grupOri);
+    fnValidarListarTipoSolicitudXGrupoEmpleado();
+
+
+}
+//function CerroMensaje() {
+//    //BloquearPagina(false);
+//    window.parent.tab.tabs("remove", indexTab);
+//}
+function DatosFinanciamiento() {
+    //ListarDatosFinanciamiento
+    var tipoSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/ListarDatosFinanciamiento",
+        data: "{'inCodTipSol': '" + tipoSolicitud + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            //VISOR DE DETALLE DE FINANCIAMIENTO
+            //$("#lblNombreFinanc").text("(" + result.d.DescripcionFinanc + ")");
+            $("#txtNombreFinanc").val(result.d.DescripcionFinanc);
+            $("#hdfIdFInanciamiento").val(result.d.inTipoFinanciamiento);
+
+
+            //alert($("#hdfTipoSolicitud").val());
+            //Monto (dcMonto)
+            if ($("#hdfAdmin").val() != "1") { //no es administrador
+                $("#trMontoFijo").show();
+                $("#txtMonto").attr("disabled", true);
+                $("#txtMonto").attr("enabled", false);
+                if (result.d.biMontoFijo == "True") { //tiene monto fijo, mostrar deshabilitado
+                    //if (result.d.dcMonto == "0") {
+                    //    $("#txtMonto").val("");
+                    //    $("#lblMontoReferencial").text("No se ha definido monto fijo en la configuración del tipo de solicitud.");
+                    //} else {
+                    //alert(result.d.dcMonto + 'tres');
+                    $("#txtMonto").val(result.d.dcMonto);
+                    $("#lblMontoReferencial").text("Monto fijo del tipo de solicitud.");
+                    //}
+                } else { //no tiene monto fijo
+                    if ($("#hdfTipoSolicitud").val() == '2' || $("#hdfTipoSolicitud").val() == '4') { //nuevo,reparacion
+                        //valor en caja de monto
+                        if (ResumenCostoReferencial == '' || ResumenCostoReferencial == '-1') {
+                            $("#txtMonto").val('');
+                            $("#lblMontoReferencial").text("No se ha podido calcular ningún monto para esta solicitud.");
+                        } else {
+                            //alert(ResumenCostoReferencial + 'cuatro')
+                            $("#txtMonto").val(ResumenCostoReferencial);
+                            $("#lblMontoReferencial").text("");
+                        }
+                    } else if ($("#hdfTipoSolicitud").val() == '3' || $("#hdfTipoSolicitud").val() == '1') { //reposición y cambio
+                        if (inTipoCostoReposicion == 0) { // sólo penalidad
+                            //alert(ResumenCostoExtra + 'cinco');
+                            $("#txtMonto").val(ResumenCostoExtra);
+                            $("#lblMontoReferencial").text("(Costo de reposición calculado según fórmula).");
+                        } else if (inTipoCostoReposicion == 1) { // penalidad y equipo
+                            if (oCulturaLocal.vcSimDec.toString() == ',') {
+                                $("#txtMonto").val(parseFloat(ParseFloatMultiPais(ResumenCostoReferencial, oCulturaLocal)) + parseFloat(ParseFloatMultiPais(ResumenCostoExtra, oCulturaLocal)));
+                                $("#txtMonto").val(FormatoNumero($("#txtMonto").val(), oCulturaLocal));
+                            } else {
+                                $("#txtMonto").val(parseFloat(DevuelveNumeroSinFormato(ResumenCostoReferencial, oCulturaLocal, false)) + parseFloat(DevuelveNumeroSinFormato(ResumenCostoExtra, oCulturaLocal, false)));
+                                $("#txtMonto").val(FormatoNumero($("#txtMonto").val(), oCulturaLocal, false));
+                            }
+
+                            if (ResumenCostoExtra != '') { //mostrar penalidad si es mayor a 0
+                                if (oCulturaLocal.vcSimDec.toString() == ',') {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + FormatoNumero(ResumenCostoExtra, oCulturaLocal) + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+                                else {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + ResumenCostoExtra + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+
+                            }
+                        } else if (inTipoCostoReposicion == 2) { //solo equipo
+                            //alert(ResumenCostoReferencial  + 'seis');
+                            $("#txtMonto").val(ResumenCostoReferencial);
+                            $("#lblMontoReferencial").text("");
+                        }
+                    }
+                }
+            } else { //usuario logeado es administrador
+                $("#trMontoFijo").show();
+                if (result.d.biMontoFijo == "True") {
+                    $("#txtMonto").attr("disabled", true);
+                    //$("#txtMonto").attr("enabled", false);
+                    //if (result.d.dcMonto == "0") {
+                    //    $("#txtMonto").val("");
+                    //    $("#lblMontoReferencial").text("No se ha definido monto fijo en la configuración del tipo de solicitud.");
+                    //} else {
+                    //alert(result.d.dcMonto + 'siete');
+                    $("#txtMonto").val(result.d.dcMonto);
+                    $("#lblMontoReferencial").text("Monto fijo del tipo de solicitud.");
+                    //}
+                } else {
+                    if ($("#hdfTipoSolicitud").val() == '2' || $("#hdfTipoSolicitud").val() == '4') { //nuevo,reparacion
+                        if (ResumenCostoReferencial == '' || ResumenCostoReferencial == '-1') {
+                            $("#txtMonto").val('');
+                            $("#lblMontoReferencial").text("No se ha podido calcular ningún monto para esta solicitud.");
+                        } else { //existe algun monto
+                            if (ResumenCostoExtra != '') {
+                                //$("#txtMonto").val(parseFloat(ResumenCostoReferencial) + parseFloat(ResumenCostoExtra));
+                                $("#txtMonto").val(parseFloat(DevuelveNumeroSinFormato(ResumenCostoReferencial, oCulturaLocal, false)) + parseFloat(DevuelveNumeroSinFormato(ResumenCostoExtra, oCulturaLocal, false)));
+                                //alert(FormatoNumero(ResumenCostoExtra, oCulturaLocal) + '-2');
+                                if (oCulturaLocal.vcSimDec.toString() == ',') {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + FormatoNumero(ResumenCostoExtra, oCulturaLocal) + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+                                else {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + ResumenCostoExtra + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+                                //$("#lblMontoReferencial").text("Monto adicional (" + ResumenCostoExtra + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                            } else {
+                                $("#txtMonto").val(FormatoNumero(ResumenCostoReferencial, oCulturaLocal, false));
+                                $("#lblMontoReferencial").text("");
+                            }
+                        }
+                    } else if ($("#hdfTipoSolicitud").val() == '3' || $("#hdfTipoSolicitud").val() == '1') { //reposición y cambio
+                        if (inTipoCostoReposicion == 0) {
+                            //alert(ResumenCostoExtra + 'nueve');
+                            $("#txtMonto").val(ResumenCostoExtra);
+                            $("#lblMontoReferencial").text("(Costo de reposición calculado según fórmula).");
+                        } else if (inTipoCostoReposicion == 1) {
+                            //$("#txtMonto").val(parseFloat(DevuelveNumeroSinFormato(ResumenCostoReferencial, oCulturaLocal, false)) + parseFloat(DevuelveNumeroSinFormato(ResumenCostoExtra, oCulturaLocal, false)));
+                            //$("#txtMonto").val(FormatoNumero($("#txtMonto").val(), oCulturaLocal, false));
+                            if (oCulturaLocal.vcSimDec.toString() == ',') {
+                                $("#txtMonto").val(parseFloat(ParseFloatMultiPais(ResumenCostoReferencial, oCulturaLocal)) + parseFloat(ParseFloatMultiPais(ResumenCostoExtra, oCulturaLocal)));
+                                $("#txtMonto").val(FormatoNumero($("#txtMonto").val(), oCulturaLocal));
+                            } else {
+                                $("#txtMonto").val(parseFloat(DevuelveNumeroSinFormato(ResumenCostoReferencial, oCulturaLocal, false)) + parseFloat(DevuelveNumeroSinFormato(ResumenCostoExtra, oCulturaLocal, false)));
+                                $("#txtMonto").val(FormatoNumero($("#txtMonto").val(), oCulturaLocal, false));
+                            }
+                            if (ResumenCostoExtra != '') { //mostrar penalidad si es mayor a 0
+                                //alert(FormatoNumero(ResumenCostoExtra, oCulturaLocal) + '-3');
+                                if (oCulturaLocal.vcSimDec.toString() == ',') {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + FormatoNumero(ResumenCostoExtra, oCulturaLocal) + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+                                else {
+                                    $("#lblMontoReferencial").text("Monto adicional (" + ResumenCostoExtra + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                                }
+                                //$("#lblMontoReferencial").text("Monto adicional (" + ResumenCostoExtra + ") por tiempo de contrato faltante. Fin de contrato: " + ResumenFechaFinContrato);
+                            }
+                        } else if (inTipoCostoReposicion == 2) {
+                            //alert(ResumenCostoReferencial + 'diez');
+                            $("#txtMonto").val(ResumenCostoReferencial);
+                            $("#lblMontoReferencial").text("");
+                        }
+                        $("#txtMonto").attr("disabled", true);
+                    }
+                }
+            }
+            //Cuotas
+            NumMinCuo = "0";
+            NumMaxCuo = "0";
+            MesCuo = "";
+            if (result.d.inTipoFinanciamiento.toString() == "-1") {
+                $("#trMesesCuotas").hide();
+                $("#txtMesesCuotas").val("0");
+            } else if (result.d.PagoContado.toString() == "True") {
+                $("#trMesesCuotas").hide();
+                $("#txtMesesCuotas").val("1");
+            } else {
+                //JHERRERA 20160823: Se pidió cambio para chile
+                //$("#trMesesCuotas").show();
+                //
+                if (inMostrarNumCuotas == 1) {
+                    $("#trMesesCuotas").show();
+                } else {
+                    $("#trMesesCuotas").hide();
+                    $("#trFinanciamiento").hide();
+                }
+                //
+
+                if (result.d.Cuotas.toString() != "0") { //Número de cuotas preestablecido
+                    $("#txtMesesCuotas").val(result.d.Cuotas);
+                    $("#txtMesesCuotas").attr("disabled", true);
+                } else if (result.d.MinimoCuotas.toString() != "0" && result.d.MaximoCuotas.toString() != "0") { //Rango de número de cuotas
+                    $("#txtMesesCuotas").val('');
+                    NumMinCuo = result.d.MinimoCuotas.toString();
+                    NumMaxCuo = result.d.MaximoCuotas.toString();
+                    $("#lblMesesCuotas").text("El número de cuotas debe estar en el rango de " + NumMinCuo + " y " + NumMaxCuo + ".");
+                    if (inMostrarNumCuotas == 0) { $("#txtMesesCuotas").val(NumMinCuo); }
+                } else if (result.d.MesesCuotas.toString() != "") { //Meses de Financiamiento Predefinido
+                    var lstMeses = result.d.MesesCuotas.split(",");
+                    $("#txtMesesCuotas").val(result.d.MesesCuotas.toString().replace("12", "Dic").replace("11", "Nov").replace("10", "Oct").replace("9", "Set").replace("8", "Ago").replace("7", "Jul").replace("6", "Jun").replace("5", "May").replace("4", "Abr").replace("3", "Mar").replace("2", "Feb").replace("1", "Ene"));
+                    MesCuo = lstMeses.length;
+                    MesesCuotas = result.d.MesesCuotas.toString();
+                    $("#txtMesesCuotas").attr("disabled", true);
+                    $("#txtMesesCuotas").attr("width", lstMeses.length * 21);
+                }
+            }
+
+            //Periodo de Gracia
+            if (result.d.PeriodoGracia.toString() == "False") {
+                $("#trPeriodoGracia").hide();
+                $("#txtPeriodoGracia").val("0");
+            } else {
+                $("#trPeriodoGracia").show();
+                if (result.d.MesesPeriodoGracia.toString() != "0") { //Número de meses de periodo de gracia
+                    $("#txtPeriodoGracia").val(result.d.MesesPeriodoGracia);
+                    $("#txtPeriodoGracia").attr("disabled", true);
+                } else if (result.d.MinimoMesesPeriodoGracia.toString() != "0" && result.d.MaximoMesesPeriodoGracia.toString() != "0") { //Rango de número de cuotas
+                    $("#txtPeriodoGracia").val("");
+                    MinPerGra = result.d.MinimoMesesPeriodoGracia.toString();
+                    MaxPerGra = result.d.MaximoMesesPeriodoGracia.toString();
+                    $("#lblPeriodoGracia").text("El número de meses debe estar en el rango de " + MinPerGra + " y " + MaxPerGra + ".");
+                }
+            }
+
+            valAvance = false;
+            if (($("#txtPeriodoGracia").is(":disabled") || !$("#trPeriodoGracia").is(":visible")) && ($("#txtMesesCuotas").is(":disabled") || !$("#trMesesCuotas").is(":visible"))) {
+                valAvance = true;
+            }
+            HabilitarContinuar();
+
+            //TAMAÑO DIV RESUMEN
+            var heightFinanciamiento = 0;
+            if ($("#divFinanciamiento").is(":visible")) {
+                heightFinanciamiento = $("#divFinanciamiento").css("height");
+            }
+            var divResumenDatos = parseInt($("#tbSolicitud").css("height")) - parseInt(heightFinanciamiento) - (heightFinanciamiento == 0 ? 70 : 102); //275
+            $("#divResumenDatos").css("height", divResumenDatos);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function wordCount(value) {
+    //return $.trim(value.replace(/kendo-ui/<.*?>/g, " ")).replace(/kendo-ui/['";:,.?\-!]+/g, '').match(/kendo-ui/\S+/g).length;
+    value = value.replace(/&nbsp;/gi, " ");
+
+    if (value == '') {
+        return 0;
+    } else {
+        return $.trim(value.replace(/<.*?>/g, " ")).replace(/['";:,.?\-!]+/g, '').match(/\S+/g).length;
+    }
+}
+
+function characterCount(value) {
+    var text = $("<div>").html(value).text();
+    //alert("value: " + value + "\ntext: " + text);
+    return text.length;
+}
+
+function LimpiarDatosFinanciamiento() {
+    ResumenCostoReferencial = '';
+    ResumenModeloSeleccionado = '';
+    ResumenNombreModeloGaleria = '';
+    ResumenNombreOperador = '';
+    ResumenNombrePlan = '';
+    ResumenNuevo = true;
+}
+
+function VerificarLinea_ActAmp(Linea, TipSol) {
+    $.ajax({
+        type: "POST",
+        url: "Adm_NuevaSolicitud.aspx/VerficiarLinea_ActAmp",
+        data: "{'vcNumLin': '" + Linea + "'," +
+                "'inTipSol': '" + TipSol + "'," +
+                "'vcCodEmp': '" + $("#hdfCodEmpleado").val() + "'}",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (result) {
+            $("#btnEquiSol").hide();
+            $("#lblMensajeVerificacion").text('');
+            msgValidacionGrilla = '';
+            if (result.d == "1") {
+                msgValidacionGrilla = "Ya existe una solicitud de este tipo para la línea seleccionada";
+                $("#btnSiguiente").button("option", "disabled", true);
+                valAvance = false;
+                $("#btnEquiSol").show();
+            } else if (result.d == '2') {
+                msgValidacionGrilla = "La línea no tiene ningún servicio agregado.";
+                $("#btnSiguiente").button("option", "disabled", true);
+                valAvance = false;
+            } else {
+                msgValidacionGrilla = "";
+                //cambiar estado a captura completa
+                setCaptura("Dispositivos", true);
+                $("#btnSiguiente").button("option", "disabled", false);
+            }
+            $("#lblMensajeVerificacion").html(msgValidacionGrilla);
+        },
+        error: function (xhr, err, thrErr) {
+            MostrarErrorAjax(xhr, err, thrErr);
+        }
+    });
+}
+
+function fnLimpiarDatosServicio() {
+    $("#lblAmpNombreServ").html('');
+    $("#ddlAmpPaquetes").html('');
+    $("#ddlAmpPaquetes").append($("<option></option>").val(-3).text(''));
+    $("#ddlTipoServicioAmp").val(-1);
+    $("#ddlServCuentaTipo").html('');
+    $("#ddlServCuentaTipo").append($("<option></option>").val(-2).text('<Seleccione Tipo>'));
+}
+
+function fnActualizarDispositivos() {
+    grillaDispositivos();
+    $("#btnSiguiente").button("option", "disabled", true);
+    $("#lblMensajeVerificacion").html('');
+    fnDesactivarSiguientesVentanas();
+}
+
+
+function CargarGrillaMasiva() {
+    var inFilas = 100;
+    $("#grid").jqGrid({
+        sortable: true,
+        loadonce: true,
+        loadui: 'disable',
+        datatype: "local",
+        colModel: [
+            { name: 'CodEmpleado', label: 'CodEmpleado', index: 'CodEmpleado', width: 200, hidden: true },
+            { name: 'Empleado', label: 'Empleado', index: 'Empleado', width: 200, sortable: true },
+            { name: 'Linea', label: 'Línea', index: 'Linea', width: 110, align: 'right', hidden: true, sortable: true },
+            { name: 'IMEI', label: 'IMEI', index: 'IMEI', width: 110, align: 'left', hidden: false },
+            {
+                name: 'ModeloActual', label: 'Modelo Actual', index: 'ModeloActual', width: 250, align: 'left', sortable: false
+                //,formatter: function (value, options, rData) {
+                //    return rData.OpcionesModeloActual;
+                //}
+            },
+            {
+                name: 'ModeloNuevo', label: 'Nuevo Modelo', index: 'ModeloNuevo', width: 250, align: 'left', sortable: false,
+                formatter: function (value, options, rData) {
+
+                    var ModeloNuevoSeleccionado = "";
+                    if (ModelosNuevosSeleccionados.indexOf("|" + options.rowId + "|") >= 0) {
+                        ModeloNuevoSeleccionado = ModelosNuevosSeleccionados.substring(ModelosNuevosSeleccionados.indexOf("|" + options.rowId + "|"), ModelosNuevosSeleccionados.length);
+                        ModeloNuevoSeleccionado = ModeloNuevoSeleccionado.substring(0, ModeloNuevoSeleccionado.indexOf("@"));
+                        ModeloNuevoSeleccionado = ModeloNuevoSeleccionado.split("|")[2];
+                    }
+
+                    var _return = '<select title="" alt="" class="cboModeloNuevo" id="cboModeloNuevo_' + options.rowId + '" rowid="' + options.rowId + '" style="width:100%;">' + rData.OpcionesModeloNuevo + '</select>';
+                    if (ModeloNuevoSeleccionado != '') {
+                        _return += '<script>$("#cboModeloNuevo_' + options.rowId + '").val("' + ModeloNuevoSeleccionado + '"); $("#cboModeloNuevo_' + options.rowId + '").val("' + ModeloNuevoSeleccionado + '").change();</script>';
+                    }
+
+                    return _return;
+                }
+            },
+            {
+                name: 'Plan', label: 'Plan', index: 'Plan', width: 150, align: 'left', sortable: false,
+                formatter: function (value, options, rData) {
+
+
+                    var NombreSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").text();
+                    var ListaPlanPorGruposOptions = "";
+
+                    if (NombreSolicitud == "Cambio de Plan") {
+                        if (ListaPlanPorGrupos != "" && ListaPlanPorGrupos.length > 0) {
+                            for (var k = 0; k < ListaPlanPorGrupos.length; k++) {
+                                Columnas = ListaPlanPorGrupos[k].split("|");
+                                if (Columnas[0] == rData.IdGrupoEmpleado) {
+                                    ListaPlanPorGruposOptions += '<option value="' + Columnas[1] + '">' + Columnas[2] + '</option>';
+                                }
+                            }
+                        }
+                        if (ListaPlanPorGruposOptions.length > 0) {
+                            ListaPlanPorGruposOptions = "<option value=-1>(Seleccione)</option>" + ListaPlanPorGruposOptions;
+                        }
+                    }
+
+                    var _return = '<select title="" alt="" class="cboPlanNuevo" rowid="' + options.rowId + '" id="cboPlanNuevo_' + options.rowId + '" style="width:100%;">' + ListaPlanPorGruposOptions + '</select>';
+                    return _return;
+
+                }
+            },
+            {
+                name: 'Cuenta', label: 'Cuenta', index: 'Cuenta', width: 150, align: 'left', sortable: false,
+                formatter: function (value, options, rData) {
+
+                    var CuentaNuevoSeleccionado = "";
+                    if (CuentasNuevosSeleccionados.indexOf("|" + options.rowId + "|") >= 0) {
+                        CuentaNuevoSeleccionado = CuentasNuevosSeleccionados.substring(CuentasNuevosSeleccionados.indexOf("|" + options.rowId + "|"), CuentasNuevosSeleccionados.length);
+                        CuentaNuevoSeleccionado = CuentaNuevoSeleccionado.substring(0, CuentaNuevoSeleccionado.indexOf("@"));
+                        CuentaNuevoSeleccionado = CuentaNuevoSeleccionado.split("|")[2];
+                    }
+                    var _return = '<select class="cboCuentaNuevo" id="cboCuentaNuevo_' + options.rowId + '" rowid="' + options.rowId + '" style="width:100%;">' + ListaCuentasOptions + '</select>';
+                    if (CuentaNuevoSeleccionado != '') {
+                        _return += '<script>$("#cboCuentaNuevo_' + options.rowId + '").val("' + CuentaNuevoSeleccionado + '"); </script>';
+                    }
+                    return _return;
+
+                }
+            },
+            { name: 'OpcionesModeloActual', index: 'OpcionesModeloActual', width: 10, hidden: true },
+            { name: 'OpcionesModeloNuevo', index: 'OpcionesModeloNuevo', width: 10, hidden: true },
+            { name: 'ModeloNuevoSeleccionado', index: 'ModeloNuevoSeleccionado', width: 30, hidden: true },
+            { name: 'PlanNuevoSeleccionado', index: 'PlanNuevoSeleccionado', width: 30, hidden: true },
+            { name: 'CuentaNuevoSeleccionado', index: 'CuentaNuevoSeleccionado', width: 30, hidden: true },
+            { name: 'id', index: 'id', width: 30, hidden: true },
+            { name: 'Observacion', label: 'Observación', index: 'Observacion', width: 220, align: 'left' },
+            { name: 'IdGrupoEmpleado', label: 'IdGrupoEmpleado', index: 'IdGrupoEmpleado', hidden: true },
+        ],
+        cellEdit: true,
+        loadtext: 'Cargando datos...',
+        recordtext: "{0} - {1} de {2} elementos",
+        emptyrecords: 'No hay resultados',
+        width: 1100,
+        viewrecords: true,
+        multiselect: true,
+        rowList: [2, 20, 50, 100, 500],
+        pager: '#pager',
+        rownum: 0,
+        //sortorder: "asc",
+        rownumbers: true,
+        shrinkToFit: true,
+        //autowidth: true,
+        gridComplete: function () {
+
+            //$("#grid").jqGrid('hideCol', 'cb');
+
+            $("#btnActivar").button("option", "disabled", true);
+            $("#pager_left").css('width', 'auto');
+
+            ActualizarComboPlan_Filtro();
+
+        },
+        onSelectRow: function (id, select, item) {
+        },
+        //sortable: function (permutation) {
+        //},
+        resizeStop: function (width, index) {
+        },
+        afterInsertRow: function (rowid, aData, rowelem) {
+
+            var colModels;
+            var i;
+            if (aData.Observacion != '' && aData.Observacion != 'OK') {
+                colModels = $("#grid").getGridParam("colModel");
+                //alert(colModels.length);
+                for (i = 0; i < colModels.length; i++) {
+                    $("#grid").jqGrid('setCell', rowid, i, '', { color: 'red', padding: '1px' });
+                    //$("#grid").jqGrid('setCell', rowid, i, '', "ui-state-error-text");
+                }
+            }
+
+        },
+        ondblClickRow: function (id) {
+        },
+        beforeSelectRow: function (rowid, e) {
+            return true;
+        }
+    }).navGrid("#pager", { edit: true, add: false, search: false, del: false });
+
+    $("#grid").jqGrid("clearGridData", true).trigger("reloadGrid");
+
+
+    if (!CargoBotonesGrilla) {
+        CargoBotonesGrilla = true;
+        var $grid = $("#grid");
+        $grid.closest("div.ui-jqgrid-view").find("div.ui-jqgrid-hdiv table.ui-jqgrid-htable tr.ui-jqgrid-labels > th.ui-th-column > div.ui-jqgrid-sortable")
+            .each(function () {
+
+                if ($(this).attr("id") == "jqgh_grid_ModeloActual") {
+                    $('<br><select id="cboModeloActual_Filtro" style="width: 95%;"><option value="-1">(Todos)</option></select>').css({ float: "center", height: "17px" }).appendTo(this).change(
+                    function (e) {
+                        var idPrefix = "jqgh_" + $grid[0].id + "_",
+                            thId = $(e.target).closest('div.ui-jqgrid-sortable')[0].id;
+                        if (thId.substr(0, idPrefix.length) === idPrefix) {
+                            var filter_array;
+                            //alert($("#cboModeloActual_Filtro").val());
+                            if ($("#cboModeloActual_Filtro").val() == "(Todos)") {
+                                $("#grid").jqGrid('setGridParam', { search: true, postData: { filters: "" } });
+                            }
+                            else {
+                                filter_array = {
+                                    "groupOp": "OR",
+                                    "rules": [
+                                        { "field": "ModeloActual", "op": "eq", "data": $("#cboModeloActual_Filtro").val() }
+                                    ]
+                                };
+                                $("#grid").jqGrid('setGridParam', { search: true, postData: { filters: filter_array } });
+                            }
+                            $("#grid").jqGrid().trigger('reloadGrid');
+                            return false;
+                        }
+                    });
+                }
+
+                if ($(this).attr("id") == "jqgh_grid_ModeloNuevo") {
+                    $('<br><select id="cboModeloNuevo_Filtro" style="width: 230px;"><option value="-1">(Todos)</option></select>').css(
+                        { float: "center", height: "17px" }).appendTo(this);
+
+                    $('<button>').css({ float: "right", height: "17px" }).appendTo(this).button({
+                        icons: { primary: "ui-icon-disk" },
+                        text: false
+                    }).click(function (e) {
+                        var idPrefix = "jqgh_" + $grid[0].id + "_",
+                            thId = $(e.target).closest('div.ui-jqgrid-sortable')[0].id;
+                        if (thId.substr(0, idPrefix.length) === idPrefix) {
+                            fnActualizarColumnaModeloNuevos();
+                            return false;
+                        }
+                    });
+                }
+
+                //Combo y Boton para Planes
+                if ($(this).attr("id") == "jqgh_grid_Plan") {
+                    $('<br><select id="cboPlan_Filtro" style="width: 150px;"><option value="-1">(Todos)</option></select>').css(
+                        { float: "center", height: "17px" }).appendTo(this);
+
+                    $('<button>').css({ float: "right", height: "17px" }).appendTo(this).button({
+                        icons: { primary: "ui-icon-disk" },
+                        text: false
+                    }).click(function (e) {
+                        var idPrefix = "jqgh_" + $grid[0].id + "_",
+                            thId = $(e.target).closest('div.ui-jqgrid-sortable')[0].id;
+                        if (thId.substr(0, idPrefix.length) === idPrefix) {
+                            fnActualizarColumnaPlan();
+                            return false;
+                        }
+                    });
+                }
+
+
+                if ($(this).attr("id") == "jqgh_grid_Cuenta") {
+                    $('<br><select id="cboCuenta_Filtro" style="width: 150px;"><option value="-1">(Todos)</option></select>').css(
+                        { float: "center", height: "17px" }).appendTo(this);
+
+                    $('<button>').css({ float: "right", height: "17px" }).appendTo(this).button({
+                        icons: { primary: "ui-icon-disk" },
+                        text: false
+                    }).click(function (e) {
+                        var idPrefix = "jqgh_" + $grid[0].id + "_",
+                            thId = $(e.target).closest('div.ui-jqgrid-sortable')[0].id;
+                        if (thId.substr(0, idPrefix.length) === idPrefix) {
+                            fnActualizarColumnaCuenta();
+                            return false;
+                        }
+                    });
+                }
+
+            });
+    }
+
+
+    ListaEmpleados = [];
+    ActualizarComboModeloActual_Filtro();
+    ActualizarComboCuenta_Filtro();
+
+}
+var CargoBotonesGrilla = false;
+
+function DimPosElementos() {
+    var Ancho = $(window).width();
+    var Alto = $(window).height();
+
+    //contenido general
+    $("#dvContenido").css("height", (Alto - 40) + "px");
+    $("#tdTabs").css("height", (Alto - 110) + "px");
+    $("#tbSolicitud").css("height", (Alto - 110) + "px");
+
+    var altoContenidoTab = $("#tbSolicitud").css("height");
+    //$("#lblMensajeVerificacion").text(parseInt(altoContenidoTab));
+    //DISPOSITIVOS
+    $("#tabDispositivos").css("height", parseInt(altoContenidoTab) - 40);
+    //MENSAJE
+    $("#tabMensaje").css("height", parseInt(altoContenidoTab) - 40);
+    if ($.browser.msie) {
+        $($("#tabMensaje").find("table")[1]).css("height", parseInt(altoContenidoTab) - 122);
+    } else {
+        $($("#tabMensaje").find("table")[1]).css("height", parseInt(altoContenidoTab) - 82);
+    }
+    //RESUMEN
+    $("#tabResumen").css("height", parseInt(altoContenidoTab) - 40);
+    var divResumenDatos = parseInt(altoContenidoTab) - parseInt($("#divFinanciamiento").css("height")) - 102; //275
+    $("#divResumenDatos").css("height", divResumenDatos);
+    //GALERIA
+    $("#tabGaleria").css("height", parseInt(altoContenidoTab) - 40);
+    $("#ifGaleria").css("height", parseInt(altoContenidoTab) - 40 - 2);
+    //PLANES
+    $("#tabPlanes").css("height", parseInt(altoContenidoTab) - 40);
+    $("#trDetalle").css("height", parseInt(altoContenidoTab) - 80);
+    $("#bnPlan_Panel1_O").css("height", parseInt(altoContenidoTab) - 140);
+    //ADJUNTOS
+    $("#tabDocAdjuntos").css("height", parseInt(altoContenidoTab) - 40);
+    //PERSONALIZADAS
+    $("#tabSolicitudPersonalizada").css("height", parseInt(altoContenidoTab) - 40);
+    $("#ifSolPer").css("height", parseInt(altoContenidoTab) - 42 - 2);
+    //CONDICIONES
+    //$('#ifCondiciones').css({ "height": parseInt(altoContenidoTab) - 202 });
+    $('#ifCondiciones').css({ "height": parseInt($(window).height()) - 202 });
+    //SERVICIOS
+    $("#tabServicios").css("height", parseInt(altoContenidoTab) - 45);
+
+    //alert(Alto);
+    $("#grid").setGridHeight(Alto - 175 - 25);
+    $("#grid").setGridWidth(Ancho - 50);
+
+
+    var widthTD_ModeloNuevo = $("#jqgh_grid_ModeloNuevo").width();
+    var widthTD_ModeloActual = $("#jqgh_grid_ModeloActual").width();
+    $("#cboModeloNuevo_Filtro").width(widthTD_ModeloNuevo - 50);
+    $("#cboModeloActual_Filtro").width(widthTD_ModeloActual - 10);
+}
+
+
+function GuardarSolicitudesMasivo() {
+
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+
+    var ModeloSeleccionado = "";
+    //var lista = $("#grid").getDataIDs();
+    var lista = $('#grid').getGridParam('data');
+    var rowData;
+
+    if (tipsol == "1") { //Cambio...
+        for (i = 0; i < lista.length; i++) {
+            rowData = lista[i];
+            ModeloSeleccionado = rowData.ModeloNuevoSeleccionado;
+            if (ModeloSeleccionado == "-1" && rowData.Observacion == "") {
+                alerta("Debe seleccionar todos los modelos actuales");
+                return;
+            }
+        }
+    }
+
+    //Nuevo modelo...
+    //tipsol == "1" || 
+    if (tipsol == "2") {
+        for (i = 0; i < lista.length; i++) {
+            rowData = lista[i];
+
+            ModeloSeleccionado = rowData.ModeloNuevoSeleccionado;
+            if (ModeloSeleccionado == "-1" && rowData.Observacion == "") {
+                alerta("Debe seleccionar todos los modelos nuevos");
+                return;
+            }
+
+            ModeloSeleccionado = rowData.PlanNuevoSeleccionado;
+            if (ModeloSeleccionado == "-1" && rowData.Observacion == "") {
+                alerta("Debe seleccionar todos los planes");
+                return;
+            }
+        }
+    }
+
+    btnFinalizar_click();
+
+}
+
+function btnFinalizar_click() {
+
+    $(".cboModeloNuevo").attr("disabled", "disabled");
+    $(".cboModeloActual").attr("disabled", "disabled");
+    $(".cboPlanNuevo").attr("disabled", "disabled");
+
+    var ExisteObservacion = false;
+    //var lista = $("#grid").getDataIDs();
+    var lista = $('#grid').getGridParam('data');
+    var rowData;
+    for (i = 0; i < lista.length; i++) {
+        rowData = lista[i];
+        if (rowData.Observacion != "") {
+            ExisteObservacion = true;
+            break;
+        }
+    }
+    var Mensaje = "";
+    if (ExisteObservacion) {
+        Mensaje = "Sólo se procesarán los requisitos No observados, ¿Desea continuar?";
+    }
+    else {
+        Mensaje = "¿Desea continuar?";
+    }
+
+    confirmacion(Mensaje,
+        function () {
+            //validar la aceptación del acuerdo (Declaración)
+            var i = 0;
+
+            if ($("#ddlEstadoCreacion").val() == "33" || $("#ddlEstadoCreacion").val() == "34") {
+                if ($("#ddlEstadoCreacion").val() == "33") {
+                    $("#lblMsjConfirmacion").text("La solicitud se creará con estado 'Por Aprobar' e iniciará su ciclo respectivo. ¿Está seguro de crearla con dicho estado?");
+                }
+                else
+                    $("#lblMsjConfirmacion").text("La solicitud se creará con estado 'Aprobada' y estará a la espera de ser procesada por un especialista.");
+            }
+            var NombreSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").text();
+
+
+            var CodigosEmpleado = "";
+            var CodigosIMEIActual = "";
+            var LineasActual = "";
+            var CodigosPlan = "";
+            var CodigosNuevoModelo = "";
+            var CodigosCuenta = "";
+            //var lista = $("#grid").getDataIDs();
+            var lista = $('#grid').getGridParam('data');
+            var rowData;
+            //var txtModeloActual;
+
+            for (i = 0; i < lista.length; i++) {
+                rowData = lista[i];
+                if (rowData.Observacion == "") {
+                    CodigosEmpleado += rowData.CodEmpleado + ",";
+                    CodigosNuevoModelo += rowData.ModeloNuevoSeleccionado + ",";
+
+                    LineasActual += rowData.Linea + ",";
+
+                    CodigosIMEIActual += rowData.IMEI + ",";
+                    CodigosPlan += rowData.PlanNuevoSeleccionado + ",";
+                    CodigosCuenta += rowData.CuentaNuevoSeleccionado + ",";
+
+                    //Validar Solicitudes...
+                    if (NombreSolicitud == "Nuevo") {
+                        if (rowData.ModeloNuevoSeleccionado == null || rowData.ModeloNuevoSeleccionado == "" || rowData.ModeloNuevoSeleccionado == "-1") {
+                            alerta("Debe seleccionar todos los modelos");
+                            $(".cboModeloNuevo").removeAttr("disabled");
+                            $(".cboPlanNuevo").removeAttr("disabled");
+                            $(".cboModeloActual").removeAttr("disabled");
+                            return;
+                        }
+                    }
+
+                    if (NombreSolicitud == "Cambio") {
+                        if (rowData.ModeloNuevoSeleccionado == null || rowData.ModeloNuevoSeleccionado == "" || rowData.ModeloNuevoSeleccionado == "-1" ||
+                            rowData.PlanNuevoSeleccionado == null || rowData.PlanNuevoSeleccionado == "" || rowData.PlanNuevoSeleccionado == "-1") {
+                            alerta("Debe seleccionar todos los modelos/planes");
+                            $(".cboModeloNuevo").removeAttr("disabled");
+                            $(".cboPlanNuevo").removeAttr("disabled");
+                            $(".cboModeloActual").removeAttr("disabled");
+                            return;
+                        }
+                    }
+
+                    if (NombreSolicitud == "Cambio de Cuenta") {
+                        if (rowData.CuentaNuevoSeleccionado == null || rowData.CuentaNuevoSeleccionado == "" || rowData.CuentaNuevoSeleccionado == "-1") {
+                            alerta("Debe seleccionar todas las cuentas");
+                            $(".cboModeloNuevo").removeAttr("disabled");
+                            $(".cboPlanNuevo").removeAttr("disabled");
+                            $(".cboModeloActual").removeAttr("disabled");
+                            return;
+                        }
+                    }
+
+                    if (NombreSolicitud == "Cambio de Plan") {
+                        if (rowData.PlanNuevoSeleccionado == null || rowData.PlanNuevoSeleccionado == "" || rowData.PlanNuevoSeleccionado == "-1") {
+                            alerta("Debe seleccionar todos los planes");
+                            $(".cboModeloNuevo").removeAttr("disabled");
+                            $(".cboPlanNuevo").removeAttr("disabled");
+                            $(".cboModeloActual").removeAttr("disabled");
+                            return;
+                        }
+                    }
+
+                }
+            }
+            if (CodigosEmpleado.length > 0)
+                CodigosEmpleado = CodigosEmpleado.substring(0, CodigosEmpleado.length - 1);
+            if (CodigosNuevoModelo.length > 0)
+                CodigosNuevoModelo = CodigosNuevoModelo.substring(0, CodigosNuevoModelo.length - 1);
+            if (CodigosIMEIActual.length > 0)
+                CodigosIMEIActual = CodigosIMEIActual.substring(0, CodigosIMEIActual.length - 1);
+            if (LineasActual.length > 0)
+                LineasActual = LineasActual.substring(0, LineasActual.length - 1);
+            if (CodigosPlan.length > 0)
+                CodigosPlan = CodigosPlan.substring(0, CodigosPlan.length - 1);
+            if (CodigosCuenta.length > 0)
+                CodigosCuenta = CodigosCuenta.substring(0, CodigosCuenta.length - 1);
+
+            //33: Por Aprobar, 34: Aprobada
+            var MetodoWeb = "";
+            var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+
+            var Parametros = "";
+            if (tipsol == "1") {  //Cambio
+                MetodoWeb = "Adm_NuevaSolicitudMasivo.aspx/EnviarSolicitudCambioMasivo";
+                Parametros = "{'codIMEI':'" + CodigosIMEIActual + "','inCodModDis': '" + CodigosNuevoModelo + "','inEstApr': '" + "34" + "','vcCodEmp':'" + CodigosEmpleado + "'}";
+            }
+            else if (tipsol == "2") {  //Nuevo
+                MetodoWeb = "Adm_NuevaSolicitudMasivo.aspx/EnviarSolicitudNuevoMasivo";
+                Parametros = "{'inCodModDis': '" + CodigosNuevoModelo + "','inEstApr': '" + "34" +
+                              "','vcCodEmp':'" + CodigosEmpleado + "','vcCodPlan':'" + CodigosPlan + "'}";
+            }
+            else {
+                MetodoWeb = "Adm_NuevaSolicitudMasivo.aspx/EnviarSolicitudMasivoPersonalizado";
+                Parametros = "{'TipoSolicitud':'" + NombreSolicitud + "','IdTipoSolicitud':'" + tipsol + "','vcCodEmp':'" + CodigosEmpleado +
+                             "','vcLineas':'" + LineasActual + "','vcCodPlan':'" + CodigosPlan + "','vcCodCuentas':'" + CodigosCuenta + "'}";
+            }
+
+            $.ajax({
+                type: "POST",
+                url: MetodoWeb,
+                data: Parametros,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.d == "") {
+                        window.parent.ActualizarGrilla();
+                        MensajeLocal("<br/><h1>Solicitudes enviadas con éxito</h1><br/>", document, CerroMensaje);
+                    } else {
+
+                        //Marcar empleados no procesados...
+                        //var lista = $("#grid").getDataIDs();
+                        var lista = $('#grid').getGridParam('data');
+                        var rowData;
+                        var EmpleadosNoProcesados = result.d.split(",");
+                        for (var j = 0; j < EmpleadosNoProcesados.length; j++) {
+                            for (i = 0; i < lista.length; i++) {
+                                rowData = lista[i];
+
+                                if (EmpleadosNoProcesados[j] == rowData.CodEmpleado) {
+                                    //$("#grid").jqGrid('setRowData', lista[i].id, false, {
+                                    //    color: 'black', weightfont: 'bold', background: '#F8E0E0'
+                                    //});
+                                    $("#grid").jqGrid('setRowData', lista[i].id, false, { color: 'red' });
+                                    rowData.Observacion = 'No se envió la solicitud.';
+                                    $("#grid").jqGrid('setCell', lista[i].id, 'Observacion', 'No se envió la solicitud.');
+                                    break;
+                                }
+                            }
+                        }
+
+                        for (i = 0; i < lista.length; i++) {
+                            rowData = lista[i];
+                            if (rowData.Observacion == "") {
+                                rowData.Observacion = 'OK';
+                                $("#grid").jqGrid("setCell", lista[i].id, "Observacion", "OK");
+                                break;
+                            }
+                        }
+
+                        BloquearPagina(false);
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                }
+            });
+
+
+        },
+
+        function () {
+            //alert('x');
+            $(".cboModeloNuevo").removeAttr("disabled");
+            $(".cboPlanNuevo").removeAttr("disabled");
+            $(".cboModeloActual").removeAttr("disabled");
+        });
+}
+
+function MensajeLocal(msg, doc, callback) {
+    try {
+        $(doc).scrollTop(0);
+    } catch (e) {
+
+    }
+
+    if (msg !== "") {
+        var nInfo = doc.createElement("div");
+        nInfo.className = "msgAlerta";
+        nInfo.innerHTML = msg;
+        doc.body.appendChild(nInfo);
+
+        setTimeout(function () {
+            $(nInfo).fadeOut("slow", function () {
+                doc.body.removeChild(nInfo);
+                if (callback != null && callback != undefined)
+                    callback();
+            });
+        }, 2000);
+    }
+}
+
+function ActualizarComboModeloActual_Filtro() {
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    if (tipsol != "1" && tipsol != "2") {
+        return;
+    }
+    var lista = $("#grid").getDataIDs();
+    var rowData;
+    var ListaModelo = [];
+    var Existe = false;
+    for (i = 0; i < lista.length; i++) {
+        rowData = $("#grid").getRowData(lista[i]);
+        Existe = false;
+        for (var j = 0; j < ListaModelo.length; j++) {
+            if (ListaModelo[j] == rowData.ModeloActual) {
+                Existe = true;
+                break;
+            }
+        }
+        if (!Existe) {
+            ListaModelo.push(rowData.ModeloActual);
+        }
+    }
+    ListaModelo.sort();
+    $('#cboModeloActual_Filtro').html('');
+    if (ListaModelo.length > 0) {
+        $('#cboModeloActual_Filtro').append($('<option>', {
+            text: "(Todos)"
+        }));
+    }
+    for (var i = 0; i < ListaModelo.length; i++) {
+        $('#cboModeloActual_Filtro').append($('<option>', {
+            text: ListaModelo[i]
+        }));
+    }
+}
+
+function ActualizarComboModeloNuevo_Filtro() {
+    var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    if (tipsol != "1" && tipsol != "2") {
+        return;
+    }
+    var lista = $("#grid").getDataIDs();
+    var rowData;
+    var ListaModelo = [];
+    var Existe = false;
+    for (i = 0; i < lista.length; i++) {
+        rowData = $("#grid").getRowData(lista[i]);
+
+        $("#cboModeloNuevo_" + lista[i] + " option").each(function () {
+            Existe = false;
+            for (var j = 0; j < ListaModelo.length; j++) {
+                if (ListaModelo[j] == $(this).text() + '|' + $(this).val()) {
+                    Existe = true;
+                    break;
+                }
+            }
+            if (!Existe && $(this).text() != "(Seleccione)") {
+                ListaModelo.push($(this).text() + "|" + $(this).val());
+            }
+        });
+    }
+
+
+    ListaModelo.sort();
+    $('#cboModeloNuevo_Filtro').html('');
+    for (var i = 0; i < ListaModelo.length; i++) {
+        $('#cboModeloNuevo_Filtro').append($('<option>', {
+            value: ListaModelo[i].split("|")[1],
+            text: ListaModelo[i].split("|")[0]
+        }));
+    }
+
+}
+
+
+function fnActualizarColumnaModeloNuevos() {
+    var ValorSeleccionado = $("#cboModeloNuevo_Filtro").val();
+    var lista = $("#grid").getDataIDs();
+    var rowData;
+    var Existe = false;
+    for (i = 0; i < lista.length; i++) {
+        //rowData = $("#grid").getRowData(lista[i]);
+        $("#cboModeloNuevo_" + lista[i]).val(ValorSeleccionado);
+        $("#cboModeloNuevo_" + lista[i]).change();
+        //ActualizarPlanCombo(lista[i]);
+    }
+    //ActualizarComboPlan_Filtro();
+}
+
+
+function ActualizarPlanCombo(iFila) {
+    var Columnas;
+    $("#cboPlanNuevo_" + iFila).html("");
+    if (ListaPlanPorModelos == null) {
+        return;
+    }
+    for (var k = 0; k < ListaPlanPorModelos.length; k++) {
+        Columnas = ListaPlanPorModelos[k].split("|");
+        if (Columnas[0] == $("#cboModeloNuevo_" + iFila).val()) {
+            $('#cboPlanNuevo_' + iFila).append($('<option>', {
+                value: Columnas[1],
+                text: Columnas[2]
+            }));
+        }
+    }
+    if ($('#cboPlanNuevo_' + iFila).length > 0) {
+        $('#cboPlanNuevo_' + iFila).prepend($('<option>', {
+            value: "-1",
+            text: "(Seleccione)"
+        }));
+    }
+
+
+    var PlanNuevoSeleccionado = "";
+    if (PlanesSeleccionados.indexOf("|" + iFila + "|") >= 0) {
+        PlanNuevoSeleccionado = PlanesSeleccionados.substring(PlanesSeleccionados.indexOf("|" + iFila + "|"), PlanesSeleccionados.length);
+        PlanNuevoSeleccionado = PlanNuevoSeleccionado.substring(0, PlanNuevoSeleccionado.indexOf("@"));
+        PlanNuevoSeleccionado = PlanNuevoSeleccionado.split("|")[2];
+    }
+    if (PlanNuevoSeleccionado != "") {
+        $('#cboPlanNuevo_' + iFila).val(PlanNuevoSeleccionado);
+        $("#grid").jqGrid("setCell", iFila, "PlanNuevoSeleccionado", PlanNuevoSeleccionado);
+    }
+    else {
+        $('#cboPlanNuevo_' + iFila).val("-1");
+        $("#grid").jqGrid("setCell", iFila, "PlanNuevoSeleccionado", "");
+    }
+
+    ////ActualizarComboPlan_Filtro();
+}
+
+function ActualizarComboCuenta_Filtro() {
+    if (ListaCuentas == null) {
+        return;
+    }
+    $("#cboCuenta_Filtro").html("");
+    for (var k = 0; k < ListaCuentas.length; k++) {
+        Columnas = ListaCuentas[k].split("|");
+        $('#cboCuenta_Filtro').append($('<option>', {
+            value: Columnas[0],
+            text: Columnas[1]
+        }));
+    }
+    if ($('#cboCuenta_Filtro').length > 0) {
+        $('#cboCuenta_Filtro').prepend($('<option>', {
+            value: "-1",
+            text: "(Seleccione)"
+        }));
+    }
+    $('#cboCuenta_Filtro').val("-1");
+}
+
+function fnActualizarColumnaPlan() {
+    var ValorSeleccionado = $("#cboPlan_Filtro").val();
+    var lista = $("#grid").getDataIDs();
+    var rowData;
+    var Existe = false;
+    for (i = 0; i < lista.length; i++) {
+        $("#cboPlanNuevo_" + lista[i]).val(ValorSeleccionado);
+        $("#cboPlanNuevo_" + lista[i]).change();
+    }
+}
+
+function fnActualizarColumnaCuenta() {
+    var ValorSeleccionado = $("#cboCuenta_Filtro").val();
+    var lista = $("#grid").getDataIDs();
+    var rowData;
+    var Existe = false;
+    for (i = 0; i < lista.length; i++) {
+        $("#cboCuentaNuevo_" + lista[i]).val(ValorSeleccionado);
+        $("#cboCuentaNuevo_" + lista[i]).change();
+    }
+}
+
+
+var Cargo_ActualizarComboPlan_Filtro = false;
+function ActualizarComboPlan_Filtro() {
+    if (Cargo_ActualizarComboPlan_Filtro) {
+        return;
+    }
+
+    if (ListaPlanPorModelos == null) {
+        return;
+    }
+    var TipoSolicitud = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+    if (TipoSolicitud != "2") {
+        return;
+    }
+
+    $('#cboPlan_Filtro').html('');
+    var ListaPlan = [];
+    var Existe = false;
+    for (var k = 0; k < ListaPlanPorModelos.length; k++) {
+        Existe = false;
+        Columnas = ListaPlanPorModelos[k].split("|");
+        for (var i = 0; i < ListaPlan.length; i++) {
+            if (ListaPlan[i] == Columnas[1]) {
+                Existe = true;
+                break;
+            }
+        }
+        if (!Existe) {
+            ListaPlan.push(Columnas[1]);
+            $('#cboPlan_Filtro').append($('<option>', {
+                value: Columnas[1],
+                text: Columnas[2]
+            }));
+        }
+    }
+    Cargo_ActualizarComboPlan_Filtro = true;
+
+
+}
+

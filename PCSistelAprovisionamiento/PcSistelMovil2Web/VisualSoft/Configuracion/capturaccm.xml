@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CCapturaCCMXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NombreSucursal>MOL CALL MANAGER</NombreSucursal>
+  <CodigoSucursal>112</CodigoSucursal>
+  <Intervalo>10</Intervalo>
+  <Fecha>2007-11-27T16:51:41.4299033-05:00</Fecha>
+  <CambioFecha>false</CambioFecha>
+  <CodigoPlantilla>1</CodigoPlantilla>
+  <NombrePlantilla>CCM Version 4.1 Modo SQL</NombrePlantilla>
+</CCapturaCCMXML>

@@ -1,0 +1,30 @@
+﻿#global
+{
+    width:100%;
+    float:left;    
+}
+
+.flotarIzquierda
+{
+    float:left;    
+}
+
+.colorPedido
+{
+    background-color: #FFCCCC;
+}
+
+.colorIngreso
+{
+    background-color:#D4E7FA;    
+}
+
+.colorDespacho
+{
+    background-color:#F0E7B4;    
+}
+
+.colorDisponible
+{
+    background-color:#7FCA9F;    
+}

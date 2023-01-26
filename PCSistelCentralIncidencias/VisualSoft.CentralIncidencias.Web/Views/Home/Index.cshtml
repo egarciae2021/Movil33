@@ -1,0 +1,322 @@
+﻿@using System.Web.Script.Serialization;
+@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Home
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+
+    #dvFotoUsuario
+    {
+        width:100px;
+        height:120px;
+        border:0px dotted gray;
+        margin: 20px 10px 10px 20px;
+        float:left;
+        border-radius:5px;
+        overflow:hidden;
+        box-shadow:0px 0px 5px gray;
+    }
+
+    #ulInfoUsuario
+    {
+        list-style:none;
+        margin:20px 10px 10px 20px;
+        padding:0px;
+        float:left;
+    }
+
+</style>
+<div class="conteiner" id="dvPrincipalHome">
+    <div class="row">
+        <div class="col-xs-24">
+            <div id="dvFotoUsuario" >                
+                @if (((VisualSoft.PCSistelMovil.CentralIncidencias.BE.ENT_CINC_Usuario)Session["SesionUsuario"]).Foto.Tamano > 0)
+                {
+                    <img src="~/Temp/@(((VisualSoft.PCSistelMovil.CentralIncidencias.BE.ENT_CINC_Usuario)Session["SesionUsuario"]).Foto.Nombre)"  height="100%" width="100%" />
+                }
+                else
+                { 
+                    <img src="~/Common/Images/Silueta.jpg" height="100%" width="100%" />
+                }
+            </div>
+            <ul id="ulInfoUsuario">
+                <li>
+                    @Model.NombreTecnico                                                            
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-24 col-md-12" style="padding:5px; border:1px solid #E9C589; border-radius:3px;">
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24 col-sm-10" style="height:300px; border-right:1px solid #E9C589; padding:5px;">
+                        <div id="dvPieAbiertasMain" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <div  class="col-xs-24 col-sm-14" style="height:300px; border:0px dotted gray; padding:5px;">
+                        <div id="dvBarrasAbiertasMain" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-24 col-md-12" style="padding:5px; border:1px solid #E9C589; border-radius:3px;">
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24 col-sm-10" style="height:300px; border-right:1px solid #E9C589; padding:5px;">
+                        <div id="dvPieCerradasMain" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-14" style="height:300px;  padding:5px;">
+                        <div id="dvBarrasCerradasMain" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-24 col-sm-offset-2 col-sm-20 col-md-offset-4 col-md-16 col-lg-offset-7 col-lg-10" style="margin-top:20px;">
+            <table class="table" style="border:1px solid #cccccc; border-radius:10px;">
+                <thead style="background:#d9edf7; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo
+                        </td>
+                        <td>
+                            <span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable
+                        </td>
+                        <td>
+                            <span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.DetalleEstadoUmbrales.Count; i++)
+                    {
+                        switch (Model.DetalleEstadoUmbrales[i][0])
+                        {
+                            case 0:
+                                <tr>
+                                    <td style="background:#d9edf7; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                                        Activos
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][1]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][2]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][3]
+                                    </td>
+                                </tr>
+                                break;
+                            case 1:
+                                <tr>
+                                    <td style="background:#d9edf7; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                                        Ayuda
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][1]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][2]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][3]
+                                    </td>
+                                </tr>
+                                break;
+                            case 2:
+                                <tr>
+                                    <td style="background:#d9edf7; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                                        Escalado
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][1]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][2]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][3]
+                                    </td>
+                                </tr>
+                                break;
+                            case 3:
+                                <tr>
+                                    <td style="background:#d9edf7; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                                        Atendido
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][1]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][2]
+                                    </td>
+                                    <td>
+                                        @Model.DetalleEstadoUmbrales[i][3]
+                                    </td>
+                                </tr>
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-24 " style="border:1px solid #E9C589; border-radius:3px;">
+            <div class="conteiner">
+                <div class="row">                               
+                    @for (int i = 0; i < Model.CardTecnico.Count ; i++)
+                    {
+                        <div class="col-xs-24 col-sm-12 col-md-12 col-lg-8" style="height:250px; padding:5px; border:0px dotted gray;">
+                            <div style="width:100%; height:100%; border:1px dotted #E9C589;">
+                                <div style="width:100%; height:70px;">
+                                    <div style="width:60px; height:70px;  float:left; box-shadow:0px 0px 5px gray;">                                                                               
+                                        @if (Model.CardTecnico[i].Foto.Tamano > 0)
+                                        {                                            
+                                            <img src="~/Temp/@Model.CardTecnico[i].Foto.Nombre"  height="100%" width="100%" />
+                                        }
+                                        else
+                                        {
+                                            if (@Model.IdTecnico == Model.CardTecnico[i].IdUsuario)
+                                            {
+                                                <img src="~/Temp/@(((VisualSoft.PCSistelMovil.CentralIncidencias.BE.ENT_CINC_Usuario)Session["SesionUsuario"]).Foto.Nombre)"  height="100%" width="100%" />
+                                            }
+                                            else
+                                            { 
+                                                <img src="~/Common/Images/Silueta.jpg" height="100%" width="100%" />
+                                            }
+                                        }
+                                    </div>
+                                    <ul style="list-style:none; margin:5px; padding:0px; float:left; font-family: Verdana; font-size: 13px; font-weight: bold;">
+                                        <li>
+                                            @Model.CardTecnico[i].Nombre
+                                        </li>
+                                    </ul>
+                                    <ul class="MiListaHorizontal" style="float:right;"> 
+                                        <li style="border:1px solid #5cb85c; border-radius:3px; padding:2px;">
+                                            <span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> @Model.CardTecnico[i].CntOptimoSLA_TA
+                                        </li>
+                                        <li style="border:1px solid #ec971f; border-radius:3px; padding:2px;">
+                                            <span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> @Model.CardTecnico[i].CntAceptableSLA_TA
+                                        </li>
+                                        <li style="border:1px solid #c9302c; border-radius:3px; padding:2px;">
+                                            <span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> @Model.CardTecnico[i].CntCriticoSLA_TA
+                                        </li>
+                                        <li style="border:1px solid #337ab7; border-radius:3px; padding:2px;">
+                                            <span style="color: #337ab7; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Total @Model.CardTecnico[i].CntTotal_TA
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="width:100%; height:180px;">
+                                    <div id="dvPieCard-@Model.CardTecnico[i].IdUsuario" style="width:50%; height:100%; float:left;"></div>
+                                    <div id="dvBarCard-@Model.CardTecnico[i].IdUsuario" style="width:50%; height:100%; float:left;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var modeloHome;
+    var repositorioChart;
+    $(function () {
+        FusionCharts.setCurrentRenderer('javascript');
+        modeloHome = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+        fnPintarModelo();
+    });
+
+    function fnPintarModelo() {
+    
+        if (!modeloHome.PieMainAbierto.tieneData) {
+            $("#dvPieAbiertasMain").html("");
+            $("#dvPieAbiertasMain").append('<div class="noData" style="font-size:medium; color:Gray; width:100%; height:100%;"><img src="@Href("~/Common/images/MichartWarning2.png")" width="64" height="64" />No hay datos para mostrar...</div> ');
+        }
+        else {
+
+            repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/Pie2D.swf")", "PieAbiertasMain", "100%", "100%", "0");
+            repositorioChart.setJSONData(modeloHome.PieMainAbierto);
+            repositorioChart.setTransparent(true);
+            repositorioChart.render("dvPieAbiertasMain");
+        }
+
+        if (!modeloHome.BarrasAbiertoTipoUmbrales.tieneData) {
+            $("#dvBarrasAbiertasMain").html("");
+            $("#dvBarrasAbiertasMain").append('<div class="noData" style="font-size:medium; color:Gray; width:100%; height:100%;"><img src=@Href("~/Common/images/MiBarWarning2.png") width="80" height="64" />No hay datos para mostrar...</div> ');
+        }
+        else {
+            repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/StackedBar2D.swf")", "BarrasAbiertasMain", "100%", "100%", "0");
+            repositorioChart.setJSONData(modeloHome.BarrasAbiertoTipoUmbrales);
+            repositorioChart.setTransparent(true);
+            repositorioChart.render("dvBarrasAbiertasMain");
+        }
+
+        if (!modeloHome.PieMainCerrado.tieneData) {
+            $("#dvPieCerradasMain").html("");
+            $("#dvPieCerradasMain").append('<div class="noData" style="font-size:medium; color:Gray; width:100%; height:100%;"><img src=@Href("~/Common/images/MichartWarning2.png") width="64" height="64" />No hay datos para mostrar...</div> ');
+        }
+        else {
+
+            repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/Pie2D.swf")", "PieCerradasMain", "100%", "100%", "0");
+            repositorioChart.setJSONData(modeloHome.PieMainCerrado);
+            repositorioChart.setTransparent(true);
+            repositorioChart.render("dvPieCerradasMain");
+        }
+
+        if (!modeloHome.BarrasCerradoTipoUmbrales.tieneData) {
+            $("#dvBarrasCerradasMain").html("");
+            $("#dvBarrasCerradasMain").append('<div class="noData" style="font-size:medium; color:Gray; width:100%; height:100%;"><img src=@Href("~/Common/images/MiBarWarning2.png") width="80" height="64" />No hay datos para mostrar...</div> ');
+        }
+        else {
+            repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/StackedBar2D.swf")", "BarrasCerradasMain", "100%", "100%", "0");
+            repositorioChart.setJSONData(modeloHome.BarrasCerradoTipoUmbrales);
+            repositorioChart.setTransparent(true);
+            repositorioChart.render("dvBarrasCerradasMain");
+        }
+
+        for (var i = 0; i < modeloHome.CardTecnico.length; i++) {
+            if (!modeloHome.CardTecnico[i].PieUmbrales_TA.tieneData) {
+                $("#dvPieCard-" + modeloHome.CardTecnico[i].IdUsuario).html("");
+                $("#dvPieCard-" + modeloHome.CardTecnico[i].IdUsuario).append('<div class="noData" style="font-size:small; font-weight:lighter; color:Gray; width:100%; height:100%;"><img src=@Href("~/Common/images/MichartWarning2.png") width="64" height="64" />No hay datos...</div> ');
+            }
+            else {
+
+                repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/Pie2D.swf")", "PieCard-" + modeloHome.CardTecnico[i].IdUsuario, "100%", "100%", "0");
+                repositorioChart.setJSONData(modeloHome.CardTecnico[i].PieUmbrales_TA);
+                repositorioChart.setTransparent(true);
+                repositorioChart.render("dvPieCard-" + modeloHome.CardTecnico[i].IdUsuario);
+            }
+
+            if (!modeloHome.CardTecnico[i].BarrasTipoUmbrales_TA.tieneData) {
+                $("#dvBarCard-" + modeloHome.CardTecnico[i].IdUsuario).html("");
+                $("#dvBarCard-" + modeloHome.CardTecnico[i].IdUsuario).append('<div class="noData" style="font-size:small; font-weight:lighter; color:Gray; width:100%; height:100%;"><img src=@Href("~/Common/Images/MiBarWarning2.png") width="80" height="64" />No hay datos...</div> ');
+            }
+            else {
+                repositorioChart = new FusionCharts("@Href("~/Common/Scripts/FusionCharts/StackedBar2D.swf")", "BarCard-" + modeloHome.CardTecnico[i].IdUsuario, "100%", "100%", "0");
+                repositorioChart.setJSONData(modeloHome.CardTecnico[i].BarrasTipoUmbrales_TA);
+                repositorioChart.setTransparent(true);
+                repositorioChart.render("dvBarCard-" + modeloHome.CardTecnico[i].IdUsuario);
+            }
+        }
+
+    }
+
+</script>

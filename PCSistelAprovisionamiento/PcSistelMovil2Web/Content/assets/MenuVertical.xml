@@ -1,0 +1,217 @@
+﻿<aside id="aside-container">
+  <div id="aside">
+    <div class="nano has-scrollbar">
+      <div class="nano-content" tabindex="0" style="right: -17px;">
+
+        <!--Nav tabs-->
+        <!--================================-->
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active">
+            <a href="#demo-asd-tab-1" data-toggle="tab">
+              <i class="demo-pli-information icon-lg icon-fw"></i>Reportes
+            </a>
+          </li>
+          <li>
+            <a href="#demo-asd-tab-2" data-toggle="tab">
+              <i class="demo-pli-pen-5 icon-lg icon-fw"></i> Mantenimientos
+            </a>
+          </li>
+          <li>
+            <a href="#demo-asd-tab-3" data-toggle="tab">
+              <i class="demo-pli-wrench icon-lg icon-fw"></i> Configuración
+            </a>
+          </li>
+        </ul>
+        <!--================================-->
+        <!--End nav tabs-->
+        <!-- Tabs Content -->
+        <!--================================-->
+        <div class="tab-content">
+          <!--First tab (Contact list)-->
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <div class="tab-pane fade in active" id="demo-asd-tab-1">
+
+            <ul class="list-group bg-trans">
+              <li class="pad-top list-header">
+                <p class="text-main text-sm text-uppercase text-bold mar-no">Listados</p>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Facturación</p>
+                <small class="text-muted">Análisis de facturación por periodos.</small>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Líneas y planes</p>
+                <small class="text-muted">Detalle de líneas con planes asociados.</small>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Empleado</p>
+                <small class="text-muted">Detalle por empleados.</small>
+              </li>
+            </ul>
+
+            <hr />
+            <ul class="list-group bg-trans">
+              <li class="pad-top list-header">
+                <p class="text-main text-sm text-uppercase text-bold mar-no">Consolidados</p>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Detalle</p>
+                <small class="text-muted">Reporte consolidado por: Líneas, Equipos, Plan, Cuentas, Organización.</small>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Líneas y Dispositivos</p>
+                <small class="text-muted">Empleados, líneas y dispositivos agrupados por organización.</small>
+              </li>
+            </ul>
+
+            <hr />
+            <ul class="list-group bg-trans">
+              <li class="pad-top list-header">
+                <p class="text-main text-sm text-uppercase text-bold mar-no">Dinámicos</p>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">General</p>
+                <small class="text-muted">Reporte dinámico agrupado por organización.</small>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Por planes</p>
+                <small class="text-muted">Reporte dinámico agrupado por planes.</small>
+              </li>
+            </ul>
+            <hr />
+
+
+          </div>
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!--End first tab (Contact list)-->
+          <!--Second tab (Custom layout)-->
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <div class="tab-pane fade" id="demo-asd-tab-2">
+
+            <p class="pad-all text-main text-sm text-uppercase text-bold">Organización</p>
+            <!--Simple Menu-->
+            <div class="list-group bg-trans">
+              <a href="#" class="list-group-item">
+                <i class="demo-pli-mine icon-lg icon-fw"></i> Centro de costos
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="demo-pli-folder-organizing icon-lg icon-fw"></i> Áreas
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="demo-pli-folder icon-lg icon-fw"></i> Grupos
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="demo-pli-male-female icon-lg icon-fw"></i> Empleados
+              </a>
+              <a href="#" class="list-group-item">
+                <i class="demo-pli-medal-2 icon-lg icon-fw"></i> Responsables
+              </a>
+            </div>
+            <hr>
+              <p class="pad-all text-main text-sm text-uppercase text-bold">Móvil</p>
+              <!--Simple Menu-->
+              <div class="list-group bg-trans">
+                <a href="#" class="list-group-item">
+                  <i class="demo-pli-receipt-4 icon-lg icon-fw"></i> Cuentas
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="demo-pli-check icon-lg icon-fw"></i> Planes
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="demo-pli-photos icon-lg icon-fw"></i> Modelos
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="demo-pli-tablet-2 icon-lg icon-fw"></i> Dispositivos
+                </a>
+                <a href="#" class="list-group-item">
+                  <i class="demo-pli-support icon-lg icon-fw"></i> Líneas
+                </a>
+              </div>
+              <hr>
+                <p class="pad-all text-main text-sm text-uppercase text-bold">Servicios</p>
+                <!--Simple Menu-->
+                <div class="list-group bg-trans">
+                  <a href="#" class="list-group-item">
+                    <i class="demo-pli-information icon-lg icon-fw"></i> Facturación
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <i class="demo-pli-mine icon-lg icon-fw"></i> Líneas
+                  </a>
+                </div>
+
+              </div>
+          <!--End second tab (Custom layout)-->
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!--Third tab (Settings)-->
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <div class="tab-pane fade" id="demo-asd-tab-3">
+            <ul class="list-group bg-trans">
+              <li class="pad-top list-header">
+                <p class="text-main text-sm text-uppercase text-bold mar-no">Seguridad</p>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Perfil</p>
+                <small class="text-muted">Personalice los perfiles y accesos al sistema para los usuarios.</small>
+              </li>
+              <li class="list-group-item">
+                <p class="mar-no text-main">Usuarios</p>
+                <small class="text-muted">Cree, edite y elimine usuarios.</small>
+              </li>
+              <!--<li class="list-group-item">
+                <div class="pull-right">
+                  <input class="toggle-switch" id="demo-switch-3" type="checkbox">
+                    <label for="demo-switch-3"></label>
+                  </div>
+                <p class="mar-no text-main">Invisible mode </p>
+                <small class="text-muted">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </small>
+              </li>-->
+            </ul>
+
+            <hr>
+              <ul class="list-group pad-btm bg-trans">
+                <li class="list-header">
+                  <p class="text-main text-sm text-uppercase text-bold mar-no">Panel de Control</p>
+                </li>
+                <li class="list-group-item">
+                  <p class="mar-no text-main">Configuración regional</p>
+                  <small class="text-muted">Personalice formatos de fecha, número y monedas.</small>
+                </li>
+                <li class="list-group-item">
+                  <p class="mar-no text-main">Visor de eventos</p>
+                  <small class="text-muted">Visualice log de correos y errores.</small>
+                </li>
+                <li class="list-group-item">
+                  <p class="mar-no text-main">Auditoría</p>
+                  <small class="text-muted">Visualice las acciones realizadas por los usuarios en el sistema.</small>
+                </li>
+              </ul>
+
+              <hr>
+                <p class="pad-hor text-main text-sm text-uppercase text-bold mar-no">Importación en curso</p>
+                <div class="pad-all">
+                  <p class="text-main">Importación de facturación</p>
+                  <div class="progress progress-sm">
+                    <div class="progress-bar progress-bar-success" style="width: 15%;">
+                      <span class="sr-only">15%</span>
+                    </div>
+                  </div>
+                  <small>15% Completado</small>
+                </div>
+                <!--<div class="pad-hor">
+                                        <p class="text-main">Database</p>
+                                        <div class="progress progress-sm">
+                                            <div class="progress-bar progress-bar-danger" style="width: 75%;"><span class="sr-only">75%</span></div>
+                                        </div>
+                                        <small>17/23 Database</small>
+                                    </div>-->
+              </div>
+          <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+          <!--Third tab (Settings)-->
+        </div>
+      </div>
+      <div class="nano-pane" style="display: none;">
+        <div class="nano-slider" style="height: 1778px; transform: translate(0px, 0px);"></div>
+      </div>
+    </div>
+  </div>
+</aside>

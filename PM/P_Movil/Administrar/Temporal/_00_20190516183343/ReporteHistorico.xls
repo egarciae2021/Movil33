@@ -1,0 +1,10 @@
+﻿<style> TD { mso-number-format:\@; } </style><table cellspacing='0' rules='all' border='1' id='tbl_Rep_Historico' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Dispositivo</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Lineas</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>CodEmpleado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Empleado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>F_inCodEst</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Estado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>FecInicio</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>FecFin</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Observacion</td>
+	</tr>
+	<tr>
+		<td>000000000000020 - IPAD - PRODUCCIONES</td><td>5568014573</td><td>6503541</td><td>ALFARO MARTINEZ ONIEL</td><td>2</td><td>Asignado</td><td>02/05/2019</td><td></td><td>INGRESO SISTEMA - CARGA DATA INICIAL</td>
+	</tr>
+
+	</tr>
+</table>

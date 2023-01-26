@@ -1,0 +1,510 @@
+2022/08/05 09:20:25.755,[16],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 09:20:25.760,[16],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 09:20:25.760,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 09:20:34.128,[5],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:20:34.128,[5],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:20:34.128,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:20:36.942,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:20:36.942,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:20:36.942,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:20:54.514,[16],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:20:54.514,[16],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:20:54.514,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:20:56.794,[28],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 09:20:56.794,[28],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 09:20:56.794,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 09:21:49.000,[30],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 09:21:49.000,[30],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 09:21:49.000,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 09:21:54.620,[17],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:21:54.621,[17],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:21:54.621,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 09:21:55.674,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:21:55.674,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:21:55.674,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 09:22:27.404,[19],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:22:27.404,[19],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:22:27.404,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 09:22:29.031,[19],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 09:22:29.031,[19],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 09:22:29.031,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 10:28:14.916,[95],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx?Cod=2&Par=IdParametro&vcTab=MOV_PARAMETROS
+2022/08/05 10:28:14.916,[95],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx?Cod=2&Par=IdParametro&vcTab=MOV_PARAMETROS
+2022/08/05 10:28:14.916,[95],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx?Cod=2&Par=IdParametro&vcTab=MOV_PARAMETROS
+2022/08/05 10:28:14.942,[69],INFO  ,Ingresa ActualizarCultura. Página: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx
+2022/08/05 10:28:14.942,[69],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx
+2022/08/05 10:28:14.942,[69],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/Seguridad/Administrar/Mnt_ConfServicios.aspx
+2022/08/05 11:01:33.027,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 11:01:33.027,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 11:01:33.027,[32],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 12:04:47.057,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 12:04:47.062,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 12:04:47.062,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 12:04:54.504,[13],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 12:04:54.504,[13],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 12:04:54.505,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 12:04:57.353,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 12:04:57.354,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 12:04:57.354,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 12:37:30.037,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 12:37:30.037,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 12:37:30.037,[74],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 12:57:27.413,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/08/05 12:57:27.413,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/08/05 12:57:27.413,[62],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/08/05 12:59:37.273,[86],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=0
+2022/08/05 12:59:37.273,[86],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=0
+2022/08/05 12:59:37.273,[86],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=0
+2022/08/05 13:13:52.283,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 13:13:52.290,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 13:13:52.290,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 13:13:59.755,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 13:13:59.755,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 13:13:59.755,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 13:14:02.602,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 13:14:02.602,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 13:14:02.602,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 13:16:05.868,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=PCS_IMP_Config_Proceso&inCod=127&inTip=4&inTipOri=0
+2022/08/05 13:16:05.868,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=PCS_IMP_Config_Proceso&inCod=127&inTip=4&inTipOri=0
+2022/08/05 13:16:05.868,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=PCS_IMP_Config_Proceso&inCod=127&inTip=4&inTipOri=0
+2022/08/05 13:16:08.221,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:16:08.221,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:16:08.221,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:17:29.368,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=TiempoMinCambEquipo&inCod=2&inTip=4&inTipOri=0
+2022/08/05 13:17:29.368,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=TiempoMinCambEquipo&inCod=2&inTip=4&inTipOri=0
+2022/08/05 13:17:29.368,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=TiempoMinCambEquipo&inCod=2&inTip=4&inTipOri=0
+2022/08/05 13:50:06.887,[60],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_CAM_FinanciamientoTipo&inCod=120&inTip=4&inTipOri=0
+2022/08/05 13:50:06.887,[60],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_CAM_FinanciamientoTipo&inCod=120&inTip=4&inTipOri=0
+2022/08/05 13:50:06.888,[60],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_CAM_FinanciamientoTipo&inCod=120&inTip=4&inTipOri=0
+2022/08/05 13:50:10.263,[81],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:50:10.263,[81],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:50:10.263,[81],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:50:23.816,[77],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Configurar/Fac_Conf_CuentaCobro.aspx?vcTab=MOV_FAC_Configuracion&inCod=109&inTip=4&inTipOri=0
+2022/08/05 13:50:23.816,[77],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Configurar/Fac_Conf_CuentaCobro.aspx?vcTab=MOV_FAC_Configuracion&inCod=109&inTip=4&inTipOri=0
+2022/08/05 13:50:23.816,[77],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Configurar/Fac_Conf_CuentaCobro.aspx?vcTab=MOV_FAC_Configuracion&inCod=109&inTip=4&inTipOri=0
+2022/08/05 13:51:10.793,[60],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 13:51:10.793,[60],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 13:51:10.793,[60],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 13:51:11.827,[86],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:51:11.827,[86],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 13:51:11.827,[86],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 14:09:44.907,[56],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 14:09:44.907,[56],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 14:09:44.907,[56],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 16:00:31.854,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 16:00:31.860,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 16:00:31.860,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 16:00:39.483,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:00:39.483,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:00:39.483,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:00:42.296,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:00:42.296,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:00:42.296,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:00:47.820,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:00:47.820,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:00:47.820,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:00:48.839,[8],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:00:48.839,[8],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:00:48.839,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:01:20.128,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:01:20.129,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:01:20.129,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:01:20.153,[8],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:01:20.153,[8],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:01:20.153,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:02:12.761,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:02:12.761,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:02:12.761,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:02:12.785,[17],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:02:12.785,[17],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:02:12.785,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:03:18.850,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:03:18.850,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:03:18.850,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_MOVIL/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:03:18.892,[17],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:03:18.892,[17],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:03:18.892,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_MOVIL/Mnt_SEG_items.aspx
+2022/08/05 16:03:25.221,[17],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:25.221,[17],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:25.221,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 16:03:31.720,[17],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:31.720,[17],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:31.720,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 16:03:32.306,[21],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:32.306,[21],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 16:03:32.306,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 16:03:34.549,[17],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 16:03:34.549,[17],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 16:03:34.549,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 16:03:47.967,[17],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:03:47.967,[17],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:03:47.967,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:03:49.112,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:03:49.112,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:03:49.112,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:04:01.440,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:01.440,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:01.440,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:01.468,[25],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:04:01.468,[25],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:04:01.468,[25],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:04:17.216,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:17.216,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:17.216,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:04:17.236,[16],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:04:17.236,[16],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:04:17.236,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 16:39:46.259,[68],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 16:39:46.259,[68],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 16:39:46.259,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 16:40:05.143,[68],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:40:05.143,[68],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:40:05.143,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:40:08.367,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:40:08.367,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:40:08.367,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:40:12.333,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:40:12.333,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:40:12.333,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:40:17.293,[72],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.js
+2022/08/05 16:40:17.293,[72],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.js
+2022/08/05 16:40:17.293,[72],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.js
+2022/08/05 16:47:05.908,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 16:47:05.913,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 16:47:05.913,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 16:47:13.482,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:47:13.482,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:47:13.482,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 16:47:15.457,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:47:15.457,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:47:15.457,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 16:47:22.612,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Temporizador&inCod=1263&inTip=3&inTipOri=0
+2022/08/05 16:47:22.612,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Temporizador&inCod=1263&inTip=3&inTipOri=0
+2022/08/05 16:47:22.612,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Temporizador&inCod=1263&inTip=3&inTipOri=0
+2022/08/05 16:47:24.963,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 16:47:24.963,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 16:47:24.963,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 16:47:27.117,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:47:27.117,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 16:47:27.117,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:07:53.656,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 17:07:53.662,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 17:07:53.662,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 17:08:01.137,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:08:01.137,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:08:01.137,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:08:02.768,[14],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:08:02.768,[14],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:08:02.768,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:08:11.680,[14],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:08:11.680,[14],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:08:11.680,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:08:56.647,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:08:56.647,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:08:56.647,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:27:14.024,[12],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 17:27:14.029,[12],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 17:27:14.029,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 17:27:21.885,[16],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:27:21.885,[16],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:27:21.885,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:27:24.897,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:27:24.897,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:27:24.897,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:27:36.052,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:27:36.052,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:27:36.052,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:27:36.945,[9],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:27:36.945,[9],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:27:36.945,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:28:08.832,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:28:08.832,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:28:08.832,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:28:08.855,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:28:08.855,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:28:08.855,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:30:45.731,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 17:30:45.737,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 17:30:45.737,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 17:30:53.270,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:30:53.270,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:30:53.270,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:30:55.244,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:30:55.244,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:30:55.244,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:31:01.468,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:01.468,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:01.469,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:02.411,[8],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:31:02.411,[8],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:31:02.411,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:31:49.421,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:49.421,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:49.421,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:31:49.444,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:31:49.444,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:31:49.444,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:34:22.322,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:34:22.322,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:34:22.322,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=MOV_PARAMETROS&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:34:22.350,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:34:22.350,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:34:22.350,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:37:33.126,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 17:37:33.131,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 17:37:33.131,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 17:37:40.604,[16],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:37:40.604,[16],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:37:40.605,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:37:43.489,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:37:43.489,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:37:43.489,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:37:48.655,[14],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:37:48.655,[14],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:37:48.655,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:37:49.552,[9],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:37:49.552,[9],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:37:49.552,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:38:33.096,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:38:33.096,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:38:33.096,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:38:33.120,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:38:33.120,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:38:33.120,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:40:11.365,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:40:11.365,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:40:11.365,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:40:11.405,[9],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:40:11.405,[9],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:40:11.405,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:01.349,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 17:48:01.355,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 17:48:01.355,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 17:48:08.774,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:48:08.774,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:48:08.774,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 17:48:11.505,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:48:11.505,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:48:11.505,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 17:48:16.530,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:16.530,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:16.530,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:17.772,[8],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:17.772,[8],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:17.772,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:55.781,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:55.781,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:55.781,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 17:48:55.804,[9],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:55.804,[9],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 17:48:55.804,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:22.310,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 18:00:22.316,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 18:00:22.316,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 18:00:29.756,[15],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:00:29.756,[15],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:00:29.756,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:00:32.785,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:00:32.785,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:00:32.785,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:00:35.094,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:35.094,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:35.094,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:36.664,[5],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:36.664,[5],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:36.664,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:39.901,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:39.901,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:39.901,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:00:39.916,[9],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:39.916,[9],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:00:39.916,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:02:14.501,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:02:14.501,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:02:14.501,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:02:14.537,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:02:14.537,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:02:14.537,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:02:18.306,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx?vcTab=MOV_PARAMETROS&inCod=7001&inTip=3&inTipOri=0
+2022/08/05 18:02:18.306,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx?vcTab=MOV_PARAMETROS&inCod=7001&inTip=3&inTipOri=0
+2022/08/05 18:02:18.306,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx?vcTab=MOV_PARAMETROS&inCod=7001&inTip=3&inTipOri=0
+2022/08/05 18:02:18.324,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx
+2022/08/05 18:02:18.324,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx
+2022/08/05 18:02:18.324,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorNoPagina.aspx?aspxerrorpath=/P_Configuracion/HerramientasSistema/ConfiguracionParametro.aspx
+2022/08/05 18:02:21.763,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 18:02:21.763,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 18:02:21.763,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/08/05 18:02:24.034,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 18:02:24.034,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 18:02:24.034,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/08/05 18:02:44.646,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 18:02:44.646,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 18:02:44.646,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 18:02:50.357,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:02:50.357,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:02:50.357,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:02:53.937,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:02:53.937,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:02:53.937,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:03:07.381,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:03:07.381,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:03:07.381,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:03:07.405,[20],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:03:07.405,[20],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:03:07.405,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_items.aspx
+2022/08/05 18:12:48.158,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 18:12:48.163,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 18:12:48.163,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 18:12:55.629,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:12:55.629,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:12:55.629,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:13:06.001,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:13:06.001,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:13:06.001,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:13:17.526,[12],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:13:17.527,[12],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:13:17.527,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:14:31.393,[13],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:14:31.393,[13],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:14:31.394,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Mnt_SEG_PoliticaUsuario.apsx
+2022/08/05 18:14:34.609,[11],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 18:14:34.609,[11],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 18:14:34.609,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 18:14:36.674,[11],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 18:14:36.674,[11],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 18:14:36.674,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 18:16:37.397,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 18:16:37.413,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 18:16:37.413,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 18:16:44.889,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:16:44.889,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:16:44.889,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:16:47.629,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:16:47.629,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:16:47.629,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:16:57.733,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:16:57.733,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:16:57.733,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:20:24.260,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 18:20:24.266,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 18:20:24.266,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 18:20:31.473,[15],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:20:31.473,[15],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:20:31.473,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 18:20:34.469,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:20:34.469,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:20:34.469,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 18:20:48.590,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:20:48.590,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:20:48.590,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:21:05.905,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:21:05.905,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:21:05.905,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:47:37.111,[52],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:47:37.111,[52],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 18:47:37.111,[52],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:04:01.291,[92],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 19:04:01.291,[92],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 19:04:01.291,[92],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/08/05 19:08:33.700,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:08:33.701,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:08:33.701,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:31:19.012,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:31:19.017,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:31:19.017,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:31:26.302,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:31:26.302,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:31:26.302,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:31:29.289,[14],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:31:29.289,[14],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:31:29.289,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:31:33.818,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:31:33.818,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:31:33.818,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:34:57.711,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:34:57.711,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:34:57.711,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:38:27.061,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:38:27.061,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:38:27.061,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:39:09.041,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:39:09.041,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:39:09.041,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:40:30.195,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:40:30.200,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:40:30.201,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:40:37.500,[7],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:40:37.500,[7],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:40:37.500,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:40:40.605,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:40:40.605,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:40:40.605,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:40:58.524,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:40:58.524,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:40:58.524,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:05.562,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:05.562,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:05.562,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:20.008,[5],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:20.008,[5],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:20.009,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:46:25.787,[5],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:25.787,[5],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:25.787,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:27.053,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:27.053,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:27.053,[32],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:31.036,[34],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:31.036,[34],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:31.036,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:46:39.219,[5],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:39.220,[5],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:39.220,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:46:40.376,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:40.376,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:40.376,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:46:44.969,[36],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:44.969,[36],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:44.969,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:46:49.931,[5],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:49.931,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:49.931,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 19:46:53.982,[25],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:53.982,[25],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:53.982,[25],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 19:46:57.263,[24],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:57.263,[24],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/08/05 19:46:57.263,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/08/05 19:46:58.327,[36],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:58.327,[36],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:46:58.327,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:47:03.867,[27],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:47:03.867,[27],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:47:03.867,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:47:04.969,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:47:04.969,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:47:04.969,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:47:15.311,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:47:15.311,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:47:15.311,[33],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:47:29.918,[37],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:47:29.918,[37],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:47:29.918,[37],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:48:44.062,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/08/05 19:48:44.068,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/08/05 19:48:44.068,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/08/05 19:48:51.784,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:48:51.784,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:48:51.784,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/08/05 19:48:54.540,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:48:54.541,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:48:54.541,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/08/05 19:49:14.582,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:49:14.582,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:49:14.583,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:55:52.722,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:55:52.722,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 19:55:52.722,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 20:00:50.562,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 20:00:50.562,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0
+2022/08/05 20:00:50.562,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Mnt_SEG_items.aspx?vcTab=SEG_POLITICA&inCod=7002&inTip=3&inTipOri=0

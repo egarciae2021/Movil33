@@ -1,0 +1,1002 @@
+﻿@model VisualSoft.PCSistelMovil.CentralSolicitudes.MVVM.MVVM_Tipo
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+    h4
+    {
+        color: #485CA4;
+    }
+
+    .table td
+    {
+        border: 0px !important;
+        padding: 3px !important;
+    }
+</style>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nombre Tipo</span>
+                            <input type="text" id="txtNombreTipo" style="margin-left: -85px;" />
+                        </div>
+                    </div>
+                </li>
+                @*                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Canal Atención </span>
+                            <select class="MiSelect" style="margin-left: -100px;" id="ddlCanalAtencion">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.CanalesAtencion.Count; i++)
+                                {
+                                    <option value="@Model.CanalesAtencion[i].IdBolsa">@Model.CanalesAtencion[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>*@
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado</span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaTipo" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="grillaTipo" class="miGrilla">
+            </table>
+            <div id="pagerGrillaTipo">
+            </div>
+        </div>
+        <div id="dvDetalleGrillaTipo" class="col-xs-24 col-sm-24 col-md-12" style="margin-bottom: 70px;">
+            <table id="tbDetalleTipo">
+                <thead>
+                    <tr>
+                        <td style="padding: 10px;">
+                            <button id="btnNuevaTipo" type="button" class="btn btn-success FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Nuevo</button>
+                            <button id="btnEditarTipo" type="button" class="btn btn-info FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</button>
+                            <button id="btnEliminarTipo" type="button" class="btn btn-danger FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</button>
+
+                            <button id="btnCancelar" type="button" class="btn btn-danger FlotarIzquierda btnRegMant" style="margin-left: 10px; display: none;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancelar</button>
+                            <button id="btnRegistrarTipo" type="button" class="btn btn-success FlotarIzquierda btnRegMant" style="margin-left: 10px; display: none;"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Guardar</button>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <table class="table">
+                                <tr style="display:none;">
+                                    <td colspan="4">
+                                        <input id="txtIdTipo" type="text" readonly="readonly" value="-1"/>
+                                    </td>
+                                </tr>
+                                <tr class="esInactivo">
+                                    <td class="col-xs-1">
+                                        <h4>Activar:</h4>
+                                    </td>
+                                    <td>
+                                        <input id="chkActivarTipo" type="checkbox" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-1">
+                                        <h4>Nombre:</h4>
+                                    </td>
+                                    <td>
+                                        <input id="txtNombre" readonly="readonly" type="text" class="form-control" required />
+                                    </td>
+                                    <td class="col-xs-1">
+                                        <h4>Código:</h4>
+                                    </td>
+                                    <td>
+                                        <input id="txtCodigo" readonly="readonly" type="text" class="form-control" maxlength="3" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <h4>Descripción:</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <textarea id="txtDescripcion" readonly="readonly" cols="20" rows="4" class="form-control" required="required"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <h4>Horario:</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <div style="padding: 8px 8px 8px 15px !important; border: 1px solid #cccccc; border-radius: 5px; float: left; width: 100%;">
+                                            <ul class="MiListaHorizontal ulImpar">
+                                                <li>Inicio :</li>
+                                                <li>
+                                                    <select id="ddlIniHora" disabled="disabled" class="form-control" required="required">
+                                                        @for (int i = 0; i < 24; i++)
+                                                        {
+                                                            if (i == 9)
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                            else
+                                                            { 
+                                                            <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+
+                                                        }
+                                                    </select>
+                                                </li>
+                                                <li>: </li>
+                                                <li style="margin-right: 40px;">
+                                                    <select id="ddlIniMin" disabled="disabled" class="form-control" required="required">
+                                                        @for (int i = 0; i < 60; i++)
+                                                        {
+                                                            if (i == 0)
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                            else
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </li>
+                                                <li>Fin :</li>
+                                                <li>
+                                                    <select id="ddlFinHora" disabled="disabled" class="form-control" required="required">
+                                                        @for (int i = 0; i < 24; i++)
+                                                        {
+                                                            if (i == 18)
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                            else
+                                                            { 
+                                                            <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </li>
+                                                <li>: </li>
+                                                <li>
+                                                    <select id="ddlFinMin" disabled="disabled" class="form-control" required="required">
+                                                        @for (int i = 0; i < 60; i++)
+                                                        {
+                                                            if (i == 0)
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                            else
+                                                            {
+                                                            <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                                            }
+                                                        }
+                                                    </select>
+                                                </li>
+                                            </ul>
+                                            <div style="clear: both; height: 15px;"></div>
+                                            <ul class="MiListaHorizontal">
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="1" disabled="disabled" class="chkDias " id="chkLunes" type="checkbox" checked  />
+                                                    Lunes
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="2" disabled="disabled" class="chkDias " id="chkMartes" type="checkbox" checked />
+                                                    Martes 
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="3" disabled="disabled" class="chkDias " id="chkMiercoles" type="checkbox" checked />
+                                                    Miércoles
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="4" disabled="disabled" class="chkDias " id="chkJueves" type="checkbox" checked />
+                                                    Jueves 
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="5" disabled="disabled" class="chkDias " id="chkViernes" type="checkbox" checked />
+                                                    Viernes 
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="6" disabled="disabled" class="chkDias " id="chkSabado" type="checkbox" />
+                                                    Sabado 
+                                                </li>
+                                                <li style="margin-right: 20px;">
+                                                    <input midata="7" disabled="disabled" class="chkDias " id="chkDomingo" type="checkbox" />
+                                                    Domingo 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <h4>Umbrales:</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <div style="padding: 8px 8px 8px 15px !important; border: 1px solid #cccccc; border-radius: 5px; width: 100%; float: left;">
+
+                                            <p>Tiempo de activación</p>
+                                            <ul class="MiListaHorizontal">
+                                                <li>
+                                                    <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                                                </li>
+                                                <li style="padding-top: 8px;"><=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMinAct" readonly="readonly" type="text" style="width: 50px;" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                                                </li>
+                                                <li style="padding-top: 8px;">>=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMaxAct" readonly="readonly" type="text" style="width: 50px;" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                                                </li>
+                                                <li></li>
+                                            </ul>
+                                            <div style="clear: both;"></div>
+                                            <p style="margin-top: 15px;">Tiempo de Resolución</p>
+                                            <ul class="MiListaHorizontal">
+                                                <li>
+                                                    <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                                                </li>
+                                                <li style="padding-top: 8px;"><=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMinRes" readonly="readonly" type="text" style="width: 50px;" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                                                </li>
+                                                <li style="padding-top: 8px;">>=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMaxRes" readonly="readonly" type="text" style="width: 50px;" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                                                </li>
+                                                <li></li>
+                                            </ul>
+                                            <div style="clear: both;"></div>
+                                            <p style="margin-top: 15px;">Tiempo total</p>
+                                            <ul class="MiListaHorizontal">
+                                                <li>
+                                                    <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                                                </li>
+                                                <li style="padding-top: 8px;"><=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMinTotal" type="text" style="width: 50px;" readonly="readonly" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                                                </li>
+                                                <li style="padding-top: 8px;">>=
+                                                </li>
+                                                <li>
+                                                    <input id="txtMaxTotal" type="text" style="width: 50px;" readonly="readonly" maxlength="4" class="form-control" required="required"/>
+                                                </li>
+                                                <li>
+                                                    <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                                                </li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function PRM_Tipo() {
+        this.IdTipo = -1;
+        this.Nombre = "";
+        this.IdUsuario = -1;
+        this.EsVigente = "";
+    }
+
+    function ENT_CSOL_Tipo() {
+        this.IdTipo = -1;
+        this.Codigo = "";
+        this.Nombre = "";
+        this.Descripcion = "";
+        this.EsVigente = true;
+
+        this.StrInicioHorario = "";
+        this.StrFinHorario = "";
+        this.TotalHorasDia = -1;
+        this.MinActivo = -1;
+        this.MaxActivo = -1;
+        this.MinResuelto = -1;
+        this.MaxResuelto = -1;
+        this.MinTotal = -1;
+        this.MaxTotal = -1;
+        this.Dias = [];
+    }
+
+    $(function () {
+        fnEventosTipo();
+        fnGrillaTipo();
+    });
+
+    function fnGrillaTipo() {
+        $("#grillaTipo").jqGrid({
+            datatype: function () {
+
+                var oParametro;
+                oParametro = new PRM_Tipo();
+
+                if ($.trim($("#txtNombreTipo").val()) != "") {
+                    oParametro.Nombre = $.trim($("#txtNombreTipo").val());
+                }
+
+                if ($("#ddlEstado").val() != "-1") {
+                    oParametro.EsVigente = $("#ddlEstado").val();
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerTipo", "TipoSolicitud")',
+                    data: "{'inPagTam':'" + $('#grillaTipo').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaTipo').getGridParam("page") + "'," + //FiltroRegistro 
+                       "'vcOrdCol':'" + $('#grillaTipo').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaTipo').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaTipo")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "IdTipo"
+            },
+            colModel: [
+            { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+            { name: 'Codigo', index: 'Codigo', label: 'Código', width: "50px" },
+            { name: 'Nombre', index: 'Nombre', label: 'Nombre', width: "100px" },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true },
+
+            { name: 'strInicioHorario', index: 'strInicioHorario', label: 'strInicioHorario', width: "50px", hidden: true },
+            { name: 'dtInicioHorario', index: 'dtInicioHorario', label: 'dtInicioHorario', width: "50px", hidden: true },
+            { name: 'strFinHorario', index: 'strFinHorario', label: 'strFinHorario', width: "50px", hidden: true },
+            { name: 'dtFinHorario', index: 'dtFinHorario', label: 'dtFinHorario', width: "50px", hidden: true },
+            { name: 'TotalHorasDia', index: 'TotalHorasDia', label: 'TotalHorasDia', width: "50px", hidden: true },
+            { name: 'MinActivo', index: 'MinActivo', label: 'MinActivo', width: "50px", hidden: true },
+            { name: 'MaxActivo', index: 'MaxActivo', label: 'MaxActivo', width: "50px", hidden: true },
+            { name: 'MinResuelto', index: 'MinResuelto', label: 'MinResuelto', width: "50px", hidden: true },
+            { name: 'MaxResuelto', index: 'MaxResuelto', label: 'MaxResuelto', width: "50px", hidden: true },
+            { name: 'MinTotal', index: 'MinTotal', label: 'MinTotal', width: "50px", hidden: true },
+            { name: 'MaTotal', index: 'MaTotal', label: 'MaTotal', width: "50px", hidden: true }
+            ],
+            pager: "#pagerGrillaTipo",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "470px",
+            //height: "100%",
+            emptyrecords: "No hay tipos que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+
+
+                var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                }
+                else {
+                    $('#grillaTipo').jqGrid('setSelection', 1);
+                }
+
+                id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+
+                if (id) {
+                    fnMostrarDetalleTipo();
+                }
+
+            },
+            beforeSelectRow: function (rowid, e) {
+                if ($("#btnRegistrarTipo").css("display") == "block" && fnValidarFormulario(false)) {
+                    miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnSelectedGrillaTipo, undefined, [rowid, e], undefined);
+                }
+                else {
+                    fnSelectedGrillaTipo([rowid, e]);
+                }
+            }
+        }).navGrid("#pagerGrillaTipo", { edit: false, add: false, search: false, del: false });
+    };
+
+    function fnEventosTipo() {
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        $("#ddlEstado").change(function () {
+            $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+        });
+
+        $('#txtNombreTipo').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#txtCodigo").blur(function () {
+            $("#txtCodigo").val($.trim($("#txtCodigo").val()).toUpperCase());
+        });
+
+        $("#txtMinAct,#txtMinRes").blur(function () {
+            if ($.trim($("#txtMinAct").val()) == "" || $.trim($("#txtMinAct").val()) == "0" || $.trim($("#txtMinAct").val()) == "00" || $.trim($("#txtMinAct").val()) == "000" || $.trim($("#txtMinAct").val()) == "0000") {
+                $("#txtMinAct").val("0");
+            }
+            if ($.trim($("#txtMinRes").val()) == "" || $.trim($("#txtMinRes").val()) == "0" || $.trim($("#txtMinRes").val()) == "00" || $.trim($("#txtMinRes").val()) == "000" || $.trim($("#txtMinRes").val()) == "0000") {
+                $("#txtMinRes").val("0");
+            }
+
+            $("#txtMinTotal").val(parseInt($("#txtMinAct").val()) + parseInt($("#txtMinRes").val()))
+            
+        });
+
+        $("#txtMaxAct,#txtMaxRes").blur(function () {
+            if ($.trim($("#txtMaxAct").val()) == "" || $.trim($("#txtMaxAct").val()) == "0" || $.trim($("#txtMaxAct").val()) == "00" || $.trim($("#txtMaxAct").val()) == "000" || $.trim($("#txtMaxAct").val()) == "0000") {
+                $("#txtMaxAct").val("0");
+            }
+            if ($.trim($("#txtMaxRes").val()) == "" || $.trim($("#txtMaxRes").val()) == "0" || $.trim($("#txtMaxRes").val()) == "00" || $.trim($("#txtMaxRes").val()) == "000" || $.trim($("#txtMaxRes").val()) == "0000") {
+                $("#txtMaxRes").val("0");
+            }
+
+            $("#txtMaxTotal").val(parseInt($("#txtMaxAct").val()) + parseInt($("#txtMaxRes").val()))
+        });
+
+        $("#btnNuevaTipo").click(function () {
+            $("#txtIdTipo").val("-1");
+            fnModoRegistrar();
+            fnInicializarFormulario();
+            fnActivarFormulario();
+        });
+
+        $("#btnEditarTipo").click(function () {
+            var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaTipo").jqGrid('getRowData', id);
+                $("#txtIdTipo").val(datos.IdTipo);
+                fnModoRegistrar();
+                fnActivarFormulario();
+            }
+            else {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+        });
+
+        $("#btnCancelar").click(function () {
+
+            if ($("#btnRegistrarTipo").css("display") == "block" && fnValidarFormulario(false)) {
+                miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnCancelar);
+            }
+            else {
+                fnCancelar();
+            }
+        });
+
+
+        $("#btnRegistrarTipo").click(function () {
+            if (fnValidarFormulario(true)) {
+                fnRegistrarTipo();
+            }
+        });
+        
+        $("#btnEliminarTipo").click(function () {
+            fnBtnEliminarTipo();
+        });
+        
+    }
+
+    function disenoResize() {
+        $("#grillaTipo").setGridWidth($("#dvGrillaTipo").width() - 10);
+        //$("#grillaTipificacion").setGridWidth($("#dvGrillaTipificacion").width() - 10);
+        //$("#grillaTipificacionForm").setGridWidth($("#dvGrillaTipificacionForm").width() - 10);
+
+        $("#tbDetalleTipo").width($("#dvDetalleGrillaTipo").width() - 2);
+
+        $($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width() + 5);
+        //$($("#dvGrillaTipificacion .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipificacion .ui-jqgrid-bdiv")[0]).width() + 5);
+        //$($("#dvGrillaTipificacionForm .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipificacionForm .ui-jqgrid-bdiv")[0]).width() + 5);
+
+
+    }
+
+    function fnSelectedGrillaTipo(pArrayArguments) {
+        var CurrentSelectIndex = $("#grillaTipo").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaTipo').jqGrid('setSelection', CurrentSelectIndex);
+        fnMostrarDetalleTipo();
+    }
+
+    function fnInicializarFormulario() {
+        $("#txtNombre").val("");
+        $("#txtCodigo").val("");
+        $("#txtDescripcion").val("");
+        $("#ddlIniHora").val("09");
+        $("#ddlIniMin").val("00");
+        $("#ddlFinHora").val("18");
+        $("#ddlFinMin").val("00");
+        $(".chkDias").prop("checked", false);
+        $("#chkLunes").prop("checked", true);
+        $("#chkMartes").prop("checked", true);
+        $("#chkMiercoles").prop("checked", true);
+        $("#chkJueves").prop("checked", true);
+        $("#chkViernes").prop("checked", true);
+        $("#txtMinAct").val("2");
+        $("#txtMaxAct").val("4");
+        $("#txtMinRes").val("2");
+        $("#txtMaxRes").val("4");
+        $("#txtMinTotal").val("4");
+        $("#txtMaxTotal").val("8");
+    }
+
+    function fnModoRegistrar() {
+        $(".btnMant").hide();
+        $(".btnRegMant").fadeIn(300);
+    };
+
+    function fnModoLista() {
+        $(".btnRegMant").hide();
+        $(".btnMant").fadeIn(300);
+    };
+
+    function fnDesactivarFormulario() {
+        $("#txtNombre").attr("readOnly", "readOnly");
+        $("#txtCodigo").attr("readOnly", "readOnly");
+        $("#txtDescripcion").attr("readOnly", "readOnly");
+        $("#ddlIniHora").attr("disabled", "disabled");
+        $("#ddlIniMin").attr("disabled", "disabled");
+        $("#ddlFinHora").attr("disabled", "disabled");
+        $("#ddlFinMin").attr("disabled", "disabled");
+        $(".chkDias").attr("disabled", "disabled"); 
+        $("#chkActivarTipo").attr("disabled", "disabled");
+        $("#txtMinAct").attr("readOnly", "readOnly");
+        $("#txtMaxAct").attr("readOnly", "readOnly");
+        $("#txtMinRes").attr("readOnly", "readOnly");
+        $("#txtMaxRes").attr("readOnly", "readOnly");
+        $("#txtMinTotal").attr("readOnly", "readOnly");
+        $("#txtMaxTotal").attr("readOnly", "readOnly");
+    };
+
+    function fnActivarFormulario() {
+
+        $("#txtNombre").removeAttr("readOnly");
+        $("#txtCodigo").removeAttr("readOnly");
+        $("#txtDescripcion").removeAttr("readOnly");
+        $("#ddlIniHora").removeAttr("disabled");
+        $("#ddlIniMin").removeAttr("disabled");
+        $("#ddlFinHora").removeAttr("disabled");
+        $("#ddlFinMin").removeAttr("disabled");
+        $(".chkDias").removeAttr("disabled");
+        $("#chkActivarTipo").removeAttr("disabled");
+        $("#txtMinAct").removeAttr("readOnly");
+        $("#txtMaxAct").removeAttr("readOnly");
+        $("#txtMinRes").removeAttr("readOnly");
+        $("#txtMaxRes").removeAttr("readOnly");
+
+    };
+
+    function fnValidarFormulario(pConMensaje) {
+        var result = true;
+
+        if ($.trim($("#txtNombre").val()) == "") {
+            result = false;
+            if (pConMensaje) {
+                miAlerta("Alerta", "Ingrese nombre de tipo", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+            $("#txtNombre").focus();
+        }
+        else {
+            if ($.trim($("#txtDescripcion").val()) == "") {
+                result = false;
+                if (pConMensaje) {
+                    miAlerta("Alerta", "Ingrese descripción de tipo", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+                $("#txtDescripcion").focus();
+            }
+            else {
+                if ($.trim($("#txtCodigo").val()) == "") {
+                    result = false;
+                    if (pConMensaje) {
+                        miAlerta("Alerta", "Ingrese código de tipo", "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                    $("#txtCodigo").focus();
+                }
+                else {
+                    if ($(".chkDias:checked").length == 0) {
+                        result = false;
+                        if (pConMensaje) {
+                            miAlerta("Alerta", "Seleccione por lo menos un dia en el horario", "glyphicon-exclamation-sign", "#f0ad4e");
+                        }
+                        $("#chkLunes").focus();
+                    }
+                    else {
+
+                        if ($.trim($("#txtMinAct").val()) == "" || $.trim($("#txtMinAct").val()) == "0" || $.trim($("#txtMinAct").val()) == "00" || $.trim($("#txtMinAct").val()) == "000" || $.trim($("#txtMinAct").val()) == "0000") {
+                            result = false;
+                            if (pConMensaje) {
+                                miAlerta("Alerta", "El mínimo tiempo de activación no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                            }
+                            $("#txtMinAct").focus();
+                        }
+                        else {
+                            if ($.trim($("#txtMaxAct").val()) == "" || $.trim($("#txtMaxAct").val()) == "0" || $.trim($("#txtMaxAct").val()) == "00" || $.trim($("#txtMaxAct").val()) == "000" || $.trim($("#txtMaxAct").val()) == "0000") {
+                                result = false;
+                                if (pConMensaje) {
+                                    miAlerta("Alerta", "El máximo tiempo de activación no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                }
+                                $("#txtMaxAct").focus();
+                            }
+                            else {
+                                if ($.trim($("#txtMinRes").val()) == "" || $.trim($("#txtMinRes").val()) == "0" || $.trim($("#txtMinRes").val()) == "00" || $.trim($("#txtMinRes").val()) == "000" || $.trim($("#txtMinRes").val()) == "0000") {
+                                    result = false;
+                                    if (pConMensaje) {
+                                        miAlerta("Alerta", "El mínimo tiempo de resolución no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                    }
+                                    $("#txtMinRes").focus();
+                                }
+                                else {
+                                    if ($.trim($("#txtMaxRes").val()) == "" || $.trim($("#txtMaxRes").val()) == "0" || $.trim($("#txtMaxRes").val()) == "00" || $.trim($("#txtMaxRes").val()) == "000" || $.trim($("#txtMaxRes").val()) == "0000") {
+                                        result = false;
+                                        if (pConMensaje) {
+                                            miAlerta("Alerta", "El máximo tiempo de resolución no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                        }
+                                        $("#txtMaxRes").focus();
+                                    }
+                                    else {
+                                        if ($.trim($("#txtMinTotal").val()) == "" || $.trim($("#txtMinTotal").val()) == "0" || $.trim($("#txtMinTotal").val()) == "00" || $.trim($("#txtMinTotal").val()) == "000" || $.trim($("#txtMinTotal").val()) == "0000") {
+                                            result = false;
+                                            if (pConMensaje) {
+                                                miAlerta("Alerta", "El mínimo tiempo de total no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                            }
+                                            $("#txtMinTotal").focus();
+                                        }
+                                        else {
+                                            if ($.trim($("#txtMaxTotal").val()) == "" || $.trim($("#txtMaxTotal").val()) == "0" || $.trim($("#txtMaxTotal").val()) == "00" || $.trim($("#txtMaxTotal").val()) == "000" || $.trim($("#txtMaxTotal").val()) == "0000") {
+                                                result = false;
+                                                if (pConMensaje) {
+                                                    miAlerta("Alerta", "El máximo tiempo de total no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                }
+                                                $("#txtMaxTotal").focus();
+                                            }
+                                            else {
+                                                if (parseInt($("#ddlIniHora").val()) > parseInt($("#ddlFinHora").val())) {
+                                                    result = false;
+                                                    if (pConMensaje) {
+                                                        miAlerta("Alerta", "La hora inicio no puede ser mayor a la hora fin", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                    }
+                                                    $("#ddlIniHora").focus();
+                                                }
+                                                else {
+
+                                                    if (parseInt($("#ddlIniHora").val()) == parseInt($("#ddlFinHora").val()) && parseInt($("#ddlIniMin").val()) >= parseInt($("#ddlFinMin").val())) {
+                                                        result = false;
+                                                        if (pConMensaje) {
+                                                            miAlerta("Alerta", "La hora inicio no puede ser mayor o igual a la hora fin", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                        }
+                                                        $("#ddlIniHora").focus();
+                                                    }
+                                                    else {
+
+                                                        if (parseInt($("#txtMinAct").val()) >= parseInt($("#txtMaxAct").val())) {
+                                                            result = false;
+                                                            if (pConMensaje) {
+                                                                miAlerta("Alerta", "el mínimo no puede ser mayor o igual al maximo en el tiempo de activación", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                            }
+                                                            $("#txtMinSla").focus();
+                                                        }
+                                                        else {
+                                                            if (parseInt($("#txtMinRes").val()) >= parseInt($("#txtMaxRes").val())) {
+                                                                result = false;
+                                                                if (pConMensaje) {
+                                                                    miAlerta("Alerta", "el mínimo no puede ser mayor o igual al maximo en el tiempo de respuesta", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                                }
+                                                                $("#txtMinSla").focus();
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    function fnRegistrarTipo() {
+
+        var oParametro;
+        oParametro = new ENT_CSOL_Tipo();
+        oParametro.Codigo = $.trim($("#txtCodigo").val());
+        oParametro.Nombre = $.trim($("#txtNombre").val());
+        oParametro.Descripcion = $.trim($("#txtDescripcion").val());
+
+        oParametro.StrInicioHorario = $("#ddlIniHora").val() + ":" + $("#ddlIniMin").val() + ":00";
+        oParametro.StrFinHorario = $("#ddlFinHora").val() + ":" + $("#ddlFinMin").val() + ":00";
+        oParametro.MinActivo = $.trim($("#txtMinAct").val());
+        oParametro.MaxActivo = $.trim($("#txtMaxAct").val());
+        oParametro.MinResuelto = $.trim($("#txtMinRes").val());
+        oParametro.MaxResuelto = $.trim($("#txtMaxRes").val());
+
+        for (var i = 0; i < $(".chkDias").length ; i++) {
+            if ($($(".chkDias")[i]).prop("checked")) {
+                oParametro.Dias.push($($(".chkDias")[i]).attr("miData"));
+            }
+        }
+
+        if ($("#txtIdUsuario").val() != "-1") {
+            var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaTipo").jqGrid('getRowData', id);
+                oParametro.IdTipo = datos.IdTipo;
+                oParametro.EsVigente = $("#chkActivarTipo").prop("checked");
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("EditarTipo", "TipoSolicitud")',
+                    data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.Success) {
+                            fnDesactivarFormulario();
+                            miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                            $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+                        }
+                        else {
+                            miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+            else {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarTipo", "TipoSolicitud")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        fnDesactivarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaTipo").trigger("reloadGrid");
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+    }
+
+    function fnMostrarDetalleTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            if (datos.btVig == "True") {
+                $(".esInactivo").hide();
+                $("#chkActivarTipo").prop("checked", true);
+            }
+            else {
+                $(".esInactivo").show();
+                $("#chkActivarTipo").prop("checked", false);
+            }
+
+            $("#txtIdTipo").val(datos.IdTipo);
+            $("#txtCodigo").val(datos.Codigo);
+            $("#txtNombre").val(datos.Nombre);
+            $("#txtDescripcion").val(datos.Descripcion);
+            $("#ddlIniHora").val(datos.strInicioHorario.split(':')[0]);
+            $("#ddlIniMin").val(datos.strInicioHorario.split(':')[1]);
+            $("#ddlFinHora").val(datos.strFinHorario.split(':')[0]);
+            $("#ddlFinMin").val(datos.strFinHorario.split(':')[1]);
+
+            $("#txtMinAct").val(datos.MinActivo);
+            $("#txtMaxAct").val(datos.MaxActivo);
+
+            $("#txtMinRes").val(datos.MinResuelto);
+            $("#txtMaxRes").val(datos.MaxResuelto);
+
+            $("#txtMinTotal").val(datos.MinTotal);
+            $("#txtMaxTotal").val(datos.MaTotal);
+            $(".chkDias").prop("checked", false);
+
+            fnModoLista();
+            fnDesactivarFormulario();
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("DiasByTipo", "TipoSolicitud")',
+                        data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            for (var i = 0; i < result.length; i++) {
+                                
+                                switch (result[i]) {
+                                    case 1:
+                                        $("#chkLunes").prop("checked", true);
+                                        break;
+                                    case 2:
+                                        $("#chkMartes").prop("checked", true);
+                                        break;
+                                    case 3:
+                                        $("#chkMiercoles").prop("checked", true);
+                                        break;
+                                    case 4:
+                                        $("#chkJueves").prop("checked", true);
+                                        break;
+                                    case 5:
+                                        $("#chkViernes").prop("checked", true);
+                                        break;
+                                    case 6:
+                                        $("#chkSabado").prop("checked", true);
+                                        break;
+                                    case 7:
+                                        $("#chkDomingo").prop("checked", true);
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                            }
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+            });
+
+        }
+    }
+
+
+    function fnBtnEliminarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            var miMensaje = "";
+            if (datos.btVig == "True") {
+                miMensaje = "Se inhabilitará Tipo " + datos.Nombre + ". No se podran crear incidencias de este tipo mientras este inhabilitado. ¿Desea inhabilitarlo?"
+            }
+            else {
+                miMensaje = "Se Eliminará Tipo " + datos.Nombre + ". ¿Desea eliminar Tipo?"
+            }
+
+            miDialogoConfirmacion(miMensaje, fnEliminarTipo);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnEliminarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EliminarTipo", "TipoSolicitud")',
+                data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split('|')[0] == "OK") {
+                        fnDesactivarFormulario();
+                        miAlerta("Eliminar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnCancelar() {
+        fnModoLista();
+        fnDesactivarFormulario();
+        $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+    }
+
+</script>

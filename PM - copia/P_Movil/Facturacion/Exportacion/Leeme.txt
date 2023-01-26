@@ -1,0 +1,1 @@
+﻿Este directorio será utilizado para la exportación de resúmenes de deudas desde el servicio de facturación.

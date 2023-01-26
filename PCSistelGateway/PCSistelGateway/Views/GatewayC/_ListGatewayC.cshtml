@@ -1,0 +1,118 @@
+﻿@model PCSistelGateway.ViewModels.GatewayC._ListGatewayCViewModel
+
+<style>
+    .table-valign td {
+        vertical-align: middle !important;
+    }
+
+    section.licit header {
+        background-color: #953634;
+        border: 1px solid #953634;
+        border-bottom: 2px solid #953634;
+        color: #f5f5f5;
+    }
+
+        section.licit header .title {
+            color: #f5f5f5;
+        }
+
+    section.licit .panel-collapse {
+        border-color: #953634;
+        border-style: solid;
+        border-width: 0px 2px 2px;
+    }
+
+    thead input {
+        width: 100%;
+    }
+</style>
+
+<table id="ListaGatewayC" class="display table table-hover invoice-table" style="width:100%">
+    <thead>
+        <tr>
+            <th bgcolor="#fff">Dominio</th>
+            <th bgcolor="#fff">Pais</th>
+            <th bgcolor="#fff">Productos</th>
+            <th align="center" bgcolor="#fff">Estado</th>
+            <th align="center" bgcolor="#fff">Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LstGateway)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Pais.Nombre</td>
+                <td>@item.Observacion</td>
+                <td align="center">@Html.Raw(ConstantHelpers.ESTADO.GetLabelEstado(item.Estado))</td>
+                @*<td>
+                        <div class="btn-group">
+                            <a class="btn btn-dark" href="@Url.Action("ViewGatewayC", new { Id = item.IdGateway })">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                        </div>
+                    </td>*@
+                <td align="center">
+                    <div class="btn-group">
+                        <a class="btn btn-default btn-sm" href="@Url.Action("ViewGatewayC", new { Id = item.IdGateway })"><i class="fa fa-eye"></i> Visualizar</a>
+                        
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script type="text/javascript" src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+        $(document).ready(function () {
+            $('#ListaGatewayC thead tr').clone(true).appendTo('#ListaGatewayC thead');
+            $('#ListaGatewayC thead tr:eq(1) th').each(function (i) {
+                var title = $(this).text();
+                if (title != '') {
+                    $(this).html('<input type="text" data-toggle="tooltip" data-placement="top" title="Buscar por ' + title + '" />');
+
+                    $('input', this).on('keyup change', function () {
+                        if (table.column(i).search() !== this.value) {
+                            table
+                                .column(i)
+                                .search(this.value)
+                                .draw();
+                        }
+                    });
+                }
+            });
+            var table = $('#ListaGatewayC').DataTable({
+                "dom": "<'row'<'col-sm-6 pull-left'l><'col-sm-6'p<br/><br/>>>" + "<'row'<'col-sm-12'tr>>" + "<'row'<'col-sm-12'<'col-md-6 col-sm-12'i><'col-md-6 col-sm-12'p>>>",
+
+                "orderClasses": false,
+                orderCellsTop: true,
+                "paging": true,
+                //columnDefs: [
+                //    {
+                //        targets: 1, "render": function (data, type, row, meta) {
+                //            console.log(meta);
+                //            return data;
+                //        }
+                //    }
+                //],
+                fixedHeader: true,
+                order: [0, 'asc'],
+                language: {
+                    "decimal": '@ConstantHelpers.Cultura.SeparadorDecimal',
+                    "emptyTable": "No hay datos disponibles.",
+                    "info": "Mostrando de _START_ a _END_  dominios,  de un total de _TOTAL_.",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 entries",
+                    "infoFiltered": " (filtrado de un total de _MAX_)",
+                    "infoPostFix": "",
+                    "thousands": '@ConstantHelpers.Cultura.SeparadorMiles',
+                    "lengthMenu": "Ver _MENU_ registros",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar: ",
+                    "zeroRecords": "No se encontraron pedidos"
+                }
+            });
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+</script>

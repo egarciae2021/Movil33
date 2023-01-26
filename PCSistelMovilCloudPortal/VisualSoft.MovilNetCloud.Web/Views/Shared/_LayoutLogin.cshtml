@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html class="htmlCentrarAbsoluto">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="~/Common/Images/favicon.ico" type="image/ico" />
+    <title>Gestión Móvil</title>
+
+    <link href="@Url.Content("~/Common/Scripts/Bootstrap/css/operador.css")" rel="stylesheet" />
+
+    @Styles.Render("~/Content/esencial")
+    @Scripts.Render("~/bundles/esencial")
+    @RenderSection("RenderHeader", false)
+    <script type="text/javascript">
+        var miRaiz = "@Url.Content("~/")";
+    </script>
+</head>
+<body class="bodyCentrarAbsoluto colorBackGroundCentrarAbs">
+
+    <div id="dvWaiting">
+        <div class="CentrarAbsoluto">
+            <img src="~/Common/Images/PreLoaders/Waiting_1.gif" height="97" width="100 " style="float:left;" />
+            <p style="font-weight:bolder; color:#193B49; ">Espere por favor...</p>
+        </div>
+    </div>
+
+    <div id="miAlerta" class="modal fade bs-example-modal-sm" >
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#063466; color:white; font-size:medium; font-weight:bolder">
+                    @*<button type="button" class="close" data-dismiss="modal">×</button>
+                    <a href="#" class="close" style="background-color:blue; color:red; font-size:medium; font-weight:bolder">Close</a>*@
+                    <span class="glyphicon" aria-hidden="true" style="float:left; margin-right:15px; font-size:20pt; color:white">X</span>
+                </div>
+                
+                <div class="modal-body">
+                    <span class="glyphicon" aria-hidden="true" style="float:left; margin-right:15px; font-size:20pt;"></span>
+                    <span style="font-weight:bold;"> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+    @RenderSection("RenderFooter", false)
+</body>
+</html>

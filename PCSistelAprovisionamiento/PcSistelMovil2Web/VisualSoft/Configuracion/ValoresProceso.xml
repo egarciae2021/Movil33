@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<CProcesoXML xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <configuration>
+    <appSettings>
+      <add key="Mes" value="3" />
+      <add key="NUMEROS" value="###,###,##0.00"/>
+      <add key="NUMEROS_LARGO" value="###,###,##0.0000"/>
+      <add key="FECHAS" value="MM/dd/yyyy"/>
+      <add key="ClientSettingsProvider.ServiceUri" value=""/>
+    </appSettings>
+  </configuration>
+</CProcesoXML>

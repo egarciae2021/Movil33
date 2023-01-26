@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Telefónica</title>
+
+    @Styles.Render("~/Content/esencial")
+    @Scripts.Render("~/bundles/esencial")
+    @RenderSection("RenderHeader", false)
+    <script type="text/javascript">
+        var miRaiz = "@Url.Content("~/")";
+    </script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+
+    <!-- GLOBAL STYLES - Include these on every page. -->
+    <link href="@Url.Content("~/Common/Archivos/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Common/Archivos/font-awesome.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Common/Archivos/style.css")" rel="stylesheet" />
+
+    <style type="text/css">
+        body {
+            overflow: hidden;
+        }
+
+        .opcion a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+            .opcion a:hover .image-opcion-1 {
+                background: url("_archivos/opciones.png") no-repeat -133px -2px;
+            }
+
+            .opcion a:hover .image-opcion-2 {
+                background: url("_archivos/opciones.png") no-repeat -193px -3px;
+            }
+
+            .opcion a:hover .image-opcion-3 {
+                background: url("_archivos/opciones.png") no-repeat -133px -65px;
+            }
+
+            .opcion a:hover .image-opcion-4 {
+                background: url("_archivos/opciones.png") no-repeat -194px -66px;
+            }
+    </style>
+</head>
+
+<body class=" xpace-done">
+
+    <div id="wrapper">
+
+        <!-- begin TOP NAVIGATION -->
+        <nav class="navbar-top" role="navigation">
+
+            <!-- begin BRAND HEADING -->
+            <div class="navbar-header">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <div class="navbar-brand">
+                    <a href="#">
+                        <img src="@Url.Content("~/Common/Archivos/img/flex-admin-logo@1x.png")"
+                            data-1x="@Url.Content("~/Common/Archivos/img/flex-admin-logo@1x.png")" 
+                            data-2x="@Url.Content("~/Common/Archivos/img/flex-admin-logo@2x.png")" class="hisrc img-responsive"
+                            style="position: absolute !important; top: -30px;"
+                            alt="" width="172" height="20">
+                    </a>
+                </div>
+
+            </div>
+            <!-- end BRAND HEADING -->
+
+        </nav>
+
+        <!-- begin MAIN PAGE CONTENT -->
+        <div id="Div1" class="collapsed menuSinUsuario"
+            style="background-color: #00769f; background-image: url('@Url.Content("~/Common/Archivos/img/background.jpg")'); color: white; font-family: Tahoma; height: 480px; display: none;">
+            <br />
+            <br />
+            <br />
+            <img style="position: absolute; bottom: 0px;" src="@Url.Content("~/Common/Archivos/bosque.png")" width="100%" />
+            <div class="container">
+                <div class="container-texto">
+                    <h1 class="titulo">Gestiona todos tus servicios en un solo lugar</h1>
+                    <p class="texto">
+                        Ingresando a <strong>aquí</strong> podrás realizar todas tus operaciones
+                            <strong>de forma fácil y desde donde estés.
+                                <br />
+                                Podrás:</strong>
+                    </p>
+                    <table>
+                        <tr>
+                            <td style="width: 75%;" class="texto">
+                                <div class="opciones">
+                                    @*<p class="titulo-opciones">
+                                            
+                                        </p>*@
+                                    <div class="fila fila-top">
+                                        <div class="opcion opcion-1">
+                                            <a href="#">
+                                                <div class="image-opcion image-opcion-1">
+                                                </div>
+                                                <p>
+                                                    Ver el detalle de tus <u>llamadas</u>
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="opcion opcion-2">
+                                            <a href="#">
+                                                <div class="image-opcion image-opcion-2">
+                                                </div>
+                                                <p>
+                                                    Comprar paquetes de <u>Datos, voz y SMS.</u>
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+
+                                <div id="dvWaiting">
+                                    <div class="CentrarAbsoluto">
+                                        <img src="~/Common/Images/PreLoaders/Waiting_1.gif" height="97" width="100 " style="float: left;" />
+                                        <p style="font-weight: bolder; color: #193B49;">Espere por favor...</p>
+                                    </div>
+                                </div>
+
+                                <div id="miAlerta" class="modal fade bs-example-modal-sm">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color: #063466; color: white; font-size: medium; font-weight: bolder">
+                                                @*<button type="button" class="close" data-dismiss="modal">×</button>
+                    <a href="#" class="close" style="background-color:blue; color:red; font-size:medium; font-weight:bolder">Close</a>*@
+                                                <span class="glyphicon" aria-hidden="true" style="float: left; margin-right: 15px; font-size: 20pt; color: white">X</span>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <span class="glyphicon" aria-hidden="true" style="float: left; margin-right: 15px; font-size: 20pt;"></span>
+                                                <span style="font-weight: bold;"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="position: absolute; right: 10px; top: 50px;">
+                                    @RenderBody()
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- GLOBAL SCRIPTS -->
+    @*<script src="@Url.Content("~/Common/Archivos/jquery.min.js")"></script>*@
+
+    <script>
+
+        function DimPosElementos() {
+            var Ancho = $(window).width();
+            var Alto = $(window).height();
+
+
+            if (Ancho < 1090) {
+                $(".titulo").hide();
+            }
+            else {
+                $(".titulo").show();
+            }
+
+            if (Ancho < 520) {
+                $(".texto").hide();
+            }
+            else {
+                $(".texto").show();
+            }
+
+
+        }
+
+        var AceptoContrato = false;
+        $(document).ready(function () {
+
+
+            $(window).resize(function () {
+                DimPosElementos();
+            });
+            DimPosElementos();
+
+            var logueado = getUrlVars()["l"];
+            if ((typeof logueado == 'undefined') || logueado == null || logueado != "1") {
+                //alert('1');
+                $(".menuSinUsuario").show();
+                $(".menuConUsuario").hide();
+            }
+            else {
+                //alert('2');
+                $(".menuSinUsuario").hide();
+                $(".menuConUsuario").show();
+            }
+
+            //$(".menuSinUsuario").hide();
+            //$(".menuConUsuario").show();
+
+            $("#btnIniciarSesion").click(function () {
+                //$('#standardModal').modal('toggle');
+                //$(".menuSinUsuario").hide();
+                //$(".menuConUsuario").show();
+
+                window.location.href = "Index.aspx?l=1";
+
+            });
+
+            $("#btnProductoFija").click(function () {
+                AceptoContrato = true;
+
+                $('#dvConfirmacionServicioExternoFija').modal('hide');
+                //window.open("http://181.48.11.8/CLOUD4.1/ES/login.aspx", '_blank');
+                //window.open("http://tarificadoruc.claro-la.net.co/CLOUD4.1/ES/login.aspx", '_blank');
+
+                window.open("http://pcsistelcloud.cloudapp.net/ES/login.aspx", '_blank');
+
+
+            });
+            $("#btnProductoMovil").click(function () {
+                AceptoContrato = true;
+
+                $('#dvConfirmacionServicioExternoMovil').modal('hide');
+                window.open("http://130.1.7.81/Demo/login.aspx?username=titular1&password=admin", '_blank');
+
+            });
+
+        });
+
+
+
+        // Read a page's GET URL variables and return them as an associative array.
+        function getUrlVars() {
+            var vars = [], hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for (var i = 0; i < hashes.length; i++) {
+                hash = hashes[i].split('=');
+                vars.push(hash[0]);
+                vars[hash[0]] = hash[1];
+            }
+            return vars;
+        }
+
+
+        function fnAbrirTelefoniaFija() {
+            //$('#myModal').modal('toggle');
+            //$('#myModal').modal('show');
+            //$('#myModal').modal('hide');
+
+            if (AceptoContrato) {
+                $('#dvConfirmacionServicioExternoFija').modal('hide');
+                $("#btnProductoFija").click();
+            }
+            else {
+                $('#dvConfirmacionServicioExternoFija').modal('show');
+            }
+        }
+
+        function fnAbrirTelefoniaMovil() {
+            if (AceptoContrato) {
+                $('#dvConfirmacionServicioExternoMovil').modal('hide');
+                $("#btnProductoMovil").click();
+            }
+            else {
+                $('#dvConfirmacionServicioExternoMovil').modal('show');
+            }
+        }
+
+    </script>
+
+</body>
+@RenderSection("RenderFooter", false)
+</html>

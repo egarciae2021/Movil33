@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dominios>
+  <Dominio Id="4">
+    <Id>4</Id>
+    <Nombre>qwe</Nombre>
+    <ConnectionString>AsDp+0N4PPAG2EkUgyAVoN6iGYyoJb0jAS1bCtFFOFZVGtA/f5/w7srfm7R2Gv9AH4WLKzgdlgOoQNeFZug0McbAIO8ldVhgYtZAaw6RMv2trI1v9hxxTjYlokDuOYV08tmlG35x59btiCixuGIZmr7JRKQAUl0IAA==</ConnectionString>
+  </Dominio>
+  <Dominio Id="4078">
+    <Id>4078</Id>
+    <Nombre>cineplanet.com</Nombre>
+    <ConnectionString>AsDp+0N4PPAG2EkUgyAVoBKybG7nEQP1p3kz4WmVp9n+g2LdIg3I9wKu6LjJrw0WiIO/tevTE9f+j7V7btGboDkhCy8jKnWjXQ9bCcDyIyTtMPTsQ29CAeTQT8H1ANmf69SngddkOENe10G0E36sDo3sIEWkzQQBPosgdEd7ZswA</ConnectionString>
+  </Dominio>
+</Dominios>

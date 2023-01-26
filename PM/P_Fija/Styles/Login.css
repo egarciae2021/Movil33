@@ -1,0 +1,101 @@
+﻿body
+{
+    background-color: #aabfdd;
+}
+form
+{
+    width:100%; 
+    height:100%; 
+    margin:0px; 
+    padding:0px;
+}
+#dvConfiguracion
+{
+    font-size:0.9em;
+    font-family:Tahoma;
+}
+#dvTitulo
+{
+    color:White;
+    background-color:#5D7B9D;
+    font-size:0.9em;
+    font-weight:bold;
+    font-family:Tahoma;
+    height:40px;
+}
+
+.lblTitulo
+{
+    font-size:12pt !important;
+    font-weight: bolder !important;
+}
+
+#loginPrincipal_UserNameLabel
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_UserName
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_UserNameRequired
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_PasswordLabel
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_Password
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_PasswordRequired
+{
+    font-size:8pt !important;
+}
+
+label
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_FailureText
+{
+    font-size:8pt !important;
+}
+
+#loginPrincipal_LoginButton
+{
+    font-size:8pt !important;
+}
+
+.txtLoginVacio
+{
+    color: #999 !important;
+    font-weight: normal !important;
+    font-style: italic !important;
+}
+
+.lblEtiqueta
+{
+    font-size:8pt !important;
+    font-family:"Verdana";
+    color:#333333;
+}
+
+.txtCampo
+{
+    font-family:"Verdana";
+    font-size:9pt !important;
+}
+
+#txtBaseDatos
+{
+    width:180px !important;
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<CWeb xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <nromeses>12</nromeses>
+  <diacorte>5</diacorte>
+  <texto>Tome en cuenta que los números de tipo Indagar se tomarán como personales</texto>
+</CWeb>

@@ -1,0 +1,1754 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Tipo
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+    #tbDetalleTipo td:nth-child(odd), #tbDetalleHorario td:nth-child(odd)
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    .tablaSubtitulo
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    #dvFormularioTipo .conteiner .row
+    {
+        margin: 10px 0px;
+    }
+
+    .ulImpar li:nth-child(odd)
+    {
+        padding-top: 5px;
+    }
+
+    .ulPar li
+    {
+        margin-right: 20px;
+    }
+
+    .ListaSimple
+    {
+        list-style:none;
+        width:98%;
+        margin:0px;
+        padding:2%;
+    }
+
+    .ListaSimple span
+    {
+        font-weight:bolder;
+    }
+
+    .info
+    {
+        float: left;
+        /*background: #2B41D3;
+        color: white;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        text-align: center;
+        vertical-align: middle;*/
+        cursor: pointer;
+        /*background-image:url("../Common/Images/Mantenimiento/Info_20x20.png")*/
+    }
+    .info-mensaje
+    {
+        position: relative; 
+        width: 150px; 
+        border: 0px dotted gray;
+        display: none; 
+        z-index: 9999; 
+        padding: 5px 5px 5px 5px; 
+        border-radius: 3px; 
+        box-shadow: 5px 5px 5px gray;
+        background-color: #FBEC88;
+    }
+
+    .textoMod
+    {
+        line-height:1.4;
+    }
+</style>
+
+<div id="miDialogoTipificacion" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Tipificación
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            Nombre: 
+                        </div>
+                        <div class="col-xs-24">
+                            <input id="txtNombreTipificacion" type="text" class="form-control" placeholder="Nombre de Tipificación..." />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            Descripción: 
+                        </div>
+                        <div class="col-xs-24">
+                            <textarea id="txtDescripcionTipificacion" cols="20" rows="6" class="form-control" placeholder="Descripción breve de Tipificación..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddTipificacion" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nombre Tipo</span>
+                            <input type="text" id="txtNombreTipo" style="margin-left: -85px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Canal Atención </span>
+                            <select class="MiSelect" style="margin-left: -100px;" id="ddlCanalAtencion">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.CanalesAtencion.Count; i++)
+                                {
+                                    <option value="@Model.CanalesAtencion[i].IdBolsa">@Model.CanalesAtencion[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado</span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaTipo" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="grillaTipo" class="miGrilla">
+            </table>
+            <div id="pagerGrillaTipo">
+            </div>
+        </div>
+        <div id="dvDetalleGrillaTipo" class="col-xs-24 col-sm-24 col-md-12" style="margin-bottom:70px;">
+            <table id="tbDetalleTipo" class="table">
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            <button id="btnNuevaTipo" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Nuevo</button>
+                            <button id="btnEditarTipo" type="button" class="btn btn-info FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</button>
+                            <button id="btnEliminarTipo" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</button>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Tipo :
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Descripción&nbsp:
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr >
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3"><span  class="textoMod">Canal de atención&nbsp:</span>
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="clear: both;"></div>
+            <span class="tablaSubtitulo">Tipificación :</span>
+            <div style="clear: both;"></div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px;" id="dvGrillaTipificacion">
+                <table id="grillaTipificacion" class="miGrilla">
+                </table>
+                <div id="pagerGrillaTipificacion">
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px; float: left;" id="dvGrillaTipificacion_empty">
+                <ul class="MiListaHorizontal">
+                    <li>
+                        <img src="~/Common/Images/Mantenimiento/bolsaWarning_Alfa.png" />
+                    </li>
+                    <li style="padding-top: 20px;">No hay tipificaciones
+                    </li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
+            <table id="tbDetalleHorario" class="table">
+                <tbody>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Horario</td>
+                        <td>
+                            <p>Todos los : <span></span></p>
+                            <p>De: <span></span>     A: <span></span></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Umbrales</td>
+                        <td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-6" style="border-right:1px solid #cccccc;">
+                        <p>
+                            <b>Tiempo de Atención</b>
+                            @for (int i = 0; i < Model.Umbrales.Count; i++)
+                            {
+                                if (@Model.Umbrales[i].Codigo == "ATE")
+                                {
+                                    <img class="info" src="~/Common/Images/Mantenimiento/Info_20x20.png" MensajeInfo="@Model.Umbrales[i].Descripcion"/>
+                                }
+                            }
+                        </p>
+                        <ul id="ulSla" class="ListaSimple" >
+                            <li><span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo menor igual a: <span></span> Horas</li>
+                            <li><span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable entre : <span></span> y <span></span> Horas</li>
+                            <li><span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico mayor a: <span></span> Horas</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6" style="border-right:1px solid #cccccc;">
+                        <p>
+                            <b>Umbral Activación</b>
+                            @for (int i = 0; i < Model.Umbrales.Count; i++)
+                            {
+                                if (@Model.Umbrales[i].Codigo == "ACT")
+                                {
+                                    <img class="info" src="~/Common/Images/Mantenimiento/Info_20x20.png" MensajeInfo="@Model.Umbrales[i].Descripcion"/>
+                                }
+                            }
+                        </p>
+                        <ul id="ulActivacion" class="ListaSimple">
+                            <li><span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo menor igual a: <span></span> Horas</li>
+                            <li><span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable entre : <span></span> y <span></span> Horas</li>
+                            <li><span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico mayor a: <span></span> Horas</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6" style="border-right:1px solid #cccccc;">
+                        <p>
+                            <b>Umbral Resolución</b>
+                            @for (int i = 0; i < Model.Umbrales.Count; i++)
+                            {
+                                if (@Model.Umbrales[i].Codigo == "RES")
+                                {
+                                    <img class="info" src="~/Common/Images/Mantenimiento/Info_20x20.png" MensajeInfo="@Model.Umbrales[i].Descripcion"/>
+                                }
+                            }
+                        </p>
+                        <ul id="ulResolucion" class="ListaSimple">
+                            <li><span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo menor igual a: <span></span> Horas</li>
+                            <li><span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable entre : <span></span> y <span></span> Horas</li>
+                            <li><span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico mayor a: <span></span> Horas</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6">
+                        <p>
+                            <b>Umbral Total</b>
+                            @for (int i = 0; i < Model.Umbrales.Count; i++)
+                            {
+                                if (@Model.Umbrales[i].Codigo == "TOT")
+                                {
+                                    <img class="info" src="~/Common/Images/Mantenimiento/Info_20x20.png" MensajeInfo="@Model.Umbrales[i].Descripcion"/>
+                                }
+                            }
+                        </p>
+                        <ul id="ulTotal" class="ListaSimple">
+                            <li><span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo menor igual a: <span></span> Horas</li>
+                            <li><span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable entre : <span></span> y <span></span> Horas</li>
+                            <li><span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico mayor a: <span></span> Horas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dvFormularioTipo" class="col-xs-24 col-sm-24 col-md-12" style="display: none; margin-bottom:70px;">
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24 ">
+                        <button id="btnCancelar" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancelar</button>
+                        <button id="btnRegistrarTipo" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Guardar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 " style="padding: 8px 8px 8px 15px !important;">
+                        <ul class="MiListaHorizontal">
+                            <li class="tablaSubtitulo esInactivo">Activar</li>
+                            <li style="margin-right:15px !important;" class="esInactivo">
+                                <input id="chkActivarTipo" type="checkbox" />
+                            </li>
+                            <li class="tablaSubtitulo">Default</li>
+                            <li>
+                                <input id="chkDefault" type="checkbox" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Nombre: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <input id="txtNombreTipoForm" type="text" class="form-control" placeholder="Nombre de Tipo..." />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Descripción: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <textarea id="txtDescripcionTipo" cols="20" rows="4" class="form-control" placeholder="Descripción breve de Tipo..."></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Tipificación:                        
+                    </div>
+                    <div class="col-xs-24 col-lg-21" style="padding: 8px 8px 8px 15px !important; border: 1px solid #cccccc; border-radius: 5px;">
+                        <div style="float: right;">
+                            <button id="btnNuevaTipificacion" type="button" class="btn btn-success" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                            <button id="btnEditaripificacion" type="button" class="btn btn-info" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></button>
+                            <button id="btnEliminarTipificacion" type="button" class="btn btn-danger" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                            <button id="btnRefrescarTipificacion" type="button" class="btn btn-default" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                        </div>
+                        <div style="clear: both; height: 5px;"></div>
+                        <div id="dvGrillaTipificacionForm" style="width: 100%; padding: 0px; margin: 0px;">
+                            <table id="grillaTipificacionForm" class="miGrilla">
+                            </table>
+                            @*                            <div id="pagerGrillaTipificacionForm">
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Horario:                        
+                    </div>
+                    <div class="col-xs-24 col-lg-21" style="padding: 8px 8px 8px 15px !important; border: 1px solid #cccccc; border-radius: 5px;">
+                        <ul class="MiListaHorizontal ulImpar">
+                            <li>Inicio :</li>
+                            <li>
+                                <select id="ddlIniHora">
+                                    @for (int i = 0; i < 24; i++)
+                                    {
+                                        if (i == 9)
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                        else
+                                        { 
+                                        <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                        }
+
+                                    }
+                                </select>
+                            </li>
+                            <li>: </li>
+                            <li style="margin-right: 40px;">
+                                <select id="ddlIniMin">
+                                    @for (int i = 0; i < 60; i++)
+                                    {
+                                        if (i == 0)
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                        else
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                    }
+                                </select>
+                            </li>
+                            <li>Fin :</li>
+                            <li>
+                                <select id="ddlFinHora">
+                                    @for (int i = 0; i < 24; i++)
+                                    {
+                                        if (i == 18)
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                        else
+                                        { 
+                                        <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                    }
+                                </select>
+                            </li>
+                            <li>: </li>
+                            <li>
+                                <select id="ddlFinMin">
+                                    @for (int i = 0; i < 60; i++)
+                                    {
+                                        if (i == 0)
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')" selected>@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                        else
+                                        {
+                                        <option value="@i.ToString().PadLeft(2, '0')">@i.ToString().PadLeft(2, '0')</option>
+                                        }
+                                    }
+                                </select>
+                            </li>
+                        </ul>
+                        <div style="clear: both; height:15px;"></div>
+                        <ul class="MiListaHorizontal ulPar">
+                            <li>
+                                <input miData="1" class="chkDias" id="chkLunes" type="checkbox" checked />
+                                Lunes 
+                            </li>
+                            <li>
+                                <input miData="2" class="chkDias" id="chkMartes" type="checkbox" checked />
+                                Martes 
+                            </li>
+                            <li>
+                                <input miData="3" class="chkDias" id="chkMiercoles" type="checkbox" checked />
+                                Miércoles
+                            </li>
+                            <li>
+                                <input miData="4" class="chkDias" id="chkJueves" type="checkbox" checked />
+                                Jueves 
+                            </li>
+                            <li>
+                                <input miData="5" class="chkDias" id="chkViernes" type="checkbox" checked />
+                                Viernes 
+                            </li>
+                            <li>
+                                <input miData="6" class="chkDias" id="chkSabado" type="checkbox" />
+                                Sabado 
+                            </li>
+                            <li>
+                                <input miData="7" class="chkDias" id="chkDomingo" type="checkbox" />
+                                Domingo 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Umbrales:                        
+                    </div>
+                    <div class="col-xs-24 col-lg-21" style="padding: 8px 8px 8px 15px !important; border: 1px solid #cccccc; border-radius: 5px;">
+                        <p style="font-weight:bolder;">Acuerdo de tiempo de atención (SLA) : </p>
+
+                        <ul class="MiListaHorizontal" >
+                            <li>
+                                <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                            </li>
+                            <li style="padding-top:8px;">
+                                <=
+                            </li>
+                            <li>
+                                <input id="txtMinSla" type="text" style="width:50px;" maxlength="4" />
+                            </li>
+                            <li>
+                                <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                            </li>
+                            <li style="padding-top:8px;">
+                                >=
+                            </li>
+                            <li>
+                                <input id="txtMaxSla" type="text" style="width:50px;" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                            </li>
+                            <li></li>
+                        </ul>
+                        <div style="clear:both;"></div>
+                        <div style="width:100%; border-bottom:1px solid #cccccc; margin:15px 0px;"></div>
+                        <p style="font-weight:bolder;">Evaluación de técnico : </p>
+                        <p>Tiempo de activación</p>
+                        <ul class="MiListaHorizontal" >
+                            <li>
+                                <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                            </li>
+                            <li style="padding-top:8px;">
+                                <=
+                            </li>
+                            <li>
+                                <input id="txtMinAct" type="text" style="width:50px;" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                            </li>
+                            <li style="padding-top:8px;">
+                                >=
+                            </li>
+                            <li>
+                                <input id="txtMaxAct" type="text" style="width:50px;" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                            </li>
+                            <li></li>
+                        </ul>
+                        <div style="clear:both;"></div>
+                        <p style="margin-top:15px;">Tiempo de Resolución</p>
+                        <ul class="MiListaHorizontal" >
+                            <li>
+                                <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                            </li>
+                            <li style="padding-top:8px;">
+                                <=
+                            </li>
+                            <li>
+                                <input id="txtMinRes" type="text" style="width:50px;" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                            </li>
+                            <li style="padding-top:8px;">
+                                >=
+                            </li>
+                            <li>
+                                <input id="txtMaxRes" type="text" style="width:50px;" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                            </li>
+                            <li></li>
+                        </ul>
+                        <div style="clear:both;"></div>
+                        <p style="margin-top:15px;">Tiempo total</p>
+                        <ul class="MiListaHorizontal" >
+                            <li>
+                                <span style="color: #5cb85c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Óptimo
+                            </li>
+                            <li style="padding-top:8px;">
+                                <=
+                            </li>
+                            <li>
+                                <input id="txtMinTotal" type="text" style="width:50px;" readonly="readonly" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #ec971f; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Aceptable
+                            </li>
+                            <li style="padding-top:8px;">
+                                >=
+                            </li>
+                            <li>
+                                <input id="txtMaxTotal" type="text" style="width:50px;" readonly="readonly" maxlength="4"/>
+                            </li>
+                            <li>
+                                <span style="color: #c9302c; font-size: 18pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>Crítico
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div id="DvMensaje" class="info-mensaje">
+        <div style="height:100%; float:left;">
+        <span id="Span2" class="ui-icon ui-icon-triangle-1-w" style="float: left;margin-left: -5px"></span>
+        </div>
+        <div id="DvMiMensaje" runat="server" style="width:134px;">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var DatosSeleccionados;
+    var esEditar = false;
+    var TipificacionParaEditar = [];
+
+    function PRM_Tipo() {
+        this.IdTipo = -1;
+        this.Nombre = "";
+        this.IdBolsa = -1;
+        this.IdTipificacion = -1;
+        this.EsVigente = "";
+        this.Tipificaciones = []
+    }
+
+    function ENT_CINC_Tipo() {
+        this.IdTipo = -1;
+        this.Nombre = "";
+        this.Descripcion = "";
+        this.EsVigente = true;
+        this.Tipificaciones = []
+
+
+        this.StrInicioHorario = "";
+        this.StrFinHorario = "";
+        this.TotalHorasDia = -1;
+        this.MinSla = -1;
+        this.MaxSla = -1;
+        this.MinActivo = -1;
+        this.MaxActivo = -1;
+        this.MinResuelto = -1;
+        this.MaxResuelto = -1;
+        this.MinTotal = -1;
+        this.MaxTotal = -1;
+        this.Dias = [];
+
+        this.esDefault = false;
+    }
+
+    function ENT_CINC_Tipificacion() {
+        this.IdTipificacion = -1;
+        this.Nombre = "";
+        this.Descripcion = "";
+    }
+
+    function ENT_CINC_Tipificacion(pIdTipificacion, pNombre, pDescripcion) {
+        this.IdTipificacion = pIdTipificacion;
+        this.Nombre = pNombre;
+        this.Descripcion = pDescripcion;
+    }
+
+    $(function () {
+        fnEventosTipo();
+        fnGrillaTipo();
+        fnGrillaTipificacionFrom();
+
+        //#region Informativo
+        $('.info').hover(function () {
+            $('#DvMensaje').css('position', 'fixed');
+            $('#DvMensaje').css('left', $(this).offset().left - $(window).scrollLeft());
+            $('#DvMensaje').css('top', $(this).offset().top - $(window).scrollTop());
+            $('#DvMensaje').show(0);
+            //mensaje
+            $("#DvMiMensaje").html($(this).attr("MensajeInfo"));
+        }, function () {
+            $('#DvMensaje').hide();
+        });
+        $(window).scroll(function () { $('#DvMensaje').hide(); });
+        $("#DvMensaje").click(function () { $(this).hide(); });
+        //#endregion
+    });
+
+    function disenoResize() {
+        $("#grillaTipo").setGridWidth($("#dvGrillaTipo").width() - 10);
+        $("#grillaTipificacion").setGridWidth($("#dvGrillaTipificacion").width() - 10);
+        $("#grillaTipificacionForm").setGridWidth($("#dvGrillaTipificacionForm").width() - 10);
+
+        $("#tbDetalleTipo").width($("#dvDetalleGrillaTipo").width() - 2);
+
+        $($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaTipificacion .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipificacion .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaTipificacionForm .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipificacionForm .ui-jqgrid-bdiv")[0]).width() + 5);
+
+        
+    }
+
+    function fnEventosTipo() {
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        //$(window).scroll(function () {
+        //    if ($(this).scrollTop() > ($("#dvGrillaTipo").height() )) {
+        //        $("#ss").css("position", "sticky");
+        //        //$("#ss").css("left", "0px");
+        //        //$("#ss").css("top", "0px");
+        //    }
+        //    else {
+        //        $("#ss").css("position", "initial");
+        //    }
+        //});
+
+        $("#chkDefault").click(function () {
+
+            var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaTipo").jqGrid('getRowData', id);
+                if (datos.esDefault == "True" ) {
+                    //alert("Para deshabilitar default elija otro tipo como default y este automaticamente se desactivará");
+                    miAlerta("Alerta", "Para deshabilitar default elija otro tipo como default y este automaticamente se desactivará", "glyphicon-exclamation-sign", "#f0ad4e");
+                    $(this).prop("checked", true);
+                }
+            }
+            else {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+
+        });
+
+        $("#ddlCanalAtencion, #ddlEstado").change(function () {
+            $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+        });
+
+        $('#txtNombreTipo').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#btnRegistrarTipo").click(function () {
+            if (fnValidarFormulario(true)) {
+                fnRegistrarTipo();
+            }
+
+        });
+
+        $("#btnNuevaTipo").click(function () {
+            esEditar = false;
+            $("#dvDetalleGrillaTipo").fadeOut(100, function () {
+                fnValoresDefaultNuevo();
+                $("#dvFormularioTipo").fadeIn(100, function () {
+                    disenoResize();
+                });
+            })
+        });
+        $("#btnEditarTipo").click(function () {
+            fnBtnEditarTipo();
+        });
+        $("#btnEliminarTipo").click(function () {
+            fnBtnEliminarTipo();
+        });
+
+        $("#btnCancelar").click(function () {
+            if (fnValidarFormulario(false)) {
+                miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnDesactivarFormulario, undefined);
+            }
+            else {
+                fnDesactivarFormulario();
+            }
+        });
+
+        $("#btnNuevaTipificacion").click(function () {
+            $("#txtNombreTipificacion").val("");
+            $("#txtDescripcionTipificacion").val("");
+            $("#btnAddTipificacion").html("");
+            $("#btnAddTipificacion").append("<span class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span> Agregar");
+            $("#miDialogoTipificacion").modal('show');
+        });
+        $("#btnAddTipificacion").click(function () {
+            if (fnValidarFormularioTipificacion(true)) {
+                fnRegistrarTipificacion();
+            }
+        }); 
+
+        $("#btnEditaripificacion").click(function () {
+            fnEditarTipificacion();
+        });
+        $("#btnEliminarTipificacion").click(function () {
+            fnEliminarTipificacion();
+        });
+        $("#btnRefrescarTipificacion").click(function () {
+            miDialogoConfirmacion("Se actualizarán las tipificaciones a su estado por default. Los cambios hechos se perderán. ¿Desea actualizarlos?", fnRefrescarTipificaciones);
+        });
+
+        //debugger;
+        ValidarNumeroEnCajaTexto("txtMinSla", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMaxSla", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMinAct", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMaxAct", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMinRes", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMaxRes", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMinTotal", ValidarEnteroPositivo, undefined, true);
+        ValidarNumeroEnCajaTexto("txtMaxTotal", ValidarEnteroPositivo, undefined, true);
+
+        EventFocusTotales("txtMinAct");
+        EventFocusTotales("txtMaxAct");
+        EventFocusTotales("txtMinRes");
+        EventFocusTotales("txtMaxRes");
+
+    }
+
+    function fnGrillaTipo() {
+        $("#grillaTipo").jqGrid({
+            datatype: function () {
+
+                var oParametro;
+                oParametro = new PRM_Tipo();
+
+                if ($.trim($("#txtNombreTipo").val()) != "") {
+                    oParametro.Nombre = $.trim($("#txtNombreTipo").val());
+                }
+
+                if ($("#ddlCanalAtencion").val() != "-1") {
+                    oParametro.IdBolsa = $("#ddlCanalAtencion").val();
+                }
+
+                if ($("#ddlEstado").val() != "-1") {
+                    oParametro.EsVigente = $("#ddlEstado").val();
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerTipo", "Tipo")',
+                    data: "{'inPagTam':'" + $('#grillaTipo').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaTipo').getGridParam("page") + "'," + //FiltroRegistro 
+                       "'vcOrdCol':'" + $('#grillaTipo').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaTipo').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaTipo")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "IdTipo"
+            },
+            colModel: [
+            { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Tipo', width: "100px" },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true },
+
+            { name: 'strInicioHorario', index: 'strInicioHorario', label: 'strInicioHorario', width: "50px", hidden: true },
+            { name: 'dtInicioHorario', index: 'dtInicioHorario', label: 'dtInicioHorario', width: "50px", hidden: true },
+            { name: 'strFinHorario', index: 'strFinHorario', label: 'strFinHorario', width: "50px", hidden: true },
+            { name: 'dtFinHorario', index: 'dtFinHorario', label: 'dtFinHorario', width: "50px", hidden: true },
+            { name: 'TotalHorasDia', index: 'TotalHorasDia', label: 'TotalHorasDia', width: "50px", hidden: true },
+            { name: 'MinSla', index: 'MinSla', label: 'MinSla', width: "50px", hidden: true },
+            { name: 'MaxSla', index: 'MaxSla', label: 'MaxSla', width: "50px", hidden: true },
+            { name: 'MinActivo', index: 'MinActivo', label: 'MinActivo', width: "50px", hidden: true },
+            { name: 'MaxActivo', index: 'MaxActivo', label: 'MaxActivo', width: "50px", hidden: true },
+            { name: 'MinResuelto', index: 'MinResuelto', label: 'MinResuelto', width: "50px", hidden: true },
+            { name: 'MaxResuelto', index: 'MaxResuelto', label: 'MaxResuelto', width: "50px", hidden: true },
+            { name: 'MinTotal', index: 'MinTotal', label: 'MinTotal', width: "50px", hidden: true },
+            { name: 'MaTotal', index: 'MaTotal', label: 'MaTotal', width: "50px", hidden: true },
+
+            { name: 'esDefault', index: 'esDefault', label: 'esDefault', width: "50px", hidden: true }
+            ],
+            pager: "#pagerGrillaTipo",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "470px",
+            //height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+
+                if (DatosSeleccionados != undefined) {
+                    if (DatosSeleccionados.IdTipo != undefined) {
+                        var selectedRowId = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+                        DatosSeleccionados = $("#grillaTipo").jqGrid('getRowData', selectedRowId);
+                    }
+                    else {
+                        $('#grillaTipo').jqGrid('setSelection', 1);
+                        DatosSeleccionados = $("#grillaTipo").jqGrid('getRowData', 1);
+                    }
+                }
+                else {
+                    $('#grillaTipo').jqGrid('setSelection', 1);
+                    DatosSeleccionados = $("#grillaTipo").jqGrid('getRowData', 1);
+                }
+
+                if (DatosSeleccionados != undefined) {
+                    if (DatosSeleccionados.IdTipo != undefined) {
+                        fnMostrarDetalleTipo(DatosSeleccionados);
+                    }
+                }
+
+            },
+            beforeSelectRow: function (rowid, e) {
+                if ($("#dvFormularioTipo").css("display") == "block" && fnValidarFormulario(false)) {
+                    miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnSelectedGrillaTipo, undefined, [rowid, e], undefined);
+                }
+                else {
+                    fnSelectedGrillaTipo([rowid, e]);
+                }
+            }
+        }).navGrid("#pagerGrillaTipo", { edit: false, add: false, search: false, del: false });
+    };
+
+    function fnGrillaTipificacionFrom() {
+        $("#grillaTipificacionForm").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdTipificacion', index: 'IdTipificacion', label: 'IdTipificacion', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Tipificación', width: "100px" },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" }
+            ],
+            rownumbers: true,
+            //shrinkToFit: false,
+            //gridview: true,
+            viewrecords: true,
+            //height: "470px",
+            height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                //if ($("#dvFormularioTipo").css("display") == "block" && fnValidarFormulario(false)) {
+                //    miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnSelectedGrillaTipo, undefined, [rowid, e], undefined);
+                //}
+                //else {
+                //    fnSelectedGrillaTipo([rowid, e]);
+                //}
+
+                //alert(rowid);
+
+                //var CurrentSelectIndex = $("#grillaTipificacionForm").jqGrid('getInd', rowid);
+                //var CurrentSelectIndex = $("#grillaTipificacionForm").getInd(rowid);
+                //alert(CurrentSelectIndex);
+                $('#grillaTipificacionForm').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+
+    function fnSelectedGrillaTipo(pArrayArguments) {
+        var CurrentSelectIndex = $("#grillaTipo").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaTipo').jqGrid('setSelection', CurrentSelectIndex);
+        DatosSeleccionados = $("#grillaTipo").jqGrid('getRowData', CurrentSelectIndex);
+        fnMostrarDetalleTipo(DatosSeleccionados);
+    }
+
+    function fnMostrarDetalleTipo(datos) {
+        fnDesactivarFormulario()
+
+        $("#tbDetalleTipo tbody tr:nth-child(1) td:nth-child(2)").text(datos.Nombre);
+
+        $("#tbDetalleTipo tbody tr:nth-child(2) td:nth-child(2)").text(datos.Descripcion);
+
+        $("#tbDetalleHorario tr:nth-child(1) td:nth-child(2) p:nth-child(2) span:nth-child(1)").text(datos.strInicioHorario);
+        $("#tbDetalleHorario tr:nth-child(1) td:nth-child(2) p:nth-child(2) span:nth-child(2)").text(datos.strFinHorario);
+
+        $("#ulSla li:nth-child(1) span:nth-child(2)").text(datos.MinSla)
+        $("#ulSla li:nth-child(2) span:nth-child(2)").text(datos.MinSla)
+        $("#ulSla li:nth-child(2) span:nth-child(3)").text(datos.MaxSla)
+        $("#ulSla li:nth-child(3) span:nth-child(2)").text(datos.MaxSla)
+
+        $("#ulActivacion li:nth-child(1) span:nth-child(2)").text(datos.MinActivo)
+        $("#ulActivacion li:nth-child(2) span:nth-child(2)").text(datos.MinActivo)
+        $("#ulActivacion li:nth-child(2) span:nth-child(3)").text(datos.MaxActivo)
+        $("#ulActivacion li:nth-child(3) span:nth-child(2)").text(datos.MaxActivo)
+
+        $("#ulResolucion li:nth-child(1) span:nth-child(2)").text(datos.MinResuelto)
+        $("#ulResolucion li:nth-child(2) span:nth-child(2)").text(datos.MinResuelto)
+        $("#ulResolucion li:nth-child(2) span:nth-child(3)").text(datos.MaxResuelto)
+        $("#ulResolucion li:nth-child(3) span:nth-child(2)").text(datos.MaxResuelto)
+
+        $("#ulTotal li:nth-child(1) span:nth-child(2)").text(datos.MinTotal)
+        $("#ulTotal li:nth-child(2) span:nth-child(2)").text(datos.MinTotal)
+        $("#ulTotal li:nth-child(2) span:nth-child(3)").text(datos.MaTotal)
+        $("#ulTotal li:nth-child(3) span:nth-child(2)").text(datos.MaTotal)
+
+        //fnGetBolsa(datos.IdBolsa);
+        //fnGrillaOrigen(datos.IdBolsa);
+        //fnGrillaDestino(datos.IdBolsa);
+        fnObtenerCanalAtencion();
+        fnGrillaTipificacion();
+        fnMostrarDiasDetalle();
+    }
+
+    function fnDesactivarFormulario() {
+
+        $("#dvFormularioTipo").hide();
+        $("#dvDetalleGrillaTipo").show();
+        disenoResize();
+    }
+
+    function fnObtenerCanalAtencion() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ObtenerCanalAtencionByTipo", "Tipo")',
+            data: "{'pIdTipo': '" + DatosSeleccionados.IdTipo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                $("#tbDetalleTipo tbody tr:nth-child(3) td:nth-child(2)").text(result.Nombre);
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnGrillaTipificacion() {
+        if ($('#grillaTipificacion').getGridParam("rowNum") == null) {
+            $("#grillaTipificacion").jqGrid({
+                datatype: function () {
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerTipificacion", "Tipo")',
+                        data: "{'inPagTam':'" + $('#grillaTipificacion').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaTipificacion').getGridParam("page") + "'," + //FiltroRegistro 
+                           "'vcOrdCol':'" + $('#grillaTipificacion').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaTipificacion').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                           "'pIdTipo': '" + DatosSeleccionados.IdTipo + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.Items.length < 1) {
+                                $("#dvGrillaTipificacion").hide();
+                                $("#dvGrillaTipificacion_empty").show();
+                            }
+                            else {
+                                $("#dvGrillaTipificacion").show();
+                                $("#dvGrillaTipificacion_empty").hide();
+                            }
+                            $("#grillaTipificacion")[0].addJSONData(result);
+                            disenoResize();
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "IdBolsa"
+                },
+                colModel: [
+                { name: 'IdTipificacion', index: 'IdTipificacion', label: 'IdTipificacion', width: "50px", hidden: true },
+                { name: 'Nombre', index: 'Nombre', label: 'Tipificación', width: "100px" },
+                { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+                { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true }
+                ],
+                pager: "#pagerGrillaTipificacion",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                //shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                //height: "470px",
+                height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 20,
+                gridComplete: function () {
+
+                    $('#grillaTipificacion').jqGrid('setSelection', 1);
+
+                },
+                beforeSelectRow: function (rowid, e) {
+
+                    var CurrentSelectIndex = $("#grillaTipificacion").jqGrid('getInd', rowid);
+                    $('#grillaTipificacion').jqGrid('setSelection', CurrentSelectIndex);
+
+                }
+            }).navGrid("#pagerGrillaTipificacion", { edit: false, add: false, search: false, del: false });
+        }
+        else {
+            $("#grillaTipificacion").trigger("reloadGrid");
+        }
+
+    }
+
+    function fnValidarFormularioTipificacion(pConMensaje) {
+        var result = true;
+
+        if ($.trim($("#txtNombreTipificacion").val()) == "") {
+            result = false;
+            if (pConMensaje) {
+                //alert("Ingrese nombre de Tipificación");
+                miAlerta("Alerta", "Ingrese nombre de Tipificación", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+            $("#txtNombreTipificacion").focus()
+        }
+        else {
+            if ($.trim($("#txtDescripcionTipificacion").val()) == "") {
+                result = false;
+                if (pConMensaje) {
+                    //alert("Ingrese descripción de tipificación");
+                    miAlerta("Alerta", "Ingrese descripción de tipificación", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+                $("#txtDescripcionTipificacion").focus()
+            }
+        }
+        return result;
+    }
+
+    function fnValidarFormulario(pConMensaje) {
+        var result = true;
+
+        if ($.trim($("#txtNombreTipoForm").val()) == "") {
+            result = false;
+            if (pConMensaje) {
+                //alert("Ingrese nombre de tipo");
+                miAlerta("Alerta", "Ingrese nombre de tipo", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+            $("#txtNombreTipoForm").focus();
+        }
+        else {
+            if ($.trim($("#txtDescripcionTipo").val()) == "") {
+                result = false;
+                if (pConMensaje) {
+                    //alert("Ingrese descripción de tipo");
+                    miAlerta("Alerta", "Ingrese descripción de tipo", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+                $("#txtDescripcionTipo").focus();
+            }
+            else {
+                if ($("#grillaTipificacionForm").getGridParam("reccount") == 0) {
+                    result = false;
+                    if (pConMensaje) {
+                        //alert("Ingrese al menos una tipificación");
+                        miAlerta("Alerta", "Ingrese al menos una tipificación", "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                    $("#btnNuevaTipificacion").focus();
+                }
+                else {
+                    if ($(".chkDias:checked").length == 0) {
+                        result = false;
+                        if (pConMensaje) {
+                            //alert("Seleccione por lo menos un día en el horario");
+                            miAlerta("Alerta", "Seleccione por lo menos un día en el horario", "glyphicon-exclamation-sign", "#f0ad4e");
+                        }
+                        $("#chkLunes").focus();
+                    }
+                    else {
+                        if ($.trim($("#txtMinSla").val()) == "" || $.trim($("#txtMinSla").val()) == "0" || $.trim($("#txtMinSla").val()) == "00" || $.trim($("#txtMinSla").val()) == "000" || $.trim($("#txtMinSla").val()) == "0000") {
+                            result = false;
+                            if (pConMensaje) {
+                                //alert("El mínimo acuerdo de tiempo de atención no puede ser vacio o cero");
+                                miAlerta("Alerta", "El mínimo acuerdo de tiempo de atención no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                            }
+                            $("#txtMinSla").focus();
+                        }
+                        else {
+                            if ($.trim($("#txtMaxSla").val()) == "" || $.trim($("#txtMaxSla").val()) == "0" || $.trim($("#txtMaxSla").val()) == "00" || $.trim($("#txtMaxSla").val()) == "000" || $.trim($("#txtMaxSla").val()) == "0000") {
+                                result = false;
+                                if (pConMensaje) {
+                                    //alert("El máximo acuerdo de tiempo de atención no puede ser vacio o cero");
+                                    miAlerta("Alerta", "El máximo acuerdo de tiempo de atención no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                }
+                                $("#txtMaxSla").focus();
+                            }
+                            else {
+                                if ($.trim($("#txtMinAct").val()) == "" || $.trim($("#txtMinAct").val()) == "0" || $.trim($("#txtMinAct").val()) == "00" || $.trim($("#txtMinAct").val()) == "000" || $.trim($("#txtMinAct").val()) == "0000") {
+                                    result = false;
+                                    if (pConMensaje) {
+                                        //alert("El mínimo tiempo de activación no puede ser vacio o cero");
+                                        miAlerta("Alerta", "El mínimo tiempo de activación no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                    }
+                                    $("#txtMinAct").focus();
+                                }
+                                else {
+                                    if ($.trim($("#txtMaxAct").val()) == "" || $.trim($("#txtMaxAct").val()) == "0" || $.trim($("#txtMaxAct").val()) == "00" || $.trim($("#txtMaxAct").val()) == "000" || $.trim($("#txtMaxAct").val()) == "0000") {
+                                        result = false;
+                                        if (pConMensaje) {
+                                            //alert("El máximo tiempo de activación no puede ser vacio o cero");
+                                            miAlerta("Alerta", "El máximo tiempo de activación no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                        }
+                                        $("#txtMaxAct").focus();
+                                    }
+                                    else {
+                                        if ($.trim($("#txtMinRes").val()) == "" || $.trim($("#txtMinRes").val()) == "0" || $.trim($("#txtMinRes").val()) == "00" || $.trim($("#txtMinRes").val()) == "000" || $.trim($("#txtMinRes").val()) == "0000") {
+                                            result = false;
+                                            if (pConMensaje) {
+                                                miAlerta("Alerta", "El mínimo tiempo de resolución no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                            }
+                                            $("#txtMinRes").focus();
+                                        }
+                                        else {
+                                            if ($.trim($("#txtMaxRes").val()) == "" || $.trim($("#txtMaxRes").val()) == "0" || $.trim($("#txtMaxRes").val()) == "00" || $.trim($("#txtMaxRes").val()) == "000" || $.trim($("#txtMaxRes").val()) == "0000") {
+                                                result = false;
+                                                if (pConMensaje) {
+                                                    miAlerta("Alerta", "El máximo tiempo de resolución no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                }
+                                                $("#txtMaxRes").focus();
+                                            }
+                                            else {
+                                                if ($.trim($("#txtMinTotal").val()) == "" || $.trim($("#txtMinTotal").val()) == "0" || $.trim($("#txtMinTotal").val()) == "00" || $.trim($("#txtMinTotal").val()) == "000" || $.trim($("#txtMinTotal").val()) == "0000") {
+                                                    result = false;
+                                                    if (pConMensaje) {
+                                                        miAlerta("Alerta", "El mínimo tiempo de total no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                    }
+                                                    $("#txtMinTotal").focus();
+                                                }
+                                                else {
+                                                    if ($.trim($("#txtMaxTotal").val()) == "" || $.trim($("#txtMaxTotal").val()) == "0" || $.trim($("#txtMaxTotal").val()) == "00" || $.trim($("#txtMaxTotal").val()) == "000" || $.trim($("#txtMaxTotal").val()) == "0000") {
+                                                        result = false;
+                                                        if (pConMensaje) {
+                                                            miAlerta("Alerta", "El máximo tiempo de total no puede ser vacio o cero", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                        }
+                                                        $("#txtMaxTotal").focus();
+                                                    }
+                                                    else {
+                                                        if (parseInt($("#ddlIniHora").val()) > parseInt($("#ddlFinHora").val())) {
+                                                            result = false;
+                                                            if (pConMensaje) {
+                                                                miAlerta("Alerta", "La hora inicio no puede ser mayor a la hora fin", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                            }
+                                                            $("#ddlIniHora").focus();
+                                                        }
+                                                        else {
+
+                                                            if (parseInt($("#ddlIniHora").val()) == parseInt($("#ddlFinHora").val()) && parseInt($("#ddlIniMin").val()) >= parseInt($("#ddlFinMin").val())) {
+                                                                result = false;
+                                                                if (pConMensaje) {
+                                                                    miAlerta("Alerta", "La hora inicio no puede ser mayor o igual a la hora fin", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                                }
+                                                                $("#ddlIniHora").focus();
+                                                            }
+                                                            else {
+                                                                if (parseInt($("#txtMinSla").val()) >= parseInt($("#txtMaxSla").val())) {
+                                                                    result = false;
+                                                                    if (pConMensaje) {
+                                                                        miAlerta("Alerta", "el mínimo no puede ser mayor o igual al maximo en el tiempo de acuerdo de atención", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                                    }
+                                                                    $("#txtMinSla").focus();
+                                                                }
+                                                                else {
+                                                                    if (parseInt($("#txtMinAct").val()) >= parseInt($("#txtMaxAct").val())) {
+                                                                        result = false;
+                                                                        if (pConMensaje) {
+                                                                            miAlerta("Alerta", "el mínimo no puede ser mayor o igual al maximo en el tiempo de activación", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                                        }
+                                                                        $("#txtMinSla").focus();
+                                                                    }
+                                                                    else {
+                                                                        if (parseInt($("#txtMinRes").val()) >= parseInt($("#txtMaxRes").val())) {
+                                                                            result = false;
+                                                                            if (pConMensaje) {
+                                                                                miAlerta("Alerta", "el mínimo no puede ser mayor o igual al maximo en el tiempo de respuesta", "glyphicon-exclamation-sign", "#f0ad4e");
+                                                                            }
+                                                                            $("#txtMinSla").focus();
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+
+    function fnRegistrarTipificacion() {
+
+        if ($.trim($("#btnAddTipificacion").text()) == "Agregar") {
+            oObjeto = new ENT_CINC_Tipificacion();
+            oObjeto.IdTipificacion = -1;
+            oObjeto.Nombre = $.trim($("#txtNombreTipificacion").val());
+            oObjeto.Descripcion = $.trim($("#txtDescripcionTipificacion").val());
+
+            var ii = $("#grillaTipificacionForm").getGridParam("reccount") + 1;
+            $("#grillaTipificacionForm").jqGrid('addRowData', ii, oObjeto);
+            //$("#grillaTipificacionForm").trigger("reloadGrid");
+        }
+        else {
+            if (TipificacionParaEditar.length < 1) {
+                miAlerta("Alerta", "seleccione una tipificacion", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+            else {
+                TipificacionParaEditar[1].Nombre = $.trim($("#txtNombreTipificacion").val());
+                TipificacionParaEditar[1].Descripcion = $.trim($("#txtDescripcionTipificacion").val());
+                $("#grillaTipificacionForm").jqGrid('setRowData', TipificacionParaEditar[0], TipificacionParaEditar[1]);
+            }
+        }
+
+        $("#miDialogoTipificacion").modal('hide');
+    }
+
+    function fnRegistrarTipo() {
+        debugger;
+        var oParametro;
+        oParametro = new ENT_CINC_Tipo();
+        oParametro.Nombre = $.trim($("#txtNombreTipoForm").val());
+        oParametro.Descripcion = $.trim($("#txtDescripcionTipo").val());
+
+        oParametro.StrInicioHorario = $("#ddlIniHora").val() + ":" + $("#ddlIniMin").val() + ":00";
+        oParametro.StrFinHorario = $("#ddlFinHora").val() + ":" + $("#ddlFinMin").val() + ":00";
+        oParametro.MinSla = $.trim($("#txtMinSla").val());
+        oParametro.MaxSla = $.trim($("#txtMaxSla").val());
+        oParametro.MinActivo = $.trim($("#txtMinAct").val());
+        oParametro.MaxActivo = $.trim($("#txtMaxAct").val());
+        oParametro.MinResuelto = $.trim($("#txtMinRes").val());
+        oParametro.MaxResuelto = $.trim($("#txtMaxRes").val());
+
+        oParametro.esDefault = $("#chkDefault").prop("checked");
+        
+
+        var ArrayTipificaciones = $("#grillaTipificacionForm").jqGrid('getRowData');
+        for (var i = 0; i < ArrayTipificaciones.length; i++) {
+            oParametro.Tipificaciones.push(new ENT_CINC_Tipificacion(ArrayTipificaciones[i].IdTipificacion, ArrayTipificaciones[i].Nombre, ArrayTipificaciones[i].Descripcion));
+        }
+
+        for (var i = 0; i < $(".chkDias").length ; i++) {
+            if ($($(".chkDias")[i]).prop("checked")) {
+                oParametro.Dias.push($($(".chkDias")[i]).attr("miData"));
+            }
+        }
+
+        if ($("#btnRefrescarTipificacion").css("display") != "none") {
+            var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaTipo").jqGrid('getRowData', id);
+                oParametro.IdTipo = datos.IdTipo;
+                oParametro.EsVigente = $("#chkActivarTipo").prop("checked");
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("EditarTipo", "Tipo")',
+                    data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.Success) {
+                            fnDesactivarFormulario();
+                            miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                            $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+                        }
+                        else {
+                            miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+            else {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarTipo", "Tipo")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        fnDesactivarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+    }
+
+    function fnEditarTipificacion() {
+        var id = $("#grillaTipificacionForm").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipificacionForm").jqGrid('getRowData', id);
+            $("#txtNombreTipificacion").val(datos.Nombre);
+            $("#txtDescripcionTipificacion").val(datos.Descripcion);
+            $("#btnAddTipificacion").html("");
+            $("#btnAddTipificacion").append("<span class=\"glyphicon glyphicon-pencil\" aria-hidden=\"true\"></span> Editar");
+            TipificacionParaEditar = [id, datos];
+            $("#miDialogoTipificacion").modal('show');
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnEliminarTipificacion() {
+        var id = $("#grillaTipificacionForm").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            miDialogoConfirmacion("¿Desea eliminar Tipificación?", fnTipificacionEliminada, undefined, [id], undefined);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnTipificacionEliminada(pId) {
+        $("#grillaTipificacionForm").jqGrid('delRowData', pId);
+    }
+
+    function fnBtnEditarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            $("#dvDetalleGrillaTipo").fadeOut(100, function () {
+                var datos = $("#grillaTipo").jqGrid('getRowData', id);
+                if (datos.btVig == "True") {
+                    $(".esInactivo").hide();
+                    $("#chkActivarTipo").prop("checked", true);
+                }
+                else {
+                    $(".esInactivo").show();
+                    $("#chkActivarTipo").prop("checked", false);
+                }
+
+                $("#chkDefault").prop("checked", datos.esDefault == "True");
+
+                $("#txtNombreTipoForm").val(datos.Nombre);
+                $("#txtDescripcionTipo").val(datos.Descripcion);
+                $("#ddlIniHora").val(datos.strInicioHorario.split(':')[0]);
+                $("#ddlIniMin").val(datos.strInicioHorario.split(':')[1]);
+                $("#ddlFinHora").val(datos.strFinHorario.split(':')[0]);
+                $("#ddlFinMin").val(datos.strFinHorario.split(':')[1]);
+
+                $("#txtMinSla").val(datos.MinSla);
+                $("#txtMaxSla").val(datos.MaxSla);
+
+                $("#txtMinAct").val(datos.MinActivo);
+                $("#txtMaxAct").val(datos.MaxActivo);
+
+                $("#txtMinRes").val(datos.MinResuelto);
+                $("#txtMaxRes").val(datos.MaxResuelto);
+
+                $("#txtMinTotal").val(datos.MinTotal);
+                $("#txtMaxTotal").val(datos.MaTotal);
+                $(".chkDias").prop("checked", false);
+
+
+                $("#grillaTipificacionForm").jqGrid("clearGridData", true);
+                $("#btnRefrescarTipificacion").show();
+                $("#dvFormularioTipo").fadeIn(100, function () {
+                    disenoResize();
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerTipificacionEntidades", "Tipo")',
+                        data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            for (var i = 0; i < result.length; i++) {
+                                oObjeto = new ENT_CINC_Tipificacion();
+                                oObjeto.IdTipificacion = result[i].IdTipificacion;
+                                oObjeto.Nombre = result[i].Nombre;
+                                oObjeto.Descripcion = result[i].Descripcion;
+
+                                var ii = $("#grillaTipificacionForm").getGridParam("reccount") + 1;
+                                $("#grillaTipificacionForm").jqGrid('addRowData', ii, oObjeto);
+                            }
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("DiasByTipo", "Tipo")',
+                        data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            for (var i = 0; i < result.length; i++) {
+                                
+                                switch (result[i]) {
+                                    case 1:
+                                        $("#chkLunes").prop("checked", true);
+                                        break;
+                                    case 2:
+                                        $("#chkMartes").prop("checked", true);
+                                        break;
+                                    case 3:
+                                        $("#chkMiercoles").prop("checked", true);
+                                        break;
+                                    case 4:
+                                        $("#chkJueves").prop("checked", true);
+                                        break;
+                                    case 5:
+                                        $("#chkViernes").prop("checked", true);
+                                        break;
+                                    case 6:
+                                        $("#chkSabado").prop("checked", true);
+                                        break;
+                                    case 7:
+                                        $("#chkDomingo").prop("checked", true);
+                                        break;
+                                    default:
+                                        break;
+                                }
+
+                            }
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+                });
+
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnRefrescarTipificaciones() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            $("#grillaTipificacionForm").jqGrid("clearGridData", true);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerTipificacionEntidades", "Tipo")',
+                data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        oObjeto = new ENT_CINC_Tipificacion();
+                        oObjeto.IdTipificacion = result[i].IdTipificacion;
+                        oObjeto.Nombre = result[i].Nombre;
+                        oObjeto.Descripcion = result[i].Descripcion;
+
+                        var ii = $("#grillaTipificacionForm").getGridParam("reccount") + 1;
+                        $("#grillaTipificacionForm").jqGrid('addRowData', ii, oObjeto);
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnBtnEliminarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            var miMensaje = "";
+            if (datos.btVig == "True") {
+                miMensaje = "Se inhabilitará Tipo " + datos.Nombre + ". No se podrán crear incidencias de este tipo mientras este inhabilitado. ¿Desea inhabilitarlo?"
+            }
+            else {
+                miMensaje = "Se Eliminará Tipo " + datos.Nombre + ". ¿Desea eliminar Tipo?"
+            }
+
+            miDialogoConfirmacion(miMensaje, fnEliminarTipo);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnEliminarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EliminarTipo", "Tipo")',
+                data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split('|')[0] == "OK") {
+                        fnDesactivarFormulario();
+                        miAlerta("Eliminar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaTipo").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnValoresDefaultNuevo() {
+        $(".esInactivo").hide();
+        $("#chkActivarTipo").prop("checked", true);
+        $("#btnRefrescarTipificacion").hide();
+        $("#txtNombreTipoForm").val("");
+        $("#txtDescripcionTipo").val("");
+        $("#grillaTipificacionForm").jqGrid("clearGridData", true);
+
+        $("#ddlIniHora").val("09");
+        $("#ddlIniMin").val("00");
+        $("#ddlFinHora").val("18");
+        $("#ddlFinMin").val("00");
+
+        $(".chkDias").prop("checked", false);
+        $("#chkLunes").prop("checked", true);
+        $("#chkMartes").prop("checked", true);
+        $("#chkMiercoles").prop("checked", true);
+        $("#chkJueves").prop("checked", true);
+        $("#chkViernes").prop("checked", true);
+
+        $("#txtMinSla").val("8");
+        $("#txtMaxSla").val("16");
+
+        $("#txtMinAct").val("2");
+        $("#txtMaxAct").val("3");
+
+        $("#txtMinRes").val("4");
+        $("#txtMaxRes").val("8");
+
+        $("#txtMinTotal").val("6");
+        $("#txtMaxTotal").val("11");
+    }
+
+    function fnMostrarDiasDetalle() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTipo").jqGrid('getRowData', id);
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("DiasByTipo", "Tipo")',
+                data: "{'pIdTipo': '" + datos.IdTipo + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    var dias = [];
+                    for (var i = 0; i < result.length; i++) {
+
+                        switch (result[i]) {
+                            case 1:
+                                dias.push("Lunes");
+                                break;
+                            case 2:
+                                dias.push("Martes");
+                                break;
+                            case 3:
+                                dias.push("Miércoles");
+                                break;
+                            case 4:
+                                dias.push("Jueves");
+                                break;
+                            case 5:
+                                dias.push("Viernes");
+                                break;
+                            case 6:
+                                dias.push("Sabado");
+                                break;
+                            case 7:
+                                dias.push("Domingo");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    $("#tbDetalleHorario tr:nth-child(1) td:nth-child(2) p:nth-child(1) span:nth-child(1)").text(dias.join(','));
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function EventFocusTotales(_idTextBox) {
+        $("#" + _idTextBox).focusout(function () {
+            let tipo = this.id.substr(3, 3);
+            let T_Act = $("#txt" + tipo + "Act").val();
+            let T_Res = $("#txt" + tipo + "Res").val();
+            let T_Total = parseInt(T_Act) + parseInt(T_Res);
+            if (isNaN(T_Total)) {
+                $("#txt" + tipo + "Total").val("0");
+            }
+            else {
+                $("#txt" + tipo + "Total").val(T_Total.toString());
+            }
+        });
+    }
+
+</script>

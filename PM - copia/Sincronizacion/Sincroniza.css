@@ -1,0 +1,152 @@
+﻿        .round {
+
+ background-color: #fff;
+ width: 300px;
+ height: auto;
+ margin: 0 auto 15px auto;
+ padding: 5px;
+ border: 1px solid #ccc;
+ -moz-border-radius: 11px;
+ -webkit-border-radius: 11px;
+ border-radius: 11px;
+
+    }
+	
+
+
+#file_browse_wrapper {
+width: 93px;
+height: 28px;
+background: url('file_browse_normal.png') 0 0 no-repeat;
+border:none;
+overflow:hidden;
+}
+#file_browse_wrapper:hover {
+background: url('file_browse_hover.png') 0 0 no-repeat;
+}
+#file_browse_wrapper:active {
+background: url('file_browse_pressed.png') 0 0 no-repeat;
+}
+#file_browse{
+margin-left:-145px;
+opacity:0;
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+
+        .style1
+        {
+            width: 20%;
+        }
+        .style2
+        {
+            width: 70%;
+        }
+        .fullancho
+        {
+            width: 99%;
+            }
+            
+.style3
+        {
+            width: 20%;
+            height: 20px;
+        }
+        .style4
+        {
+            width: 70%;
+            height: 20px;
+        }
+        .style7
+        {
+            width: 56%;
+            height: 34px;
+        }
+        .style8
+        {
+            width: 32%;
+            height: 20px;
+        }
+        .style10
+        {
+            width: 20%;
+            height: 31px;
+        }
+        .style11
+        {
+            width: 70%;
+            height: 31px;
+        }
+        .style12
+        {
+            width: 20%;
+            height: 32px;
+        }
+        .style13
+        {
+            width: 70%;
+            height: 32px;
+        }
+        .style14
+        {
+            width: 20%;
+            height: 34px;
+        }
+        .style15
+        {
+            width: 70%;
+            height: 34px;
+        }
+        .style16
+        {
+            width: 20%;
+            height: 26px;
+        }
+        .style17
+        {
+            height: 26px;
+        }
+        .style18
+        {
+            width: 20%;
+            height: 30px;
+        }
+        .style19
+        {
+            height: 30px;
+        }
+        .style20
+        {
+            width: 32%;
+            height: 34px;
+        }        
+        .borde_tabla
+        {
+            border:1px solid #ABBAD0;    
+            padding:5px;
+        }    
+        
+        .titulo_grafico_1_hist
+        {
+            position:relative;
+            float:left;
+            width:1024px;
+            /*height:21px;*/
+            /*background-color:#175296;    */
+            color:#ffffff;
+            text-align:center;
+            padding-top:5px;
+        }
+
+        #titulo_grafico_2
+        {
+            position:relative;
+            float:left;
+            margin-top:20px;
+            width:100%;
+            height:25px;
+            background-color:#175296;    
+            color:#ffffff;
+            text-align:center;
+            padding-top:12px;
+        }

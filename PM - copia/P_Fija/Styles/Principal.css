@@ -1,0 +1,241 @@
+body {
+	font-size: 65%;
+}
+input {
+	font-size: 97%;
+}
+select {
+	font-size: 99%;
+}
+table {
+	font-size: 1em;	
+}
+
+/* Site
+   -------------------------------- */
+
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+}
+
+/* Layout
+   -------------------------------- */
+/*
+.ui-tabs-nav{
+	font-size: 11px;
+}
+*/
+
+.tabs { margin-top: 1em; }
+.tabs li .ui-icon-close { float: left; margin: 0.4em 0.2em 0 0; cursor: pointer; }
+
+.LateralSplitter{
+    height: 100%;
+    float: left;
+}
+.ContenidoSplitter{
+    height: 100%;
+}
+.togglerSplitter{
+    width: 5px;
+    height: 100%;
+    float: left;
+}
+.togglerSplitter:hover{
+    cursor: pointer;
+}
+
+.LoginUsuario
+{
+    padding: 5px;
+    margin-right: 2px;
+}
+.LoginEstado
+{
+    padding: 5px;
+    margin-left: 2px;
+    text-decoration: underline;
+}
+.SeparadorLogin
+{
+    font-size: large;
+    background: transparent;
+    font-weight: normal;
+    border: 0px;
+}
+
+.PanelBarraNavegacionItem
+{
+    width:100%;
+    margin:0px;
+    padding-bottom:3px;
+    padding-top:3px;
+}
+
+.PanelBarraNavegacionItemSeleccion
+{
+    Cursor:pointer;
+}
+
+.PanelBarraNavegacionHighLight
+{
+    background-color: #EBFFAE;
+}
+
+.txtBusqueda
+{
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+.imgBtn
+{
+    cursor:pointer;
+}
+.quitarBorde
+{
+    border: 0px none !important; 
+}
+
+.quitarmargin
+{
+    margin-top: 0px !important; 
+    margin-bottom: 0px !important;
+}
+
+.quitarNegrita
+{
+    font-weight:normal;
+}
+
+.tdDerecha
+{
+    border: 1px solid white;
+    padding-top:2px;
+    padding-bottom:2px;
+    color: White !important;
+}
+.tdIzquierda
+{
+    cursor: default !important;    
+    font-size: 100% !important;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+/*-------------------------Autocomplete-----------------------------*/
+.ui-autocomplete
+{
+    max-height: 150px;
+    overflow-y: auto; /* prevent horizontal scrollbar */
+    overflow-x: hidden; /* add padding to account for vertical scrollbar */
+    padding-right: 20px;
+}
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete
+{
+    height: 150px;
+}
+.ui-autocomplete-loading
+{
+    background: white url('../../Common/Images/Mantenimiento/Cargando16.gif') no-repeat right center;
+}
+.ui-autocomplete-category {
+	font-weight: bold;
+	padding: .2em .4em;
+	margin: .8em 0 .2em;
+	line-height: 1.5;
+}
+
+.msgAlerta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 150px;
+    margin-left: -200px;
+    margin-top: -75px;
+    text-align: center;
+    background-color: #3f3f3f;
+    color: white;
+    padding: 10px 30px;
+    opacity: 0.85;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.dvCargando
+{
+    background: url('../../Common/Images/Mantenimiento/Cargando.gif') no-repeat right center;  
+    width:64px;
+    height:64px;
+    top: 50%;
+    left: 50%;
+    z-index:10000;
+    position:fixed;
+    display:none;
+}
+
+.TituloMant
+{
+    width: 176px;
+    background: none !important;
+}
+
+.ValorMant
+{
+    background: none !important;
+}
+
+.dataTables_info {
+	float: left;
+}
+
+.dataTables_paginate {
+	float: right;
+	text-align: right;
+}
+
+.fg-button
+{    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tbDetalle tr td
+{
+    border: thin solid #FFFFFF;
+}
+
+.NoVisible
+{
+    display:none;    
+}
+
+
+.ui-progressbar-value
+{
+    background-image: url(../Common/Images/Mantenimiento/pbar-ani.gif)
+}
+
+.tdTitulo
+{
+	text-align: right;    
+}
+
+::-ms-clear
+{
+    display: none;
+}
+
+input[type="checkbox"], input[type="checkbox"] {
+    border: 0px;
+   background-color:transparent;
+}

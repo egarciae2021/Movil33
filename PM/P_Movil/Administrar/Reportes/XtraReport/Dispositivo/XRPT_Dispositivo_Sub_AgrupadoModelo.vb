@@ -1,0 +1,3 @@
+﻿Public Class XRPT_Dispositivo_Sub_AgrupadoModelo
+
+End Class

@@ -1,0 +1,93 @@
+2022/10/05 13:14:36.824,[12],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/05 13:14:36.836,[12],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/05 13:14:36.836,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/05 13:16:20.739,[7],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:16:20.739,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:16:20.739,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/10/05 13:16:53.300,[23],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:16:53.300,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:16:53.300,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/10/05 13:17:15.663,[12],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/05 13:17:15.663,[12],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/05 13:17:15.663,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/05 13:18:07.936,[16],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:18:07.936,[16],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:18:07.936,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:18:31.056,[5],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:31.057,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:31.057,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/10/05 13:18:38.931,[12],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:38.931,[12],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:38.931,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/10/05 13:18:39.102,[34],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:39.102,[34],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/10/05 13:18:39.102,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/10/05 13:19:35.939,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/05 13:19:35.946,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/05 13:19:35.947,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/05 13:20:21.886,[13],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:20:21.886,[13],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:20:21.887,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:20:30.902,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:20:30.902,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:20:30.902,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:20:35.940,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:20:35.940,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:20:35.940,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:21:12.059,[16],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:21:12.059,[16],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:21:12.060,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:21:52.238,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:21:52.238,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:21:52.238,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:23:47.302,[23],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:23:47.302,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:23:47.302,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:24:10.752,[13],INFO  ,Ingresa ActualizarCultura. Página: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:24:10.752,[13],INFO  ,Salióooooo ActualizarCultura. Página: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:24:10.752,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:35:06.376,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/05 13:35:06.382,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/05 13:35:06.382,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/05 13:35:14.190,[14],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:35:14.190,[14],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:35:14.190,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 13:35:19.104,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:35:19.104,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:35:19.104,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 13:35:21.810,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:35:21.810,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:35:21.810,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 13:35:34.632,[11],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:35:34.632,[11],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:35:34.632,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:14.540,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:14.540,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:14.540,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:23.729,[12],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:23.729,[12],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:36:23.729,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:38:21.232,[7],INFO  ,Ingresa ActualizarCultura. Página: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:38:21.233,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:38:21.233,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Sincronizacion/Sin_Utilitarios.aspx?vcTab=&inCod=6003&inTip=3&inTipOri=0
+2022/10/05 13:39:52.354,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:39:52.354,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 13:39:52.354,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 14:02:45.774,[54],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 14:02:45.774,[54],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 14:02:45.774,[54],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/10/05 15:03:18.221,[23],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/05 15:03:18.221,[23],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/05 15:03:18.221,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/05 15:03:25.990,[10],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 15:03:25.990,[10],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 15:03:25.990,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/05 15:03:30.789,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 15:03:30.790,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 15:03:30.790,[50],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/05 16:24:55.339,[70],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 16:24:55.339,[70],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 16:24:55.339,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/05 16:25:04.196,[66],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 16:25:04.196,[66],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/05 16:25:04.196,[66],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel

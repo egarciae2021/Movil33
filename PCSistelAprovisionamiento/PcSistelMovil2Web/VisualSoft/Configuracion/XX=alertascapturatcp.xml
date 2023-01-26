@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<CAlertaXML xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <alarma habilitado="true">
+    <tiempoNoCaptura>10</tiempoNoCaptura>
+    <tiempoReplicacion>10</tiempoReplicacion>
+    <alarmaPantalla>true</alarmaPantalla>
+    <sonidoAlarmaPantalla>C:\pcsistelnet\ALERTA.WAV</sonidoAlarmaPantalla>
+    <mensajeAlarmaPantalla>El Módulo del Captura - PCSISTEL.NET ha dejado de capturar.</mensajeAlarmaPantalla>
+    <alarmaEmail>true</alarmaEmail>
+    <asuntoAlarmaEmail>Alerta Captura - PCSISTEL.NET</asuntoAlarmaEmail>
+    <mensajeAlarmaEmail>El Módulo del Captura - PCSISTEL.NET ha dejado de capturar.</mensajeAlarmaEmail>
+    <correos>PCSISTELNET</correos>
+    <alarmaRed>true</alarmaRed>
+    <ipRed>567sdfgsdfg</ipRed>
+    <puertoRed>115</puertoRed>
+    <envioLogViewer>true</envioLogViewer>
+    <mensajeLogViewer>El Módulo del Captura - PCSISTEL.NET ha dejado de capturar.</mensajeLogViewer>
+  </alarma>
+  <horas>
+    <domingo>
+      <desde>2004-09-20T07:00:00.0000000-05:00</desde>
+      <hasta>2004-09-20T23:59:59.0000000-05:00</hasta>
+    </domingo>
+    <lunes>
+      <desde>2004-09-29T07:00:00.0000000-05:00</desde>
+      <hasta>2004-09-29T23:59:59.0000000-05:00</hasta>
+    </lunes>
+    <martes>
+      <desde>2005-07-12T07:00:00.0000000-05:00</desde>
+      <hasta>2005-07-12T23:59:59.0000000-05:00</hasta>
+    </martes>
+    <miercoles>
+      <desde>2005-07-12T07:00:00.0000000-05:00</desde>
+      <hasta>2005-07-12T23:59:59.0000000-05:00</hasta>
+    </miercoles>
+    <jueves>
+      <desde>2005-07-12T07:00:00.0000000-05:00</desde>
+      <hasta>2005-07-12T23:59:59.0000000-05:00</hasta>
+    </jueves>
+    <viernes>
+      <desde>2005-07-12T07:00:00.0000000-05:00</desde>
+      <hasta>2005-07-12T23:59:59.0000000-05:00</hasta>
+    </viernes>
+    <sabado>
+      <desde>2004-09-20T07:00:00.0000000-05:00</desde>
+      <hasta>2004-09-20T23:59:59.0000000-05:00</hasta>
+    </sabado>
+  </horas>
+  <Feriados>
+    <Feriado>
+      <fecha>2006-07-28T00:00:00.0000000-05:00</fecha>
+    </Feriado>
+    <Feriado>
+      <fecha>2006-07-29T00:00:00.0000000-05:00</fecha>
+    </Feriado>
+    <Feriado>
+      <fecha>2006-12-25T00:00:00.0000000-05:00</fecha>
+    </Feriado>
+  </Feriados>
+</CAlertaXML>

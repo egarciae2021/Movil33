@@ -1,0 +1,61 @@
+<?xml version="1.0" standalone="yes"?>
+<dsEsquema xmlns="http://tempuri.org/dsEsquema.xsd">
+  <xs:schema id="dsEsquema" targetNamespace="http://tempuri.org/dsEsquema.xsd" xmlns:mstns="http://tempuri.org/dsEsquema.xsd" xmlns="http://tempuri.org/dsEsquema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="dsEsquema" msdata:IsDataSet="true" msdata:Locale="en-US">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="M_DPLA_CAMP">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PCAM_PF_inCODPLA" type="xs:int" />
+                <xs:element name="PCAM_P_inASCII" type="xs:string" />
+                <xs:element name="CARACTER" type="xs:string" minOccurs="0" />
+                <xs:element name="PCAM_F_inCODCNC" type="xs:int" minOccurs="0" />
+                <xs:element name="PCAM_vcDESCAM" type="xs:string" minOccurs="0" />
+                <xs:element name="PCAM_inPOSCAM" type="xs:int" />
+                <xs:element name="PCAM_inLONCAM" type="xs:int" />
+                <xs:element name="PCAM_btMINUTO" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="EXPORTACION_ERROR">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LINEA_x0020_ERRADA" msprop:Generator_UserColumnName="LINEA ERRADA" msprop:Generator_ColumnPropNameInRow="LINEA_ERRADA" msprop:Generator_ColumnVarNameInTable="columnLINEA_ERRADA" msprop:Generator_ColumnPropNameInTable="LINEA_ERRADAColumn" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="M_GENE_PLAN">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PLAN_P_inCODPLA" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="PLAN_inTIP" type="xs:int" />
+                <xs:element name="PLAN_vcNOMPLA" type="xs:string" />
+                <xs:element name="PLAN_inLININI" type="xs:int" />
+                <xs:element name="PLAN_vcCAR" type="xs:string" />
+                <xs:element name="PLAN_vcTXTPLA" type="xs:string" minOccurs="0" />
+                <xs:element name="PLAN_F_inCODMOD" type="xs:int" />
+                <xs:element name="PLAN_F_inCODPRO" type="xs:int" />
+                <xs:element name="PLAN_F_vcCODCIA" type="xs:string" minOccurs="0" />
+                <xs:element name="PLAN_F_vcTFAC" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="dsEsquemaKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:M_DPLA_CAMP" />
+        <xs:field xpath="mstns:PCAM_PF_inCODPLA" />
+        <xs:field xpath="mstns:PCAM_P_inASCII" />
+      </xs:unique>
+      <xs:unique name="dsEsquemaKey2" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:M_GENE_PLAN" />
+        <xs:field xpath="mstns:PLAN_P_inCODPLA" />
+      </xs:unique>
+      <xs:keyref name="M_GENE_PLANM_DPLA_CAMP" refer="dsEsquemaKey2">
+        <xs:selector xpath=".//mstns:M_DPLA_CAMP" />
+        <xs:field xpath="mstns:PCAM_PF_inCODPLA" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema> 
+</dsEsquema>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<CCapturaTCPXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NombreSucursal>INGRESE NOMBRE</NombreSucursal>
+  <CodigoSucursal>00</CodigoSucursal>
+  <ModoServer>false</ModoServer>
+  <ServerPuerto>80</ServerPuerto>
+  <ClientePuerto>80</ClientePuerto>
+  <ClienteIp>127.0.0.1</ClienteIp>
+  <LegacySupport>true</LegacySupport>	
+</CCapturaTCPXML>

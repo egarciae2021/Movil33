@@ -1,0 +1,53 @@
+﻿@using VisualSoft.MovilNetCloud.Web.Models
+@model VisualSoft.MovilNetCloud.Web.Models.Error
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Error | PCSistel Central 3.3 </title>
+
+    <link rel="shortcut icon" href="Content/img/favicon.png" type="image/x-icon" />
+    <link href="@Url.Content("~/Content/css/shared/fonts.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/shared/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/shared/nifty.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/shared/nifty-demo-icons.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/shared/pace.min.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/Content/js/shared/pace.min.js")"></script>
+    <link href="@Url.Content("~/Content/css/shared/nifty-demo.min.css")" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1">
+        <div id="container" class="cls-container">
+            <div class="cls-header">
+                <div class="cls-brand">
+                    <a class="box-inline" href="#">
+                        <!-- <img alt="Nifty Admin" src="img/logo.png" class="brand-icon"> -->
+                        <span class="brand-title">PCSistel<span class="text-thin"> Móvil 3.3</span></span>
+                    </a>
+                </div>
+            </div>
+            <div class="cls-content">
+                <h1 class="error-code">500</h1>
+                <p class="h4 text-uppercase text-bold">Error en el servidor!</p>
+                <div class="pad-btm">
+                    La siguiente página ha producido un error, comuníquese con su administrador.
+                    <br /><br />
+                    @Model.Mensaje
+                </div>
+            </div>
+            <hr class="new-section-sm bord-no">
+            <div class="pad-top"><a class="btn btn-primary" href="@Url.Action("Index", "Login")">Regresar a Inicio</a></div>
+        </div>
+    </form>
+    <script src="@Url.Content("~/Content/js/shared/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/shared/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/shared/nifty.min.js")"></script>
+</body>
+</html>

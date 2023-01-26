@@ -1,0 +1,482 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Login
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+@section RenderHeader {
+    <style type="text/css">
+        #dvPrincipal
+        {
+            width: 1000px;
+            height: 600px;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+        }
+
+        ul
+        {
+            list-style: none;
+            float: left;
+            text-align: left;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+        }
+
+        #txtUsuario, #txtContrasena, #txtCorreo
+        {
+            width: 100%;
+        }
+
+
+        #btnConfigBD
+        {
+            position: absolute;
+            top: 0px;
+            right: -2px;
+            line-height: normal;
+        }
+
+            #btnConfigBD > a:first-child
+            {
+                background-color: #010101;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                top: 0px;
+                right: 0px;
+                border: 1px solid rgb(238,238,238);
+                border-bottom-left-radius: 20px;
+                padding: 10px;
+            }
+
+            #btnConfigBD > a:hover
+            {
+                cursor: pointer;
+                background-color: #2E528E;
+            }
+
+            #btnConfigBD > a:active
+            {
+                background-color: #4674C3;
+            }
+
+        #dvRecordarContrasena
+        {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        #dvConfirmacionEnvio
+        {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        .content-dvRecordarContrasena
+        {
+            margin: 0px auto;
+            margin-top: 120px;
+            position: relative;
+            padding: 10px;
+            width: 380px;
+            min-height: 200px;
+            border-radius: 4px;
+            background-color: #FFFFFF;
+            box-shadow: 0 2px 5px #666666;
+        }
+
+        .content-dvRecordarTitulo
+        {
+            background: #063466;
+            margin: -10px -10px 0px -10px;
+            padding-top: 10px;
+            border-radius: 4px 4px 0px 0px;
+        }
+
+        .content-dvRecordarContrasena h2
+        {
+            color: white;
+            /*border-bottom: 1px solid #063466;*/
+            margin-top: 0;
+            /*padding-bottom: 4px;*/
+            padding: 14px;
+            font-size: large;
+        }
+
+        .popup-overlay
+        {
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 89;
+            display: none;
+            background-color: #777777;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+        .h2-NombreProducto1 {
+            color: @System.Configuration.ConfigurationManager.AppSettings["ColorNombreProducto1"];
+            float: right;
+            font-weight: bolder;
+            margin-right: 17px;
+            text-shadow: 1px 1px 1px black;
+        }
+        .h2-NombreProducto2 {
+            color: @System.Configuration.ConfigurationManager.AppSettings["ColorNombreProducto2"];
+            float: right; 
+            font-weight: bolder; 
+            margin-right: 17px; 
+            text-shadow: 1px 1px 1px black;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function () {
+            fnEventos();
+
+            //#region Recuperar Contraseña
+            $("#LblOlvidoContrasena").click(function () {
+                $("#dvRecordarContrasena").show();
+                $("#txtCorreo").val("");
+                $("#txtCorreo").focus();
+                $(".popup-overlay").show();
+            });
+
+            $("#txtCorreo").keyup(function (e) {
+                if (e.keyCode != 13) {
+                    if ($(this).val() == "") {
+                        $//("#imgWarning").hide();
+                        $("#dvFormatInvalid").hide();
+                        //$("#imgOk").hide();
+                        $("#txtCorreo").css("border-color", "");
+                    } else {
+                        if (fnValidarControlKeypress($(this).attr("data-val-regex-pattern"), $(this).val())) {
+                            //$("#imgWarning").hide();
+                            $("#dvFormatInvalid").hide();
+                            //$("#imgOk").show();
+                            $("#txtCorreo").css("border-color", "green");
+                        } else {
+                            //$("#imgWarning").show();
+                            $("#dvFormatInvalid").show();
+                            //$("#imgOk").hide();
+                            $("#txtCorreo").css("border-color", "#CF2C2C");
+                        }
+                    }
+                }
+                //else {
+                //    $("#btnEnviar").click();
+                //}
+            });
+
+            $("#btnCerrar").click(function () {
+                $("#dvRecordarContrasena").hide();
+                $('.popup-overlay').hide();
+            });
+
+            $("#btnVolverLogin").click(function () {
+                $("#dvConfirmacionEnvio").hide();
+                $('.popup-overlay').hide();
+            });
+
+            $("#btnEnviar").click(function () {
+                $("#dvWaiting").show();
+
+                var vCorreo = $.trim($("#txtCorreo").val());
+                if (vCorreo == '') 
+                {
+                    miAlerta("Correo", "Ingrese su correo electrónico", "", "#FFCC66");
+                    $("#dvWaiting").hide();
+                    return;
+                }
+
+                //if (!validarEmail2(vCorreo)) {
+                //    alert("El formato del correo no es válido.");
+                //    $("#dvWaiting").hide();
+                //    return;
+                //}
+
+                var Host = window.location.host;
+                var Protocol = window.location.protocol;
+                var PagRestCont = "Login/RestPass";
+                //var PagRestCont = "RestPass";
+                var PaginaRC = Protocol + '//' + Host + '/' + PagRestCont;
+
+
+                var Data_RestablecerContrasenaPortal = { Correo: vCorreo, Url: PaginaRC }
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("RestablecerContrasenaCentral", "Login")',
+                    data: JSON.stringify(Data_RestablecerContrasenaPortal),
+                    cache: false,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        var Resultado = result.split('|')[0];
+                        var Mensaje = result.split('|')[1];
+                        $("#dvWaiting").hide();
+                        if (Resultado == '1') {
+
+                            $("#lblCorreoEnvio").text(vCorreo);
+                            //$("#lblCorreoEnvio").text(Mensaje); //debo comentar
+                            
+                            $("#dvConfirmacionEnvio").show();
+                            $("#dvRecordarContrasena").hide();
+                        } else {
+                            miAlerta("Mensaje", Mensaje, "", "#FFCC66");
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                    }
+                });
+            });
+            //#endregion
+        });
+
+        function fnEventos() {
+            
+            $("#btnIngresar").click(function () {
+                if (fnValidarModelo()) {
+                    $("#dvWaiting").show(300, function () {
+
+                    });
+                }
+                else {
+                    return false;
+                }
+            });
+
+            $('#txtUsuario').live("keypress", function (e) {
+                //$('#txtUsuario').val($.trim($('#txtUsuario').val()));
+                //if (e.keyCode == 13) {
+                //    $("#txtContrasena").focus();
+                //}
+            });
+
+            $('#txtContrasena').live("keypress", function (e) {
+                //$('#txtContrasena').val($.trim($('#txtContrasena').val()));
+                //if (e.keyCode == 13) {
+                //    $("#chkRecordarme").focus();
+                //}
+            });
+        }
+
+        function fnValidarModelo() {
+            var resultado = true;
+
+            if ($.trim($("#txtUsuario").val()) == "") {
+                $("#txtUsuario").focus();
+                resultado = false;
+                miAlerta("Usuario", "Ingrese Usuario", "", "#FFCC66");
+            }
+            else {
+                if ($.trim($("#txtContrasena").val()) == "") {
+                    $("#txtContrasena").focus();
+                    resultado = false;
+                    miAlerta("Password", "Ingrese Password", "", "#FFCC66");
+                }
+                else {
+                    if ($.trim($("#txtUsuario").val()).length > parseInt($("#txtUsuario").attr("maxlength"))) {
+                        $("#txtUsuario").focus();
+                        resultado = false;
+                        miAlerta("Usuario", "Ha superado el numero de caracteres permitidos", "", "#FFCC66");
+                    }
+                    else {
+                        if ($.trim($("#txtContrasena").val()).length > parseInt($("#txtContrasena").attr("maxlength"))) {
+                            $("#txtContrasena").focus();
+                            resultado = false;
+                            miAlerta("Password", "Ha superado el numero de caracteres permitidos", "", "#FFCC66");
+                        }
+                    }
+                }
+            }
+
+            return resultado;
+        }
+
+        function fnValidarControlKeypress(regex, valor) {
+            var ExpRegular = new RegExp(regex);
+
+            if (ExpRegular.test(valor)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    </script>
+}
+
+@if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count > 0)
+{ 
+    <div id="alertaSumary" class="modal fade bs-example-modal-sm" style="float: left;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #063466; color: white; font-size: medium; font-weight: bolder">
+                    Alerta
+                    <button type="button" class="close" data-dismiss="modal" style="color:white!important;opacity:0.6!important;">x</button>
+                </div>
+                <div class="modal-body" style="float: left; background: white; box-shadow: 0px 0px 5px gray;">
+                    <span class="glyphicon" aria-hidden="true" style="float: left; margin-right: 15px; font-size: 20pt;"></span>
+                    <div style="float: left;">
+                        @Html.ValidationSummary(true)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#alertaSumary").modal('show');
+    </script>
+}
+
+<div id="dvPrincipal" class="CentrarAbsoluto" style="border-radius: 20px; overflow: hidden; background: white; box-shadow: 1px 1px 1px gray;">
+    @if (HttpContext.Current.Request.IsLocal || HttpContext.Current.Request.Url.OriginalString.ToLower().Contains("localhost"))
+    {
+        <div id="btnConfigBD">
+            <a href="@Url.Action("ConfigBD", "Login")">
+                <img src="~/Common/Images/OrangeGear.png" />
+            </a>
+        </div>
+    }
+
+
+    <div style="line-height: normal; width: 100%; height: 80px; border-bottom: 1px solid rgb(238,238,238);">
+        <img src="~/Common/Images/Logo_PMS.png" style="margin-top: 15px; float: left; margin-left: 20px;" width="300" height="50" />
+    </div>
+    <div style="width: 100%; height: 520px;">
+        <div style="width: 70%; height: 520px; float: left;">
+            <img src="~/Common/Images/FondoLogin.jpg" width="100%" height="100%" />
+        </div>
+        <div id="dvLoginPrincipal" style="width: 30%; height: 520px; float: left; border-left: 1px solid rgb(238,238,238);">
+            <div style="width: 100%; height: 70px;">
+                @*<h2 style="color: #E78503; float: right; font-weight: bolder; margin-right: 17px; text-shadow: 1px 1px 1px black;">Atención </h2>
+                <h2 style="color: #10589A; float: right; font-weight: bolder; text-shadow: 1px 1px 1px black;">Central&nbsp;</h2>*@
+                <h2 class="h2-NombreProducto2">@ViewData["NombreProducto2"]</h2>
+                <h2 class="h2-NombreProducto1">@ViewData["NombreProducto1"]</h2>
+            </div>
+
+            @using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl }))
+            {                
+                @Html.AntiForgeryToken()
+                <fieldset>
+                    <legend style="font-weight: bolder; color: white; background-color: #10589A;">Login</legend>
+                    <ul style="margin-top: 30px; padding: 5px;">
+                        <li>
+                            @Html.LabelFor(m => m.Usuario)
+                        </li>
+                        <li>
+                            @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control", id = "txtUsuario", maxlength = "20" })
+                        </li>
+                        <li>
+                            @Html.ValidationMessageFor(m => m.Usuario)
+                        </li>
+                        <li style="margin-top: 20px;">
+                            @Html.LabelFor(m => m.Contrasena)
+                        </li>
+                        <li>
+                            @Html.PasswordFor(m => m.Contrasena, new { @class = "form-control", id = "txtContrasena", maxlength = "20" })
+                        </li>
+                        <li>
+                            @Html.ValidationMessageFor(m => m.Contrasena)
+                        </li>
+                        <li style="margin-top: 20px;">
+                            @Html.LabelFor(m => m.Recordarme, new { @class = "checkbox", @style = "float:left;" })
+                            @Html.CheckBoxFor(m => m.Recordarme, new { @style = "float:left; margin-top:14px; margin-left:10px;", id = "chkRecordarme" })
+                        </li>
+                    </ul>
+                    <div style="clear: both;"></div>
+                    <input type="submit" value="Iniciar sesión" id="btnIngresar" class="btn btn-success btn-lg" />
+                    <div style="width: 100%; line-height: normal; text-align: center; margin: 10px 0px 0px 0px;">
+                        <label id="LblOlvidoContrasena" style="color: black; text-decoration: underline; font-size: 12px; cursor: pointer;">¿Olvidó su contraseña?</label>
+                    </div>
+                    <div class="pad-all" style="text-align: center;">
+                        <span id="lblProductoRelease" class="mar-rgt"> @ViewData["ReleaseProducto"]</span>
+                    </div>
+                </fieldset>
+                <div id="dvRecordarContrasena" style="display: none;">
+                    <div class="content-dvRecordarContrasena">
+                        <div class="content-dvRecordarTitulo">
+                            <h2>Cambia tu contraseña</h2>
+                        </div>
+                        <div style="color: #48484B; padding-bottom: 8px;">
+                            <b>Ingresa tu correo electrónico</b>
+                        </div>
+                        <div id="dvCampo" class="dvPanel" style="overflow: auto;">
+                            <table style="width: 99%;">
+                                <tr>
+                                    <td>
+                                        <div style="width: 100%; line-height: normal; text-align: left; margin: 5px 0px 10px 0px;">
+                                            @Html.TextBoxFor(m => m.Correo, new { @class = "form-Control", id = "txtCorreo", maxlength = "35" })
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 25px; vertical-align: top;">
+                                        <div id="dvFormatInvalid" style="color: #CF2C2C; font-size: small; text-align: left; display: none;">
+                                            El formato del correo no es válido.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div style="margin-top: 2px;">
+                            <table width="99%">
+                                <tr>
+                                    <td>
+                                        <button id="btnCerrar" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                            <span class="glyphicon glyphicon-share" aria-hidden="true" style="color: #E56C25"></span>
+                                            Cerrar
+                                        </button>
+                                        <button id="btnEnviar" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                            <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="color: #E56C25"></span>
+                                            Enviar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <div id="dvConfirmacionEnvio" style="display: none;">
+        <div class="content-dvRecordarContrasena">
+            <div class="content-dvRecordarTitulo">
+                <h2>Revisa tu correo</h2>
+            </div>
+            <div style="color: #48484B; padding-bottom: 30px;">
+                Hemos enviado un correo electrónico a
+                <label id="lblCorreoEnvio" style="margin-bottom: 0px;"></label>
+                . Haz clic en el enlace dentro del correo electrónico para restablecer tu contraseña.
+            </div>
+            <div style="margin-top: 8px;">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            <button id="btnVolverLogin" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true" style="color: #E56C25"></span>
+                                Listo
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="popup-overlay" style="display: none;"></div>
+</div>
+
+
+

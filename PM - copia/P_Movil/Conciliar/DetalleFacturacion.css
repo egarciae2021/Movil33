@@ -1,0 +1,17 @@
+﻿.CabeceraDato {
+    font-weight: bold;
+    font-size: 12px;
+    color: #1D5987;
+    width: 80px;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.CabeceraValor {
+    font-weight: bold;
+    font-size: 14px;
+    color: #E78609;
+    /*width: 100px;*/
+    text-align: left;
+    padding-bottom: 10px;
+}

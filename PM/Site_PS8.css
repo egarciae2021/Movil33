@@ -1,0 +1,24 @@
+﻿body, #content-container, #navbar {
+    background-color: #FFFFFF !important; /*#ecf0f5;*/
+}
+a.disabled {
+   pointer-events: none;
+   cursor: progress !important;
+}
+
+.list-group-item {
+    padding-bottom: 4px !important;
+}
+
+.contenidoPrincipal {
+    background-color: #FFFFFF !important; /*#ECF0F5;*/
+}
+
+#dvContenido {
+    background-color: #FFFFFF !important; /*#ECF0F5;*/
+}
+
+li.list-group-item > spam {
+    font-weight: 700 !important;
+}
+

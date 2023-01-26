@@ -1,0 +1,121 @@
+﻿body {
+}
+
+#general
+{
+    width:100%;
+    border:0px dotted gray;
+}
+
+#principal
+{
+  width:1024px;  
+  border:0px dotted gray;
+  margin:auto;
+}
+
+.cuerpo
+{
+    width:1024px;  
+    border:0px dotted gray;
+    margin:auto;
+}
+
+.cuerpo_pedidos
+{
+    width:620px;  
+    border:0px dotted gray;
+    margin:auto;
+}
+
+#titulo
+{
+    margin:auto;
+    width:200px;
+    text-align:center;
+    vertical-align:middle;
+    border:0px dotted gray;
+    font-size:14pt;
+}
+
+#head_pedidos
+{
+    height:50px;    
+}
+#body_pedidos
+{
+    height:500px;  
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+
+.pedido
+{
+    width:580px;  
+    border:0px dotted gray;
+    height:100px;
+    margin-bottom:5px;
+}
+
+.p_nomCam
+{
+    width:580px;
+    height:20px;
+    font-size:medium;
+    font-family:Verdana;
+    border-bottom:1px solid skyblue;
+    overflow:hidden;
+}
+
+.p_fec
+{
+    width:193px;
+    height:20px;
+    float:left;
+    overflow:hidden;
+    font-size:10pt;    
+}
+.p_tip
+{
+    width:193px;
+    height:20px;
+    float:left;
+    overflow:hidden;    
+    font-size:10pt;    
+}
+.p_finan
+{
+    width:193px;
+    height:20px;
+    float:left;
+    overflow:hidden;    
+    font-size:10pt;    
+}
+.p_fecEnt
+{
+    width:575px;
+    height:20px;
+    float:left;
+    overflow:hidden;    
+    font-size:10pt;    
+    border:0px dotted gray;
+}
+
+.p_dir
+{
+    width:575px;
+    height:40px;
+    float:left;
+    overflow:hidden;    
+    font-size:10pt;    
+    border:0px dotted gray;
+}
+
+.filtro
+{
+    background: rgba(0, 0, 0, .05);
+    border-radius:5px;
+    float:left;
+    margin-top:5px;
+}
+

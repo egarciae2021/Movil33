@@ -1,0 +1,10 @@
+﻿{
+  "version": "2.0.3",
+  "output": "Warning",
+  "ignore": [
+    "E:\\PRODUCTOS\\PCSISTELSUITE1.0\\1.Main\\Web\\PCSistelCentralIncidencias\\VisualSoft.CentralIncidencias.Web\\Common\\Scripts\\FusionCharts\\",
+    "E:\\PRODUCTOS\\PCSISTELSUITE1.0\\1.Main\\Web\\PCSistelCentralIncidencias\\VisualSoft.CentralIncidencias.Web\\Common\\Scripts\\FusionCharts\\jquery-1.8.3.js"
+  ],
+  "options": {},
+  "globalVariables": []
+}

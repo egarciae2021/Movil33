@@ -1,0 +1,309 @@
+2022/10/13 00:20:51.107,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 00:20:51.116,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 00:20:51.116,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 00:21:01.238,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 00:21:01.238,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 00:21:01.238,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 00:21:07.413,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 00:21:07.413,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 00:21:07.413,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 00:23:11.874,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:23:11.874,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:23:11.874,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:24:19.980,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:24:19.980,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:24:19.980,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:33:16.451,[25],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:33:16.451,[25],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:33:16.451,[25],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:33:28.418,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:33:28.418,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:33:28.418,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:34:16.117,[22],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:34:16.117,[22],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:34:16.117,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:34:21.442,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E217173A86DB&inTipSol=38&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaRoamingMegas&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5280
+2022/10/13 00:34:21.442,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E217173A86DB&inTipSol=38&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaRoamingMegas&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5280
+2022/10/13 00:34:21.442,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E217173A86DB&inTipSol=38&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaRoamingMegas&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5280
+2022/10/13 00:34:47.954,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:34:47.954,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:34:47.955,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:34:47.963,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:34:47.963,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:34:47.963,[33],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5280&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/10/13 00:36:50.526,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:36:50.526,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:36:50.526,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/10/13 00:37:08.009,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:37:08.010,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:37:08.010,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=OF9D6EA30540&inTipSol=23&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=RevisionLinea&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5287
+2022/10/13 00:37:18.290,[12],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:37:18.290,[12],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 00:37:18.290,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx
+2022/10/13 12:39:49.238,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 12:39:49.246,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 12:39:49.246,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 12:39:57.077,[13],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 12:39:57.077,[13],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 12:39:57.077,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 12:40:02.398,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 12:40:02.398,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 12:40:02.398,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 12:40:39.728,[11],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:40:39.728,[11],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:40:39.728,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:40:50.100,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:40:50.100,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:40:50.100,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:41:06.965,[9],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=3&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:41:06.965,[9],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=3&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:41:06.965,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=3&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:41:27.125,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:41:27.125,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:41:27.125,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:41:27.135,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:41:27.135,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:41:27.135,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:42:09.730,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:09.730,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:09.730,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:14.929,[13],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:14.929,[13],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:14.929,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.585,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.585,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.585,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.814,[18],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.814,[18],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:15.814,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:16.191,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:16.191,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:16.191,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:42:23.652,[18],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:42:23.652,[18],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:42:23.652,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:42:32.061,[23],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:42:32.061,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:42:32.061,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:48:34.972,[35],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:48:34.972,[35],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:48:34.972,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:49:25.868,[36],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/10/13 12:49:25.868,[36],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/10/13 12:49:25.868,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Caracteristica&inCod=5607&inTip=3&inTipOri=0
+2022/10/13 12:49:34.621,[38],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:49:34.621,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:49:34.621,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:51:04.312,[36],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:04.312,[36],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:04.312,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:04.322,[39],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:04.322,[39],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:04.322,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:51:16.475,[39],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:16.475,[39],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:16.475,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:32.704,[28],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:32.704,[28],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:32.704,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:40.025,[28],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:40.025,[28],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:51:40.025,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:52:00.624,[39],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=4&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:52:00.624,[39],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=4&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:52:00.625,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=4&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:04.616,[38],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:04.616,[38],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:04.616,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:14.734,[38],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:54:14.734,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:54:14.734,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 12:54:18.938,[41],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:18.938,[41],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:18.938,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:23.544,[38],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:54:23.544,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:54:23.544,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:54:27.687,[46],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=24&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:27.687,[46],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=24&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:27.688,[46],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?VistaVer=1&CodEntidad=14&Cod=24&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 12:54:42.163,[38],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:54:42.163,[38],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:54:42.164,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:54:42.175,[50],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:54:42.176,[50],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:54:42.176,[50],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?view=1&Par=ORGA_P_inCODINT&Cod=001005
+2022/10/13 12:55:17.527,[41],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:17.527,[41],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:17.527,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:17.534,[50],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:17.534,[50],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:17.534,[50],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=M_ORGA&inTipOri=0
+2022/10/13 12:55:47.764,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/10/13 12:55:47.764,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/10/13 12:55:47.764,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=0
+2022/10/13 12:56:25.815,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2022/10/13 12:56:25.815,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2022/10/13 12:56:25.815,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2022/10/13 12:56:40.570,[48],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/10/13 12:56:40.570,[48],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/10/13 12:56:40.570,[48],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/10/13 12:56:49.329,[46],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:56:49.329,[46],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:56:49.329,[46],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 12:56:59.817,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=1&Par=P_inCod&vcTab=SEG_Perfil
+2022/10/13 12:56:59.817,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=1&Par=P_inCod&vcTab=SEG_Perfil
+2022/10/13 12:56:59.817,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=1&Par=P_inCod&vcTab=SEG_Perfil
+2022/10/13 12:57:05.515,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/10/13 12:57:05.516,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/10/13 12:57:05.516,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_SEG_PoliticaUsuario.aspx?vcTab=SEG_POLITICA&inCod=227&inTip=3&inTipOri=0
+2022/10/13 13:01:08.782,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:01:08.782,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:01:08.782,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:01:10.797,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:01:10.797,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:01:10.797,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:02:17.784,[20],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:02:17.784,[20],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:02:17.784,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:07:50.814,[59],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:07:50.814,[59],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:07:50.814,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:11:31.546,[75],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:11:31.546,[75],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:11:31.546,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:12:36.925,[63],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:12:36.925,[63],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:12:36.925,[63],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:12:50.645,[73],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 13:12:50.645,[73],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 13:12:50.645,[73],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 13:12:58.195,[87],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:12:58.195,[87],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:12:58.195,[87],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:13:02.998,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:13:02.998,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:13:02.998,[85],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:14:34.450,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 13:14:34.457,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 13:14:34.457,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 13:14:42.000,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:14:42.000,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:14:42.000,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:14:46.768,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:14:46.768,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:14:46.768,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:15:08.802,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:15:08.803,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:15:08.803,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:15:40.869,[20],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:15:40.869,[20],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:15:40.870,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:16:47.125,[10],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:16:47.125,[10],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:16:47.125,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:42:40.798,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 13:42:40.805,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 13:42:40.805,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 13:42:49.267,[7],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:42:49.267,[7],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:42:49.267,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 13:42:54.109,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:42:54.109,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:42:54.109,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 13:43:00.411,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:43:00.411,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:43:00.411,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 13:43:31.457,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:43:31.458,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:43:31.458,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 13:43:33.949,[7],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:43:33.949,[7],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 13:43:33.949,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:04:34.583,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/10/13 14:04:34.590,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/10/13 14:04:34.590,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/10/13 14:04:42.086,[10],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 14:04:42.086,[10],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 14:04:42.086,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/10/13 14:04:46.845,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 14:04:46.845,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 14:04:46.845,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/10/13 14:05:14.541,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:05:14.541,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:05:14.541,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:05:24.657,[18],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:05:24.657,[18],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:05:24.657,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:05:35.788,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:05:35.788,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:05:35.788,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 14:06:04.315,[10],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:06:04.315,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:06:04.315,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 14:06:07.058,[7],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:07.058,[7],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:07.058,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=0&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:25.845,[7],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:25.845,[7],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:25.845,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:40.556,[33],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:40.556,[33],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:06:40.556,[33],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:07:01.880,[7],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:07:01.880,[7],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:07:01.880,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:09.099,[49],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:15:09.100,[49],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:15:09.100,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:15:21.133,[49],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:21.133,[49],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:21.133,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:33.123,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:33.123,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:33.123,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:33.125,[59],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:33.125,[59],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:33.125,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:15:40.796,[48],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:40.796,[48],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:40.796,[48],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=1&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:15:42.834,[49],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:15:42.834,[49],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:15:42.834,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 14:16:08.451,[59],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:08.451,[59],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:08.451,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:08.459,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:08.459,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:08.459,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:46.429,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:46.429,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:16:46.429,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=1&EsResponsable=1
+2022/10/13 14:17:26.926,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:17:26.926,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:17:26.926,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:22:45.873,[59],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=2&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:22:45.874,[59],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=2&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:22:45.874,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=2&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 14:23:08.102,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:23:08.102,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 14:23:08.102,[74],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/10/13 15:18:19.188,[92],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 15:18:19.189,[92],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 15:18:19.189,[92],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?vcTab=M_ORGA
+2022/10/13 15:22:01.033,[94],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=54&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 15:22:01.033,[94],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=54&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 15:22:01.033,[94],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Organizacion.aspx?Cod=54&Par=ORGA_P_inCODINT&vcTab=M_ORGA
+2022/10/13 15:22:58.796,[94],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:22:58.796,[94],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:22:58.796,[94],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:23:07.941,[16],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 15:23:07.941,[16],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 15:23:07.941,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 15:23:57.842,[14],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:23:57.843,[14],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:23:57.843,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_ORGA&inCod=33&inTip=4&inTipOri=0
+2022/10/13 15:24:27.193,[82],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 15:24:27.193,[82],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/10/13 15:24:27.193,[82],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel

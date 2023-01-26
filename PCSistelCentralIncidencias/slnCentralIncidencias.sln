@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualSoft.CentralIncidencias.Web", "VisualSoft.CentralIncidencias.Web\VisualSoft.CentralIncidencias.Web.csproj", "{D1417F03-74DD-400C-8275-F089A958FA0A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://srvsoftware:8080/tfs/productos
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = VisualSoft.CentralIncidencias.Web\\VisualSoft.CentralIncidencias.Web.csproj
+		SccProjectName1 = VisualSoft.CentralIncidencias.Web
+		SccLocalPath1 = VisualSoft.CentralIncidencias.Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1417F03-74DD-400C-8275-F089A958FA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1417F03-74DD-400C-8275-F089A958FA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1417F03-74DD-400C-8275-F089A958FA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1417F03-74DD-400C-8275-F089A958FA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

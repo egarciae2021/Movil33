@@ -1,0 +1,376 @@
+﻿@using System.Web.Script.Serialization;
+@model VisualSoft.PCSistelMovil.Dominio.BE.ENT_MVVM_Dominio
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+    @*ViewBag.Title = "Index";*@
+
+@section RenderHeader {
+    @Styles.Render("~/Content/Login/Index")
+    @*@Scripts.Render("~/bundles/Login/Index")*@
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
+    @Scripts.Render("~/bundles/Capcha")
+}
+
+
+
+
+<style type="text/css">
+    #alertaSumary ul
+    {
+        list-style: none;
+        margin: 0px;
+        padding: 2px;
+    }
+
+    #dvRecordarContrasena
+    {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+    #dvConfirmacionEnvio
+    {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .content-dvRecordarContrasena
+    {
+        margin: 0px auto;
+        margin-top: 120px;
+        position: relative;
+        padding: 10px;
+        width: 380px;
+        min-height: 200px;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px #666666;
+    }
+
+    .content-dvRecordarTitulo
+    {
+        background: #005C84 /*#063466*/;
+        margin: -10px -10px 0px -10px;
+        padding-top: 10px;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    .content-dvRecordarContrasena h2
+    {
+        color: white;
+        /*border-bottom: 1px solid #063466;*/
+        margin-top: 0;
+        /*padding-bottom: 4px;*/
+        padding: 14px;
+        font-size: large;
+    }
+
+    .popup-overlay
+    {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 89;
+        display: none;
+        background-color: #777777;
+        cursor: pointer;
+        opacity: 0.7;
+    }
+</style>
+
+
+
+@if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count > 0)
+{
+    <div id="alertaSumary" class="modal fade bs-example-modal-sm" style="float: left;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #063466; color: white; font-size: medium; font-weight: bolder">
+                    Alerta
+                        @*<button type="button" class="close" data-dismiss="modal" style="color:white!important;opacity:0.6!important;">x</button>*@
+                    <button style="color: white !important;" type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="float: left; background: white; box-shadow: 0px 0px 5px gray;">
+
+                    <div style="float: left;">
+                        <span style="float: left; margin: 15px; font-size: 20pt; color: #d9534f;" class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                        @Html.ValidationSummary(true)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            //alert("Login\n" + BrowserDetect.browser + ", " + BrowserDetect.version);
+            if (BrowserDetect.browser == "Explorer" && BrowserDetect.version < 9) {
+                alert(('@ViewData.ModelState[""].Errors[0].ErrorMessage.ToString()').replace(/&#225;/g, "á").replace(/&#233;/g, "é").replace(/&#237;/g, "í").replace(/&#243;/g, "ó").replace(/&#250;/g, "ú").replace(/&#241;/g, "ñ"));
+            } else {
+                $("#alertaSumary").modal('show');
+            }
+        });
+    </script>
+}
+else
+{
+    if (Model != null && Model.MostrarAcuerdo)
+    {
+    <script type="text/javascript">
+        $(function () {
+            $("#txtContrasena").val("@Model.Contrasena");
+            @*$($("#dvDialogoContrato object")[0]).attr("data", window.location + "/Temporal/@Model.NombreArchivoAcuerdo");*@
+            $($("#dvDialogoContrato iframe")[0]).removeAttr("src");
+            $("#aDescargaContrato").removeAttr("href");
+            $("#aDescargaContrato").attr("href", window.location.toString().split('?')[0] + "/Temporal/@Model.NombreArchivoAcuerdo");
+            $($("#dvDialogoContrato iframe")[0]).attr("src", window.location.toString().split('?')[0] + "/Temporal/@Model.NombreHtmlAcuerdo");
+            $("#hdDominio").val("@Model.Dominio");
+            $("#dvDialogoContrato").appendTo($("body"));
+
+            $("#dvDialogoContrato").modal('show');
+        });
+    </script>
+            
+    }
+
+}
+
+<input id="hdfCapcha" type="hidden" value="0" />
+
+
+
+<div id="dvPrincipal" class="CentrarAbsoluto" >
+    @if (HttpContext.Current.Request.IsLocal || HttpContext.Current.Request.Url.OriginalString.ToLower().Contains("localhost"))
+    {
+        <div id="btnConfigBD">
+            <a href="@Url.Action("ConfigBD", "Login")">
+                <img src="~/Common/Images/OrangeGear.png" />
+            </a>
+        </div>
+    }
+
+
+    <div style="line-height: normal; width: 100%; height: 80px; border-bottom: 1px solid rgb(238,238,238);">
+        @*<img src="~/Common/Images/barra_logo.png" style="margin-top:20px;" />*@
+        @*<img src="~/Common/Images/logo-visual-soft.png" style="margin-top:15px; float:left; margin-left:20px;" width="300" height="50" />*@
+        <img src="~/Common/Images/Login/Logo_Portal.png" style="margin-top: 0px; float: left; margin-left: 0px;" width="240px" height="80" />
+    </div>
+    <div style="width: 100%; height: 520px;">
+        <div style="width: 70%; height: 550px; float: left;">
+            @*<img src="~/Common/Images/portal2.jpg" width="100%" height="100%" />*@
+            <img src="~/Common/Images/Login/FondoLogin.png" width="100%" height="100%" />
+        </div>
+        <div id="dvLoginPrincipal" style="width: 30%; height: 520px; float: left; border-left: 1px solid rgb(238,238,238);">
+            <div style="width: 100%; height: 70px; border: 0px dotted gray;">
+                <h4 style="color: #10589A; float: right; font-weight: bolder; margin-right: 50px; margin-top: 27px;">Móvil </h4>
+                <h1 style="color: #E78503; float: right; font-weight: bolder;">Gestión&nbsp;</h1>
+                @*<h1 style="color: #10589A; float: right; font-weight: bolder;">PC </h1>*@
+            </div>
+            <div>Inicio de Sesión </div>
+            <div id="dvLogin" style="width: 270px; height: 300px; border: 0px dotted gray; margin: 20px 0px 10px 10px; display: none;">
+                @*                <div style="width:100%; line-height:normal; margin:10px 0px;">
+                    Inicio de Sesión
+                </div>*@
+                @using (Html.BeginForm("Index", "Login", @Model, FormMethod.Post, new { id = "frmIngresar" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 10px 0px 0px 0px;">
+                        Usuario:
+                    </div>
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 5px 0px 10px 0px;">
+                        @*<input id="txtUsuario" type="text"  style="width:270px; "/>*@
+                        
+                        @{
+                            string valor = System.Configuration.ConfigurationManager.AppSettings["DominioPorDefecto"];
+                            string idPortal = System.Configuration.ConfigurationManager.AppSettings["IdPortal"];
+                         }
+                        @Html.Hidden("DominioDefecto", valor)
+                        @Html.TextBoxFor(m => m.CadenaDominio, new { @class = "form-control", id = "txtDominio", maxlength = "50" })
+                        @Html.Hidden("IdPortal", idPortal)
+                    </div>
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 10px 0px 0px 0px;">
+                        Contraseña:
+                    </div>
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 5px 0px 10px 0px;">
+                        @*<input id="txtContrasena" type="password" style="width:270px; "/>*@
+                        @Html.PasswordFor(m => m.Contrasena, new { @class = "form-control", id = "txtContrasena", maxlength = "50" })
+                    </div>
+                    
+                    <div style="background-color: #D5EEFE;">
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 10px 0px 0px 0px; font-weight: bold;">
+                        Ir a:
+                    </div>
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 5px 0px 10px 0px; font-weight: bold;">
+                        @*<input id="txtContrasena" type="password" style="width:270px; "/>*@
+                        @*@Html.DropDownListFor(m => m.CadenaDominio, new { @class = "form-control", id = "cboDestino", maxlength = "50" })*@
+
+                        @Html.DropDownListFor(m => m.ProductoDestino, new List<SelectListItem> 
+                                            { 
+                                                new SelectListItem { Text = "Administración", Value = "0",  Selected = (ViewBag.ProductoDestino == "0")?true:false }, 
+                                                new SelectListItem { Text = "Pedidos",  Value = "1", Selected = (ViewBag.ProductoDestino == "1")?true:false },
+                                            },
+                                            new { @class = "form-control", id = "ddlDestino" })
+                    </div>
+                    </div>
+                    
+                    <div style="width: 100%; line-height: normal; text-align: left; margin: 10px 0px 0px 0px;">
+                        <label id="LblOlvidoContrasena" style="color: black; text-decoration: underline; font-size: 12px; cursor: pointer;">¿Olvidó su contraseña?</label>
+                    </div>
+                    <div id="dvCapcha" style="display: none;">
+                        <div style="width: 100%; line-height: normal; text-align: left; margin: 10px 0px 0px 0px;">
+                            C&oacute;digo:
+                        </div>
+                        <div style="width: 100%; line-height: normal; text-align: left; margin: 0px 0px 10px 0px;">
+                            <script type="text/javascript">
+                                sjcap();
+                            </script>
+                        </div>
+                    </div>
+                    
+                    <div style="width: 100%; line-height: normal; text-align: right; margin: 10px 0px 0px 0px;">
+                        <button id="btnIngresar" type="submit" class="btn btn-default btn-lg" style="float: left;">
+                            <span class="glyphicon glyphicon-log-in" aria-hidden="true" style="color: #E56C25"></span>&nbsp;Ingresar
+                        </button>
+                        @*<input type="submit" value="Iniciar sesión" />*@
+                    </div>
+                    
+                       <div class="ManualSistema btnNormal" style="float: right; padding-right: 10px; padding-top: 20px;font-size:12px;">    
+                            <label id="LblGuiaUsuario" style="color: black; text-decoration: underline; font-size: 12px; cursor: pointer;" 
+                                   onclick="location.href='@Url.Action("DescargarGuiaPdf","Login")'"> Gu&iacute;a de Usuario</label>
+                        </div>
+                    
+                    
+                    <div id="dvDialogoContrato" class="modal fade" style="z-index: 999999;">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header" style="background-color: #063466; color: white; font-size: medium; font-weight: bolder">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    T&eacute;rminos y Condiciones
+                                </div>
+                                <div class="modal-body" style="height: 500px;">
+                                    @*      <object type="application/pdf" width="100%" height="100%" ></object> *@
+                                    <iframe id="ifContrato" frameborder="0" style="padding: 0px; margin: 0px;" width="100%" height="100%"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <ul style="float: left; margin: 0px 15px; padding: 0px;">
+                                        @*<li style="display:inline;list-style-type: none;"><input id="chkAceptoContrato" type="checkbox" /></li>*@
+                                        <li style="display: inline; list-style-type: none;">@Html.CheckBoxFor(m => m.AceptoAcuerdo, new { id = "chkAceptoContrato" })</li>
+                                        <li style="display: inline; list-style-type: none;">He leído los t&eacute;rminos del <a id="aDescargaContrato" href="" download="Terminos de contrato PcSitelMovil">contrato</a></li>
+
+                                    </ul>
+
+                                    <button id="btnCerrarContrato" type="button" class="btn btn-default" data-dismiss="modal">No acepto</button>
+                                    <button id="btnAceptarContrato" type="button" class="btn btn-primary">Si acepto</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*@Html.Hidden("hdDominio", @Html.LabelFor(m => m.Dominio))*@
+                        <input type="hidden" id="hdDominio" value="" />
+                    </div>    
+                    
+                    <div id="dvRecordarContrasena" style="display: none;">
+                        <div class="content-dvRecordarContrasena">
+                            <div class="content-dvRecordarTitulo">
+                                <h2>Cambia tu contraseña</h2>
+                            </div>
+                            <div style="color: #48484B; padding-bottom: 8px;">
+                                <b>Ingresa tu usuario de logueo</b>
+                            </div>
+                            <div id="dvCampo" class="dvPanel" style="overflow: auto;">
+                                <table style="width: 99%;">
+                                    <tr>
+                                        <td>
+                                            <div style="width: 100%; line-height: normal; text-align: left; margin: 5px 0px 10px 0px;">
+                                                @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", id = "txtCorreo", maxlength = "50" })
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height: 25px; vertical-align: top;">
+                                            <div id="dvFormatInvalid" style="color: #CF2C2C; font-size: small; text-align: left; display: none;">
+                                                El formato del usuario no es válido.
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="margin-top: 2px;">
+                                <table width="99%">
+                                    <tr>
+                                        <td>
+                                            <button id="btnCerrar" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                                <span class="glyphicon glyphicon-share" aria-hidden="true" style="color: #E56C25"></span>
+                                                Cerrar
+                                            </button>
+                                            <button id="btnEnviar" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="color: #E56C25"></span>
+                                                Enviar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dvConfirmacionEnvio" style="display: none;">
+                        <div class="content-dvRecordarContrasena">
+                            <div class="content-dvRecordarTitulo">
+                                <h2>Revisa tu correo</h2>
+                            </div>
+                            <div style="color: #48484B; padding-bottom: 30px;">
+                                Hemos enviado un correo electrónico a
+                                <label id="lblCorreoEnvio" style="margin-bottom: 0px;"></label>
+                                . Haz clic en el enlace dentro del correo electrónico para restablecer tu contraseña.
+                            </div>
+                            <div style="margin-top: 8px;">
+                                <table width="99%">
+                                    <tr>
+                                        <td>
+                                            <button id="btnVolverLogin" type="button" class="btn btn-default btn-lg" style="float: right;">
+                                                <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true" style="color: #E56C25"></span>
+                                                Listo
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="popup-overlay" style="display: none;"></div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section RenderFooter{
+    <script src="~/Common/Scripts/Views/Login.js"></script>
+}
+
+
+@*<script type="text/javascript">
+    var MiModeloSolicitud;
+
+    $(function () {
+        MiModelo = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+        alert(MiModelo.Dominio);
+    });
+</script>*@

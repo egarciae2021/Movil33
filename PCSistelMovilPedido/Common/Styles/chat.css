@@ -1,0 +1,16 @@
+﻿html, body, form
+{
+    margin: 0px;
+    height: 100%; /*border:1px dotted skyblue;*/
+    overflow-x: hidden;
+}
+
+a:hover
+{
+    cursor: pointer;
+}
+
+body
+{
+    font: 11px Verdana;
+}

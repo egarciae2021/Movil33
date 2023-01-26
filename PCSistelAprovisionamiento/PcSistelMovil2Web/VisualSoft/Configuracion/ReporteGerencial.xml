@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <!--Reporte Gerencial-->
+    <add key="RutaPlantilla" value="E:\BCP\PLANTILLA" />
+    <add key="RutaModelo" value="E:\BCP\MODELO" />
+    <add key="FilaInicio" value="7" />
+    <add key="NombreArchivoModelo" value="modelo.xls" />
+  </appSettings>
+</configuration>

@@ -1,0 +1,69 @@
+2022/09/30 10:41:08.213,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/09/30 10:41:08.219,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/09/30 10:41:08.219,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/09/30 10:41:15.733,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/30 10:41:15.733,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/30 10:41:15.734,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/30 10:41:20.369,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/30 10:41:20.370,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/30 10:41:20.370,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/30 10:44:29.777,[21],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/30 10:44:29.777,[21],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/30 10:44:29.777,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/09/30 10:44:39.594,[22],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 10:44:39.594,[22],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 10:44:39.595,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 10:45:01.412,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/30 10:45:01.412,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/30 10:45:01.412,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_CriteriosReporte.aspx?vcTipRep=5&vcTab=MOV_Linea&inEstado=1&vcCampoFiltro=P_vcNum&vcDescFiltro=
+2022/09/30 10:45:25.364,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:45:25.364,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:45:25.364,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:45:25.370,[34],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:45:25.370,[34],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:45:25.370,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=3&Multiple=1&vcCodEmp=&UnPanel=1
+2022/09/30 10:55:41.006,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:41.006,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:41.006,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:48.240,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:48.240,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:48.240,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1
+2022/09/30 10:55:53.172,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/30 10:55:53.172,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/30 10:55:53.172,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_ReporteDevExpress.aspx?vcTipRep=5&vcTipRepHist=1&vcTab=MOV_Linea&NumCriterio=1&DXCache=img2046640039
+2022/09/30 11:07:47.583,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=MOV_Linea&inTipOri=0
+2022/09/30 11:07:47.584,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Columnas.aspx?vctab=MOV_Linea&inTipOri=0
+2022/09/30 11:07:47.584,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Columnas.aspx?vctab=MOV_Linea&inTipOri=0
+2022/09/30 11:07:51.496,[47],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 11:07:51.496,[47],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 11:07:51.496,[47],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/09/30 11:08:15.145,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:08:15.145,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:08:15.145,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:26:03.677,[23],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:26:03.677,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:26:03.677,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:31:07.684,[61],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:31:07.684,[61],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 11:31:07.684,[61],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:12:56.032,[100],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:12:56.032,[100],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:12:56.032,[100],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:20:33.582,[84],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:20:33.582,[84],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:20:33.582,[84],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:23:32.248,[85],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:23:32.248,[85],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 12:23:32.248,[85],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 13:38:38.863,[23],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 13:38:38.863,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 13:38:38.863,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 13:40:49.855,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Imp_ProcesoPrincipal.aspx?vcTab=&inCod=5325&inTip=3&inTipOri=0
+2022/09/30 13:40:49.855,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Imp_ProcesoPrincipal.aspx?vcTab=&inCod=5325&inTip=3&inTipOri=0
+2022/09/30 13:40:49.855,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Imp_ProcesoPrincipal.aspx?vcTab=&inCod=5325&inTip=3&inTipOri=0
+2022/09/30 13:40:56.623,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Imp_VisorTarea.aspx
+2022/09/30 13:40:56.623,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Imp_VisorTarea.aspx
+2022/09/30 13:40:56.623,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Imp_VisorTarea.aspx
+2022/09/30 15:30:31.245,[57],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 15:30:31.246,[57],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel
+2022/09/30 15:30:31.246,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls%2c.xlsx&FormatoTipo=Excel

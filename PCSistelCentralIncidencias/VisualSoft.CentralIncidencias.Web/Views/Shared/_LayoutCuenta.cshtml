@@ -1,0 +1,73 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.BE.ENT_CINC_Usuario
+<div id="dvCuenta" class="full-Width">
+
+    <nav class="navbar navbar-default alert-info miNav" role="navigation">
+        <div class="container-fluid ">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="@Url.Action("Index", "Home")">
+                    <table style="margin-top: 5px;">
+                        <tr>
+                            <td>
+                                <img src="~/Common/Images/LogoIcon.png" />
+                            </td>
+                            <td>
+                                <h4 style="color: #485CA4 !important;">@System.Configuration.ConfigurationManager.AppSettings["NombreProducto1"]</h4>
+                            </td>
+                            <td>
+                                <h4 style="color: #CE8E2E !important;">@System.Configuration.ConfigurationManager.AppSettings["NombreProducto2"]</h4>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+                <table style="margin-top: 5px;">
+                    <tr>
+                        <td>
+                            <span>@System.Configuration.ConfigurationManager.AppSettings["ReleaseProducto"]</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background: white; ">
+
+                <ul class="nav navbar-nav navbar-right ">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>@Model.Nombres  @Model.Apellidos<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <div id="dvFoto" style="width: 90px; height: 100px; border: 0px dotted gray; margin: auto; border-radius:5px; overflow:hidden;">
+                                    @if (Model.Foto.Tamano > 0)
+                                    {
+                                        <img src="~/Temp/@Model.Foto.Nombre"  height="100%" width="100%" />
+                                    }
+                                    else
+                                    { 
+                                        <img src="~/Common/Images/Silueta.jpg" height="100%" width="100%" />
+                                    }
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Cerrar Sesión", "LogOut", "Login") </li>
+                        </ul>
+                    </li>
+                </ul>
+                @*<div class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar por código">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Buscar</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </nav>
+
+</div>

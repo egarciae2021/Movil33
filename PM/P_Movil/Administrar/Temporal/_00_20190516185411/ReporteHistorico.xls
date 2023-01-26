@@ -1,0 +1,10 @@
+﻿<style> TD { mso-number-format:\@; } </style><table cellspacing='0' rules='all' border='1' id='tbl_Rep_Historico' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Linea</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>CodEmpleado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Empleado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>IMEI</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Modelo</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>CodCentroCosto</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Estado</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>FecInicio</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>FecFin</td><td style='background-color: #C6E0BD; text-aling: center; border: 1px solid;'>Observacion</td>
+	</tr>
+	<tr>
+		<td>0000000016</td><td>6502629</td><td>CURIEL SANTAMARIA ANGEL VICENTE</td><td>359169052857521</td><td>GALAXY S4</td><td>01170025</td><td>Asignado</td><td>06/05/2019</td><td></td><td>INGRESO SISTEMA - CARGA DATA INICIAL</td>
+	</tr>
+
+	</tr>
+</table>

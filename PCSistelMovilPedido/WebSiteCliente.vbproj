@@ -1,0 +1,2832 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{5FDB714D-54C1-461E-B99F-EC6CA4483E67}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WebSiteCliente</RootNamespace>
+    <AssemblyName>WebSiteCliente</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebSiteCliente.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>WebSiteCliente.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CompCorreo">
+      <HintPath>Dlls\CompCorreo.dll</HintPath>
+    </Reference>
+    <Reference Include="CompLicencia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=293baba9788e00b4, processorArchitecture=MSIL">
+      <HintPath>Dlls\CompLicencia.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Charts.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.CodeParser.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Data.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DemoReports.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=4c3bc44151be4b47, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.DemoReports.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Office.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.PivotGrid.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Printing.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.RichEdit.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Utils.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v12.2.UI, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Utils.v12.2.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGauges.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxGauges.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxHtmlEditor.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxHtmlEditor.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxPivotGrid.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxScheduler.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxScheduler.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxScheduler.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxSpellChecker.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxSpellChecker.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxThemes.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.ASPxTreeList.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Mvc.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.Mvc.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Web.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Workflow.Activities.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Workflow.Activities.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Workflow.Activities.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Workflow.Activities.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Core.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Grid.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Grid.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Grid.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v12.2.Extensions, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Grid.v12.2.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpf.Printing.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpo.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v12.2.Web, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.Xpo.v12.2.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraBars.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraCharts.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraCharts.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.Extensions, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraCharts.v12.2.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.UI, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraCharts.v12.2.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v12.2.Web, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraCharts.v12.2.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraEditors.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v12.2.Core, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraGauges.v12.2.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v12.2.Presets, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraGauges.v12.2.Presets.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraGrid.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraLayout.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraNavBar.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraPivotGrid.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraPrinting.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraPrinting.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraReports.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2.Design, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraReports.v12.2.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2.Extensions, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraReports.v12.2.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v12.2.Web, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraReports.v12.2.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraRichEdit.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraTreeList.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.2, Version=12.2.18.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dlls\DevExpress.XtraVerticalGrid.v12.2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\..\..\..\Cloud\GestorEmpresas\v3.2.1\2.QA\Componentes\ComponentesCompilado\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>Dlls\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.1\lib\net40\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.DependencyCollector.2.1.0\lib\net40\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.1.0\lib\net40\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.1.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.Web.2.1.0\lib\net40\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.WindowsServer.2.1.0\lib\net40\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ApplicationInsights.2.1.0\lib\net40\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.XmlTransform">
+      <HintPath>packages\Microsoft.Web.Xdt.2.1.1\lib\net40\Microsoft.Web.XmlTransform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Core">
+      <HintPath>packages\NuGet.Core.2.14.0\lib\net40-Client\NuGet.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="VisualSoft.Comun.Auditoria">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Auditoria.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.Base.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Base.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.Base.DA, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Base.DA.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.CuentaCobro">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.CuentaCobro.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.LibreriaJQ, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.LibreriaJQ.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.SeguridadWeb, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.SeguridadWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.Util">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.Utilitarios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Utilitarios.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistel.Comprobantes.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistel.Comprobantes.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistel.Comprobantes.BL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistel.Comprobantes.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Campana.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Campana.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Campana.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Campana.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.ConfigDom.BE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.ConfigDom.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.ConfigDom.BL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.ConfigDom.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.General.BE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.General.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.General.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.General.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Incidencias.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Incidencias.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Incidencias.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Incidencias.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Movil.BE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Movil.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Movil.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Movil.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Producto.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Producto.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Seguridad.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Seguridad.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Seguridad.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Seguridad.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Solicitudes.BE">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Solicitudes.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Solicitudes.BL">
+      <HintPath>..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Solicitudes.BL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CallNodeJS.js" />
+    <Content Include="Chat\chat.aspx" />
+    <Content Include="Chat\Chat.js" />
+    <Content Include="Common\Contratos\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\controles\ExportarExcelGenerico.ascx" />
+    <Content Include="Common\Documentos\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\a03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\adad.png" />
+    <Content Include="Common\Images\Alerta_16x16.png" />
+    <Content Include="Common\Images\Aprobar.png" />
+    <Content Include="Common\Images\boton_comprar2.png" />
+    <Content Include="Common\Images\Comprobantes_24x24.png" />
+    <Content Include="Common\Images\cronograma.png" />
+    <Content Include="Common\Images\EliminarComptra_24x19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Excel16.png" />
+    <Content Include="Common\Images\facturacion.ico" />
+    <Content Include="Common\Images\facturacion.png" />
+    <Content Include="Common\Images\FAQ_2.png" />
+    <Content Include="Common\Images\FEC.png" />
+    <Content Include="Common\Images\fondoprincipal4.jpg" />
+    <Content Include="Common\Images\fondo_cabecera_CLARO.png" />
+    <Content Include="Common\Images\fondo_login_CLARO.png" />
+    <Content Include="Common\Images\Generar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\hojaTexto.png" />
+    <Content Include="Common\Images\Incidencias\bajar16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Incidencias\bajar20x20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Incidencias\remove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Incidencias\subir16x16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Incidencias\subir20x20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\login-central_CLARO.png" />
+    <Content Include="Common\Images\Logo_Cliente.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\lup.png" />
+    <Content Include="Common\Images\miDiv.png" />
+    <Content Include="Common\Images\miDiv1.png" />
+    <Content Include="Common\Images\ModeloDispositivo\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\money-flat-money.png" />
+    <Content Include="Common\Images\pdf.ico" />
+    <Content Include="Common\Images\Planes\Diapositiva1.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\progressbar_load.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Scripts\ajaxupload.js" />
+    <Content Include="Common\Contratos\contrato empleado_20131111033715.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Contratos\PlantillaContrato.htm" />
+    <Content Include="Common\Images\activar.png" />
+    <Content Include="Common\Images\ampliar.png" />
+    <Content Include="Common\Images\Anuncio\banner1.jpg" />
+    <Content Include="Common\Images\Anuncio\banner2.jpg" />
+    <Content Include="Common\Images\Anuncio\banner3.jpg" />
+    <Content Include="Common\Images\Anuncio\banner4.jpg" />
+    <Content Include="Common\Images\Anuncio\banner5.jpg" />
+    <Content Include="Common\Images\Anuncio\banner6.jpg" />
+    <Content Include="Common\Images\boton_comprar.jpg" />
+    <Content Include="Common\Images\burbuja.png" />
+    <Content Include="Common\Images\burbujainvi.png" />
+    <Content Include="Common\Images\busqueda_generico.png" />
+    <Content Include="Common\Images\cart_shop.png" />
+    <Content Include="Common\Images\Chat\cerrar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\company_logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\42.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\angel.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\beso.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\botado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\caramario.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\corazon.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\diablo.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\dork.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\duh.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\enojado.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\feliz.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\gafas.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\gato.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\guino.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\happy.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\lengua.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\lentes.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\llora.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\megusta-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\muy-feliz.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\o.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\pacman.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\pinguino.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\preocupado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\putnam.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\risa.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\robot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\tiburon.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\triste.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\trucolog-poo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\emoticones\woot.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\icon-chat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\Icono_Chat.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\next.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\user_chat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\Chat\write.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Images\cliente.jpg" />
+    <Content Include="Common\Images\close.png" />
+    <Content Include="Common\Images\ClosePopup.png" />
+    <Content Include="Common\Images\compra.png" />
+    <Content Include="Common\Images\compra3.png" />
+    <Content Include="Common\Images\contrato.png" />
+    <Content Include="Common\Images\delete.jpg" />
+    <Content Include="Common\Images\eliele.png" />
+    <Content Include="Common\Images\EnConstruccion.jpg" />
+    <Content Include="Common\Images\Error.png" />
+    <Content Include="Common\Images\fondoprincipal.jpg" />
+    <Content Include="Common\Images\fondoprincipal2.jpg" />
+    <Content Include="Common\Images\fondo_cabecera.jpg" />
+    <Content Include="Common\Images\icon_24-off.png" />
+    <Content Include="Common\Images\imprimir.png" />
+    <Content Include="Common\Images\Logo_Cliente_.gif" />
+    <Content Include="Common\Images\reserva.png" />
+    <Content Include="Common\Images\Solicitudes\arrow_left.png" />
+    <Content Include="Common\Images\Solicitudes\arrow_right.png" />
+    <Content Include="Common\Images\Solicitudes\lup.png" />
+    <Content Include="Common\Images\Solicitudes\save.ico" />
+    <Content Include="Common\Images\Solicitudes\VerDetalle.png" />
+    <Content Include="Common\Images\helpdesk.png" />
+    <Content Include="Common\Images\Login\banner_bbva.gif" />
+    <Content Include="Common\Images\Login\barra_logos.png" />
+    <Content Include="Common\Images\Login\barra_logos_2.png" />
+    <Content Include="Common\Images\Login\BaseDatos.png" />
+    <Content Include="Common\Images\Login\btn_next.gif" />
+    <Content Include="Common\Images\Login\btn_next_.gif" />
+    <Content Include="Common\Images\Login\btn_prev.gif" />
+    <Content Include="Common\Images\Login\Cargando.gif" />
+    <Content Include="Common\Images\Login\Configuracion.png" />
+    <Content Include="Common\Images\Login\document2.png" />
+    <Content Include="Common\Images\Login\favicon.ico" />
+    <Content Include="Common\Images\Login\fondo_login_01.png" />
+    <Content Include="Common\Images\Login\fondo_login_02.png" />
+    <Content Include="Common\Images\Login\fondo_login_03.png" />
+    <Content Include="Common\Images\Login\image-mobile-01.jpg" />
+    <Content Include="Common\Images\Login\image-mobile-02.jpg" />
+    <Content Include="Common\Images\Login\image-mobile-03.jpg" />
+    <Content Include="Common\Images\Login\image-mobile-04.jpg" />
+    <Content Include="Common\Images\Login\image-mobile-05.jpg" />
+    <Content Include="Common\Images\Login\image-mobile-06.jpg" />
+    <Content Include="Common\Images\Login\Information.png" />
+    <Content Include="Common\Images\Login\login-central.png" />
+    <Content Include="Common\Images\Login\login-lado-derecho.png" />
+    <Content Include="Common\Images\Login\login-lado-izquierdo.png" />
+    <Content Include="Common\Images\Login\loginmobile.jpg" />
+    <Content Include="Common\Images\Login\Seguridad.png" />
+    <Content Include="Common\Images\Login\Website.png" />
+    <Content Include="Common\Images\logoff.gif" />
+    <Content Include="Common\Images\logoff.png" />
+    <Content Include="Common\Images\Logo_Cliente_FondoOscuro.png" />
+    <Content Include="Common\Images\Mensajes\error.png" />
+    <Content Include="Common\Images\Mensajes\information.png" />
+    <Content Include="Common\Images\Mensajes\question.png" />
+    <Content Include="Common\Images\NoDisponible.jpg" />
+    <Content Include="Common\Images\order.png" />
+    <Content Include="Common\Images\orgFoot.png" />
+    <Content Include="Common\Images\orgHead.png" />
+    <Content Include="Common\Images\sad.png" />
+    <Content Include="Common\Images\solicitud.png" />
+    <Content Include="Common\Images\team.png" />
+    <Content Include="Common\Images\TituloLeft.png" />
+    <Content Include="Common\Images\tool.png" />
+    <Content Include="Common\Images\triangulo.png" />
+    <Content Include="Common\Images\user.png" />
+    <Content Include="Common\Images\user_female.png" />
+    <Content Include="Common\Images\usuario.jpg" />
+    <Content Include="Common\Images\view.png" />
+    <Content Include="Common\Images\Mensajes\warning.png" />
+    <Content Include="Common\Scripts\anytime.js" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap2.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap3.css" />
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Common\Scripts\Bootstrap\js\bootstrap.js" />
+    <Content Include="Common\Scripts\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Common\Scripts\cimg\1.jpg" />
+    <Content Include="Common\Scripts\cimg\10.jpg" />
+    <Content Include="Common\Scripts\cimg\100.jpg" />
+    <Content Include="Common\Scripts\cimg\101.jpg" />
+    <Content Include="Common\Scripts\cimg\102.jpg" />
+    <Content Include="Common\Scripts\cimg\103.jpg" />
+    <Content Include="Common\Scripts\cimg\104.jpg" />
+    <Content Include="Common\Scripts\cimg\105.jpg" />
+    <Content Include="Common\Scripts\cimg\106.jpg" />
+    <Content Include="Common\Scripts\cimg\107.jpg" />
+    <Content Include="Common\Scripts\cimg\108.jpg" />
+    <Content Include="Common\Scripts\cimg\109.jpg" />
+    <Content Include="Common\Scripts\cimg\11.jpg" />
+    <Content Include="Common\Scripts\cimg\110.jpg" />
+    <Content Include="Common\Scripts\cimg\111.jpg" />
+    <Content Include="Common\Scripts\cimg\112.jpg" />
+    <Content Include="Common\Scripts\cimg\113.jpg" />
+    <Content Include="Common\Scripts\cimg\114.jpg" />
+    <Content Include="Common\Scripts\cimg\115.jpg" />
+    <Content Include="Common\Scripts\cimg\116.jpg" />
+    <Content Include="Common\Scripts\cimg\117.jpg" />
+    <Content Include="Common\Scripts\cimg\118.jpg" />
+    <Content Include="Common\Scripts\cimg\119.jpg" />
+    <Content Include="Common\Scripts\cimg\12.jpg" />
+    <Content Include="Common\Scripts\cimg\120.jpg" />
+    <Content Include="Common\Scripts\cimg\121.jpg" />
+    <Content Include="Common\Scripts\cimg\122.jpg" />
+    <Content Include="Common\Scripts\cimg\123.jpg" />
+    <Content Include="Common\Scripts\cimg\124.jpg" />
+    <Content Include="Common\Scripts\cimg\125.jpg" />
+    <Content Include="Common\Scripts\cimg\126.jpg" />
+    <Content Include="Common\Scripts\cimg\127.jpg" />
+    <Content Include="Common\Scripts\cimg\128.jpg" />
+    <Content Include="Common\Scripts\cimg\129.jpg" />
+    <Content Include="Common\Scripts\cimg\13.jpg" />
+    <Content Include="Common\Scripts\cimg\130.jpg" />
+    <Content Include="Common\Scripts\cimg\131.jpg" />
+    <Content Include="Common\Scripts\cimg\132.jpg" />
+    <Content Include="Common\Scripts\cimg\133.jpg" />
+    <Content Include="Common\Scripts\cimg\134.jpg" />
+    <Content Include="Common\Scripts\cimg\135.jpg" />
+    <Content Include="Common\Scripts\cimg\136.jpg" />
+    <Content Include="Common\Scripts\cimg\137.jpg" />
+    <Content Include="Common\Scripts\cimg\138.jpg" />
+    <Content Include="Common\Scripts\cimg\139.jpg" />
+    <Content Include="Common\Scripts\cimg\14.jpg" />
+    <Content Include="Common\Scripts\cimg\140.jpg" />
+    <Content Include="Common\Scripts\cimg\141.jpg" />
+    <Content Include="Common\Scripts\cimg\142.jpg" />
+    <Content Include="Common\Scripts\cimg\143.jpg" />
+    <Content Include="Common\Scripts\cimg\144.jpg" />
+    <Content Include="Common\Scripts\cimg\145.jpg" />
+    <Content Include="Common\Scripts\cimg\146.jpg" />
+    <Content Include="Common\Scripts\cimg\147.jpg" />
+    <Content Include="Common\Scripts\cimg\148.jpg" />
+    <Content Include="Common\Scripts\cimg\149.jpg" />
+    <Content Include="Common\Scripts\cimg\15.jpg" />
+    <Content Include="Common\Scripts\cimg\150.jpg" />
+    <Content Include="Common\Scripts\cimg\151.jpg" />
+    <Content Include="Common\Scripts\cimg\152.jpg" />
+    <Content Include="Common\Scripts\cimg\153.jpg" />
+    <Content Include="Common\Scripts\cimg\154.jpg" />
+    <Content Include="Common\Scripts\cimg\155.jpg" />
+    <Content Include="Common\Scripts\cimg\156.jpg" />
+    <Content Include="Common\Scripts\cimg\157.jpg" />
+    <Content Include="Common\Scripts\cimg\158.jpg" />
+    <Content Include="Common\Scripts\cimg\159.jpg" />
+    <Content Include="Common\Scripts\cimg\16.jpg" />
+    <Content Include="Common\Scripts\cimg\160.jpg" />
+    <Content Include="Common\Scripts\cimg\161.jpg" />
+    <Content Include="Common\Scripts\cimg\162.jpg" />
+    <Content Include="Common\Scripts\cimg\163.jpg" />
+    <Content Include="Common\Scripts\cimg\164.jpg" />
+    <Content Include="Common\Scripts\cimg\165.jpg" />
+    <Content Include="Common\Scripts\cimg\166.jpg" />
+    <Content Include="Common\Scripts\cimg\167.jpg" />
+    <Content Include="Common\Scripts\cimg\168.jpg" />
+    <Content Include="Common\Scripts\cimg\169.jpg" />
+    <Content Include="Common\Scripts\cimg\17.jpg" />
+    <Content Include="Common\Scripts\cimg\170.jpg" />
+    <Content Include="Common\Scripts\cimg\171.jpg" />
+    <Content Include="Common\Scripts\cimg\172.jpg" />
+    <Content Include="Common\Scripts\cimg\173.jpg" />
+    <Content Include="Common\Scripts\cimg\174.jpg" />
+    <Content Include="Common\Scripts\cimg\175.jpg" />
+    <Content Include="Common\Scripts\cimg\176.jpg" />
+    <Content Include="Common\Scripts\cimg\177.jpg" />
+    <Content Include="Common\Scripts\cimg\178.jpg" />
+    <Content Include="Common\Scripts\cimg\179.jpg" />
+    <Content Include="Common\Scripts\cimg\18.jpg" />
+    <Content Include="Common\Scripts\cimg\180.jpg" />
+    <Content Include="Common\Scripts\cimg\181.jpg" />
+    <Content Include="Common\Scripts\cimg\182.jpg" />
+    <Content Include="Common\Scripts\cimg\183.jpg" />
+    <Content Include="Common\Scripts\cimg\184.jpg" />
+    <Content Include="Common\Scripts\cimg\185.jpg" />
+    <Content Include="Common\Scripts\cimg\186.jpg" />
+    <Content Include="Common\Scripts\cimg\187.jpg" />
+    <Content Include="Common\Scripts\cimg\188.jpg" />
+    <Content Include="Common\Scripts\cimg\189.jpg" />
+    <Content Include="Common\Scripts\cimg\19.jpg" />
+    <Content Include="Common\Scripts\cimg\190.jpg" />
+    <Content Include="Common\Scripts\cimg\191.jpg" />
+    <Content Include="Common\Scripts\cimg\2.jpg" />
+    <Content Include="Common\Scripts\cimg\20.jpg" />
+    <Content Include="Common\Scripts\cimg\21.jpg" />
+    <Content Include="Common\Scripts\cimg\22.jpg" />
+    <Content Include="Common\Scripts\cimg\23.jpg" />
+    <Content Include="Common\Scripts\cimg\24.jpg" />
+    <Content Include="Common\Scripts\cimg\25.jpg" />
+    <Content Include="Common\Scripts\cimg\26.jpg" />
+    <Content Include="Common\Scripts\cimg\27.jpg" />
+    <Content Include="Common\Scripts\cimg\28.jpg" />
+    <Content Include="Common\Scripts\cimg\29.jpg" />
+    <Content Include="Common\Scripts\cimg\3.jpg" />
+    <Content Include="Common\Scripts\cimg\30.jpg" />
+    <Content Include="Common\Scripts\cimg\31.jpg" />
+    <Content Include="Common\Scripts\cimg\32.jpg" />
+    <Content Include="Common\Scripts\cimg\33.jpg" />
+    <Content Include="Common\Scripts\cimg\34.jpg" />
+    <Content Include="Common\Scripts\cimg\35.jpg" />
+    <Content Include="Common\Scripts\cimg\36.jpg" />
+    <Content Include="Common\Scripts\cimg\37.jpg" />
+    <Content Include="Common\Scripts\cimg\38.jpg" />
+    <Content Include="Common\Scripts\cimg\39.jpg" />
+    <Content Include="Common\Scripts\cimg\4.jpg" />
+    <Content Include="Common\Scripts\cimg\40.jpg" />
+    <Content Include="Common\Scripts\cimg\41.jpg" />
+    <Content Include="Common\Scripts\cimg\42.jpg" />
+    <Content Include="Common\Scripts\cimg\43.jpg" />
+    <Content Include="Common\Scripts\cimg\44.jpg" />
+    <Content Include="Common\Scripts\cimg\45.jpg" />
+    <Content Include="Common\Scripts\cimg\46.jpg" />
+    <Content Include="Common\Scripts\cimg\47.jpg" />
+    <Content Include="Common\Scripts\cimg\48.jpg" />
+    <Content Include="Common\Scripts\cimg\49.jpg" />
+    <Content Include="Common\Scripts\cimg\5.jpg" />
+    <Content Include="Common\Scripts\cimg\50.jpg" />
+    <Content Include="Common\Scripts\cimg\51.jpg" />
+    <Content Include="Common\Scripts\cimg\52.jpg" />
+    <Content Include="Common\Scripts\cimg\53.jpg" />
+    <Content Include="Common\Scripts\cimg\54.jpg" />
+    <Content Include="Common\Scripts\cimg\55.jpg" />
+    <Content Include="Common\Scripts\cimg\56.jpg" />
+    <Content Include="Common\Scripts\cimg\57.jpg" />
+    <Content Include="Common\Scripts\cimg\58.jpg" />
+    <Content Include="Common\Scripts\cimg\59.jpg" />
+    <Content Include="Common\Scripts\cimg\6.jpg" />
+    <Content Include="Common\Scripts\cimg\60.jpg" />
+    <Content Include="Common\Scripts\cimg\61.jpg" />
+    <Content Include="Common\Scripts\cimg\62.jpg" />
+    <Content Include="Common\Scripts\cimg\63.jpg" />
+    <Content Include="Common\Scripts\cimg\64.jpg" />
+    <Content Include="Common\Scripts\cimg\65.jpg" />
+    <Content Include="Common\Scripts\cimg\66.jpg" />
+    <Content Include="Common\Scripts\cimg\67.jpg" />
+    <Content Include="Common\Scripts\cimg\68.jpg" />
+    <Content Include="Common\Scripts\cimg\69.jpg" />
+    <Content Include="Common\Scripts\cimg\7.jpg" />
+    <Content Include="Common\Scripts\cimg\70.jpg" />
+    <Content Include="Common\Scripts\cimg\71.jpg" />
+    <Content Include="Common\Scripts\cimg\72.jpg" />
+    <Content Include="Common\Scripts\cimg\73.jpg" />
+    <Content Include="Common\Scripts\cimg\74.jpg" />
+    <Content Include="Common\Scripts\cimg\75.jpg" />
+    <Content Include="Common\Scripts\cimg\76.jpg" />
+    <Content Include="Common\Scripts\cimg\77.jpg" />
+    <Content Include="Common\Scripts\cimg\78.jpg" />
+    <Content Include="Common\Scripts\cimg\79.jpg" />
+    <Content Include="Common\Scripts\cimg\8.jpg" />
+    <Content Include="Common\Scripts\cimg\80.jpg" />
+    <Content Include="Common\Scripts\cimg\81.jpg" />
+    <Content Include="Common\Scripts\cimg\82.jpg" />
+    <Content Include="Common\Scripts\cimg\83.jpg" />
+    <Content Include="Common\Scripts\cimg\84.jpg" />
+    <Content Include="Common\Scripts\cimg\85.jpg" />
+    <Content Include="Common\Scripts\cimg\86.jpg" />
+    <Content Include="Common\Scripts\cimg\87.jpg" />
+    <Content Include="Common\Scripts\cimg\88.jpg" />
+    <Content Include="Common\Scripts\cimg\89.jpg" />
+    <Content Include="Common\Scripts\cimg\9.jpg" />
+    <Content Include="Common\Scripts\cimg\90.jpg" />
+    <Content Include="Common\Scripts\cimg\91.jpg" />
+    <Content Include="Common\Scripts\cimg\92.jpg" />
+    <Content Include="Common\Scripts\cimg\93.jpg" />
+    <Content Include="Common\Scripts\cimg\94.jpg" />
+    <Content Include="Common\Scripts\cimg\95.jpg" />
+    <Content Include="Common\Scripts\cimg\96.jpg" />
+    <Content Include="Common\Scripts\cimg\97.jpg" />
+    <Content Include="Common\Scripts\cimg\98.jpg" />
+    <Content Include="Common\Scripts\cimg\99.jpg" />
+    <Content Include="Common\Scripts\countdown.js" />
+    <Content Include="Common\Scripts\easySlider1.7.js" />
+    <Content Include="Common\Scripts\i18n\jquery-ui-i18n.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ge.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Common\Scripts\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Common\Scripts\jcap.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.base.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.celledit.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.common.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.custom.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.filter.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.formedit.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.grouping.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.import.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.inlinedit.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.jqueryui.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.loader.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.locale-es.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.subgrid.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.tbltogrid.js" />
+    <Content Include="Common\Scripts\jqGrid\grid.treegrid.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-cat.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-da.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-mne.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="Common\Scripts\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="Common\Scripts\jqGrid\jqDnR.js" />
+    <Content Include="Common\Scripts\jqGrid\jqModal.js" />
+    <Content Include="Common\Scripts\jqGrid\jquery-1.7.2.min.js" />
+    <Content Include="Common\Scripts\jqGrid\jquery.fmatter.js" />
+    <Content Include="Common\Scripts\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Common\Scripts\jqGrid\JsonXml.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\grid.addons.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\grid.postext.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\grid.setcolumns.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\jquery.contextmenu.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\jquery.searchFilter.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\jquery.tablednd.js" />
+    <Content Include="Common\Scripts\jqGrid\plugins\searchFilter.css" />
+    <Content Include="Common\Scripts\jqGrid\plugins\ui.multiselect.css" />
+    <Content Include="Common\Scripts\jqGrid\plugins\ui.multiselect.js" />
+    <Content Include="Common\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Common\Scripts\jquery-2.0.0-vsdoc.js" />
+    <Content Include="Common\Scripts\jquery.animate-shadow.js" />
+    <Content Include="Common\Scripts\jquery.contextMenu2.js" />
+    <Content Include="Common\Scripts\jquery.corner.js" />
+    <Content Include="Common\Scripts\jquery.galleriffic.js" />
+    <Content Include="Common\Scripts\jquery.history.js" />
+    <Content Include="Common\Scripts\jquery.opacityrollover.js" />
+    <Content Include="Common\Scripts\jquery.timer.js" />
+    <Content Include="Common\Scripts\jquery.ui.button.js" />
+    <Content Include="Common\Scripts\jquery.ui.core.js" />
+    <Content Include="Common\Scripts\jquery.ui.datepicker.js" />
+    <Content Include="Common\Scripts\jquery.ui.dialog.js" />
+    <Content Include="Common\Scripts\jquery.ui.position.js" />
+    <Content Include="Common\Scripts\jquery.ui.widget.js" />
+    <Content Include="Common\Scripts\jquery.uniform.min.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery-ui-i18n.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-af.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ar-DZ.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ar.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-az.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-bg.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-bs.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ca.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-cs.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-cy-GB.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-da.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-de.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-el.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-en-AU.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-en-NZ.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-eo.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-es.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-et.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-eu.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-fa.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-fi.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-fo.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-fr-CH.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-fr.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ge.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-gl.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-he.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-hi.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-hr.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-hu.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-hy.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-id.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-is.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-it.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ja.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-kk.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-km.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ko.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-lb.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-lt.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-lv.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-mk.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ml.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ms.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-nl-BE.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-nl.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-no.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-pl.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-pt-BR.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-pt.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-rm.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ro.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ru.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sk.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sl.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sq.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sr-SR.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sr.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-sv.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-ta.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-th.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-tj.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-tr.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-uk.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-vi.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-zh-CN.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-zh-HK.js" />
+    <Content Include="Common\Scripts\JqueryUI\i18n\jquery.ui.datepicker-zh-TW.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery.ui.button.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery.ui.core.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery.ui.datepicker.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery.ui.dialog.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery.ui.widget.js" />
+    <Content Include="Common\Scripts\json2.js" />
+    <Content Include="Common\Scripts\jssor.core.js" />
+    <Content Include="Common\Scripts\jssor.slider.js" />
+    <Content Include="Common\Scripts\jssor.utils.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.af-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.af.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.am-ET.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.am.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-AE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-BH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-DZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-EG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-IQ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-JO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-KW.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-LB.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-LY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-MA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-OM.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-QA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-SA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-SY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-TN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar-YE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ar.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.arn-CL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.arn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.as-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.as.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.az-Cyrl-AZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.az-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.az-Latn-AZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.az-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.az.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ba-RU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ba.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.be-BY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.be.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bg-BG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bg.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bn-BD.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bn-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bo-CN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bo.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.br-FR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.br.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bs-Cyrl-BA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bs-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bs-Latn-BA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bs-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.bs.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ca-ES.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ca.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.co-FR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.co.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.cs-CZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.cs.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.cy-GB.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.cy.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.da-DK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.da.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de-AT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de-CH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de-DE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de-LI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de-LU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.de.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.dsb-DE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.dsb.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.dv-MV.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.dv.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.el-GR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.el.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-029.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-AU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-BZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-CA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-GB.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-IE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-JM.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-MY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-NZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-PH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-SG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-TT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-US.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en-ZW.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.en.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-AR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-BO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-CL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-CO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-CR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-DO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-EC.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-ES.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-GT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-HN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-MX.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-NI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-PA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-PE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-PR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-PY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-SV.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-US.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-UY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es-VE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.es.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.et-EE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.et.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.eu-ES.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.eu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fa-IR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fa.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fi-FI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fi.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fil-PH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fil.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fo-FO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fo.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-BE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-CA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-CH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-FR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-LU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr-MC.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fy-NL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.fy.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ga-IE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ga.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gd-GB.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gd.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gl-ES.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gsw-FR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gsw.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gu-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.gu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ha-Latn-NG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ha-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ha.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.he-IL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.he.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hi-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hi.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hr-BA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hr-HR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hsb-DE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hsb.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hu-HU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hy-AM.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.hy.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.id-ID.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.id.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ig-NG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ig.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ii-CN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ii.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.is-IS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.is.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.it-CH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.it-IT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.it.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.iu-Cans-CA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.iu-Cans.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.iu-Latn-CA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.iu-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.iu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ja-JP.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ja.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ka-GE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ka.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kk-KZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kk.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kl-GL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.km-KH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.km.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kn-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ko-KR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ko.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kok-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.kok.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ky-KG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ky.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lb-LU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lb.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lo-LA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lo.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lt-LT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lt.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lv-LV.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.lv.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mi-NZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mi.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mk-MK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mk.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ml-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ml.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mn-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mn-MN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mn-Mong-CN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mn-Mong.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.moh-CA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.moh.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mr-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ms-BN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ms-MY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ms.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mt-MT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.mt.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nb-NO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nb.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ne-NP.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ne.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nl-BE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nl-NL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nn-NO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.no.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nso-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.nso.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.oc-FR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.oc.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.or-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.or.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pa-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pa.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pl-PL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.prs-AF.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.prs.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ps-AF.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ps.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pt-BR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pt-PT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.pt.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.qut-GT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.qut.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.quz-BO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.quz-EC.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.quz-PE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.quz.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.rm-CH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.rm.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ro-RO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ro.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ru-RU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ru-UA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ru.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.rw-RW.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.rw.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sa-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sa.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sah-RU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sah.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.se-FI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.se-NO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.se-SE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.se.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.si-LK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.si.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sk-SK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sk.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sl-SI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sma-NO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sma-SE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sma.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.smj-NO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.smj-SE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.smj.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.smn-FI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.smn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sms-FI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sms.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sq-AL.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sq.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Cyrl-BA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Cyrl-CS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Cyrl-ME.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Cyrl-RS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Latn-BA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Latn-CS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Latn-ME.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Latn-RS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sv-FI.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sv-SE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sv.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sw-KE.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.sw.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.syr-SY.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.syr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ta-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ta.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.te-IN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.te.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tg-Cyrl-TJ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tg-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tg.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.th-TH.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.th.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tk-TM.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tk.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tn-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tr-TR.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tr.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tt-RU.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tt.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tzm-Latn-DZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tzm-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.tzm.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ug-CN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ug.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uk-UA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uk.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ur-PK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.ur.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uz-Cyrl-UZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uz-Cyrl.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uz-Latn-UZ.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uz-Latn.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.uz.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.vi-VN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.vi.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.wo-SN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.wo.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.xh-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.xh.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.yo-NG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.yo.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-CHS.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-CHT.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-CN.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-Hans.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-Hant.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-HK.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-MO.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-SG.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh-TW.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zh.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zu-ZA.min.js" />
+    <Content Include="Common\Scripts\KendoUI\cultures\kendo.culture.zu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\jquery.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.autocomplete.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.binder.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.calendar.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.colorpicker.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.columnmenu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.combobox.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.core.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.data.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.data.odata.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.data.xml.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.datepicker.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.datetimepicker.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.dialog.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.draganddrop.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.dropdownlist.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.editable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.editor.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.filtermenu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.fx.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.grid.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.groupable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.imagebrowser.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.list.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.listview.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.menu.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.mobile.scroller.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.multiselect.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.numerictextbox.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.pager.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.panelbar.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.popup.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.reorderable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.resizable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.router.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.selectable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.slider.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.sortable.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.splitter.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.tabstrip.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.timepicker.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.tooltip.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.treeview.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.upload.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.userevents.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.validator.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.view.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.web.min.js" />
+    <Content Include="Common\Scripts\KendoUI\kendo.window.min.js" />
+    <Content Include="Common\Scripts\md5.js" />
+    <Content Include="Common\Scripts\prettify.js" />
+    <Content Include="Common\Scripts\screen.js" />
+    <Content Include="Common\Scripts\select2\select2.min.css" />
+    <Content Include="Common\Scripts\select2\select2.min.js" />
+    <Content Include="Common\Scripts\socket.io.js" />
+    <Content Include="Common\Scripts\Utilitario.js" />
+    <Content Include="Common\Scripts\watermarkify.0.6.min.js" />
+    <Content Include="Common\Styles\anytime.css" />
+    <Content Include="Common\Styles\chat.css" />
+    <Content Include="Common\Styles\galleriffic-2.css" />
+    <Content Include="Common\Styles\Index.css" />
+    <Content Include="Common\Images\Calendario.png" />
+    <Content Include="Common\Images\Configuracion.png" />
+    <Content Include="Common\Images\iconoInicio.png" />
+    <Content Include="Common\Images\Nuevo.png" />
+    <Content Include="Common\Images\pedido.png" />
+    <Content Include="Common\Images\Salir.png" />
+    <Content Include="Common\Images\Tiempo.png" />
+    <Content Include="Common\Images\Todos.png" />
+    <Content Include="Common\Scripts\jquery-1.7.2.js" />
+    <Content Include="Common\Scripts\jquery.jqDock.min.js" />
+    <Content Include="Common\Scripts\JqueryUI\jquery-ui.js" />
+    <Content Include="Common\Styles\jqGrid\ui.jqgrid.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_diagonals-thick_8_333333_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_glass_40_111111_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_glass_55_1c1c1c_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_highlight-hard_100_f9f9f9_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_highlight-hard_40_aaaaaa_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_ededed_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\black-tie\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\blitzer\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\cupertino\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dark-hive\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_diagonals-thick_15_0b3e6f_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_dots-medium_30_0b58a2_4x4.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_dots-small_20_333333_2x2.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_dots-small_30_a32d00_2x2.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_dots-small_40_00498f_2x2.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_flat_40_292929_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-bg_gloss-wave_20_111111_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-icons_00498f_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-icons_98d2fb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-icons_9ccdfc_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\dot-luv\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\eggplant\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_diagonals-small_25_c5ddfc_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_diagonals-thick_20_e69700_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_diagonals-thick_22_1484e6_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_diagonals-thick_26_2293f7_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_flat_0_e69700_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_flat_0_e6b900_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-bg_inset-hard_100_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-icons_0a82eb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-icons_0b54d5_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-icons_5fa5e3_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-icons_fcdd4a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\excite-bike\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\flick\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\hot-sneaks\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_f08000_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\humanity\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_diagonals-small_0_aaaaaa_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_diagonals-thick_15_444444_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_diagonals-thick_95_ffdc2e_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_glass_55_fbf5d0_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_highlight-hard_30_285c00_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_highlight-soft_33_3a8104_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_highlight-soft_50_4eb305_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_highlight-soft_60_4ca20b_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-bg_inset-soft_10_285c00_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-icons_4eb305_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-icons_72b42d_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\le-frog\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\mint-choc\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_inset-hard_75_999999_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-bg_inset-soft_50_c9c9c9_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-icons_999999_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\overcast\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_diagonal-maze_20_6e4f1c_10x10.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_diagonal-maze_40_000000_10x10.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_10_eceadf_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_10_f8f7f6_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_15_eceadf_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_15_f7f3de_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_15_ffffff_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_65_654b24_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-bg_fine-grain_68_b83400_60x60.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_3572ac_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_8c291d_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_b83400_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_fbdb93_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\pepper-grinder\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_flat_55_c0402a_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_flat_55_eeeeee_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_100_f8f8f8_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_35_dddddd_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_60_eeeeee_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_inset-hard_75_34a9da_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-bg_inset-soft_50_fffff_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_3383bb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_70b2e1_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_999999_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_fbc856_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\Principal\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\redmond\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\smoothness\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-hard_15_459e00_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-soft_25_67b021_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_808080_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_847e71_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_8dc262_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\south-street\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_glass_45_048dca_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_glass_75_41b0de_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_glass_45_048dca_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_glass_75_41b0de_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_0078ae_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_056b93_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_f5e175_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\images_\ui-icons_fcd113_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\start\jquery-ui-1.8.16.custom__.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\sunny\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\swanky-purse\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_diagonals-small_50_262626_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_flat_0_4c4c4c_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_glass_40_0a0a0a_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_glass_55_f1fbe5_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_glass_60_000000_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_gloss-wave_55_000000_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_gloss-wave_85_9fda58_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-bg_gloss-wave_95_f6ecd5_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_000000_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_1f1f1f_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_9fda58_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_b8ec79_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\trontastic\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-darkness\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\ui-lightness\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_gloss-wave_16_121212_500x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_highlight-hard_15_888888_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_highlight-hard_55_555555_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_highlight-soft_35_adadad_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_highlight-soft_60_dddddd_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-bg_inset-soft_15_121212_1x100.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_666666_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_aaaaaa_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_c98000_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\images\ui-icons_f29a00_256x240.png" />
+    <Content Include="Common\Styles\JqueryThemeRoller\vader\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Common\Styles\JqueryUI\jquery-ui-1.8.16.custom.css" />
+    <Content Include="Common\Styles\jquery.contextMenu.css" />
+    <Content Include="Common\Styles\KendoUI\Black\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Black\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Black\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Black\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Black\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Black\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Black\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Black\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\editor.png" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\BlueOpal\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Bootstrap\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\Default\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Default\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Default\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Default\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Default\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Default\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Default\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Default\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\editor.png" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\HighContrast\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\kendo.black.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.blueopal.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.bootstrap.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.common.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.default.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.highcontrast.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.metro.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.metroblack.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.moonlight.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.rtl.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.silver.min.css" />
+    <Content Include="Common\Styles\KendoUI\kendo.uniform.min.css" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\editor.png" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\MetroBlack\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\Metro\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Metro\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Metro\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Metro\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Metro\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Metro\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Metro\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Metro\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Moonlight\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\Silver\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Silver\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Silver\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Silver\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Silver\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Silver\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Silver\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Silver\sprite.png" />
+    <Content Include="Common\Styles\KendoUI\textures\brushed-metal.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots1.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots10.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots11.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots12.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots13.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots2.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots3.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots4.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots5.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots6.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots7.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots8.png" />
+    <Content Include="Common\Styles\KendoUI\textures\dots9.png" />
+    <Content Include="Common\Styles\KendoUI\textures\glass-lighter.png" />
+    <Content Include="Common\Styles\KendoUI\textures\glass.png" />
+    <Content Include="Common\Styles\KendoUI\textures\highlight.png" />
+    <Content Include="Common\Styles\KendoUI\textures\hsv-gradient.png" />
+    <Content Include="Common\Styles\KendoUI\textures\hue.png" />
+    <Content Include="Common\Styles\KendoUI\textures\leather1.png" />
+    <Content Include="Common\Styles\KendoUI\textures\leather2.png" />
+    <Content Include="Common\Styles\KendoUI\textures\noise.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe1.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe2.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe3.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe4.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe5.png" />
+    <Content Include="Common\Styles\KendoUI\textures\stripe6.png" />
+    <Content Include="Common\Styles\KendoUI\textures\transparency.png" />
+    <Content Include="Common\Styles\KendoUI\textures\transtexture.png" />
+    <Content Include="Common\Styles\KendoUI\Uniform\editor.png" />
+    <Content Include="Common\Styles\KendoUI\Uniform\imagebrowser.png" />
+    <Content Include="Common\Styles\KendoUI\Uniform\loading-image.gif" />
+    <Content Include="Common\Styles\KendoUI\Uniform\loading.gif" />
+    <Content Include="Common\Styles\KendoUI\Uniform\slider-h.gif" />
+    <Content Include="Common\Styles\KendoUI\Uniform\slider-v.gif" />
+    <Content Include="Common\Styles\KendoUI\Uniform\sprite%402x.png" />
+    <Content Include="Common\Styles\KendoUI\Uniform\sprite.png" />
+    <Content Include="Common\Styles\Login.css" />
+    <Content Include="Common\Styles\Principal.css" />
+    <Content Include="Common\Styles\style_slide.css" />
+    <Content Include="Common\Styles\Uniform\agent\css\uniform.agent.css" />
+    <Content Include="Common\Styles\Uniform\agent\css\uniform.agent.min.css" />
+    <Content Include="Common\Styles\Uniform\agent\images\bg-input-agent.png" />
+    <Content Include="Common\Styles\Uniform\agent\images\bg-input-focus-agent.png" />
+    <Content Include="Common\Styles\Uniform\agent\images\sprite-agent.png" />
+    <Content Include="Common\Styles\Uniform\aristo\css\uniform.aristo.css" />
+    <Content Include="Common\Styles\Uniform\aristo\css\uniform.aristo.min.css" />
+    <Content Include="Common\Styles\Uniform\aristo\images\bg-input-aristo.png" />
+    <Content Include="Common\Styles\Uniform\aristo\images\bg-input-focus-aristo.png" />
+    <Content Include="Common\Styles\Uniform\aristo\images\sprite-aristo.png" />
+    <Content Include="Common\Styles\Uniform\default\css\uniform.default.css" />
+    <Content Include="Common\Styles\Uniform\default\css\uniform.default.min.css" />
+    <Content Include="Common\Styles\Uniform\default\images\bg-input-focus.png" />
+    <Content Include="Common\Styles\Uniform\default\images\bg-input.png" />
+    <Content Include="Common\Styles\Uniform\default\images\sprite.png" />
+    <Content Include="Common\Styles\Uniform\jeans\css\uniform.jeans.css" />
+    <Content Include="Common\Styles\Uniform\jeans\css\uniform.jeans.min.css" />
+    <Content Include="Common\Styles\Uniform\jeans\images\bg-input-focus-jeans.png" />
+    <Content Include="Common\Styles\Uniform\jeans\images\bg-input-focus-retina-jeans.png" />
+    <Content Include="Common\Styles\Uniform\jeans\images\bg-input-jeans.png" />
+    <Content Include="Common\Styles\Uniform\jeans\images\bg-input-retina-jeans.png" />
+    <Content Include="Common\Styles\Uniform\jeans\images\sprite-jeans.png" />
+    <Content Include="Common\Styles\Uniform\jeans\images\sprite-retina-jeans.png" />
+    <Content Include="Common\Styles\Uniform\_base\css\uniform._base.css" />
+    <Content Include="Common\Styles\Uniform\_base\css\uniform._base.min.css" />
+    <Content Include="Common\Styles\watermarkify.css" />
+    <Content Include="Common\Styles\style_slide_login.css" />
+    <Content Include="Common\Temporal\Cronogramas\Leeme.txt" />
+    <Content Include="Common\Temporal\Incidencias\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\WebServices\General.asmx" />
+    <Content Include="Common\WebServices\GeneralPortal.asmx" />
+    <Content Include="Comprobante\VisorComprobante.aspx" />
+    <Content Include="Comprobante\VisorComprobante.js" />
+    <Content Include="Configuracion.aspx" />
+    <Content Include="Configuracion.js" />
+    <Content Include="Contrato\ContratoResumen.aspx" />
+    <Content Include="Contrato\ContratoResumen.js" />
+    <Content Include="Cronograma\Con_Fac_EstadoCuenta.aspx" />
+    <Content Include="Cronograma\Con_Fac_EstadoCuenta.js" />
+    <Content Include="Cronograma\CronogramaPagos.aspx" />
+    <Content Include="Cronograma\CronogramaPagos.css" />
+    <Content Include="Cronograma\CronogramaPagos.js" />
+    <Content Include="Cronograma\CronogramaPagosIE.aspx" />
+    <Content Include="Cronograma\CronogramaPagosIE.js" />
+    <Content Include="Cronograma\InfoCobros.aspx" />
+    <Content Include="Cronograma\InfoCobros.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Demo1.aspx" />
+    <Content Include="Dlls\CompCorreo.dll" />
+    <Content Include="Dlls\CompLicencia.dll" />
+    <Content Include="Dlls\DevExpress.Charts.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.CodeParser.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Data.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.DemoReports.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Office.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.PivotGrid.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.Printing.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.RichEdit.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.Utils.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Utils.v12.2.UI.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxGauges.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxHtmlEditor.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxPivotGrid.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxScheduler.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxScheduler.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxSpellChecker.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxThemes.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.ASPxTreeList.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.Mvc.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Web.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Workflow.Activities.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.Workflow.Activities.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Core.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Grid.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Grid.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Grid.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Grid.v12.2.Extensions.dll" />
+    <Content Include="Dlls\DevExpress.Xpf.Printing.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Xpo.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.Xpo.v12.2.Web.dll" />
+    <Content Include="Dlls\DevExpress.XtraBars.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraCharts.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.XtraCharts.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraCharts.v12.2.Extensions.dll" />
+    <Content Include="Dlls\DevExpress.XtraCharts.v12.2.UI.dll" />
+    <Content Include="Dlls\DevExpress.XtraCharts.v12.2.Web.dll" />
+    <Content Include="Dlls\DevExpress.XtraEditors.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraGauges.v12.2.Core.dll" />
+    <Content Include="Dlls\DevExpress.XtraGauges.v12.2.Presets.dll" />
+    <Content Include="Dlls\DevExpress.XtraGrid.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraLayout.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraNavBar.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraPivotGrid.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraPrinting.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.XtraPrinting.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraReports.v12.2.Design.dll" />
+    <Content Include="Dlls\DevExpress.XtraReports.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraReports.v12.2.Extensions.dll" />
+    <Content Include="Dlls\DevExpress.XtraReports.v12.2.Web.dll" />
+    <Content Include="Dlls\DevExpress.XtraRichEdit.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraTreeList.v12.2.dll" />
+    <Content Include="Dlls\DevExpress.XtraVerticalGrid.v12.2.dll" />
+    <Content Include="Dlls\log4net.dll" />
+    <Content Include="Dlls\log4net.xml" />
+    <Content Include="Documentos\Contratos\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentos\Contratos2\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentos\Contratos3\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentos\Exceptos\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentos\Exceptos\PerfilExceptos.xml" />
+    <Content Include="Documentos\Plantillas\ConfirmacionCambioContrasena.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Documentos\Plantillas\Imagenes\Fondo1.png" />
+    <Content Include="Documentos\Plantillas\Imagenes\Fondo2.jpg" />
+    <Content Include="Documentos\Plantillas\Imagenes\Powered.gif" />
+    <Content Include="Documentos\Plantillas\SolicitudCambioContrasena.htm" />
+    <Content Include="Documentos\Plantillas\SolicitudCambioContrasena_Old.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Dominio\ConfiguracionDominio.xml" />
+    <Content Include="ErrorNoPermiso.aspx" />
+    <Content Include="ErrorNoPermiso.htm" />
+    <Content Include="FinSession.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Incidencia\Incidencia.aspx" />
+    <Content Include="Incidencia\Incidencia.js" />
+    <Content Include="Incidencia\IncidenciaIE.css" />
+    <Content Include="Incidencia\Registrar_Incidencia.aspx" />
+    <Content Include="Incidencia\Registrar_Incidencia.css" />
+    <Content Include="Incidencia\Registrar_Incidencia.js" />
+    <Content Include="IndexIE.css" />
+    <Content Include="LogAuditoria\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LogErrores\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Login.js" />
+    <Content Include="Minisite.htm" />
+    <Content Include="PaginaEnConstruccion.htm" />
+    <Content Include="Index.aspx" />
+    <Content Include="Index.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Pedido\CarritoIE.aspx" />
+    <Content Include="Pedido\CarritoIE.css" />
+    <Content Include="Pedido\CarritoIE.js" />
+    <Content Include="Pedido\Dashboard_pedido.aspx" />
+    <Content Include="Pedido\Dashboard_pedido.css" />
+    <Content Include="Pedido\Dashboard_pedido.js" />
+    <Content Include="Pedido\Dashboard_pedido2.aspx" />
+    <Content Include="Pedido\Dashboard_pedidoIE.css" />
+    <Content Include="Pedido\DetallePedido.aspx" />
+    <Content Include="Pedido\DetallePedido.js" />
+    <Content Include="Pedido\Detalle_Financiamiento.aspx" />
+    <Content Include="Pedido\Detalle_Financiamiento.js" />
+    <Content Include="Pedido\imprimirDetalle.css" />
+    <Content Include="Pedido\Pedido.aspx" />
+    <Content Include="Pedido\Pedido.css" />
+    <Content Include="Pedido\Pedido.js" />
+    <Content Include="Pedido\PedidoIE.aspx" />
+    <Content Include="Pedido\PedidoIE.css" />
+    <Content Include="Pedido\PedidoIE.js" />
+    <Content Include="Pedido\PedidoMirror.aspx" />
+    <Content Include="Pedido\PedidoMirror.js" />
+    <Content Include="Pedido\PedidoPlan.aspx" />
+    <Content Include="Pedido\PedidoPlan.js" />
+    <Content Include="Pedido\PedidoPlanIE.aspx" />
+    <Content Include="Pedido\PedidoPlanIE.js" />
+    <Content Include="Pedido\Pedidos.aspx" />
+    <Content Include="Pedido\Pedidos.js" />
+    <Content Include="Pedido\Plantillas\Solicitud_8_RenovarEquipo.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\PlantillaReal\Solicitud_1_Cancelado.htm" />
+    <Content Include="Pedido\Plantillas\PlantillaReal\Solicitud_2_Nuevo.htm" />
+    <Content Include="Pedido\Plantillas\PlantillaReal\Solicitud_3_Editar.htm" />
+    <Content Include="Pedido\Plantillas\PlantillaReal\Solicitud_4_Baja.htm" />
+    <Content Include="Pedido\Plantillas\PlantillaReal\Solicitud_5_Renovar.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_1_Cancelado.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_2_Nuevo.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_3_Editar.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_4_Baja.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_5_Renovar.htm" />
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_6_RenovarPlan.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\Simulacion\Solicitud_7_Portabilidad.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\Solicitud_5_Renovar.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\Solicitud_4_Baja.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\Solicitud_6_RenovarPlan.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Plantillas\Solicitud_7_Portabilidad.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Pedido\Registrar_pedido.aspx" />
+    <Content Include="Pedido\Registrar_pedido.css" />
+    <Content Include="Pedido\Registrar_pedido.js" />
+    <Content Include="Pedido\Plantillas\Solicitud_1_Cancelado.htm" />
+    <Content Include="Pedido\Plantillas\Solicitud_2_Nuevo.htm" />
+    <Content Include="Pedido\Plantillas\Solicitud_3_Editar.htm" />
+    <Content Include="Registrese.aspx" />
+    <Content Include="RestablecerContrasena.aspx" />
+    <Content Include="RestablecerContrasena.js" />
+    <Content Include="Solicitud\Adm_AdjuntarArchivos.aspx" />
+    <Content Include="Solicitud\Adm_GaleriaModDispositivos.aspx" />
+    <Content Include="Solicitud\Editar_Solicitud.aspx" />
+    <Content Include="Solicitud\Registrar_Solicitud.aspx" />
+    <Content Include="Solicitud\Listado_Solicitud.js" />
+    <Content Include="Solicitud\Registrar_Solicitud.js" />
+    <Content Include="Temporal\Comprobantes\Leeme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL_SEG_Usuario.vb" />
+    <Compile Include="Chat\chat.aspx.designer.vb">
+      <DependentUpon>chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Chat\chat.aspx.vb">
+      <DependentUpon>chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\Auditoria.vb" />
+    <Compile Include="Clases\BasePageWeb.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Clases\ComparacionAlfaNumerica.vb" />
+    <Compile Include="Clases\DropDownListGrouped.vb" />
+    <Compile Include="Clases\GeneralMantenimiento.vb" />
+    <Compile Include="Clases\Logger.vb" />
+    <Compile Include="Clases\Utilitario.vb" />
+    <Compile Include="Common\controles\ExportarExcelGenerico.ascx.designer.vb">
+      <DependentUpon>ExportarExcelGenerico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\controles\ExportarExcelGenerico.ascx.vb">
+      <DependentUpon>ExportarExcelGenerico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WebServices\General.asmx.designer.vb">
+      <DependentUpon>General.asmx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WebServices\General.asmx.vb">
+      <DependentUpon>General.asmx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\WebServices\GeneralPortal.asmx.vb">
+      <DependentUpon>GeneralPortal.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Comprobante\VisorComprobante.aspx.designer.vb">
+      <DependentUpon>VisorComprobante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Comprobante\VisorComprobante.aspx.vb">
+      <DependentUpon>VisorComprobante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Configuracion.aspx.designer.vb">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion.aspx.vb">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contrato\ContratoResumen.aspx.designer.vb">
+      <DependentUpon>ContratoResumen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contrato\ContratoResumen.aspx.vb">
+      <DependentUpon>ContratoResumen.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cronograma\Con_Fac_EstadoCuenta.aspx.designer.vb">
+      <DependentUpon>Con_Fac_EstadoCuenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cronograma\Con_Fac_EstadoCuenta.aspx.vb">
+      <DependentUpon>Con_Fac_EstadoCuenta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cronograma\CronogramaPagos.aspx.designer.vb">
+      <DependentUpon>CronogramaPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cronograma\CronogramaPagos.aspx.vb">
+      <DependentUpon>CronogramaPagos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Cronograma\InfoCobros.aspx.designer.vb">
+      <DependentUpon>InfoCobros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cronograma\InfoCobros.aspx.vb">
+      <DependentUpon>InfoCobros.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Demo1.aspx.designer.vb">
+      <DependentUpon>Demo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Demo1.aspx.vb">
+      <DependentUpon>Demo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorNoPermiso.aspx.designer.vb">
+      <DependentUpon>ErrorNoPermiso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorNoPermiso.aspx.vb">
+      <DependentUpon>ErrorNoPermiso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinSession.aspx.designer.vb">
+      <DependentUpon>FinSession.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinSession.aspx.vb">
+      <DependentUpon>FinSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Incidencia.aspx.designer.vb">
+      <DependentUpon>Incidencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Incidencia.aspx.vb">
+      <DependentUpon>Incidencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Incidencia\Registrar_Incidencia.aspx.designer.vb">
+      <DependentUpon>Registrar_Incidencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Incidencia\Registrar_Incidencia.aspx.vb">
+      <DependentUpon>Registrar_Incidencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pedido\Dashboard_pedido.aspx.designer.vb">
+      <DependentUpon>Dashboard_pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\Dashboard_pedido.aspx.vb">
+      <DependentUpon>Dashboard_pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\DetallePedido.aspx.designer.vb">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\DetallePedido.aspx.vb">
+      <DependentUpon>DetallePedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\Detalle_Financiamiento.aspx.designer.vb">
+      <DependentUpon>Detalle_Financiamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\Detalle_Financiamiento.aspx.vb">
+      <DependentUpon>Detalle_Financiamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\Pedido.aspx.designer.vb">
+      <DependentUpon>Pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\Pedido.aspx.vb">
+      <DependentUpon>Pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\PedidoMirror.aspx.designer.vb">
+      <DependentUpon>PedidoMirror.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\PedidoMirror.aspx.vb">
+      <DependentUpon>PedidoMirror.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\PedidoPlan.aspx.designer.vb">
+      <DependentUpon>PedidoPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\PedidoPlan.aspx.vb">
+      <DependentUpon>PedidoPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\PedidoPlanIE.aspx.designer.vb">
+      <DependentUpon>PedidoPlanIE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\PedidoPlanIE.aspx.vb">
+      <DependentUpon>PedidoPlanIE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pedido\Registrar_pedido.aspx.designer.vb">
+      <DependentUpon>Registrar_pedido.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pedido\Registrar_pedido.aspx.vb">
+      <DependentUpon>Registrar_pedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registrese.aspx.designer.vb">
+      <DependentUpon>Registrese.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registrese.aspx.vb">
+      <DependentUpon>Registrese.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestablecerContrasena.aspx.designer.vb">
+      <DependentUpon>RestablecerContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestablecerContrasena.aspx.vb">
+      <DependentUpon>RestablecerContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud\Adm_AdjuntarArchivos.aspx.designer.vb">
+      <DependentUpon>Adm_AdjuntarArchivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud\Adm_AdjuntarArchivos.aspx.vb">
+      <DependentUpon>Adm_AdjuntarArchivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud\Adm_GaleriaModDispositivos.aspx.designer.vb">
+      <DependentUpon>Adm_GaleriaModDispositivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud\Adm_GaleriaModDispositivos.aspx.vb">
+      <DependentUpon>Adm_GaleriaModDispositivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud\Editar_Solicitud.aspx.designer.vb">
+      <DependentUpon>Editar_Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud\Editar_Solicitud.aspx.vb">
+      <DependentUpon>Editar_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud\Registrar_Solicitud.aspx.designer.vb">
+      <DependentUpon>Registrar_Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud\Registrar_Solicitud.aspx.vb">
+      <DependentUpon>Registrar_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Images\Login\Web.config" />
+    <Content Include="Common\Scripts\Web.config" />
+    <Content Include="Common\Styles\Web.config" />
+    <Content Include="Common\Images\Web.config" />
+    <Content Include="Common\controladores\DescargarArchivo.ashx" />
+    <Content Include="Common\Contratos\Condiciones.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Documentos\ManualCampana.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Documentos\Planes_Nuevos.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Documentos\PreguntasFrecuentes.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Common\Documentos\Pruebas knockout.docx" />
+    <None Include="Common\Scripts\Bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Common\Scripts\Bootstrap\css\bootstrap.css.map" />
+    <None Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Common\Styles\JqueryThemeRoller\start\images.rar" />
+    <None Include="Common\Styles\Uniform\agent\css\uniform.agent.scss" />
+    <None Include="Common\Styles\Uniform\aristo\css\uniform.aristo.scss" />
+    <None Include="Common\Styles\Uniform\default\css\uniform.default.scss" />
+    <None Include="Common\Styles\Uniform\jeans\css\uniform.jeans.scss" />
+    <None Include="Common\Styles\Uniform\_base\css\uniform._base.scss" />
+    <Content Include="Incidencia\UploadHandler.ashx" />
+    <Content Include="Common\WebServices\Web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\ECONDEÑA.pubxml" />
+    <None Include="My Project\PublishProfiles\JCAMACHO.pubxml" />
+    <None Include="My Project\PublishProfiles\MPAJUELO.pubxml" />
+    <None Include="My Project\PublishProfiles\Perfil1.pubxml" />
+    <None Include="My Project\PublishProfiles\RRAMOS7.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentos\Contratos\Resumen\" />
+    <Folder Include="Pedido\CapturaPedido\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+  </Target>
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:40650/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

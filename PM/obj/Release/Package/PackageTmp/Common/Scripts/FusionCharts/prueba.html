@@ -1,0 +1,16 @@
+<html>
+    <head></head>       
+  <body>
+    <div id="chartContainer">FusionCharts will load here!</div>
+    <script type="text/javascript">
+        FusionCharts.setCurrentRenderer("javascript");
+        var myChart =
+        new FusionCharts("Column3D.swf",
+        "myChartId", "400", "300", "0", "1");
+
+        myChart.setXMLUrl("Data.xml"); 
+        
+        myChart.render("chartContainer");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+﻿#dvContenido {
+    background-color: white;
+    /*border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;*/
+    margin-left: 7px;
+    margin-top: 0px;
+    padding: 4px;
+}
+
+.navbar-header:before {
+    background-color: #1976D2 !important;
+}
+.navbar-content {
+    background-color: #1976D2 !important;
+}

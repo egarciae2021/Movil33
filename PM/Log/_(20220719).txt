@@ -1,0 +1,354 @@
+FechaHora = 19/07/2022 08:43:00
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 08:43:00
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 08:43:04
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 08:43:04
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:07
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:07
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:11
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 17; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:11
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 17; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:31
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:31
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:33
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:16:33
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:17:10
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:17:10
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:17:11
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:17:11
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:23:14
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:23:14
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:23:17
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 15; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 12:23:17
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 15; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:09:38
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:09:38
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:09:41
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:09:41
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:46:52
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:46:52
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:46:55
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:46:55
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:54:27
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:54:27
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:54:30
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 16:54:30
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 17:50:01
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 17:50:01
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 17:50:02
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 17:50:02
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:15:02
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:15:02
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:15:06
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 14; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:15:06
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 14; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:16:23
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:16:23
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:16:25
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:16:25
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:32:21
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:32:21
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:32:24
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 15; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:32:24
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 15; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:37:26
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:37:26
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:37:27
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:37:27
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:39:16
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:39:16
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:39:17
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:39:17
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:30
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:30
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:31
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:31
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:58
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:45:58
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:01
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 39; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:01
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 39; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:19
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:19
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:22
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:46:22
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":6,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":10,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:47:44
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:47:44
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:47:45
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 18:47:45
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 9; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:12:54
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:12:54
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:13:11
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 561; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:13:11
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 561; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:17:51
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:17:51
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:17:54
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 22; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:17:54
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 22; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:20:58
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:20:58
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:21:01
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:21:01
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:22:50
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:22:50
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:22:51
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:22:51
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 10; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:42:46
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:42:46
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:42:48
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1207; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:42:48
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1207; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:27
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:27
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:29
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1367; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:29
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1367; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:41
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:41
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:43
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1382; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:45:43
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1382; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:53:00
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:53:00
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:53:03
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1821; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:53:03
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1821; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:54:22
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:54:22
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:54:24
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1903; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:54:24
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1903; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:59:20
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:59:20
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:59:21
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 2199; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 19:59:21
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 2199; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:00:42
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:00:42
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:00:45
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:00:45
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 16; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_193'; TituloTab='Solicitudes'; URLTab='P_Movil/DashBoard/DashBoard_Solicitudes.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:03:21
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 19/07/2022 20:03:21
+Mensaje = IsPostBack
+____________________________________________________________________________________________________

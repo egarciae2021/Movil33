@@ -1,0 +1,71 @@
+>_10:56:20; User : 1; Url : /GatewayC
+Exception : {
+  "ClassName": "System.Web.HttpException",
+  "Message": "Error al ejecutar la solicitud secundaria para el controlador System.Web.Mvc.HttpHandlerUtil+ServerExecuteHttpHandlerAsyncWrapper.",
+  "Data": null,
+  "InnerException": {
+    "ClassName": "System.Web.HttpParseException",
+    "Message": "Se encontró la etiqueta de cierre \"tr\" sin una etiqueta de inicio correspondiente. ¿Existe el mismo número de etiquetas de inicio y de cierre?\r\n",
+    "Data": null,
+    "InnerException": null,
+    "HelpURL": null,
+    "StackTraceString": "   en System.Web.WebPages.Razor.RazorBuildProvider.EnsureGeneratedCode()\r\n   en System.Web.WebPages.Razor.RazorBuildProvider.get_CodeCompilerType()\r\n   en System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)\r\n   en System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()\r\n   en System.Web.Compilation.BuildProvidersCompiler.PerformBuild()\r\n   en System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)\r\n   en System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)\r\n   en System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)\r\n   en System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)\r\n   en System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)\r\n   en System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)\r\n   en System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)\r\n   en System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)\r\n   en System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)\r\n   en System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.<>c__DisplayClass3_0.<EndProcessRequest>b__0()\r\n   en System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.<>c__DisplayClass5_0.<Wrap>b__0()\r\n   en System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap[TResult](Func`1 func)\r\n   en System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerWrapper.Wrap(Action action)\r\n   en System.Web.Mvc.HttpHandlerUtil.ServerExecuteHttpHandlerAsyncWrapper.EndProcessRequest(IAsyncResult result)\r\n   en System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)",
+    "RemoteStackTraceString": null,
+    "RemoteStackIndex": 0,
+    "ExceptionMethod": "8\nEnsureGeneratedCode\nSystem.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\nSystem.Web.WebPages.Razor.RazorBuildProvider\nVoid EnsureGeneratedCode()",
+    "HResult": -2147467259,
+    "Source": "System.Web.WebPages.Razor",
+    "WatsonBuckets": null,
+    "_httpCode": 0,
+    "_virtualPath": {
+      "VirtualPathString": "/Views/GatewayC/_ListGatewayC.cshtml",
+      "AppRelativeVirtualPathString": "~/Views/GatewayC/_ListGatewayC.cshtml",
+      "Extension": ".cshtml",
+      "FileName": "_ListGatewayC.cshtml",
+      "IsWithinAppRoot": true,
+      "IsRelative": false,
+      "IsRoot": false,
+      "Parent": {
+        "VirtualPathString": "/Views/GatewayC/",
+        "AppRelativeVirtualPathString": "~/Views/GatewayC/",
+        "Extension": "",
+        "FileName": "GatewayC",
+        "IsWithinAppRoot": true,
+        "IsRelative": false,
+        "IsRoot": false,
+        "Parent": {
+          "VirtualPathString": "/Views/",
+          "AppRelativeVirtualPathString": "~/Views/",
+          "Extension": "",
+          "FileName": "Views",
+          "IsWithinAppRoot": true,
+          "IsRelative": false,
+          "IsRoot": false,
+          "Parent": {
+            "VirtualPathString": "/",
+            "AppRelativeVirtualPathString": "~/",
+            "Extension": "",
+            "FileName": "",
+            "IsWithinAppRoot": true,
+            "IsRelative": false,
+            "IsRoot": true,
+            "Parent": null
+          }
+        }
+      }
+    },
+    "_line": 61,
+    "_parserErrors": null
+  },
+  "HelpURL": null,
+  "StackTraceString": "   en System.Web.HttpServerUtility.ExecuteInternal(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage, VirtualPath path, VirtualPath filePath, String physPath, Exception error, String queryStringOverride)\r\n   en System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm, Boolean setPreviousPage)\r\n   en System.Web.HttpServerUtility.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)\r\n   en System.Web.HttpServerUtilityWrapper.Execute(IHttpHandler handler, TextWriter writer, Boolean preserveForm)\r\n   en System.Web.Mvc.Html.ChildActionExtensions.ActionHelper(HtmlHelper htmlHelper, String actionName, String controllerName, RouteValueDictionary routeValues, TextWriter textWriter)\r\n   en System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper htmlHelper, String actionName, Object routeValues)\r\n   en ASP._Page_Views_GatewayC_Index_cshtml.Execute() en D:\\Fuentes\\PCSISTELSUITE1.0\\v3.3.0\\3.MEX\\Web\\PCSistelGateway\\PCSistelGateway\\Views\\GatewayC\\Index.cshtml:línea 120\r\n   en System.Web.WebPages.WebPageBase.ExecutePageHierarchy()\r\n   en System.Web.Mvc.WebViewPage.ExecutePageHierarchy()\r\n   en System.Web.WebPages.StartPage.RunPage()\r\n   en System.Web.WebPages.StartPage.ExecutePageHierarchy()\r\n   en System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)\r\n   en System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)\r\n   en System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)\r\n   en System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)\r\n   en System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.<>c.<BeginExecuteCore>b__152_1(IAsyncResult asyncResult, ExecuteCoreState innerState)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.<>c.<BeginExecute>b__151_2(IAsyncResult asyncResult, Controller controller)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.MvcHandler.<>c.<BeginProcessRequest>b__20_1(IAsyncResult asyncResult, ProcessRequestState innerState)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()\r\n   en System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)\r\n   en System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)\r\n   en System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()\r\n   en System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)\r\n   en System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)",
+  "RemoteStackTraceString": null,
+  "RemoteStackIndex": 0,
+  "ExceptionMethod": "8\nExecuteInternal\nSystem.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\nSystem.Web.HttpServerUtility\nVoid ExecuteInternal(System.Web.IHttpHandler, System.IO.TextWriter, Boolean, Boolean, System.Web.VirtualPath, System.Web.VirtualPath, System.String, System.Exception, System.String)",
+  "HResult": -2147467259,
+  "Source": "System.Web",
+  "WatsonBuckets": null,
+  "_httpCode": 0
+}
+-----------------------------------------------------------
+

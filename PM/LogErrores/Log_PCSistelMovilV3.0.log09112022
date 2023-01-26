@@ -1,0 +1,315 @@
+2022/11/09 09:20:15.099,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/09 09:20:15.119,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/09 09:20:15.119,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/09 09:20:22.618,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 09:20:22.618,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 09:20:22.618,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 09:20:27.424,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 09:20:27.424,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 09:20:27.424,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 09:27:54.500,[21],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 09:27:54.500,[21],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 09:27:54.500,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 09:28:04.324,[23],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 09:28:04.324,[23],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 09:28:04.324,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 09:28:28.095,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 09:28:28.095,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 09:28:28.095,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 09:28:40.754,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 09:28:40.754,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 09:28:40.754,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 09:29:23.914,[21],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:23.915,[21],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:23.915,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:23.918,[27],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:23.918,[27],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:23.918,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:29:32.254,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:29:32.255,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:29:32.255,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:29:32.260,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:29:32.261,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:29:32.261,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:58:44.334,[52],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:58:44.334,[52],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:58:44.335,[52],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 09:58:45.791,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:58:45.791,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 09:58:45.791,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.085,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.085,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.085,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.093,[56],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.093,[56],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 10:17:28.093,[56],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:28:31.625,[70],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:28:31.625,[70],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:28:31.625,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:28:32.981,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:28:32.981,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:28:32.981,[73],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:30:11.351,[70],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:30:11.351,[70],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:30:11.351,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:30:18.058,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:30:18.058,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:30:18.058,[73],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:45:02.534,[67],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:45:02.534,[67],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:45:02.534,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:45:02.542,[45],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:45:02.542,[45],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:45:02.542,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:27.273,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:47:27.273,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:47:27.273,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:47:33.598,[67],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:47:33.598,[67],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:47:33.598,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:47:42.473,[67],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:42.473,[67],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:42.473,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:42.477,[65],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:42.477,[65],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:47:42.477,[65],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:50:05.980,[68],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 11:50:05.980,[68],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 11:50:05.980,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 11:50:14.707,[74],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 11:50:14.707,[74],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 11:50:14.707,[74],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 11:51:36.919,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:51:36.919,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:51:36.919,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:51:42.512,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:51:42.512,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:51:42.512,[71],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:51:46.459,[68],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:51:46.459,[68],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:51:46.459,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:51:46.466,[13],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:51:46.466,[13],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:51:46.466,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:52:03.464,[47],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:52:03.464,[47],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:52:03.464,[47],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:52:07.535,[55],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:07.535,[55],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:07.535,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:07.539,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:07.539,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:07.540,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:52:46.884,[47],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:52:46.884,[47],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:52:46.884,[47],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212660182&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:52:53.129,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:52:53.129,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:52:53.129,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2212660182&vcCodCta=71086215&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:53:33.787,[53],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:33.787,[53],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:33.787,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:33.793,[13],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:33.793,[13],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:33.793,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:53:40.474,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:53:40.474,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:53:40.474,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:53:40.482,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:53:40.482,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:53:40.482,[71],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:54:59.333,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:54:59.333,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:54:59.333,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:55:05.848,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:55:05.848,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:55:05.848,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:55:07.904,[71],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:07.904,[71],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:07.904,[71],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:07.908,[97],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:07.908,[97],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:07.908,[97],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:55:14.452,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:55:14.452,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:55:14.452,[69],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:55:14.457,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:55:14.457,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:55:14.457,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 11:59:11.919,[100],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:59:11.919,[100],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:59:11.919,[100],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 11:59:17.732,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:59:17.732,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:59:17.732,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 11:59:23.154,[19],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:59:23.154,[19],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:59:23.154,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:59:38.600,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 11:59:38.600,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 11:59:38.600,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 11:59:49.157,[49],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:59:49.157,[49],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 11:59:49.157,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 12:00:00.758,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:00:00.758,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:00:00.758,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=5534008298&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:00:06.460,[100],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 12:00:06.460,[100],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 12:00:06.460,[100],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=5534008298&vcCodCta=6030535&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 12:01:33.149,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2224266743&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:01:33.149,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2224266743&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:01:33.149,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2224266743&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 12:01:40.325,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2224266743&vcCodCta=001003009-0&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 12:01:40.325,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2224266743&vcCodCta=001003009-0&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 12:01:40.325,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=2224266743&vcCodCta=001003009-0&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2022/11/09 13:21:20.365,[93],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:21:20.365,[93],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:21:20.365,[93],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:21:35.268,[94],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/11/09 13:21:35.268,[94],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/11/09 13:21:35.269,[94],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=SEG_Perfil&inCod=41&inTip=3&inTipOri=0
+2022/11/09 13:21:44.113,[104],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 13:21:44.114,[104],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 13:21:44.114,[104],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 13:21:46.667,[96],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=30&Par=P_inCod&vcTab=SEG_Perfil
+2022/11/09 13:21:46.667,[96],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=30&Par=P_inCod&vcTab=SEG_Perfil
+2022/11/09 13:21:46.667,[96],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/Mnt_Perfil.aspx?Cod=30&Par=P_inCod&vcTab=SEG_Perfil
+2022/11/09 13:22:05.929,[104],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:22:05.929,[104],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:22:05.929,[104],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:22:09.966,[94],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/09 13:22:09.966,[94],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/09 13:22:09.966,[94],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/09 13:26:57.052,[61],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/09 13:26:57.052,[61],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/09 13:26:57.052,[61],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/09 13:27:01.439,[38],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/09 13:27:01.439,[38],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/09 13:27:01.439,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/09 13:27:08.617,[19],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 13:27:08.617,[19],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 13:27:08.617,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 13:27:13.296,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 13:27:13.296,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 13:27:13.296,[61],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 13:28:05.178,[95],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:28:05.178,[95],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 13:28:05.178,[95],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 16:24:26.008,[107],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/09 16:24:26.008,[107],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/09 16:24:26.008,[107],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/09 16:24:50.994,[97],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/09 16:24:50.994,[97],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/09 16:24:50.994,[97],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/09 16:24:55.444,[22],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/09 16:24:55.444,[22],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/09 16:24:55.444,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/09 16:25:02.379,[25],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 16:25:02.379,[25],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 16:25:02.379,[25],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 16:25:06.886,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/09 16:25:06.886,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/09 16:25:06.886,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/09 16:25:17.225,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 16:25:17.225,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 16:25:17.225,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 16:25:41.005,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:41.005,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:41.005,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:41.011,[25],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:41.011,[25],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:41.011,[25],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5065&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:44.732,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=15&biAdmin=0&biTecnico=0&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=CambioNumero&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5066
+2022/11/09 16:25:44.732,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=15&biAdmin=0&biTecnico=0&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=CambioNumero&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5066
+2022/11/09 16:25:44.732,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=15&biAdmin=0&biTecnico=0&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=CambioNumero&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5066
+2022/11/09 16:25:52.620,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:52.621,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:25:52.621,[24],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:38:32.929,[92],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:38:32.929,[92],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 16:38:32.929,[92],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5066&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 17:13:58.214,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/09 17:13:58.227,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/09 17:13:58.227,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/09 17:14:05.830,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 17:14:05.830,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 17:14:05.830,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/09 17:14:10.513,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 17:14:10.513,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 17:14:10.513,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/09 17:14:28.682,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/SolicitudesAtencion/SOA_Adm_Solicitudes.aspx?EsUsuario=1&?vcTab=&inCod=222&inTip=3&inTipOri=0
+2022/11/09 17:14:28.682,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/SolicitudesAtencion/SOA_Adm_Solicitudes.aspx?EsUsuario=1&?vcTab=&inCod=222&inTip=3&inTipOri=0
+2022/11/09 17:14:28.682,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/SolicitudesAtencion/SOA_Adm_Solicitudes.aspx?EsUsuario=1&?vcTab=&inCod=222&inTip=3&inTipOri=0
+2022/11/09 17:14:46.086,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 17:14:46.086,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 17:14:46.086,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/09 17:15:26.772,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=10231&inTipSol=60&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5273
+2022/11/09 17:15:26.772,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=10231&inTipSol=60&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5273
+2022/11/09 17:15:26.772,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=10231&inTipSol=60&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5273
+2022/11/09 17:15:41.312,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1411631&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5285
+2022/11/09 17:15:41.312,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1411631&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5285
+2022/11/09 17:15:41.312,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1411631&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=7&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5285
+2022/11/09 17:15:53.242,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5285&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 17:15:53.242,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5285&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 17:15:53.242,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5285&IdEstApr=34&IdEstPro=7&BiEscalamiento=False
+2022/11/09 17:50:46.609,[78],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 17:50:46.610,[78],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 17:50:46.610,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 17:50:56.295,[92],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:50:56.295,[92],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:50:56.296,[92],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:53:01.937,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212722264&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 17:53:01.937,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212722264&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 17:53:01.937,[85],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=2212722264&Par=P_vcNum&vcTab=MOV_Linea
+2022/11/09 17:53:30.418,[94],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:53:30.418,[94],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:53:30.418,[94],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:53:39.134,[75],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:53:39.134,[75],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:53:39.134,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:54:33.268,[89],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:54:33.268,[89],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:54:33.268,[89],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/09 17:54:51.456,[74],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:54:51.456,[74],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:54:51.456,[74],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 17:55:03.945,[86],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:55:03.945,[86],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:55:03.945,[86],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:56:46.539,[83],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:56:46.539,[83],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:56:46.539,[83],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 17:56:55.180,[77],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 17:56:55.180,[77],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 17:56:55.180,[77],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:03:58.918,[83],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 18:03:58.918,[83],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 18:03:58.918,[83],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?Cod=001&Par=EMPL_P_vcCODEMP&vcTab=M_EMPL
+2022/11/09 18:04:50.197,[103],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:04:50.197,[103],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:04:50.197,[103],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:04:50.204,[70],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:04:50.204,[70],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:04:50.204,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:05:02.968,[83],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:05:02.968,[83],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:05:02.968,[83],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:06:00.853,[83],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 18:06:00.853,[83],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 18:06:00.853,[83],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2022/11/09 18:06:10.026,[70],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 18:06:10.026,[70],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 18:06:10.026,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/09 18:55:50.317,[34],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 18:55:50.317,[34],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 18:55:50.317,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?vcTab=MOV_Linea
+2022/11/09 18:56:13.163,[40],INFO  ,Ingresa ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 18:56:13.163,[40],INFO  ,Salióooooo ActualizarCultura. Página: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 18:56:13.163,[40],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /General/Administrar/Mantenimiento/Mnt_Empleado.aspx?IsLigero=1&inTipoLinea=1
+2022/11/09 18:56:22.735,[46],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:56:22.735,[46],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:56:22.735,[46],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:56:22.745,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:56:22.745,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0
+2022/11/09 18:56:22.745,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=1&Multiple=0

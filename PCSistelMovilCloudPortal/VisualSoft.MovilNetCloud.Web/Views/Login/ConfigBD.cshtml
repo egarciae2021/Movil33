@@ -1,0 +1,131 @@
+﻿@model VisualSoft.PCSistelMovil.Dominio.BE.ENT_MVVM_ConfiguracionBD
+
+@{
+    ViewBag.Title = "ConfigBD";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@section RenderHeader {
+    
+    @Styles.Render("~/Content/Login/ConfigBD")
+   @* @Scripts.Render("~/bundles/Login/ConfigBD")*@
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+}
+
+@*@section RenderFooter {
+    
+    
+}*@
+
+
+    
+
+<div id="dvPrincipal" class="CentrarAbsoluto">
+@*    <div>
+        <a id="btnIrLogin" href="@Url.Action("Index", "Login")">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </a>
+        <div>
+            <img src="~/Common/Images/OrangeGear.png" />Configuración
+        </div>
+
+        
+
+    </div>*@
+    <div>
+        @if (System.Configuration.ConfigurationManager.AppSettings["EsBasicBolsa"] == null ||
+                System.Configuration.ConfigurationManager.AppSettings["EsBasicBolsa"] == "0")
+        {
+            <a id="btnIrLogin" href="@Url.Action("Index", "Login")">
+                <span class="glyphicon glyphicon-arrow-left" title="Ir a login"></span>
+               
+            </a>
+        }
+        else
+        {
+            <a id="btnIrLogin" href="@Url.Action("AccesoTDP", "Login")">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+            </a>        
+        }
+        <div id="headerSetting">
+            <img src="~/Common/Images/OrangeGear.png" />Configuración
+        </div>
+
+        
+
+    </div>
+
+    <p>Conexión a la base de datos</p>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Servidor:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @*@Html.TextBox("txtServidor","")*@
+                    @Html.TextBoxFor(m => m.Servidor, new { @class = "form-control", id = "txtServidor", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Usuario:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtUsuario","")*@
+                    @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control", id="txtUsuario", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Contraseña:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtContrasena","")*@
+                    @Html.PasswordFor(m => m.Contrasena, new { value = Model.Contrasena, @class = "form-control", id="txtContrasena", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Base de datos:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtBD","")*@
+                    @Html.TextBoxFor(m => m.BaseDatos, new { @class = "form-control" , id = "txtBaseDatos", maxlength="50"})
+                </td>
+            </tr>
+        </table>
+    </div>
+
+  
+    <div>
+        <button id="btnProbarConexion"type="button" class="btn btn-default btn-lg" style="float:left;">
+            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span> Probar Conexión
+
+        </button>
+        <button id="btnGuardar"type="button" class="btn btn-default btn-lg" style="float:right;">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
+        </button>
+    </div>
+
+</div>
+@section RenderFooter{
+    <script src="~/Common/Scripts/Views/ConfigBD.js"></script>
+}
+
+

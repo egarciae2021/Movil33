@@ -1,0 +1,27 @@
+﻿.sello
+{
+    background-image:url('../Common/Images/SelloDeAgua.png');
+    background-repeat: no-repeat;
+
+}
+
+.volver,.imprimir
+{
+    display:none;    
+}
+
+.simu
+{
+    display:block;    
+}
+
+.k-grid-pager
+{
+    display:none;    
+}
+
+#imgVerDetalleFinanciamiento
+{
+    display:none;    
+}   
+

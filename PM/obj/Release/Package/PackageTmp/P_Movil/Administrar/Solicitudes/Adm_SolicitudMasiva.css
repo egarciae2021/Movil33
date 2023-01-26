@@ -1,0 +1,89 @@
+﻿.ui-icon-alert {
+    display: none !important;
+}
+
+.tdAccion {
+    width: 40px;
+}
+
+#toolbar {
+    width: 100% !important;
+}
+
+#tblAcciones {
+    width: 100% !important;
+}
+
+input {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    border:1px solid #F0F0F0;
+}
+
+select {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    border:1px solid #F0F0F0;
+}
+
+.elementoCabecera {
+    background-color: #FFFAD2;
+}
+
+body {
+    /*background-color:aqua;*/
+    width: 100%;
+    /*overflow: hidden;*/
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+}
+
+.Titulo {
+    background-color: blue;
+    color: white;
+    font-family: Arial;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.Subtitulo {
+    background-color: white;
+    color: blue;
+    font-family: Arial;
+    font-size: x-large;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+.FilaCabecera {
+    background-color: #F8F8F8;
+    color: #2E6EB5;
+    cursor: pointer;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    border:1px solid #C5DBEC;
+}
+    .FilaCabecera > th {
+        font-weight: 600 !important;
+        font-size: 12px;
+        border-bottom:1px solid #C5DBEC;
+    }
+
+.FilaDatos {
+    background-color: white;
+    color: black;
+}
+
+    .FilaDatos:hover {
+        background-color: #D9DFE5;
+        color: blue;
+        cursor: pointer;
+    }
+
+.Icono {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

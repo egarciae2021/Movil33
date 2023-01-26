@@ -1,0 +1,90 @@
+﻿body {
+}
+
+
+#lblMensajeCierre {
+    color: #042457;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+
+td.cellConciliado
+{
+    padding:1px;
+    color: #043E22;
+    background-color: #EAF7EF; /*#C0D9EB;*/
+}
+span.cellConciliado
+{
+    display:block;
+    background-image:none;
+    margin-right:-2px;
+    margin-left:-2px;
+    height:14px;
+    padding:4px;
+    color: #043E22;
+    background-color: #EAF7EF; /*#C0D9EB;*/
+}
+
+.MensajeSinDatos{
+    font-weight: bold;
+    font-size: 14px;
+    color: #1D78B5;
+    text-align: left;
+    padding: 20px;
+}
+
+.Observacion{
+    color: #E95E4F;
+}
+
+/*.ui-jqgrid-bdiv{
+    overflow : hidden !important;
+}*/
+
+.progress.progress_sm {
+    border-radius: 0;
+    margin-bottom: 18px;
+}
+
+    .progress.progress_sm, .progress.progress_sm .progress-bar {
+        height: 10px !important;
+    }
+
+
+
+.dashboard_graph .x_title {
+    padding: 5px 5px 7px;
+}
+
+.x_title {
+    border-bottom: 2px solid #E6E9ED;
+    padding: 1px 5px 6px;
+}
+
+.x_panel, .x_title {
+    margin-bottom: 10px;
+}
+
+
+.bg-green {
+    background: #1ABB9C !important;
+    border: 1px solid #1ABB9C !important;
+    color: #fff;
+}
+
+
+.EstiloTituloError {
+    height: 15px !important;
+    color: #E95E4F !important;
+    font-weight: bold !important;
+}
+
+/*.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-55, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+}*/

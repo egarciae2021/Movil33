@@ -1,0 +1,372 @@
+2022/07/12 10:57:30.421,[15],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 10:57:30.429,[15],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 10:57:30.429,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 10:57:35.079,[17],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 10:57:35.079,[17],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 10:57:35.079,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 10:57:35.985,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 10:57:35.985,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 10:57:35.985,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 10:58:57.009,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 10:58:57.009,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 10:58:57.009,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 10:58:57.009,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 10:58:57.009,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 10:58:57.009,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:34:20.482,[65],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:34:20.482,[65],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:34:20.482,[65],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:46:09.418,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 11:46:09.418,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 11:46:09.418,[62],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 11:48:19.449,[80],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:48:19.449,[80],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:48:19.449,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:48:19.449,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:48:19.449,[61],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:48:19.449,[80],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:52:32.110,[46],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:52:32.110,[46],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:52:32.110,[46],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:54:29.947,[67],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:54:29.947,[67],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 11:54:29.947,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:27:07.649,[103],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:27:07.649,[103],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:27:07.649,[103],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:31:50.579,[103],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:31:50.579,[103],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:31:50.579,[103],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:32:53.952,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:32:53.952,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:32:53.952,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:33:18.606,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:33:18.606,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:33:18.606,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:53:17.189,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:53:17.190,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 12:53:17.190,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:20:19.465,[165],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:20:19.465,[165],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:20:19.465,[165],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:28:59.770,[175],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:28:59.770,[175],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:28:59.770,[175],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:19.106,[173],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:19.106,[173],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:19.106,[173],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:42.163,[173],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:42.163,[173],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:30:42.163,[173],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:31:03.503,[173],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:31:03.503,[173],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:31:03.503,[173],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:32:26.714,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 13:32:26.723,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 13:32:26.723,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 13:32:32.129,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 13:32:32.129,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 13:32:32.129,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 13:32:32.693,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 13:32:32.693,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 13:32:32.693,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 13:34:40.150,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:34:40.150,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:34:40.150,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:34:40.150,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:34:40.150,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 13:34:40.150,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:20:14.808,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:20:14.808,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:20:14.809,[32],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:21:57.447,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 14:21:57.460,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 14:21:57.460,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 14:22:02.888,[14],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:22:02.888,[14],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:22:02.888,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:22:03.469,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:22:03.469,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:22:03.469,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:22:20.988,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:22:20.988,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:22:20.988,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:22:20.988,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:22:20.988,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:22:20.988,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:08.228,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Incidencias.aspx?vcTab=&inCod=194&inTip=3&inTipOri=1
+2022/07/12 14:28:08.228,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Incidencias.aspx?vcTab=&inCod=194&inTip=3&inTipOri=1
+2022/07/12 14:28:08.228,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Incidencias.aspx?vcTab=&inCod=194&inTip=3&inTipOri=1
+2022/07/12 14:28:14.734,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 14:28:14.734,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 14:28:14.734,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 14:28:19.176,[35],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:28:19.177,[35],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:28:19.177,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:28:19.624,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:28:19.624,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:28:19.624,[26],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:28:33.303,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:33.303,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:33.303,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:33.321,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:33.321,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:28:33.321,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:30.126,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 14:33:30.126,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 14:33:30.126,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 14:33:34.530,[62],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:33:34.530,[62],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:33:34.530,[62],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:33:35.089,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:33:35.089,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:33:35.089,[50],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:33:43.753,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:43.753,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:43.753,[51],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:55.829,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:55.829,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:33:55.829,[51],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:35:48.321,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 14:35:48.331,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 14:35:48.331,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 14:35:53.054,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:35:53.054,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:35:53.054,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 14:35:53.617,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:35:53.617,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:35:53.617,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 14:36:16.910,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:16.910,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:16.910,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:16.910,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:16.910,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:16.911,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:44.016,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:44.016,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:36:44.016,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:37:03.383,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx?vcTab=&inCod=193&inTip=3&inTipOri=1
+2022/07/12 14:37:03.383,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx?vcTab=&inCod=193&inTip=3&inTipOri=1
+2022/07/12 14:37:03.383,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Solicitudes.aspx?vcTab=&inCod=193&inTip=3&inTipOri=1
+2022/07/12 14:37:09.308,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:37:09.308,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:37:09.308,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:56:46.719,[42],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:56:46.719,[42],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 14:56:46.719,[42],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:07.274,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:07.274,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:07.274,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:22.634,[31],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:00:22.634,[31],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:00:22.634,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:00:27.010,[40],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:00:27.010,[40],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:00:27.010,[40],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:00:27.494,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:00:27.495,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:00:27.495,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:00:32.845,[40],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:32.845,[40],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:00:32.845,[40],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:06:39.997,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:06:40.006,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:06:40.006,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:06:44.510,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:06:44.510,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:06:44.510,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:06:45.035,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:06:45.035,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:06:45.035,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:06:55.209,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:06:55.209,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:06:55.209,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:10:06.929,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:10:06.929,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:10:06.929,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:10:11.349,[23],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:11.349,[23],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:11.349,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:11.870,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:10:11.870,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:10:11.870,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:10:20.850,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:10:20.850,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:10:20.850,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:10:49.579,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:10:49.579,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:10:49.579,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:10:53.965,[18],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:53.965,[18],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:53.965,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:10:54.758,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:10:54.758,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:10:54.758,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:11:02.895,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:11:02.895,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:11:02.895,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:11:02.915,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:11:02.915,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:11:02.915,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:12:13.591,[24],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:12:13.591,[24],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:12:13.591,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:12:18.023,[32],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:12:18.023,[32],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:12:18.023,[32],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:12:18.495,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:12:18.495,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:12:18.495,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:12:30.583,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:12:30.583,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:12:30.583,[24],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:26.580,[36],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:13:26.580,[36],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:13:26.580,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:13:31.024,[42],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:13:31.024,[42],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:13:31.024,[42],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:13:31.573,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:13:31.574,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:13:31.574,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:13:38.040,[36],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:38.040,[36],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:38.040,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:38.042,[44],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:38.042,[44],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:13:38.042,[44],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:47:26.829,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 15:47:26.839,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 15:47:26.839,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 15:47:31.387,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:47:31.387,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:47:31.387,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 15:47:31.958,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:47:31.958,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:47:31.958,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 15:56:33.916,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:56:33.916,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:56:33.916,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:56:33.918,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:56:33.918,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 15:56:33.918,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:00:07.196,[16],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:00:07.196,[16],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:00:07.196,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:00:11.609,[23],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:00:11.609,[23],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:00:11.609,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:00:12.663,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:00:12.663,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:00:12.663,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:00:27.346,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:00:27.346,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:00:27.346,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:01:56.423,[13],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:01:56.423,[13],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:01:56.423,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:02:00.920,[18],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:00.920,[18],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:00.920,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:01.656,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:02:01.656,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:02:01.656,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:02:09.086,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:02:09.086,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:02:09.086,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:02:40.293,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:02:40.302,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:02:40.303,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:02:44.661,[10],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:44.662,[10],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:44.662,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:02:45.224,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:02:45.225,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:02:45.225,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:03:00.485,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:03:00.485,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:03:00.485,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:04:51.579,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:04:51.594,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:04:51.594,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:04:56.097,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:04:56.097,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:04:56.097,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:04:56.785,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:04:56.785,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:04:56.785,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:05:17.824,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:05:17.824,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:05:17.824,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:16.183,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:07:16.193,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:07:16.193,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:07:20.674,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:07:20.674,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:07:20.674,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:07:21.330,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:07:21.330,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:07:21.330,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:07:30.583,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:30.583,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:30.583,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:30.583,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:30.583,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:07:30.584,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:11:56.873,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:11:56.882,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:11:56.882,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:12:01.382,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:12:01.382,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:12:01.382,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:12:01.926,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:12:01.926,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:12:01.927,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:12:10.664,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:12:10.665,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:12:10.665,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:43:02.857,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:43:02.867,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:43:02.867,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:43:07.541,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:43:07.541,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:43:07.541,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:43:08.310,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:43:08.310,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:43:08.310,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:43:26.034,[14],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:43:26.034,[14],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:43:26.034,[14],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:10.036,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/12 16:44:10.036,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/12 16:44:10.036,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/12 16:44:20.986,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:44:20.986,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:44:20.986,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/12 16:44:21.903,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:44:21.903,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:44:21.903,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/12 16:44:33.101,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:33.101,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:33.101,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:33.117,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:33.117,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:44:33.117,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:47:34.672,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:47:34.672,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:47:34.672,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:48:25.103,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:48:25.103,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 16:48:25.103,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=|30108845|&p_vcPer=0422
+2022/07/12 17:01:56.217,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_Resumen.aspx?vcTab=&inCod=232&inTip=3&inTipOri=1
+2022/07/12 17:01:56.217,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_Resumen.aspx?vcTab=&inCod=232&inTip=3&inTipOri=1
+2022/07/12 17:01:56.217,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_Resumen.aspx?vcTab=&inCod=232&inTip=3&inTipOri=1
+2022/07/12 17:02:53.228,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:02:53.228,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:02:53.228,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:02:53.256,[42],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:02:53.256,[42],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:02:53.256,[42],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:47:01.781,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:47:01.781,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422
+2022/07/12 17:47:01.781,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Facturacion/Consultar/Con_Fac_ConsultaPrincipal.aspx?p_vcNum=&p_vcCodCue=30108845&p_vcPer=0422

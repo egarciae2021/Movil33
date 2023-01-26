@@ -1,0 +1,658 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false"
+    Inherits="Site_PS8" CodeBehind="Site_PS8.master.vb" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <%--    <meta content="IE=11.0000" http-equiv="X-UA-Compatible" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>PCSistel 3.3</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="./Site_PCSistel33/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Site_PCSistel33/font-awesome.min.css" />
+    <link href="Site_PCSistel33/jquery-ui.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./Site_PCSistel33/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <!--[if lte IE 9]>
+		<link rel="stylesheet" href="./Site_PCSistel33/ace-part2.min.css" class="ace-main-stylesheet" />
+	<![endif]-->
+    <link rel="stylesheet" href="./Site_PCSistel33/ace-skins.min.css" />
+    <link rel="stylesheet" href="./Site_PCSistel33/ace-rtl.min.css" />
+    <!--[if lte IE 9]>
+		<link rel="stylesheet" href="./Site_PCSistel33/ace-ie.min.css" />
+	<![endif]-->
+    <link rel="stylesheet" href="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Site_PCSistel33.css")%>" />--%>
+
+    <%--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">--%>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Gestión Móvil</title>
+    <link rel="icon" href="./Content/ico/favicon.png">
+
+    <link href="./Content/css/shared/fonts.googleapis.com.css" rel="stylesheet" type='text/css' />
+
+    <%--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>--%>
+    <link href="./Content/css/shared/bootstrap.min.css" rel="stylesheet">
+
+    <link href="./Content/css/shared/nifty.min.css" rel="stylesheet">
+    <link href="Content/css/shared/theme-dust.min.css" rel="stylesheet" />
+
+    <link href="./Content/css/shared/nifty-demo-icons.min.css" rel="stylesheet">
+    <link href="./Content/css/shared/pace.min.css" rel="stylesheet">
+    <link href="Content/css/shared/spinkit.min.css" rel="stylesheet" />
+    <link href="./Content/css/shared/nifty-demo.min.css" rel="stylesheet">
+    <link href="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Content/css/layout/menuPrincipal.css")%>" rel="stylesheet" />
+    <link href="./Content/css/shared/font-awesome.min.css" rel="stylesheet" />
+    <script src="./Content/js/shared/jquery.min.js"></script>
+
+    <%--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.3.1/vue-resource.min.js"></script>--%>
+
+    <script src="Content/js/shared/vue.min.js"></script>
+    <script src="Content/js/shared/vue-resource.min.js"></script>
+
+    <link href="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Site_PS8.css")%>" rel="stylesheet" />
+    <script src="lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script type="text/javascript" src="<%=UtilitarioWeb.ObtienePublicacionSignalR("Scripts/jquery.signalR-2.2.3.min.js")%>"></script>
+    <script type="text/javascript" src="<%=UtilitarioWeb.ObtienePublicacionSignalR("signalr/hubs")%>"></script>
+
+    <script src="Common/Scripts/moment.js"></script>
+
+
+
+    <style type="text/css">
+        .dvCargando {
+            background: url(Common/Images/Mantenimiento/Cargando.gif) no-repeat right center;
+            width: 96px;
+            height: 96px;
+            top: 48%;
+            left: 43%;
+            z-index: 10000;
+            position: fixed;
+            display: none;
+        }
+    </style>
+    <link id="temaPrincipal"  href="<%=UtilitarioWeb.ObtieneTemaPrincipal()%>" rel="stylesheet" />
+
+    <%=IIf(UtilitarioWeb.ObtieneMO360 = "1", "<link href=""" & UtilitarioWeb.ObtieneVersionArchivoEstatico("Content/mo360/adaptacion.css") & """ rel=""stylesheet"" />", "") %>
+
+</head>
+
+<body class="  pace-done">
+
+    <form id="Form1" runat="server" style="display: none;">
+        <asp:HiddenField ID="hfEsResponsableTI" runat="server" />
+        <asp:HiddenField ID="hfIdUsuario" runat="server" />
+        <asp:HiddenField ID="hfCodEmpleado" runat="server" />
+        <asp:HiddenField ID="hfNombreUsuario" runat="server" />
+        <asp:HiddenField ID="hfDescripcionUsuario" runat="server" />
+        <asp:HiddenField ID="hfTipoUsuario" runat="server" />
+        <asp:HiddenField ID="hfTema" runat="server" />
+        <asp:HiddenField ID="hfTemaPrincipal" runat="server" />
+        <asp:HiddenField ID="hdfNombreDash" runat="server" />
+        <asp:HiddenField ID="hdfEsAdministradorBolsaBasic" Value="0" runat="server" />
+        <asp:HiddenField ID="hdfCodigoDominio" runat="server" />
+        <asp:HiddenField ID="hdf_Reiniciar_Clave" runat="server" />
+        <asp:HiddenField ID="hdfCodEnlace" runat="server" />
+        <asp:HiddenField ID="hdfPeriodoConciliacion" runat="server" />
+        <asp:HiddenField ID="hdf_IdProductoDefault" runat="server" />
+        <asp:HiddenField ID="hfModoCloud" runat="server" />
+        <asp:HiddenField ID="hfMenus" runat="server" />
+        <asp:HiddenField ID="hfpathSignalRPCSistel" runat="server" />
+        <asp:HiddenField ID="hdfMensaje" runat="server" />
+        <asp:HiddenField ID="hdfError" runat="server" />
+        <asp:HiddenField ID="hdfEsEstandar" runat="server" />
+        <asp:HiddenField ID="hdfMostrarChatTawkTo" runat="server" />
+        <asp:HiddenField ID="hdfSimbNoPermitidosClaveUsu" runat="server" />
+    </form>
+
+
+    <input type="hidden" id ="hdfObtieneMO360" value="<%=UtilitarioWeb.ObtieneMO360()%>" />
+
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div id="container" class="effect aside-float aside-bright mainnav-lg">
+
+        <!--NAVBAR-->
+        <!--===================================================-->
+        <header id="navbar">
+            <div id="navbar-container" class="boxed">
+                <!--Brand logo & name-->
+                <!--================================-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand" runat="server" id="LogoProducto"> 
+                        <img id="logonavbar" src="./content/img/logo.png" runat="server" alt="PCSistel" class="brand-icon">
+                        <div class="brand-title">
+                            <span class="brand-text"><span style="margin-left: 10px;" id="lblNombreProducto" runat="server"></span></span>
+                        </div>
+                    </a> 
+                </div>
+                <div id="dvContenedorLogoCliente" style="position: absolute; top: 0px; left: 0px; background-color: white;">
+                    <asp:Image runat="server" ID="LogoCliente"  ImageUrl="~/Common/Controladores/ImagenDinamica.ashx?Tipo=Cliente" Height="59px" Width="220px" />
+                </div>
+
+                <div class="navbar-content">
+                    <ul class="nav navbar-top-links">
+                        <!--Navigation toogle button-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li class="tgl-menu-btn" runat="server" id="btnToggle"> 
+                            <a class="mainnav-toggle" href="#">
+                                <i class="demo-pli-list-view"></i>
+                            </a>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Navigation toogle button-->
+                        <!--Search-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li>
+                            <div class="custom-search-form">
+                                <%--<label class="btn btn-trans" for="search-input" data-toggle="collapse" data-target="#nav-searchbox">
+                                    <i class="demo-pli-magnifi-glass"></i>
+                                </label>--%>
+                                <%--<form>
+                                    <div class="search-container collapse" id="nav-searchbox">
+                                        <input id="search-input" type="text" class="form-control" placeholder="Buscar...">
+                                    </div>
+                                </form>--%>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End Search-->
+                    </ul>
+
+                    <%--<div class="sk-wave" style="position: absolute; right: 5px; top: 0px;">
+					    <div class="sk-rect sk-rect1" style="background-color: white; height: 20px;"></div>
+					    <div class="sk-rect sk-rect2" style="background-color: white; height: 20px;"></div>
+					    <div class="sk-rect sk-rect3" style="background-color: white; height: 20px;"></div>
+					    <div class="sk-rect sk-rect4" style="background-color: white; height: 20px;"></div>
+					    <div class="sk-rect sk-rect5" style="background-color: white; height: 20px;"></div>
+					</div>--%>
+
+                    <ul class="nav navbar-top-links" id="app_menu_links">
+                        <li>
+                            <div style="cursor: default !important; font-size: 12px; margin-top: 5px; margin-bottom: 1px; margin-left: 4px; margin-right: 20px; color: #FDFDFD">
+                                <asp:Label runat="server" ID="lblAcceso"></asp:Label>
+                            </div>
+                        </li>
+                        <%--<li>
+                            <img src="Common/Images/LogoClaro.png" alt="" />
+                        </li>--%>
+                        <menu-notificaciones v-bind:notificacionesincidencias="notificacionesincidencias" v-bind:notificacionessolicitudes="notificacionessolicitudes"  v-bind:existenoleidos="existenoleidos" />
+                    </ul>
+
+
+                    
+
+                    <ul class="nav navbar-top-links" >
+
+                        
+                        <!--Mega dropdown - SELECCION DE PRODUCTO -->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <%--<li class="mega-dropdown">
+                            <a href="#" class="mega-dropdown-toggle">
+                                <i class="demo-pli-layout-grid"></i>
+                            </a>
+                            <div class="dropdown-menu mega-dropdown-menu" style="width: 245px !important">
+                                <div class="row">                                    
+                                    <p class="dropdown-header"><i class="demo-pli-folder-organizing icon-lg icon-fw"></i> Producto</p>
+                                    <hr />
+                                    <div class="row img-gallery">
+                                        <div class="col-xs-6">
+
+                                            <p class="dropdown-header">
+                                                <a href="/Movil/Index" target="_blank" class="">
+                                                    <img class="img-responsive" src="Content/img/pcsistelcloud.jpg"  alt="thumbs"/>
+                                                </a>
+                                                <label style=""> PCSistel Cloud</label>
+                                            </p>
+                        
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <p class="dropdown-header">
+                                                <a href="/Movil/Index" target="_blank" class="">
+                                                    <img class="img-responsive" src="Content/img/pcsistelmovil.jpg"  alt="thumbs"/>
+                                                </a>
+                                                <label style="font-weight: 600;">PCSistel Móvil</label>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>--%>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End mega dropdown-->
+                        <!--Notification dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End notifications dropdown-->
+                        <!--User dropdown-->
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <li id="dropdown-user" class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                                <span class="ic-user pull-right">
+                                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                    <!--You can use an image instead of an icon.-->
+                                    <!--<img class="img-circle img-user media-object" src="img/profile-photos/1.png" alt="Profile Picture">-->
+                                    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                    <i class="demo-pli-male"></i>
+                                </span>
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <!--You can also display a user name in the navbar.-->
+                                <!--<div class="username hidden-xs">Aaron Chavez</div>-->
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default">
+                                <ul class="head-list">
+                                    <li>
+                                        <a href="javascript:fnVerPerfil();"><i class="demo-pli-male icon-lg icon-fw"></i> Mi perfil</a>
+                                    </li>
+                                    <%--<li>
+                                        <a href="#"><span class="badge badge-danger pull-right">9</span><i class="demo-pli-mail icon-lg icon-fw"></i> Mensajes</a>
+                                    </li>--%>
+                                   <%-- <li>
+                                        <a href="#"><i class="demo-pli-gear icon-lg icon-fw"></i> Configuración</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="demo-pli-information icon-lg icon-fw"></i> Ayuda</a>
+                                    </li>--%>
+                                    <li>
+                                        <a href="Login.aspx"><i class="demo-pli-unlock icon-lg icon-fw"></i> Cerrar sesión</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                        <!--End user dropdown-->
+                        <li id="liMenuVertical">
+                            <a href="#" id="aMenuVertical" class="aside-toggle">
+                                <i class="demo-pli-dot-vertical"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--================================-->
+                <!--End Navbar Dropdown-->
+            </div>
+        </header>
+        <!--===================================================-->
+        <!--END NAVBAR-->
+        <div class="boxed">
+            <!--CONTENT CONTAINER-->
+            <!--===================================================-->
+
+            
+
+            <div id="content-container" class="contenidoPrincipal">
+            
+                <%--<div style="position: absolute; width: 100%; height: 100px; background-color: #25476A; z-index: 0;">
+                </div>--%>
+
+                <%--<div id="dvContenido" style="background-color: #25476A;">--%>
+                <div id="dvContenido">
+
+                    <%--<div style="position: absolute; width: 100%; height: 100px; background-color: #25476A; z-index: 0;">
+                    </div>--%>
+
+                    <%--<iframe id="ifContenido" frameborder="0" src=""></iframe>--%>
+
+                    <iframe id="ifProducto" class="ifProducto" frameborder="0" style="width: 1414px; height: 755px; position: absolute;"
+                        src="PlantillaTab.aspx?idp=3&nop=Móvil"></iframe>
+                </div>
+            </div>
+            <!--===================================================-->
+            <!--END CONTENT CONTAINER-->
+            <!--ASIDE-->
+            <!--===================================================-->
+
+            <%--<div  class="sk-child sk-double-bounce2"></div>--%>
+            <%--<div id="skLoading" style="position: absolute; display: none;" class="sk-double-bounce">
+                <div class="sk-child sk-double-bounce1"></div>
+                <div class="sk-child sk-double-bounce2"></div>
+            </div>--%>
+
+            <%--<div id="skLoading" style="position: absolute; display: none; background-color: red; width: 500px;" class="text-center">--%>
+            <%--<img src="Common/Images/Login/Cargando.gif" style="width: 20px;" alt="" />--%>
+            <div id="skLoading" class="dvCargando" style="display: none;"></div>
+            <%--</div>--%>
+
+            <aside id="aside-container">
+                <div id="aside">
+                    <div class="nano has-scrollbar">
+
+                        <div id="app_menu_vertical" class="nano-content" tabindex="0" style="right: -17px;">
+
+                            <ul class="nav nav-tabs nav-justified">
+                                <li 
+                                    v-bind:class="{'active': tab.P_inCod == tabSeleccionado}"                                      
+                                    v-for="tab in tabs">
+                                    <a v-bind:href="'#menuvertical_' + tab.P_inCod" data-toggle="tab" v-on:click="fnTabMenu_click(tab)">
+                                        <i v-if="tab.vcURLIco" v-bind:class="tab.vcURLIco" style="font-size: 18px; width: 24px;"></i>                                        
+                                        {{tab.vcNom}}
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content">
+                                 <div 
+                                     class="tab-pane fade" 
+                                     v-bind:class="{'in active':tabSeleccionado == tab.P_inCod}"
+                                     v-bind:id="'#menuvertical_' + tab.P_inCod"  v-for="tab in tabs" >
+                                    
+                                    <ul class="list-group bg-trans" v-for="menuModulos in tab.menus.nodes" >
+                                        <li class="pad-top list-header"   v-if=" menuModulos.text != 'Reportes' " >
+                                            <p class="text-main text-sm text-uppercase text-bold mar-no">{{menuModulos.text}}</p>
+                                        </li>
+                                        <menulateral-item  
+                                            v-if="menuModulos.nodes && menuModulos.nodes.length"
+                                            v-for="menuOpciones in menuModulos.nodes"
+                                            v-bind:menu="menuOpciones" >
+                                        </menulateral-item>
+                                        <hr />
+                                    </ul>
+                                    
+
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 1778px; transform: translate(0px, 0px);"></div></div>
+                    </div>
+                </div>
+            </aside>
+            <!--===================================================-->
+            <!--END ASIDE-->
+            <!--MAIN NAVIGATION-->
+            <!--===================================================-->
+            <nav id="mainnav-container">
+                <div id="mainnav">
+
+                    <!--OPTIONAL : ADD YOUR LOGO TO THE NAVIGATION-->
+                    <!--It will only appear on small screen devices.-->
+                    <div class="mainnav-brand">
+                        <a href="#" class="brand">
+                            <%--<img src="content/img/logo.png" alt="PCSistel" class="brand-icon" />--%>
+                            <asp:Image runat="server" ID="LogoCliente2"  ImageUrl="" alt="PCSistel" class="brand-icon"  />
+                            <%--<span class="brand-text">Móvil 3.3</span>--%>
+                        </a>
+                        <a href="#" class="mainnav-toggle" ><i class="pci-cross pci-circle icon-lg"></i></a>
+                    </div>
+                    
+                    <!--Menu-->
+                    <!--================================-->
+                    <div id="mainnav-menu-wrap">
+                        <div class="nano has-scrollbar">
+                            <div class="nano-content" tabindex="0" style="right: -17px;">
+                                <!--Profile Widget-->
+                                <!--================================-->
+                                <div id="mainnav-profile" class="mainnav-profile">
+                                    <div class="profile-wrap text-center">
+                                        <div class="pad-btm">
+                                            <%--<img class="img-circle img-md" src="./content/img/10.png" alt="Profile Picture">--%>
+                                            <a href="javascript:fnVerPerfilImagen();">
+                                                <asp:Image runat="server" ID="imgUsuario" Height="65px" Width="65px" CssClass="img-circle img-md" AlternateText="" />
+                                            </a>
+                                            
+                                        </div>
+                                        <a href="#profile-nav" class="box-block collapsed" data-toggle="collapse" aria-expanded="false">
+                                            <span class="pull-right dropdown-toggle">
+                                                <i class="dropdown-caret"></i>
+                                            </span>
+                                            <p class="mnp-name"><asp:Label ID="lblNombreUsuario" runat="server" Text=""></asp:Label></p>
+                                            <span class="mnp-desc"><asp:Label ID="lblCorreoUsuario" runat="server" Text=""></asp:Label></span>
+                                        </a>
+                                    </div>
+                                    <div id="profile-nav" class="list-group bg-trans collapse" aria-expanded="false" style="height: 0px;">
+                                        <a href="javascript:fnVerPerfil();" class="list-group-item">
+                                            <i class="demo-pli-male icon-lg icon-fw"></i> Mi perfil
+                                        </a>
+                                        <%--<a href="#" class="list-group-item">
+                                            <i class="demo-pli-gear icon-lg icon-fw"></i> Configuración
+                                        </a>
+                                        <a href="#" class="list-group-item">
+                                            <i class="demo-pli-information icon-lg icon-fw"></i> Ayuda
+                                        </a>--%>
+                                        <a href="Login.aspx" class="list-group-item">
+                                            <i class="demo-pli-unlock icon-lg icon-fw"></i> Cerrar sesión
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!--Shortcut buttons-->
+                                <!--================================-->
+                                <div id="mainnav-shortcut" class="hidden">
+                                    <ul class="list-unstyled shortcut-wrap">
+                                        <li class="col-xs-3" data-content="My Profile" data-original-title="" title="">
+                                            <a class="shortcut-grid" href="#">
+                                                <div class="icon-wrap icon-wrap-sm icon-circle bg-mint">
+                                                    <i class="demo-pli-male"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-xs-3" data-content="Messages" data-original-title="" title="">
+                                            <a class="shortcut-grid" href="#">
+                                                <div class="icon-wrap icon-wrap-sm icon-circle bg-warning">
+                                                    <i class="demo-pli-speech-bubble-3"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-xs-3" data-content="Activity" data-original-title="" title="">
+                                            <a class="shortcut-grid" href="#">
+                                                <div class="icon-wrap icon-wrap-sm icon-circle bg-success">
+                                                    <i class="demo-pli-thunder"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="col-xs-3" data-content="Lock Screen" data-original-title="" title="">
+                                            <a class="shortcut-grid" href="#">
+                                                <div class="icon-wrap icon-wrap-sm icon-circle bg-purple">
+                                                    <i class="demo-pli-lock-2"></i>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--================================-->
+                                <!--End shortcut buttons-->
+                                <div id="app_menu">
+                                        
+                                    <ul id="mainnav-menu" class="list-group">
+                                        <li class="list-header">Móvil</li>                                        
+                                        <tree-menu v-for="menu in menuList.nodes" v-bind:menu="menu"></tree-menu>                                                                                
+                                        <menu-favoritos v-bind:menus="menuFavoritos" />
+                                    </ul>
+                                </div>
+
+                                <%--<!--Widget-->
+                                <!--================================-->
+                                <div class="mainnav-widget">
+                                    <!-- Show the button on collapsed navigation -->
+                                    <div class="show-small">
+                                        <a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
+                                            <i class="demo-pli-monitor-2"></i>
+                                        </a>
+                                    </div>
+                                    <!-- Hide the content on collapsed navigation -->
+                                    <div id="demo-wg-server" class="hide-small mainnav-widget-content">
+                                        <ul class="list-group">
+                                            <li class="list-header pad-no mar-ver">Server Status</li>
+                                            <li class="mar-btm">
+                                                <span class="label label-primary pull-right">15%</span>
+                                                <p>CPU Usage</p>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar progress-bar-primary" style="width: 15%;">
+                                                        <span class="sr-only">15%</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="mar-btm">
+                                                <span class="label label-purple pull-right">75%</span>
+                                                <p>Bandwidth</p>
+                                                <div class="progress progress-sm">
+                                                    <div class="progress-bar progress-bar-purple" style="width: 75%;">
+                                                        <span class="sr-only">75%</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="pad-ver"><a href="#" class="btn btn-success btn-bock">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!--================================-->
+                                <!--End widget-->--%>
+                            </div>
+                            <div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 1778px; transform: translate(0px, 0px);"></div></div>
+                        </div>
+                    </div>
+                    <!--================================-->
+                    <!--End menu-->
+                </div>
+            </nav>
+            <!--===================================================-->
+            <!--END MAIN NAVIGATION-->
+        </div>
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+        <footer id="footer">
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pad-rgt pull-right">
+                You have <a href="#" class="text-main"><span class="badge badge-danger">3</span> pending action.</a>
+            </div>
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">
+                <asp:Label runat="server" ID="lblNombreProductoRelease"> </asp:Label>
+            </div>
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <p class="pad-lft" id="pCliente" runat="server">© 2018 VisualSoft S.A.C</p>
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+        <!-- SCROLL PAGE BUTTON -->
+        <!--===================================================-->
+        <button class="scroll-top btn" style="animation: jellyIn 0.8s;">
+            <i class="pci-chevron chevron-up"></i>
+        </button>
+        <!--===================================================-->
+
+    </div>
+
+
+    <div style="display: none;" id="modalFondo" class="modal-backdrop fade in"></div>
+    <div class="modal fade in"
+        id="modalProfile" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true"
+        style="display: none; padding-right: 17px;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 860px; height: 600px;">
+
+                <!--Modal header-->
+                <div class="modal-header" style="border-bottom: 1px solid #E7E7E7;">
+                    <button type="button" class="close cerrarModalProfile" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+                    <h4 class="modal-title">Mis Datos</h4>
+                </div>
+
+                <!--Modal body-->
+                <div class="modal-body">
+                    <iframe id="ifMiPerfil" frameborder="0" style="padding: 0px; margin: 0px; height: 495px; width: 100%;"></iframe>
+                </div>
+
+                <!--Modal footer-->
+                <%--<div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default cerrarModalProfile" type="button">Cerrar</button>
+                    <button class="btn btn-primary">Grabar</button>
+                </div>--%>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade in"
+        id="modalProfile_Imagen" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true"
+        style="display: none; padding-right: 17px;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: 430px; height: 280px;">
+
+                <!--Modal header-->
+                <div class="modal-header" style="border-bottom: 1px solid #E7E7E7;">
+                    <button type="button" class="close cerrarModalProfile" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+                    <h4 class="modal-title">Cambiar Imagen Usuario</h4>
+                </div>
+                <!--Modal body-->
+                <div class="modal-body">
+                    <iframe id="ifChangeImagenUsuario" frameborder="0" style="padding: 0px; margin: 0px; height: 205px; width: 100%;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="demo-default-modal" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--Modal header-->
+                <div class="modal-header" style="border-bottom: 1px solid #E7E7E7;">
+                    <button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+                    <h4 class="modal-title">Modal Heading</h4>
+                </div>
+
+                <!--Modal body-->
+                <div class="modal-body">
+                    <p class="text-semibold text-main">Bootstrap Modal Vertical Alignment Center</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                    <br>
+                    <p class="text-semibold text-main">Popover in a modal</p>
+                    <p>
+                        This
+                        <button class="btn btn-sm btn-warning demo-modal-popover add-popover" data-toggle="popover" data-trigger="focus" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="Popover Title">button</button>
+                        should trigger a popover on click.
+                    </p>
+                    <br>
+                    <p class="text-semibold text-main">Tooltips in a modal</p>
+                    <p>
+                        <a class="btn-link text-bold add-tooltip" href="#" data-original-title="Tooltip">This link</a> and
+                        <a class="btn-link text-bold add-tooltip" href="#" data-original-title="Tooltip">that link</a> should have tooltips on hover.
+                    </p>
+                </div>
+
+                <!--Modal footer-->
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./Content/js/shared/pace.min.js"></script>
+    <script type="text/javascript" src="./Content/js/shared/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./Content/js/shared/nifty.min.js"></script>
+    <script type="text/javascript" src="./Content/js/shared/nifty-demo.min.js"></script>
+    <script type="text/javascript" src="./Content/js/shared/bootbox.min.js"></script>
+    <script type="text/javascript" src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Content/js/layout/menuPrincipal.js")%>"></script>
+
+    <%--<script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("lib/microsoft/signalr/dist/browser/signalr.js")%>" type="text/javascript"></script>--%>
+    <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Scripts/WebNotifications.js")%>" type="text/javascript"></script>
+    <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("IndexSignalR.js")%>" type="text/javascript"></script>
+    <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Site_PS8.js")%>" type="text/javascript"></script>
+
+</body>
+
+</html>
+

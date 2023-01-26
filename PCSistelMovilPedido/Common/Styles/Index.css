@@ -1,0 +1,167 @@
+﻿html, body, form
+{
+    margin: 0px;
+    height: 100%; /*border:1px dotted skyblue;*/
+    overflow-x: hidden;
+}
+
+a:hover
+{
+    cursor: pointer;
+}
+
+#General
+{
+    width: 1024px;
+    height: 100%; /*border:1px dotted skyblue;*/
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#generalHead
+{
+    width: 1024px;
+    height: 48px;
+    border-bottom: 1px dotted skyblue;
+}
+
+#generalCuerpo
+{
+    width: 1024px; /*border:1px dotted skyblue;*/
+}
+
+#generalMenu
+{
+    width: 100px;
+    height: 88%;
+    border-right: 0px dotted skyblue;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    overflow: hidden;
+}
+
+#menu
+{
+    width: 120px;
+    height: 400px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-top: -300px;
+    margin-left: -75px; /*border:1px dotted skyblue;*/
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font: 13px "Trebuchet MS" , Verdana, Helvetica, sans-serif;
+    color: #666;
+}
+#jqDock
+{
+    position: relative;
+    top: 0px;
+    left: 50px;
+}
+#jqDock li
+{
+    list-style: none;
+}
+.jqDockLabel
+{
+    background: #333;
+    color: #fff;
+    font-size: 12px !important;
+    padding: 3px 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+
+#contenedorPage
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+#organizer
+{
+    width: 200px;
+    margin-right: 5px;
+}
+#bottom
+{
+    width: 300px;
+    height: 90px;
+}
+.teamMate
+{
+    cursor: pointer;
+    cursor: hand;
+}
+.teamMate:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.teamMate h2
+{
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 6px;
+}
+.teamMate p
+{
+    margin: 2px 0;
+    font-size: 11px;
+}
+.teamMate img
+{
+    float: left;
+    margin: 5px 15px 5px 5px;
+    border: 1px solid #ccc;
+    height: 30px;
+}
+
+#anuncio
+{
+    position: absolute;
+    width: 512px;
+    height: 115px;
+    border: 1px solid #000;
+    background: #FDFDFD;
+    left: 50%;
+    margin-left: -256px;
+    top: 100%;
+    margin-top: -116px;
+    opacity: 0.9;
+    border-radius:5px 10px;
+    -webkit-border-radius: 5px 10px;  /* Safari  */
+    -moz-border-radius: 5px 10px;     /* Firefox */   
+}
+
+#dvCierreAnuncio
+{
+    position: absolute;
+    left: 50%;
+    margin-left: 240px;
+    top: 100%;
+    margin-top: -115px;
+    z-index:1000000;
+    color: #BD8949;
+    cursor:hand;
+    cursor:pointer;
+    font-size: 11px;
+    font-weight:bold;
+}

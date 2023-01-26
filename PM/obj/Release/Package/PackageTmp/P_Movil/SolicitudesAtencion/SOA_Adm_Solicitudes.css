@@ -1,0 +1,221 @@
+﻿
+td[aria-describedby="gridSolicitud_Descripcion"] {
+    white-space: normal !important;
+    height:auto;
+    padding-top:2px;
+}
+
+/*.ui-jqgrid tr.jqgrow td.wrap {
+}
+.ui-jqgrid tr.jqgrow td 
+{
+    vertical-align:text-top;
+}*/
+
+.flotarIzquierda
+{
+    float:left;    
+}
+
+#dvPanelControl
+{
+    width:99%;
+    margin-bottom:10px;
+}
+
+#dvCerrar
+{
+    width:400px;
+    display:none;
+}
+#dvEscalar, #dvEscalarExterno
+{
+    width:400px;
+    display:none;
+}
+
+#dvDialogoTipoEscalmiento
+{
+    width:200px;
+    display:none;    
+}
+
+#dvConversacion
+{
+    width:700px;
+    display:none;
+}
+
+#dvAyuda
+{
+    width:270px;
+    display:none;
+}
+
+#dvMensajes
+{
+    width:650px;
+    height:340px;
+    margin:5px 25px 10px 0px;
+    overflow-y:scroll;
+}
+
+.dvNotaContenedor
+{
+    width:600px;
+    margin-left:5px;
+    margin-top:2px;
+    background-color:#F3F3F3; 
+    padding:10px; 
+    border-radius: 3px;  
+}
+
+.dvNotaContenedor2
+{
+    width:570px;
+    margin-left:5px;
+    margin-top:2px;
+    background-color:rgb(230,230,230);
+    background-color:rgba(230,230,230,.8);
+    padding:10px; 
+    border-radius: 3px;  
+}
+
+.tituloNota
+{
+    width:590px;
+    margin-left:5px;
+}
+
+.imagenNota
+{
+   width:17px;
+   height:17px; 
+   background-image:url('../../Common/Images/nota16x16.png');
+   background-repeat: no-repeat; 
+   float:left;
+}
+
+.imagenEsAyuda
+{
+   width:17px;
+   height:17px; 
+   background-image:url('../../Common/Images/Mantenimiento/SolicitarAyuda.png');
+   background-repeat: no-repeat; 
+   float:left;
+}
+
+.imagenArchivoAdjunto
+{
+   width:17px;
+   height:17px; 
+   background-image:url('../../Common/Images/Mantenimiento/BajarArchivo.png');
+   background-repeat: no-repeat; 
+   float:right;
+   margin-left:5px;
+}
+.subTituloNota
+{
+    font-weight:bold;
+    float:left;
+    margin-left:5px;
+}
+
+.mensajeNota
+{
+    width:590px;
+    margin-left:5px;
+}
+
+.mensajeNotaConAdjunto
+{
+    width:440px;
+    margin-left:5px;
+}
+
+.mensajeAdjunto
+{
+    width:149px;
+    margin-right:5px;
+    text-align:right;
+    float:right;
+    margin-top:-20px;
+    overflow:hidden;
+}
+
+
+ul
+{
+    list-style:none;    
+    display:inline;
+}
+
+li
+{
+    display:inline;     
+}
+
+.bordeAdjunto
+{
+    border: 1px solid #6FA7D1;    
+}
+
+.linkDescarga
+{
+font-weight:bold; 
+text-decoration:underline;    
+}
+
+.linkDescarga:hover
+{
+    cursor:pointer;    
+}
+
+.EscalaAnteriores
+{
+    /*background-color:#6FA7D1;*/
+    background-color:rgb(230,230,230);
+    background-color:rgba(230,230,230,.8);
+    font-weight:bold;
+}
+.bordeInferior
+{
+    border-bottom: 1px solid white !important;    
+}
+
+.imgBtnn
+{
+    float:left;    
+}
+
+.m_left
+{
+    margin-left:4px;    
+}
+
+.letter
+{
+    margin-top:5px;    
+}
+
+.dvVerDetalleEsc
+{
+    border-top: 1px solid white;
+    color: rgb(200,200,200);
+    text-align:center;
+    font-size:10pt;
+    font-family:Verdana;    
+    font-weight:lighter;
+}
+
+.dvVerDetalleEsc:hover
+{
+    /*box-shadow:0px 0px 5px gray;    */
+    color: rgb(150,150,150);
+    cursor:pointer;
+}
+
+.dvContenidoEscala
+{
+    display:none;    
+}

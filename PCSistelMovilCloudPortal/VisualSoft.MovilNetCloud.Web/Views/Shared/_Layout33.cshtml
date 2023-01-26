@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login | @ViewData["NombreProducto"] </title>
+
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.png")" type=image/x-icon>
+    <link href="@Url.Content("~/Content/css/fonts.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/bootstrap.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/nifty.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/nifty-demo-icons.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/plugins/pace/pace.min.css")" rel="stylesheet" />
+    <script src="@Url.Content("~/Content/plugins/pace/pace.min.js")"></script>
+    <link href="@Url.Content("~/Content/css/nifty-demo.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/css/general.css")" rel="stylesheet" />
+
+    <link href="@Url.Content("~/Content/css/login.css")" rel="stylesheet" />
+
+    @*@Styles.Render("~/Content/esencial")
+    *@
+
+    @Scripts.Render("~/bundles/esencial")
+
+    @RenderSection("RenderHeader", false)
+
+</head>
+
+<body class="  pace-done">
+
+    <input id="hdfMiRaiz" type="hidden" value='@Url.Content("~")' />
+
+    <div class="pace  pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+    <div id="container" class="cls-container">
+
+        <!-- BACKGROUND IMAGE -->
+        <!--===================================================-->
+        <div id="bg-overlay" class="bg-img"></div>
+
+        <div>
+            @RenderBody()
+        </div>
+
+    </div>
+
+
+
+
+    <!--===================================================-->
+    <!-- END OF CONTAINER -->
+    <!--JAVASCRIPT-->
+    <!--=================================================-->
+    <!--jQuery [ REQUIRED ]-->
+    <script src="@Url.Content("~/Content/js/jquery.min.js")"></script>
+
+    <script src="@Url.Content("~/Content/js/login.js")"></script>
+
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="@Url.Content("~/Content/js/bootstrap.min.js")"></script>
+
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="@Url.Content("~/Content/js/nifty.min.js")"></script>
+
+
+    <!--=================================================-->
+    <!--Background Image [ DEMONSTRATION ]-->
+    <script src="@Url.Content("~/Content/js/bg-images.js")"></script>
+
+    <!-- <style id="__styleurl-disable-intercom-while-styleurl-bar-in-page-sorry-intercom">
+        #intercom-container {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <style id="__styleurl--handle-loading-fouc">
+        #__styleurl_create_styleurl_shadowdom > div {
+            display: none;
+        }
+
+            #__styleurl_create_styleurl_shadowdom > div.resolved {
+                display: block;
+            }
+    </style> -->
+
+    <div id="__styleurl_create_styleurl_shadowdom">
+        <div class="ignore-react-onclickoutside resolved"></div>
+    </div>
+
+    <script src="~/Common/Scripts/aes.js"></script>
+    @RenderSection("RenderFooter", false)
+    <script src="~/Common/Scripts/jquery.Storage.js"></script>
+</body>
+</html>

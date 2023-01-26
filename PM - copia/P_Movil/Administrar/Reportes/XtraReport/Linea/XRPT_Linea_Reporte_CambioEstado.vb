@@ -1,0 +1,4 @@
+﻿Imports System.Threading
+Imports System.Globalization
+Public Class XRPT_Linea_Reporte_CambioEstado
+End Class

@@ -1,0 +1,737 @@
+﻿@using System.Web.Script.Serialization;
+
+@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Ticket
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+
+    #btnBorrarFechaInicio:hover, #btnBorrarFechaFin:hover {
+        cursor: pointer;
+    }
+
+    #tbDetalleGrilla td:nth-child(odd) {
+        color: #485CA4;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    #tbTecnicosAsignar > tbody tr:nth-child(odd) {
+        background: #F8F8F8;
+    }
+</style>
+
+<div id="dvDialogoTecnicos" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:700px !important;">
+            <div class="modal-header alert-info">
+                Técnicos a cargo
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body" style="height:500px; overflow-y:scroll; padding:0px !important;">
+                <div class="modal-body">
+                    <div>Tipo:</div>
+                    <div>
+                        <select class="MiSelect form-control ui-corner-all" id="ddlTipoModal">
+                            @for (int i = 0; i < Model.Tipos.Count; i++)
+                            {
+                                <option value="@Model.Tipos[i].IdTipo">@Model.Tipos[i].Nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <table id="tbTecnicosAsignar" class="table">
+                    <thead style="background:#EEF7FB; font-weight:lighter; color:gray;">
+                        <tr>
+                            <td>
+                                Usuario
+                            </td>
+                            <td>
+                                Nombres y apellidos
+                            </td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#5cb85c;"></span>Óptimo</td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#f0ad4e;"></span>Aceptable</td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#d9534f;"></span>Crítico</td>
+                            <td>Total</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index:1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Código Ticket</span>
+                            <input type="text" id="txtCodigoTicket" Style="margin-left: -90px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Dominio </span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlDominio">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Dominios.Count; i++)
+                                {
+                                    <option value="@Model.Dominios[i].IdDominio">@Model.Dominios[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nivel </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlNivel">
+
+                                @for (int i = 0; i < Model.Niveles.Count; i++)
+                                {
+                                    <option value="@Model.Niveles[i].IdNivel">@Model.Niveles[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Bolsa </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlBolsa">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Niveles.Count > 0)
+                                {
+                                    for (int i = 0; i < Model.Niveles[0].Bolsas.Count; i++)
+                                    {
+                                        <option value="@Model.Niveles[0].Bolsas[i].IdBolsa">@Model.Niveles[0].Bolsas[i].Nombre </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipo </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlTipo">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Tipos.Count > 0)
+                                {
+                                    for (int i = 0; i < Model.Tipos.Count; i++)
+                                    {
+                                        <option value="@Model.Tipos[i].IdTipo">@Model.Tipos[i].Nombre</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="dvTipificacion" class="miCajonGroupBox FlotarIzquierda" style="display:none;">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipificación </span>
+                            <select class="MiSelect" style="margin-left: -65px;" id="ddlTipificacion">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Tipos.Count > 0)
+                                {
+                                    if (Model.Tipos[0].Tipificaciones.Count > 0)
+                                    {
+                                        for (int i = 0; i < Model.Tipos[0].Tipificaciones.Count; i++)
+                                        {
+                                            <option value="@Model.Tipos[0].Tipificaciones[i].IdTipificacion">@Model.Tipos[0].Tipificaciones[i].Nombre</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Fecha </span>
+                            <span style="margin-left: -36px; font-size: 12px;">Inicio</span>
+                            <input type="text" id="txtFechaInicio" class="MiDateTimePicker" />
+                            <img id="btnBorrarFechaInicio" src="~/Common/Images/Borrar.png" />
+                            <span style="font-size: 12px; margin-left:10px;">Fin</span>
+                            <input type="text" id="txtFechaFin" class="MiDateTimePicker" />
+                            <img id="btnBorrarFechaFin" src="~/Common/Images/Borrar.png" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top:10px;">
+    <div class="row">
+        <div id="dvGrillaTicket" class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+            <table id="grillaTicket" class="miGrilla"></table>
+            <div id="pagerGrillaTicket">
+            </div>
+        </div>
+        <div id="dvDetalleGrilla" class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+            <table class="table" id="tbDetalleGrilla">
+                <tr style="background:#F8F8F8;">
+                    <td>
+                        <input type="submit" value="Exportar Excel" id="btnExportarExcel" class="btn btn-success btn-lg FlotarIzquierda" />
+                    </td>
+                    <td colspan="4">
+                        <input type="submit" value="Asignar ticket" id="btnAsignar" class="btn btn-success btn-lg FlotarDerecha" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Código ticket:
+                    </td>
+                    <td></td>
+                    <td>
+                        Código ticket usuario:
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nombre usuario:</td>
+                    <td></td>
+                    <td>Fecha Registro:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dominio:</td>
+                    <td></td>
+                    <td>Estado:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tipo:</td>
+                    <td></td>
+                    <td>Tipificación:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Bolsa:</td>
+                    <td colspan="3"></td>
+
+                </tr>
+                <tr>
+                    <td>Asunto:</td>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td>Descripción</td>
+                    <td colspan="3"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!--modal messaje for export excel--> o-->
+<div id="dvExportarExcel" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Exportar a Excel
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <label>Seleccione la versión de Excel a exportar</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <input type="radio" id="optExportarExcel2003" name="ExportarExcel" checked="checked" value="0" />
+                            <label> Excel 2003 o anterior</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <input type="radio" id="optExportarExcel2007" name="ExportarExcel" checked="checked" value="1" />
+                            <label> Excel 2007 o posterior</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancelarExp" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button type="button" id="btnAceptarExp" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Aceptar</button>
+                <a id="LinkDescargarExcel" href="#" style="display:none;">mi enlace</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function PRM_TicketSinAsignar() {
+        this.IdDominio= -1;
+        this.IdUsuario = -1;
+        this.IdNivel = -1;
+        this.IdBolsa = -1;
+        this.IdTipo = -1;
+        this.IdTipificacion = -1;
+        this.CodigoTicket = "";
+        this.FechaInicio = "";
+        this.FechaFin = "";
+    }
+
+    function PRM_AsignarTicket() {
+        this.IdUsuarioRegistro = -1;
+        this.IdUsuarioAsignar = -1;
+        this.IdTicket = -1;
+        this.IdTicketExterno = -1;
+        this.IdDominio = -1;
+        this.IdTipo = -1;
+    }
+
+    var MiModeloSinAsignar;
+
+    $(function () {
+        MiModeloSinAsignar = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+        fnEventosTicketsSinAsignar();
+        fnGrillaTicketSinAsignar();
+
+
+        disenoResize();
+    });
+
+    function disenoResize() {
+        $("#grillaTicket").setGridWidth($("#dvGrillaTicket").width() - 3);
+    }
+
+    function fnEventosTicketsSinAsignar() {
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        $("#ddlNivel").change(function(){
+            for (var i = 0; i < MiModeloSinAsignar.Niveles.length; i++) {
+                if(MiModeloSinAsignar.Niveles[i].IdNivel == $(this).val())
+                {
+                    $("#ddlBolsa").html("");
+                    $("#ddlBolsa").append("<option value='-1'>--Todos--</option>");
+                    for (var k = 0; k < MiModeloSinAsignar.Niveles[i].Bolsas.length; k++) {
+                        $("#ddlBolsa").append("<option value='"+ MiModeloSinAsignar.Niveles[i].Bolsas[k].IdBolsa +"'>"+MiModeloSinAsignar.Niveles[i].Bolsas[k].Nombre+"</option>");
+                    }
+                    $("#grillaTicket").trigger("reloadGrid");
+                    break;
+                }
+            }
+        });
+
+        $("#ddlTipo").change(function(){
+            var selecionado = $(this).val();
+            $("#ddlTipificacion").html("");
+            $("#ddlTipificacion").append("<option value='-1'>--Todos--</option>");
+            if (selecionado == "-1") {
+                $("#dvTipificacion").hide();
+                $("#grillaTicket").trigger("reloadGrid");
+            }
+            else{
+                for (var i = 0; i < MiModeloSinAsignar.Tipos.length; i++) {
+                    if(MiModeloSinAsignar.Tipos[i].IdTipo == selecionado)
+                    {
+                        for (var k = 0; k < MiModeloSinAsignar.Tipos[i].Tipificaciones.length; k++) {
+                            $("#ddlTipificacion").append("<option value='"+ MiModeloSinAsignar.Tipos[i].Tipificaciones[k].IdTipificacion +"'>"+MiModeloSinAsignar.Tipos[i].Tipificaciones[k].Nombre+"</option>")
+                        }
+                        $("#grillaTicket").trigger("reloadGrid");
+                        break;
+                    }
+                }
+                $("#dvTipificacion").show(200);
+            }
+        });
+
+        $("#btnBorrarFechaInicio").click(function(){
+            $("#txtFechaInicio").val("");
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#btnBorrarFechaFin").click(function(){
+            $("#txtFechaFin").val("");
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $('#txtCodigoTicket').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaTicket").trigger("reloadGrid");
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#ddlDominio").change(function(){
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#ddlBolsa").change(function(){
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#ddlTipificacion").change(function(){
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#txtFechaInicio").change(function () {
+
+            $("#txtFechaFin").datepicker("option", "minDate", $("#txtFechaInicio").datepicker("getDate"));
+
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#txtFechaFin").change(function () {
+
+            $("#txtFechaInicio").datepicker("option", "maxDate", $("#txtFechaFin").datepicker("getDate"));
+
+            $("#grillaTicket").trigger("reloadGrid");
+        });
+
+        $("#btnAsignar").click(function(){
+
+            var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetTecnicosParaAsignar", "TicketSinAsignar")',
+                    data: "{'pIdBolsa':'" + datos.IdBolsa + "'," + //Tamaño de pagina
+                       "'pIdDominio': '" + datos.IdDominio + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    $("#tbTecnicosAsignar > tbody").html("");
+                    for (var i = 0; i < result.length; i++) {
+
+                        if (result[i].Foto.Tamano > 0) {
+                            $("#tbTecnicosAsignar > tbody").append('<tr><td><div style="width:70px; height:80px; border-radius:3px; overflow:hidden; box-shadow:0px 0px 5px gray;"> <img src="@(new Control().ResolveClientUrl("~/Temp/"))'+ result[i].Foto.Nombre +'" height="100%" width="100%" /> </div></td><td>'+result[i].Nombres + ' ' + result[i].Apellidos +'</td><td>' + result[i].CantidadTicketOptimo +'</td><td>' + result[i].CantidadTicketAceptable +'</td><td>' + result[i].CantidadTicketCritico +'</td><td>' + result[i].CantidadTicket +'</td><td><button miData="'+result[i].IdUsuario+'" type="button" class="btn btn-default btn-lg btnAsignar" style="float:right; "><span class="glyphicon glyphicon-save" aria-hidden="true" style="color:#5cb85c"></span></button></td></tr>');
+                        }
+                        else
+                        {
+                            $("#tbTecnicosAsignar > tbody").append('<tr><td><div style="width:70px; height:80px; border-radius:3px; overflow:hidden; box-shadow:0px 0px 5px gray;"> <img src="@(new Control().ResolveClientUrl("~/Common/Images/"))Silueta.jpg" height="100%" width="100%" /> </div></td><td>'+result[i].Nombres + ' ' + result[i].Apellidos +'</td><td>' + result[i].CantidadTicketOptimo +'</td><td>' + result[i].CantidadTicketAceptable +'</td><td>' + result[i].CantidadTicketCritico +'</td><td>' + result[i].CantidadTicket +'</td><td><button miData="'+result[i].IdUsuario+'" type="button" class="btn btn-default btn-lg btnAsignar" style="float:right; "><span class="glyphicon glyphicon-save" aria-hidden="true" style="color:#5cb85c"></span></button></td></tr>');
+                        }
+
+
+                    }
+                    $("#dvDialogoTecnicos").modal('show');
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+                });
+
+            }
+            else {
+                miAlerta("Registro", "Seleccione un registro", "", "#FFCC66");
+            }
+        });
+
+        $(".btnAsignar").live("click", function () {
+            //debugger;
+            $("#dvDialogoTecnicos").modal('hide');
+            var idTecnico = $(this).attr("miData");
+            var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+            var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+            let idTipo = $("#ddlTipoModal").val();
+
+            var oParametro
+            oParametro = new PRM_AsignarTicket();
+
+            oParametro.IdUsuarioAsignar = idTecnico
+            oParametro.IdTicket = datos.Id;
+            oParametro.IdTicketExterno = datos.IdTicketExterno;
+            oParametro.IdDominio = datos.IdDominio;
+            oParametro.IdTipo = idTipo;
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarAsignarTicket", "TicketSinAsignar")',
+                data: "{'pParametros':'" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        miAlerta("Asignar Ticket", result.Mensaje, "", "#5cb85c");
+                        $("#grillaTicket").trigger("reloadGrid");
+                    }
+                    else{
+                        miAlerta("Asignar Ticket", result.Mensaje, "", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        });
+    };
+
+    //sfuncione para exportar eexcel
+    $("#btnExportarExcel").live("click", function () {  fnExportarExcel(); }); 
+    function fnExportarExcel() {$("#dvExportarExcel").modal("show");}
+
+    $("#btnAceptarExp").live("click", function ()  {
+        var oParametroValue
+        oParametroValue = $("input[name='ExportarExcel']:checked").val() * 1; 
+        $.ajax
+        ({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            url: '@Url.Action("ExportarExcel", "TicketSinAsignar")',
+            data: "{'TipoVersion': '" + oParametroValue + "'}",
+            success: function (result)  {
+                $("#grillaTicket").trigger("reloadGrid", [{ current: true }]);
+
+                var NombreArchivo = result.Data;
+
+                if (NombreArchivo != "DataTableVacio") {
+                    GetMiArchivo(NombreArchivo);
+                }
+                else
+                {
+                    if (NombreArchivo == "DataTableVacio")
+                    {
+                        miAlerta("Suscripción", 'No hay datos para Exportar.', "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                }
+
+            },
+            error: function () {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+
+    });
+     function GetMiArchivo(pArchivo) {
+            window.open('@Url.Content("~/Temp/")' + pArchivo,'_blank');
+        };
+    function fnGrillaTicketSinAsignar() {
+
+        $("#grillaTicket").jqGrid({
+            datatype: function () {
+
+                var oParametro
+                oParametro = new PRM_TicketSinAsignar();
+
+                if ($.trim($("#txtCodigoTicket").val()) != "" ) {
+                    oParametro.CodigoTicket =  $.trim($("#txtCodigoTicket").val());
+                }
+
+                //debugger;
+
+                if ($("#ddlDominio").val() != null && $("#ddlDominio").val() != "-1") {
+                    oParametro.IdDominio = $("#ddlDominio").val();
+                }
+
+                if ($("#ddlNivel").val() != null && $("#ddlNivel").val() != "-1") {
+                    oParametro.IdNivel = $("#ddlNivel").val();
+                }
+
+                if ($("#ddlBolsa").val() != null && $("#ddlBolsa").val() != "-1") {
+                    oParametro.IdBolsa = $("#ddlBolsa").val();
+                }
+
+                if ($("#ddlTipo").val() != null && $("#ddlTipo").val() != "-1") {
+                    oParametro.IdTipo = $("#ddlTipo").val();
+                }
+
+                if ($("#ddlTipificacion").val() != null && $("#ddlTipificacion").val() != "-1") {
+                    oParametro.IdTipificacion = $("#ddlTipificacion").val();
+                }
+
+                if ($.trim($("#txtFechaInicio").val()) != "" ) {
+                    var miFechaInicio = $("#txtFechaInicio").datepicker("getDate");
+                    if (miFechaInicio != undefined) {
+                        var DiaInicio = miFechaInicio.getDate().toString();
+                        var MesInicio = (parseInt(miFechaInicio.getMonth()) + 1).toString();
+                        var AnoInicio = miFechaInicio.getFullYear().toString();
+
+                        if (DiaInicio.length < 2)
+                        { DiaInicio = "0" + DiaInicio; }
+
+                        if (MesInicio.length < 2)
+                        { MesInicio = "0" + MesInicio; }
+
+                        oParametro.FechaInicio = AnoInicio + MesInicio + DiaInicio;
+                    }
+                }
+
+                if ($.trim($("#txtFechaFin").val()) != "" ) {
+                    miFechaFin = $("#txtFechaFin").datepicker("getDate");
+
+                    if (miFechaFin != undefined) {
+
+                        var DiaFin = miFechaFin.getDate().toString();
+                        var MesFin = (parseInt(miFechaFin.getMonth()) + 1).toString();
+                        var AnoFin = miFechaFin.getFullYear().toString();
+
+                        if (DiaFin.length < 2)
+                        { DiaFin = "0" + DiaFin; }
+
+                        if (MesFin.length < 2)
+                        { MesFin = "0" + MesFin; }
+
+                        oParametro.FechaFin = AnoFin + MesFin + DiaFin;
+                    }
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetTicketSinAsignar", "TicketSinAsignar")',
+                    data: "{'inPagTam':'" + $('#grillaTicket').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaTicket').getGridParam("page") + "'," + //FiltroRegistro
+                       "'vcOrdCol':'" + $('#grillaTicket').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaTicket').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaTicket")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "Id"
+            },
+            colModel: [
+                { name: 'Id', index: 'Id', label: 'Id', width: "50px", hidden: true },
+                { name: 'Identificador', index: 'Identificador', label: 'Identificador', width: "50px", hidden: true },
+                { name: 'CodigoTicket', index: 'CodigoTicket', label: 'Ticket', width: "100px", align:'center' },
+                { name: 'CodigoTicketMain', index: 'CodigoTicketMain', label: 'Ticket Principal', width: "100px", align:'center' },
+                { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true },
+                { name: 'Nombres', index: 'Nombres', label: 'Usuario', width: "164px", align:'center' }, //ancho
+                { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+                { name: 'NombreBolsa', index: 'NombreBolsa', label: 'Bolsa', width: "130px", align:'center' },
+                { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+                { name: 'IdDominio', index: 'IdDominio', label: 'IdDominio', width: "50px", hidden: true },
+                { name: 'NombreDominio', index: 'NombreDominio', label: 'Dominio', width: "100px", align:'center' },
+                { name: 'CodigoEstado', index: 'CodigoEstado', label: 'CodigoEstado', width: "50px", hidden: true },
+                { name: 'NombreEstado', index: 'NombreEstado', label: 'Estado', width: "80px", align:'center'},
+                { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+                { name: 'NombreTipo', index: 'NombreTipo', label: 'Tipo', width: "100px",align:'center' },
+                { name: 'IdTipificacion', index: 'IdTipificacion', label: 'IdTipificacion', width: "50px", hidden: true },
+                { name: 'NombreTipificacion', index: 'NombreTipificacion', label: 'Tipificación', width: "120px", align:'center' },
+                { name: 'Asunto', index: 'Asunto', label: 'Asunto', width: "150px" },
+                { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "227px" },//amcho
+                { name: 'FechaRegistro', index: 'FechaRegistro', label: 'Fecha registro', width: "140px", align:'center' },
+                { name: 'IdTicketExterno', index: 'IdTicketExterno', label: 'IdTicketExterno', width: "140px", hidden: true },
+
+                { name: 'FechaCierre', index: 'FechaCierre', label: 'Fecha Cierre', width: "96px", align: 'center' }//jpareja
+
+                //{ name: 'ctnContestada', index: 'ctnContestada', label: 'Contestadas', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                //{ name: 'ptjContestada', index: 'ptjContestada', label: '% Contestadas', width: "100px", align: "right" },
+                //{ name: 'ctnAbandonada', index: 'ctnAbandonada', label: 'Abandonadas', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                //{ name: 'ptjAbandonada', index: 'ptjAbandonada', label: '% Abandonadas', width: "100px", align: "right" },
+                //{ name: 'total', index: 'total', label: 'Total', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                //{ name: 'aceptacion', index: 'aceptacion', label: 'Aceptación', hidden: true },
+                //{ name: 'PorcenAceptacion', index: 'PorcenAceptacion', label: 'PorcenAceptacion', hidden: true },
+                //{ name: 'IdConfiguracion', index: 'IdConfiguracion', label: 'IdConfiguracion', hidden: true }
+                //{ name: 'opAceptacion', index: 'opAceptacion', label: 'Aceptación', hidden: false, width: "70px", align: "center", sortable: false, resizable: false,
+                //    formatter: function (value, options, rData) { return fnCrearAceptacion(rData[7], rData[9]); }
+                //},
+                //{ name: 'opIdConfiguracion', index: 'opIdConfiguracion', label: 'Leyenda', hidden: false, width: "70px", align: "center", sortable: false, resizable: false,
+                //    formatter: function (value, options, rData) { return fnCreariconoConfiguracion(rData[10]); }
+                //}
+        //        { name: 'opDashBoard', index: 'opDashBoard', label: 'DashBoard', hidden: false, width: "70px", align: "center", sortable: false, resizable: true,
+        //                formatter: function (value, options, rData) { return fnNombreGrilla(rData[0], rData[1]); }
+        //        }
+            ],
+            pager: "#pagerGrillaTicket",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "170px",
+            //height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+                $("#grillaTicket").setGridWidth($("#dvGrillaTicket").width() - 3);
+
+                $(".ui-jqgrid-bdiv").hover(function () {
+                    $(this).css("overflow-x", "scroll");
+                }, function () {
+                    $(this).css("overflow-x", "hidden");
+                });
+
+                $(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+                $('#grillaTicket').jqGrid('setSelection', 1);
+                var datos = $("#grillaTicket").jqGrid('getRowData', 1);
+                fnMostrarDetalleTicketSinAsignar(datos);
+            },
+            beforeSelectRow: function (rowid, e) {
+                var CurrentSelectIndex = $("#grillaTicket").jqGrid('getInd', rowid);
+                $('#grillaTicket').jqGrid('setSelection', CurrentSelectIndex);
+                var datos = $("#grillaTicket").jqGrid('getRowData', CurrentSelectIndex);
+                fnMostrarDetalleTicketSinAsignar(datos);
+            }
+        }).navGrid("#pagerGrillaTicket", { edit: false, add: false, search: false, del: false });
+
+    }
+
+    function fnMostrarDetalleTicketSinAsignar(datos)
+    {
+        $("#tbDetalleGrilla tr:nth-child(2) td:nth-child(2)").text(datos.CodigoTicket);
+        $("#tbDetalleGrilla tr:nth-child(2) td:nth-child(4)").text(datos.CodigoTicketMain);
+        $("#tbDetalleGrilla tr:nth-child(3) td:nth-child(2)").text(datos.Nombres);
+        $("#tbDetalleGrilla tr:nth-child(3) td:nth-child(4)").text(datos.FechaRegistro);
+        $("#tbDetalleGrilla tr:nth-child(4) td:nth-child(2)").text(datos.NombreDominio);
+        $("#tbDetalleGrilla tr:nth-child(4) td:nth-child(4)").text(datos.NombreEstado);
+        $("#tbDetalleGrilla tr:nth-child(5) td:nth-child(2)").text(datos.NombreTipo);
+        $("#tbDetalleGrilla tr:nth-child(5) td:nth-child(4)").text(datos.NombreTipificacion);
+        $("#tbDetalleGrilla tr:nth-child(6) td:nth-child(2)").text(datos.NombreBolsa);
+        $("#tbDetalleGrilla tr:nth-child(7) td:nth-child(2)").text(datos.Asunto);
+        $("#tbDetalleGrilla tr:nth-child(8) td:nth-child(2)").text(datos.Descripcion);
+    }
+
+</script>

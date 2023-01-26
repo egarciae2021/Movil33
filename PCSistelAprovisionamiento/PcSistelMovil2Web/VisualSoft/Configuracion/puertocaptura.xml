@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<CPuertoCapturaXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NombreSucursal>OFICINA PRINCIPAL</NombreSucursal>
+  <CodigoSucursal>01</CodigoSucursal>
+  <Puerto>COM1</Puerto>
+  <Velocidad>9600</Velocidad>
+  <BitDatos>8</BitDatos>
+  <Pariedad>None</Pariedad>
+  <BitParada>1</BitParada>
+  <FinLinea>CR+LF</FinLinea>
+  <Caracter />
+  <Flujo_Ninguno>true</Flujo_Ninguno>
+  <Flujo_XonXoff>false</Flujo_XonXoff>
+  <Flujo_RTS>false</Flujo_RTS>
+  <Flujo_XonRTS>false</Flujo_XonRTS>
+  <Transmision_Dtr>true</Transmision_Dtr>
+  <Transmision_Rts>true</Transmision_Rts>
+  <Transmision_Eof>false</Transmision_Eof>
+  <Transmision_NullDiscard>false</Transmision_NullDiscard>
+  <InputMode>Texto</InputMode>
+  <InputLen>10</InputLen>
+  <ParityReplace>0</ParityReplace>
+  <Buffers>1024</Buffers>
+  <BuffersEntrada>100</BuffersEntrada>
+</CPuertoCapturaXML>

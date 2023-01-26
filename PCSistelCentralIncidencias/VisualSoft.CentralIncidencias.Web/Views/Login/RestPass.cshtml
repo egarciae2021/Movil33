@@ -1,0 +1,414 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_RestablecerPass
+@{
+    ViewBag.Title = "RestPass";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<style type="text/css">
+    ul
+    {
+        list-style: none;
+        float: left;
+        text-align: left;
+        margin: 0px;
+        padding: 0px 15px 25px 15px;
+        width: 100%;
+    }
+
+    #txtUsuario, #txtContrasena, #txtCorreo
+    {
+        width: 100%;
+    }
+
+    /*.popup-overlay
+    {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        display: none;
+        background-color: #777777;
+        cursor: pointer;
+        opacity: 0.7;
+    }*/
+
+    #dvReestablecimiento,#dvCaducado,#dvExito,#dvErrorSolicitud
+    {
+        display: none;
+        margin: 0px auto;
+        margin-top: 90px;
+        position: relative;
+        width: 400px;
+        /*min-height: 370px;*/
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px #666666;
+        /*padding: 15px;*/
+    }
+
+    /*#dvExito, #dvCaducado, #dvErrorSolicitud
+    {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+        display: none;
+    }*/
+
+    /*.content-dvReestablecimiento
+    {
+        margin: 0px auto;
+        margin-top: 120px;
+        position: relative;
+        padding: 10px;
+        width: 380px;
+        min-height: 200px;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 5px #666666;
+    }
+
+    .content-dvReestablecimiento h2
+    {
+        color: #48484B;
+        border-bottom: 1px solid #48484B;
+        margin-top: 0;
+        padding-bottom: 4px;
+    }*/
+
+    .info-fortaleza
+    {
+        margin: 0px auto;
+        margin-top: 110px;
+        position: relative;
+        padding: 10px;
+        background-color: #FFFFFF;
+        z-index: 300;
+        width: 380px;
+        height: 300px;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px #666666;
+    }
+
+    .info-fortaleza-titulo
+    {
+        /*background-color:#8FBBE8;*/
+        background-color: #0274B5;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        color: White;
+    }
+
+    .info-fortaleza-detalle
+    {
+        padding-top: 1px;
+    }
+
+        .info-fortaleza-detalle li
+        {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: bold;
+            color: #4F4F81;
+            padding-bottom: 8px;
+        }
+
+    .info-fortaleza-cerrar
+    {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: hand;
+        cursor: pointer;
+    }
+
+    .ir-login
+    {
+        margin-bottom:12px;
+    }
+
+    #dvFortalezaContrasena
+    {
+        position: relative;
+        border: 0px dotted gray;
+        display: none; 
+        z-index: 9999; 
+        padding: 5px 5px 5px 5px; 
+        border-radius: 3px; 
+        box-shadow: 5px 5px 5px gray;
+        background-color:lightblue;
+    }
+</style>
+<script type="text/javascript"> 
+    $(function () {
+        $("#txtNuevoPass").keyup(function (e) {
+            if (e.keyCode == 13) {
+                $("#txtConfirmacionPass").focus();
+            } else {
+                passwordStrength($(this).val());
+            }
+        });
+
+        $("#txtConfirmacionPass").keyup(function (e) {
+            if ($("#txtNuevoPass").val() != $(this).val()) {
+                $("#dvFormatInvalid").show();
+                $("#imgCorreo").attr("src", "Common/Images/Mantenimiento/Alerta_16x16.png");
+                $("#lblCoincidenciaPass").text("La contraseñas deben ser iguales.");
+                vControlIgualdadPass = false;
+            } else {
+                $("#dvFormatInvalid").hide();
+                $("#imgCorreo").attr("src", "Common/Images/Mantenimiento/Aprobar.png");
+                $("#lblCoincidenciaPass").text("");
+                vControlIgualdadPass = true;
+            }
+        });
+
+        $(".ir-login").click(function () {
+            window.location.href = "/Login";
+        });
+
+        //$("#imgInfoFortaleza").click(function () {
+        //    $("#dvFortalezaContraseña").show();
+        //});
+
+        //$(".info-fortaleza-cerrar").click(function () {
+        //    $("#dvFortalezaContraseña").hide();
+        //});
+        
+        $('#PassFortaleza').hover(function () {
+            if ($("#lblFortalezaPass").text() == '') {
+                return;
+            }
+            $('#dvFortalezaContrasena').css('position', 'fixed');
+            $('#dvFortalezaContrasena').css('left', $(this).offset().left - $(window).scrollLeft() + $(this).width());
+            $('#dvFortalezaContrasena').css('top', $(this).offset().top - $(window).scrollTop() + $(this).height());
+
+            $('#dvFortalezaContrasena').show(300);
+        }, function () {
+            $('#dvFortalezaContrasena').hide();
+        });
+
+        setTimeout(function () { $("#txtNuevoPass").focus(); }, 100);
+    });
+    //function fnObtenerPaginaLogin() {
+    //    var Host = window.location.host;
+    //    var Protocol = window.location.protocol;
+    //    var PagLogin = "Login";
+    //    return Protocol + '/' + Host + '/' + PagLogin;
+    //}
+
+    function ValidarContrasenas() {
+        var vPass1 = $("#txtNuevoPass").val();
+        var vPass2 = $("#txtConfirmacionPass").val();
+
+        if (vPass1 == '') {
+            alert("Ingrese su nueva contraseña.");
+            $("#txtNuevoPass").focus();
+            return false;
+        }
+        if (vPass2 == '') {
+            alert("Confirme su contraseña antes de continuar.");
+            $("#txtConfirmacionPass").focus();
+            return false;
+        }
+        if (vPass1.length < 6) {
+            alert("La contraseña debe contener como mínimo 6 caracteres.");
+            $("#txtNuevoPass").focus();
+            return false;
+        }
+        if (vPass1 != vPass2) {
+            alert("La contraseñas no coinciden.");
+            $("#txtConfirmacionPass").focus();
+            return false;
+        }
+
+        return true;
+    }
+
+    function passwordStrength(pass) {
+        var colors = [];
+        colors[0] = "#cccccc";
+        colors[1] = "#ff0000";
+        colors[2] = "#ff5f5f";
+        colors[3] = "#56e500";
+        colors[4] = "#399800";
+        colors[5] = "#0000FF";
+
+        var fortaleza = [];
+        fortaleza[0] = ""; //"Inválida";
+        fortaleza[1] = "Muy Débil";
+        fortaleza[2] = "Débil";
+        fortaleza[3] = "Media";
+        fortaleza[4] = "Buena";
+        fortaleza[5] = "Óptima";
+
+        var password = pass
+        var score = 0;
+
+        if (password.length < 6) {
+            score = 0;
+        } else {
+            //if (password.length >= 6) { //longitud mayor o igual a 6 caracteres
+            //    score++;
+            //}
+            //if ((password.match(/[a-z]/)) && (password.match(/[A-Z]/))) { //letras mayusculas y minuscuals
+            //    score++;
+            //}
+            if (password.match(/[A-Z]/)) { //letras mayusculas
+                score++;
+            }
+            if (password.match(/[a-z]/)) { //letras y minusculas
+                score++;
+            }
+            if (password.match(/\d+/)) { //digitos
+                score++;
+            }
+            if (password.match(/[^a-z\d]+/)) { //simbolos
+                score++
+            }
+            if (password.length > 12) { //longitud mayor a 12 caracteres
+                score++;
+            }
+        }
+        //return score;
+        $("#PassFortaleza").css("background-color", colors[score]);
+        $("#lblFortalezaPass").css("color", colors[score]);
+        $("#lblFortalezaPass").text(fortaleza[score]);
+
+        $("#PassFortaleza").css("width", (parseInt(score) * 20).toString() + "%");
+    }
+
+    
+</script>
+
+<div style="width: 70%;">
+</div>
+<div id="dvReestablecimiento" style="min-height: 370px;">
+    <div style="float: left; padding: 20px 0px 0px 17px;">
+        <img src="@Url.Content("~/Common/Images/LogoIcon.png")" alt="VisualSoft"/>
+    </div>
+    <div style="width: 100%; height: 70px;">
+        <h2 style="color: #E78503; float: right; font-weight: bolder; margin-right: 17px; text-shadow: 1px 1px 1px black;">Incidencias </h2>
+        <h2 style="color: #10589A; float: right; font-weight: bolder; text-shadow: 1px 1px 1px black;">Central </h2>
+    </div>
+    @*<script src="@Url.Content("~/Scripts/localization/messages_es.js") (file://src=/)" type="text/javascript"></script>*@
+
+    @using (Html.BeginForm(new { c = ViewBag.c }))
+    {                
+        @Html.AntiForgeryToken()
+        
+        <fieldset>
+            @Html.Raw(ViewData["Mostrar"])
+            <legend style="font-weight: bolder; color: white; background-color: #10589A; text-align: center;">Cambia tu contraseña</legend>
+            <ul>
+                <li>
+                    @Html.LabelFor(m => m.NuevoPass)
+                </li>
+                <li>
+                    @Html.PasswordFor(m => m.NuevoPass, new { @class = "form-control", id = "txtNuevoPass", maxlength = "35" })
+                </li>
+                <li>
+                    @Html.ValidationMessageFor(m => m.ConfirmacionPass)
+                </li>
+                <li style="margin-top: 20px;">
+                    @Html.LabelFor(m => m.ConfirmacionPass)                    
+                </li>                
+                <li>
+                    @Html.PasswordFor(m => m.ConfirmacionPass, new { @class = "form-control", id = "txtConfirmacionPass", maxlength = "35" })
+                    <label id="lblCoincidenciaPass" style="color: #CF2C2C;font-size: small;"></label>
+                </li>
+                <li>
+                    <div id="PassFortaleza" style="height:10px;"></div>
+                </li>
+            </ul>                                    
+            @Html.Hidden("Codigo",ViewData["Codigo"])
+            @Html.Hidden("Horas", ViewData["Horas"])
+            <div style="clear: both;"></div>
+            <div style="text-align: center;">
+                <input type="submit" value="Restablecer Contraseña" id="btnRestablecer" onclick="return ValidarContrasenas();" class="btn btn-success btn-lg" />
+            </div>
+        </fieldset>
+    }
+</div>
+<div id="dvCaducado" runat="server">
+    <div style="float: left; padding: 20px 0px 0px 17px;">
+        <img src="@Url.Content("~/Common/Images/LogoIcon.png")" alt="VisualSoft"/>
+    </div>
+    <div style="width: 100%; height: 70px;">
+        <h2 style="color: #E78503; float: right; font-weight: bolder; margin-right: 17px; text-shadow: 1px 1px 1px black;">Incidencias </h2>
+        <h2 style="color: #10589A; float: right; font-weight: bolder; text-shadow: 1px 1px 1px black;">Central </h2>
+    </div>
+    <legend style="font-weight: bolder; color: white; background-color: #10589A; text-align: center;">Solcitud Expirada</legend>
+    <ul>
+        <li>Su solicitud de cambio de contraseña a expirado.</li>
+        <li>Las solicitud de cambio de contraseña solo estarán activas por un corto periodo de tiempo, asegúrate de usarlas lo mas pronto posible.</li>
+    </ul>
+    <div style="text-align: center;">
+        <input type="submit" value="Ir Login" onclick="return IrLogin();" class="btn btn-success btn-lg ir-login" />
+    </div>
+</div>
+<div id="dvExito" runat="server">
+    <div style="float: left; padding: 20px 0px 0px 17px;">
+        <img src="@Url.Content("~/Common/Images/LogoIcon.png")" alt="VisualSoft"/>
+    </div>
+    <div style="width: 100%; height: 70px;">
+        <h2 style="color: #E78503; float: right; font-weight: bolder; margin-right: 17px; text-shadow: 1px 1px 1px black;">Incidencias </h2>
+        <h2 style="color: #10589A; float: right; font-weight: bolder; text-shadow: 1px 1px 1px black;">Central </h2>
+    </div>
+    <legend style="font-weight: bolder; color: white; background-color: #10589A; text-align: center;">Contraseña Cambiada</legend>
+    <ul>
+        <li>Su contraseña ha sido cambiada con éxito. Ahora puede loguearse con su nueva contraseña.</li>
+    </ul>
+    <div style="text-align: center;">
+        <input type="submit" value="Ir Login" onclick="return IrLogin();" class="btn btn-success btn-lg ir-login" />
+    </div>    
+</div>
+<div id="dvErrorSolicitud" runat="server">
+    <div style="float: left; padding: 20px 0px 0px 17px;">
+        <img src="@Url.Content("~/Common/Images/LogoIcon.png")" alt="VisualSoft"/>
+    </div>
+    <div style="width: 100%; height: 70px;">
+        <h2 style="color: #E78503; float: right; font-weight: bolder; margin-right: 17px; text-shadow: 1px 1px 1px black;">Incidencias </h2>
+        <h2 style="color: #10589A; float: right; font-weight: bolder; text-shadow: 1px 1px 1px black;">Central </h2>
+    </div>
+    <legend style="font-weight: bolder; color: white; background-color: #10589A; text-align: center;">Acceso Inválido</legend>
+    <ul>
+        <li>No podemos procesar su solicitud.</li>
+    </ul>
+    <div style="text-align: center;">
+        <input type="submit" value="Ir Login" onclick="return IrLogin();" class="btn btn-success btn-lg ir-login" />
+    </div>
+</div>
+<div id="dvFortalezaContrasena">
+    Fortaleza de la contraseña: <label id="lblFortalezaPass"></label>
+</div>
+@*<div id="dvFortalezaContraseña" class="info-fortaleza" style="display: none;">
+    <div class="info-fortaleza-titulo">
+        Fortaleza de la contraseña
+            <img class="info-fortaleza-cerrar" src="Common/Images/Chat/cerrar.png" />
+    </div>
+    <div class="info-fortaleza-detalle">
+        <ul>
+            <li>La contraseña debe tener como mínimo 6 caracteres.
+            </li>
+            <li>La fortaleza de la contraseña se mide en los siguientes niveles: 
+                    <span style="color: #ff0000;">"Muy Débil"</span>,&nbsp;
+                    <span style="color: #ff5f5f;">"Débil"</span>,&nbsp;
+                    <span style="color: #56e500;">"Media"</span>,&nbsp;
+                    <span style="color: #399800;">"Buena"</span>&nbsp;y&nbsp;
+                    <span style="color: #0000FF;">"Óptima"</span>
+            </li>
+            <li>Las contraseñas distinguen las mayúsculas y minúsculas, y pueden contener números y símbolos.
+            </li>
+            <li>Por cada punto que considere al ingresar su contraseña, esta se hará mas fuerte.
+            </li>
+            <li>Una contraseña <span style="color: #0000FF;">"Óptima"</span> contiene al menos una mayúscula, una minúscula, un número, un símbolo y tiene mas de 12 caracteres.
+            </li>
+        </ul>
+    </div>
+</div>*@

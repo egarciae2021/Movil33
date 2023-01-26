@@ -1,0 +1,30 @@
+﻿ #panelbarSolicitudes, #panelbarCanal
+{
+    display:none;    
+}
+
+
+.tablaMenu
+{
+    float:left;
+    width:200px;
+    text-align:left;
+    background-color: #E2F0F6;
+}
+
+.menuSelect
+{
+    background-color: skyblue !important;
+}
+
+#Spanlogout
+{
+    margin-right:10px;
+}
+
+.seleccionado
+{
+    background-image: url(\'Common/Images/miDiv.png\');
+    background-repeat:no-repeat;
+    background-position: center;
+}

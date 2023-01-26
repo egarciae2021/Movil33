@@ -1,0 +1,320 @@
+﻿body, html
+{
+    font: 12px "Trebuchet MS" , Verdana, Helvetica, sans-serif;
+}
+
+.k-label, .k-pager-numbers
+{
+    display:none !important;
+}
+.pContenedor
+{
+    width:750px;   
+    padding:0px 3px;
+}
+
+.general
+{
+    width:740px;
+    padding:0px 10px;
+    border:0px dotted gray;
+}
+
+#tablaInidicador
+{
+    float:left;
+    text-align:center;
+    
+}
+
+#tablaDscCampana
+{
+    float:left;
+    margin-left:30px;
+}
+
+.colorFondo
+{
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+
+.subtitulo
+{
+    color:#003F59;
+    font-weight: bold;
+    
+}
+
+.navtaps
+{
+    width:100%;
+    height:30px;
+    border:0px dotted gray;
+    overflow:hidden;
+    padding-top:2px;
+}
+.tap
+{
+    width:170px;
+    height:30px;
+    float:left;
+    border:5px solid white;
+    text-align:left;
+    padding-top:5px;
+    font-size:medium; 
+    cursor:pointer;
+    color:#003F59;
+    padding-left:5px;
+}
+
+.tap:hover, .tapSelect
+{
+    border:0px solid black;
+    color:#003F59;
+    /*background: rgb(250,250,250); */
+    background-color:#E2F0F6;
+}
+
+#detalleTaps
+{
+    width:740px;
+    border:0px dotted gray;
+    
+    background: #E2F0F6; 
+
+    margin:auto;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#tapPlanes
+{
+    width:180px;
+}
+
+#tapCarritoPlan
+{
+    width:180px;    
+}
+
+#tapDeclaracion
+{
+    width:250px;   
+}
+
+
+.gridImaCar
+{
+    width:50px;
+    height:50px;
+    /*margin-top:-5px;
+    margin-left:-8px;*/
+    margin: auto;
+    
+}
+
+.gridImaCar img {
+     width: 100%;
+     max-width: 100%;
+     height: 100%;     
+}
+
+.detalles
+{
+    width:250px;
+}
+
+.fila-a
+{
+   background:white; 
+    /*background: rgba(238,238,238,.3); */
+}
+
+.fila-b
+{
+    background: rgba(230,230,230,0.65); 
+    /*background: rgba(238,238,238,.8); */
+}
+
+.foto
+{
+    width:70px;
+}
+
+.Stock, .Precio
+{
+    width:70px;
+    text-align:right;
+}
+
+.numerictextbox
+{
+    width:100px;
+}
+
+.Comprar
+{
+    width:100px;
+}
+
+
+.photo {
+    width: 100px;                    
+}
+.details {
+    width: 530px;
+}                
+.title {
+    display: block;
+    font-size: 0.8em; 
+    font-weight:bold;
+}
+.description {
+    display: block;
+    padding-top: 1.6em;
+}
+
+td.photo, .employeeID {
+    text-align: center;
+}
+.k-grid-header .k-header 
+{
+    padding: 10px 10px;
+    /*padding: 10px 20px;*/
+}
+.k-grid .k-alta  {
+    background: rgb(230,230,230); 
+    padding: 20px;
+}
+.k-grid .k-alt  {
+    background-color:White;
+}
+
+.gridIma
+{
+    width:65px;
+    height:65px;
+    /*margin-top:-5px;
+    margin-left:-8px;*/
+    margin: auto;
+    
+}
+
+.gridImaCar img:hover
+{
+    cursor:pointer;
+}
+
+.gridIma img {
+     width: 100%;
+     max-width: 100%;
+     height: 100%;     
+}
+
+#btnVolverPedidos:hover
+{
+    background-color:skyblue;    
+}
+
+
+.miTabla{
+    border-collapse:collapse;
+    width:85%;
+    margin: 0 auto;
+}
+
+
+.miTabla td{
+    padding: 4px;
+    border: 0px solid #aeaaaa;
+    left: 5%;
+}
+
+.cGenInfo
+{
+    font-size:12px;
+    color: #003F59;
+}
+
+.titulo{
+    font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align:center;
+    font-weight: bold;
+    background-color:#F4F4F4;
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: #447184;
+    border: 1px solid #F4F4F4;
+    margin: 5px 0 1px 0;
+    padding: 1px 2px;
+}
+
+.EliDetPlan:hover
+{
+    cursor:pointer;
+    background-color:#F4F4F4;
+    padding:2px;
+}
+
+#dvImagenCarrito:hover
+{
+    cursor:pointer;
+}
+
+
+#ulFinanciamiento
+{
+    margin-left: -20px;       
+}
+
+
+#ulFinanciamiento li{
+  display: inline;
+}
+
+#gridPro, #gridDetEle
+{
+    width:720px;
+    margin:5px auto;
+    border: 2px solid white;
+}
+
+ #capaPopUp
+ {
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    bottom:0;
+    background-color: Gray;
+    opacity: 0.2;
+    z-index:20;
+ }
+ 
+.botonIE
+{
+    float: right;
+    border: solid 1px;
+    width: 50px;
+    text-align: center;
+    padding: 3px;
+    margin-right: 5px; 
+    cursor: pointer;
+    background: #DEEBEF;
+    border-radius: 5px;
+}
+
+.botonIE:hover
+{
+    background: #005c83 !important;
+    color: #FFFFFF !important;
+}

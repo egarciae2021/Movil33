@@ -1,0 +1,3 @@
+﻿<%@ ServiceHost Language="VB"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" 
+    Service="ServiciosWCF.Service1Client"  %>

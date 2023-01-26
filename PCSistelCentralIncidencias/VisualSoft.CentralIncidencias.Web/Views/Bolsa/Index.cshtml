@@ -1,0 +1,1101 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Bolsa
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+
+    #tbDetalleBolsa td:nth-child(odd)
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    .tablaSubtitulo
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    #dvFormularioBolsa .conteiner .row
+    {
+        margin:10px 0px;
+    }
+
+</style>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nombre Bolsa</span>
+                            <input type="text" id="txtNombreBolsa" style="margin-left: -90px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nivel </span>
+                            <select class="MiSelect" style="margin-left: -30px;" id="ddlNivel">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Niveles.Count; i++)
+                                {
+                                    <option value="@Model.Niveles[i].IdNivel">@Model.Niveles[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipo </span>
+                            <select class="MiSelect" style="margin-left: -30px;" id="ddlTipo">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Tipos.Count; i++)
+                                {
+                                    <option value="@Model.Tipos[i].IdTipo">@Model.Tipos[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado</span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaBolsa" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="grillaBolsa" class="miGrilla">
+            </table>
+            <div id="pagerGrillaBolsa">
+            </div>
+        </div>
+        <div id="dvDetalleGrillaBolsa" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="tbDetalleBolsa" class="table">
+                <thead>
+                    <tr>
+                        <td colspan="4">                            
+                            <button id="btnNuevaBolsa" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo</button>
+                            <button id="btnEditarBolsa" type="button" class="btn btn-info FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</button>
+                            <button id="btnEliminarBolsa" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</button>                            
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Bolsa :
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Descripción :
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Nivel :
+                        </td>
+                        <td colspan="1"></td>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Grado :
+                        </td>
+                        <td colspan="1"></td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Tipo :
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span class="tablaSubtitulo">  Bolsas Origen :</span>
+            <div style="clear: both;"></div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px;" id="dvGrillaBolsasOrigen">
+                <table id="grillaBolsasOrigen" class="miGrilla">
+                </table>
+                <div id="pagerGrillaBolsasOrigen">
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px; float:left;" id="dvGrillaBolsasOrigen_empty">
+                <ul class="MiListaHorizontal">
+                    <li>
+                        <img src="~/Common/Images/Mantenimiento/bolsaWarning_Alfa.png" />
+                    </li>
+                    <li style="padding-top:20px;">
+                        No hay bolsas de origen
+                    </li>
+                </ul>
+            </div>
+            <span class="tablaSubtitulo">  Bolsas Destino :</span>
+            <div style="clear: both;"></div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px;" id="dvGrillaBolsasDestino">
+                <table id="grillaBolsasDestino" class="miGrilla">
+                </table>
+                <div id="pagerGrillaBolsasDestino">
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px; float:left;" id="dvGrillaBolsasDestino_empty">
+                <ul class="MiListaHorizontal">
+                    <li>
+                        <img src="~/Common/Images/Mantenimiento/bolsaWarning_Alfa.png" />
+                    </li>
+                    <li style="padding-top:20px;">
+                        No hay bolsas de destino
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="dvFormularioBolsa" class="col-xs-24 col-sm-24 col-md-12" style="display:none;">            
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24 ">
+                        <button id="btnCancelar" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar</button>
+                        <button id="btnRegistrarBolsa" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 esInactivo" style="padding: 8px 8px 8px 15px !important;">
+                        <ul class="MiListaHorizontal" >
+                            <li class="tablaSubtitulo">Activar</li>
+                            <li>
+                                <input id="chkActivarBolsa" type="checkbox" />
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Nombre: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <input id="txtNombreBolsaForm" type="text" class="form-control" placeholder="Nombre de bolsa..." />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Descripción:
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <textarea id="txtDescripcionBolsa" cols="20" rows="4" class="form-control" placeholder="Descripción breve de Bolsa..." ></textarea>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Nivel: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <select class="MiSelect" id="ddlNivelForm">
+                            <option value="-1">--Seleccione--</option>
+                            @for (int i = 0; i < Model.Niveles.Count; i++)
+                            {
+
+                                    <option value="@Model.Niveles[i].IdNivel">@Model.Niveles[i].Nombre</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Escalamiento: 
+                    </div>
+                    <div class="col-xs-24 ">
+                        <div class="conteiner">
+@*                            <div class="row" style="margin:0px !important;">
+                                <div class="col-xs-11" style="border:1px dotted gray; height:30px;">
+
+                                </div>
+                            </div>*@
+                            
+                            <div class="row" style="margin:2px !important;">
+                                <div class="col-xs-11" style="border:0px dotted gray; height:250px;">
+
+                                    <ul id="ulBolsasHabilitadas" class="ListaMultiSelect">                                 
+                                    </ul>
+
+                                </div>
+                                <div class="col-xs-2" style="border:0px dotted gray; height:250px;">
+                                    <button id="btnListAllLeft" type="button" class="btn miBtnList" style="width:100%; margin:50px 3px 3px 3px; text-align:center; padding:3px 5px !important;"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                                    <button id="btnListLeft" type="button" class="btn miBtnList" style="width:100%; margin:3px; text-align:center; padding:3px 5px !important;"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                                    <button id="btnListRight" type="button" class="btn miBtnList" style="width:100%; margin:3px; text-align:center; padding:3px 5px !important;"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                                    <button id="btnListAllRight" type="button" class="btn miBtnList" style="width:100%; margin:3px; text-align:center; padding:3px 5px !important;"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                                </div>
+                                <div class="col-xs-11" style="border:0px dotted gray; height:250px;">
+
+                                    <ul id="ulBolsasElegidas" class="ListaMultiSelect">                                    
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var esEditar;
+
+    var DatosSeleccionados;
+
+    function PRM_Bolsa() {
+        this.IdBolsa = -1;
+        this.Nombre = "";
+        this.IdNivel = -1;
+        this.IdTipo = -1;
+        this.EsVigente = "";
+        this.IdUsuario = -1;
+    }
+
+    function ENT_CINC_Nivel() {
+        this.IdNivel = -1;
+        this.Nombre = "";
+        this.Descripcion = "";
+        this.EsVigente = false;
+    }
+
+    function ENT_CINC_Bolsa() {
+        this.IdBolsa = -1;
+        this.Nombre = "";
+        this.Descripcion = "";
+        this.Nivel = new ENT_CINC_Nivel();
+        this.IdTipo = -1;
+        this.EsVigente = true;
+    }
+
+    $(function () {
+        fnEventosBolsa();
+        fnGrillaBolsa();
+    });
+
+    function disenoResize() {
+        $("#grillaBolsa").setGridWidth($("#dvGrillaBolsa").width() - 10);
+        $("#grillaBolsasDestino").setGridWidth($("#dvGrillaBolsasDestino").width() - 10);
+        $("#grillaBolsasOrigen").setGridWidth($("#dvGrillaBolsasOrigen").width() - 10);
+
+        $("#tbDetalleBolsa").width($("#dvDetalleGrillaBolsa").width() - 2);
+
+        $($("#dvGrillaBolsa .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaBolsa .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaBolsasDestino .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaBolsasDestino .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaBolsasOrigen .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaBolsasOrigen .ui-jqgrid-bdiv")[0]).width() + 5);
+    }
+
+    function fnEventosBolsa() {
+
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        $("#btnCancelar").click(function () {
+            if (fnValidarFormulario(false)) {
+                miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar", fnDesactivarFormulario, undefined);
+            }
+            else {
+                fnDesactivarFormulario();
+            }
+        });
+
+        $("#btnListAllRight").click(function () {
+            if ($("#ulBolsasHabilitadas li").length > 0) {
+                $("#ulBolsasElegidas").append($("#ulBolsasHabilitadas").html());
+                $("#ulBolsasHabilitadas").html("");
+            }
+            else {
+                miAlerta("Alerta", "No hay bolsas que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListRight").click(function () {
+            if ($("#ulBolsasHabilitadas .ListaMultiSelected").length > 0) {
+                var listas = $("#ulBolsasHabilitadas .ListaMultiSelected").clone();
+                $(listas).find("span:odd").hide();
+                $(listas).removeClass("ListaMultiSelected");
+                $("#ulBolsasElegidas").append($(listas).clone());
+                $("#ulBolsasHabilitadas .ListaMultiSelected").remove();
+            }
+            else {
+                miAlerta("Alerta", "No hay bolsas que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListAllLeft").click(function () {
+            if ($("#ulBolsasElegidas li").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar la bolsa de escalamiento se mantendrán los tickets creados hasta su finalización, pero apartir de este momento no se podrá a crear nuevos escalamientos. ¿Desea seguir?", fnListAllLeft);
+                }
+                else {
+                    fnListAllLeft();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay bolsas que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListLeft").click(function () {
+            if ($("#ulBolsasElegidas .ListaMultiSelected").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar la bolsa de escalamiento se mantendrán los tickets creados hasta su finalización, pero apartir de este momento no se podrá a crear nuevos escalamientos. ¿Desea seguir?", fnListLeft);
+                }
+                else {
+                    fnListLeft();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay bolsas que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        $("#ddlNivelForm").click(function (e) {
+            $("#ddlNivelForm").attr("IdAnterior", $(this).val());
+        });
+
+        $("#ddlNivelForm").change(function (e) {
+
+            if ($("#ulBolsasElegidas li").length > 0 && esEditar) {
+                miAlerta("Alerta", "No se puede cambiar de nivel mientras tengas bolsas asignadas como escalamiento, Retire las bolsas asignadas para poder cambiar de nivel", "glyphicon-exclamation-sign", "#d9534f");
+                $("#ddlNivelForm").val($("#ddlNivelForm").attr("IdAnterior"));
+                return;
+            }
+
+            if ($(this).val() == "-1") {
+                $(".ListaMultiSelect").html("");
+                return;
+            }
+
+            if (esEditar && DatosSeleccionados.IdBolsa != "1") {
+                miIdBolsa = DatosSeleccionados.IdBolsa;
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ValidarSiBolsaTieneTickets", "Bolsa")',
+                    data: "{'pIdBolsa': '" + miIdBolsa + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.Success) {
+                            miAlerta("Alerta", "No se puede cambiar de nivel mientras tengas tikets asignados a la bolsa", "glyphicon-exclamation-sign", "#d9534f");
+                            $("#ddlNivelForm").val($("#ddlNivelForm").attr("IdAnterior"));
+                        }
+                        else {
+                            fnObtenerLiBolsasEscalar();
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+            else {
+                fnObtenerLiBolsasEscalar();
+            }
+        });
+
+        $("#btnRegistrarBolsa").click(function () {
+            if (fnValidarFormulario(true)) {
+                var mensaje = ""
+                if (esEditar) {
+                    mensaje = "Se editará Bolsa";
+                }
+                else {
+                    mensaje = "Se registrará Bolsa";
+                }
+                miDialogoConfirmacion(mensaje, fnRegistrarBolsa, undefined);
+            }
+        });
+
+        $(".ListaMultiSelect li").live("click", function () {
+            if ($(this).hasClass("ListaMultiSelected")) {
+                $(this).removeClass("ListaMultiSelected");
+                $($(this).find("span")[1]).hide();
+            }
+            else {
+                $(this).addClass("ListaMultiSelected");
+                $($(this).find("span")[1]).show(300);
+            }
+        });
+
+        $("#btnNuevaBolsa").click(function () {
+            esEditar = false;
+            $("#dvDetalleGrillaBolsa").fadeOut(100, function () {
+                $(".esInactivo").hide();
+                $(".ListaMultiSelect").html("");
+                $("#txtNombreBolsaForm").val("");
+                $("#txtNombreBolsaForm").attr("readonly", false);
+
+                $("#txtDescripcionBolsa").val("");
+                $("#txtDescripcionBolsa").attr("readonly", false);
+
+                $("#txtNombreBolsaForm").focus();
+                $("#txtNombreBolsaForm").attr("readonly", false);
+
+                $("#ddlNivelForm").val("-1");
+                $("#ddlNivelForm option[value='1']").hide();
+                $("#dvFormularioBolsa").fadeIn(100);
+
+                $("#ddlNivelForm").removeAttr("disabled", "disabled");
+            })
+        });
+
+        $("#btnEditarBolsa").click(function () {
+            esEditar = true;
+            $("#dvDetalleGrillaBolsa").fadeOut(100, function () {
+                if (DatosSeleccionados.btVig == "True") {
+                    $(".esInactivo").hide();
+                }
+                else {
+                    $(".esInactivo").show();
+                }
+                $("#chkActivarBolsa").prop("checked", DatosSeleccionados.btVig == "True");
+                $("#txtNombreBolsaForm").val(DatosSeleccionados.Nombre);
+                $("#txtDescripcionBolsa").val(DatosSeleccionados.Descripcion);
+                $("#txtNombreBolsaForm").focus();
+                $("#ddlNivelForm").val(DatosSeleccionados.IdNivel);
+                if (DatosSeleccionados.IdNivel == "-1") {
+                    $("#txtNombreBolsaForm").attr("readonly", "readonly");
+                    $("#txtDescripcionBolsa").attr("readonly", "readonly");
+                    $("#ddlNivelForm").attr("disabled", "disabled");
+                    $("#ddlNivelForm option[value='1']").show();
+                    //$(".miBtnList").hide();
+                }
+                else {
+                    $("#txtNombreBolsaForm").removeAttr("readonly", "readonly");
+                    $("#txtDescripcionBolsa").removeAttr("readonly", "readonly");
+                    $("#ddlNivelForm").removeAttr("disabled", "disabled");
+                    $("#ddlNivelForm option[value='1']").hide();
+                    $(".miBtnList").show();
+                }
+                $("#dvFormularioBolsa").fadeIn(100, function () {
+                    //$("#ddlNivelForm").change();
+                    fnObtenerLiBolsasEscalar();
+                });
+            });
+        });
+
+        $("#btnEliminarBolsa").click(function () {
+            fnBtnEliminar();
+        });
+
+        $("#ddlNivel, #ddlTipo, #ddlEstado").change(function () {
+            $("#grillaBolsa").trigger("reloadGrid", [{ current: true }]);
+        });
+
+        $('#txtNombreBolsa').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaBolsa").trigger("reloadGrid", [{ current: true }]);
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+    };
+
+    function fnGrillaBolsa() {
+        $("#grillaBolsa").jqGrid({
+            datatype: function () {
+
+                var oParametro;
+                oParametro = new PRM_Bolsa();
+
+                if ($.trim($("#txtNombreBolsa").val()) != "") {
+                    oParametro.Nombre = $.trim($("#txtNombreBolsa").val());
+                }
+
+                if ($("#ddlNivel").val() != "-1") {
+                    oParametro.IdNivel = $("#ddlNivel").val();
+                }
+
+                if ($("#ddlTipo").val() != "-1") {
+                    oParametro.IdTipo = $("#ddlTipo").val();
+                }
+
+                if ($("#ddlEstado").val() != "-1") {
+                    oParametro.EsVigente = $("#ddlEstado").val();
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerBolsa", "Bolsa")',
+                    data: "{'inPagTam':'" + $('#grillaBolsa').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaBolsa').getGridParam("page") + "'," + //FiltroRegistro 
+                       "'vcOrdCol':'" + $('#grillaBolsa').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaBolsa').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaBolsa")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "IdBolsa"
+            },
+            colModel: [
+            { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Bolsa', width: "100px" },
+            { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+            { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+            ],
+            pager: "#pagerGrillaBolsa",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "470px",
+            //height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+
+                if (DatosSeleccionados != undefined) {
+                    if (DatosSeleccionados.IdBolsa != undefined) {
+                        var selectedRowId = $("#grillaBolsa").jqGrid('getGridParam', 'selrow');
+                        DatosSeleccionados = $("#grillaBolsa").jqGrid('getRowData', selectedRowId);
+                    }
+                    else {
+                        $('#grillaBolsa').jqGrid('setSelection', 1);
+                        DatosSeleccionados = $("#grillaBolsa").jqGrid('getRowData', 1);
+                    }
+                }
+                else {
+                    $('#grillaBolsa').jqGrid('setSelection', 1);
+                    DatosSeleccionados = $("#grillaBolsa").jqGrid('getRowData', 1);
+                }
+
+                if (DatosSeleccionados != undefined ) {
+                    if (DatosSeleccionados.IdBolsa != undefined)
+                    {
+                        fnMostrarDetalleBolsa(DatosSeleccionados);
+                    }
+                }
+
+            },
+            beforeSelectRow: function (rowid, e) {
+                if ($("#dvFormularioBolsa").css("display") == "block" && fnValidarFormulario(false)) {
+                    miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar", fnSelectedGrillaBolsa, undefined, [rowid, e], undefined);
+                }
+                else {
+                    fnSelectedGrillaBolsa([rowid, e]);
+                }
+            }
+        }).navGrid("#pagerGrillaBolsa", { edit: false, add: false, search: false, del: false });
+    }
+
+    function fnSelectedGrillaBolsa(pArrayArguments) {
+        var CurrentSelectIndex = $("#grillaBolsa").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaBolsa').jqGrid('setSelection', CurrentSelectIndex);
+        DatosSeleccionados = $("#grillaBolsa").jqGrid('getRowData', CurrentSelectIndex);
+        fnMostrarDetalleBolsa(DatosSeleccionados);
+    }
+
+    function fnMostrarDetalleBolsa(datos) {
+        fnDesactivarFormulario()
+
+        if (datos.IdNivel == "1") {
+            //$("#btnEditarBolsa").hide();
+            $("#btnEliminarBolsa").hide();
+        }
+        else {
+            //$("#btnEditarBolsa").show();
+            $("#btnEliminarBolsa").show();
+        }
+
+
+        $("#tbDetalleBolsa tbody tr:nth-child(1) td:nth-child(2)").text(datos.Nombre);
+
+        $("#tbDetalleBolsa tbody tr:nth-child(2) td:nth-child(2)").text(datos.Descripcion);
+
+        fnGetBolsa(datos.IdBolsa);
+        fnGrillaOrigen(datos.IdBolsa);
+        fnGrillaDestino(datos.IdBolsa);
+    }
+
+    function fnDesactivarFormulario() {
+        $("#dvFormularioBolsa").hide();
+        $("#dvDetalleGrillaBolsa").show();
+    }
+
+    function fnGetBolsa(pIdBolsa) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetBolsa", "Bolsa")',
+            data: "{'pIdBolsa': '" + pIdBolsa + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+
+                $("#tbDetalleBolsa tbody tr:nth-child(3) td:nth-child(2)").text(result.Nivel.Nombre);
+                $("#tbDetalleBolsa tbody tr:nth-child(3) td:nth-child(4)").text(result.Nivel.Grado.Nombre);
+
+                if (result.Tipo.IdTipo == -1) {
+                    $("#tbDetalleBolsa tbody tr:nth-child(4) td:nth-child(2)").text("No tiene tipo Asignado");
+                }
+                else {
+                    $("#tbDetalleBolsa tbody tr:nth-child(4) td:nth-child(2)").text(result.Tipo.Nombre);
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnGrillaOrigen(pIdBolsa) {
+        if ($('#grillaBolsasOrigen').getGridParam("rowNum") == null) {
+            $("#grillaBolsasOrigen").jqGrid({
+                datatype: function () {
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerBolsasOrigen", "Bolsa")',
+                        data: "{'inPagTam':'" + $('#grillaBolsasOrigen').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaBolsasOrigen').getGridParam("page") + "'," + //FiltroRegistro 
+                           "'vcOrdCol':'" + $('#grillaBolsasOrigen').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaBolsasOrigen').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                           "'pIdBolsa': '" + DatosSeleccionados.IdBolsa + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.Items.length < 1) {
+                                $("#dvGrillaBolsasOrigen").hide();
+                                $("#dvGrillaBolsasOrigen_empty").show();
+                            }
+                            else {
+                                $("#dvGrillaBolsasOrigen").show();
+                                $("#dvGrillaBolsasOrigen_empty").hide();
+                            }
+                            $("#grillaBolsasOrigen")[0].addJSONData(result);
+                            disenoResize();
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "IdBolsa"
+                },
+                colModel: [
+                { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+                { name: 'Nombre', index: 'Nombre', label: 'Bolsa', width: "100px" },
+                { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+                { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+                { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+                { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+                ],
+                pager: "#pagerGrillaBolsasOrigen",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                //shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                //height: "470px",
+                height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 20,
+                gridComplete: function () {
+
+                    $("#grillaBolsasOrigen").setGridWidth($("#dvGrillaBolsasOrigen").width() - 3);
+
+                    //$(".ui-jqgrid-bdiv").hover(function () {
+                    //    $(this).css("overflow-x", "scroll");
+                    //}, function () {
+                    //    $(this).css("overflow-x", "hidden");
+                    //});
+
+                    //$(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                    $('#grillaBolsasOrigen').jqGrid('setSelection', 1);
+
+                },
+                beforeSelectRow: function (rowid, e) {
+
+                    var CurrentSelectIndex = $("#grillaBolsasOrigen").jqGrid('getInd', rowid);
+                    $('#grillaBolsasOrigen').jqGrid('setSelection', CurrentSelectIndex);
+
+                }
+            }).navGrid("#pagerGrillaBolsasOrigen", { edit: false, add: false, search: false, del: false });
+        }
+        else {
+            $("#grillaBolsasOrigen").trigger("reloadGrid");
+        }
+
+    }
+
+
+    function fnGrillaDestino(pIdBolsa) {
+        if ($('#grillaBolsasDestino').getGridParam("rowNum") == null) {
+            $("#grillaBolsasDestino").jqGrid({
+                datatype: function () {
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerBolsasDestino", "Bolsa")',
+                        data: "{'inPagTam':'" + $('#grillaBolsasDestino').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaBolsasDestino').getGridParam("page") + "'," + //FiltroRegistro 
+                           "'vcOrdCol':'" + $('#grillaBolsasDestino').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaBolsasDestino').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                           "'pIdBolsa': '" + DatosSeleccionados.IdBolsa + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+
+                            if (result.Items.length < 1) {
+                                $("#dvGrillaBolsasDestino").hide();
+                                $("#dvGrillaBolsasDestino_empty").show();
+                            }
+                            else {
+                                $("#dvGrillaBolsasDestino").show();
+                                $("#dvGrillaBolsasDestino_empty").hide();
+                            }
+
+                            $("#grillaBolsasDestino")[0].addJSONData(result);
+                            disenoResize();
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "IdBolsa"
+                },
+                colModel: [
+                { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+                { name: 'Nombre', index: 'Nombre', label: 'Bolsa', width: "100px" },
+                { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+                { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+                { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+                { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+                ],
+                pager: "#pagerGrillaBolsasDestino",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                //shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                //height: "470px",
+                height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 20,
+                gridComplete: function () {
+
+                    $("#grillaBolsasDestino").setGridWidth($("#dvGrillaBolsasDestino").width() - 3);
+
+                    //$(".ui-jqgrid-bdiv").hover(function () {
+                    //    $(this).css("overflow-x", "scroll");
+                    //}, function () {
+                    //    $(this).css("overflow-x", "hidden");
+                    //});
+
+                    //$(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                    $('#grillaBolsasDestino').jqGrid('setSelection', 1);
+
+                },
+                beforeSelectRow: function (rowid, e) {
+
+                    var CurrentSelectIndex = $("#grillaBolsasDestino").jqGrid('getInd', rowid);
+                    $('#grillaBolsasDestino').jqGrid('setSelection', CurrentSelectIndex);
+
+                }
+            }).navGrid("#pagerGrillaBolsasDestino", { edit: false, add: false, search: false, del: false });
+        }
+        else {
+            $("#grillaBolsasDestino").trigger("reloadGrid");
+        }
+    }
+
+    function fnRegistrarBolsa() {
+        var oParametro
+        oParametro = new ENT_CINC_Bolsa();
+        oParametro.Nombre = $.trim($("#txtNombreBolsaForm").val());
+        oParametro.Descripcion = $.trim($("#txtDescripcionBolsa").val());
+        oParametro.Nivel.IdNivel = $("#ddlNivelForm").val();
+        oParametro.Nivel.Nombre = $("#ddlNivelForm option:selected").text();
+        oParametro.EsVigente = $("#chkActivarBolsa").prop("checked");
+
+        var idsBolsas = [];
+        for (var i = 0; i < $("#ulBolsasElegidas li").length; i++) {
+            idsBolsas.push($($("#ulBolsasElegidas li")[i]).attr("idBolsa"));
+        }
+
+        if (esEditar) {
+            oParametro.IdBolsa = DatosSeleccionados.IdBolsa;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EditarBolsa", "Bolsa")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'," +
+                        "'pIdsBolsas': '" + JSON.stringify(idsBolsas) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        fnDesactivarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaBolsa").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarBolsa", "Bolsa")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'," +
+                        "'pIdsBolsas': '" + JSON.stringify(idsBolsas) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        fnDesactivarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaBolsa").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        
+    }
+
+    function fnValidarFormulario(pConMensaje) {
+        var result = true;
+
+        if ($.trim($("#txtNombreBolsaForm").val()) == "") {
+            result = false;
+            if (pConMensaje) {
+                miAlerta("Bolsa", "Ingrese nombre de Bolsa", "glyphicon-ok", "#5cb85c");
+            }
+            $("#txtNombreBolsaForm").focus()
+        }
+        else {
+            if ($.trim($("#txtDescripcionBolsa").val()) == "") {
+                result = false;
+                if (pConMensaje) {
+                    miAlerta("Bolsa", "Ingrese descripción de Bolsa", "glyphicon-ok", "#5cb85c");
+                }
+                $("#txtDescripcionBolsa").focus()
+            }
+            else {
+                if ($("#ddlNivelForm").val() == "-1") {
+                    result = false;
+                    if (pConMensaje) {
+                        miAlerta("Bolsa", "Seleccione un nivel", "glyphicon-ok", "#5cb85c");
+                    }
+                    $("#ddlNivelForm").focus()
+                }
+            }
+        }
+        return result;
+    }
+
+    function fnObtenerLiBolsasEscalar() {
+        $(".ListaMultiSelect").html("");
+        var miIdBolsa = "-1";
+
+        if (esEditar && DatosSeleccionados.IdBolsa != "1") {
+            miIdBolsa = DatosSeleccionados.IdBolsa;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerLiBolsasEscalar", "Bolsa")',
+                data: "{'pIdNivel':'" + $("#ddlNivelForm").val() + "'," +
+                        "'pIdBolsa': '" + DatosSeleccionados.IdBolsa + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result[0].length; i++) {
+                        $("#ulBolsasHabilitadas").append(result[0][i]);
+                    }
+
+                    for (var i = 0; i < result[1].length; i++) {
+                        $("#ulBolsasElegidas").append(result[1][i]);
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            if ($("#ddlNivelForm").val() == "-1") {
+
+            }
+            else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerLiBolsasEscalar", "Bolsa")',
+                    data: "{'pIdNivel':'" + $("#ddlNivelForm").val() + "'," +
+                           "'pIdBolsa': '" + miIdBolsa + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        for (var i = 0; i < result[0].length; i++) {
+                            $("#ulBolsasHabilitadas").append(result[0][i]);
+                        }
+
+                        for (var i = 0; i < result[1].length; i++) {
+                            $("#ulBolsasElegidas").append(result[1][i]);
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+        }
+    }
+
+    function fnListAllLeft() {
+        $("#ulBolsasHabilitadas").append($("#ulBolsasElegidas").html());
+        $("#ulBolsasElegidas").html("");
+    }
+
+    function fnListLeft() {
+        var listas = $("#ulBolsasElegidas .ListaMultiSelected").clone();
+        $(listas).find("span:odd").hide();
+        $(listas).removeClass("ListaMultiSelected");
+        $("#ulBolsasHabilitadas").append($(listas).clone());
+        $("#ulBolsasElegidas .ListaMultiSelected").remove();
+    }
+
+    function fnBtnEliminar() {
+
+        
+
+        if (DatosSeleccionados == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar una Bolsa", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+
+        if (DatosSeleccionados.IdNivel == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar una Bolsa", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+        else {
+            if (DatosSeleccionados.IdNivel == "1") {
+                miAlerta("Seleccionar", "No se puede eliminar Bolsas de nivel base", "glyphicon-info-sign", "#337ab7");
+                return;
+            }
+        }
+
+        var miMensaje = "";
+        if (DatosSeleccionados.btVig == "True") {
+            miMensaje = "Se desactivará la bolsa " + DatosSeleccionados.Nombre + ". Al desactivarla no se mostrará en el flujo de escalamiento. ¿Desea desactivarlo?";
+        }
+        else {
+            miMensaje = "Se eliminará la bolsa " + DatosSeleccionados.Nombre + ". ¿Desea eliminarla?";
+        }
+
+        miDialogoConfirmacion(miMensaje, fnEliminarBolsa, undefined, [0]);
+    }
+
+    function fnEliminarBolsa() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("EliminarBolsa", "Bolsa")',
+            data: "{'pIdBolsa': '" + DatosSeleccionados.IdBolsa + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split('|')[0] == "OK") {
+                        fnDesactivarFormulario();
+                        miAlerta("Eliminar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaBolsa").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+        });
+    }
+
+</script>

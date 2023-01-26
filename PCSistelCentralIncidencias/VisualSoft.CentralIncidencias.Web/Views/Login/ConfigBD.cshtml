@@ -1,0 +1,317 @@
+﻿@model VisualSoft.PCSistelMovil.Dominio.BE.ENT_MVVM_ConfiguracionBD
+
+@{
+    ViewBag.Title = "ConfigBD";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<style type="text/css">
+    
+
+#dvPrincipal
+{
+    background: white;
+    width: 400px;
+    height: 500px;
+    border-radius:20px;
+}
+
+#dvPrincipal *
+{
+    line-height:normal;
+}
+
+#dvPrincipal > div:first-child
+{
+    width:100%;
+    height:50px;
+    background-color:#063466;
+    text-align:center;
+    color:white;
+    font-weight:bolder;
+    font-size:12pt;
+}
+
+#btnIrLogin
+{
+    float:left;
+    width:50px;
+    height:50px;
+    border-bottom-right-radius:20px;
+    background-color:#4674C3;
+}
+
+#btnIrLogin > span:first-child
+{
+    font-size:18pt;
+    color:#E56C25;
+    margin-top:8px;
+}
+
+#btnIrLogin:hover
+{
+    cursor:pointer;
+    background-color:#6D91D0;
+}
+
+#btnIrLogin:active
+{
+    background-color:#28477B;
+}
+
+p
+{
+    text-align:left;
+    margin:10px;
+}
+
+#dvPrincipal > div:nth-child(3)
+{
+    width:360px;
+    height:250px;
+    border:0px dotted gray;
+    margin-left:20px;
+}
+
+#dvPrincipal > div:nth-child(3) *
+{
+    text-align:left;
+    width:100%;
+    margin: 0px 0px 15px 0px;
+}
+
+
+#dvPrincipal > div:nth-child(4)
+{
+    width:360px;
+    height:40px;
+    border:0px dotted gray;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+#dvPrincipal > div:nth-child(4) > .glyphicon
+{
+    font-size:24pt;
+    float:left;
+    color:#FFCC33;
+}
+
+#dvPrincipal > div:nth-child(5)
+{
+    width:360px;
+    height:40px;
+    border:0px dotted gray;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+#dvPrincipal > div:nth-child(5) span
+{
+    color:#063466;
+}
+
+
+
+</style>
+
+   
+
+<div id="dvPrincipal" class="CentrarAbsoluto">
+    <div>
+        <a id="btnIrLogin" href="@Url.Action("Index", "Login")">
+            <span class="glyphicon glyphicon-arrow-left"></span>
+        </a>
+        <div>
+            <img src="~/Common/Images/OrangeGear.png" />Configuración
+        </div>
+
+        
+
+    </div>
+
+    <p>Conexión a la base de datos</p>
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    Servidor:
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @*@Html.TextBox("txtServidor","")*@
+                    @Html.TextBoxFor(m => m.Servidor, new { @class = "form-control", id = "txtServidor", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Usuario:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtUsuario","")*@
+                    @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control", id="txtUsuario", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Contraseña:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtContrasena","")*@
+                    @Html.TextBoxFor(m => m.Contrasena, new { @class = "form-control", id="txtContrasena", maxlength="50" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Base de datos:
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    @*@Html.TextBox("txtBD","")*@
+                    @Html.TextBoxFor(m => m.BaseDatos, new { @class = "form-control" , id = "txtBaseDatos", maxlength="50"})
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div>
+        <button id="btnProbarConexion"type="button" class="btn btn-default btn-lg" style="float:left;">
+            <span class="glyphicon glyphicon-flash" aria-hidden="true"></span> Probar Conexión
+
+        </button>
+        <button id="btnGuardar"type="button" class="btn btn-default btn-lg" style="float:right;">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar
+        </button>
+    </div>
+
+</div>
+
+  
+<script type="text/javascript"> 
+    function ENT_MVVM_ConfiguracionBD() {
+        this.Servidor;
+        this.Usuario;
+        this.Contrasena;
+        this.BaseDatos;
+        this.TieneConexion;
+    };
+
+    $(function () {
+        $("#txtServidor").focus();
+        fnEnlazar();
+    });
+
+    function fnEnlazar() {
+
+        $("#btnProbarConexion").click(function () {
+            if (fnVerificarFormulario()) {
+
+                var oPrConfiguracionBD = new ENT_MVVM_ConfiguracionBD();
+
+                oPrConfiguracionBD.Servidor = $.trim($("#txtServidor").val().replace('\\', '\\\\'));
+                oPrConfiguracionBD.Usuario = $.trim($("#txtUsuario").val().replace('\\', '\\\\'));
+                oPrConfiguracionBD.Contrasena = $.trim($("#txtContrasena").val().replace('\\', '\\\\'));
+                oPrConfiguracionBD.BaseDatos = $.trim($("#txtBaseDatos").val().replace('\\', '\\\\'));
+                oPrConfiguracionBD.TieneConexion = false;
+
+                $.ajax({
+                    type: "POST",
+                    //url: "/Login/VerificarCnx",
+                    url: '@Url.Action("VerificarCnx", "Login")',
+                data: "{'prConfiguracionBD' : '" + JSON.stringify(oPrConfiguracionBD) + "'}",
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response.TieneConexion) {
+                        miAlerta("Base de datos", "Conexión exitosa", "glyphicon-ok-sign", "#1DA68A");
+                        $("#spanGlyBD").css("color", "#1DA68A");
+                        $("#pMensaje").html("Conexión exitosa");
+                    }
+                    else {
+                        miAlerta("Base de datos", "Conexión fallida", "glyphicon-remove-sign", "#F64032");
+                        $("#spanGlyBD").css("color", "#F64032");
+                        $("#pMensaje").html("Conexión fallida");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                }
+            });
+
+        }
+    });
+
+    $("#btnGuardar").click(function () {
+        if (fnVerificarFormulario()) {
+
+            var oPrConfiguracionBD = new ENT_MVVM_ConfiguracionBD();
+
+            oPrConfiguracionBD.Servidor = $.trim($("#txtServidor").val().replace('\\', '\\\\'));
+            oPrConfiguracionBD.Usuario = $.trim($("#txtUsuario").val().replace('\\', '\\\\'));
+            oPrConfiguracionBD.Contrasena = $.trim($("#txtContrasena").val().replace('\\', '\\\\'));
+            oPrConfiguracionBD.BaseDatos = $.trim($("#txtBaseDatos").val().replace('\\', '\\\\'));
+            oPrConfiguracionBD.TieneConexion = false;
+
+            $.ajax({
+                type: "POST",
+                //url: "/Login/GuardarConexion",
+                url: '@Url.Action("GuardarConexion", "Login")',
+                data: "{'prConfiguracionBD' : '" + JSON.stringify(oPrConfiguracionBD) + "'}",
+                cache: false,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    if (response.TieneConexion) {
+                        miAlerta("Base de datos", "Se guardo la conexión exitosamente", "glyphicon-ok-sign", "#1DA68A");
+                    }
+                    else {
+                        miAlerta("Base de datos", "Error al guardar conexión", "glyphicon-remove-sign", "#F64032");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                }
+            });
+
+        }
+    });
+};
+
+function fnVerificarFormulario() {
+    var esValido = true;
+    if ($.trim($("#txtServidor").val()) == "") {
+        miAlerta("Servidor", "Ingrese Servidor", "", "#FFCC66");
+        esValido = false;
+    }
+    else {
+        if ($.trim($("#txtUsuario").val()) == "") {
+            miAlerta("Usuario", "Ingrese Usuario", "", "#FFCC66");
+            esValido = false;
+        }
+        else {
+            if ($.trim($("#txtContrasena").val()) == "") {
+                miAlerta("Contraseña", "Ingrese Contraseña", "", "#FFCC66");
+                esValido = false;
+            }
+            else {
+                if ($.trim($("#txtBaseDatos").val()) == "") {
+                    miAlerta("Base de datos", "Ingrese Base de datos", "", "#FFCC66");
+                    esValido = false;
+                }
+            }
+        }
+    }
+    return esValido;
+
+}
+</script>
+

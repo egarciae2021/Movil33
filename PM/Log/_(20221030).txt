@@ -1,0 +1,300 @@
+FechaHora = 30/10/2022 17:11:22
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 17:11:22
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 17:11:22
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 17; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 17:11:22
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 17; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:30:03
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:30:03
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:30:24
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 84; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:30:24
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 84; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:33:41
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:33:41
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:33:41
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:33:41
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:39:31
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:39:31
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:39:31
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:39:31
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:45:04
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:45:04
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:45:05
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 19:45:05
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:39:30
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:39:30
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:39:30
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:39:30
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:41:40
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:41:40
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:41:40
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 143; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:41:40
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 143; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:49:33
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:49:33
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:49:33
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 20:49:33
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:12:13
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:12:13
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:12:13
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:12:13
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:55:32
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:55:32
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:55:32
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 21:55:32
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:00:52
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:00:52
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:00:52
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:00:52
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:03:54
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:03:54
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:03:54
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:03:54
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:12:22
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:12:22
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:12:22
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 521; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:12:22
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 521; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:15:22
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:15:22
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:15:22
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 701; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:15:22
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 701; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:20:19
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:20:19
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:20:19
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 998; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:20:19
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 998; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:27:39
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:27:39
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:27:39
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1438; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:27:39
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1438; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:30:31
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:30:31
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:30:32
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1611; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:30:32
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1611; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:44:20
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:44:20
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:44:21
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:44:21
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 13; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:49:26
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:49:26
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:49:27
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 319; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:49:27
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 319; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:52:39
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:52:39
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:52:39
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 512; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 22:52:39
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 512; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:07:51
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:07:51
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:07:51
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1424; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:07:51
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1424; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:10:58
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:10:58
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:10:58
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1611; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:10:58
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 1611; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:30:49
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:30:49
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:30:49
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 2802; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:30:49
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 2802; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:38:33
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:38:33
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:38:33
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:38:33
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:42:31
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:42:31
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:42:32
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 30/10/2022 23:42:32
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 12; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_6004'; TituloTab='General'; URLTab='P_Movil/DashBoard/DashBoard_Jefatura.aspx'; 
+____________________________________________________________________________________________________

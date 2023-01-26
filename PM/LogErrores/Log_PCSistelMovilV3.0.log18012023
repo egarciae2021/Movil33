@@ -1,0 +1,126 @@
+2023/01/18 15:23:33.051,[39],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/18 15:23:33.059,[39],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/18 15:23:33.059,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/18 15:23:41.704,[54],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 15:23:41.704,[54],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 15:23:41.704,[54],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 15:23:42.897,[40],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 15:23:42.897,[40],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 15:23:42.897,[40],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 15:23:51.837,[43],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 15:23:51.837,[43],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 15:23:51.837,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 15:23:55.173,[43],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 15:23:55.173,[43],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 15:23:55.173,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 15:30:46.127,[6],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 15:30:46.127,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 15:30:46.127,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 15:30:56.840,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 15:30:56.840,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 15:30:56.840,[32],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 15:31:16.054,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 15:31:16.054,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 15:31:16.054,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 15:32:41.523,[45],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 15:32:41.523,[45],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 15:32:41.523,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 16:00:14.115,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 16:00:14.115,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 16:00:14.115,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 16:00:26.448,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 16:00:26.448,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 16:00:26.448,[66],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:26:28.470,[9],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/18 18:26:28.480,[9],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/18 18:26:28.480,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/18 18:27:34.297,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:27:34.297,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:27:34.297,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:27:36.815,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:27:36.815,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:27:36.815,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:27:47.616,[6],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:27:47.616,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:27:47.616,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:27:54.625,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:27:54.625,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:27:54.625,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:28:03.045,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:28:03.045,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:28:03.046,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:28:19.624,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:28:19.624,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:28:19.624,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:44:22.654,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/18 18:44:22.661,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/18 18:44:22.661,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/18 18:44:26.434,[18],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:44:26.434,[18],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:44:26.434,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:44:27.604,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:44:27.605,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:44:27.605,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:45:15.674,[6],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:45:15.674,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:45:15.674,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:45:24.165,[22],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:45:24.165,[22],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:45:24.165,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:45:27.371,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:45:27.371,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:45:27.371,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:45:37.560,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:45:37.560,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:45:37.560,[18],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:49:14.878,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/18 18:49:14.886,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/18 18:49:14.886,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/18 18:49:18.985,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:49:18.985,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:49:18.985,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/18 18:49:20.220,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:49:20.220,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:49:20.220,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/18 18:49:23.498,[12],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:49:23.498,[12],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:49:23.498,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:49:30.160,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:49:30.160,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:49:30.160,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:49:35.087,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:49:35.087,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:49:35.087,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:49:46.969,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:49:46.969,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:49:46.969,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:51:25.154,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:25.154,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:25.154,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:25.157,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:25.157,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:25.157,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:33.813,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:51:33.813,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:51:33.813,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:51:36.329,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:51:36.329,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:51:36.329,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:51:49.879,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:51:49.879,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:51:49.879,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_Linea&inCod=202&inTip=3&inTipOri=0
+2023/01/18 18:51:50.677,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:51:50.677,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:51:50.677,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/18 18:51:53.723,[19],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:53.723,[19],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:53.723,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:53.728,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:53.728,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:51:53.728,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Historico.aspx?vctab=MOV_Linea&vcCodigo=06869469950
+2023/01/18 18:52:01.388,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:52:01.388,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:52:01.388,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_Linea.aspx?Cod=06869469950&Par=P_vcNum&vcTab=MOV_Linea
+2023/01/18 18:52:03.701,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:52:03.701,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea
+2023/01/18 18:52:03.701,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx?vcLinea=06869469950&vcCodCta=12060775&vcTipAsiCre=1&vcLinSer=&vcAccion=&vcSituacion=0&vcTipoPag=Linea

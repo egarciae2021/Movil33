@@ -1,0 +1,360 @@
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.navbar-brand-img {
+	position: relative;
+	width: 70px;
+	left: 15px;
+	max-height: 10px;
+}
+
+.navbar-brand-img img {
+	margin-top: -6px;
+}
+
+.navbar-brand-glyphicon {
+	color: black !important;
+	margin-left: 10px !important;
+}
+
+.navbar-brand-glyphicon:hover {
+	color: white !important;
+	font-weight: 700;
+	background-color: #007b5e !important;
+	margin-left: 10px !important;
+}
+
+.navbar-brand-glyphicon span:hover {
+	
+}
+
+.panel-heading .lead {
+	padding: 20px;
+}
+
+.bodyBg {
+	background: white;
+}
+
+.bg-nav-border {
+	border: 1px solid #ccc !important;
+}
+
+.testapps li a:hover {
+	color: #1cbc67 !important;
+	font-weight: 700;
+}
+
+.testapps li a {
+	color: black !important;
+}
+
+.user {
+	
+}
+
+/*   	footer  start */
+.mdm-footer-link:hover {
+	color: white;
+	font-weight: 700;
+}
+
+.container-fluid-margin {
+	margin-top: 0px;
+	margin-left: 0;
+	margin-right: 0;
+	color: white;
+	background: #007b5e !important;
+	padding: 30px;
+}
+
+.container-fluid-margin h5 {
+	padding: 3px 0;
+}
+
+.container-fluid-margin a {
+	color: white;
+}
+
+.container-fluid-margin ul.quick-links li {
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+
+.container-fluid-margin ul.quick-links li:hover {
+	padding: 3px 0;
+	margin-left: 5px;
+	font-weight: 700;
+}
+
+.container-fluid-margin ul.quick-links li a i {
+	margin-right: 5px;
+}
+
+.container-fluid-margin ul.quick-links li:hover a i {
+	font-weight: 700;
+}
+
+/*  .footer-foot {
+	   position: fixed;
+	   left: 0;
+	   bottom: 0;
+	   width: 100%;
+	   margin-top: 600px;;
+	   
+	}  */
+
+/*   	footer    end */
+div .my-div-overflow {
+	height: 750px;
+	overflow: auto;
+}
+
+.edit-company {
+	margin: 20px 20px;
+}
+
+.edit {
+	margin-right: 20px;
+}
+
+.td-edit {
+	padding: 10px;
+}
+
+.html-margin {
+	margin-right: 15px;
+}
+
+/*  -------------------popup css-----login--start------------ */
+.center {
+	height: 300px;
+	width: 500px;
+	background-color: #edf0f2;
+	text-align: center;
+	padding: 20px;
+	margin: 100px 450px;
+	color: white;
+	border: 2px solid;
+	/* border-radius: 35px;  */
+
+}
+.btn-danger-close{
+  	position: absolute;
+  	right: 0;
+  	top: 0;
+  	border: none;
+  	border-radius: 50px; 
+	margin-top: -15px;
+	size: 55px;
+}
+.close-wrp{
+	display: inline;
+ 	position: relative;
+ 	border: none;
+ 	
+}
+.forgotPasswordDiv{
+	display: none;
+}
+.alert-success-message{
+	display: none;
+}
+.hideform {
+	display: none;
+}
+
+/*  -------------------popup css-----end-------------- */
+.control-label {
+	text-align: center;
+	margin-top: 12px;
+}
+
+.redFont {
+	color: red;
+	font-size: medium;
+}
+
+/* manu button group */
+.button-group-bg:hover {
+	color: white !important;
+	background: #007b5e !important;
+}
+
+/* .searchbyIdClientPClass{
+	display: none;
+}
+ */
+#deviceCode {
+	font-size: medium;
+}
+
+.form-submit-button div input {
+	background-color: white;
+	background-color: transparent;
+	color: inherit;
+	transition: all .25s;
+}
+
+.form-submit-button div input:hover {
+	font-weight: 700;
+}
+
+.app-heading {
+	background-color: white !important;
+
+	background: transparent !important;
+	color: #E37009 !important;
+	transition: all .25s;
+	padding-top: 5px !important;
+}
+
+.app-heading:hover {
+	/* color:white!important;
+	background: #007b5e !important; */
+	font-weight: 700;
+}
+
+.form-submit-button td a {
+	background-color: white;
+	background-color: transparent;
+	color: inherit;
+	transition: all .25s;
+}
+
+.form-submit-button div button {
+	background-color: white;
+	background-color: transparent;
+	color: inherit;
+	transition: all .25s;
+}
+.form-submit-button div button:hover {
+	font-weight: 600;
+}
+
+.form-submit-button div input:hover {
+	font-weight: 600;
+}
+/* -------------------------outline button-------------------------- */
+#deviceCode {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.getDevicePopUp button {
+	background-color: white;
+	background-color: transparent;
+	color: inherit;
+	transition: all .25s;
+}
+.getDevicePopUp{
+	border-top: none;
+}
+.newAdminUser div {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.mdm-admin-panel-group {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	height: auto;
+	widows: auto;
+}
+
+.mdm-admin-panel-group div .panel-heading {
+	padding: 10px;
+	background-color: #03A9F4 !important;
+	color: white;
+	text-align: center;
+	font-size: medium;
+}
+
+
+
+.mdm-admin-panel-group .row {
+	padding: 10px;
+}
+
+.mdm-admin-panel-group .panel-body {
+	padding: 30px;
+	background-color:   white;
+	color: black;
+	font-size: larger;
+}
+.mdm-admin-panel-group .panel-footer{
+	background-color:   #D5F1FE;
+}
+
+ .panel1{
+ 	background-color: red!important;
+ }
+ .panel1:hover{
+	font-weight: 700;
+}
+ .panel2:hover{
+	font-weight: 700;
+}
+ .panel3:hover{
+	font-weight: 700;
+}
+ .panel4:hover{
+	font-weight: 700;
+}
+ .panel5:hover{
+	font-weight: 700;
+} 
+ .panel6:hover{
+	font-weight: 700;
+}
+.app-heading div .pull-right {
+	color: white;
+}
+
+.admin-page-heading a i{
+	margin-top: -10px;
+}
+.admin-page-heading a i:hover{
+	font-weight: 700;
+}
+.mdm-admin-panel-group .panel-default .panel-footer{
+	text-align: right;
+}
+ 
+.mdm-admin-panel-group .panel-default .panel-body{
+	text-align: center;
+}
+.form-submit-button td .appliEMI{
+	text-decoration: none;
+}
+
+.form-submit-button td .appliEMI:hover{
+	color: #007b5e;
+	font-weight: 700;
+}
+
+
+.form-submit-button a:hover{
+	text-decoration: none!important;
+	font-weight: 700;
+	/* background-color:  #007b5e; */
+	color: white;
+}
+.modal-content-h-w {
+    min-height: 300px!important;
+    min-width: 500px!important;
+ }
+ 
+#seccessMessage{
+	display: none;
+}
+    
+#errorMessage{
+ 	display: none;
+}

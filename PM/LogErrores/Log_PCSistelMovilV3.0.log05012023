@@ -1,0 +1,498 @@
+2023/01/05 00:00:49.432,[64],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 00:00:49.484,[64],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 00:00:49.485,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 00:00:59.270,[64],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 00:00:59.270,[64],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 00:00:59.270,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 00:01:06.248,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:01:06.248,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:01:06.248,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:05:11.273,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 00:05:11.273,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 00:05:11.273,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 00:07:08.755,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:07:08.755,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:07:08.755,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:36:24.360,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:36:24.360,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:36:24.360,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:40:59.058,[93],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:40:59.058,[93],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:40:59.058,[93],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:45:03.727,[124],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:45:03.728,[124],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:45:03.728,[124],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:47:05.747,[124],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:47:05.747,[124],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:47:05.747,[124],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:52:17.019,[111],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:52:17.019,[111],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:52:17.019,[111],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 00:53:45.157,[107],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 00:53:45.157,[107],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 00:53:45.157,[107],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=97&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 01:32:20.198,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:32:20.198,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:32:20.198,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:44:39.882,[142],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:44:39.882,[142],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:44:39.882,[142],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:52:06.991,[5],INFO  ,Ingresa ActualizarCultura. Página: /
+2023/01/05 01:52:07.002,[5],INFO  ,Salióooooo ActualizarCultura. Página: /
+2023/01/05 01:52:07.050,[6],INFO  ,Ingresa ActualizarCultura. Página: /Index.aspx
+2023/01/05 01:52:07.050,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Index.aspx
+2023/01/05 01:52:07.050,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Index.aspx
+2023/01/05 01:52:15.685,[6],INFO  ,Inyecta: <script src='http://localhost:50601/Common/Scripts/Utilitario.js' type='text/javascript'></script>
+2023/01/05 01:52:23.922,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 01:52:23.922,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 01:52:23.922,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 01:52:35.230,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 01:52:35.230,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 01:52:35.230,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 01:53:23.344,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 01:53:23.344,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 01:53:23.344,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 01:53:36.007,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 01:53:36.007,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 01:53:36.007,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 01:53:48.994,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:53:48.994,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 01:53:48.994,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:15:47.519,[38],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:15:47.519,[38],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:15:47.520,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:17:44.381,[39],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:17:44.381,[39],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:17:44.381,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:24:52.280,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:24:52.280,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:24:52.280,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:25:18.432,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:25:18.432,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:25:18.432,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:37:46.664,[19],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:37:46.664,[19],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:37:46.664,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:39:45.520,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:39:45.520,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:39:45.520,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:59:14.330,[40],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:59:14.330,[40],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 02:59:14.330,[40],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 03:04:09.873,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 03:04:09.875,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 03:04:09.875,[33],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 03:06:18.160,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:06:18.160,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:06:18.160,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:12:24.896,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:12:24.896,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:12:24.896,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:15:10.974,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 03:15:10.974,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 03:15:10.974,[54],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 03:16:02.718,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:16:02.718,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:16:02.718,[54],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:26:20.063,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:26:20.063,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:26:20.063,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:30:26.756,[59],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:30:26.756,[59],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 03:30:26.756,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:43:20.405,[109],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:43:20.405,[109],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:43:20.405,[109],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:44:47.090,[109],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:44:47.090,[109],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:44:47.090,[109],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 06:45:23.257,[29],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:45:23.257,[29],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:45:23.257,[29],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:47:03.939,[109],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:47:03.939,[109],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:47:03.939,[109],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:48:42.443,[109],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:48:42.443,[109],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:48:42.443,[109],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:52:58.704,[125],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:52:58.704,[125],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:52:58.704,[125],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:53:57.241,[5],INFO  ,Ingresa ActualizarCultura. Página: /
+2023/01/05 06:53:57.249,[5],INFO  ,Salióooooo ActualizarCultura. Página: /
+2023/01/05 06:53:57.278,[8],INFO  ,Ingresa ActualizarCultura. Página: /Index.aspx
+2023/01/05 06:53:57.278,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Index.aspx
+2023/01/05 06:53:57.278,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Index.aspx
+2023/01/05 06:54:06.876,[8],INFO  ,Inyecta: <script src='http://localhost:50601/Common/Scripts/Utilitario.js' type='text/javascript'></script>
+2023/01/05 06:54:54.410,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 06:54:54.410,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 06:54:54.410,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 06:55:18.701,[15],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 06:55:18.701,[15],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 06:55:18.701,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 06:55:31.540,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 06:55:31.540,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 06:55:31.540,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 06:55:43.242,[15],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 06:55:43.242,[15],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 06:55:43.242,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 06:55:47.230,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:55:47.230,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:55:47.230,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:58:29.205,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:58:29.206,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:58:29.206,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:59:28.725,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:59:28.725,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 06:59:28.725,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:03:34.125,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 07:03:34.132,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 07:03:34.132,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 07:03:45.371,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 07:03:45.371,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 07:03:45.371,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 07:04:05.272,[6],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 07:04:05.272,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 07:04:05.272,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 07:04:16.141,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 07:04:16.141,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 07:04:16.141,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 07:04:19.086,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:04:19.086,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:04:19.086,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:07:15.197,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:07:15.197,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:07:15.197,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:08:27.691,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:08:27.691,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 07:08:27.691,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:11:34.085,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 09:11:34.099,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 09:11:34.099,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 09:11:46.136,[5],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:11:46.136,[5],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:11:46.136,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:12:15.792,[6],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:12:15.792,[6],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:12:15.792,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:12:26.587,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:12:26.587,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:12:26.587,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:13:16.162,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:13:16.162,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:13:16.162,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:09.378,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:09.378,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:09.378,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=98&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:39.990,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:39.990,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 09:14:39.990,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 09:16:56.635,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:16:56.635,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:16:56.635,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:25:10.239,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:25:10.239,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:25:10.239,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=99&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 09:38:22.373,[59],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/05 09:38:22.373,[59],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/05 09:38:22.373,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/05 09:38:28.810,[43],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2023/01/05 09:38:28.810,[43],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2023/01/05 09:38:28.810,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2023/01/05 09:39:12.746,[55],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:12.752,[55],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:12.752,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:39:29.239,[55],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:29.239,[55],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:29.239,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:39:33.068,[52],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:33.068,[52],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:33.068,[52],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:39:35.092,[63],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:35.092,[63],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:39:35.092,[63],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:54:00.541,[55],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:54:00.541,[55],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:54:00.541,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:54:04.227,[39],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 09:54:04.227,[39],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 09:54:04.227,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 09:54:48.868,[55],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 09:54:48.868,[55],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 09:54:48.868,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 09:55:55.813,[43],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:55:55.813,[43],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:55:55.813,[43],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 09:56:00.621,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/05 09:56:00.621,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/05 09:56:00.621,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/05 09:56:14.444,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:56:14.444,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:56:14.444,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 09:56:30.202,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:56:30.203,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:56:30.203,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 09:57:30.693,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 09:57:30.693,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 09:57:30.693,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:01:26.954,[8],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:01:26.954,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:01:26.954,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:01:35.811,[38],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:01:35.811,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:01:35.811,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:01:51.368,[46],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=63&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 10:01:51.368,[46],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=63&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 10:01:51.368,[46],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=63&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 10:23:19.553,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:23:19.553,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:23:19.553,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:56:39.947,[67],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/05 10:56:39.947,[67],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/05 10:56:39.947,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/05 10:56:47.386,[19],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2023/01/05 10:56:47.386,[19],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2023/01/05 10:56:47.386,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2023/01/05 10:57:42.535,[67],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 10:57:42.543,[67],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 10:57:42.543,[67],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 10:58:08.985,[35],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2023/01/05 10:58:08.995,[35],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2023/01/05 10:58:08.995,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2023/01/05 10:58:14.021,[34],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 10:58:14.021,[34],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 10:58:14.021,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 10:58:25.290,[20],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 10:58:25.290,[20],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 10:58:25.290,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 10:58:40.071,[41],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:58:40.071,[41],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:58:40.071,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 10:58:49.031,[36],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:58:49.031,[36],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:58:49.032,[36],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 10:58:56.464,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:58:56.465,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 10:58:56.465,[45],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 11:03:46.191,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:03:46.191,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:03:46.191,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:05:01.589,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:05:01.589,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:05:01.589,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=100&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:21:44.472,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 11:21:44.472,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 11:21:44.472,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 11:25:04.655,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:25:04.655,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:25:04.655,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:29:37.263,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:29:37.263,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:29:37.263,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:33:07.949,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 11:33:07.949,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 11:33:07.950,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 11:33:59.235,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 11:33:59.235,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 11:33:59.235,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 11:34:06.703,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 11:34:06.703,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 11:34:06.703,[41],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 11:34:24.888,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 11:34:24.888,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 11:34:24.888,[71],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 11:34:27.620,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 11:34:27.620,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 11:34:27.620,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 11:34:29.590,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 11:34:29.590,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 11:34:29.590,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 11:34:47.807,[39],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=10262&inTipSol=101&biAdmin=1
+2023/01/05 11:34:47.807,[39],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=10262&inTipSol=101&biAdmin=1
+2023/01/05 11:34:47.807,[39],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=10262&inTipSol=101&biAdmin=1
+2023/01/05 11:34:52.686,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Cam_Mnt_Financiamiento.aspx?Cod=&FinancSit=0
+2023/01/05 11:34:52.686,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Mantenimiento/Cam_Mnt_Financiamiento.aspx?Cod=&FinancSit=0
+2023/01/05 11:34:52.686,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Mantenimiento/Cam_Mnt_Financiamiento.aspx?Cod=&FinancSit=0
+2023/01/05 11:34:55.385,[75],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:34:55.385,[75],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:34:55.385,[75],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:35:02.321,[64],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:35:02.321,[64],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:35:02.321,[64],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 11:35:11.381,[31],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 11:35:11.381,[31],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 11:35:11.381,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 11:35:15.168,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:35:15.168,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 11:35:15.168,[71],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:04:25.478,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:04:25.478,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:04:25.478,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=101&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:05:25.934,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 12:05:25.934,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 12:05:25.934,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 12:06:47.520,[29],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:06:47.520,[29],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:06:47.520,[29],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:07:30.826,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:07:30.826,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:07:30.826,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:08:06.902,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:08:06.902,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:08:06.902,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 12:41:46.401,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 12:41:46.415,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 12:41:46.415,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 12:41:57.892,[7],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 12:41:57.892,[7],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 12:41:57.892,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 12:42:37.945,[7],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 12:42:37.945,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 12:42:37.945,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 12:42:49.620,[9],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 12:42:49.620,[9],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 12:42:49.620,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 14:25:51.765,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:25:51.765,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:25:51.765,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=102&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:26:48.358,[70],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:26:48.358,[70],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:26:48.358,[70],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:29:42.709,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:29:42.709,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:29:42.709,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:14.456,[56],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:14.456,[56],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:14.456,[56],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:36.169,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:36.169,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:30:36.169,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:31:08.000,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:31:08.000,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:31:08.000,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:32:12.622,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:32:12.623,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:32:12.623,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:39:20.636,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=13&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:39:20.636,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=13&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:39:20.636,[23],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=13&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:46:24.231,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:46:24.232,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:46:24.232,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=103&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:47:17.516,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:47:17.516,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:47:17.516,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 14:50:05.942,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:50:05.942,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:50:05.942,[69],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:53:36.317,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:53:36.317,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:53:36.317,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 14:55:35.753,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 14:55:35.753,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 14:55:35.753,[26],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SeguridadSolicitud.aspx?vcTab=&inCod=106&inTip=4&inTipOri=0
+2023/01/05 14:56:14.231,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:56:14.231,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:56:14.231,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:56:45.950,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2023/01/05 14:56:45.950,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2023/01/05 14:56:45.950,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=0
+2023/01/05 14:56:48.117,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Imp_Configurador.aspx?vcTab=&inCod=117&inTip=4&inTipOri=0
+2023/01/05 14:56:48.117,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Imp_Configurador.aspx?vcTab=&inCod=117&inTip=4&inTipOri=0
+2023/01/05 14:56:48.117,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Imp_Configurador.aspx?vcTab=&inCod=117&inTip=4&inTipOri=0
+2023/01/05 14:56:56.948,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=NumMaxDisp&inCod=1&inTip=4&inTipOri=0
+2023/01/05 14:56:56.948,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=NumMaxDisp&inCod=1&inTip=4&inTipOri=0
+2023/01/05 14:56:56.948,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Configurar/Conf_PoliticaSolicitud.aspx?vcTab=NumMaxDisp&inCod=1&inTip=4&inTipOri=0
+2023/01/05 14:57:10.141,[35],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 14:57:10.141,[35],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 14:57:10.141,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 14:57:13.463,[80],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:57:13.463,[80],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:57:13.463,[80],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2023/01/05 14:57:20.204,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 14:57:20.205,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 14:57:20.205,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_NuevaSolicitud.aspx
+2023/01/05 14:57:25.044,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 14:57:25.044,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 14:57:25.044,[85],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0
+2023/01/05 14:57:26.512,[37],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 14:57:26.512,[37],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 14:57:26.512,[37],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Consultar/Con_SeleccionArea.aspx?Tipo=2&Multiple=0
+2023/01/05 14:57:29.652,[78],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 14:57:29.652,[78],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 14:57:29.652,[78],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Adm_CargarArchivo.aspx?CanMax=&ExtPer=&TamTip=&TamMax=&TamMed=
+2023/01/05 14:57:42.508,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:57:42.509,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:57:42.509,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?dominio=-1&vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:57:59.359,[82],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:57:59.359,[82],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:57:59.359,[82],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:58:17.468,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:58:17.468,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:58:17.468,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:59:02.845,[81],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:59:02.845,[81],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:59:02.845,[81],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx
+2023/01/05 14:59:09.874,[81],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:59:09.874,[81],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 14:59:09.874,[81],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_CrearSolicitudPersonalizada.aspx?vcCodEmp=3800967&inTipSol=104&biAdmin=1
+2023/01/05 15:04:47.384,[35],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:04:47.384,[35],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:04:47.384,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:04:58.279,[77],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:04:58.279,[77],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:04:58.280,[77],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:05:07.416,[82],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:05:07.417,[82],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:05:07.417,[82],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:06:54.023,[77],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:06:54.023,[77],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:06:54.023,[77],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:32.227,[84],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:32.227,[84],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:32.227,[84],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:39.369,[68],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:39.369,[68],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:20:39.369,[68],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:32:21.065,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/05 15:32:21.071,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/05 15:32:21.071,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/05 15:32:32.442,[5],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 15:32:32.442,[5],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 15:32:32.442,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/05 15:33:35.053,[5],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:33:35.053,[5],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:33:35.053,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 15:33:46.096,[11],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:33:46.096,[11],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:33:46.096,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 15:34:36.509,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:34:36.509,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:34:36.509,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:37:27.433,[19],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:37:27.433,[19],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 15:37:27.433,[19],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:40:19.711,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:40:19.712,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:40:19.712,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:43:31.922,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:43:31.922,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:43:31.922,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:45:23.467,[63],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:45:23.467,[63],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:45:23.467,[63],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:46:43.181,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:46:43.181,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:46:43.181,[27],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:49:02.832,[21],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 16:49:02.832,[21],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 16:49:02.832,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=MOV_TipoSolicitud&inCod=105&inTip=4&inTipOri=0
+2023/01/05 16:49:12.029,[20],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 16:49:12.030,[20],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 16:49:12.031,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2023/01/05 16:49:14.486,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:49:14.486,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 16:49:14.486,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?Cod=104&Par=inCodTipSol&vcTab=MOV_TipoSolicitud
+2023/01/05 18:00:23.838,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 18:00:23.838,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud
+2023/01/05 18:00:23.838,[22],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudesConfiguracion.aspx?vcTab=MOV_TipoSolicitud

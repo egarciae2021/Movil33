@@ -1,0 +1,10 @@
+﻿<style> TD { mso-number-format:\@; } </style><table cellspacing='0' rules='all' border='1' id='tbl_Rep_Historico' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Dispositivo</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Línea</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Cod. Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Situación</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Inicio</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Fin</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Observación</td>
+	</tr>
+	<tr>
+		<td>01402 - SAMSUNG GALAXY J6</td><td>5537388496</td><td>39</td><td>ANTES: VILLA RAMIREZ BERENICE</td><td>Asignado</td><td>03/09/2018</td><td></td><td>INGRESO SISTEMA - CARGA DATA INICIAL</td>
+	</tr>
+
+	</tr>
+</table>

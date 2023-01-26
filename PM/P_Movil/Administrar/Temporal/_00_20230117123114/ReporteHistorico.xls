@@ -1,0 +1,22 @@
+﻿<style> TD { mso-number-format:\@; } </style><table cellspacing='0' rules='all' border='1' id='tbl_Rep_Historico' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Línea</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Cod. Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>IMEI</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Modelo de Dispositivo</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Cod. Centro Costo</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Situación</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Inicio</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Fin</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Observación</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Usuario Modificador</td>
+	</tr>
+	<tr>
+		<td>11111555588</td><td>10234</td><td>MIGUEL ANGEL JUAREZ CHAVEZ</td><td>356954841894445</td><td>SAMSUNG GALAXY A21S</td><td>300</td><td>Asignado</td><td>30/11/2022</td><td>13/01/2023</td><td>Línea registrada desde Solicitud de Cambio de Número (Número anterior: '11111555577')</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>11111555588</td><td>O867E9C52520</td><td>GUADALUPE RAMOS-HEINEKEN</td><td>356954841894445</td><td>SAMSUNG GALAXY A21S</td><td>100</td><td>Asignado</td><td>13/01/2023</td><td>13/01/2023</td><td>Cambio en: EMPLEADO</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>11111555588</td><td>O867E9C52520</td><td>GUADALUPE RAMOS-HEINEKEN</td><td>358392101172657</td><td>SAMSUNG GALAXY A30</td><td>100</td><td>Asignado</td><td>13/01/2023</td><td>13/01/2023</td><td>Cambio en: DISPOSITIVO</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>11111555588</td><td>O867E9C52520</td><td>GUADALUPE RAMOS-HEINEKEN</td><td>356954841894445</td><td>SAMSUNG GALAXY A21S</td><td>100</td><td>Asignado</td><td>13/01/2023</td><td>13/01/2023</td><td>Cambio en: DISPOSITIVO</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>11111555588</td><td>O867E9C52520</td><td>GUADALUPE RAMOS-HEINEKEN</td><td>358392101172657</td><td>SAMSUNG GALAXY A30</td><td>100</td><td>Asignado</td><td>13/01/2023</td><td></td><td>Cambio en: DISPOSITIVO</td><td>prueba</td>
+	</tr>
+
+	</tr>
+</table>

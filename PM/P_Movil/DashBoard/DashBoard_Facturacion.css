@@ -1,0 +1,134 @@
+﻿body {
+    background-color: #FFFFFF !important; /*F3F5F9*/
+}
+
+.ui-jqgrid-bdiv {
+    overflow: hidden !important;
+}
+
+#tbGrupoServicio > tbody > tr > td {
+    /*font-size: 10px;
+    text-align:left;
+    margin-right: 50px;*/
+}
+
+#pnlGeneral {
+    /*width: 1024px;*/
+    height: 670px;
+    margin: auto;
+    /*border: 1px solid #ddd;*/
+    /*box-shadow:3px 3px 3px gray;*/
+    border-radius: 4px;
+}
+
+.vcCabeceraGrupo {
+    background-color: #F2F2E4;
+}
+
+.vcGrupo00 {
+    background-color: white;
+}
+
+.vcGrupo01 {
+    background: linear-gradient(to right, white, #9EDAED);
+    color: #2E2E2E;
+}
+
+.vcGrupo02 {
+    background: linear-gradient(to right, white, #CFB53B);
+    color: #2E2E2E;
+}
+
+.vcGrupo03 {
+    background: linear-gradient(to right, white, #99CC32);
+    color: #2E2E2E;
+}
+
+.vcGrupo04 {
+    background: linear-gradient(to right, white, #FF7F00);
+    color: #2E2E2E;
+}
+
+.vcGrupo05 {
+    background: linear-gradient(to right, white, #FC2424);
+    color: #2E2E2E;
+}
+
+.vcGrupo06 {
+    background: linear-gradient(to right, white, #429A3D);
+    color: #2E2E2E;
+}
+
+.vcGrupo07 {
+    background: linear-gradient(to right, white, #EF6C98);
+    color: #2E2E2E;
+}
+
+.vcGrupo08 {
+    background: linear-gradient(to right, white, #D64DD6);
+    color: #2E2E2E;
+}
+
+.vcGrupo09 {
+    background: linear-gradient(to right, white, #7FBBB1);
+    color: #2E2E2E;
+}
+
+.vcGrupo10 {
+    background: linear-gradient(to right, white, #957552);
+    color: #2E2E2E;
+}
+
+.vcGrupo11 {
+    background: linear-gradient(to right, white, #6991FF);
+    color: #2E2E2E;
+}
+
+.vcGrupo12 {
+    background: linear-gradient(to right, white, #CC8136);
+    color: #2E2E2E;
+}
+
+.vcGrupo13 {
+    background: linear-gradient(to right, white, #8F8FBD);
+    color: #2E2E2E;
+}
+
+.vcGrupo14 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo15 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo16 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo17 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo18 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo19 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.vcGrupo20 {
+    background: linear-gradient(to right, white, #);
+    color: #2E2E2E;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    height: 25px;
+}

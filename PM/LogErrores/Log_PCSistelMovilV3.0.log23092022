@@ -1,0 +1,18 @@
+2022/09/23 13:53:48.595,[5],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/09/23 13:53:48.601,[5],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/09/23 13:53:48.601,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/09/23 13:53:56.143,[21],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/23 13:53:56.143,[21],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/23 13:53:56.143,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/09/23 13:54:01.127,[16],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/23 13:54:01.127,[16],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/23 13:54:01.128,[16],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/09/23 13:54:16.270,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/09/23 13:54:16.270,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/09/23 13:54:16.270,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/09/23 13:54:35.379,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1
+2022/09/23 13:54:35.379,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1
+2022/09/23 13:54:35.379,[5],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1
+2022/09/23 13:54:35.387,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1
+2022/09/23 13:54:35.388,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1
+2022/09/23 13:54:35.388,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/AdministrarTickets/AdmTck_BuscarUsuario.aspx?esBuscarUsuario=1

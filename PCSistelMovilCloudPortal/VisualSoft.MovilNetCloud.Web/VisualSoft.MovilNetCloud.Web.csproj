@@ -1,0 +1,716 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7740AC87-FBB8-49CA-9F2D-B63ACC6439A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisualSoft.MovilNetCloud.Web</RootNamespace>
+    <AssemblyName>VisualSoft.MovilNetCloud.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Fluentx, Version=5.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fluentx.5.1.2\lib\net45\Fluentx.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluentx.Mvc, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fluentx.Mvc.1.0.4\lib\Fluentx.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="VisualSoft.Comun.Utilitarios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\ComponentesCompilado\VisualSoft.Comun.Utilitarios.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Dominio.BE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Dominio.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Dominio.BL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Dominio.BL.dll</HintPath>
+    </Reference>
+    <Reference Include="VisualSoft.PCSistelMovil.Seguridad.BE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Componentes\ComponentesCompilado\VisualSoft.PCSistelMovil.Seguridad.BE.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="General\AES_Seguridad.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Error.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Common\Archivos\bosque.png" />
+    <Content Include="Common\Archivos\img\background.jpg" />
+    <Content Include="Common\Archivos\img\checkmark.png" />
+    <Content Include="Common\Archivos\img\datatables\sort_asc.png" />
+    <Content Include="Common\Archivos\img\datatables\sort_both.png" />
+    <Content Include="Common\Archivos\img\flex-admin-logo%401x - copia.png" />
+    <Content Include="Common\Archivos\img\flex-admin-logo%401x.png" />
+    <Content Include="Common\Archivos\img\flex-admin-logo%401x_.png" />
+    <Content Include="Common\Archivos\img\fondo_cielo.jpg" />
+    <Content Include="Common\Archivos\img\sort_asc.png" />
+    <Content Include="Common\Archivos\img\widget-bg-morning.jpg" />
+    <Content Include="Common\Images\barra_logo.png" />
+    <Content Include="Common\Images\barra_logos.png" />
+    <Content Include="Common\Images\cimg\1.jpg" />
+    <Content Include="Common\Images\cimg\10.jpg" />
+    <Content Include="Common\Images\cimg\100.jpg" />
+    <Content Include="Common\Images\cimg\101.jpg" />
+    <Content Include="Common\Images\cimg\102.jpg" />
+    <Content Include="Common\Images\cimg\103.jpg" />
+    <Content Include="Common\Images\cimg\104.jpg" />
+    <Content Include="Common\Images\cimg\105.jpg" />
+    <Content Include="Common\Images\cimg\106.jpg" />
+    <Content Include="Common\Images\cimg\107.jpg" />
+    <Content Include="Common\Images\cimg\108.jpg" />
+    <Content Include="Common\Images\cimg\109.jpg" />
+    <Content Include="Common\Images\cimg\11.jpg" />
+    <Content Include="Common\Images\cimg\110.jpg" />
+    <Content Include="Common\Images\cimg\111.jpg" />
+    <Content Include="Common\Images\cimg\112.jpg" />
+    <Content Include="Common\Images\cimg\113.jpg" />
+    <Content Include="Common\Images\cimg\114.jpg" />
+    <Content Include="Common\Images\cimg\115.jpg" />
+    <Content Include="Common\Images\cimg\116.jpg" />
+    <Content Include="Common\Images\cimg\117.jpg" />
+    <Content Include="Common\Images\cimg\118.jpg" />
+    <Content Include="Common\Images\cimg\119.jpg" />
+    <Content Include="Common\Images\cimg\12.jpg" />
+    <Content Include="Common\Images\cimg\120.jpg" />
+    <Content Include="Common\Images\cimg\121.jpg" />
+    <Content Include="Common\Images\cimg\122.jpg" />
+    <Content Include="Common\Images\cimg\123.jpg" />
+    <Content Include="Common\Images\cimg\124.jpg" />
+    <Content Include="Common\Images\cimg\125.jpg" />
+    <Content Include="Common\Images\cimg\126.jpg" />
+    <Content Include="Common\Images\cimg\127.jpg" />
+    <Content Include="Common\Images\cimg\128.jpg" />
+    <Content Include="Common\Images\cimg\129.jpg" />
+    <Content Include="Common\Images\cimg\13.jpg" />
+    <Content Include="Common\Images\cimg\130.jpg" />
+    <Content Include="Common\Images\cimg\131.jpg" />
+    <Content Include="Common\Images\cimg\132.jpg" />
+    <Content Include="Common\Images\cimg\133.jpg" />
+    <Content Include="Common\Images\cimg\134.jpg" />
+    <Content Include="Common\Images\cimg\135.jpg" />
+    <Content Include="Common\Images\cimg\136.jpg" />
+    <Content Include="Common\Images\cimg\137.jpg" />
+    <Content Include="Common\Images\cimg\138.jpg" />
+    <Content Include="Common\Images\cimg\139.jpg" />
+    <Content Include="Common\Images\cimg\14.jpg" />
+    <Content Include="Common\Images\cimg\140.jpg" />
+    <Content Include="Common\Images\cimg\141.jpg" />
+    <Content Include="Common\Images\cimg\142.jpg" />
+    <Content Include="Common\Images\cimg\143.jpg" />
+    <Content Include="Common\Images\cimg\144.jpg" />
+    <Content Include="Common\Images\cimg\145.jpg" />
+    <Content Include="Common\Images\cimg\146.jpg" />
+    <Content Include="Common\Images\cimg\147.jpg" />
+    <Content Include="Common\Images\cimg\148.jpg" />
+    <Content Include="Common\Images\cimg\149.jpg" />
+    <Content Include="Common\Images\cimg\15.jpg" />
+    <Content Include="Common\Images\cimg\150.jpg" />
+    <Content Include="Common\Images\cimg\151.jpg" />
+    <Content Include="Common\Images\cimg\152.jpg" />
+    <Content Include="Common\Images\cimg\153.jpg" />
+    <Content Include="Common\Images\cimg\154.jpg" />
+    <Content Include="Common\Images\cimg\155.jpg" />
+    <Content Include="Common\Images\cimg\156.jpg" />
+    <Content Include="Common\Images\cimg\157.jpg" />
+    <Content Include="Common\Images\cimg\158.jpg" />
+    <Content Include="Common\Images\cimg\159.jpg" />
+    <Content Include="Common\Images\cimg\16.jpg" />
+    <Content Include="Common\Images\cimg\160.jpg" />
+    <Content Include="Common\Images\cimg\161.jpg" />
+    <Content Include="Common\Images\cimg\162.jpg" />
+    <Content Include="Common\Images\cimg\163.jpg" />
+    <Content Include="Common\Images\cimg\164.jpg" />
+    <Content Include="Common\Images\cimg\165.jpg" />
+    <Content Include="Common\Images\cimg\166.jpg" />
+    <Content Include="Common\Images\cimg\167.jpg" />
+    <Content Include="Common\Images\cimg\168.jpg" />
+    <Content Include="Common\Images\cimg\169.jpg" />
+    <Content Include="Common\Images\cimg\17.jpg" />
+    <Content Include="Common\Images\cimg\170.jpg" />
+    <Content Include="Common\Images\cimg\171.jpg" />
+    <Content Include="Common\Images\cimg\172.jpg" />
+    <Content Include="Common\Images\cimg\173.jpg" />
+    <Content Include="Common\Images\cimg\174.jpg" />
+    <Content Include="Common\Images\cimg\175.jpg" />
+    <Content Include="Common\Images\cimg\176.jpg" />
+    <Content Include="Common\Images\cimg\177.jpg" />
+    <Content Include="Common\Images\cimg\178.jpg" />
+    <Content Include="Common\Images\cimg\179.jpg" />
+    <Content Include="Common\Images\cimg\18.jpg" />
+    <Content Include="Common\Images\cimg\180.jpg" />
+    <Content Include="Common\Images\cimg\181.jpg" />
+    <Content Include="Common\Images\cimg\182.jpg" />
+    <Content Include="Common\Images\cimg\183.jpg" />
+    <Content Include="Common\Images\cimg\184.jpg" />
+    <Content Include="Common\Images\cimg\185.jpg" />
+    <Content Include="Common\Images\cimg\186.jpg" />
+    <Content Include="Common\Images\cimg\187.jpg" />
+    <Content Include="Common\Images\cimg\188.jpg" />
+    <Content Include="Common\Images\cimg\189.jpg" />
+    <Content Include="Common\Images\cimg\19.jpg" />
+    <Content Include="Common\Images\cimg\190.jpg" />
+    <Content Include="Common\Images\cimg\191.jpg" />
+    <Content Include="Common\Images\cimg\2.jpg" />
+    <Content Include="Common\Images\cimg\20.jpg" />
+    <Content Include="Common\Images\cimg\21.jpg" />
+    <Content Include="Common\Images\cimg\22.jpg" />
+    <Content Include="Common\Images\cimg\23.jpg" />
+    <Content Include="Common\Images\cimg\24.jpg" />
+    <Content Include="Common\Images\cimg\25.jpg" />
+    <Content Include="Common\Images\cimg\26.jpg" />
+    <Content Include="Common\Images\cimg\27.jpg" />
+    <Content Include="Common\Images\cimg\28.jpg" />
+    <Content Include="Common\Images\cimg\29.jpg" />
+    <Content Include="Common\Images\cimg\3.jpg" />
+    <Content Include="Common\Images\cimg\30.jpg" />
+    <Content Include="Common\Images\cimg\31.jpg" />
+    <Content Include="Common\Images\cimg\32.jpg" />
+    <Content Include="Common\Images\cimg\33.jpg" />
+    <Content Include="Common\Images\cimg\34.jpg" />
+    <Content Include="Common\Images\cimg\35.jpg" />
+    <Content Include="Common\Images\cimg\36.jpg" />
+    <Content Include="Common\Images\cimg\37.jpg" />
+    <Content Include="Common\Images\cimg\38.jpg" />
+    <Content Include="Common\Images\cimg\39.jpg" />
+    <Content Include="Common\Images\cimg\4.jpg" />
+    <Content Include="Common\Images\cimg\40.jpg" />
+    <Content Include="Common\Images\cimg\41.jpg" />
+    <Content Include="Common\Images\cimg\42.jpg" />
+    <Content Include="Common\Images\cimg\43.jpg" />
+    <Content Include="Common\Images\cimg\44.jpg" />
+    <Content Include="Common\Images\cimg\45.jpg" />
+    <Content Include="Common\Images\cimg\46.jpg" />
+    <Content Include="Common\Images\cimg\47.jpg" />
+    <Content Include="Common\Images\cimg\48.jpg" />
+    <Content Include="Common\Images\cimg\49.jpg" />
+    <Content Include="Common\Images\cimg\5.jpg" />
+    <Content Include="Common\Images\cimg\50.jpg" />
+    <Content Include="Common\Images\cimg\51.jpg" />
+    <Content Include="Common\Images\cimg\52.jpg" />
+    <Content Include="Common\Images\cimg\53.jpg" />
+    <Content Include="Common\Images\cimg\54.jpg" />
+    <Content Include="Common\Images\cimg\55.jpg" />
+    <Content Include="Common\Images\cimg\56.jpg" />
+    <Content Include="Common\Images\cimg\57.jpg" />
+    <Content Include="Common\Images\cimg\58.jpg" />
+    <Content Include="Common\Images\cimg\59.jpg" />
+    <Content Include="Common\Images\cimg\6.jpg" />
+    <Content Include="Common\Images\cimg\60.jpg" />
+    <Content Include="Common\Images\cimg\61.jpg" />
+    <Content Include="Common\Images\cimg\62.jpg" />
+    <Content Include="Common\Images\cimg\63.jpg" />
+    <Content Include="Common\Images\cimg\64.jpg" />
+    <Content Include="Common\Images\cimg\65.jpg" />
+    <Content Include="Common\Images\cimg\66.jpg" />
+    <Content Include="Common\Images\cimg\67.jpg" />
+    <Content Include="Common\Images\cimg\68.jpg" />
+    <Content Include="Common\Images\cimg\69.jpg" />
+    <Content Include="Common\Images\cimg\7.jpg" />
+    <Content Include="Common\Images\cimg\70.jpg" />
+    <Content Include="Common\Images\cimg\71.jpg" />
+    <Content Include="Common\Images\cimg\72.jpg" />
+    <Content Include="Common\Images\cimg\73.jpg" />
+    <Content Include="Common\Images\cimg\74.jpg" />
+    <Content Include="Common\Images\cimg\75.jpg" />
+    <Content Include="Common\Images\cimg\76.jpg" />
+    <Content Include="Common\Images\cimg\77.jpg" />
+    <Content Include="Common\Images\cimg\78.jpg" />
+    <Content Include="Common\Images\cimg\79.jpg" />
+    <Content Include="Common\Images\cimg\8.jpg" />
+    <Content Include="Common\Images\cimg\80.jpg" />
+    <Content Include="Common\Images\cimg\81.jpg" />
+    <Content Include="Common\Images\cimg\82.jpg" />
+    <Content Include="Common\Images\cimg\83.jpg" />
+    <Content Include="Common\Images\cimg\84.jpg" />
+    <Content Include="Common\Images\cimg\85.jpg" />
+    <Content Include="Common\Images\cimg\86.jpg" />
+    <Content Include="Common\Images\cimg\87.jpg" />
+    <Content Include="Common\Images\cimg\88.jpg" />
+    <Content Include="Common\Images\cimg\89.jpg" />
+    <Content Include="Common\Images\cimg\9.jpg" />
+    <Content Include="Common\Images\cimg\90.jpg" />
+    <Content Include="Common\Images\cimg\91.jpg" />
+    <Content Include="Common\Images\cimg\92.jpg" />
+    <Content Include="Common\Images\cimg\93.jpg" />
+    <Content Include="Common\Images\cimg\94.jpg" />
+    <Content Include="Common\Images\cimg\95.jpg" />
+    <Content Include="Common\Images\cimg\96.jpg" />
+    <Content Include="Common\Images\cimg\97.jpg" />
+    <Content Include="Common\Images\cimg\98.jpg" />
+    <Content Include="Common\Images\cimg\99.jpg" />
+    <Content Include="Common\Images\favicon.ico" />
+    <Content Include="Common\Images\logo-visual-soft.png" />
+    <Content Include="Common\Images\Login\logo_PCSISTEL.png" />
+    <Content Include="Common\Images\OrangeGear.png" />
+    <Content Include="Common\Images\portal1.jpg" />
+    <Content Include="Common\Images\portal2.jpg" />
+    <Content Include="Common\Images\PreLoaders\Waiting_1.gif" />
+    <Content Include="Common\Images\PreLoaders\Waiting_2.gif" />
+    <Content Include="Common\Images\PreLoaders\Waiting_3.gif" />
+    <Content Include="Common\Images\PreLoaders\Waiting_4.gif" />
+    <Content Include="Common\Images\Login\FondoLogin.png" />
+    <Content Include="Common\Images\Login\Logo_PMS.png" />
+    <Content Include="Common\Scripts\aes.js" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap2.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap3.css" />
+    <Content Include="Common\Scripts\Bootstrap\css\operador.css" />
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Common\Scripts\Bootstrap\js\bootstrap.js" />
+    <Content Include="Common\Scripts\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Common\Scripts\jquery.Storage.js" />
+    <Content Include="Common\Scripts\Seguridad\jcap.js" />
+    <Content Include="Common\Scripts\Jquery\jquery-1.11.3.js" />
+    <Content Include="Common\Scripts\Seguridad\md5.js" />
+    <Content Include="Common\Scripts\Views\ConfigBD.js" />
+    <Content Include="Common\Scripts\Views\Login.js" />
+    <Content Include="Common\Scripts\VisualSoft.MovilNet.Site.js" />
+    <Content Include="Common\Style\normalize.css" />
+    <Content Include="Common\Style\Operador.MovilNetCloud.Site.css" />
+    <Content Include="Common\Style\VisualSoft.MovilNetCloud.Site.css" />
+    <Content Include="Common\Views\Login\ConfigBD.css" />
+    <Content Include="Common\Views\Login\ConfigBD.js" />
+    <Content Include="Common\Views\Login\Index.css" />
+    <Content Include="Common\Views\Login\Index.js" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\login.css" />
+    <Content Include="Content\css\nifty-demo-icons.min.css" />
+    <Content Include="Content\css\nifty-demo.min.css" />
+    <Content Include="Content\css\fonts.css" />
+    <Content Include="Content\css\general.css" />
+    <Content Include="Content\css\nifty.min.css" />
+    <Content Include="Content\css\shared\bootstrap.min.css" />
+    <Content Include="Content\css\shared\font-awesome.min.css" />
+    <Content Include="Content\css\shared\fonts.css" />
+    <Content Include="Content\css\shared\fonts.googleapis.com.css" />
+    <Content Include="Content\css\shared\nifty-demo-icons.min.css" />
+    <Content Include="Content\css\shared\nifty-demo.min.css" />
+    <Content Include="Content\css\shared\nifty.min.css" />
+    <Content Include="Content\css\shared\pace.min.css" />
+    <Content Include="Content\css\shared\spinkit.min.css" />
+    <Content Include="Content\css\shared\theme-dark.min.css" />
+    <Content Include="Content\fonts\fonts.gstatic.com\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\FondoLogin.png" />
+    <Content Include="Content\images\invisible.png" />
+    <Content Include="Content\images\Logo_Portal.png" />
+    <Content Include="Content\images\Logo_PMS.png" />
+    <Content Include="Content\images\visible.png" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\bg-images.js" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\login.js" />
+    <Content Include="Content\js\nifty.min.js" />
+    <Content Include="Content\js\shared\aes.js" />
+    <Content Include="Content\js\shared\bg-images.js" />
+    <Content Include="Content\js\shared\bootbox.min.js" />
+    <Content Include="Content\js\shared\bootstrap.min.js" />
+    <Content Include="Content\js\shared\dashboard.js" />
+    <Content Include="Content\js\shared\jquery-1.11.3.js" />
+    <Content Include="Content\js\shared\jquery.min.js" />
+    <Content Include="Content\js\shared\jquery.Storage.js" />
+    <Content Include="Content\js\shared\nifty-demo.min.js" />
+    <Content Include="Content\js\shared\nifty.min.js" />
+    <Content Include="Content\js\shared\pace.min.js" />
+    <Content Include="Content\js\sjcap.js" />
+    <Content Include="Content\plugins\pace\pace.min.css" />
+    <Content Include="Content\plugins\pace\pace.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOUuhp.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOUuhp.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OUuhp.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFUZ0bbck.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFVp0bbck.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFVZ0b.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFW50bbck.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWJ0bbck.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWp0bbck.woff2" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWZ0bbck.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UNirkOUuhp.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN_r8OUuhp.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWJ0bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFUZ0bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWZ0bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFVp0bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFWp0bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFW50bbck.woff" />
+    <Content Include="Content\fonts\mem8YaGs126MiZpBA-UFVZ0b.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff" />
+    <Content Include="Content\fonts\mem5YaGs126MiZpBA-UN7rgOUuhp.woff" />
+    <Content Include="Common\Archivos\GuiaIngresoSistema.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\css\shared\Web.config" />
+    <Content Include="Content\js\shared\Web.config" />
+    <Content Include="Content\fonts\fonts.gstatic.com\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\fonts.gstatic.com\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\fonts.gstatic.com\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOUuhp.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOUuhp.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOUehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOUuhp.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOUuhp.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOVuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOX-hpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOXehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOXOhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UNirkOXuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OUehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OUuhp.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OUuhp.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OVuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OX-hpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXehpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXOhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem5YaGs126MiZpBA-UN_r8OXuhpOqc.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFUZ0bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFUZ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFVp0bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFVp0bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFVZ0b.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFVZ0b.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFW50bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFW50bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWJ0bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWJ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWp0bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWp0bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWZ0bbck.woff" />
+    <Content Include="Content\fonts\fonts.gstatic.com\mem8YaGs126MiZpBA-UFWZ0bbck.woff2" />
+    <Content Include="Content\fonts\fonts.gstatic.com\Web.config" />
+    <None Include="Properties\PublishProfiles\ECONDEÑA.pubxml" />
+    <None Include="Properties\PublishProfiles\FPASTOR.pubxml" />
+    <None Include="Properties\PublishProfiles\JAVILA.pubxml" />
+    <None Include="Properties\PublishProfiles\JHERRERA.pubxml" />
+    <Content Include="Temporal\LEER.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Common\Archivos\bootstrap.min.css" />
+    <Content Include="Common\Archivos\font-awesome.min.css" />
+    <Content Include="Common\Archivos\jquery.min.js" />
+    <Content Include="Common\Archivos\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Login\AccesoTDP.cshtml" />
+    <Content Include="Views\Shared\_LayoutLoginTDP.cshtml" />
+    <None Include="Properties\PublishProfiles\MPAJUELO.pubxml" />
+    <None Include="Properties\PublishProfiles\MPAJUELO_PERSONAL.pubxml" />
+    <None Include="Properties\PublishProfiles\RRAMOS.pubxml" />
+    <Content Include="Views\Error\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout33.cshtml" />
+    <Content Include="Views\Error\Login.cshtml" />
+    <None Include="Properties\PublishProfiles\RURBINA.pubxml" />
+    <None Include="Views\Login\Index_original.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Dlls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Common\Scripts\Bootstrap\css\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Common\Scripts\Bootstrap\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Login\ConfigBD.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Componentes\VisualSoft.Comun\Log\PCSistelMovilLog4.5\PCSistelMovilLog45.csproj">
+      <Project>{fc526567-c747-4771-a7f9-8b1c44f681e2}</Project>
+      <Name>PCSistelMovilLog45</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>19060</DevelopmentServerPort>
+          <DevelopmentServerVPath>/PCSistel_PortalMovil</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55387/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

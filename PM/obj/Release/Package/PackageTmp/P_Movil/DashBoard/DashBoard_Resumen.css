@@ -1,0 +1,69 @@
+﻿.panel-title {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+}
+
+table.dataTable > tbody > tr.child ul.dtr-details li {
+    margin: 10px;
+}
+table.dataTable>tbody>tr.child span.dtr-title {
+    margin-top: 10px;
+}
+
+body {
+    background-color: #FFFFFF; /*F3F5F9;*/
+}
+
+.ui-state-default-dash {
+    font-weight: 600;
+}
+
+#fotoUsuario {
+    width: 90px;
+    height: 100px;
+    margin: 20px;
+    border: 1px dotted gray;
+}
+
+#mitablaUsu, #mitablaUsuX {
+    padding-left: 30px;
+    padding-top: 6px;
+    text-align: left;
+    font-size: 10pt;
+}
+
+.none {
+    display: none !important;
+}
+
+.bolder {
+    font-weight: bold;
+    background: none !important;
+    border: none !important;
+}
+
+.Divi_dos {
+    width: 49.9%;
+}
+
+.Divi_tres {
+    width: 33.2%;
+}
+
+.Divi_fact_serv {
+    width: 45%;
+}
+
+.Divi_fact_hist {
+    width: 54.7%;
+}
+
+#ctndRendimiento {
+    float: left;
+    border: 0px dotted gray;
+    overflow: hidden;
+    width: 250px;
+    height: 170px;
+    margin-top: -25px;
+    margin-left: 100px;
+}

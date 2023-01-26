@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html class="htmlCentrarAbsoluto">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="~/Common/Images/favicon.ico" type="image/ico" />
+    <title>Central Atención</title>
+    @Styles.Render("~/Content/esencial")
+    @Scripts.Render("~/bundles/esencial")
+    @RenderSection("RenderHeader", false)
+</head>
+<body class="bodyCentrarAbsoluto colorBackGroundCentrarAbs">
+    
+    <div id="dvWaiting">
+        <div class="CentrarAbsoluto">
+            <img src="~/Common/Images/PreLoaders/Waiting_1.gif" height="97" width="100 " style="float:left;" />
+            <p style="font-weight:bolder; color:#193B49;margin-top:35px;">Espere por favor...</p>
+        </div>
+    </div>
+    <div id="miAlerta" class="modal fade bs-example-modal-sm" >
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color:#063466; color:white; font-size:medium; font-weight:bolder">
+
+                </div>
+                <div class="modal-body">
+                    <span class="glyphicon" aria-hidden="true" style="float:left; margin-right:15px; font-size:20pt;"></span>
+                    <span style="font-weight:bold;"> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

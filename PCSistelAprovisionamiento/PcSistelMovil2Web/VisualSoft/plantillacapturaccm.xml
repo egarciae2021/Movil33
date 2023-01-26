@@ -1,0 +1,348 @@
+<?xml version="1.0" standalone="yes"?>
+<dsEsquema xmlns="http://tempuri.org/dsEsquema.xsd">
+  <xs:schema id="dsEsquema" targetNamespace="http://tempuri.org/dsEsquema.xsd" xmlns:mstns="http://tempuri.org/dsEsquema.xsd" xmlns="http://tempuri.org/dsEsquema.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+    <xs:element name="dsEsquema" msdata:IsDataSet="true" msdata:Locale="en-US">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="M_DPLA_CAMP">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PCAM_PF_inCODPLA" type="xs:int" />
+                <xs:element name="PCAM_P_inASCII" type="xs:string" />
+                <xs:element name="CARACTER" type="xs:string" minOccurs="0" />
+                <xs:element name="PCAM_F_inCODCNC" type="xs:int" minOccurs="0" />
+                <xs:element name="PCAM_vcDESCAM" type="xs:string" minOccurs="0" />
+                <xs:element name="PCAM_inPOSCAM" type="xs:int" />
+                <xs:element name="PCAM_inLONCAM" type="xs:int" />
+                <xs:element name="PCAM_btMINUTO" type="xs:boolean" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="EXPORTACION_ERROR">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="LINEA_x0020_ERRADA" msprop:Generator_UserColumnName="LINEA ERRADA" msprop:Generator_ColumnPropNameInRow="LINEA_ERRADA" msprop:Generator_ColumnVarNameInTable="columnLINEA_ERRADA" msprop:Generator_ColumnPropNameInTable="LINEA_ERRADAColumn" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="M_GENE_PLAN">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PLAN_P_inCODPLA" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+                <xs:element name="PLAN_inTIP" type="xs:int" />
+                <xs:element name="PLAN_vcNOMPLA" type="xs:string" />
+                <xs:element name="PLAN_inLININI" type="xs:int" />
+                <xs:element name="PLAN_vcCAR" type="xs:string" />
+                <xs:element name="PLAN_vcTXTPLA" type="xs:string" minOccurs="0" />
+                <xs:element name="PLAN_F_inCODMOD" type="xs:int" />
+                <xs:element name="PLAN_F_inCODPRO" type="xs:int" />
+                <xs:element name="PLAN_F_vcCODCIA" type="xs:string" minOccurs="0" />
+                <xs:element name="PLAN_F_vcTFAC" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="dsEsquemaKey1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:M_DPLA_CAMP" />
+        <xs:field xpath="mstns:PCAM_PF_inCODPLA" />
+        <xs:field xpath="mstns:PCAM_P_inASCII" />
+      </xs:unique>
+      <xs:unique name="dsEsquemaKey2" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//mstns:M_GENE_PLAN" />
+        <xs:field xpath="mstns:PLAN_P_inCODPLA" />
+      </xs:unique>
+      <xs:keyref name="M_GENE_PLANM_DPLA_CAMP" refer="dsEsquemaKey2">
+        <xs:selector xpath=".//mstns:M_DPLA_CAMP" />
+        <xs:field xpath="mstns:PCAM_PF_inCODPLA" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>65</PCAM_P_inASCII>
+    <CARACTER>A</CARACTER>
+    <PCAM_F_inCODCNC>1</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>dateTimeConnect</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>31</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>66</PCAM_P_inASCII>
+    <CARACTER>B</CARACTER>
+    <PCAM_F_inCODCNC>2</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>callingPartyNumber</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>9</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>20</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>67</PCAM_P_inASCII>
+    <CARACTER>C</CARACTER>
+    <PCAM_F_inCODCNC>3</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>originalCalledPartyNumber</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>22</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>20</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>68</PCAM_P_inASCII>
+    <CARACTER>D</CARACTER>
+    <PCAM_F_inCODCNC>4</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>duration</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>39</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>8</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>69</PCAM_P_inASCII>
+    <CARACTER>E</CARACTER>
+    <PCAM_F_inCODCNC>5</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>authCodeDescription</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>51</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>35</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>70</PCAM_P_inASCII>
+    <CARACTER>F</CARACTER>
+    <PCAM_F_inCODCNC>6</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origLegCallIdentifier</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>3</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>71</PCAM_P_inASCII>
+    <CARACTER>G</CARACTER>
+    <PCAM_F_inCODCNC>7</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destLegIdentifier</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>17</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>72</PCAM_P_inASCII>
+    <CARACTER>H</CARACTER>
+    <PCAM_F_inCODCNC>8</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origCallTerminationOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>45</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>73</PCAM_P_inASCII>
+    <CARACTER>I</CARACTER>
+    <PCAM_F_inCODCNC>9</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destCallTerminationOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>46</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>74</PCAM_P_inASCII>
+    <CARACTER>J</CARACTER>
+    <PCAM_F_inCODCNC>10</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origCalledPartyRedirectOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>47</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>75</PCAM_P_inASCII>
+    <CARACTER>K</CARACTER>
+    <PCAM_F_inCODCNC>11</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>lastRedirectRedirectOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>48</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>76</PCAM_P_inASCII>
+    <CARACTER>L</CARACTER>
+    <PCAM_F_inCODCNC>12</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origDeviceName</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>40</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>30</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>77</PCAM_P_inASCII>
+    <CARACTER>M</CARACTER>
+    <PCAM_F_inCODCNC>13</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destDeviceName</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>41</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>30</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>1</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>78</PCAM_P_inASCII>
+    <CARACTER>N</CARACTER>
+    <PCAM_F_inCODCNC>14</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destCause_value</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>25</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>4</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>65</PCAM_P_inASCII>
+    <CARACTER>A</CARACTER>
+    <PCAM_F_inCODCNC>1</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>dateTimeConnect</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>47</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>66</PCAM_P_inASCII>
+    <CARACTER>B</CARACTER>
+    <PCAM_F_inCODCNC>2</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>callingPartyNumber</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>8</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>20</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>67</PCAM_P_inASCII>
+    <CARACTER>C</CARACTER>
+    <PCAM_F_inCODCNC>3</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>originalCalledPartyNumber</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>29</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>20</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>68</PCAM_P_inASCII>
+    <CARACTER>D</CARACTER>
+    <PCAM_F_inCODCNC>4</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>duration</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>55</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>8</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>69</PCAM_P_inASCII>
+    <CARACTER>E</CARACTER>
+    <PCAM_F_inCODCNC>5</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>authCodeDescription</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>68</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>35</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>70</PCAM_P_inASCII>
+    <CARACTER>F</CARACTER>
+    <PCAM_F_inCODCNC>6</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origLegCallIdentifier</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>3</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>71</PCAM_P_inASCII>
+    <CARACTER>G</CARACTER>
+    <PCAM_F_inCODCNC>7</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destLegIdentifier</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>25</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>72</PCAM_P_inASCII>
+    <CARACTER>H</CARACTER>
+    <PCAM_F_inCODCNC>8</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origCallTerminationOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>58</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>73</PCAM_P_inASCII>
+    <CARACTER>I</CARACTER>
+    <PCAM_F_inCODCNC>9</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destCallTerminationOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>59</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>74</PCAM_P_inASCII>
+    <CARACTER>J</CARACTER>
+    <PCAM_F_inCODCNC>10</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origCalledPartyRedirectOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>60</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>75</PCAM_P_inASCII>
+    <CARACTER>K</CARACTER>
+    <PCAM_F_inCODCNC>11</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>lastRedirectRedirectOnBehalfOf</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>61</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>15</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>76</PCAM_P_inASCII>
+    <CARACTER>L</CARACTER>
+    <PCAM_F_inCODCNC>12</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>origDeviceName</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>56</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>30</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>77</PCAM_P_inASCII>
+    <CARACTER>M</CARACTER>
+    <PCAM_F_inCODCNC>13</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destDeviceName</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>57</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>30</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_DPLA_CAMP>
+    <PCAM_PF_inCODPLA>2</PCAM_PF_inCODPLA>
+    <PCAM_P_inASCII>78</PCAM_P_inASCII>
+    <CARACTER>N</CARACTER>
+    <PCAM_F_inCODCNC>14</PCAM_F_inCODCNC>
+    <PCAM_vcDESCAM>destCause_value</PCAM_vcDESCAM>
+    <PCAM_inPOSCAM>33</PCAM_inPOSCAM>
+    <PCAM_inLONCAM>4</PCAM_inLONCAM>
+    <PCAM_btMINUTO>false</PCAM_btMINUTO>
+  </M_DPLA_CAMP>
+  <M_GENE_PLAN>
+    <PLAN_P_inCODPLA>1</PLAN_P_inCODPLA>
+    <PLAN_inTIP>0</PLAN_inTIP>
+    <PLAN_vcNOMPLA>CCM Version 4.1 Modo SQL</PLAN_vcNOMPLA>
+    <PLAN_inLININI>1</PLAN_inLININI>
+    <PLAN_vcCAR>Coma</PLAN_vcCAR>        
+  </M_GENE_PLAN>
+</dsEsquema>

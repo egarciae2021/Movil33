@@ -1,0 +1,189 @@
+﻿#tbPrincipalProducto_buttons {
+    background-color: #FFFFFF; /*#ECF0F5;*/
+}
+
+#tbPrincipalProducto {
+    background-color: #FFFFFF !important; /*#ECF0F5*/
+}
+
+.ui-state-default
+{
+    -webkit-border-top-left-radius: "3px";
+    -webkit-border-top-right-radius: "3px";
+}
+
+.ui-logo
+{
+    width: 700px;
+    height: 27px;
+    background-image: url(Images/LogoCabeceraPrincipal.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.ui-mensaje
+{
+    width: 24px;
+    height: 24px;
+    background-image: url(Common/Images/Chat/iconos_chat.png);
+}
+.ui-mensaje-01
+{
+    background-position: 0px 0px;
+}
+.ui-mensaje-02
+{
+    background-position: 203px 0px;
+}
+.ui-mensaje-03
+{
+    background-position: 54px 250px;
+}
+
+html
+{
+    overflow-y: hidden;
+}
+
+.LateralSplitter
+{
+    overflow: hidden !important;    
+}
+
+.ContenedorTabPrincipal
+{
+    background-image: url(./images/fondoprincipal2.jpg) !important;
+    background-repeat: no-repeat !important;
+}
+
+
+/*
+.ui-state-default, .ui-widget-content .ui-state-default { border: none; background:none; color: #fff; outline: none;  }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: #7A7A7B !important ; text-decoration: none; outline: none; font-weight:normal; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { border: none; background:none; font-weight: bold; color: #fff; outline: none; }
+.ui-state-hover a, .ui-state-hover a:hover { color: #888; text-decoration: none; outline: none; }
+.ui-state-active, .ui-widget-content .ui-state-active { border: 2px solid #f4f4f4; background:url(../images/tab-bg.jpg) repeat-x top left #f4f4f4; color:#333; outline:none; }*/
+
+
+/*comentado 03-12-2015 wapumayta (tema telefonica)*/
+/*.ui-state-active a, 
+.ui-state-active a:link, 
+.ui-state-active a:visited 
+{
+    color:#333 !important; 
+    outline: none; 
+    text-decoration: none; 
+    cursor:pointer; 
+}*/
+#tbPrincipal #tbPrincipal_buttons .ui-state-active {border: 2px solid #79B7E7; } 
+
+/*
+.ExploradorWeb .ui-state-hover 
+{
+    background-image: none!important;
+    background-color: #FCFAD8!important;
+    
+}
+*/
+
+/*ui-state-hover*/
+
+/*
+.ui-tabs .ui-tabs-nav li
+{
+    list-style: none;
+    float: left;
+    position: relative;
+    top: 1px;
+    margin: 0 .2em 1px 0;
+    border-bottom: 0 !important;
+    padding: 0;
+    white-space: nowrap;
+}
+.ui-tabs .ui-tabs-nav li a
+{
+    float: left;
+    padding: .5em 1em;
+    text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li a img
+{
+    float: left;
+    margin-right: 5px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected
+{
+    margin-bottom: 0;
+    padding-bottom: 100px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a
+{
+    cursor: text;
+}
+*/
+
+.mostrarflotante
+{
+    position:absolute;    
+    z-index:99997;
+    /*background-color:rgba(210,210,210,.9);*/
+    background-color:rgb(210,210,210);
+    background-color:rgba(210,210,210,.3);
+    border-radius:5px;
+    border:1px solid skyblue;
+    box-shadow: 0px 0px 5px gray;
+}
+
+#AnclaLateral:hover
+{
+    cursor:pointer;
+}
+
+.mibtn
+{
+    border:1px solid skyblue;
+    border-radius:3px;
+    box-shadow:0px 0px 5px gray;    
+    cursor:pointer;
+}
+
+.data-tooltip
+{
+    position: absolute;
+    top: 105px;
+    left: 255px;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    border-radius:         3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    font: 11px Verdana !important;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+    z-index: 9999999;
+    display: none;
+}    
+/* Triangle hack to make tooltip look like a speech bubble */
+.data-tooltip-triangle
+{
+    position: absolute;
+    top: 100px;
+    left: 190px;
+    margin-left: -5px;
+    width: 0;
+    border-bottom: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    z-index: 9999999;
+    display: none;
+}
+

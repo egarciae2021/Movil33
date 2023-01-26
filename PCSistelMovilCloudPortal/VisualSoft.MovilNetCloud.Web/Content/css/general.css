@@ -1,0 +1,23 @@
+body {
+    overflow: hidden;
+}
+
+.cls-content-sm {
+    opacity: .95 !important;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75) !important;
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45) !important;
+}
+
+.bg-img {
+    opacity: 0.7;
+}
+
+img {
+    width: 200px;
+    margin-top: 15px;
+}
+
+.panel {
+    background-color: #fff !important;
+}

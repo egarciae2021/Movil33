@@ -1,0 +1,247 @@
+CREATE PROCEDURE [dbo].[MOV_s_DispositivoDisponible_x_GrupoOrigen_TipLinea]    
+ @idCentral int,          
+ @p_vcNomNiv  VARCHAR(100),           
+ @p_inMaxFil  INT = 10,          
+ @p_inCodGrupOri INT = 0,          
+ @p_inCodTip  INT = 0,          
+ @p_vcCodEmp  VARCHAR(35),    
+ @p_inCodPlan INT = 0,    
+ @p_vcNumLin VARCHAR(20) = ''          
+AS          
+BEGIN          
+ select @idCentral = dbo.fnObtenerIdCentral(@idCentral)          
+ DECLARE @v_sqlTipoServicio  VARCHAR (MAX) ='1=1'      
+ DECLARE @v_sql VARCHAR (MAX)      
+ -- Validacion para tipo de servicio  -JPAREJA      
+     
+ IF (dbo.fnObtenerValorParametro('ValidacionTipoServicio','ValidacionTipoServicio') = '1')       
+ begin      
+ set @v_sqlTipoServicio=' TMD.IdTipoModeloDispositivo  IN (SELECT TipoServicio FROM MOV_Plan WHERE P_inCod = '+CONVERT(VARCHAR,@p_inCodPlan)+' and MD.IdClienteCentral = ' +CONVERT(VARCHAR,@idCentral)+') '    
+ end          
+    
+    
+      
+ --SET NOCOUNT ON;              
+              
+ IF @p_inCodTip = 1 AND @p_vcCodEmp != '' --GRUPO DE ORIGEN STAFF          
+ BEGIN          
+  SELECT @p_inCodGrupOri = EMPL_F_inCODGRUORI FROM M_EMPL WHERE EMPL_P_vcCODEMP = @p_vcCodEmp          
+ END          
+ IF @p_inCodTip = 2 AND @p_vcCodEmp != '' --GRUPO DE ORIGEN FAMILIA          
+ BEGIN          
+  SELECT @p_inCodGrupOri = IdGrupoOrigen FROM GEN_EMP_Empleado WHERE IdEmpleado = @p_vcCodEmp          
+ END          
+ IF @p_vcCodEmp = '' --SIN GRUPO DE ORIGEN          
+ BEGIN          
+  SELECT @p_inCodGrupOri = 0          
+ END          
+    
+ DECLARE @v_vcQuery VARCHAR(8000)          
+    IF @p_inMaxFil<=0              
+    BEGIN          
+   IF (@p_vcNumLin = '')          
+   BEGIN          
+  
+  
+  SET @v_sql ='SELECT D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + '' - '' + Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng,           
+  D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'',           
+  Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis''          
+  ,D.F_inCodTip,D.btSopLin, D.F_vcCodEmp, TMD.IdTipoModeloDispositivo,          
+  ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = '+CONVERT(VARCHAR,@p_inCodPlan)+'),0) As ''codTipoServPlan''          
+    FROM MOV_Dispositivo D WITH(NOLOCK)           
+    LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+    LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst          
+    WHERE D.btVig=1           
+    and (D.IdClienteCentral=' +CONVERT(VARCHAR,@idCentral)+')          
+    AND  D.F_inEst=1           
+    AND  (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%'' + ' +CONVERT(VARCHAR,@p_vcNomNiv)+' + ''%''           
+    AND  D.btSopLin = 1 AND (D.F_inCodTip = ' +CONVERT(VARCHAR,@p_inCodTip)+' OR ' +CONVERT(VARCHAR,@p_inCodTip)+' = 0)          
+    AND  (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE P_F_inCodGrup = ' +CONVERT(VARCHAR,@p_inCodGrupOri)+' and (IdClienteCentral=' +CONVERT(VARCHAR,@idCentral)+')) OR ' +CONVERT(VARCHAR,@p_inCodGrupOri)+' = 0)          
+    AND  (D.F_inCodModDis IN (        
+     --SELECT F_inCodMod FROM MOV_PlanModeloDispositivo WHERE F_inCodPla = ' +CONVERT(VARCHAR,@p_inCodPlan)+' and (IdClienteCentral=' +CONVERT(VARCHAR,@idCentral)+'))         
+     SELECT MD.P_inCod        
+     FROM MOV_ModeloDispositivo MD        
+     INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+     INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+     WHERE  ' +CONVERT(VARCHAR(max),@v_sqlTipoServicio)+'        
+  )         
+    OR ' +CONVERT(VARCHAR,@p_inCodPlan)+' = 0) --AGREGADO WAPUMAYTA 26-06-2014          
+    AND  (SELECT COUNT(*) FROM MOV_Linea L WHERE L.F_vcCodIMEI = D.P_vcCodIMEI and (IdClienteCentral=' +CONVERT(VARCHAR,@idCentral)+')) = 0 --AGREGADO WAPUMAYTA 30/07/2014          
+   '      
+        
+  END          
+   ELSE          
+   BEGIN          
+ 
+  
+  SET @v_sql= 'SELECT D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + '' - '' + Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng,           
+   D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'',           
+   Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis''          
+   ,D.F_inCodTip,D.btSopLin, D.F_vcCodEmp, TMD.IdTipoModeloDispositivo,          
+   ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = '+CONVERT(VARCHAR,@p_inCodPlan)+'),0) As ''codTipoServPlan''          
+    FROM MOV_Dispositivo D WITH(NOLOCK)           
+    LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+    LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst          
+    WHERE D.btVig=1           
+    and (D.IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')          
+    AND  D.F_inEst=1           
+    AND  (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%'' + '+CONVERT(VARCHAR,@p_vcNomNiv)+' + ''%''           
+    AND  D.btSopLin = 1 AND (D.F_inCodTip = '+CONVERT(VARCHAR,@p_inCodTip)+' OR '+CONVERT(VARCHAR,@p_inCodTip)+' = 0)          
+    AND  (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE P_F_inCodGrup ='++CONVERT(VARCHAR, @p_inCodGrupOri )+'and (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')) OR '+ +CONVERT(VARCHAR,@p_inCodGrupOri)+' = 0)          
+    AND  (D.F_inCodModDis IN (        
+    SELECT MD.P_inCod        
+    FROM MOV_ModeloDispositivo MD        
+    INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+    INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+    WHERE TMD.IdTipoModeloDispositivo  IN (SELECT TipoServicio FROM MOV_Plan WHERE P_inCod = '+CONVERT(VARCHAR,@p_inCodPlan)+' and MD.IdClienteCentral = '+CONVERT(VARCHAR,@idCentral)+')        
+     ) OR '+CONVERT(VARCHAR,@p_inCodPlan)+' = 0) --AGREGADO WAPUMAYTA 26-06-2014          
+    AND  (SELECT COUNT(*) FROM MOV_Linea L WHERE L.F_vcCodIMEI = D.P_vcCodIMEI and (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')) = 0 --AGREGADO WAPUMAYTA 30/07/2014          
+    UNION ALL          
+    SELECT D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + '' - '' + Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng,           
+   D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'', Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis'',          
+   D.F_inCodTip,D.btSopLin,D.F_vcCodEmp, TMD.IdTipoModeloDispositivo,          
+   ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = '+CONVERT(VARCHAR,@p_inCodPlan)+'),0) As ''codTipoServPlan''          
+    FROM MOV_Dispositivo D WITH(NOLOCK)           
+    LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+    LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst          
+    LEFT JOIN M_EMPL EM ON D.F_vcCodEmp = EM.EMPL_P_vcCODEMP          
+    WHERE D.btVig = 1           
+    and (D.IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')          
+    --AND  D.F_inEst = 2          
+    AND  (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%'' + '+CONVERT(VARCHAR,@p_vcNomNiv )+'+ ''%''           
+    AND  D.btSopLin = 1 AND (D.F_inCodTip = '+CONVERT(VARCHAR,@p_inCodTip)+' OR '+CONVERT(VARCHAR,@p_inCodTip)+' = 0)       
+      
+    AND  (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE P_F_inCodGrup = '+CONVERT(VARCHAR,@p_inCodGrupOri)+' and (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')) OR '+CONVERT(VARCHAR,@p_inCodGrupOri)+' = 0)          
+    AND  (D.F_inCodModDis IN (        
+    --SELECT F_inCodMod FROM MOV_PlanModeloDispositivo WHERE F_inCodPla = '+CONVERT(VARCHAR,@p_inCodPlan)+' and (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+')        
+  SELECT MD.P_inCod        
+    FROM MOV_ModeloDispositivo MD        
+    INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+    INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+    WHERE  '+CONVERT(VARCHAR(max),@v_sqlTipoServicio)+'      
+     ) OR '+CONVERT(VARCHAR,@p_inCodPlan)+' = 0) --AGREGADO WAPUMAYTA 26-06-2014          
+    AND  D.P_vcCodIMEI IN (SELECT ISNULL(F_vcCodIMEI,''-1'') FROM MOV_Linea WHERE P_vcNum = '+CONVERT(VARCHAR,@p_vcNumLin)+' and (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+'))         
+          
+    --AGREGADO 07/07/2014 WAPUMAYTA (LISTAR EL DISPOSITIVO SI YA ESTA ASIGANDO A LA LIENA (PARA EDICINES)          
+   --AND  D.F_vcCodEmp = '+CONVERT(VARCHAR,@p_vcCodEmp)+'  '      
+   END          
+  END          
+  ELSE          
+  BEGIN    
+  
+ 
+          
+   IF (@p_vcNumLin = '')          
+   BEGIN          
+  
+    
+  
+     SET @v_vcQuery = 'SELECT TOP ' + CONVERT(VARCHAR(5),@p_inMaxFil) + ' D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + ' + '''- '''   +          
+          '+ Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng, ' +          
+          ' D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'',' +           
+          ' Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis'' ' +           
+          ' ,D.F_inCodTip,D.btSopLin, D.F_vcCodEmp, TMD.IdTipoModeloDispositivo,          
+       ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = ' + CONVERT(VARCHAR(5),@p_inCodPlan) + '),0) As ''codTipoServPlan'' ' +          
+        ' FROM MOV_Dispositivo D WITH(NOLOCK)           
+       LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+       LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst ' +          
+    --LEFT JOIN M_EMPL EM ON D.F_vcCodEmp = EM.EMPL_P_vcCODEMP'           
+        ' WHERE (D.IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND D.btVig=1 AND D.F_inEst=1 AND (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%' + @p_vcNomNiv + '%''' +          
+        ' AND D.btSopLin = 1 AND (D.F_inCodTip = ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' OR ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' = 0) '  
+  +          
+        ' AND (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND P_F_inCodGrup = ' +         
+  CONVERT(VARCHAR(5),@p_inCodGrupOri) + ') OR ' + CONVERT(VARCHAR(5),@p_inCodGrupOri) + ' = 0)'+          
+     ' AND (D.F_inCodModDis IN (        
+        SELECT MD.P_inCod        
+        FROM MOV_ModeloDispositivo MD        
+        INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+        INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+        WHERE ' +CONVERT(VARCHAR(max),@v_sqlTipoServicio)+'      
+        ) OR ' + CONVERT(VARCHAR(5),@p_inCodPlan) + ' = 0)'+         
+  --AGREGADO WAPUMAYTA 26-06-2014          
+     ' AND (SELECT COUNT(*) FROM MOV_Linea L WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND L.F_vcCodIMEI = D.P_vcCodIMEI) = 0' --AGREGADO WAPUMAYTA 30/07/2014          
+   END          
+   ELSE          
+   BEGIN     
+     
+
+     
+     SET @v_vcQuery = 'SELECT TOP ' + CONVERT(VARCHAR(5),@p_inMaxFil) + ' D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + ' + '''- '''   +          
+          '+ Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng, ' +          
+          ' D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'',' +           
+          ' Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis'' ' +           
+          ' ,D.F_inCodTip,D.btSopLin, D.F_vcCodEmp, TMD.IdTipoModeloDispositivo ,          
+       ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = ' + CONVERT(VARCHAR(5),@p_inCodPlan) + '),0) As ''codTipoServPlan'' ' +          
+        ' FROM MOV_Dispositivo D WITH(NOLOCK)           
+       LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+       LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst ' +              
+        ' WHERE (D.IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND D.btVig=1 AND D.F_inEst=1 AND (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%' + @p_vcNomNiv + '%''' +          
+        ' AND D.btSopLin = 1 AND (D.F_inCodTip = ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' OR ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' = 0) '+          
+        ' AND (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND P_F_inCodGrup = ' +         
+  CONVERT(VARCHAR(5),@p_inCodGrupOri) + ') OR ' + CONVERT(VARCHAR(5),@p_inCodGrupOri) + ' = 0)'+          
+     ' AND (D.F_inCodModDis IN (        
+        SELECT MD.P_inCod        
+        FROM MOV_ModeloDispositivo MD        
+        INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+        INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+        WHERE  ' +CONVERT(VARCHAR(max),@v_sqlTipoServicio)+'        
+          ) OR ' + CONVERT(VARCHAR(5),@p_inCodPlan) + ' = 0)'+         
+  --AGREGADO WAPUMAYTA 26-06-2014          
+     ' AND (SELECT COUNT(*) FROM MOV_Linea L WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND L.F_vcCodIMEI = D.P_vcCodIMEI) = 0'+  --AGREGADO WAPUMAYTA 30/07/2014          
+     ' UNION ALL          
+     SELECT TOP ' + CONVERT(VARCHAR(5),@p_inMaxFil) + ' D.P_vcCodIMEI, D.vcDes, D.P_vcCodIMEI + ' + '''- '''   +          
+          '+ Rtrim(Ltrim(MD.vcNom)) ''vcNom'', CONVERT(VARCHAR(10),D.dtFecIng,103) dtFecIng, ' +          
+          ' D.F_inEst, D.btVig, D.vcObs, D.F_inCodModDis, E.vcNom ''vcEst'',' +           
+          ' Rtrim(Ltrim(MD.vcNom)) ''vcModDis'', MD.P_inCod ''CodDis'' ' +           
+          ' ,D.F_inCodTip,D.btSopLin, D.F_vcCodEmp, TMD.IdTipoModeloDispositivo,          
+       ISNULL((SELECT TIPOSERVICIO FROM MOV_Plan WHERE P_inCod = ' + CONVERT(VARCHAR(5),@p_inCodPlan) + '),0) As ''codTipoServPlan'' ' +          
+        ' FROM MOV_Dispositivo D WITH(NOLOCK)           
+       LEFT JOIN MOV_ModeloDispositivo MD ON MD.P_inCod = D.F_inCodModDis          
+    LEFT JOIN MOV_TipoServicio TS ON MD.F_inCodTipSer = TS.P_inCodTipSer          
+    LEFT JOIN MOV_TipoModeloDispositivo TMD ON TS.IdTipoModeloDispositivo = TMD.IdTipoModeloDispositivo          
+       LEFT JOIN MOV_Estado E ON E.P_inCod = D.F_inEst           
+    LEFT JOIN M_EMPL EM ON D.F_vcCodEmp = EM.EMPL_P_vcCODEMP ' +           
+        ' WHERE (D.IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND D.btVig=1 AND (D.P_vcCodIMEI + ''- '' + Rtrim(Ltrim(MD.vcNom))) LIKE ''%' + @p_vcNomNiv + '%''' +          
+        ' AND D.btSopLin = 1 AND (D.F_inCodTip = ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' OR ' + CONVERT(VARCHAR(5),@p_inCodTip) + ' = 0) '+          
+        ' AND (MD.P_inCod IN (SELECT P_F_inCodModDis FROM MOV_ModeloDispositivoGrupo WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND P_F_inCodGrup = ' +         
+  CONVERT(VARCHAR(5),@p_inCodGrupOri) + ') OR ' + CONVERT(VARCHAR(5),@p_inCodGrupOri) + ' = 0)'+          
+     ' AND (D.F_inCodModDis IN (        
+         SELECT MD.P_inCod        
+         FROM MOV_ModeloDispositivo MD        
+         INNER JOIN MOV_TipoServicio TS on MD.F_inCodTipSer = TS.P_inCodTipSer        
+         INNER JOIN MOV_TipoModeloDispositivo TMD on TMD.IdTipoModeloDispositivo = TS.IdTipoModeloDispositivo        
+         WHERE  ' +CONVERT(VARCHAR(max),@v_sqlTipoServicio)+'        
+          ) OR ' + CONVERT(VARCHAR(5),@p_inCodPlan) + ' = 0)'+         
+  --AGREGADO WAPUMAYTA 26-06-2014          
+     ' AND  D.P_vcCodIMEI IN (SELECT ISNULL(F_vcCodIMEI,''-1'') FROM MOV_Linea WHERE (IdClienteCentral='+CONVERT(VARCHAR,@idCentral)+') AND P_vcNum = ''' + @p_vcNumLin + ''')'         
+  --AGREGADO 07/07/2014 WAPUMAYTA (LISTAR EL DISPOSITIVO SI YA ESTA ASIGANDO A LA LIENA (PARA EDICINES)          
+     --' AND  D.F_vcCodEmp = ''' + @p_vcCodEmp + ''''          
+   END    
+     
+
+
+   PRINT(@v_sql)     
+ 
+   PRINT(@v_vcQuery)    
+     
+   PRINT (@v_sqlTipoServicio)    
+ 
+   exec(@v_sql)         
+   PRINT (@v_sqlTipoServicio)    
+      
+   exec(@v_vcQuery)         
+   PRINT (@v_sqlTipoServicio)    
+     
+   --SELECT @v_vcQuery          
+  END          
+END 

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.png")" type="image/x-icon" />    <!-- Favicon -->
+    <link rel="apple-touch-icon-precomposed" href="@Url.Content("~/Content/images/apple-touch-icon-57-precomposed.png")" />	<!-- For iPhone -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/images/apple-touch-icon-114-precomposed.png")" />    <!-- For iPhone 4 Retina display -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/images/apple-touch-icon-72-precomposed.png")" />    <!-- For iPad -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/images/apple-touch-icon-144-precomposed.png")" />    <!-- For iPad Retina display -->
+    <!-- CORE CSS FRAMEWORK - START -->
+    <link href="@Url.Content("~/Content/plugins/pace/pace-theme-flash.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/plugins/bootstrap/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/plugins/bootstrap/css/bootstrap-theme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/fonts/font-awesome/css/font-awesome.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/animate.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/plugins/perfect-scrollbar/perfect-scrollbar.css")" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS FRAMEWORK - END -->
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - START -->
+    <link href="@Url.Content("~/Content/plugins/morris-chart/css/morris.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/plugins/jquery-ui/smoothness/jquery-ui.min.css")" rel="stylesheet" type="text/css" media="screen" />
+
+    <link href="@Url.Content("~/Content/plugins/select2/select2.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/plugins/datepicker/css/datepicker.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/plugins/dropzone/css/dropzone.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/plugins/bootstrap3-wysihtml5/css/bootstrap3-wysihtml5.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/plugins/icheck/skins/all.css")" rel="stylesheet" type="text/css" media="screen" />
+    <link href="@Url.Content("~/Content/plugins/switchery/dist/switchery.css")" rel="stylesheet" type="text/css" media="screen" />
+    <!-- HEADER SCRIPTS INCLUDED ON THIS PAGE - END -->
+    <!-- CORE CSS TEMPLATE - START -->
+    <link href="@Url.ContentVersionFile("~/Content/css/style.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/custom-styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/responsive.css")" rel="stylesheet" type="text/css" />
+    <!-- CORE CSS TEMPLATE - END -->
+
+    @RenderSection("Styles", false)
+
+</head>
+
+<body>
+    <!-- START TOPBAR -->
+    <div class="page-topbar">
+        <a href="@Url.Action("Index", "Home", new { Area = String.Empty })">
+            <div class='logo-area'>
+            </div>
+        </a>
+        <div class='quick-area'>
+            <div class='pull-left'>
+                <ul class="info-menu left-links list-inline list-unstyled">
+                    <li class="sidebar-toggle-wrap">
+                        <a href="#" data-toggle="sidebar" class="sidebar_toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+
+                    @*@{Html.RenderPartial("_AppSwitch");}*@
+
+                </ul>
+            </div>
+            <div class='pull-right'>
+                <ul class="info-menu right-links list-inline list-unstyled">
+
+                    <li class="profile">
+                        <a href="#" data-toggle="dropdown" class="toggle">
+                            <i class="fa fa-user"></i> <span> @Session.GetNombres() <i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu profile animated fadeIn">
+                            
+                            <li class="last">
+                                <a href="@Url.Action("Logout","Login", new { Area = String.Empty })">
+                                    <i class="fa fa-power-off"></i>
+                                    Cerrar Sesión
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- END TOPBAR -->
+    <!-- START CONTAINER -->
+    <div class="page-container row-fluid container-fluid">
+
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar ">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+
+                <!-- USER INFO - START -->
+                <div class="row">
+                    <div class="profile-details text-center">
+                        @*<div class="profile-image">
+                    <img width="120" height="120" src="~/Content/images/default-user.png" />
+                </div>*@
+
+                        @*<div class="profile-info">
+                    <span>@Session.GetNombres()</span>
+                </div>*@
+                        <div class="profile-info">
+                            @*<div>
+                        <img width="120" height="120" src="~/Content/images/default-user.png" style="border-radius:50%"/>
+                    </div>*@
+                            <span class="text-primary">@Session.GetNombres()</span>
+                            <div class="profile-title text-info text-uppercase">
+                                @Session.GetRolCompleto()
+                            </div>
+                            <div class="profile-title text-purple">
+                                @Session.GetCodigo()
+                            </div>
+                        </div>
+                        @*<div class="profile-status">
+                    status
+                </div>*@
+
+                        @*<h3>
+                    <a href="#">@Session.GetCodigo()</a>
+
+                    <span class="profile-status online"></span>
+                </h3>*@
+                    </div>
+                    <p></p>
+                </div>
+                <!-- USER INFO - END -->
+                <br />
+                <br />                
+                <ul class='wraplist'>
+
+                    <li class="menusection"></li>
+
+                    @*<li class="@(ViewBag.Section == "dashboard" ? "active-sub" : String.Empty)">
+                        <a href="@Url.Action("Index", "Home")">
+                            <i class="fa fa-dashboard"></i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>*@
+
+                    <li class="@(ViewBag.Section == "gatewayc" ? "active-sub" : String.Empty)">
+                        <a href="@Url.Action("Index", "GatewayC")">
+                            <i class="fa fa-table"></i>
+                            <span class="title">Dominios OnCloud</span>
+                        </a>
+                    </li>
+
+                    <li class="@(ViewBag.Section == "gatewayp" ? "active-sub" : String.Empty)">
+                        <a href="@Url.Action("Index", "GatewayP")">
+                            <i class="fa fa-table"></i>
+                            <span class="title">Dominios OnPremise</span>
+                        </a>
+                    </li>
+
+                    <li class="menusection"></li>
+
+                    <li>
+                        <a href="@Url.Action("Logout", "Login", new { area = String.Empty })">
+                            <i class="fa fa-power-off"></i>
+                            <span class="title">Salir</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->
+        <!-- START CONTENT -->
+        <section id="main-content" class="">
+            <section class="wrapper main-wrapper row" style=''>
+
+                @MessageHelpers.ShowMessages(TempData)
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+
+                        <div class="pull-left">
+                            <h2 class="title"><i class="fa fa-@ViewBag.PageIcon"></i> @ViewBag.Title</h2>
+                        </div>
+
+                        @if (IsSectionDefined("Breadcrumbs"))
+                        {
+                            <div class="pull-right hidden-xs">
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <a href="@Url.Action("Index", "Home")"><i class="fa fa-home"></i>Inicio</a>
+                                    </li>
+                                    @RenderSection("Breadcrumbs", false)
+                                    <li class="active">
+                                        <strong>@ViewBag.Title</strong>
+                                    </li>
+                                </ol>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- MAIN CONTENT AREA STARTS -->
+
+                @RenderBody()
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </section>
+        </section>
+        <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+    <!-- General section box modal start -->
+    <div class="row-fluid" id="default-modal-container">
+        <div class="hide" id="default-modal-loading">
+            <div class="modal-body">
+                <h3>
+                    <i class="fa fa-cog fa-spin fa-1x fa-fw"></i> Cargando...
+                </h3>
+            </div>
+        </div>
+        <div class="hide" id="default-modal-loading-error">
+            <div class="modal-body">
+                <h3>
+                    <i class="fa fa-exclamation-triangle"></i> Ha ocurrido un error
+                </h3>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
+    @Html.GoogleTagManager()
+
+    <script src="@Url.Content("~/Content/js/jquery-1.11.2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/jquery.easing.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Content/plugins/jquery-ui/smoothness/jquery-ui.min.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Content/plugins/bootstrap/js/bootstrap.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/pace/pace.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/perfect-scrollbar/perfect-scrollbar.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/viewport/viewportchecker.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Content/plugins/bootstrap3-wysihtml5/js/bootstrap3-wysihtml5.all.min.js")"></script>
+
+    <script src="@Url.Content("~/Content/plugins/sparkline-chart/jquery.sparkline.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/chart-sparkline.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/easypiechart/jquery.easypiechart.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/morris-chart/js/raphael-min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/morris-chart/js/morris.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/datepicker/js/datepicker.js")"></script>
+    <script src="@Url.Content("~/Content/plugins/dropzone/dropzone.min.js")"></script>
+    <script src="@Url.Content("~/Content/plugins/icheck/icheck.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/select2/select2.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/plugins/switchery/dist/switchery.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Content/plugins/sweetalert/sweetalert.min.js")"></script>
+    <script>
+        function objCultura() {
+            this.SeparadorDecimal = '@ConstantHelpers.Cultura.SeparadorDecimal';
+            this.SeparadorMiles = '@ConstantHelpers.Cultura.SeparadorMiles';
+            this.CantidadDecimales = @ConstantHelpers.Cultura.CantidadDecimales;
+        }
+    </script>
+    @RazorHelpers.Script("jquery.unobtrusive-ajax.min.js", Url)
+
+    <script src="@Url.Content("~/Content/js/scripts.js")" type="text/javascript"></script>
+
+    @RazorHelpers.Script("Pages/Shared/shopping-cart.min.js", Url)
+
+    @RazorHelpers.Script("Pages/Shared/global.min.js", Url)
+
+    @RenderSection("Scripts", false)
+
+</body>
+
+</html>

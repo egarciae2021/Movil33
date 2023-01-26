@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "ExportarExcel";
+}
+
+<div id="dvExportarExcel" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+	<div class="modal-dialog modal-md">
+        <div class="modal-content">
+		
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Exportar a Excel
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+				<div class="conteiner">
+					<div class="row">
+						<div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <label>Seleccione la versión de Excel a exportar</label>
+                        </div>					
+					</div>
+					<div class="row">
+						<div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">                            
+                            <input type="radio" id="optExportarExcel2003" name="ExportarExcel" checked="checked" />
+							<label> Excel 2003 o anterior</label>
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">                            
+                            <input type="radio" id="optExportarExcel2007" name="ExportarExcel" checked="checked" />
+							<label> Excel 2007 o posterior</label>
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<div class="modal-footer">
+                <button type="button" id="btnCancelarExp" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button type="button" id="btnAceptarExp" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Aceptar</button>                                
+            </div>
+		</div>
+	</div>
+</div>

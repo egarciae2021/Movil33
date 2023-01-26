@@ -1,0 +1,162 @@
+2022/07/08 08:47:16.083,[21],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 08:47:16.090,[21],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 08:47:16.090,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 08:47:24.247,[38],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 08:47:24.247,[38],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 08:47:24.247,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 08:47:27.352,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 08:47:27.352,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 08:47:27.352,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 10:55:31.471,[56],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 10:55:31.481,[56],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 10:55:31.481,[56],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 10:55:39.612,[59],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 10:55:39.612,[59],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 10:55:39.612,[59],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 10:55:42.972,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 10:55:42.972,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 10:55:42.972,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 11:02:25.456,[58],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/07/08 11:02:25.456,[58],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/07/08 11:02:25.456,[58],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/07/08 11:02:29.226,[57],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 11:02:29.226,[57],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 11:02:29.226,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2022/07/08 11:03:19.341,[57],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 11:03:19.341,[57],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 11:03:19.341,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2022/07/08 11:03:43.229,[57],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/08 11:03:43.237,[57],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/08 11:03:43.237,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/08 11:03:47.564,[49],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/08 11:03:47.564,[49],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/08 11:03:47.564,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/08 11:03:51.149,[58],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 11:03:51.149,[58],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 11:03:51.149,[58],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 11:03:59.222,[49],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 11:03:59.222,[49],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 11:03:59.222,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 11:04:02.628,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 11:04:02.628,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 11:04:02.628,[57],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 11:04:17.758,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=1
+2022/07/08 11:04:17.758,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=1
+2022/07/08 11:04:17.758,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos.aspx?vcTab=&inCod=108&inTip=3&inTipOri=1
+2022/07/08 11:04:23.494,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=1
+2022/07/08 11:04:23.494,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=1
+2022/07/08 11:04:23.494,[58],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/Mnt_Regi.aspx?vcTab=&inCod=107&inTip=3&inTipOri=1
+2022/07/08 11:04:34.439,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 11:04:34.439,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 11:04:34.439,[49],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 12:46:04.549,[10],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 12:46:04.574,[10],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 12:46:04.574,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 12:46:09.407,[17],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:46:09.407,[17],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:46:09.407,[17],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:46:14.335,[8],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/07/08 12:46:14.335,[8],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/07/08 12:46:14.335,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/07/08 12:46:16.877,[10],INFO  ,Ingresa ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 12:46:16.877,[10],INFO  ,Salióooooo ActualizarCultura. Página: /Configuracion.aspx
+2022/07/08 12:46:16.877,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Configuracion.aspx
+2022/07/08 12:47:36.451,[7],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/08 12:47:36.469,[7],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/08 12:47:36.469,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/08 12:47:39.231,[8],INFO  ,Ingresa ActualizarCultura. Página: /login.aspx
+2022/07/08 12:47:39.231,[8],INFO  ,Salióooooo ActualizarCultura. Página: /login.aspx
+2022/07/08 12:47:39.231,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /login.aspx
+2022/07/08 12:47:42.924,[15],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 12:47:42.924,[15],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 12:47:42.924,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 12:47:50.973,[7],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:47:50.973,[7],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:47:50.973,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:47:54.659,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:47:54.659,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:47:54.659,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:51:40.654,[11],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 12:51:40.677,[11],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 12:51:40.677,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 12:51:48.889,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:51:48.889,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:51:48.889,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 12:51:52.268,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:51:52.268,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:51:52.268,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 12:54:58.946,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 12:54:58.946,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 12:54:58.946,[21],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/PanelControl/ConfiguracionRegional.aspx?vcTab=&inCod=130&inTip=3&inTipOri=1
+2022/07/08 16:04:13.094,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 16:04:13.139,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 16:04:13.140,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 16:04:22.287,[8],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:04:22.287,[8],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:04:22.287,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:04:25.898,[9],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:04:25.899,[9],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:04:25.899,[9],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:06:25.010,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 16:06:25.059,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 16:06:25.060,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 16:06:33.756,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:06:33.756,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:06:33.756,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:06:37.638,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:06:37.638,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:06:37.638,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:31:37.221,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 16:31:37.264,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 16:31:37.264,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 16:31:45.541,[11],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:31:45.541,[11],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:31:45.541,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 16:31:49.021,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:31:49.021,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 16:31:49.021,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:03:33.895,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 17:03:33.936,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 17:03:33.936,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 17:03:42.809,[6],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:03:42.809,[6],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:03:42.809,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:03:46.440,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:03:46.440,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:03:46.440,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:11:32.302,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 17:11:32.336,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 17:11:32.336,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 17:11:41.540,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:11:41.540,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:11:41.540,[12],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:11:45.146,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:11:45.146,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:11:45.146,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:15:48.410,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 17:15:48.440,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 17:15:48.440,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 17:15:56.871,[13],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:15:56.871,[13],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:15:56.871,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:16:00.257,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:16:00.257,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:16:00.257,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:22:38.124,[26],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 17:22:38.124,[26],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 17:22:38.124,[26],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 17:22:45.356,[37],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:22:45.356,[37],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:22:45.356,[37],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:22:48.897,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:22:48.897,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:22:48.898,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:39:36.540,[38],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/07/08 17:39:36.540,[38],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/07/08 17:39:36.540,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/07/08 17:39:46.881,[15],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:39:46.881,[15],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:39:46.882,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/07/08 17:39:50.560,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:39:50.560,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/07/08 17:39:50.560,[15],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx

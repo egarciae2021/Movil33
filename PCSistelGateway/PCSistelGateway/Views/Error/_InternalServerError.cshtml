@@ -1,0 +1,20 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="col-xs-12" style="background:#fff">
+    <h1 class="page_error_code text-primary">505</h1>
+    <h1 class="page_error_info">Oops! Detectamos un error.</h1>
+    <p class="text-muted text-center"><small>@ViewData["ErrorMessage"]</small></p>
+    <div class="row">
+        <div class="col-md-offset-3 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6">
+            <form action="javascript:;" method="post" class="page_error_search">
+                <div class="text-center page_error_btn">
+                    <a class="btn btn-primary btn-lg" href='@Url.Action("Index","Home", new { Area = String.Empty })'><i class='fa fa-home'></i> &nbsp; Ir al inicio!</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

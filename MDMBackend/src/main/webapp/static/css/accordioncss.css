@@ -1,0 +1,126 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav li {
+  border-bottom: 1px solid #eee;
+  
+}
+
+.nav li a {
+  font-size: 14px;
+}
+
+#accordionMenu {
+  max-width: 200px;
+}
+
+/*  .panel-body {
+  padding: 0;
+}  */
+
+.panel-group .panel+.panel {
+  margin-top: 0;
+  border-top: 0;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: black;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+ .panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: white;
+  color: black;
+} 
+.panel-default>.panel-heading a[aria-expanded="false"] {
+  background-color: white;
+}
+
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\e113";
+  
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\e114";
+}
+
+.panel-body .nav li a{
+	color: black;
+	
+}
+.panel-body ul{
+	margin-left: -10px;
+    margin-right: -10px;
+}
+   
+    
+.panel-body .nav li a:HOVER{
+	background-color: #007b5e;
+	color: white;
+	font-size: 16px;
+}
+
+.panel-title a:hover{
+  background-color: #007b5e!important;
+  color: white!important;
+}
+
+
+.accordian-sub{
+    background-color: transparent;
+    color: inherit;
+}
+.accordian-sub a{
+	margin-left: 10px;
+}
+.accordian-sub a i:hover{
+	background-color: white;
+	color: #007b5e;
+}
+
+.modal-dialog-centered-important{
+	display: flex!important;
+	align-items: center!important;
+  /*  min-height: calc(100% - (.5rem * 2))!important;  */
+}
+.modal-content-h-w {
+    min-height: 500px;
+    min-width:500px; 
+}

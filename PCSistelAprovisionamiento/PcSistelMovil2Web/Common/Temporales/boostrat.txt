@@ -1,0 +1,164 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Con_Directorio.aspx.cs" Inherits="Web.Directorio.Con_Directorio" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Scripts/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <link href="../Directorio/Styles/data_tooltip.css" rel="stylesheet" type="text/css" />
+    <link href="../Directorio/Styles/tooltip.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/DirectorioT.css" rel="stylesheet" type="text/css" />    
+    <link href="../Styles/Principal.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/jqGrid/ui.jqgrid.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Common/Scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../Common/Scripts/jqueryui/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="../Common/Scripts/jqueryui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="../Common/Scripts/jqueryui/jquery.ui.dialog.js"></script>
+    <script type="text/javascript" src="../Common/Scripts/jqueryui/jquery.ui.button.js"></script>
+    <script src="../Common/Scripts/JqueryUI/jquery.ui.position.js" type="text/javascript"></script>
+    <script src="../Common/Scripts/JqueryUI/jquery.ui.mouse.js" type="text/javascript"></script>
+    <script src="../Common/Scripts/jqueryui/jquery.ui.autocomplete.js" type="text/javascript"></script>  
+    <script src="../Common/Scripts/Utilitario.js" type="text/javascript"></script>
+    <script src="Con_Directorio.js" type="text/javascript"></script>
+    <link href="../Common/Scripts/Bootstrap/css/bootstrap3.css" rel="stylesheet"  type="text/css" />
+    <style type="text/css">
+        ::-ms-clear  {display: none;}
+    </style>
+
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+     <asp:HiddenField ID="hdfOpcion" runat="server" />
+    <asp:HiddenField ID="hdfnumero" runat="server" />
+    <asp:HiddenField ID="hdfNombre" runat="server" />
+    <asp:HiddenField ID="hdfNumerodePagina" runat="server" />
+    <asp:HiddenField ID="hdfPagezise" runat="server" />
+    <asp:HiddenField ID="hdfTotalPaginas" runat="server" />
+    <asp:HiddenField ID="hdfResultado" runat="server" /> 
+    <asp:HiddenField ID="hdfUrl" runat="server" />  
+
+
+
+
+    <div class="dvPanel" style="height:650px;">
+          <div class="container">
+        <div class="row">
+            <div id="dvConteinerTabla" class="col-xs-24 col-sm-24 col-md-12">
+       <%-- Div agrupar Busqueda y resultado--%>
+       
+       <%-- Formulario de Busqueda--%>
+            <div class="dvBusqueda" style="border:0px !importan; width: 480px;">   
+              <fieldset class="dvPanel" style="width:100%; border: 1px solid #8BA0BC;height: 100%; margin-left:-10px;">
+                      <legend ><label id="labelBusqueda"></label>Busqueda de Directorio</legend>
+                                          
+                            <table width="100%">
+                            
+                            <tr>
+                            <td style="width:80px">
+                            <asp:Label ID="lblopcion" runat="server" Text="Opciones"></asp:Label>
+                            </td>
+                            <td colspan="4">
+                            <asp:RadioButtonList id="rblBusqueda" runat="server" RepeatDirection="Horizontal">
+                                        <asp:ListItem Text="Organización" Value="1" Selected="True"></asp:ListItem>
+                                        <asp:ListItem Text="Números Registrados" Value="2"></asp:ListItem>
+                                        <asp:ListItem Text="Empresas Registradas" Value="3"></asp:ListItem>
+                                    </asp:RadioButtonList>
+                             </td>
+                            </tr>
+                                <tr>
+                                    <td style="width:80px">                                        
+                                        Anexo/Número 
+                                    </td>
+                                    <td colspan="4">
+                                        <asp:TextBox ID="txtCodigo" runat="server" Width="70px" MaxLength="30"></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width:80px">
+                                        <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>                                        
+                                    </td>
+                                    <td colspan="2" style="width:180px;">
+                                        <asp:TextBox ID="txtNombre" runat="server" Width="180px" MaxLength="35" 
+                                            onChange="validarEspaciosEnBlancoAlInicio(this)"></asp:TextBox>                                      
+                                     </td>
+                                     <td style="width:80px">
+                                        <div id="btnBuscar" class="btnNormal dirbuscar" style="font-size:10px;">
+                                            <asp:Image ID="imgGuardar" Width="12px" runat="server" ImageUrl="~/Common/Images/Mantenimiento/Buscar.png"/>
+                                             <a>Buscar</a>
+                                         </div>                                                                                 
+                                     </td>
+                                     <td style="width:50px">
+                                     <div id="botonesayuda">
+                                         <div id="btnAyuda" style="cursor:pointer;float:left">
+                                            <img alt="" src="../images/help.png" height="16px" width="16px" style="margin-left:0px;"/> 
+                                        </div> 
+                                         <div id="btnConfig" class="btnNormal dirbuscar" style="font-size:10px; width:25px;margin-left:5px; text-align:center; display:block;float:left">
+                                            <asp:Image ID="imgConfig" Width="10px" runat="server" ImageUrl="~/Common/Images/Mantenimiento/Procesar.png"/>                          
+                                        </div>
+                                      </div>
+                                     </td>
+                                     
+                                </tr>                         
+                            </table>                   
+                       
+                         </fieldset>
+          
+        <%-- fin de div busqueda--%>
+        <br />
+         <%-- Resultado de la busqueda--%>
+          <div id="dvResultado" class="dvPanel" style="margin-top:10px; margin-top:130px;"; >                
+            <fieldset class="dvPanel" style="width:100%; border: 1px solid #8BA0BC;height: 100%; margin-left:-20px;">
+                <legend ><label id="lblTituloResultado"></label></legend>
+                    <div id="dvurl" style="display:none"> 
+                        <a href="#" id="lnkBuscarEnLaWeb" style="color:#013ADF">
+                                Buscar en :  <asp:Label ID="lblurl" runat="server" Text=""></asp:Label> 
+                        </a><br />&nbsp;
+                    </div>
+                   
+                <div id="dvResultadoCentrado" style="margin-left:15px;">
+                      <asp:DataList ID="dtlDatos" runat="server"  RepeatColumns="1">
+                         <ItemTemplate>
+            
+                         </ItemTemplate>
+                      </asp:DataList> 
+                       <div id="paginado" style="text-align:center">
+                            <button type="button" class="btnpage inicio"><<</button>
+                            <button type="button" class="btnpage anterior"><</button>
+                            Pagina
+                            <label id="lblpagina"></label>
+                            de
+                            <label id="lblpagtotal"></label>
+                                       
+                            <button type="button" class="btnpage siguiente">></button>                                   
+                            <button type="button" class="btnpage final">>></button>
+                            Total de resultados :
+                            <label id="lblresult"></label>
+                        </div>
+                      </div>
+                  </fieldset> 
+          </div>
+         <%-- fin de Resultado de la busqueda--%>  
+        </div>
+         <%-- fin Div agrupar Busqueda y resultado--%>
+
+                     </div>
+   
+        <%-- Detalle de resultado --%>
+        <div class="col-xs-24 col-sm-24 col-md-12" style=" border: 1px solid #8BA0BC; border-radius: 8px 8px 8px 8px;">         
+                      <div id="dvDetalle" style=" width:100%; border:0;  height: 500px; background-color:#EAF1FA;  ">
+                         <iframe id="ifDetalle" src="" height="500px"; style="width: 100%;vertical-align: top;border:0; padding:0px; margin:0px;" scrolling="no" frameborder="0"></iframe>
+                        </div>
+         </div>
+              </div>
+      </div>
+        <%-- fin detalle resultado --%>
+
+        
+     </div>
+    </form>
+</body>
+</html>

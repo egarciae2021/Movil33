@@ -1,0 +1,23 @@
+﻿body {
+}
+
+#pnlCuerpo
+{
+
+    height:1323px;
+
+}
+
+#pnlTipo
+{
+    width: 500px;
+    height: 300px;
+    float: left;    
+}
+
+#pnlTipificacion
+{
+    width: 522px;
+    height: 300px;
+    float: left;   
+}

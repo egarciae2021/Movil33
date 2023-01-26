@@ -1,0 +1,332 @@
+﻿@using System.Web.Script.Serialization;
+@model VisualSoft.PCSistelMovil.Dominio.BE.ENT_MVVM_Dominio
+@{
+    ViewBag.Title = "Index";
+    //Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    Layout = "~/Views/Shared/_Layout33.cshtml";
+}
+
+@section RenderHeader {
+    @Styles.Render("~/Content/Login/Index")
+    @*@Scripts.Render("~/bundles/Login/Index")*@
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+    @Scripts.Render("~/bundles/Capcha")
+}
+
+@*<input id="hdfMensaje" type="hidden" />*@
+
+@if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count > 0)
+{
+    <div id="alertaSumary" class="modal fade bs-example-modal-sm" style="float: left;">
+    </div>
+    <input id="hdfMensaje" type="hidden" value='@Html.Raw(Html.ValidationSummary(true).ToString().Replace(System.Environment.NewLine, ""))' />
+
+    @*<script type="text/javascript">
+        $(function () {
+            debugger;
+            //alert("Login\n" + BrowserDetect.browser + ", " + BrowserDetect.version);
+            @*if (BrowserDetect.browser == "Explorer" && BrowserDetect.version < 9) {
+                alert(('@ViewData.ModelState[""].Errors[0].ErrorMessage.ToString()').replace(/&#225;/g, "á").replace(/&#233;/g, "é").replace(/&#237;/g, "í").replace(/&#243;/g, "ó").replace(/&#250;/g, "ú").replace(/&#241;/g, "ñ"));
+            } else {
+                $("#alertaSumary").modal('show');
+            }*@
+    @*var Mensaje = '@Html.Raw(Html.ValidationSummary(true).ToString().Replace(System.Environment.NewLine, ""))';*@
+    //$("#hdfMensaje").val("@Html.Raw(Html.ValidationSummary(true).ToString().Replace(System.Environment.NewLine, ""))");
+    //debugger;
+
+    @*miAlerta("Mensaje", Mensaje, "", "#FFCC66");
+            });
+        </script>*@
+}
+else
+{
+    if (Model != null && Model.MostrarAcuerdo)
+    {
+
+        <input id="hdfMostrarAcuerdo" type="hidden" value="1" />
+        <input id="hdftNombreArchivoAcuerdo" type="hidden" value="@Model.NombreArchivoAcuerdo" />
+        <input id="hdftNombreHtmlAcuerdo" type="hidden" value="@Model.NombreHtmlAcuerdo" />
+        <input id="hdftDominio" type="hidden" value="@Model.Dominio" />
+        <input id="hdftContrasena" type="hidden" value="@Model.Contrasena" />
+
+        @*<script type="text/javascript">
+            debugger;
+
+            MostrarAcuerdo = true;
+            var tNombreArchivoAcuerdo = "@Model.NombreArchivoAcuerdo";
+            var tNombreHtmlAcuerdo = "@Model.NombreHtmlAcuerdo";
+            var tDominio = "@Model.Dominio";
+            var tContrasena = "@Model.Contrasena";
+            debugger;
+            if (MostrarAcuerdo) {
+                $("#txtContrasena").val(tContrasena);
+                $($("#dvDialogoContrato iframe")[0]).removeAttr("src");
+                $("#aDescargaContrato").removeAttr("href");
+                $("#aDescargaContrato").attr("href", window.location.toString().split('?')[0] + "/Temporal/" + tNombreArchivoAcuerdo);
+                $($("#dvDialogoContrato iframe")[0]).attr("src", window.location.toString().split('?')[0] + "/Temporal/" + tNombreHtmlAcuerdo);
+                $("#hdDominio").val(tDominio);
+                $("#dvDialogoContrato").appendTo($("body"));
+
+                $("#dvDialogoContrato").modal('show');
+            }
+                </script>*@
+
+    }
+
+}
+
+<input id="hdfCapcha" type="hidden" value="0" />
+@*<input id="hKeySessionLocal" type="hidden" value="" />*@
+
+
+@using (Html.BeginForm("Index", "Login", @Model, FormMethod.Post, new { id = "frmIngresar" }))
+{
+
+
+    <!-- LOGIN FORM -->
+    <!--===================================================-->
+    <div id="dvContenido" class="cls-content">
+        @Html.AntiForgeryToken()
+        <div class="cls-content-sm panel">
+            <div class="">
+                <img id="imgLogoPortal" src="@Url.Content("~/Content/images/Logo_Portal.png")" />
+
+                @if (HttpContext.Current.Request.IsLocal || HttpContext.Current.Request.Url.OriginalString.ToLower().Contains("localhost"))
+                {
+                    <div id="btnConfigBD">
+                        <a href="@Url.Action("ConfigBD", "Login")">
+                            <img id="imgConfigBD" src="~/Common/Images/OrangeGear.png" />
+                        </a>
+                    </div>
+                }
+
+                <hr />
+            </div>
+            <div class="panel-body">
+                <div class="mar-ver pad-btm">
+                    <h1 class="h3">@ViewData["NombreProducto"]</h1>
+                    <p>Inicie sesión con su cuenta</p>
+                </div>
+                <form action="index.html">
+                    <div class="form-group">
+                        @*<input type="text" class="form-control" placeholder="Usuario" autofocus="">*@
+                        @{
+                            string valor = System.Configuration.ConfigurationManager.AppSettings["DominioPorDefecto"];
+                            string idPortal = System.Configuration.ConfigurationManager.AppSettings["IdPortal"];
+                        }
+                        @Html.Hidden("DominioDefecto", valor)
+                        @Html.TextBoxFor(m => m.CadenaDominio, new { @class = "form-control", id = "txtDominio", maxlength = "50", placeholder = "Usuario" })
+                        @Html.Hidden("IdPortal", idPortal)
+
+                    </div>
+
+                    <div class="form-group">
+                        <div style="display: inline-grid; width: 100%;">
+                            @Html.PasswordFor(m => m.Contrasena, new { @class = "form-control", id = "txtContrasena", maxlength = "50", placeholder = "Contraseña" })
+                            <input type="checkbox" id="toggle-password" />
+                            <label for="toggle-password">Show Password</label>
+                        </div>
+                    </div>
+
+                    <div id="dv-Ira" class="form-group">
+                        <div id="dv-Ira-1">
+                            Ir a:
+                        </div>
+                        <div id="dv-Ira-2">
+                            @Html.DropDownListFor(m => m.ProductoDestino, new List<SelectListItem>
+                                            {
+                                                new SelectListItem { Text = "Administración", Value = "0",  Selected = (ViewBag.ProductoDestino == "0")?true:false },
+                                                new SelectListItem { Text = "Pedidos",  Value = "1", Selected = (ViewBag.ProductoDestino == "1")?true:false },
+                                            },
+                     new { @class = "form-control", id = "ddlDestino" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.TextBoxFor(m => m.KeyLocalSessionUser, new { @class = "form-control", id = "hKeySessionLocal" })
+                    </div>
+
+                    <div id="dvCapcha" class="form-group">
+                        <div>
+                            <script src="~/Content/js/sjcap.js"></script>
+                        </div>
+                    </div>
+
+                    <div class="checkbox pad-btm text-left">
+                        <input id="chkRecordar" class="magic-checkbox" type="checkbox">
+                        <label id="lblRecordar" for="chkRecordar">Recordar</label>
+                    </div>
+
+                    <button id="btnIngresar" class="btn btn-primary btn-lg btn-block" type="submit">Ingresar</button>
+
+                    <div class="mostrar_errorS">
+                        @if (ViewData["error"] != null)
+                        {
+                            <br />
+                            <div class="alert alert-danger  " role="alert">
+                                @ViewData["error"]
+                            </div>
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <div class="form-group ManualSistema btnNormal">
+                            <label id="LblGuiaUsuario" onclick="location.href='@Url.Action("DescargarGuiaPdf","Login")'">Gu&iacute;a de ingreso</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="pad-all">
+                <a href="#" id="LblOlvidoContrasena" class="btn-link mar-rgt">¿Olvidó su contraseña?</a>
+            </div>
+
+            <div id="dv-ProductoRelease" class="pad-all">
+                <span id="lblProductoRelease" class="mar-rgt"> @ViewData["ProductoRelease"]</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="dvBrowserDetect" class="cls-content">
+        <div class="cls-content-sm panel">
+            <div class="panel-body">
+                <div class="mar-ver pad-btm">
+                    <h1 class="h3">@ViewData["NombreProducto"]</h1>
+                    <p>Para ingresar a la plataforma debe actualizar su navegador</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div id="dvDialogoContrato" class="modal fade">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        T&eacute;rminos y Condiciones
+                    </div>
+                    <div class="modal-body">
+                        <iframe id="ifContrato" frameborder="0" width="100%" height="100%"></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <ul id="ulFooter">
+                            <li class="liFooter">@Html.CheckBoxFor(m => m.AceptoAcuerdo, new { id = "chkAceptoContrato" })</li>
+                            <li class="liFooter">He leído los t&eacute;rminos del <a id="aDescargaContrato" href="" download="Terminos de contrato PcSitelMovil">contrato</a></li>
+                        </ul>
+
+                        <button id="btnCerrarContrato" type="button" class="btn btn-default" data-dismiss="modal">No acepto</button>
+                        <button id="btnAceptarContrato" type="button" class="btn btn-primary">Si acepto</button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="hdDominio" value="" />
+        </div>
+
+        <div id="dvRecordarContrasena">
+            <div class="content-dvRecordarContrasena">
+                <div class="content-dvRecordarTitulo">
+                    <h2>Cambie su contraseña</h2>
+                </div>
+                <div class="title-dvRecordarTitulo">
+                    Ingrese su usuario
+                </div>
+                <div id="dvCampo" class="dvPanel">
+                    <table>
+                        <tr>
+                            <td class="campo-td-01">
+                                <div>
+                                    @Html.TextBoxFor(m => m.Correo, new { @class = "form-control", id = "txtCorreo", maxlength = "50" })
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="campo-td-02">
+                                <div id="dvFormatInvalid">
+                                    El formato del usuario no es válido.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="dvBotonesCambiarContrasena">
+                    <table>
+                        <tr>
+                            <td>
+                                <button id="btnCerrar" type="button" class="btn btn-default btn-lg">
+                                    Cerrar
+                                </button>
+                                &nbsp;
+                                <button id="btnEnviar" type="button" class="btn btn-primary btn-lg">
+                                    Enviar
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="dvConfirmacionEnvio">
+            <div class="content-dvRecordarContrasena">
+                <div class="content-dvRecordarTitulo">
+                    <h2>Revisa tu correo</h2>
+                </div>
+                <div id="dvConfirmacionEnvioBody">
+                    Hemos enviado un correo electrónico a
+                    <label id="lblCorreoEnvio"></label>
+                    . Haz clic en el enlace dentro del correo electrónico para restablecer tu contraseña.
+                </div>
+                <div id="dvConfirmacionEnvioFooter">
+                    <table>
+                        <tr>
+                            <td>
+                                <button id="btnVolverLogin" type="button" class="btn btn-primary btn-lg">
+                                    <span class="glyphicon glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                    Listo
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="popup-overlay"></div>
+
+
+    </div>
+
+}
+
+
+@section RenderFooter{
+    @*<script type="text/javascript">
+            var test;
+
+            $(function () {
+                debugger;
+
+            });
+        </script>*@
+    <script src="~/Common/Scripts/Views/Login.js"></script>
+}
+
+@*<script type="text/javascript">
+        var MiModeloSolicitud;
+
+        $(function () {
+            MiModelo = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+            alert(MiModelo.Dominio);
+        });
+    </script>*@

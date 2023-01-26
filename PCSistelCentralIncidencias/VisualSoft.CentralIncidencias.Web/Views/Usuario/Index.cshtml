@@ -1,0 +1,3176 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Usuario
+@using System.Web.ui;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+@section RenderHeader {
+    <script src="~/Common/Scripts/ajaxupload.js"></script>
+}
+
+<style type="text/css">
+    #dvFotoUser
+    {
+        width: 70px;
+        height: 80px;
+    }
+
+        #dvFotoUser img
+        {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+    #dvFotoSupervisor , #dvFotoSupervisor_sol
+        {
+        width: 70px;
+        height: 80px;
+    }
+
+        #dvFotoSupervisor img, #dvFotoSupervisor_sol img
+        {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+    #ulTap li h4:hover
+    {
+        color: #485CA4 !important;
+        cursor: pointer;
+    }
+
+    .ulTapSelect
+    {
+        border: 1px solid #E9C589;
+        border-bottom: 2px solid white;
+        border-radius: 3px;
+        color: #485CA4 !important;
+    }
+
+    .h4select
+    {
+        color: #485CA4 !important;
+    }
+
+    .miHoverAjaxUpdate
+    {
+        color: #337ab7;
+        cursor: pointer !important;
+    }
+
+    #UploadedFile li:hover
+    {
+        cursor:pointer;
+    }
+</style>
+
+<div id="miDialogoPerfil" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Perfiles
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtBuscarPerfil" type="text" class="form-control" placeholder="Buscar por nombre perfil">
+                                    <span class="input-group-btn">
+                                        <button id="btnBuscarPerfil" class="btn btn-success" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulPerfilesHabilitadas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-2" style="border: 0px dotted gray; height: 350px;">
+                            <button id="btnListAllLeft_per" type="button" class="btn miBtnList" style="width: 100%; margin: 100px 3px 3px 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                            <button id="btnListLeft_per" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                            <button id="btnListRight_per" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                            <button id="btnListAllRight_per" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                        </div>
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulPerfilesElegidas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddPerfil" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoBolsa" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Bolsas
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtBuscarBolsa" type="text" class="form-control" placeholder="Buscar por nombre Bolsa">
+                                    <span class="input-group-btn">
+                                        <button id="btnBuscarBolsa" class="btn btn-success" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulBolsasHabilitadas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-2" style="border: 0px dotted gray; height: 350px;">
+                            <button id="btnListAllLeft_bol" type="button" class="btn miBtnList" style="width: 100%; margin: 100px 3px 3px 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                            <button id="btnListLeft_bol" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                            <button id="btnListRight_bol" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                            <button id="btnListAllRight_bol" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                        </div>
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulBolsasElegidas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddBolsa" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoTipo" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Tipos
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtBuscarTipo" type="text" class="form-control" placeholder="Buscar por nombre Tipo">
+                                    <span class="input-group-btn">
+                                        <button id="btnBuscarTipo" class="btn btn-success" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulTiposHabilitadas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-2" style="border: 0px dotted gray; height: 350px;">
+                            <button id="btnListAllLeft_tip" type="button" class="btn miBtnList" style="width: 100%; margin: 100px 3px 3px 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                            <button id="btnListLeft_tip" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                            <button id="btnListRight_tip" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                            <button id="btnListAllRight_tip" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                        </div>
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulTiposElegidas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddTipo" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoDominio" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Dominios
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtBuscarDominio" type="text" class="form-control" placeholder="Buscar por nombre Dominio">
+                                    <span class="input-group-btn">
+                                        <button id="btnBuscarDominio" class="btn btn-success" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulDominiosHabilitadas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-2" style="border: 0px dotted gray; height: 350px;">
+                            <button id="btnListAllLeft_dom" type="button" class="btn miBtnList" style="width: 100%; margin: 100px 3px 3px 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span></button>
+                            <button id="btnListLeft_dom" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-backward" aria-hidden="true"></span></button>
+                            <button id="btnListRight_dom" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-forward" aria-hidden="true"></span></button>
+                            <button id="btnListAllRight_dom" type="button" class="btn miBtnList" style="width: 100%; margin: 3px; text-align: center; padding: 3px 5px !important;"><span class="glyphicon glyphicon-fast-forward" aria-hidden="true"></span></button>
+                        </div>
+                        <div class="col-xs-11" style="border: 0px dotted gray; height: 350px;">
+
+                            <ul id="ulDominiosElegidas" class="ListaMultiSelect">
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddDominio" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoSupervisor" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Supervisores
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-11">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtBuscarSupervisor" type="text" class="form-control" placeholder="Buscar por nombre Supervisor">
+                                    <span class="input-group-btn">
+                                        <button id="btnBuscarSupervisor" class="btn btn-success" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="margin: 2px !important;">
+                        <div class="col-xs-24">
+                            <div id="dvGrillaSupervisor" style="width: 100%;">
+                                <table id="grillaSupervisor" class="miGrilla">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnAddSupervisor" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav">
+                <li style="display: none;">
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">id Usuario</span>
+                            <input type="text" id="txtIdUsuario" style="margin-left: -105px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nombre Usuario</span>
+                            <input type="text" id="txtNombreUsuario" style="margin-left: -105px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Perfil</span>
+                            <select class="MiSelect" style="margin-left: -30px;" id="ddlPerfil">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Perfiles.Count; i++)
+                                {
+                                    <option value="@Model.Perfiles[i].IdPerfil">@Model.Perfiles[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado</span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaUsuario" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="grillaUsuario" class="miGrilla">
+            </table>
+            <div id="pagerGrillaUsuario">
+            </div>
+        </div>
+        <div id="dvDetalleGrillaUsuario" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="tbDetalleUsuario" class="table">
+                <thead>
+                    <tr>
+                        <td colspan="2">
+                            <button id="btnNuevoUsuario" type="button" class="btn btn-success FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Nuevo</button>
+                            <button id="btnEditarUsuario" type="button" class="btn btn-info FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>Editar</button>
+                            <button id="btnEliminarUsuario" type="button" class="btn btn-danger FlotarIzquierda btnMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Eliminar</button>
+
+                            <button id="btnCancelar" type="button" class="btn btn-danger FlotarIzquierda btnRegMant" style="margin-left: 10px; display: none;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancelar</button>
+                            <button id="btnRegistrarUsuario" type="button" class="btn btn-success FlotarIzquierda btnRegMant" style="margin-left: 10px; display: none;"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span>Guardar</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24" style="margin-top: 5px;">
+                        <div id="dvFotoUser" style="float:left; border-radius:5px; overflow:hidden;">
+                            <img id="imgFotoUser" src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" />
+                        </div>
+                        <div id="dvUploadButton" style="float:left; margin-left:10px; margin-top:50px;">
+                            <div id="UploadStatus"></div>
+                            <div id="UploadButton" align="center" class="imgBtn" style="text-align: left;">
+                                <table>
+                                    <tr>
+                                        <td style="text-align: left;">
+                                            <h4><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></h4>
+                                        </td>
+                                        <td style="width: 10px;"></td>
+                                        <td> <h4>Adjuntar Foto</h4></td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                            <div id="UploadedFile" style="display: none;"></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-sm-14 " style="border: 0px dotted gray;">
+                        <ul class="MiListaVertical">
+                            <li id="liActivar" style="display:none;">
+                                @*<ul class="MiListaHorizontal">
+                                    <li><h4 style="color: #485CA4;">Activar</h4></li>
+                                    <li><input id="chkActivarUsuario" type="checkbox"></li>
+                                </ul>*@
+                                <h4 style="color: #485CA4;"><span style="float:left;">Activar</span><input style="float:left; margin-left:10px;" id="chkActivarUsuario" type="checkbox"></h4>
+                            </li>
+                            <li style="clear:both;">
+
+                            </li>
+                            <li>
+                                <h4 style="color: #485CA4;">Nombres</h4>
+                            </li>
+                            <li>
+                                <input id="txtNombre" class="form-control" type="text" />
+                            </li>
+                            <li style="margin-top: 0px;">
+                                <h4 style="color: #485CA4;">Apellidos</h4>
+                            </li>
+                            <li>
+                                <input id="txtApellidos" class="form-control" type="text" />
+                            </li>
+                            <li style="margin-top: 0px;">
+                                <h4 style="color: #485CA4;">Correo</h4>
+                            </li>
+                            <li>
+                                <input id="txtCorreo" class="form-control" type="text" />
+                            </li>
+                            <li style="margin-top: 0px;">
+                                <h4 style="color: #485CA4;">Confirmar Correo</h4>
+                            </li>
+                            <li>
+                                <input id="txtConfirmarCorreo" class="form-control" type="text" />
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-24 col-sm-10" style="height: 240px; padding: 8px; top: 50px;">
+                        <div style="width: 98%; height: 98%; padding: 2%; border: 1px solid #E9C589; border-radius: 5px;">
+
+                            <h4 style="border-bottom: 1px solid #E9C589; color: #485CA4;">Credenciales</h4>
+
+                            <ul class="MiListaVertical">
+                                <li>Usuario
+                                </li>
+                                <li>
+                                    <input id="txtUsuario" class="form-control" type="text" />
+                                </li>
+                                <li>Contraseña
+                                </li>
+                                <li>
+                                    <input id="txtContrasena" class="form-control" type="password" />
+                                </li>
+                                <li>Confirmar Contraseña
+                                </li>
+                                <li>
+                                    <input id="txtConfirmarContrasena" class="form-control" type="password" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="dvDetalleUsuarioTaps" class="col-xs-24 " style="padding-bottom: 50px;">
+            <div style="width: 100%; height: 50px; border-bottom: 1px solid #E9C589; margin-bottom: 10px;">
+                <ul id="ulTap" style="margin-left: 1%;" class="MiListaHorizontal">
+                    <li class="ulTapSelect" style="padding: 8px; padding-bottom: 0px;">
+                        <h4 class="h4select" style="color: #CE8E2E;">Perfiles</h4>
+                    </li>
+                    <li id="tapIncidencia" style="padding: 8px; padding-bottom: 0px; margin-left: 10px;">
+                        <h4 style="color: #CE8E2E;">Incidencias</h4>
+                    </li>
+                    <li id="tapSolicitud" style="padding: 8px; padding-bottom: 0px; margin-left: 10px;">
+                        <h4 style="color: #CE8E2E;">Solicitudes</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="conteiner">
+                <div class="row miPanel" id="rowPerfil">
+                    <div class="col-xs-24 col-md-offset-6 col-md-12">
+                        <div style="float: right; margin-bottom: 10px;">
+                            <button id="btnNuevoPerfil" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                            <button id="btnEliminarPrefil" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                            <button id="btnRefrescarPerfil" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div id="dvGrillaPerfil" style="width: 100%;">
+                            <table id="grillaPerfil" class="miGrilla">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row miPanel" id="rowIncidencia">
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:220px; color:#485CA4; border:1px solid #E9C589; width:99%; border-top-left-radius:10px; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Supervisor</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevoSupervisor" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarSupervisor" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarSupervisor" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                            <div style="clear: both;"></div>
+                            <table class="table">
+                                <tr>
+                                    <td class="col-xs-1">
+                                        <div id="dvFotoSupervisor" style="float:left; border-radius:5px; overflow:hidden;">
+                                            <img id="imgFotoSupervisor" src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    Nombre : <input id="txtNombreSupervisor" readOnly class="form-control" type="text" />
+                                                    <input id="txtIdSupervisor" style="display:none;" readOnly  type="text" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Apellido : <input id="txtApellidosSupervisor" readOnly class="form-control" type="text" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:50px; color:#485CA4; border-left:1px solid #E9C589;border-top:1px solid #E9C589;border-right:1px solid #E9C589; width:99%; border-top-left-radius:10px; ; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Bolsas Asignadas</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevaBolsa" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarBolsa" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarBolsa" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        
+                        <div id="dvGrillaBolsa" style="width: 100%;">
+                            <table id="grillaBolsa" class="miGrilla">
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:50px; color:#485CA4; border-left:1px solid #E9C589;border-top:1px solid #E9C589;border-right:1px solid #E9C589; width:99%; border-top-left-radius:10px; ; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Dominios Asignados</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevoDominio" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarDominio" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarDominio" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        
+                        <div style="clear: both;"></div>
+                        <div id="dvGrillaDominio" style="width: 100%;">
+                            <table id="grillaDominio" class="miGrilla">
+                            </table>
+                        </div>
+                        <div id="infoDominioInc" class="infoDominio" style="width:99%; border:1px solid #E9C589; border-radius:10px; margin-top:10px; display:none;">
+                            <table class="table">
+                                <tr>
+                                    <td class="col-xs-1">
+                                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </td>
+                                    <td>
+                                        Al no asignar ningún dominio se atenderán todos los dominios activos, en cambio si se le asigna un dominio atenderá de forma exclusiva a ese dominio.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row miPanel" id="rowSolicitud">
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:220px; color:#485CA4; border:1px solid #E9C589; width:99%; border-top-left-radius:10px; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Supervisor</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevoSupervisor_sol" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarSupervisor_sol" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarSupervisor_sol" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                            <div style="clear: both;"></div>
+                            <table class="table">
+                                <tr>
+                                    <td class="col-xs-1">
+                                        <div id="dvFotoSupervisor_sol" style="float:left; border-radius:5px; overflow:hidden;">
+                                            <img id="imgFotoSupervisor_sol" src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <table class="table">
+                                            <tr>
+                                                <td>
+                                                    Nombre : <input id="txtNombreSupervisor_sol" readOnly class="form-control" type="text" />
+                                                    <input id="txtIdSupervisor_sol" style="display:none;" readOnly  type="text" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Apellido : <input id="txtApellidosSupervisor_sol" readOnly class="form-control" type="text" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:50px; color:#485CA4; border-left:1px solid #E9C589;border-top:1px solid #E9C589;border-right:1px solid #E9C589; width:99%; border-top-left-radius:10px; ; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Tipos Asignados</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevoTipo" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarTipo" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarTipo" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        
+                        <div id="dvGrillaTipo" style="width: 100%;">
+                            <table id="grillaTipo" class="miGrilla">
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-24 col-md-8" style="margin-bottom:30px;">
+                        <div style="height:50px; color:#485CA4; border-left:1px solid #E9C589;border-top:1px solid #E9C589;border-right:1px solid #E9C589; width:99%; border-top-left-radius:10px; ; border-top-right-radius:10px; padding:5px;">
+                            <h4 style="float:left;">Dominios Asignados</h4>
+                            <div style="float: right; margin-bottom: 10px;">
+                                <button id="btnNuevoDominio_sol" type="button" class="btn btn-success btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                                <button id="btnEliminarDominio_sol" type="button" class="btn btn-danger btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+                                <button id="btnRefrescarDominio_sol" type="button" class="btn btn-default btnMiniMant" style="margin-left: 10px;"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+                            </div>
+                        </div>
+                        
+                        <div style="clear: both;"></div>
+                        <div id="dvGrillaDominio_sol" style="width: 100%;">
+                            <table id="grillaDominio_sol" class="miGrilla">
+                            </table>
+                        </div>
+
+                        <div id="infoDominioSol" class="infoDominio" style="width:99%; border:1px solid #E9C589; border-radius:10px; margin-top:10px; display:none;">
+                            <table class="table">
+                                <tr>
+                                    <td class="col-xs-1">
+                                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </td>
+                                    <td>
+                                        Al no asignar ningún dominio se atenderán todos los dominios activos, en cambio si se le asigna un dominio atenderá de forma exclusiva a ese dominio.
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    var esEditar = true;
+    var verIncidencias = false;
+    var verSolicitudes = false;
+    var upload;
+    var vcFileName = "";
+
+    function ENT_CINC_Tipo() {
+        this.IdTipo = -1;
+        this.Nombre = "";
+    }
+
+    function PRM_Tipo()
+    {
+        this.IdTipo = -1;
+        this.Nombre = "";
+        this.IdUsuario = -1;
+        this.EsVigente = "";
+    }
+
+    function PRM_User() {
+        this.IdUsuario = -1;
+        this.Nombre = "";
+        this.IdPerfil = -1;
+        this.EsVigente = "";
+    }
+
+    function PRM_Perfil() {
+        this.IdPerfil = -1;
+        this.Nombre = "";
+        this.IdUsuario = -1;
+        this.EsVigente = "";
+    }
+
+    function ENT_CINC_Perfil() {
+        this.IdPerfil = -1;
+        this.Nombre = "";
+    }
+
+    function ENT_CINC_Perfil(pIdPerfil) {
+        this.IdPerfil = pIdPerfil;
+        this.Nombre = "";
+    }
+
+    function PRM_Dominio() {
+        this.IdDominio = -1;
+        this.NombreDominio = "";
+        this.IdUsuario = -1;
+        this.IdUsuarioSolicitud = -1;
+        this.EsVigente = "";
+    }
+
+    function ENT_CINC_BolsaAsignar() {
+        this.IdBolsa = -1;
+        this.NombreBolsa = "";
+        this.IdNivel = -1;
+        this.NombreNivel = "";
+        this.IdGrado = -1;
+        this.NombreGrado = "";
+        this.Orden = -1;
+        this.IdUsuario = -1;
+    }
+
+    function ENT_CINC_Dominio() {
+        this.IdDominio = -1;
+        this.Nombre = "";
+        this.EsVigente = false;
+    }
+
+    function ENT_CINC_Dominio(pIdDominio) {
+        this.IdDominio = pIdDominio;
+        this.Nombre = "";
+        this.EsVigente = false;
+    }
+
+    function ENT_CINC_Usuario() {
+        this.IdUsuario = -1;
+        this.Usuario = "";
+        this.Contrasena = "";
+        this.Nombres = "";
+        this.Correo = "";
+        this.Apellidos = "";
+        this.IdSupervisor = -1;
+        this.IdSupervisorSolicitud = -1;
+        this.EsVigente = false;
+        this.Perfiles = [];
+        this.Bolsas = [];
+        this.Dominios = [];
+        this.DominiosSolicitud = [];
+        this.Tipos = [];
+    }
+
+    function ENT_CINC_Bolsa() {
+        this.IdBolsa = -1;
+        this.Nombre = "";
+    }
+
+    function ENT_CINC_Bolsa(pIdBolsa) {
+        this.IdBolsa = pIdBolsa;
+        this.Nombre = "";
+    }
+
+    $(function () {
+        fnEventosUsuario();
+        fnGrillaPerfil();
+        fnGrillaBolsa();
+        fnGrillaDominio();
+        fnGrillaSupervisor();
+        fnGrillaUsuario();
+        fnGrillaTipo();
+    });
+
+    function disenoResize() {
+        $("#grillaUsuario").setGridWidth($("#dvGrillaUsuario").width() - 10);
+        $("#grillaPerfil").setGridWidth($("#dvGrillaPerfil").width() - 10);
+        $("#grillaBolsa").setGridWidth($("#dvGrillaBolsa").width() - 10);
+        $("#grillaTipo").setGridWidth($("#dvGrillaTipo").width() - 10);
+        $("#grillaDominio").setGridWidth($("#dvGrillaDominio").width() - 10);
+        $("#grillaDominio_sol").setGridWidth($("#dvGrillaDominio_sol").width() - 10);
+        $("#grillaSupervisor").setGridWidth($("#dvGrillaSupervisor").width() - 10);
+
+        $($("#dvGrillaUsuario .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaUsuario .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaPerfil .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaPerfil .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaBolsa .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaBolsa .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTipo .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaDominio .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaDominio .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaDominio_sol .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaDominio_sol .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaSupervisor .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaSupervisor .ui-jqgrid-bdiv")[0]).width() + 5);
+    }
+
+    function fnEventosUsuario() {
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        //adjuntarArchivo
+        upload = new AjaxUpload('#UploadButton', {
+            action: '@Url.Action("SetArchivo_gui", "Usuario")',
+            hoverClass: 'miHoverAjaxUpdate',
+            onComplete: function (file, response) {
+                //alert(response);
+                //$("<div class='imgBtn' style='margin-top:1px; height:21px;'><img src='../../Common/Images/remove.png' onclick=\"DeleteFile('" + response + "')\"/>&nbsp;&nbsp;&nbsp;<span id='filesubido' style='text-decoration:underline;' nombre='" + response + "'>" + response + "</span></div>").appendTo('#UploadedFile');
+                vcFileName = response;
+                $("#UploadedFile").append('<div nombre="' + response + '"><ul class="MiListaHorizontal"><li onclick="DeleteMiArchivo(\'' + response + '\')"><h4><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:red; margin-right:10px;"></span>Eliminar</h4></li></ul></div>');
+                $("#UploadButton").hide();
+                $("#UploadedFile").fadeIn(300);
+
+                $("#imgFotoUser").attr("src", "@(new Control().ResolveUrl("~/Temp/"))" + response);
+
+            },
+            onSubmit: function (file, ext) {
+                if (!(ext && /^(jpg|png)$/i.test(ext))) {
+                    alert('Formato inválido');
+                    return false;
+                }
+            }
+        });
+        $(upload._input).css("z-index", "99999999");
+        //////////////////////
+
+        $("#btnNuevoUsuario").click(function () {
+            esEditar = false;
+            $("#grillaUsuario").jqGrid("clearGridData", true);
+            fnLimpiarFormulario();
+            fnActivarFormulario();
+            fnModoMantenimiento();
+
+            $("#ulTap li").removeClass("ulTapSelect");
+            $("#ulTap li h4").removeClass("h4select");
+            $(this).addClass("ulTapSelect");
+            $(this).find("h4").addClass("h4select");
+            $(".miPanel").hide();
+
+            $("#rowPerfil").fadeIn(300, function () {
+                disenoResize();
+            });
+
+            
+        });
+
+        $("#btnEditarUsuario").click(function () {
+            var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+                fnActivarFormulario();
+                fnModoMantenimiento();
+
+                $("#txtIdUsuario").val(datos.IdUsuario);
+                //$("#grillaUsuario").trigger("reloadGrid");
+            }
+            else {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+        });
+
+        $("#btnEliminarUsuario").click(function () {
+            fnBtnEliminarUsuario();
+        });
+
+        $("#btnRegistrarUsuario").click(function () {
+            fnBtnRegistrarUsuario();
+        });
+
+        $("#btnCancelar").click(function () {
+            //if (fnValidarFormularioUsuario(false)) {
+                miDialogoConfirmacion("Los cambios no se guardaran. Desea cancelar?", fnbtnCancelar, undefined);
+            //}
+            //else {
+                //fnbtnCancelar();
+            //}
+        });
+
+        $("#ulTap li").click(function () {
+            $("#ulTap li").removeClass("ulTapSelect");
+            $("#ulTap li h4").removeClass("h4select");
+            $(this).addClass("ulTapSelect");
+            $(this).find("h4").addClass("h4select");
+            $(".miPanel").hide();
+
+
+            switch ($($(this).find("h4")[0]).text().toUpperCase()) {
+                case "PERFILES":
+                    $("#rowPerfil").fadeIn(300);
+                    break;
+                case "INCIDENCIAS":
+
+                    if (!verIncidencias) {
+                        verIncidencias = true;
+                        //$("#grillaBolsa").jqGrid("clearGridData", true);
+                        //$("#grillaDominio").jqGrid("clearGridData", true);
+                        //fnObtenerBolsasAsignadas();
+                        //fnObtenerDominiosAsignados();
+                    }
+                    $("#rowIncidencia").fadeIn(300);
+                    break;
+                case "SOLICITUDES":
+                    if (!verSolicitudes) {
+                        verSolicitudes = true;
+                    }
+                    $("#rowSolicitud").fadeIn(300);
+                    break;
+                default:
+                    break;
+            }
+            disenoResize();
+            $($("body")[0]).scrollTop(document.getElementsByTagName("html")[0].scrollHeight);
+            //$($("html")[0]).animate({ scrollTop: document.getElementsByTagName("html")[0].scrollHeight }, 300);
+            //$($("body")[0]).scrollTop(5000);
+        });
+
+        $("#ddlPerfil, #ddlEstado").change(function () {
+            $("#grillaUsuario").trigger("reloadGrid", [{ current: true }]);
+        });
+
+        $('#txtNombreUsuario').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaUsuario").trigger("reloadGrid", [{ current: true }]);
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+        
+        //miSelector----------Perfil
+        $(".ListaMultiSelect li").live("click", function () {
+            if ($(this).hasClass("ListaMultiSelected")) {
+                $(this).removeClass("ListaMultiSelected");
+                $($(this).find("span")[1]).hide();
+            }
+            else {
+                $(this).addClass("ListaMultiSelected");
+                $($(this).find("span")[1]).show(300);
+            }
+        });
+
+        $("#btnNuevoPerfil").click(function () {
+            $("#ulPerfilesHabilitadas").html("");
+            $("#ulPerfilesElegidas").html("");
+            $("#txtBuscarPerfil").val("");
+            fnObtenerPerfiles();
+        });
+
+        $("#btnBuscarPerfil").click(function () {
+            $("#ulPerfilesHabilitadas").html("");
+            fnObtenerPerfiles();
+        });
+
+        $("#btnAddPerfil").click(function () {
+            fnAddPerfil();
+        });
+
+        $('#txtBuscarPerfil').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#ulPerfilesHabilitadas").html("");
+                fnObtenerPerfiles();
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#btnListAllRight_per").click(function () {
+            if ($("#ulPerfilesHabilitadas li").length > 0) {
+                $("#ulPerfilesElegidas").append($("#ulPerfilesHabilitadas").html());
+                $("#ulPerfilesHabilitadas").html("");
+            }
+            else {
+                miAlerta("Alerta", "No hay Perfiles que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListRight_per").click(function () {
+            if ($("#ulPerfilesHabilitadas .ListaMultiSelected").length > 0) {
+                var listas = $("#ulPerfilesHabilitadas .ListaMultiSelected").clone();
+                $(listas).find("span:odd").hide();
+                $(listas).removeClass("ListaMultiSelected");
+                $("#ulPerfilesElegidas").append($(listas).clone());
+                $("#ulPerfilesHabilitadas .ListaMultiSelected").remove();
+            }
+            else {
+                miAlerta("Alerta", "No hay Perfiles que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListAllLeft_per").click(function () {
+            if ($("#ulPerfilesElegidas li").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Perfil se perderan los privilegios asociados al mismo. ¿Desea seguir?", fnListAllLeft_per);
+                }
+                else {
+                    fnListAllLeft_per();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Perfiles que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListLeft_per").click(function () {
+            if ($("#ulPerfilesElegidas .ListaMultiSelected").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Perfil se perderan los privilegios asociados al mismo. ¿Desea seguir?", fnListLeft_per);
+                }
+                else {
+                    fnListLeft_per();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Perfiles que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        /////eliminar
+        $("#btnEliminarPrefil").click(function () {
+            fnEliminarPerfil();
+        });
+
+        //refrescar
+        $("#btnRefrescarPerfil").click(function () {
+            fnObtenerPerfil();
+        });
+        ////////////////////////////
+
+        //miSelector----------Bolsa
+
+        $("#btnNuevaBolsa").click(function () {
+            $("#ulBolsasHabilitadas").html("");
+            $("#ulBolsasElegidas").html("");
+            $("#txtBuscarBolsa").val("");
+            fnObtenerBolsas();
+        });
+
+        $("#btnBuscarBolsa").click(function () {
+            $("#ulBolsasHabilitadas").html("");
+            fnObtenerBolsas();
+        });
+
+
+        $("#btnAddBolsa").click(function () {
+            fnAddBolsa();
+        });
+
+        $('#txtBuscarBolsa').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#ulBolsasHabilitadas").html("");
+                fnObtenerBolsas();
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#btnListAllRight_bol").click(function () {
+            if ($("#ulBolsasHabilitadas li").length > 0) {
+                $("#ulBolsasElegidas").append($("#ulBolsasHabilitadas").html());
+                $("#ulBolsasHabilitadas").html("");
+            }
+            else {
+                miAlerta("Alerta", "No hay Bolsas que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListRight_bol").click(function () {
+            if ($("#ulBolsasHabilitadas .ListaMultiSelected").length > 0) {
+                var listas = $("#ulBolsasHabilitadas .ListaMultiSelected").clone();
+                $(listas).find("span:odd").hide();
+                $(listas).removeClass("ListaMultiSelected");
+                $("#ulBolsasElegidas").append($(listas).clone());
+                $("#ulBolsasHabilitadas .ListaMultiSelected").remove();
+            }
+            else {
+                miAlerta("Alerta", "No hay Bolsas que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListAllLeft_bol").click(function () {
+            if ($("#ulBolsasElegidas li").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Bolsa se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListAllLeft_bol);
+                }
+                else {
+                    fnListAllLeft_bol();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Bolsas que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        $("#btnListLeft_bol").click(function () {
+            if ($("#ulBolsasElegidas .ListaMultiSelected").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Bolsa se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListLeft_bol);
+                }
+                else {
+                    fnListLeft_bol();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Bolsas que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        /////eliminar
+        $("#btnEliminarBolsa").click(function () {
+            fnEliminarBolsa();
+        });
+        //refrescar
+        $("#btnRefrescarBolsa").click(function () {
+            $("#grillaBolsa").jqGrid("clearGridData", true);
+            fnObtenerBolsasAsignadas();
+        });
+        ////////////////////////////
+
+        //miSelector----------Tipo
+
+        $("#btnNuevoTipo").click(function () {
+            $("#ulTiposHabilitadas").html("");
+            $("#ulTiposElegidas").html("");
+            $("#txtBuscarTipo").val("");
+            fnObtenerTipos();
+        });
+
+        $("#btnBuscarTipo").click(function () {
+            $("#ulTiposHabilitadas").html("");
+            fnObtenerTipos();
+        });
+
+
+        $("#btnAddTipo").click(function () {
+            fnAddTipo();
+        });
+
+        $('#txtBuscarTipo').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#ulTiposHabilitadas").html("");
+                fnObtenerTipos();
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#btnListAllRight_tip").click(function () {
+            if ($("#ulTiposHabilitadas li").length > 0) {
+                $("#ulTiposElegidas").append($("#ulTiposHabilitadas").html());
+                $("#ulTiposHabilitadas").html("");
+            }
+            else {
+                miAlerta("Alerta", "No hay Tipos que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListRight_tip").click(function () {
+            if ($("#ulTiposHabilitadas .ListaMultiSelected").length > 0) {
+                var listas = $("#ulTiposHabilitadas .ListaMultiSelected").clone();
+                $(listas).find("span:odd").hide();
+                $(listas).removeClass("ListaMultiSelected");
+                $("#ulTiposElegidas").append($(listas).clone());
+                $("#ulTiposHabilitadas .ListaMultiSelected").remove();
+            }
+            else {
+                miAlerta("Alerta", "No hay Tipos que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListAllLeft_tip").click(function () {
+            if ($("#ulTiposElegidas li").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Tipo se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListAllLeft_tip);
+                }
+                else {
+                    fnListAllLeft_tip();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Tipos que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListLeft_tip").click(function () {
+            if ($("#ulTiposElegidas .ListaMultiSelected").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Tipo se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListLeft_tip);
+                }
+                else {
+                    fnListLeft_tip();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Tipos que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        /////eliminar
+        $("#btnEliminarTipo").click(function () {
+            fnEliminarTipo();
+        });
+        //refrescar
+        $("#btnRefrescarTipo").click(function () {
+            $("#grillaTipo").jqGrid("clearGridData", true);
+            fnObtenerTiposAsignadas();
+        });
+        ////////////////////////////
+
+        //miSelector----------Dominio
+
+        $("#btnNuevoDominio, #btnNuevoDominio_sol").click(function () {
+            $("#ulDominiosHabilitadas").html("");
+            $("#ulDominiosElegidas").html("");
+            $("#txtBuscarDominio").val("");
+            fnObtenerDominios();
+        });
+
+        $("#btnBuscarDominio").click(function () {
+            $("#ulDominiosHabilitadas").html("");
+            fnObtenerDominios();
+        });
+
+        $("#btnAddDominio").click(function () {
+            fnAddDominio();
+        });
+
+        $('#txtBuscarDominio').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#ulDominiosHabilitadas").html("");
+                fnObtenerDominios();
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#btnListAllRight_dom").click(function () {
+            if ($("#ulDominiosHabilitadas li").length > 0) {
+                $("#ulDominiosElegidas").append($("#ulDominiosHabilitadas").html());
+                $("#ulDominiosHabilitadas").html("");
+            }
+            else {
+                miAlerta("Alerta", "No hay Dominios que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListRight_dom").click(function () {
+            if ($("#ulDominiosHabilitadas .ListaMultiSelected").length > 0) {
+                var listas = $("#ulDominiosHabilitadas .ListaMultiSelected").clone();
+                $(listas).find("span:odd").hide();
+                $(listas).removeClass("ListaMultiSelected");
+                $("#ulDominiosElegidas").append($(listas).clone());
+                $("#ulDominiosHabilitadas .ListaMultiSelected").remove();
+            }
+            else {
+                miAlerta("Alerta", "No hay Dominios que asignar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListAllLeft_dom").click(function () {
+            if ($("#ulDominiosElegidas li").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Dominio se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListAllLeft_dom);
+                }
+                else {
+                    fnListAllLeft_dom();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Dominios que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+        $("#btnListLeft_dom").click(function () {
+            if ($("#ulDominiosElegidas .ListaMultiSelected").length > 0) {
+                if (esEditar) {
+                    miDialogoConfirmacion("Al momento de retirar Dominio se perderán los privilegios asociados al mismo. ¿Desea seguir?", fnListLeft_dom);
+                }
+                else {
+                    fnListLeft_dom();
+                }
+            }
+            else {
+                miAlerta("Alerta", "No hay Dominios que retirar", "glyphicon-info-sign", "#337ab7");
+            }
+        });
+
+        /////eliminar
+        $("#btnEliminarDominio, #btnEliminarDominio_sol").click(function () {
+            fnEliminarDominio();
+        });
+        //refrescar
+        $("#btnRefrescarDominio,#btnRefrescarDominio_sol").click(function () {
+            if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                $("#grillaDominio").jqGrid("clearGridData", true);
+            }
+            else {
+                $("#grillaDominio_sol").jqGrid("clearGridData", true);
+            }
+            fnObtenerDominiosAsignados();
+        });
+        ////////////////////////////
+
+        $("#btnAddSupervisor").click(function () {
+            fnAddSupervisor();
+        });
+
+        $("#btnNuevoSupervisor, #btnNuevoSupervisor_sol").click(function () {
+            $("#txtBuscarSupervisor").val("");
+            if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                fnObtenerSupervisores();
+            }
+            else {
+                fnObtenerSupervisoresSolicitud();
+            }
+        });
+
+        $("#btnBuscarSupervisor, #btnBuscarSupervisor_sol").click(function () {
+            if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                fnObtenerSupervisores();
+            }
+            else {
+                fnObtenerSupervisoresSolicitud();
+            }
+        });
+        $('#txtBuscarSupervisor,#txtBuscarSupervisor_sol').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                    fnObtenerSupervisores();
+                }
+                else {
+                    fnObtenerSupervisoresSolicitud();
+                }
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+        $("#btnEliminarSupervisor").click(function () {
+            fnEliminarSupervisor();
+        });
+        $("#btnEliminarSupervisor_sol").click(function () {
+            fnEliminarSupervisorSolicitud();
+        });
+        $("#btnRefrescarSupervisor").click(function () {
+            fnObtenerSupervisor();
+        });
+        $("#btnRefrescarSupervisor_sol").click(function () {
+            fnObtenerSupervisorSolicitud();
+        });
+    }
+
+    function fnGrillaUsuario() {
+        $("#grillaUsuario").jqGrid({
+            datatype: function () {
+
+                var oParametro;
+                oParametro = new PRM_User();
+
+                if ($.trim($("#txtIdUsuario").val()) != "") {
+                    oParametro.IdUsuario = $.trim($("#txtIdUsuario").val());
+                }
+
+                if ($.trim($("#txtNombreUsuario").val()) != "") {
+                    oParametro.Nombre = $.trim($("#txtNombreUsuario").val());
+                }
+
+                if ($("#ddlPerfil").val() != "-1") {
+                    oParametro.IdPerfil = $("#ddlPerfil").val();
+                }
+                if ($("#ddlEstado").val() != "-1") {
+                    oParametro.EsVigente = $("#ddlEstado").val();
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerUsuario", "Usuario")',
+                    data: "{'inPagTam':'" + $('#grillaUsuario').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaUsuario').getGridParam("page") + "'," + //FiltroRegistro 
+                       "'vcOrdCol':'" + $('#grillaUsuario').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaUsuario').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaUsuario")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "IdUsuario"
+            },
+            colModel: [
+            { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Nombre', width: "100px" },
+            { name: 'Apellidos', index: 'Apellidos', label: 'Apellidos', width: "100px" },
+            { name: 'Usuario', index: 'Usuario', label: 'Usuario', width: "100px" },
+            { name: 'Clave', index: 'Clave', label: 'Clave', width: "50px", hidden: true },
+            { name: 'IdOperador', index: 'IdOperador', label: 'IdOperador', width: "50px", hidden: true },
+            { name: 'IdSupervisor', index: 'IdSupervisor', label: 'IdSupervisor', width: "50px", hidden: true },
+            { name: 'IdSupervisorSolicitud', index: 'IdSupervisorSolicitud', label: 'IdSupervisorSolicitud', width: "50px", hidden: true },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true },
+            { name: 'Correo', index: 'Correo', label: 'Correo', width: "50px", hidden: true }
+            ],
+            pager: "#pagerGrillaUsuario",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            //height: "470px",
+            height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: 15,
+            gridComplete: function () {
+                var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                }
+                else {
+                    $('#grillaUsuario').jqGrid('setSelection', 1);
+                }
+
+                id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+
+                if (id) {
+                    fnMostrarDetalleUsuario();
+                }
+
+            },
+            beforeSelectRow: function (rowid, e) {
+                if ($("#btnCancelar").css("display") == "block" && fnValidarFormularioUsuario(false)) {
+                    miDialogoConfirmacion("Hay datos ingresados. Aún desea seleccionar otro registro?", fnSelectedGrillaUsuario, undefined, [rowid, e], undefined);
+                }
+                else {
+                    fnSelectedGrillaUsuario([rowid, e]);
+                }
+
+
+            }
+        }).navGrid("#pagerGrillaUsuario", { edit: false, add: false, search: false, del: false });
+    }
+
+    function fnSelectedGrillaUsuario(pArrayArguments) {
+        $("#txtIdUsuario").val("");
+        fnLimpiarFormulario();
+        fnDesactivarFormulario();
+        fnModoLista();
+
+        var CurrentSelectIndex = $("#grillaUsuario").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaUsuario').jqGrid('setSelection', CurrentSelectIndex);
+        fnMostrarDetalleUsuario();
+    }
+
+    function fnMostrarDetalleUsuario() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            
+            
+            fnLimpiarFormulario();
+            verIncidencias = false;
+            verSolicitudes = false;
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            $("#txtNombre").val(datos.Nombre);
+            $("#txtApellidos").val(datos.Apellidos);
+            $("#txtUsuario").val(datos.Usuario);
+            $("#txtContrasena").val(datos.Clave);
+            $("#txtConfirmarContrasena").val(datos.Clave);
+            $("#txtCorreo").val(datos.Correo);
+            $("#txtConfirmarCorreo").val(datos.Correo);
+
+
+            if (datos.IdSupervisor == "") {
+                $("#txtIdSupervisor").val("-1");
+            }
+            else {
+                $("#txtIdSupervisor").val(datos.IdSupervisor);
+            }
+
+            if (datos.IdSupervisorSolicitud == "") {
+                $("#txtIdSupervisor_sol").val("-1");
+            }
+            else {
+                $("#txtIdSupervisor_sol").val(datos.IdSupervisorSolicitud);
+            }
+
+            if (datos.btVig == "True") {
+                $("#liActivar").hide();
+                $("#chkActivarUsuario").prop("checked", true);
+            }
+            else {
+                $("#liActivar").show();
+                $("#chkActivarUsuario").prop("checked", false);
+            }
+
+            if ($("#txtIdUsuario").val() == "") {
+                fnDesactivarFormulario();
+            }
+
+
+            fnObtenerPerfil();
+            fnObtenerFotoUsuario();
+            fnObtenerSupervisor();
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnGrillaSupervisor() {
+        $("#grillaSupervisor").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true },
+            { name: 'Nombres', index: 'Nombres', label: 'Nombres', width: "100px" },
+            { name: 'Apellidos', index: 'Apellidos', label: 'Apellidos', width: "100px" },
+            { name: 'Usuario', index: 'Usuario', label: 'Usuario', width: "100px", hidden: true },
+            { name: 'Clave', index: 'Clave', label: 'Clave', width: "50px", hidden: true },
+            { name: 'IdOperador', index: 'IdOperador', label: 'IdOperador', width: "50px", hidden: true },
+            { name: 'IdSupervisor', index: 'IdSupervisor', label: 'IdSupervisor', width: "50px", hidden: true },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            emptyrecords: "No hay Supervisores que mostrar",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaSupervisor').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+    
+    function fnGrillaPerfil() {
+        $("#grillaPerfil").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdPerfil', index: 'IdPerfil', label: 'Id Perfil', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Perfil', width: "100px" }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            emptyrecords: "No hay perfiles que mostrar",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaPerfil').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+
+    function fnGrillaBolsa() {
+        $("#grillaBolsa").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+            { name: 'NombreBolsa', index: 'NombreBolsa', label: 'Bolsa', width: "100px" },
+            { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+            { name: 'NombreNivel', index: 'NombreNivel', label: 'Nivel', width: "100px" },
+            { name: 'IdGrado', index: 'IdGrado', label: 'IdGrado', width: "50px", hidden: true },
+            { name: 'NombreGrado', index: 'NombreGrado', label: 'Grado', width: "100px" },
+            { name: 'Orden', index: 'Orden', label: 'Orden', width: "50px", hidden: true },
+            { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaBolsa').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+
+    function fnGrillaTipo() {
+        $("#grillaTipo").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+            { name: 'Codigo', index: 'Codigo', label: 'Codigo', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Nombre', width: "100px" },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripcion', width: "200px", hidden: true },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true },
+
+            { name: 'strInicioHorario', index: 'strInicioHorario', label: 'strInicioHorario', width: "50px", hidden: true },
+            { name: 'dtInicioHorario', index: 'dtInicioHorario', label: 'dtInicioHorario', width: "50px", hidden: true },
+            { name: 'strFinHorario', index: 'strFinHorario', label: 'strFinHorario', width: "50px", hidden: true },
+            { name: 'dtFinHorario', index: 'dtFinHorario', label: 'dtFinHorario', width: "50px", hidden: true },
+            { name: 'TotalHorasDia', index: 'TotalHorasDia', label: 'TotalHorasDia', width: "50px", hidden: true },
+            { name: 'MinActivo', index: 'MinActivo', label: 'MinActivo', width: "50px", hidden: true },
+            { name: 'MaxActivo', index: 'MaxActivo', label: 'MaxActivo', width: "50px", hidden: true },
+            { name: 'MinResuelto', index: 'MinResuelto', label: 'MinResuelto', width: "50px", hidden: true },
+            { name: 'MaxResuelto', index: 'MaxResuelto', label: 'MaxResuelto', width: "50px", hidden: true },
+            { name: 'MinTotal', index: 'MinTotal', label: 'MinTotal', width: "50px", hidden: true },
+            { name: 'MaTotal', index: 'MaTotal', label: 'MaTotal', width: "50px", hidden: true }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaTipo').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+
+    function fnGrillaDominio() {
+        $("#grillaDominio").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdDominio', index: 'IdDominio', label: 'IdDominio', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Dominio', width: "100px" },
+            { name: 'EsVigente', index: 'EsVigente', label: 'EsVigente', width: "50px", hidden: true }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaDominio').jqGrid('setSelection', rowid);
+            }
+        });
+
+        $("#grillaDominio_sol").jqGrid({
+            datatype: "local",
+            colModel: [
+            { name: 'IdDominio', index: 'IdDominio', label: 'IdDominio', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Dominio', width: "100px" },
+            { name: 'EsVigente', index: 'EsVigente', label: 'EsVigente', width: "50px", hidden: true }
+            ],
+            rownumbers: true,
+            viewrecords: true,
+            height: "100%",
+            rowNum: -1,
+            gridComplete: function () {
+                //disenoResize();
+            },
+            beforeSelectRow: function (rowid, e) {
+                $('#grillaDominio_sol').jqGrid('setSelection', rowid);
+            }
+        });
+    };
+
+    function fnObtenerPerfil() {
+
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+            $("#grillaPerfil").jqGrid("clearGridData", true);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("PerfilByUsuario", "Usuario")',
+                data: "{'username': '" + datos.Usuario + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        var ii = $("#grillaPerfil").getGridParam("reccount") + 1;
+                        $("#grillaPerfil").jqGrid('addRowData', ii, result[i]);
+                    }
+                    $('#grillaPerfil').jqGrid('setSelection', 1);
+
+                    $(".miPanel").hide();
+                    $("#rowPerfil").fadeIn(300, function () {
+                        disenoResize();
+                    });
+                    $("#ulTap li").removeClass("ulTapSelect");
+                    $("#ulTap li h4").removeClass("h4select");
+                    $("#ulTap li:first-child").addClass("ulTapSelect");
+                    $("#ulTap li:first-child").find("h4").addClass("h4select");
+                    if (fnVerificarExistePerfil("INCIDENCIAS")) {
+                        $("#tapIncidencia").show(300);
+                        fnObtenerBolsasAsignadas();
+                        fnObtenerDominiosAsignados();
+                    }
+                    else {
+                        $("#tapIncidencia").hide();
+                        $("#grillaBolsa").jqGrid("clearGridData", true);
+                        $("#grillaDominio").jqGrid("clearGridData", true);
+                    }
+
+                    if (fnVerificarExistePerfil("SOLICITUDES")) {
+                        $("#tapSolicitud").show(300);
+                        fnObtenerPerfilSolicitud();
+                    }
+                    else {
+                        $("#tapSolicitud").hide();
+                        $("#grillaTipo").jqGrid("clearGridData", true);
+                        $("#grillaDominio_sol").jqGrid("clearGridData", true);
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnObtenerBolsasAsignadas() {
+
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            var oParametro;
+            oParametro = new ENT_CINC_BolsaAsignar();
+            oParametro.IdUsuario = datos.IdUsuario;
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("obtenerBolsas", "Usuario")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        var ii = $("#grillaBolsa").getGridParam("reccount") + 1;
+                        $("#grillaBolsa").jqGrid('addRowData', ii, result[i]);
+                    }
+                    $('#grillaBolsa').jqGrid('setSelection', 1);
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnObtenerTiposAsignadas() {
+
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            var oParametro;
+            oParametro = new PRM_Tipo();
+            oParametro.IdUsuario = datos.IdUsuario;
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("obtenerTipos", "Usuario")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        var ii = $("#grillaTipo").getGridParam("reccount") + 1;
+                        $("#grillaTipo").jqGrid('addRowData', ii, result[i]);
+                    }
+                    $('#grillaTipo').jqGrid('setSelection', 1);
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnObtenerDominiosAsignados() {
+
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            var oParametro;
+            oParametro = new PRM_Dominio();
+            if ($("#tapSolicitud").hasClass("ulTapSelect")) {
+                oParametro.IdUsuarioSolicitud = datos.IdUsuario;
+            }
+            else {
+                oParametro.IdUsuario = datos.IdUsuario;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("obtenerDominios", "Usuario")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if ($("#tapSolicitud").hasClass("ulTapSelect")) {
+                        if (result.length > 0) {
+                            for (var i = 0; i < result.length; i++) {
+                                var ii = $("#grillaDominio_sol").getGridParam("reccount") + 1;
+                                $("#grillaDominio_sol").jqGrid('addRowData', ii, result[i]);
+                            }
+                            $('#grillaDominio_sol').jqGrid('setSelection', 1);
+                            $("#infoDominioSol").css("display", "none");
+                        }
+                        else {
+                            $("#infoDominioSol").css("display", "block");
+                        }
+                        
+
+                    }
+                    else {
+                        if (result.length > 0) {
+                            for (var i = 0; i < result.length; i++) {
+                                var ii = $("#grillaDominio").getGridParam("reccount") + 1;
+                                $("#grillaDominio").jqGrid('addRowData', ii, result[i]);
+                            }
+                            $('#grillaDominio').jqGrid('setSelection', 1);
+                            $("#infoDominioInc").css("display", "none");
+                        }
+                        else {
+                            $("#infoDominioInc").css("display", "block");
+                        }
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+
+    //funciones buscador perfil
+    function fnListAllLeft_per() {
+        $("#ulPerfilesHabilitadas").append($("#ulPerfilesElegidas").html());
+        $("#ulPerfilesElegidas").html("");
+    }
+    function fnListLeft_per() {
+        var listas = $("#ulPerfilesElegidas .ListaMultiSelected").clone();
+        $(listas).find("span:odd").hide();
+        $(listas).removeClass("ListaMultiSelected");
+        $("#ulPerfilesHabilitadas").append($(listas).clone());
+        $("#ulPerfilesElegidas .ListaMultiSelected").remove();
+    }
+    function fnObtenerPerfiles() {
+
+        var oParametro;
+        oParametro = new PRM_Perfil();
+        oParametro.EsVigente = "1";
+
+        if ($.trim($("#txtBuscarPerfil").val()) != "") {
+            oParametro.Nombre = $.trim($("#txtBuscarPerfil").val());
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("obtenerPerfiles", "Usuario")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var ArrayPerfiles = $("#grillaPerfil").jqGrid('getRowData');
+                for (var i = 0; i < result.length; i++) {
+                    var entro = false;
+                    for (var k = 0; k < ArrayPerfiles.length; k++) {
+                        if ($.trim(ArrayPerfiles[k].Nombre).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    for (var n = 0; n < $("#ulPerfilesElegidas li span:first-child").length; n++) {
+                        if ($.trim($($("#ulPerfilesElegidas li span:first-child")[n]).text()).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    if (!entro) {
+                        $("#ulPerfilesHabilitadas").append('<li id="li_Perfil_' + result[i].IdPerfil + '" idPerfil="' + result[i].IdPerfil + '"><span>' + result[i].Nombre + '</span> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>');
+                    }
+                }
+
+                $("#miDialogoPerfil").modal('show');
+                $("#txtBuscarPerfil").focus();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnAddPerfil() {
+        if ($("#ulPerfilesElegidas li").length > 0) {
+            $("#miDialogoPerfil").modal('hide');
+
+            for (var i = 0; i < $("#ulPerfilesElegidas li").length; i++) {
+                var oObjeto;
+                oObjeto = new ENT_CINC_Perfil();
+                oObjeto.Nombre = $.trim($($("#ulPerfilesElegidas li span:first-child")[i]).text());
+                oObjeto.IdPerfil = $($("#ulPerfilesElegidas li")[i]).attr("idPerfil");
+
+                var ii = $("#grillaPerfil").getGridParam("reccount") + 1;
+                $("#grillaPerfil").jqGrid('addRowData', ii, oObjeto);
+
+                if (fnVerificarExistePerfil("INCIDENCIAS")) {
+                    $("#tapIncidencia").show(300);
+                }
+                else {
+                    $("#tapIncidencia").hide();
+                }
+
+                if (fnVerificarExistePerfil("SOLICITUDES")) {
+                    $("#tapSolicitud").show(300);
+                }
+                else {
+                    $("#tapSolicitud").hide();
+                }
+
+            }
+        }
+        else {
+            miAlerta("Alerta", "No hay Perfiles que agregar", "glyphicon-info-sign", "#337ab7");
+        }
+    }
+
+    ///eliminar
+    function fnEliminarPerfil() {
+        var id = $("#grillaPerfil").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            miDialogoConfirmacion("¿Desea eliminar Perfil?", fnPerfilEliminado, undefined, [id], undefined);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnPerfilEliminado(pId) {
+        $("#grillaPerfil").jqGrid('delRowData', pId);
+        if (fnVerificarExistePerfil("INCIDENCIAS")) {
+            $("#tapIncidencia").show(300);
+        }
+        else {
+            $("#tapIncidencia").hide();
+        }
+
+        if (fnVerificarExistePerfil("SOLICITUDES")) {
+            $("#tapSolicitud").show(300);
+        }
+        else {
+            $("#tapSolicitud").hide();
+        }
+    }
+
+    /////////////////////////////
+
+    //funciones buscador Bolsa
+    function fnListAllLeft_bol() {
+        $("#ulBolsasHabilitadas").append($("#ulBolsasElegidas").html());
+        $("#ulBolsasElegidas").html("");
+    }
+    function fnListLeft_bol() {
+        var listas = $("#ulBolsasElegidas .ListaMultiSelected").clone();
+        $(listas).find("span:odd").hide();
+        $(listas).removeClass("ListaMultiSelected");
+        $("#ulBolsasHabilitadas").append($(listas).clone());
+        $("#ulBolsasElegidas .ListaMultiSelected").remove();
+    }
+    function fnObtenerBolsas() {
+
+        var oParametro;
+        oParametro = new ENT_CINC_BolsaAsignar();
+
+        if ($.trim($("#txtBuscarBolsa").val()) != "") {
+            oParametro.NombreBolsa = $.trim($("#txtBuscarBolsa").val());
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("obtenerBolsas", "Usuario")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var ArrayBolsas = $("#grillaBolsa").jqGrid('getRowData');
+                for (var i = 0; i < result.length; i++) {
+                    var entro = false;
+                    for (var k = 0; k < ArrayBolsas.length; k++) {
+                        if ($.trim(ArrayBolsas[k].NombreBolsa).toUpperCase() == $.trim(result[i].NombreBolsa).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    for (var n = 0; n < $("#ulBolsasElegidas li span:first-child").length; n++) {
+                        if ($.trim($($("#ulBolsasElegidas li span:first-child")[n]).text()).toUpperCase() == $.trim(result[i].NombreBolsa).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    if (!entro) {
+                        $("#ulBolsasHabilitadas").append('<li id="li_Bolsa_' + result[i].IdBolsa + '" idBolsa="' + result[i].IdBolsa + '" nombres="' + result[i].NombreBolsa + '|' + result[i].NombreNivel + '|' + result[i].NombreGrado + '"><span>' + result[i].NombreBolsa + ' (' + result[i].NombreNivel + ')</span> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>');
+                    }
+                }
+
+                $("#miDialogoBolsa").modal('show');
+                $("#txtBuscarBolsa").focus();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnAddBolsa() {
+        if ($("#ulBolsasElegidas li").length > 0) {
+            $("#miDialogoBolsa").modal('hide');
+
+            for (var i = 0; i < $("#ulBolsasElegidas li").length; i++) {
+                var oObjeto;
+                oObjeto = new ENT_CINC_BolsaAsignar();
+                oObjeto.IdBolsa = $($("#ulBolsasElegidas li")[i]).attr("idBolsa");
+                oObjeto.NombreBolsa = $($("#ulBolsasElegidas li")[i]).attr("nombres").split('|')[0];
+                oObjeto.NombreNivel = $($("#ulBolsasElegidas li")[i]).attr("nombres").split('|')[1];
+                oObjeto.NombreGrado = $($("#ulBolsasElegidas li")[i]).attr("nombres").split('|')[2];
+
+                var ii = $("#grillaBolsa").getGridParam("reccount") + 1;
+                $("#grillaBolsa").jqGrid('addRowData', ii, oObjeto);
+            }
+        }
+        else {
+            miAlerta("Alerta", "No hay Bolsas que agregar", "glyphicon-info-sign", "#337ab7");
+        }
+    }
+
+    ///eliminar
+    function fnEliminarBolsa() {
+        var id = $("#grillaBolsa").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            miDialogoConfirmacion("¿Desea eliminar Bolsa?", fnBolsaEliminado, undefined, [id], undefined);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnBolsaEliminado(pId) {
+        $("#grillaBolsa").jqGrid('delRowData', pId);
+    }
+    /////////////////////////////
+    
+    //funciones buscador Dominio
+    function fnListAllLeft_dom() {
+        $("#ulDominiosHabilitadas").append($("#ulDominiosElegidas").html());
+        $("#ulDominiosElegidas").html("");
+    }
+    function fnListLeft_dom() {
+        var listas = $("#ulDominiosElegidas .ListaMultiSelected").clone();
+        $(listas).find("span:odd").hide();
+        $(listas).removeClass("ListaMultiSelected");
+        $("#ulDominiosHabilitadas").append($(listas).clone());
+        $("#ulDominiosElegidas .ListaMultiSelected").remove();
+    }
+    function fnObtenerDominios() {
+
+        var oParametro;
+        oParametro = new PRM_Dominio();
+        oParametro.EsVigente = "1";
+
+        if ($.trim($("#txtBuscarDominio").val()) != "") {
+            oParametro.NombreDominio = $.trim($("#txtBuscarDominio").val());
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("obtenerDominios", "Usuario")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var ArrayDominios;
+                if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                    ArrayDominios = $("#grillaDominio").jqGrid('getRowData');
+                }
+                else {
+                    ArrayDominios = $("#grillaDominio_sol").jqGrid('getRowData');
+                }
+
+                
+                for (var i = 0; i < result.length; i++) {
+                    var entro = false;
+                    for (var k = 0; k < ArrayDominios.length; k++) {
+                        if ($.trim(ArrayDominios[k].Nombre).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    for (var n = 0; n < $("#ulDominiosElegidas li span:first-child").length; n++) {
+                        if ($.trim($($("#ulDominiosElegidas li span:first-child")[n]).text()).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    if (!entro) {
+                        $("#ulDominiosHabilitadas").append('<li id="li_Dominio_' + result[i].IdDominio + '" idDominio="' + result[i].IdDominio + '"><span>' + result[i].Nombre + '</span> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>');
+                    }
+                }
+
+                $("#miDialogoDominio").modal('show');
+                $("#txtBuscarDominio").focus();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnAddDominio() {
+        if ($("#ulDominiosElegidas li").length > 0) {
+            $("#miDialogoDominio").modal('hide');
+
+            for (var i = 0; i < $("#ulDominiosElegidas li").length; i++) {
+                var oObjeto;
+                oObjeto = new ENT_CINC_Dominio();
+                oObjeto.Nombre = $.trim($($("#ulDominiosElegidas li span:first-child")[i]).text());
+                oObjeto.IdDominio = $($("#ulDominiosElegidas li")[i]).attr("idDominio");
+
+                if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                    var ii = $("#grillaDominio").getGridParam("reccount") + 1;
+                    $("#grillaDominio").jqGrid('addRowData', ii, oObjeto);
+                    $("#infoDominioInc").css("display", "none");
+                }
+                else {
+                    var ii = $("#grillaDominio_sol").getGridParam("reccount") + 1;
+                    $("#grillaDominio_sol").jqGrid('addRowData', ii, oObjeto);
+                    $("#infoDominioSol").css("display", "none");
+                }
+            }
+        }
+        else {
+            miAlerta("Alerta", "No hay Dominios que agregar", "glyphicon-info-sign", "#337ab7");
+        }
+    }
+    ///eliminar
+    function fnEliminarDominio() {
+        var id;
+        if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+            id = $("#grillaDominio").jqGrid('getGridParam', 'selrow');
+        }
+        else {
+            id = $("#grillaDominio_sol").jqGrid('getGridParam', 'selrow');
+        }
+        if (id) {
+            miDialogoConfirmacion("¿Desea eliminar Dominio?", fnDominioEliminado, undefined, [id], undefined);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnDominioEliminado(pId) {
+        if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+            $("#grillaDominio").jqGrid('delRowData', pId);
+
+            if ($("#grillaDominio").getGridParam("reccount") > 0) {
+                $("#infoDominioInc").css("display", "none");
+            }
+            else {
+                $("#infoDominioInc").css("display", "block");
+            }
+        }
+        else {
+            $("#grillaDominio_sol").jqGrid('delRowData', pId);
+            if ($("#grillaDominio_sol").getGridParam("reccount") > 0) {
+                $("#infoDominioSol").css("display", "none");
+            }
+            else {
+                $("#infoDominioSol").css("display", "block");
+            }
+        }
+    }
+    /////////////////////////////
+
+    //funciones buscador Tipo
+    function fnListAllLeft_tip() {
+        $("#ulTiposHabilitadas").append($("#ulTiposElegidas").html());
+        $("#ulTiposElegidas").html("");
+    }
+    function fnListLeft_tip() {
+        var listas = $("#ulTiposElegidas .ListaMultiSelected").clone();
+        $(listas).find("span:odd").hide();
+        $(listas).removeClass("ListaMultiSelected");
+        $("#ulTiposHabilitadas").append($(listas).clone());
+        $("#ulTiposElegidas .ListaMultiSelected").remove();
+    }
+    function fnObtenerTipos() {
+
+        var oParametro;
+        oParametro = new PRM_Tipo();
+        oParametro.EsVigente = "1";
+
+        if ($.trim($("#txtBuscarTipo").val()) != "") {
+            oParametro.Nombre = $.trim($("#txtBuscarTipo").val());
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("obtenerTipos", "Usuario")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                var ArrayTipos = $("#grillaTipo").jqGrid('getRowData');
+                for (var i = 0; i < result.length; i++) {
+                    var entro = false;
+                    for (var k = 0; k < ArrayTipos.length; k++) {
+                        if ($.trim(ArrayTipos[k].Nombre).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    for (var n = 0; n < $("#ulTiposElegidas li span:first-child").length; n++) {
+                        if ($.trim($($("#ulTiposElegidas li span:first-child")[n]).text()).toUpperCase() == $.trim(result[i].Nombre).toUpperCase()) {
+                            entro = true;
+                            break;
+                        }
+                    }
+                    if (!entro) {
+                        $("#ulTiposHabilitadas").append('<li id="li_Tipo_' + result[i].IdTipo + '" idTipo="' + result[i].IdTipo + '"><span>' + result[i].Nombre + '</span> <span class="glyphicon glyphicon-ok" aria-hidden="true"></span></li>');
+                    }
+                }
+
+                $("#miDialogoTipo").modal('show');
+                $("#txtBuscarTipo").focus();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnAddTipo() {
+        if ($("#ulTiposElegidas li").length > 0) {
+            $("#miDialogoTipo").modal('hide');
+
+            for (var i = 0; i < $("#ulTiposElegidas li").length; i++) {
+                var oObjeto;
+                oObjeto = new ENT_CINC_Tipo();
+                oObjeto.Nombre = $.trim($($("#ulTiposElegidas li span:first-child")[i]).text());
+                oObjeto.IdTipo = $($("#ulTiposElegidas li")[i]).attr("idTipo");
+
+                var ii = $("#grillaTipo").getGridParam("reccount") + 1;
+                $("#grillaTipo").jqGrid('addRowData', ii, oObjeto);
+            }
+        }
+        else {
+            miAlerta("Alerta", "No hay Tipos que agregar", "glyphicon-info-sign", "#337ab7");
+        }
+    }
+    ///eliminar
+    function fnEliminarTipo() {
+        var id = $("#grillaTipo").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            miDialogoConfirmacion("¿Desea eliminar Tipo?", fnTipoEliminado, undefined, [id], undefined);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnTipoEliminado(pId) {
+        $("#grillaTipo").jqGrid('delRowData', pId);
+    }
+    /////////////////////////////
+
+
+    function fnVerificarExistePerfil(pNombrePerfil) {
+        var existe = false;
+        var ArrayPerfiles = $("#grillaPerfil").jqGrid('getRowData');
+        for (var i = 0; i < ArrayPerfiles.length; i++) {
+            if (ArrayPerfiles[i].Nombre.toUpperCase() == pNombrePerfil) {
+                existe = true;
+                break;
+            }
+        }
+        return existe;
+    }
+
+    function fnValidarFormularioUsuario(pConMensaje) {
+        var ok = true;
+
+        if ($.trim($("#txtNombre").val()) == "") {
+            ok = false;
+            if (pConMensaje) {
+                miAlerta("Alerta", "Ingrese nombre", "glyphicon-info-sign", "#337ab7");
+            }
+            $("#txtNombre").focus();
+        }
+        else {
+            if ($.trim($("#txtApellidos").val()) == "") {
+                ok = false;
+                if (pConMensaje) {
+                    miAlerta("Alerta", "Ingrese apellidos", "glyphicon-info-sign", "#337ab7");
+                }
+                $("#txtApellidos").focus();
+            } else {                
+                if ($.trim($("#txtCorreo").val()) == "") {
+                    ok = false;
+                    if (pConMensaje) {
+                        miAlerta("Alerta", "Ingrese Correo", "glyphicon-info-sign", "#337ab7");
+                    }
+                    $("#txtCorreo").focus();
+                }
+                else{
+                        if (!ValidateEmail($.trim($("#txtCorreo").val()))) {
+                            ok = false;
+                            if (pConMensaje) {
+                                miAlerta("Alerta", "El formato del correo no es válido", "glyphicon-info-sign", "#337ab7");
+                            }
+                            $("#txtCorreo").focus();
+                        }
+                        else if ($.trim($("#txtCorreo").val()) != $.trim($("#txtConfirmarCorreo").val())) {
+                            ok = false;
+                            if (pConMensaje) {
+                                miAlerta("Alerta", "Los correos ingresados no coinciden.", "glyphicon-info-sign", "#337ab7");
+                            }
+                            $("#txtConfirmarCorreo").focus();
+                        }
+                    else {
+                        if ($.trim($("#txtUsuario").val()) == "") {
+                            ok = false;
+                            if (pConMensaje) {
+                                miAlerta("Alerta", "Ingrese usuario", "glyphicon-info-sign", "#337ab7");
+                            }
+                            $("#txtUsuario").focus();
+                        }
+                        else {
+                            if ($.trim($("#txtContrasena").val()) == "") {
+                                ok = false;
+                                if (pConMensaje) {
+                                    miAlerta("Alerta", "Ingrese contraseña", "glyphicon-info-sign", "#337ab7");
+                                }
+                                $("#txtContrasena").focus();
+                            }
+                                else{
+                                    if ($.trim($("#txtContrasena").val()) != $.trim($("#txtConfirmarContrasena").val())) {
+                                        ok = false;
+                                        if (pConMensaje) {
+                                            miAlerta("Usuario", "Las contraseñas ingresadas no coinciden.", "glyphicon-info-sign", "#337ab7");
+                                        }
+                                        $("#txtConfirmarContrasena").focus();
+                                    }
+                            else {
+                                    if ($("#grillaPerfil").getGridParam("reccount") < 1) {
+                                        ok = false;
+                                        if (pConMensaje) {
+                                            miAlerta("Alerta", "Ingrese al menos un perfil", "glyphicon-info-sign", "#337ab7");
+                                        }
+                                    }
+                                    else {
+                                        if (fnVerificarExistePerfil("INCIDENCIAS")) {
+                                            if ($("#grillaBolsa").getGridParam("reccount") < 1) {
+                                                ok = false;
+                                                if (pConMensaje) {
+                                                    miAlerta("Alerta", "Ingrese al menos una bolsa para incidencias", "glyphicon-info-sign", "#337ab7");
+                                                }
+                                            }
+                                        }
+                                        else {
+                                            if (fnVerificarExistePerfil("SOLICITUDES")) {
+                                                if ($("#grillaTipo").getGridParam("reccount") < 1) {
+                                                    ok = false;
+                                                    if (pConMensaje) {
+                                                        miAlerta("Alerta", "Ingrese al menos un tipo para solicitudes", "glyphicon-info-sign", "#337ab7");
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return ok;
+    }
+
+    function fnDesactivarFormulario() {
+
+        $("#txtNombre").attr("readOnly", "readOnly");
+        $("#txtApellidos").attr("readOnly", "readOnly");
+        $("#txtCorreo").attr("readOnly", "readOnly");
+        $("#txtConfirmarCorreo").attr("readOnly", "readOnly");
+        $("#txtUsuario").attr("readOnly", "readOnly");
+        $("#txtContrasena").attr("readOnly", "readOnly");
+        $("#txtConfirmarContrasena").attr("readOnly", "readOnly");
+
+        $("#chkActivarUsuario").attr("disabled", "disabled");
+
+        $("#dvUploadButton").hide();
+
+        $(".btnMiniMant").hide();
+    }
+
+    function fnActivarFormulario() {
+
+        $("#txtNombre").removeAttr("readOnly");
+        $("#txtApellidos").removeAttr("readOnly");
+        $("#txtCorreo").removeAttr("readOnly");
+        $("#txtConfirmarCorreo").removeAttr("readOnly");
+        $("#txtUsuario").removeAttr("readOnly");
+        $("#txtContrasena").removeAttr("readOnly");
+        $("#txtConfirmarContrasena").removeAttr("readOnly");
+
+        $("#chkActivarUsuario").removeAttr("disabled");
+
+        $("#dvUploadButton").show();
+
+        $("#txtNombre").focus();
+
+        $(".btnMiniMant").fadeIn(300);
+    }
+
+    function fnLimpiarFormulario() {
+
+        
+        if (vcFileName != "") {
+            DeleteMiArchivo(vcFileName)
+        }
+
+        $("#txtNombre").val("");
+        $("#txtApellidos").val("");
+        $("#txtCorreo").val("");
+        $("#txtConfirmarCorreo").val("");
+        $("#txtUsuario").val("");
+        $("#txtContrasena").val("");
+        $("#txtConfirmarContrasena").val("");
+        //$("#txtIdUsuario").val("");
+        $("#imgFotoUser").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+
+
+        $("#grillaPerfil").jqGrid("clearGridData", true);
+        $("#grillaBolsa").jqGrid("clearGridData", true);
+        $("#grillaDominio").jqGrid("clearGridData", true);
+        $("#grillaTipo").jqGrid("clearGridData", true);
+        $("#grillaDominio_sol").jqGrid("clearGridData", true);
+
+        $(".infoDominio").css("display", "block");
+
+        $("#ulTap li").removeClass("ulTapSelect");
+        $("#ulTap li h4").removeClass("h4select");
+        $("#ulTap li:first-child").addClass("ulTapSelect");
+        $("#ulTap li:first-child").find("h4").addClass("h4select");
+
+        $("#tapIncidencia").hide();
+        $("#tapSolicitud").hide();
+
+        fnRemoveSupervisor();
+        fnRemoveSupervisorSolicitud();
+    }
+
+    function fnModoMantenimiento() {
+        $(".btnMant").hide();
+        $(".btnRegMant").fadeIn(300);
+    }
+
+    function fnModoLista() {
+        $(".btnRegMant").hide();
+        $(".btnMant").fadeIn(300);
+    }
+
+    function fnbtnCancelar() {
+        $("#txtIdUsuario").val("");
+        fnLimpiarFormulario();
+        fnDesactivarFormulario();
+        fnModoLista();
+        $("#grillaUsuario").trigger("reloadGrid", [{ current: true }]);
+    }
+
+    function fnValidarFormularioVacio() {
+        var estaVacio = true;
+
+        if ($.trim($("#txtNombre").val()) != "") {
+            estaVacio = false;
+        }
+        else {
+            if ($.trim($("#txtApellidos").val()) != "") {
+                estaVacio = false;
+            }
+            else{
+                if ($.trim($("#txtcorreo").val()) != "") {
+                    estaVacio = false;
+                }
+                else{
+                    if ($.trim($("#txtConfirmarCorreo").val()) != "") {
+                        estaVacio = false;
+                    }
+                else {
+                        if ($.trim($("#txtUsuario").val()) != "") {
+                            estaVacio = false;
+                        }
+                        else {
+                            if ($.trim($("#txtContrasena").val()) != "") {
+                                estaVacio = false;
+                            }
+                            else {
+                                if ($.trim($("#txtConfirmarContrasena").val()) != "") {
+                                    estaVacio = false;
+                                }
+                                else {
+                                    if ($("#grillaPerfil").getGridParam("reccount") > 0) {
+                                        estaVacio = false;
+                                    }
+                                    else {
+                                        if (fnVerificarExistePerfil("INCIDENCIAS")) {
+                                            if ($("#grillaBolsa").getGridParam("reccount") > 0) {
+                                                estaVacio = false;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return estaVacio;
+    }
+
+    function fnBtnRegistrarUsuario() {
+        if ($("#txtIdUsuario").val() == "") {
+            fnCrearUsuario()
+        }
+        else {
+            fnEditarUsuario();
+        }
+    }
+
+    function fnEditarUsuario() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+            if (fnValidarFormularioUsuario(true)) {
+                var hizoCambiosIncidencias = 0;
+                var hizoCambiosSolicitudes = 0;
+                var oParametro;
+                oParametro = new ENT_CINC_Usuario();
+
+                oParametro.IdUsuario = datos.IdUsuario;
+                oParametro.Nombres = $.trim($("#txtNombre").val());
+                oParametro.Apellidos = $.trim($("#txtApellidos").val());
+                oParametro.Correo = $.trim($("#txtCorreo").val());
+                oParametro.Usuario = $.trim($("#txtUsuario").val());
+                oParametro.Contrasena = $.trim($("#txtContrasena").val());
+                if ($.trim($("#txtIdSupervisor").val()) != "") {
+                    oParametro.IdSupervisor = $.trim($("#txtIdSupervisor").val());
+                }
+                if ($.trim($("#txtIdSupervisor_sol").val()) != "") {
+                    oParametro.IdSupervisorSolicitud = $.trim($("#txtIdSupervisor_sol").val());
+                }
+                
+
+                oParametro.EsVigente = $("#chkActivarUsuario").prop("checked");
+
+                var ArrayPerfiles = $("#grillaPerfil").jqGrid('getRowData');
+                for (var i = 0; i < ArrayPerfiles.length; i++) {
+                    oParametro.Perfiles.push(new ENT_CINC_Perfil(ArrayPerfiles[i].IdPerfil));
+                }
+
+                if (fnVerificarExistePerfil("INCIDENCIAS") ) {
+
+                    hizoCambiosIncidencias = 1;
+
+                    var ArrayBolsas = $("#grillaBolsa").jqGrid('getRowData');
+                    for (var k = 0; k < ArrayBolsas.length; k++) {
+                        oParametro.Bolsas.push(new ENT_CINC_Bolsa(ArrayBolsas[k].IdBolsa));
+                    }
+
+                    var ArrayDominio = $("#grillaDominio").jqGrid('getRowData');
+                    for (var z = 0; z < ArrayDominio.length; z++) {
+                        oParametro.Dominios.push(new ENT_CINC_Dominio(ArrayDominio[z].IdDominio));
+                    }
+                }
+
+                if (fnVerificarExistePerfil("SOLICITUDES") ) {
+
+                    hizoCambiosSolicitudes = 1;
+
+                    var ArrayTipos = $("#grillaTipo").jqGrid('getRowData');
+                    for (var k = 0; k < ArrayTipos.length; k++) {
+                        oParametro.Tipos.push(ArrayTipos[k].IdTipo);
+                    }
+
+                    var ArrayDominioSol = $("#grillaDominio_sol").jqGrid('getRowData');
+                    for (var z = 0; z < ArrayDominioSol.length; z++) {
+                        oParametro.DominiosSolicitud.push(new ENT_CINC_Dominio(ArrayDominioSol[z].IdDominio));
+                    }
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("EditarUsuario", "Usuario")',
+                    data: "{'pParametros': '" + JSON.stringify(oParametro) + "'," +
+                            "'pCambiosIncidencias': '" + hizoCambiosIncidencias + "'," +
+                            "'pCambiosSolicitudes': '" + hizoCambiosSolicitudes + "'," +
+                            "'pNombreArchivo': '" + vcFileName + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split("|")[0] == "OK") {
+                        //$("#txtNombreUsuario").val($.trim($("#txtNombre").val())// + " " + $.trim($("#txtApellidos").val()));
+                        $("#txtIdUsuario").val("");
+                        fnModoLista();
+                        fnLimpiarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaUsuario").trigger("reloadGrid");
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+    }
+    else {
+        miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+    }
+}
+
+function fnCrearUsuario() {
+
+    if (fnValidarFormularioUsuario(true)) {
+        var oParametro;
+        oParametro = new ENT_CINC_Usuario();
+
+        oParametro.Nombres = $.trim($("#txtNombre").val());
+        oParametro.Apellidos = $.trim($("#txtApellidos").val());
+        oParametro.Usuario = $.trim($("#txtUsuario").val());
+        oParametro.Contrasena = $.trim($("#txtContrasena").val());
+        oParametro.Correo = $.trim($("#txtCorreo").val());
+        if ($.trim($("#txtIdSupervisor").val()) != "")
+        {
+            oParametro.IdSupervisor = $.trim($("#txtIdSupervisor").val());
+        }
+        if ($.trim($("#txtIdSupervisor_sol").val()) != "") {
+            oParametro.IdSupervisorSolicitud = $.trim($("#txtIdSupervisor_sol").val());
+        }
+
+        var ArrayPerfiles = $("#grillaPerfil").jqGrid('getRowData');
+        for (var i = 0; i < ArrayPerfiles.length; i++) {
+            oParametro.Perfiles.push(new ENT_CINC_Perfil(ArrayPerfiles[i].IdPerfil));
+        }
+
+        if (fnVerificarExistePerfil("INCIDENCIAS")) {
+
+            var ArrayBolsas = $("#grillaBolsa").jqGrid('getRowData');
+            for (var k = 0; k < ArrayBolsas.length; k++) {
+                oParametro.Bolsas.push(new ENT_CINC_Bolsa(ArrayBolsas[k].IdBolsa));
+            }
+
+            var ArrayDominio = $("#grillaDominio").jqGrid('getRowData');
+            for (var z = 0; z < ArrayDominio.length; z++) {
+                oParametro.Dominios.push(new ENT_CINC_Dominio(ArrayDominio[z].IdDominio));
+            }
+        }
+
+        if (fnVerificarExistePerfil("SOLICITUDES")) {
+            var ArrayTipos = $("#grillaTipo").jqGrid('getRowData');
+            for (var k = 0; k < ArrayTipos.length; k++) {
+                oParametro.Tipos.push(ArrayTipos[k].IdTipo);
+            }
+
+            var ArrayDominioSol = $("#grillaDominio_sol").jqGrid('getRowData');
+            for (var z = 0; z < ArrayDominioSol.length; z++) {
+                oParametro.DominiosSolicitud.push(new ENT_CINC_Dominio(ArrayDominioSol[z].IdDominio));
+            }
+        }
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("RegistrarUsuario", "Usuario")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'," +
+                    "'pNombreArchivo': '" + vcFileName + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split("|")[0] == "OK") {
+                        //$("#txtNombreUsuario").val($.trim($("#txtNombre").val()) + " " + $.trim($("#txtApellidos").val()));
+                        fnModoLista();
+                        fnLimpiarFormulario();
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaUsuario").trigger("reloadGrid");
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+    }
+
+
+    function fnBtnEliminarUsuario() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+            var miMensaje = "";
+            if (datos.btVig == "True") {
+                miMensaje = "Se inhabilitará usuario " + datos.Nombre + ". ¿Desea inhabilitarlo?"
+            }
+            else {
+                miMensaje = "Se Eliminará usuario " + datos.Nombre + ". ¿Desea eliminarlo?"
+            }
+
+            miDialogoConfirmacion(miMensaje, fnEliminarUsuario);
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnEliminarUsuario() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EliminarUsuario", "Usuario")',
+                data: "{'pIdUsuario': '" + datos.IdUsuario + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split('|')[0] == "OK") {
+                        fnbtnCancelar();
+                        miAlerta("Eliminar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        //$("#grillaUsuario").trigger("reloadGrid");
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje.split("|")[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    //adjuntar Archivo
+    function DeleteMiArchivo(pArchivo) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteArchivo", "Usuario")',
+            data: "{'pNombre': '" + pArchivo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    $('#UploadedFile').html("");
+                    $("#UploadButton").show();
+                    vcFileName = "";
+                    $("#imgFotoUser").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+                }
+                else {
+                    alert("Error al borrar elemento");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+    //////////////////////
+
+    //obtener foto
+    function fnObtenerFotoUsuario() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerFotoUsuario", "Usuario")',
+                data: "{'pIdUsuario': '" + datos.IdUsuario + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        $("#imgFotoUser").attr("src", "@(new Control().ResolveUrl("~/Temp/"))"  + result.Mensaje);
+                    }
+                    else {
+                        $("#imgFotoUser").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" )
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+    //////////////////////
+
+    //obtener supervisor
+    function fnObtenerSupervisor() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            if (datos.IdSupervisor == -1) {
+                $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+                //$("#txtIdSupervisor").val("");
+                $("#txtNombreSupervisor").val("");
+                $("#txtApellidosSupervisor").val("");
+            }
+            else {
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerSupervisor", "Usuario")',
+                    data: "{'pIdSupervisor': '" + datos.IdSupervisor + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+
+                        $("#txtIdSupervisor").val(result.IdUsuario);
+                        $("#txtNombreSupervisor").val(result.Nombres);
+                        $("#txtApellidosSupervisor").val(result.Apellidos);
+                        if (result.Foto.Nombre == "") {
+                            $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+                        }
+                        else {
+                            $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Temp/"))" + result.Foto.Nombre);
+                        }
+
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+    function fnObtenerSupervisorSolicitud() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            if (datos.IdSupervisorSolicitud == -1) {
+                $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+                $("#txtIdSupervisor_sol").val("");
+                $("#txtNombreSupervisor_sol").val("");
+                $("#txtApellidosSupervisor_sol").val("");
+            }
+            else {
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerSupervisor", "Usuario")',
+                    data: "{'pIdSupervisor': '" + datos.IdSupervisorSolicitud + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+
+                        $("#txtIdSupervisor_sol").val(result.IdUsuario);
+                        $("#txtNombreSupervisor_sol").val(result.Nombres);
+                        $("#txtApellidosSupervisor_sol").val(result.Apellidos);
+                        if (result.Foto.Nombre == "") {
+                            $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+                        }
+                        else {
+                            $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Temp/"))" + result.Foto.Nombre);
+                        }
+                        
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+    //////////////////////
+
+    function fnObtenerSupervisores() {
+        $("#grillaSupervisor").jqGrid("clearGridData", true);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ObtenerSupervisores", "Usuario")',
+            data: "{'pNombres': '" + $.trim($("#txtBuscarSupervisor").val()) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                for (var i = 0; i < result.length; i++) {
+                    if (result[i].IdUsuario != $("#txtIdUsuario").val() && result[i].IdUsuario != $("#txtIdSupervisor").val()) {
+                        var ii = $("#grillaSupervisor").getGridParam("reccount") + 1;
+                        $("#grillaSupervisor").jqGrid('addRowData', ii, result[i]);
+                    }
+                }
+
+                $("#miDialogoSupervisor").modal('show');
+                $("#txtBuscarSupervisor").focus();
+                disenoResize();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnObtenerSupervisoresSolicitud() {
+        $("#grillaSupervisor").jqGrid("clearGridData", true);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ObtenerSupervisoresSolicitud", "Usuario")',
+            data: "{'pNombres': '" + $.trim($("#txtBuscarSupervisor").val()) + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                for (var i = 0; i < result.length; i++) {
+                    if (result[i].IdUsuario != $("#txtIdUsuario").val() && result[i].IdUsuario != $("#txtIdSupervisor").val()) {
+                        var ii = $("#grillaSupervisor").getGridParam("reccount") + 1;
+                        $("#grillaSupervisor").jqGrid('addRowData', ii, result[i]);
+                    }
+                }
+
+                $("#miDialogoSupervisor").modal('show');
+                $("#txtBuscarSupervisor").focus();
+                disenoResize();
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+
+    function fnAddSupervisor() {
+
+        var id = $("#grillaSupervisor").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaSupervisor").jqGrid('getRowData', id);
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerSupervisor", "Usuario")',
+                    data: "{'pIdSupervisor': '" + datos.IdUsuario + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+
+                        if ($("#tapIncidencia").hasClass("ulTapSelect")) {
+                            $("#txtIdSupervisor").val(result.IdUsuario);
+                            $("#txtNombreSupervisor").val(result.Nombres);
+                            $("#txtApellidosSupervisor").val(result.Apellidos);
+                            if (result.Foto.Nombre == "") {
+                                $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg") )")
+                            }
+                            else {
+                                $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Temp/") )" + result.Foto.Nombre);
+                            }
+                        }
+                        else {
+                            $("#txtIdSupervisor_sol").val(result.IdUsuario);
+                            $("#txtNombreSupervisor_sol").val(result.Nombres);
+                            $("#txtApellidosSupervisor_sol").val(result.Apellidos);
+                            if (result.Foto.Nombre == "") {
+                                $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg") )")
+                            }
+                            else {
+                                $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Temp/") )" + result.Foto.Nombre);
+                            }
+                        }
+
+                        $("#miDialogoSupervisor").modal('hide');
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+            });
+
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnEliminarSupervisor() {
+
+        if ($.trim($("#txtIdSupervisor").val()) == "-1" || $.trim($("#txtIdSupervisor").val()) == "") {
+            miAlerta("Alerta", "No hay supervisor asignado", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+        else {
+
+            miDialogoConfirmacion("¿Desea retirar supervisor?", fnRemoveSupervisor);
+        }
+    }
+
+    function fnEliminarSupervisorSolicitud() {
+
+        if ($.trim($("#txtIdSupervisor_sol").val()) == "-1" || $.trim($("#txtIdSupervisor_sol").val()) == "") {
+            miAlerta("Alerta", "No hay supervisor asignado", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+        else {
+
+            miDialogoConfirmacion("¿Desea retirar supervisor?", fnRemoveSupervisorSolicitud);
+        }
+    }
+
+    function fnRemoveSupervisor() {        
+        $("#txtIdSupervisor").val("");
+        $("#txtNombreSupervisor").val("");
+        $("#txtApellidosSupervisor").val("");
+        $("#imgFotoSupervisor").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+    }
+
+    function fnRemoveSupervisorSolicitud() {
+        $("#txtIdSupervisor_sol").val("");
+        $("#txtNombreSupervisor_sol").val("");
+        $("#txtApellidosSupervisor_sol").val("");
+        $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")        
+    }
+
+    function fnRemoveSupervisorSolicitud() {
+        $("#txtIdSupervisor_sol").val("");
+        $("#txtNombreSupervisor_sol").val("");
+        $("#txtApellidosSupervisor_sol").val("");
+        $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))")
+    }
+
+    function fnObtenerPerfilSolicitud() {
+        var id = $("#grillaUsuario").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaUsuario").jqGrid('getRowData', id);
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerPerfilSolicitud", "Usuario")',
+                data: "{'pIdUsuario': '" + datos.IdUsuario + "'," +
+                        "'pIdSupervisor': '" + datos.IdSupervisorSolicitud + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+
+                    $("#txtIdSupervisor_sol").val(result[0].IdUsuario);
+                    $("#txtNombreSupervisor_sol").val(result[0].Nombres);
+                    $("#txtApellidosSupervisor_sol").val(result[0].Apellidos);
+
+
+                    if (result[0].Foto.Nombre == "") {
+                        $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg") )")
+                    }
+                    else {
+                        $("#imgFotoSupervisor_sol").attr("src", "@(new Control().ResolveUrl("~/Temp/") )" + result[0].Foto.Nombre);
+                    }
+
+                    if (result[1].length > 0) {
+                        for (var i = 0; i < result[1].length; i++) {
+                            var ii = $("#grillaDominio_sol").getGridParam("reccount") + 1;
+                            $("#grillaDominio_sol").jqGrid('addRowData', ii, result[1][i]);
+                        }
+                        $('#grillaDominio_sol').jqGrid('setSelection', 1);
+                        $("#infoDominioSol").css("display", "none");
+                    }
+                    else {
+                        $("#infoDominioSol").css("display", "block");
+                    }
+
+                    for (var i = 0; i < result[2].length; i++) {
+                        var ii = $("#grillaTipo").getGridParam("reccount") + 1;
+                        $("#grillaTipo").jqGrid('addRowData', ii, result[2][i]);
+                    }
+                    $('#grillaTipo').jqGrid('setSelection', 1);
+
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+</script>
+
+

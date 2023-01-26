@@ -1,0 +1,8 @@
+*********************************************************************************
+* 	LEAME.TXT	PCSISTEL.NET
+*********************************************************************************
+
+En la carpeta procesos se almacenaran los archivos XML que forman parte de la 
+comunicación de los módulos "Proceso de llamadas" y el "Mensajería".
+
+VisualSoft ©2012

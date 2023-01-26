@@ -1,0 +1,164 @@
+﻿
+body {
+    background-color: white !important;
+}
+/*body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}*/
+
+.ui-state-active-TAB {
+    border: 1px solid #C0D9E7 !important;
+    background: #fff;
+    /*font-weight: 600;*/
+    color: #1D5987;
+}
+
+#General {
+    width: 100%; /*1024px;*/
+    height: 840px;
+    margin: auto;
+    border: 0px dotted gray;
+}
+
+#pnlTap {
+    float: left;
+    height: 38px;
+    border: 0px dotted gray;
+    z-index: 100;
+    margin-top: 15px;
+    margin-bottom: -3px;
+}
+
+#pnlCuerpo {
+    height: 805px;
+    border-radius: 5px;
+    z-index: 2;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#pnlCuerpoFloat {
+    float: left;
+    /*border: 1px solid skyblue;*/
+    /*border-radius: 5px;*/
+    z-index: 2;
+    /*box-shadow:3px 3px 3px gray;*/
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+
+.AnchoTotal {
+    /*width: 90%;  /*1024px;*/
+    width: 100%;  
+}
+
+.AnchoMitad {
+    width: 510px;
+}
+
+.LimpiarFloat {
+    clear: both;
+}
+
+.CuerpoTap {
+    float: left;
+    border-bottom: 2px solid #FCFDFD;
+    overflow: hidden;
+    z-index: 100;
+    margin-left: 8px;
+    height: 38px;
+}
+
+    .CuerpoTap:hover {
+        cursor: pointer;
+    }
+
+.esPrimerTap {
+    margin-left: 10px !important;
+}
+
+.Tap {
+    margin-bottom: -10px;
+    height: 30px;
+    float: left;
+    border: 1px solid skyblue;
+    border-radius: 3px;
+    padding: 5px 5px 0px 5px;
+    border: 0px solid skyblue;
+}
+
+.TapNoSelecionado {
+    /*background-color: rgb(240,240,240);*/
+    background-color: #DBE3EC;
+    height: 29px;
+    color: #1D5987;
+}
+
+.bordeIzquierda {
+    /*border-left: 1px solid skyblue;*/
+}
+
+.bordeDerecha {
+    /*border-right: 1px solid skyblue;*/
+}
+
+.bordeArriba {
+    /*border-top: 1px solid skyblue;*/
+}
+
+.bordeAbajo {
+    /*border-bottom: 1px solid skyblue;*/
+}
+
+.Titulo {
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    font-size: medium;
+}
+
+.subTitulo {
+    text-align: left;
+    vertical-align: middle;
+    width: 100%;
+    height: 14px;
+    border: 0px !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    background: #FFFFFF !important; /*F3F5F9*/ 
+    margin-left: 20px;
+}
+
+.FlotarIzquierda {
+    float: left;
+}
+
+.DivControls {
+    width: 99%;
+    height: 25px;
+}
+
+.esNoVisible {
+    display: none;
+}
+
+.textTab {
+    /*font-family: Arial;*/
+    font-size: 13px;
+}
+
+.dvImdVerde {
+    width: 17px;
+    height: 17px;
+    /*
+    border:0px dotted gray; 
+    float:left; 
+    margin-top:-3px; */
+    background-image: url('Common/Images/Semaforos/Verde_16x16.png');
+    background-repeat: no-repeat;
+}
+
+.SinScroll table {
+    overflow: hidden;
+}

@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout33.cshtml";
+}
+
+<!-- LOGIN FORM -->
+<!--===================================================-->
+<div class="cls-content">
+    <div class="cls-content-sm panel">
+        <div class="" style="">
+            <img src="@Url.Content("~/Content/images/Logo_PMS.png")" style="width: 200px; margin-top: 15px;" />
+            <hr />
+        </div>
+        <div class="panel-body" style="margin-top: -20px;">
+            <div class="mar-ver pad-btm">
+                <h1 class="h3">PCSistel Móvil 3.3</h1>
+                <p>Inicie sesión con su cuenta</p>
+            </div>
+            <form action="index.html">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Usuario" autofocus="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="checkbox pad-btm text-left">
+                    <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox">
+                    <label for="demo-form-checkbox">Recodar</label>
+                </div>
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Ingresar</button>
+            </form>
+        </div>
+
+        <div class="pad-all">
+            <a href="pages-password-reminder.html" class="btn-link mar-rgt">¿Olvidó su contraseña?</a>
+            <a href="pages-register.html" class="btn-link mar-lft"></a>
+
+
+        </div>
+    </div>
+</div>

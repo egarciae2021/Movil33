@@ -1,0 +1,50 @@
+﻿<table cellspacing='0' rules='all' border='1' id='tbl_M_ORGA-May/2019-Total' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #66CCFF;'>&nbsp;Código</td><td style='background-color: #66CCFF;'>&nbsp;Nombre Organización</td><td style='background-color: #66CCFF;'>&nbsp;Cargo Fijo</td><td style='background-color: #66CCFF;'>&nbsp;Voz</td><td style='background-color: #66CCFF;'>&nbsp;SMS</td><td style='background-color: #66CCFF;'>&nbsp;Datos</td><td style='background-color: #66CCFF;'>&nbsp;Larga Distancia</td><td style='background-color: #66CCFF;'>&nbsp;Otros</td><td style='background-color: #66CCFF;'>&nbsp;Descuentos</td><td style='background-color: #66CCFF;'>&nbsp;Impuesto</td><td style='background-color: #66CCFF;'>&nbsp;Importe Base</td><td style='background-color: #66CCFF;'>&nbsp;Total</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001004</td><td>&nbsp;AGROSUPER COM. ALIM. LTDA</td><td>23.896.598</td><td>72.374</td><td>119.522</td><td>83.309</td><td>3.958</td><td>41.263</td><td>-1.171.582</td><td>2.164.956</td><td>0</td><td>25.210.398</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001005</td><td>&nbsp;AGROSUPER S.A.</td><td>6.146.635</td><td>33.160</td><td>45.794</td><td>0</td><td>0</td><td>19.972</td><td>-368.964</td><td>691.134</td><td>0</td><td>6.567.731</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001013</td><td>&nbsp;PROD. AVES</td><td>3.471.520</td><td>407.344</td><td>64.489</td><td>0</td><td>0</td><td>25.863</td><td>-328.461</td><td>284.327</td><td>0</td><td>3.925.083</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001007</td><td>&nbsp;EXP.LOS FIORDOS LTDA.</td><td>3.698.510</td><td>62.081</td><td>51.736</td><td>0</td><td>0</td><td>294</td><td>-411.345</td><td>131.924</td><td>0</td><td>3.533.200</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001011</td><td>&nbsp;SOPRAVAL S.A.</td><td>3.631.122</td><td>48.170</td><td>35.735</td><td>0</td><td>0</td><td>12.446</td><td>-365.904</td><td>178.144</td><td>0</td><td>3.539.714</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001014</td><td>&nbsp;PROD. CERDOS</td><td>2.087.333</td><td>4.253</td><td>89.250</td><td>0</td><td>0</td><td>529</td><td>-144.081</td><td>177.161</td><td>0</td><td>2.214.445</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001012</td><td>&nbsp;AGROF. CORNECHE</td><td>1.569.911</td><td>1.961</td><td>135.648</td><td>892</td><td>0</td><td>0</td><td>-272.375</td><td>118.404</td><td>0</td><td>1.554.442</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001009</td><td>&nbsp;FAENADORA SAN VCTE. LTDA</td><td>629.761</td><td>3.761</td><td>8.949</td><td>0</td><td>0</td><td>0</td><td>-12.090</td><td>172.225</td><td>0</td><td>802.605</td>
+	</tr>
+	<tr>
+		<td>&nbsp;1002</td><td>&nbsp;AREA DESCONOCIDA</td><td>1.314.101</td><td>1.314</td><td>3.612</td><td>0</td><td>0</td><td>1.798</td><td>-71.307</td><td>138.060</td><td>0</td><td>1.387.579</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001001</td><td>&nbsp;AGRICOLA SUPER LTDA</td><td>1.439.270</td><td>775</td><td>12.642</td><td>0</td><td>0</td><td>0</td><td>-311.910</td><td>66.283</td><td>0</td><td>1.207.059</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001008</td><td>&nbsp;FAENADORA LO MIRANDA LTDA</td><td>749.576</td><td>13.822</td><td>23.251</td><td>0</td><td>0</td><td>0</td><td>-26.157</td><td>141.130</td><td>0</td><td>901.623</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001002</td><td>&nbsp;AGRO TANTEHUE LTDA</td><td>1.113.796</td><td>0</td><td>14.910</td><td>0</td><td>0</td><td>0</td><td>-124.485</td><td>50.176</td><td>0</td><td>1.054.397</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001006</td><td>&nbsp;ELAB. ALIM. DOÃ?IHUE.LTDA</td><td>644.288</td><td>4.030</td><td>2.117</td><td>0</td><td>0</td><td>59</td><td>-14.508</td><td>110.448</td><td>0</td><td>746.434</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001010</td><td>&nbsp;PROC.DE ALIMENTOS DEL SUR</td><td>644.774</td><td>4.296</td><td>6.676</td><td>0</td><td>0</td><td>59</td><td>-8.463</td><td>128.679</td><td>0</td><td>776.021</td>
+	</tr>
+	<tr>
+		<td>&nbsp;001003</td><td>&nbsp;AGROCOMERCIAL AS LTDA</td><td>255.446</td><td>576</td><td>3.650</td><td>0</td><td>0</td><td>0</td><td>-13.206</td><td>33.202</td><td>0</td><td>279.667</td>
+	</tr>
+</table>

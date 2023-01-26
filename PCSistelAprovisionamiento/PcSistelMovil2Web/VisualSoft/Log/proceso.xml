@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<CVisorXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Filas>
+    <Fila xsi:nil="true" />
+    <Fila>
+      <tipoIcono>IconoError</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2012-03-12T08:10:33.2586629-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>System.IO.FileLoadException: No se puede cargar el archivo o ensamblado 'PCSistel.IDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=293baba9788e00b4' ni una de sus dependencias. La definición del manifiesto del ensamblado no coincide con la referencia al ensamblado. (Excepción de HRESULT: 0x80131040)
+Nombre de archivo: 'PCSistel.IDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=293baba9788e00b4'
+   en CompAuditoria.Auditoria.Procesos.ProcesaAuditoria.set_Tabla(String Value)
+   en Proceso.FrmPrincipal.FrmPrincipal_Load(Object sender, EventArgs e) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Proceso\FrmPrincipal.vb:línea 190
+
+AVS: El registro del enlace de ensamblado está desactivado.
+Para habilitar el registro de errores del enlace de ensamblado, establezca el valor de Registro [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) como 1.
+Nota: existe una disminución del rendimiento asociada registro de errores del enlace de ensamblado.
+Para desactivar esta característica, elimine el valor de Registro [HKLM\Software\Microsoft\Fusion!EnableLog].
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoError</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2012-03-12T08:10:44.1408389-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>System.IO.FileLoadException: No se puede cargar el archivo o ensamblado 'PCSistel.IDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=293baba9788e00b4' ni una de sus dependencias. La definición del manifiesto del ensamblado no coincide con la referencia al ensamblado. (Excepción de HRESULT: 0x80131040)
+Nombre de archivo: 'PCSistel.IDAL, Version=1.0.0.0, Culture=neutral, PublicKeyToken=293baba9788e00b4'
+   en CompAuditoria.Auditoria.Procesos.ProcesaAuditoria.set_Tabla(String Value)
+   en Proceso.FrmPrincipal.FrmPrincipal_Load(Object sender, EventArgs e) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Proceso\FrmPrincipal.vb:línea 190
+
+AVS: El registro del enlace de ensamblado está desactivado.
+Para habilitar el registro de errores del enlace de ensamblado, establezca el valor de Registro [HKLM\Software\Microsoft\Fusion!EnableLog] (DWORD) como 1.
+Nota: existe una disminución del rendimiento asociada registro de errores del enlace de ensamblado.
+Para desactivar esta característica, elimine el valor de Registro [HKLM\Software\Microsoft\Fusion!EnableLog].
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <fechahora>2012-03-29T09:45:19.1355885-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>System.ApplicationException: El nombre de objeto 'M_NUME_ESPE' no es válido. ---&gt; System.Data.SqlClient.SqlException: El nombre de objeto 'M_NUME_ESPE' no es válido.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   en System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   en System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   en System.Data.SqlClient.SqlDataReader.get_MetaData()
+   en System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   en System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   en System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   en System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   en System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   en PCSistel.SQLServerDAL.SqlHelper.FillDataset(SqlConnection connection, SqlTransaction transaction, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, SqlParameter[] commandParameters) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\SQLServerDAL\DataAccessBlock.vb:línea 2101
+   en PCSistel.SQLServerDAL.SqlHelper.FillDataset(SqlConnection connection, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, SqlParameter[] commandParameters) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\SQLServerDAL\DataAccessBlock.vb:línea 1917
+   en PCSistel.SQLServerDAL.SqlHelper.FillDataset(String connectionString, CommandType commandType, String commandText, DataSet dataSet, String[] tableNames, SqlParameter[] commandParameters) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\SQLServerDAL\DataAccessBlock.vb:línea 1807
+   en PCSistel.SQLServerDAL.CDatos.CosteaLLamada(String strPais, String strCiudad, Int32 pinCodCliente, Int32 pinCodOri, Int32 pinCodOriDef, Int32 pinCodOpe, Int32 pinCodSer, Int32 pinCodLocal, DateTime pdtFecha, String pstrNumero, Int32 pintDuracion, String strGlobal) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\SQLServerDAL\CDatos.vb:línea 1195
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en PCSistel.SQLServerDAL.CDatos.CosteaLLamada(String strPais, String strCiudad, Int32 pinCodCliente, Int32 pinCodOri, Int32 pinCodOriDef, Int32 pinCodOpe, Int32 pinCodSer, Int32 pinCodLocal, DateTime pdtFecha, String pstrNumero, Int32 pintDuracion, String strGlobal) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\SQLServerDAL\CDatos.vb:línea 1204
+   en PCSistel.BLL.CDatos.CosteaLLamada(String strPais, String strCiudad, Int32 pinCodCliente, Int32 pinCodOri, Int32 pinCodOriDef, Int32 pinCodOpe, Int32 pinCodSer, Int32 pinCodLocal, DateTime pdtFecha, String pstrNumero, Int32 pintDuracion, String strGlobal) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Factory\BLL\CDatos.vb:línea 243
+   en PCSistel.Drivers.Kernel.Kernel.AlmacenaSaliente(DateTime pdtFecha, String pstrRuta, String pstrTroncal, String pstrCodExt, String pstrCodusr, String pstrNumero, String pstrCodOrigenPais, String pstrCodOrigenCiudad, Int32 pintDuracion, Int32 pintDuracionTotal, String pstrTexto, String pstrTransf_A, String pstrTransf_DE, String pstrEvento, String pstrTimbradas, Int32 pintTimbradas, String pstrSupervision) en E:\PCSistel75\Fuentes\PCSistel 7.5 v2\Componentes\Drivers\Kernel\Kernel.vb:línea 6785
+165999458        A 1561 Ruben Zorrilla                                    Outgoing                 P 001  2012-01-08  12:35:00 00:00:08 0    ST     7125000                       M 00:00:00                </descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2013-08-09T12:53:35.4013046-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>Error de Conexión - Intentando Conectarse....2Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2013-08-09T13:01:53.5155625-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>Error de Conexión - Intentando Conectarse....3Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2013-08-09T13:04:03.7802109-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>Error de Conexión - Intentando Conectarse....4Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir una conexión con SQL Server)
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2014-08-23T04:37:10.7622566-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>Error de Conexión - Intentando Conectarse....1Error en el nivel de transporte al enviar la solicitud al servidor. (provider: Proveedor de TCP, error: 0 - Se ha forzado la interrupción de una conexión existente por el host remoto.)
+</descripcion>
+    </Fila>
+    <Fila>
+      <tipoIcono>IconoPrecaucion</tipoIcono>
+      <tipo>Error</tipo>
+      <fechahora>2014-08-27T09:12:25.2727057-05:00</fechahora>
+      <categoria>Aplicación</categoria>
+      <descripcion>Error de Conexión - Intentando Conectarse....1Error en el nivel de transporte al enviar la solicitud al servidor. (provider: Proveedor de TCP, error: 0 - Se ha forzado la interrupción de una conexión existente por el host remoto.)
+</descripcion>
+    </Fila>
+  </Filas>
+</CVisorXML>

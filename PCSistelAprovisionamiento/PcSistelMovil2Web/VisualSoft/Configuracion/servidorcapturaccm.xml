@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<CServidorCapturaCCMXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NombreServidor>.</NombreServidor>
+  <NombreBaseDatos>R4P</NombreBaseDatos>
+  <Usuario>sa</Usuario>
+  <Contrasena>sa</Contrasena>
+  <Local>false</Local>
+  <Directorio>C:\DATA\BCP</Directorio>
+  <Backup>C:\DATA\bkp</Backup>
+  <Activado>false</Activado>
+  <PeriodoFechaInicial />
+  <PeriodoFechaFinal />
+</CServidorCapturaCCMXML>

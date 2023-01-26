@@ -1,0 +1,94 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.BE.ENT_CINC_Usuario
+
+
+@for (int z = 0; z < Model.Modulos.Count; z++)
+{
+    <div id="menu-@Model.Modulos[z].IdModulo" class="dvOpcion" style="background:#d9edf7; ">
+        <ul>
+    @for (int k = 0; k < Model.Modulos[z].Opciones.Count ; k++)
+    {
+            <li>
+                @Html.ActionLink(Model.Modulos[z].Opciones[k].Nombre,Model.Modulos[z].Opciones[k].Url != "" ? Model.Modulos[z].Opciones[k].Url.Split('/')[1] : "" ,Model.Modulos[z].Opciones[k].Url != "" ? Model.Modulos[z].Opciones[k].Url.Split('/')[0]:"")
+            </li>
+    }
+        </ul>
+    </div>
+}
+
+<div id="dvMenu" class="container alert-info" style="border-top:1px solid white">
+    <div class="row">
+        <div class="col-xs-24 col-sm-24 col-md-24 col-lg-offset-2 col-lg-20" style="border:0px dotted gray; overflow:hidden; ">
+
+            @for (int z = 0; z < Model.Modulos.Count ; z++)
+            {
+                <div class="dvModulo" id="mod-@Model.Modulos[z].IdModulo"  ) >
+                    @if (Model.Modulos[z].Url == "")
+                    {
+                        @Model.Modulos[z].Nombre <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    }
+                    else
+                    {
+                        @Html.ActionLink(Model.Modulos[z].Nombre,Model.Modulos[z].Url != "" ? Model.Modulos[z].Url.Split('/')[1] : "" ,Model.Modulos[z].Url != "" ? Model.Modulos[z].Url.Split('/')[0]:"")
+                    }
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript"> 
+
+    $(function () {
+        fnEventos();
+    });
+
+    function fnEventos() {
+
+        $(".dvModulo").hover(function () {
+            var id = $(this).attr("id").split('-')[1];
+            if ($("#menu-" + id).html().length > 44) {
+
+                $(this).find("span").removeClass("glyphicon-chevron-down");
+                $(this).find("span").addClass("glyphicon-chevron-up");
+
+                $("#menu-" + id).css("min-width", $(this).outerWidth() + 40);
+                $("#menu-" + id).css("position", "absolute");
+
+                $("#menu-" + id).css("left", $(this).offset().left);
+                $("#menu-" + id).css("top", $(this).offset().top + $(this).outerHeight() - 1);
+                $(".dvModulo").css("position", "inherit");
+                $("#menu-" + id).show();
+            }
+
+
+        }, function () {
+            var id = $(this).attr("id").split('-')[1];
+            if ($("#menu-" + id).html().length > 44) {
+                $(this).find("span").removeClass("glyphicon-chevron-up");
+                $(this).find("span").addClass("glyphicon-chevron-down");
+                $("#menu-" + id).hide();
+            }
+        });
+
+        $(".dvOpcion").hover(function () {
+            var id = $(this).attr("id").split('-')[1];
+            $("#mod-" + id).find("span").removeClass("glyphicon-chevron-down");
+            $("#mod-" + id).find("span").addClass("glyphicon-chevron-up");
+            $("#mod-" + id).addClass("hoverModulo");
+
+            $(this).show();
+        }, function () {
+            var id = $(this).attr("id").split('-')[1];
+
+            $("#mod-" + id).find("span").removeClass("glyphicon-chevron-up");
+            $("#mod-" + id).find("span").addClass("glyphicon-chevron-down");
+            $("#mod-" + id).removeClass("hoverModulo");
+            $(this).hide();
+        });
+    }
+
+    function goToUrl(pUrl) {
+        alert(pUrl);
+    }
+
+</script>

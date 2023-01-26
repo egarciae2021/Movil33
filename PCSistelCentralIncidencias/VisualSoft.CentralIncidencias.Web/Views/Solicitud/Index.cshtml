@@ -1,0 +1,1752 @@
+﻿@using System.Web.Script.Serialization;
+@using VisualSoft.PCSistelMovil.CentralIncidencias.BE;
+
+@model VisualSoft.PCSistelMovil.CentralSolicitudes.MVVM.MVVM_Solicitud
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+    string Usuario = ((ENT_CINC_Usuario)System.Web.HttpContext.Current.Session["SesionUsuario"]).Usuario;
+    string pathSignalRPCSistel = System.Configuration.ConfigurationManager.AppSettings["pathSignalRPCSistel"];
+    if (pathSignalRPCSistel.EndsWith("/"))
+    {
+        pathSignalRPCSistel = pathSignalRPCSistel.Substring(0, pathSignalRPCSistel.Length - 1);
+    }
+}
+
+@section RenderHeader {
+
+    @*<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">*@
+
+    <script src="~/Common/Scripts/ajaxupload.js"></script>
+    <script src="~/Common/Scripts/moment.js"></script>
+
+    <script type="text/javascript" src="@pathSignalRPCSistel/Scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script type="text/javascript" src="@pathSignalRPCSistel/signalr/hubs"></script>
+}
+
+<style type="text/css">
+    #tbTecnicosAsignar > tbody tr:nth-child(odd) {
+        background: #F8F8F8;
+    }
+
+    #btnBorrarFechaInicio:hover, #btnBorrarFechaFin:hover {
+        cursor: pointer;
+    }
+
+    #miPopOverTecnicos > .miDvTecnico:nth-child(odd) {
+        background: #F8F8F8;
+    }
+
+    .table tr td {
+        border: 0px !important;
+    }
+
+    #dvDetalleGrilla h4 {
+        font-weight: bold;
+        color: #2e6e9e;
+        font-size: 12px;
+        font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    }
+
+    .groupUmbral {
+        width: 99%;
+        height: 15px;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    .celdaUmbral {
+        width: 30%;
+        margin: 1px;
+        height: 12px;
+        float: left;
+        box-shadow: 0px 0px 3px black;
+        border-radius: 5px;
+    }
+
+    .celdaUmbralOptimo {
+        background: #5cb85c;
+    }
+
+    .celdaUmbralAceptable {
+        background: #ec971f;
+    }
+
+    .celdaUmbralCritico {
+        background: #c9302c;
+    }
+
+    .groupOptimo div:nth-child(1) {
+        /*display:block;*/
+        background: #5cb85c;
+    }
+
+    .groupOptimo div:nth-child(2) {
+        /*display:none;*/
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    .groupOptimo div:nth-child(3) {
+        /*display:none;*/
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    .groupAceptable div:nth-child(1) {
+        background: #5cb85c;
+    }
+
+    .groupAceptable div:nth-child(2) {
+        background: #ec971f;
+    }
+
+    .groupAceptable div:nth-child(3) {
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    .groupCritico div:nth-child(1) {
+        background: #5cb85c;
+    }
+
+    .groupCritico div:nth-child(2) {
+        background: #ec971f;
+    }
+
+    .groupCritico div:nth-child(3) {
+        background: #c9302c;
+    }
+
+    .groupNuetral div:nth-child(1) {
+        display: block;
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    .groupNuetral div:nth-child(2) {
+        display: block;
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    .groupNuetral div:nth-child(3) {
+        display: block;
+        background: rgb(200,200,200);
+        background: rgba(200,200,200,.4);
+    }
+
+    #miFormulario tr td {
+        padding: 3px 5px;
+    }
+
+
+
+
+
+    #dvDialogoNotas ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        #dvDialogoNotas ul li {
+            display: inline;
+            list-style-type: none;
+            padding: 0px;
+            margin: 5px;
+            float: left;
+        }
+
+    .miHoverAjaxUpdate {
+        color: #337ab7;
+        cursor: pointer !important;
+    }
+
+    #UploadedFile li:hover {
+        cursor: pointer;
+    }
+
+
+    .NotaTecnico {
+        width: 710px;
+        margin: 5px 0px 0px 10px;
+        float: left;
+    }
+
+        .NotaTecnico > div:first-child {
+            width: 680px;
+            float: right;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        .NotaTecnico table:first-child {
+            margin: 0px 0px 5px 0px !important;
+            font-weight: lighter !important;
+            color: #31708f;
+        }
+
+        .NotaTecnico div:nth-child(2) {
+            float: left;
+            width: 680px;
+        }
+
+        .NotaTecnico .glyphicon {
+            color: red;
+            font-weight: bolder;
+        }
+
+    .NotaUsuario {
+        width: 710px;
+        margin: 5px 0px 0px 10px;
+        float: left;
+    }
+
+        .NotaUsuario > div:first-child {
+            width: 680px;
+            float: left;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        .NotaUsuario table:first-child {
+            margin: 0px 0px 5px 0px !important;
+            font-weight: lighter !important;
+            color: #31708f;
+        }
+
+        .NotaUsuario div:nth-child(2) {
+            float: left;
+            width: 680px;
+        }
+
+        .NotaUsuario .glyphicon {
+            color: red;
+            font-weight: bolder;
+        }
+
+    .btn .glyphicon {
+        margin-right: 5px;
+    }
+
+    .tdAdjunto *:hover {
+        cursor: pointer;
+        color: #B30000;
+    }
+
+    .dvEsPrivado td {
+        background-color: #f2dede !important;
+    }
+</style>
+
+<div id="dvDialogoCerrarSolicitud" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" style="width: 500px;">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="height: 40px;">
+                <span style="font-weight: bold;" id="spanCulminarAnular"></span>
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control" id="txtConclucionForm" cols="20" rows="7"></textarea>
+            </div>
+            <div class="modal-footer" style="padding: 15px !important; margin-top: 10px;">
+
+                <button style="float:right;" id="btnRegistrarCerrarSolicitud" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dvDialogoNotas" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" style="width: 750px;">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="height: 40px;">
+                <span style="font-weight: bold;">Notas</span>
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div id="dvMensajes" class="modal-body" style="height: 430px; overflow-y: scroll; padding: 0px !important;">
+            </div>
+            <div class="modal-footer" style="height: 100px; padding: 2px !important; margin-top: 10px;">
+                <ul>
+                    <li>
+                        <input id="txtNota" class="form-control" type="text" placeholder="Escribir nota..." style="width: 630px;" />
+                    </li>
+                    <li>
+                        <button id="btnRegistrarNota" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Enviar</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li style="width: 380px;">
+                        <div id="UploadStatus"></div>
+                        <div id="UploadButton" align="center" class="imgBtn" style="text-align: left;">
+                            <table>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                                    </td>
+                                    <td style="width: 10px;"></td>
+                                    <td>Adjuntar Archivo</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div id="UploadedFile" style="display: none;"></div>
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <input id="chkMostrarPrivados" type="checkbox" />
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <small>Mostrar solo notas Privadas</small>
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <input id="chkPrivado" type="checkbox" />
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <small>Enviar nota privada</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dvDialogoTecnicos" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width:700px !important;">
+            <div class="modal-header alert-info" style="font-weight: bold;">
+                Técnicos a cargo
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body" style="height:500px; overflow-y:scroll; padding:0px !important;">
+                <table id="tbTecnicosAsignar" class="table">
+                    <thead style="background:#EEF7FB; font-weight:lighter; color:gray;">
+                        <tr>
+                            <td>
+                                Usuario
+                            </td>
+                            <td>
+                                Nombres y apellidos
+                            </td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#5cb85c;"></span>Óptimo</td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#f0ad4e;"></span>Aceptable</td>
+                            <td><span class="glyphicon glyphicon-flag" aria-hidden="true" style="color:#d9534f;"></span>Critico</td>
+                            <td>Total</td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miPopOverTecnicos" style="width: 300px; border: 1px solid #e7e7e7; padding: 2px; border-radius: 3px; z-index: 99; background: white;">
+    @if (Model.Tecnicos.Count > 1)
+    {
+        for (int i = 0; i < Model.Tecnicos.Count; i++)
+        {
+            <div midata="@i" id="miItem-@i" class="miDvTecnicoMenu miDvTecnico FlotarIzquierda" style="margin:1px 0px;  background:@(i % 2 > 0 ? "#F8F8F8" : "white"); display:@(i == 0 ? "none" : "block")">
+                <div class="FlotarIzquierda">
+                    @if (Model.Tecnicos[i].Foto.Tamano > 0)
+                    {
+                        <img src="@(new Control().ResolveUrl("~/Temp/" + Model.Tecnicos[i].Foto.Nombre))" height="100%" width="100%" />
+                    }
+                    else
+                    {
+                        <img src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" height="100%" width="100%" />
+                    }
+                </div>
+                <div class="FlotarIzquierda ">
+                    @Model.Tecnicos[i].Nombres @Model.Tecnicos[i].Apellidos
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        }
+    }
+</div>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <div midata="0" id="middlTecnico" class="miDvTecnico" style="position: relative; top: -25px; left: 0px;">
+                                <div class="FlotarIzquierda">
+                                    @if (Model.Tecnicos[0].Foto.Tamano > 0)
+                                    {
+                                        <img src="@(new Control().ResolveUrl("~/Temp/" + Model.Tecnicos[0].Foto.Nombre))" height="100%" width="100%" />
+                                    }
+                                    else
+                                    {
+                                        <img src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" height="100%" width="100%" />
+                                    }
+                                </div>
+                                <div class="FlotarIzquierda ">
+                                    @Model.Tecnicos[0].Nombres @Model.Tecnicos[0].Apellidos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Código Solicitud</span>
+                            <input type="text" id="txtCodigoSolicitud" style="margin-left: -100px; height:30px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Dominio </span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlDominio">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Tecnicos[0].Dominios.Count; i++)
+                                {
+                                    <option value="@Model.Tecnicos[0].Dominios[i].IdDominio">@Model.Tecnicos[0].Dominios[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipo </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlTipo">
+                                @for (int i = 0; i < Model.Tecnicos[0].Tipos.Count; i++)
+                                {
+                                    <option value="@Model.Tecnicos[0].Tipos[i].IdTipo">@Model.Tecnicos[0].Tipos[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado </span>
+                            <span style="margin-left: -36px; font-size: 12px;">Grupos</span>
+                            <select class="MiSelect" style="margin-left: 5px;" id="ddlGrupoEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="0">Sin Asignar</option>
+                                <option value="1">Abiertos</option>
+                                <option value="2">Cerrados</option>
+                            </select>
+                            <select class="MiSelect" style="margin-left: 5px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Estados.Count; i++)
+                                {
+                                    <option value="@Model.Estados[i].Codigo ">@Model.Estados[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Fecha </span>
+                            <span style="margin-left: -36px; font-size: 12px;">Inicio</span>
+                            <input type="text" id="txtFechaInicio" class="MiDateTimePicker" style="height:30px;" />
+                            <img id="btnBorrarFechaInicio" src="~/Common/Images/Borrar.png" />
+                            <span style="font-size: 12px; margin-left: 10px;">Fin</span>
+                            <input type="text" id="txtFechaFin" class="MiDateTimePicker" style="height:30px;" />
+                            <img id="btnBorrarFechaFin" src="~/Common/Images/Borrar.png" />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaSolicitud" class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+            <table id="grillaSolicitud" class="miGrilla"></table>
+            <div id="pagerGrillaSolicitud">
+            </div>
+        </div>
+        <div id="dvDetalleGrilla" class="col-xs-24 col-sm-24 col-md-24 col-lg-24">
+            <div style="float:right; padding:10px 0px; background: #F8F8F8; margin-bottom:10px;">
+                <button id="btnAsignar" type="button" class="btn btn-warning FlotarIzquierda btnAccion" style="">
+                    <img src="~/Common/Images/Solicitud/asignar.png" /> Asignar
+                </button>
+                <button id="btnNotas" type="button" class="btn btn-primary FlotarIzquierda btnAccion" style="margin-left:5px;">
+                    <img src="~/Common/Images/Solicitud/note.png" /> Notas
+                </button>
+                <button id="btnCulminarSolicitud" type="button" class="btn btn-success FlotarIzquierda btnAccion" style="margin-left:5px;">
+                    <img src="~/Common/Images/Solicitud/solicitudOK.png" height="16" width="16" /> Culminar
+                </button>
+                <button id="btnAnularSolicitud" type="button" class="btn btn-danger FlotarIzquierda btnAccion" style="margin-left:5px;">
+                    <img src="~/Common/Images/Solicitud/solicitudFAIL.png" height="16" width="16" /> Anular
+                </button>
+            </div>
+            <br /><br /><br />
+            <table class="table">
+                <tr>
+                    <td class="col-xs-2">
+                        <h4>Fecha registro</h4>
+                    </td>
+                    <td class="col-xs-2">
+                        <input id="txtFechaRegistro" type="text" class="form-control" style="width:88px !important; height:30px;" maxlength="10" />
+                    </td>
+                    <td class="col-xs-2">
+                        <h4>Tiempo transcurrido</h4>
+                    </td>
+                    <td class="col-xs-2">
+                        <input id="txtTiempoTranscurrido" type="text" class="form-control" style="width:50px !important;; height:30px; text-align:right;" />
+                    </td>
+                    <td class="col-xs-2"><h4>Umbral:</h4></td>
+                    <td id="tdFlag" class="col-xs-2"><span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Optimo</td>
+                </tr>
+                <tr>
+                    <td class="col-xs-2"><h4>Código:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtCodigo" type="text" class="form-control" style=" height:30px;" />
+                    </td>
+                    <td class="col-xs-2"><h4>Código Usuario:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtCodigoCliente" type="text" class="form-control" style="height:30px;" />
+                    </td>
+                    <td class="col-xs-2"><h4>Usuario:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtNombreCliente" type="text" class="form-control" style="height:30px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-2"><h4>Empresa:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtEmpresa" type="text" class="form-control" style="height:30px;" />
+                    </td>
+                    <td class="col-xs-2"><h4>Tipo:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtTipo" type="text" class="form-control" style="height:30px;" />
+                    </td>
+                    <td class="col-xs-2"><h4>Estado:</h4></td>
+                    <td class="col-xs-2">
+                        <input id="txtEstado" type="text" class="form-control" style="height:30px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-1"><h4>Descripción:</h4></td>
+                    <td colspan="5">
+                        @*<textarea id="txtDescripcion" cols="20" rows="3" class="form-control" style="height:50px;"></textarea>*@
+                        <input id="txtDescripcion" type="text" class="form-control" style="height:50px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-1"><h4>Motivo:</h4></td>
+                    <td colspan="5">
+                        <textarea id="txtMotivo" cols="20" rows="3" class="form-control" style="height:50px;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-xs-1"><h4>Conclusión:</h4></td>
+                    <td colspan="5">
+                        <textarea id="txtConclucion" cols="20" rows="3" class="form-control" style="height:50px;"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-xs-2">
+                        <h4>Umbral Proceso</h4>
+                    </td>
+                    <td class="col-xs-2">
+                        <div id="UmbralActivacion" class="groupUmbral groupOptimo conPopOverTop">
+                            <div class="celdaUmbral celdaUmbralOptimo"></div>
+                            <div class="celdaUmbral celdaUmbralAceptable"></div>
+                            <div class="celdaUmbral celdaUmbralCritico"></div>
+                            <div class="InfoPop" style="display:none;">
+                                <div style="float:left;">
+                                    Umbral de tiempo de asignación de solicitud
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-xs-2" ">
+                        <h4>Umbral Resuelto</h4>
+                    </td>
+                    <td class="col-xs-2">
+                        <div id="UmbralResolucion" class="groupUmbral groupCritico conPopOverTop">
+                            <div class="celdaUmbral celdaUmbralOptimo"></div>
+                            <div class="celdaUmbral celdaUmbralAceptable"></div>
+                            <div class="celdaUmbral celdaUmbralCritico"></div>
+                            <div class="InfoPop" style="display:none;">
+                                <div style="float:left;">
+                                    Umbral de tiempo de resolución de solicitud
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="col-xs-2">
+                        <h4>Umbral total</h4>
+                    </td>
+                    <td class="col-xs-2">
+                        <div id="UmbralTotal" class="groupUmbral groupNuetral conPopOverTop">
+                            <div class="celdaUmbral celdaUmbralOptimo"></div>
+                            <div class="celdaUmbral celdaUmbralAceptable"></div>
+                            <div class="celdaUmbral celdaUmbralCritico"></div>
+                            <div class="InfoPop" style="display:none;">
+                                <div style="float:left;">
+                                    Umbral de tiempo total de solicitud
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var MiModeloSolicitud;
+    var NombreEstado = "";
+    var CodigoEstado = "";
+
+    function PRM_Solicitud()
+    {
+        this.IdSolicitud = -1;
+        this.CodigoSolicitud = "";
+        this.IdDominio = -1;
+        this.IdTipo = -1;
+        this.FechaInicio = "";
+        this.FechaFin = "";
+        this.CodigoEstado = "";
+        this.IdTecnico = -1;
+    }
+
+    function PRM_NotaSolicitud()
+    {
+        this.IdSolicitud = -1;
+        this.Nota = "";
+        this.TipoPerfil = -1;
+        this.NombreUsuario = "";
+
+        this.EsPrivado = false;
+        this.LeidoTecnico = false;
+        this.LeidoSupervisor = false;
+
+        this.IdSolicitudCliente = -1;
+        this.IdDominio = -1;
+    }
+
+    function PRM_SolicitudCerrar()
+    {
+        this.IdSolicitud = -1;
+        this.IdSolicitudCliente = -1;
+        this.IdDominio = -1;
+        this.IdUsuario = -1;
+        this.NombreUsuario = "";
+        this.CodigoEstado = "";
+        this.Estado = "";
+        this.Conclucion = "";
+    }
+
+
+    var ChatHubSignal;
+
+    $(function () {
+        MiModeloSolicitud = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+        fnDiseno();
+        fnEventosSolicitud();
+        fnGrillaSolicitud();
+
+
+        $("#txtDescripcion").kendoEditor({ tools: [ ],resizable: {content: true,toolbar: false}});
+        $($("#txtDescripcion").data("kendoEditor").body).attr('contenteditable',false);
+        $("#txtDescripcion").data("kendoEditor").body.style.color = "#555555";
+        $("#txtDescripcion").data("kendoEditor").body.style.bordercolor = "#555555";
+
+        $("#txtMotivo").kendoEditor({ tools: [ ],resizable: {content: true,toolbar: false}});
+        $($("#txtMotivo").data("kendoEditor").body).attr('contenteditable',false);
+        $("#txtMotivo").data("kendoEditor").body.style.color = "#555555";
+        $("#txtMotivo").data("kendoEditor").body.style.bordercolor = "#555555";
+
+        $("#txtConclucion").kendoEditor({tools: [ ],resizable: {content: true,toolbar: false}});
+        $($("#txtConclucion").data("kendoEditor").body).attr('contenteditable',false);
+        $("#txtConclucion").data("kendoEditor").body.style.color = "#555555";
+        $("#txtConclucion").data("kendoEditor").body.style.bordercolor = "#555555";
+
+
+    });
+    function fnEventosSolicitud() {
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        $(document).click(function(){
+            $("#miPopOverTecnicos").fadeOut(200);
+        });
+
+        $("#txtFechaRegistro, #txtTiempoTranscurrido, #txtCodigo, #txtCodigoCliente, #txtNombreCliente, #txtEmpresa, #txtTipo, #txtEstado, #txtDescripcion, #txtMotivo, #txtConclucion").live("keypress", function (e) {
+            return false;
+        });
+
+        $("#ddlDominio, #ddlTipo, #ddlGrupoEstado, #ddlEstado").change(function(){
+            $("#grillaSolicitud").trigger("reloadGrid");
+        });
+        $("#txtFechaInicio").change(function () {
+            $("#txtFechaFin").datepicker("option", "minDate", $("#txtFechaInicio").datepicker("getDate"));
+            $("#grillaSolicitud").trigger("reloadGrid");
+        });
+
+        $("#txtFechaFin").change(function () {
+            $("#txtFechaInicio").datepicker("option", "maxDate", $("#txtFechaFin").datepicker("getDate"));
+            $("#grillaSolicitud").trigger("reloadGrid");
+        });
+
+        $('#txtCodigoSolicitud').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaSolicitud").trigger("reloadGrid");
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+        $("#middlTecnico").click(function (e) {
+            $("#miPopOverTecnicos").css("position", "absolute");
+
+            $("#miPopOverTecnicos").css("left", $("#middlTecnico").offset().left);
+            //$("#miPopOverTecnicos").css("top", $("#middlTecnico").offset().top + $($(".miCajonGroupBox")[0]).height());
+            $("#miPopOverTecnicos").css("top", $("#middlTecnico").offset().top + 60);
+
+            $("#miPopOverTecnicos").fadeIn(200);
+
+            e.stopPropagation();
+        });
+
+        $(".miDvTecnicoMenu").click(function(){
+            var index = $(this).attr("miData");
+            var select = $("#middlTecnico").attr("miData");
+            $("#miItem-"+select).show();
+            fnActualizarByTecnico(index);
+        });
+
+        $("#ddlGrupoEstado").change(function(){
+            $("#ddlEstado").html("");
+            $("#ddlEstado").append("<option value='-1'>--Todos--</option>");
+            if ($(this).val() == "-1") {
+                for (var i = 0; i < MiModeloSolicitud.Estados.length; i++) {
+                    $("#ddlEstado").append("<option value='"+ MiModeloSolicitud.Estados[i].Codigo +"'>"+MiModeloSolicitud.Estados[i].Nombre+"</option>");
+                }
+            }
+            else{
+                if ($(this).val() == "1") {
+                    for (var i = 0; i < MiModeloSolicitud.Estados.length; i++) {
+                        if (MiModeloSolicitud.Estados[i].Codigo == 'PRO') {
+                            $("#ddlEstado").append("<option value='"+ MiModeloSolicitud.Estados[i].Codigo +"'>"+MiModeloSolicitud.Estados[i].Nombre+"</option>");
+                        }
+                    }
+                }
+                else if($(this).val() == "0"){
+                    for (var i = 0; i < MiModeloSolicitud.Estados.length; i++) {
+                        if (MiModeloSolicitud.Estados[i].Codigo == 'PEN') {
+                            $("#ddlEstado").append("<option value='"+ MiModeloSolicitud.Estados[i].Codigo +"'>"+MiModeloSolicitud.Estados[i].Nombre+"</option>");
+                        }
+                    }
+                }
+                else
+                {
+                    for (var i = 0; i < MiModeloSolicitud.Estados.length; i++) {
+                        if (MiModeloSolicitud.Estados[i].Codigo == 'ANU' || MiModeloSolicitud.Estados[i].Codigo == 'CUL') {
+                            $("#ddlEstado").append("<option value='"+ MiModeloSolicitud.Estados[i].Codigo +"'>"+MiModeloSolicitud.Estados[i].Nombre+"</option>");
+                        }
+                    }
+                }
+            }
+        });
+
+        $("#btnAsignar").click(function(){
+
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                if (datos.CodigoEstado != "PEN" ) {
+                    miAlerta("Alerta", "Solo se puede asignar solicitudes pendientes", "glyphicon-exclamation-sign", "#f0ad4e");
+                    return;
+                }
+
+                var miIndex = $("#middlTecnico").attr("midata");
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerTecnicosAsignar", "Solicitud")',
+                    data: "{'pIdUsurio':'" + MiModeloSolicitud.Tecnicos[miIndex].IdUsuario + "'," +
+                        "'pIdtipo': '" + datos.IdTipo + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#tbTecnicosAsignar > tbody").html("");
+                        for (var i = 0; i < result.length; i++) {
+
+                            if (result[i].Usuario.Foto.Tamano > 0) {
+                                $("#tbTecnicosAsignar > tbody").append('<tr><td><div style="width:43px; height:50px; border-radius:3px; overflow:hidden; box-shadow:0px 0px 5px gray;"> <img src="@(new Control().ResolveClientUrl("~/Temp/"))'+ result[i].Usuario.Foto.Nombre +'" height="100%" width="100%" /> </div></td><td>'+result[i].Usuario.Nombres + ' ' + result[i].Usuario.Apellidos +'</td><td>' + result[i].CantidadOptimo +'</td><td>' + result[i].CantidadAceptable +'</td><td>' + result[i].CantidadCritico +'</td><td>' + result[i].CantidadTotal +'</td><td><button miData="'+result[i].Usuario.IdUsuario+'" type="button" class="btn btn-default btn-lg btnAsignar" style="float:right; "><span class="glyphicon glyphicon-save" aria-hidden="true" style="color:#5cb85c"></span></button></td></tr>');
+                            }
+                            else
+                            {
+                                $("#tbTecnicosAsignar > tbody").append('<tr><td><div style="width:43px; height:50px; border-radius:3px; overflow:hidden; box-shadow:0px 0px 5px gray;"> <img src="@(new Control().ResolveClientUrl("~/Common/Images/"))Silueta.jpg" height="100%" width="100%" /> </div></td><td>'+result[i].Usuario.Nombres + ' ' + result[i].Usuario.Apellidos +'</td><td>' + result[i].CantidadOptimo +'</td><td>' + result[i].CantidadAceptable +'</td><td>' + result[i].CantidadCritico +'</td><td>' + result[i].CantidadTotal +'</td><td><button miData="'+result[i].Usuario.IdUsuario+'" type="button" class="btn btn-default btn-lg btnAsignar" style="float:right; "><span class="glyphicon glyphicon-save" aria-hidden="true" style="color:#5cb85c"></span></button></td></tr>');
+                            }
+
+                        }
+                        $("#dvDialogoTecnicos").modal('show');
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+
+            }
+            else {
+                miAlerta("Registro", "Seleccione un registro", "", "#FFCC66");
+            }
+        });
+
+        $(".btnAsignar").live("click",function(){
+            $("#dvDialogoTecnicos").modal('hide');
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var idTecnico = $(this).attr("miData");
+                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                if (datos.CodigoEstado != "PEN" ) {
+                    miAlerta("Alerta", "Solo se puede asignar solicitudes pendientes", "glyphicon-exclamation-sign", "#f0ad4e");
+                    return;
+                }
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("RegistrarAsignarTicket", "Solicitud")',
+                    data: "{'pIdUsuario':'" + idTecnico + "'," + //Tamaño de pagina
+                           "'pIdSolicitud': '" + datos.IdSolicitud + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+
+                        if (result.Success && result.Mensaje.split('|')[0] == "OK") {
+                            miAlerta("Asignar Solicitud", result.Mensaje.split('|')[1], "", "#5cb85c");
+                            $("#grillaSolicitud").trigger("reloadGrid", [{ current: true }]);
+                        }
+                        else{
+                            miAlerta("Asignar Solicitud", result.Mensaje, "", "#d9534f");
+                        }
+
+
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+
+            }
+            else {
+                miAlerta("Registro", "Seleccione un registro", "", "#FFCC66");
+            }
+        });
+
+        $("#btnNotas").click(function(){
+
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                $("#dvDialogoNotas").modal('show');
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+        });
+        $("#btnRegistrarNota").click(function(){
+            if ($.trim($("#txtNota").val()) != "") {
+                fnRegistrarNota();
+            }
+            else
+            {
+                miAlerta("Alerta", "Ingrese nota", "glyphicon-exclamation-sign", "#f0ad4e");
+                $("#txtNota").focus();
+            }
+
+        });
+
+
+        $('#dvDialogoNotas').on('hidden.bs.modal', function () {
+            try {
+                var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                    var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+                    ChatHubSignal.server.salirGrupo(datos.IdDominio);
+                }
+            } catch (e) {
+            }
+        });
+
+        $('#dvDialogoNotas').on('shown.bs.modal', function (e) {
+
+            try {
+                var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                    var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+                    ChatHubSignal.server.ingresarGrupo(datos.IdDominio);
+                }
+            } catch (e) {
+            }
+
+            fnReiniciarModalNotas();
+            fnObtenerNotas();
+        })
+
+        $("#chkMostrarPrivados").change(function(){
+            $("#chkPrivado").prop("checked" , $(this).prop("checked"));
+            if ($(this).prop("checked")) {
+                $("#chkPrivado").attr("disabled","disabled");
+                $(".dvEsPublico").hide();
+            }
+            else
+            {
+                $("#chkPrivado").removeAttr("disabled");
+                $(".dvEsPublico").show();
+            }
+            $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 300);
+
+
+        });
+
+        $("#btnCulminarSolicitud").click(function(){
+            $("#txtConclucionForm").val("");
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                if (datos.CodigoEstado != "PRO") {
+                    miAlerta("Alerta", "Solo se pueden cerrar las solicitudes EN PROCESO", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+                else
+                {
+                    fnCerrarSolicitud("CUL","Culminar");
+                }
+
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+        });
+
+        $("#btnAnularSolicitud").click(function(){
+            $("#txtConclucionForm").val("");
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                if (datos.CodigoEstado != "PRO") {
+                    miAlerta("Alerta", "Solo se pueden cerrar las solicitudes EN PROCESO", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+                else
+                {
+                    fnCerrarSolicitud("ANU","Anulado");
+                }
+
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+        });
+
+        $("#btnBorrarFechaInicio").click(function(){
+            $("#txtFechaInicio").val("");
+            $("#grillaSolicitud").trigger("reloadGrid");
+        });
+
+        $("#btnBorrarFechaFin").click(function(){
+            $("#txtFechaFin").val("");
+            $("#grillaSolicitud").trigger("reloadGrid");
+        });
+
+        $("#btnRegistrarCerrarSolicitud").click(function(){
+            fnRegistrarCerrarSolicitud();
+        });
+
+        var upload = new AjaxUpload('#UploadButton', {
+            action: '@Url.Action("SetArchivo", "Ticket")',
+            hoverClass:'miHoverAjaxUpdate',
+            onComplete: function (file, response) {
+                //alert(response);
+                //$("<div class='imgBtn' style='margin-top:1px; height:21px;'><img src='../../Common/Images/remove.png' onclick=\"DeleteFile('" + response + "')\"/>&nbsp;&nbsp;&nbsp;<span id='filesubido' style='text-decoration:underline;' nombre='" + response + "'>" + response + "</span></div>").appendTo('#UploadedFile');
+                vcFileName = response;
+                $("#UploadedFile").append('<div nombre="'+response+'"><ul><li onclick="DeleteMiArchivo(\''+response+'\')"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:red;"></span></li><li onclick="GetMiArchivo(\''+response+'\')"" >'+response+'</li></ul></div>');
+                $("#UploadButton").hide();
+                $("#UploadedFile").fadeIn(300);
+
+            },
+            onSubmit: function (file, ext) {
+                if (!(ext && /^(txt|doc|docx|xls|xlsx|pdf|jpg|png)$/i.test(ext))) {
+                    miAlerta("Alerta", 'Formato inválido', "glyphicon-exclamation-sign", "#f0ad4e");
+                    return false;
+                }
+            }
+        });
+        $(upload._input).css("z-index", "99999999");
+    }
+
+    function fnReiniciarModalNotas() {
+        $(".esOrigenEscalamiento").show();
+        $("#chkMostrarPrivados").prop("checked",false);
+        $("#chkPrivado").prop("checked",false);
+        $("#chkPrivado").removeAttr("disabled");
+        $('#UploadedFile').html("");
+        $("#UploadButton").show();
+        vcFileName = "";
+        $("#txtNota").val("");
+        $("#dvDialogoNotas .modal-body").html("");
+    }
+    function fnObtenerNotas() {
+        var datos;
+        var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+            if (datos.CodigoEstado == "ANU" || datos.CodigoEstado == "CUL" || datos.CodigoEstado == "PEN") {
+                $("#dvDialogoNotas .modal-footer").hide();
+            }
+            else
+            {
+                $("#dvDialogoNotas .modal-footer").show();
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerNotas", "Solicitud")',
+                data: "{'pIdSolicitud':'"  + datos.IdSolicitud + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    fnPintarNotas(result);
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else
+        {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            return;
+        }
+    }
+    function fnPintarNotas(pNotas) {
+        $("#dvDialogoNotas .modal-body").html("");
+
+        for (var i = 0; i < pNotas.length; i++) {
+            $("#dvDialogoNotas .modal-body").append(pNotas[i].Html);
+        }
+
+        $('#UploadedFile').html("");
+        $("#UploadButton").show();
+        vcFileName = "";
+
+        $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 300);
+    }
+    function getChatFile(pIdSolicitud, pIdNota,pNombreArchivo) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetArchivoNotaSolicitud", "Solicitud")',
+            data: "{'pIdSolicitud':'" + pIdSolicitud + "'," +
+                    "'pIdNota': '" + pIdNota + "'," +
+                    "'pNombreArchivo': '" + pNombreArchivo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    window.open('@Url.Content("~/Temp/")' + result.Data.Nombre + '.' + result.Data.Extencion ,'_blank');
+
+                }
+                else
+                {
+                    miAlerta("Alerta", "Error al obtener Archivo", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+
+    }
+
+    function fnDiseno() {
+        var ancho = 0;
+        for (var i = 0; i < $("#miPopOverTecnicos > .miDvTecnico").length ; i++) {
+            if ($($("#miPopOverTecnicos > .miDvTecnico")[i]).width() > ancho) {
+                ancho = $($("#miPopOverTecnicos > .miDvTecnico")[i]).width() + 15;
+            }
+        }
+        $("#miPopOverTecnicos > .miDvTecnico").width(ancho - 8);
+        $("#miPopOverTecnicos").width(ancho);
+        $("#miPopOverTecnicos").css("display", "none");
+    }
+    function disenoResize() {
+        $("#grillaSolicitud").setGridWidth($("#dvGrillaSolicitud").width() - 10);
+
+        $($("#dvGrillaSolicitud .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaSolicitud .ui-jqgrid-bdiv")[0]).width() + 5);
+    }
+
+    function fnActualizarByTecnico(index) {
+        $("#miItem-" + index).hide();
+        $("#middlTecnico").attr("miData", index);
+
+        if (MiModeloSolicitud.Tecnicos[index].Foto.Tamano > 0) {
+            $("#middlTecnico > div:nth-child(1) > img:first-child").attr("src", "@(new Control().ResolveUrl("~/Temp/"))"  + MiModeloSolicitud.Tecnicos[index].Foto.Nombre);
+        }
+        else
+        {
+            $("#middlTecnico > div:nth-child(1) > img:first-child").attr("src","@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))");
+        }
+
+        $("#middlTecnico > div:nth-child(2)").html("");
+        $("#middlTecnico > div:nth-child(2)").append(MiModeloSolicitud.Tecnicos[index].Nombres + " " + MiModeloSolicitud.Tecnicos[index].Apellidos);
+
+        $("#ddlDominio").html("");
+        $("#ddlDominio").append("<option value='-1'>--Todos--</option>");
+        for (var i = 0; i < MiModeloSolicitud.Tecnicos[index].Dominios.length ; i++) {
+            $("#ddlDominio").append("<option value='"+ MiModeloSolicitud.Tecnicos[index].Dominios[i].IdDominio +"'>"+MiModeloSolicitud.Tecnicos[index].Dominios[i].Nombre+"</option>");
+        }
+
+        $("#ddlTipo").html("");
+        //$("#ddlTipo").append("<option value='-1'>--Todos--</option>");
+        for (var i = 0; i < MiModeloSolicitud.Tecnicos[index].Tipos.length  ; i++) {
+            $("#ddlTipo").append("<option value='"+ MiModeloSolicitud.Tecnicos[index].Tipos[i].IdTipo +"'>"+MiModeloSolicitud.Tecnicos[index].Tipos[i].Nombre+"</option>");
+        }
+
+        $("#grillaSolicitud").trigger("reloadGrid");
+    }
+
+
+    function fnGrillaSolicitud() {
+
+        $("#grillaSolicitud").jqGrid({
+            datatype: function () {
+
+                var oParametro
+                oParametro = new PRM_Solicitud();
+
+                if ($.trim($("#txtCodigoSolicitud").val()) != "" ) {
+                    oParametro.CodigoSolicitud =  $.trim($("#txtCodigoSolicitud").val());
+                }
+
+                if ($("#ddlDominio").val() != "-1") {
+                    oParametro.IdDominio = $("#ddlDominio").val();
+                }
+
+                if ($("#ddlTipo").val() != "-1") {
+                    oParametro.IdTipo = $("#ddlTipo").val();
+                }
+
+                if ($.trim($("#txtFechaInicio").val()) != "" ) {
+                    var miFechaInicio = $("#txtFechaInicio").datepicker("getDate");
+                    if (miFechaInicio != undefined) {
+                        var DiaInicio = miFechaInicio.getDate().toString();
+                        var MesInicio = (parseInt(miFechaInicio.getMonth()) + 1).toString();
+                        var AnoInicio = miFechaInicio.getFullYear().toString();
+
+                        if (DiaInicio.length < 2)
+                        { DiaInicio = "0" + DiaInicio; }
+
+                        if (MesInicio.length < 2)
+                        { MesInicio = "0" + MesInicio; }
+
+                        oParametro.FechaInicio = AnoInicio + MesInicio + DiaInicio;
+                    }
+                }
+
+                if ($.trim($("#txtFechaFin").val()) != "" ) {
+                    miFechaFin = $("#txtFechaFin").datepicker("getDate");
+
+                    if (miFechaFin != undefined) {
+
+                        var DiaFin = miFechaFin.getDate().toString();
+                        var MesFin = (parseInt(miFechaFin.getMonth()) + 1).toString();
+                        var AnoFin = miFechaFin.getFullYear().toString();
+
+                        if (DiaFin.length < 2)
+                        { DiaFin = "0" + DiaFin; }
+
+                        if (MesFin.length < 2)
+                        { MesFin = "0" + MesFin; }
+
+                        oParametro.FechaFin = AnoFin + MesFin + DiaFin;
+                    }
+                }
+
+                if ($("#ddlGrupoEstado").val() == "-1" ) {
+                    if ($("#ddlEstado").val() != "-1") {
+                        oParametro.CodigoEstado = $("#ddlEstado").val()
+                    }
+                    else
+                    {
+                        oParametro.CodigoEstado = "|PEN|,|PRO|,|ANU|,|CUL|";
+                    }
+                }
+                else
+                {
+                    if ($("#ddlGrupoEstado").val() == "0") {
+                        if ($("#ddlEstado").val() != "-1") {
+                            oParametro.CodigoEstado = "|"+  $("#ddlEstado").val() + "|";
+                        }
+                        else
+                        {
+                            oParametro.CodigoEstado = "|PEN|";
+                        }
+                    }
+                    else if($("#ddlGrupoEstado").val() == "1"){
+                        if ($("#ddlEstado").val() != "-1") {
+                            oParametro.CodigoEstado = "|"+  $("#ddlEstado").val() + "|";
+                        }
+                        else
+                        {
+                            oParametro.CodigoEstado = "|PRO|";
+                        }
+                    }
+                    else{
+                        if ($("#ddlEstado").val() != "-1") {
+                            oParametro.CodigoEstado = "|"+ $("#ddlEstado").val() + "|";
+                        }
+                        else
+                        {
+                            oParametro.CodigoEstado = "|CUL|,|ANU|";
+                        }
+                    }
+                }
+
+
+                var miIndex = $("#middlTecnico").attr("midata");
+                oParametro.IdUsuario = MiModeloSolicitud.Tecnicos[miIndex].IdUsuario;
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetSolicitud", "Solicitud")',
+                    data: "{'inPagTam':'" + $('#grillaSolicitud').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                        "'inPagAct':'" + $('#grillaSolicitud').getGridParam("page") + "'," + //FiltroRegistro
+                        "'vcOrdCol':'" + $('#grillaSolicitud').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                        "'vcTipOrdCol':'" + $('#grillaSolicitud').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc
+                        "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaSolicitud")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "IdSolicitud"
+            },
+            colModel: [
+            { name: '', index: 'color', label: '', hidden: false, width: 29, align: 'center', sortable: false, resizable: false,
+                formatter: function (value, options, rData) { return CrearColor(rData[26]); }
+            },
+            { name: 'IdSolicitud', index: 'IdSolicitud', label: 'IdSolicitud', width: "50px", hidden: true },
+            { name: 'CodigoSolicitud', index: 'CodigoSolicitud', label: 'Código Solicitud', width: "90px", align:'center' },
+            { name: 'IdSolicitudCliente', index: 'IdSolicitudCliente', label: 'IdSolicitudCliente', width: "50px", hidden: true },
+            { name: 'CodigoSolicitudCliente', index: 'CodigoSolicitudCliente', label: 'CodigoSolicitudCliente', width: "50px", hidden: true },
+            { name: 'IdDominio', index: 'IdDominio', label: 'IdDominio', width: "50px", hidden: true },
+            { name: 'NombreDominio', index: 'NombreDominio', label: 'Empresa', width: "150px", align:'center'},
+            { name: 'IdCliente', index: 'IdCliente', label: 'IdCliente', width: "50px", hidden: true },
+            { name: 'NombreCliente', index: 'NombreCliente', label: 'Usuario', width: "150px" },
+            { name: 'CodigoEstado', index: 'CodigoEstado', label: 'CodigoEstado', width: "50px", hidden: true },
+            { name: 'NombreEstado', index: 'NombreEstado', label: 'Estado', width: "100px", align:'center' },
+            { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+            { name: 'NombreTipo', index: 'NombreTipo', label: 'Tipo', width: "100px", align:'center'},
+            { name: 'IdUsuarioTecnico', index: 'IdUsuarioTecnico', label: 'IdUsuarioTecnico', width: "50px", hidden: true },
+            { name: 'NombreUsuarioTecnico', index: 'NombreUsuarioTecnico', label: 'NombreUsuarioTecnico', width: "50px", hidden: true },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "300px" },
+            { name: 'Motivo', index: 'Motivo', label: 'Motivo', width: "50px", hidden: true },
+            { name: 'Conclucion', index: 'Conclucion', label: 'Conclusion', width: "50px", hidden: true },
+            { name: 'FechaRegistro', index: 'FechaRegistro', label: 'Fecha Registro', width: "100px", align:'center' },
+            { name: 'FechaActivo', index: 'FechaActivo', label: 'FechaActivo', width: "50px", hidden: true },
+            { name: 'FechaCierre', index: 'FechaCierre', label: 'FechaCierre', width: "50px", hidden: true },
+            { name: 'HorasActivacion', index: 'HorasActivacion', label: 'HorasActivacion', width: "50px", hidden: true },
+            { name: 'UmbralActivacion', index: 'UmbralActivacion', label: 'UmbralActivacion', width: "50px", hidden: true },
+            { name: 'HorasResolucion', index: 'HorasResolucion', label: 'HorasResolucion', width: "50px", hidden: true },
+            { name: 'UmbralResuelto', index: 'UmbralResuelto', label: 'UmbralResuelto', width: "50px", hidden: true },
+            { name: 'HorasTotal', index: 'HorasTotal', label: 'Tiempo Total', width: "60px" , align: 'center'},
+            { name: 'UmbralTotal', index: 'UmbralTotal', label: 'UmbralTotal', width: "50px", hidden: true  }
+            //,{ name: 'Descripcion', index: 'Descripcion2', label: 'Descripción', width: "330px" }
+            ],
+            pager: "#pagerGrillaSolicitud",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "170px",
+            //height: "100%",
+            emptyrecords: "No hay solicitudes que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+                var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                }
+                else {
+                    $('#grillaSolicitud').jqGrid('setSelection', 1);
+                }
+
+                id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+
+                if (id) {
+                    fnMostrarDetalleSolicitud();
+                }
+            },
+            beforeSelectRow: function (rowid, e) {
+                fnSelectedGrillaSolicitud([rowid, e]);
+            }
+        }).navGrid("#pagerGrillaSolicitud", { edit: false, add: false, search: false, del: false });
+
+
+        $(".ui-jqgrid-bdiv").css("overflow-x","hidden");
+    }
+
+    function fnSelectedGrillaSolicitud(pArrayArguments) {
+        var CurrentSelectIndex = $("#grillaSolicitud").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaSolicitud').jqGrid('setSelection', CurrentSelectIndex);
+        fnMostrarDetalleSolicitud();
+    }
+
+    function fnMostrarDetalleSolicitud() {
+        var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+            switch (datos.CodigoEstado) {
+
+                case "CUL":
+                    $(".btnAccion").css("display","none");
+                    $("#btnNotas").show();
+                    break;
+                case "PEN":
+                    $(".btnAccion").css("display","none");
+                    $("#btnAsignar").show();
+                    break;
+                case "ANU":
+                    $(".btnAccion").css("display","none");
+                    $("#btnNotas").show();
+                    break;
+                case "PRO":
+                    $(".btnAccion").css("display","none");
+                    $("#btnNotas").show();
+                    $("#btnCulminarSolicitud").show();
+                    $("#btnAnularSolicitud").show();
+                    break;
+                default:
+                    break;
+            }
+
+            $("#txtFechaRegistro").val(datos.FechaRegistro);
+            $("#txtTiempoTranscurrido").val(datos.HorasTotal);
+            $("#txtCodigo").val(datos.CodigoSolicitud);
+            $("#txtCodigoCliente").val(datos.CodigoSolicitudCliente);
+            $("#txtNombreCliente").val(datos.NombreCliente);
+            $("#txtEmpresa").val(datos.NombreDominio);
+            $("#txtTipo").val(datos.NombreTipo);
+            $("#txtEstado").val(datos.NombreEstado);
+
+            //alert(datos.Descripcion);
+            //$("#txtDescripcion").val(datos.Descripcion);
+
+
+            $("#txtDescripcion").data("kendoEditor").value(datos.Descripcion);
+            $("#txtMotivo").data("kendoEditor").value(datos.Motivo);
+            $("#txtConclucion").data("kendoEditor").value(datos.Conclucion);
+
+            //$("#txtMotivo").val(datos.Motivo);
+            //$("#txtConclucion").val(datos.Conclucion);
+
+            $("#tdFlag").html("");
+            switch (datos.UmbralTotal) {
+                case "O":
+                    $("#tdFlag").html('<span style="color: #5cb85c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Óptimo');
+                    break;
+                case "A":
+                    $("#tdFlag").html('<span style="color: #ec971f; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Aceptable');
+                    break;
+                case "C":
+                    $("#tdFlag").html('<span style="color: #c9302c; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span> Crítico');
+                    break;
+                default:
+                    $("#tdFlag").html('<span style="color: gray; font-size: 14pt;" class="glyphicon glyphicon-flag" aria-hidden="true"></span>');
+                    break;
+            }
+
+            $("#UmbralActivacion").removeClass("groupOptimo");
+            $("#UmbralActivacion").removeClass("groupAceptable");
+            $("#UmbralActivacion").removeClass("groupCritico");
+            $("#UmbralActivacion").removeClass("groupNuetral");
+            switch (datos.UmbralActivacion) {
+                case "O":
+                    $("#UmbralActivacion").addClass("groupOptimo");
+                    break;
+                case "A":
+                    $("#UmbralActivacion").addClass("groupAceptable");
+                    break;
+                case "C":
+                    $("#UmbralActivacion").addClass("groupCritico");
+                    break;
+                default:
+                    $("#UmbralActivacion").addClass("groupNuetral");
+                    break;
+            }
+
+            $("#UmbralResolucion").removeClass("groupOptimo");
+            $("#UmbralResolucion").removeClass("groupAceptable");
+            $("#UmbralResolucion").removeClass("groupCritico");
+            $("#UmbralResolucion").removeClass("groupNuetral");
+            switch (datos.UmbralResuelto) {
+                case "O":
+                    $("#UmbralResolucion").addClass("groupOptimo");
+                    break;
+                case "A":
+                    $("#UmbralResolucion").addClass("groupAceptable");
+                    break;
+                case "C":
+                    $("#UmbralResolucion").addClass("groupCritico");
+                    break;
+                default:
+                    $("#UmbralResolucion").addClass("groupNuetral");
+                    break;
+            }
+
+            $("#UmbralTotal").removeClass("groupOptimo");
+            $("#UmbralTotal").removeClass("groupAceptable");
+            $("#UmbralTotal").removeClass("groupCritico");
+            $("#UmbralTotal").removeClass("groupNuetral");
+            switch (datos.UmbralTotal) {
+                case "O":
+                    $("#UmbralTotal").addClass("groupOptimo");
+                    break;
+                case "A":
+                    $("#UmbralTotal").addClass("groupAceptable");
+                    break;
+                case "C":
+                    $("#UmbralTotal").addClass("groupCritico");
+                    break;
+                default:
+                    $("#UmbralTotal").addClass("groupNuetral");
+                    break;
+            }
+        }
+        else
+        {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+    }
+
+
+
+    function CrearColor(dato) {
+        var resultado = ""
+        switch (dato) {
+            case "O":
+                resultado = "<div style='width:22px; height:18px; background:#5cb85c; border-radius:5px;'></div>"
+                break;
+            case "A":
+                resultado = "<div style='width:22px; height:18px; background:#ec971f; border-radius:5px;''></div>"
+                break;
+            case "C":
+                resultado = "<div style='width:22px; height:18px; background:#c9302c; border-radius:5px;''></div>"
+                break;
+            default:
+                resultado = "<div style='width:22px; height:18px; background:gray; border-radius:5px;''></div>"
+                break;
+        }
+        return resultado;
+    }
+
+
+    function GetMiArchivo(pArchivo) {
+        window.open('@Url.Content("~/Temp/")' + pArchivo,'_blank');
+    };
+
+    function DeleteMiArchivo(pArchivo) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DeleteArchivo", "Ticket")',
+            data: "{'pNombre': '" + pArchivo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    $('#UploadedFile').html("");
+                    $("#UploadButton").show();
+                    vcFileName = "";
+                }
+                else
+                {
+                    miAlerta("Alerta", "Error al borrar elemento", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    $('#txtNota').live("keypress", function (e) {
+        if (e.keyCode == 13) {
+            $("#btnRegistrarNota").click();
+        }
+        else {
+            return ValidarAlfaNumericoConEspaciosChat(e);
+        }
+    });
+
+
+    function fnRegistrarNota() {
+        var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+            var oParametro
+            oParametro = new PRM_NotaSolicitud();
+
+            var esSupervisor = $("#middlTecnico").attr("midata") == "0";
+
+            if (esSupervisor) {
+                oParametro.LeidoTecnico = true;
+                oParametro.TipoPerfil = 2;
+            }
+            else
+            {
+                oParametro.LeidoSupervisor = true;
+                oParametro.TipoPerfil = 3;
+            }
+
+            oParametro.EsPrivado = $("#chkPrivado").prop("checked");
+            oParametro.Nota = $("#txtNota").val();
+
+            oParametro.IdDominio = datos.IdDominio;
+            oParametro.IdSolicitud = datos.IdSolicitud;
+            oParametro.IdSolicitudCliente = datos.IdSolicitudCliente;
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarNota", "Solicitud")',
+                data: "{'pNombreArchivo':'" + vcFileName + "'," +
+                        "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        $("#txtNota").val("");
+                        $("#txtNota").focus();
+
+                        $("#dvDialogoNotas .modal-body").append(result.Data);
+
+                        $('#UploadedFile').html("");
+                        $("#UploadButton").show();
+                        vcFileName = "";
+
+                        try {
+                            var Usuario = '@Html.Raw(Usuario)';
+                            var _mensaje = 'Escalado|' + datos.CodigoSolicitudCliente + '|' + Usuario + '|' + oParametro.Nota;
+                            ChatHubSignal.server.sendMessageSolicitudNota(datos.IdDominio, datos.IdSolicitudCliente, _mensaje);
+                        } catch (e) {
+                        }
+
+                        $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 1000);
+                    }
+                    else{
+                        miAlerta("Alerta", result.Mensaje.split('|')[1], "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+        else
+        {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnCerrarSolicitud(pCodigoEstado, pEstado) {
+        $("#dvDialogoCerrarSolicitud").modal('show');
+        NombreEstado = pEstado;
+        CodigoEstado = pCodigoEstado;
+
+        if (CodigoEstado == "CUL")
+        {
+            $("#spanCulminarAnular").html("Culminar Solicitud");
+            $("#btnRegistrarCerrarSolicitud").html("Culminar Solicitud");
+        }
+        else if (CodigoEstado == "ANU")
+        {
+            $("#spanCulminarAnular").html("Anular Solicitud");
+            $("#btnRegistrarCerrarSolicitud").html("Anular Solicitud");
+        }
+
+        $("#txtConclucionForm").focus();
+    }
+
+    function fnRegistrarCerrarSolicitud() {
+
+        if ($.trim($("#txtConclucionForm").val()) == "") {
+            miAlerta("Alerta", "Ingrese conclusión", "glyphicon-exclamation-sign", "#f0ad4e");
+            $("#txtConclucionForm").focus();
+        }
+        else
+        {
+            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                var oParametro
+                oParametro = new PRM_SolicitudCerrar();
+
+                oParametro.IdSolicitud = datos.IdSolicitud;
+                oParametro.IdSolicitudCliente = datos.IdSolicitudCliente;
+                oParametro.IdDominio = datos.IdDominio;
+                oParametro.CodigoEstado = CodigoEstado;
+                oParametro.Estado = NombreEstado;
+                oParametro.Conclucion = $.trim($("#txtConclucionForm").val());
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("CerrarSolicitud", "Solicitud")',
+                    data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.Success) {
+
+                            $("#dvDialogoCerrarSolicitud").modal('hide');
+                            miAlerta("Cerrar Solicitud", result.Mensaje.split('|')[1], "", "#5cb85c");
+                            $("#grillaSolicitud").trigger("reloadGrid", [{ current: true }]);
+
+                        }
+                        else{
+                            miAlerta("Alerta", result.Mensaje.split('|')[1], "glyphicon-exclamation-sign", "#f0ad4e");
+                        }
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $(function () {
+        try {
+            ChatHubSignal = $.connection.chatHub;
+            ChatHubSignal.client.addMessageSolicitudNota = function (_idsolicitud, _mensaje) {
+                try {
+                    var Mensaje = _mensaje.split("|");
+                    if (Mensaje[0] == "Escalado") {
+                        var CodigoSolicitudCliente = Mensaje[1];
+                        try {
+                            var id = $("#grillaSolicitud").jqGrid('getGridParam', 'selrow');
+                            if (id) {
+                                var datos = $("#grillaSolicitud").jqGrid('getRowData', id);
+
+                                if (datos.IdSolicitudCliente == _idsolicitud) {
+                                    var notaMensaje = '<div class="dvNota NotaUsuario dvEsPublico"><div><table class="table"><tbody><tr class="info"><td class="col-xs-1">' +
+                                                                      '<img src="Common/Images/Notas/usuario.png" height="20" width="20"></td><td>' + Mensaje[2] + '</td><td style="text-align:right;">' +
+                                                                      moment().format('DD/MM/YYYY HH:mm') + '</td></tr></tbody></table><div>' + Mensaje[3] + '</div></div></div>';
+                                    $("#dvDialogoNotas .modal-body").append(notaMensaje);
+                                    $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 1000);
+                                }
+                            }
+                        } catch (e) {
+                        }
+                    }
+                } catch (e) {
+                }
+            };
+
+            $.connection.hub.url = "@pathSignalRPCSistel/signalr";
+            $.connection.hub.start().done(function () {
+            });
+
+        } catch (e) {
+        }
+
+    });
+
+</script>
+
+<style>
+    .k-content {
+        height: 50px !important;
+    }
+
+    .k-block, .k-widget, .k-input, .k-textbox, .k-group, .k-content, .k-header, .k-editable-area, .k-separator, .k-colorpicker .k-i-arrow-s, .k-textbox > input, .k-autocomplete, .k-dropdown-wrap, .k-toolbar, .k-group-footer td, .k-grid-footer, .k-footer-template td, .k-state-default, .k-state-default .k-select, .k-state-disabled, .k-grid-header-wrap, .k-grid-header, .k-grid td, .k-grid td.k-state-selected, .k-grid-footer-wrap, .k-pager-wrap, .k-pager-wrap .k-link, .k-pager-refresh, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-panelbar > .k-item > .k-link, .k-panel > .k-item > .k-link, .k-panelbar .k-panel, .k-panelbar .k-content, .k-calendar th, .k-slider-track, .k-splitbar, .k-dropzone-active, .k-upload-files, .k-tiles, .k-toolbar, .k-tooltip, .k-progress {
+        border-color: #D8D8D8 !important;
+    }
+</style>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGeneral" targetNamespace="http://tempuri.org/dsGeneral.xsd" xmlns:mstns="http://tempuri.org/dsGeneral.xsd" xmlns="http://tempuri.org/dsGeneral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGeneral" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsGeneral" msprop:Generator_UserDSName="dsGeneral">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblCentroCosto" msprop:Generator_TableClassName="tblCentroCostoDataTable" msprop:Generator_TableVarName="tabletblCentroCosto" msprop:Generator_TablePropName="tblCentroCosto" msprop:Generator_RowDeletingName="tblCentroCostoRowDeleting" msprop:Generator_UserTableName="tblCentroCosto" msprop:Generator_RowChangingName="tblCentroCostoRowChanging" msprop:Generator_RowEvHandlerName="tblCentroCostoRowChangeEventHandler" msprop:Generator_RowDeletedName="tblCentroCostoRowDeleted" msprop:Generator_RowEvArgName="tblCentroCostoRowChangeEvent" msprop:Generator_RowChangedName="tblCentroCostoRowChanged" msprop:Generator_RowClassName="tblCentroCostoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vcCodCco" msprop:Generator_ColumnVarNameInTable="columnvcCodCco" msprop:Generator_ColumnPropNameInRow="vcCodCco" msprop:Generator_ColumnPropNameInTable="vcCodCcoColumn" msprop:Generator_UserColumnName="vcCodCco" type="xs:string" minOccurs="0" />
+              <xs:element name="vcNomCco" msprop:Generator_ColumnVarNameInTable="columnvcNomCco" msprop:Generator_ColumnPropNameInRow="vcNomCco" msprop:Generator_ColumnPropNameInTable="vcNomCcoColumn" msprop:Generator_UserColumnName="vcNomCco" type="xs:string" minOccurs="0" />
+              <xs:element name="dtFecIni" msprop:Generator_ColumnVarNameInTable="columndtFecIni" msprop:Generator_ColumnPropNameInRow="dtFecIni" msprop:Generator_ColumnPropNameInTable="dtFecIniColumn" msprop:Generator_UserColumnName="dtFecIni" type="xs:string" minOccurs="0" />
+              <xs:element name="dtFecFin" msprop:Generator_ColumnVarNameInTable="columndtFecFin" msprop:Generator_ColumnPropNameInRow="dtFecFin" msprop:Generator_ColumnPropNameInTable="dtFecFinColumn" msprop:Generator_UserColumnName="dtFecFin" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblGrupoOrigen" msprop:Generator_TableClassName="tblGrupoOrigenDataTable" msprop:Generator_TableVarName="tabletblGrupoOrigen" msprop:Generator_TablePropName="tblGrupoOrigen" msprop:Generator_RowDeletingName="tblGrupoOrigenRowDeleting" msprop:Generator_UserTableName="tblGrupoOrigen" msprop:Generator_RowChangingName="tblGrupoOrigenRowChanging" msprop:Generator_RowEvHandlerName="tblGrupoOrigenRowChangeEventHandler" msprop:Generator_RowDeletedName="tblGrupoOrigenRowDeleted" msprop:Generator_RowEvArgName="tblGrupoOrigenRowChangeEvent" msprop:Generator_RowChangedName="tblGrupoOrigenRowChanged" msprop:Generator_RowClassName="tblGrupoOrigenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P_inCodGruOri" msprop:Generator_ColumnVarNameInTable="columnP_inCodGruOri" msprop:Generator_ColumnPropNameInRow="P_inCodGruOri" msprop:Generator_ColumnPropNameInTable="P_inCodGruOriColumn" msprop:Generator_UserColumnName="P_inCodGruOri" type="xs:string" minOccurs="0" />
+              <xs:element name="vcNomGru" msprop:Generator_ColumnVarNameInTable="columnvcNomGru" msprop:Generator_ColumnPropNameInRow="vcNomGru" msprop:Generator_ColumnPropNameInTable="vcNomGruColumn" msprop:Generator_UserColumnName="vcNomGru" type="xs:string" minOccurs="0" />
+              <xs:element name="dtFecIni" msprop:Generator_ColumnVarNameInTable="columndtFecIni" msprop:Generator_ColumnPropNameInRow="dtFecIni" msprop:Generator_ColumnPropNameInTable="dtFecIniColumn" msprop:Generator_UserColumnName="dtFecIni" type="xs:string" minOccurs="0" />
+              <xs:element name="dtFecFin" msprop:Generator_ColumnVarNameInTable="columndtFecFin" msprop:Generator_ColumnPropNameInRow="dtFecFin" msprop:Generator_ColumnPropNameInTable="dtFecFinColumn" msprop:Generator_UserColumnName="dtFecFin" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GEN_s_Cliente_PorCodigo" msprop:Generator_TableClassName="GEN_s_Cliente_PorCodigoDataTable" msprop:Generator_TableVarName="tableGEN_s_Cliente_PorCodigo" msprop:Generator_TablePropName="GEN_s_Cliente_PorCodigo" msprop:Generator_RowDeletingName="GEN_s_Cliente_PorCodigoRowDeleting" msprop:Generator_UserTableName="GEN_s_Cliente_PorCodigo" msprop:Generator_RowChangingName="GEN_s_Cliente_PorCodigoRowChanging" msprop:Generator_RowEvHandlerName="GEN_s_Cliente_PorCodigoRowChangeEventHandler" msprop:Generator_RowDeletedName="GEN_s_Cliente_PorCodigoRowDeleted" msprop:Generator_RowEvArgName="GEN_s_Cliente_PorCodigoRowChangeEvent" msprop:Generator_RowChangedName="GEN_s_Cliente_PorCodigoRowChanged" msprop:Generator_RowClassName="GEN_s_Cliente_PorCodigoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="P_inCodCli" msprop:Generator_ColumnVarNameInTable="columnP_inCodCli" msprop:Generator_ColumnPropNameInRow="P_inCodCli" msprop:Generator_ColumnPropNameInTable="P_inCodCliColumn" msprop:Generator_UserColumnName="P_inCodCli" type="xs:int" minOccurs="0" />
+              <xs:element name="vcNomCli" msprop:Generator_ColumnVarNameInTable="columnvcNomCli" msprop:Generator_ColumnPropNameInRow="vcNomCli" msprop:Generator_ColumnPropNameInTable="vcNomCliColumn" msprop:Generator_UserColumnName="vcNomCli" type="xs:string" minOccurs="0" />
+              <xs:element name="F_inCodMon" msprop:Generator_ColumnVarNameInTable="columnF_inCodMon" msprop:Generator_ColumnPropNameInRow="F_inCodMon" msprop:Generator_ColumnPropNameInTable="F_inCodMonColumn" msprop:Generator_UserColumnName="F_inCodMon" type="xs:int" minOccurs="0" />
+              <xs:element name="vcRUC" msprop:Generator_ColumnVarNameInTable="columnvcRUC" msprop:Generator_ColumnPropNameInRow="vcRUC" msprop:Generator_ColumnPropNameInTable="vcRUCColumn" msprop:Generator_UserColumnName="vcRUC" type="xs:string" minOccurs="0" />
+              <xs:element name="vcDireccion" msprop:Generator_ColumnVarNameInTable="columnvcDireccion" msprop:Generator_ColumnPropNameInRow="vcDireccion" msprop:Generator_ColumnPropNameInTable="vcDireccionColumn" msprop:Generator_UserColumnName="vcDireccion" type="xs:string" minOccurs="0" />
+              <xs:element name="vbLogCli" msprop:Generator_ColumnVarNameInTable="columnvbLogCli" msprop:Generator_ColumnPropNameInRow="vbLogCli" msprop:Generator_ColumnPropNameInTable="vbLogCliColumn" msprop:Generator_UserColumnName="vbLogCli" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="inEst" msprop:Generator_ColumnVarNameInTable="columninEst" msprop:Generator_ColumnPropNameInRow="inEst" msprop:Generator_ColumnPropNameInTable="inEstColumn" msprop:Generator_UserColumnName="inEst" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:GEN_s_Cliente_PorCodigo" />
+      <xs:field xpath="mstns:P_inCodCli" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

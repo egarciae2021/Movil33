@@ -1,0 +1,223 @@
+﻿#ActualizarGeneral:hover
+        {
+            cursor:pointer;
+            box-shadow:0px 0px 5px gray;    
+        }
+
+
+.ElementoDatoEmpleado {
+    float: left;
+    margin: 5px;
+    max-width: 500px;
+    height: 30px;
+    border-style: solid;
+    border-width: 3px;
+    border: 1px dotted #DCEBF7;
+    padding: 4px;
+}
+
+.clsElementoDatoEmpleado_Campo {
+    font-weight: bold;
+    background-color: #E7F3FC;
+}
+
+.clsElementoDatoEmpleado_Valor {
+    margin-top: 4px;
+}
+
+#lblTituloEmpleado {
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 2px;
+    background-color: #DDF1F8;
+    width: 100%;
+    height: 20px;
+    color: #506C80;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DADBDB;
+}
+
+.itemChatSeleccionado {
+    /*background-color: #F3F3F3;*/
+    border-radius: 5px;
+    background-color: #2AB1E0;
+    width: 314px;
+    /*height: 20px;*/
+    color: white;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: hand;
+    cursor: pointer;
+    margin-top: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DADBDB;
+}
+
+    .itemChatSeleccionado:hover .clsItem_Eliminar_Empleado {
+        display: block;
+    }
+
+.itemChat {
+    /*background-color: #F3F3F3;*/
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    width: 314px;
+    color: #36434C;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 20px;
+    cursor: hand;
+    cursor: pointer;
+    margin-top: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DADBDB;
+}
+
+    .itemChat:hover {
+        border-radius: 5px;
+
+        background-color: #E7F3FC; /*#416C73;*/
+        color: #36434C;
+        /*background-color: #7299B5; #416C73;*/
+        width: 314px;
+        /*height: 20px;*/
+        /*color: white;*/
+        text-align: left;
+        vertical-align: middle;
+        line-height: 20px;
+        cursor: hand;
+        cursor: pointer;
+    }
+
+        .itemChat:hover .clsItem_Eliminar_Empleado {
+            display: block;
+        }
+
+.itemOrganizacion {
+    /*background-color: #F3F3F3;*/
+    border-radius: 5px;
+    background-color: transparent;
+    width: 100%;
+    color: #36434C;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 20px;
+    margin-top: 4px;
+    border-style: dotted;
+    border-bottom-width: 2px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-color: #DADBDB;
+}
+
+    .itemOrganizacion:hover {
+        border-radius: 5px;
+        background-color: #E7F3FC; /*#416C73;*/
+        width: 100%;
+        color: #36434C;
+        text-align: left;
+        vertical-align: middle;
+        line-height: 20px;
+    }
+
+        .itemOrganizacion:hover .clsItem_Eliminar {
+            display: block;
+        }
+        .itemOrganizacion:hover .clsItem_Detalle {
+            display: block;
+        }
+
+
+.clsItem_Eliminar, .clsItem_Detalle {
+    display: none;
+    border-radius: 5px;
+    background-color: #DDDEDE;
+    width: 32px;
+    cursor: hand;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 24px;
+}
+
+.clsItem_Eliminar_Empleado {
+    display: none;
+    border-radius: 5px;
+    background-color: #DDDEDE;
+    width: 32px;
+    cursor: hand;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0px;
+    vertical-align: middle;
+    line-height: 30px;
+    height: 24px;
+    /*
+    height: 20px;*/
+    /*right: -8px;
+    */
+    /*color: white;
+    */
+    /**/
+    /**/
+}
+
+
+.clsItem_NombreEmpleado {
+    font-weight: bold;
+    margin-bottom: -15px;
+    font-size: 12px;
+}
+
+.clsItem_CargoEmpleado {
+    margin-top: 10px;
+    font-size: 10px;
+}
+.clsItem_EsAutorizador {
+    margin-top: -4px;
+    font-size: 10px;
+}
+
+
+div::-webkit-scrollbar {
+    width: 1.2em;
+}
+
+div::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+div::-webkit-scrollbar-thumb {
+    background-color: #7299B5;
+    outline: 1px solid slategrey;
+}
+
+.SubTituloPagina {
+    color: #F3AD2E;
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+    .SubTituloPagina::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #934B05;
+        /*position: absolute;*/
+        bottom: 0;
+        left: 0;
+        box-shadow: 1px 1px #BEBEBE;
+    }

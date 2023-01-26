@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="~/Common/Images/favicon.ico" type="image/ico" />
+    <title>Central Atención</title>
+    @Styles.Render("~/Content/esencial")
+    @Scripts.Render("~/bundles/esencial")
+    
+    <script src="~/Common/Scripts/jqGrid/jquery.jqGrid.min.js"></script>
+    <script src="~/Common/Scripts/FusionCharts/FusionCharts.HC.js"></script>
+    <script src="~/Common/Scripts/FusionCharts/FusionCharts.HC.Charts.js"></script>
+
+    <link href="~/Common/Scripts/KendoUI/kendo.common.min.css" rel="stylesheet" />
+    <link href="~/Common/Scripts/KendoUI/kendo.blueopal.min.css" rel="stylesheet" />
+    <script src="~/Common/Scripts/KendoUI/kendo.web.min.js"></script>
+
+
+    @RenderSection("RenderHeader", false)
+
+    <style type="text/css">
+        body 
+        {
+            font-size:13px;            
+        }
+        .dvModulo 
+        {
+            margin-left:0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="dvWaiting">
+        <div class="CentrarAbsoluto">
+            <img src="~/Common/Images/PreLoaders/Waiting_1.gif" height="97" width="100 " style="float: left;" />
+            <p style="font-weight: bolder; color: #193B49; margin-top: 35px;">Espere por favor...</p>
+        </div>
+    </div>
+    <div id="miAlerta" class="modal" style="z-index:99999;">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header alert-info" >
+                </div>
+                <div class="modal-body">
+                    <span class="glyphicon" aria-hidden="true" style="float: left; margin-right: 15px; font-size: 20pt;"></span>
+                    <span style="font-weight: bold;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="miDialogo" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header alert-info">
+            </div>
+            <div class="modal-body" >
+            </div>
+            <div class="modal-footer" >
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cerrar</button>
+                <button id="btnGlobalAceptar" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Aceptar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="miDialogoConfirmacion" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel" style="z-index:99998;">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header alert-info">
+                Confirmación
+            </div>
+            <div class="modal-body" >
+                <table>
+                    <tr>
+                        <td></td>
+                        <td><span style="font-size:20pt; margin-left:20px;" class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer" >                
+                <button id="btnSi" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> SI</button>
+                <button id="btnNo" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> NO</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="miPopOver" class="popover top" style="position: absolute; padding-bottom:10px !important;">
+        <div class="arrow">
+        </div>
+        <div class="popover-content" style="">
+            @*<div style="width: 120px; height: 40px;">
+                <table>
+                    <tr>
+                        <td>
+                            El % Asignado es <span id="spanOverLLamadas"></span>%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <span id="descPass" class="spanPass">APROVADO</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>*@
+        </div>
+    </div>
+    @Html.Partial("_LayoutCuenta", System.Web.HttpContext.Current.Session["SesionUsuario"])
+    @Html.Partial("_LayoutMenu", System.Web.HttpContext.Current.Session["SesionUsuario"])
+    <div id="dvPrincipal" style="overflow:hidden !important;">
+        @RenderBody()
+    </div>
+</body>
+</html>

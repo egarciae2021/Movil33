@@ -1,0 +1,54 @@
+﻿#msg1
+{
+	bottom: 0px;
+	right: 0px;
+	position:fixed;
+	font-family: Tahoma;
+	font-size: 11px;
+    width:350px;
+    height: 200px;
+    border: solid 1px black;
+    margin: 0px 0px 0px 20px;
+    background-color:#FBF7B4;
+    display:none;
+}
+
+#modal .modaltop
+{
+	  width: 342px;
+    background-color: Transparent;
+    background-image: url(img/bg.gif);
+    background-repeat: repeat-x;
+    padding: 4px;
+    color: #ffffff;
+    text-align: right;
+}
+#modal .modaltitle
+{
+    padding: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #FFFFFF;
+    float:left;
+}
+
+#modal .modalbody
+{
+    padding: 12px;
+    text-align: left;
+    font-family: Tahoma;
+    font-size: 11px;
+}
+
+#modal .cabeceraerror
+{
+   font-weight:bold;  
+   text-align:right;
+   width: 70px;
+}
+
+#modal .detalleerror
+{
+   text-align:left;
+   
+}

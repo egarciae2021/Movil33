@@ -1,0 +1,80 @@
+﻿body {
+}
+#pnlCuerpo
+{
+    height:1411px;
+
+}
+
+
+#pnlPie
+{
+    width: 405px;
+    height: 250px;
+    float: left;    
+}
+
+#pnlGridPie
+{
+    width: 617px;
+    height: 250px;
+    float: left;   
+}
+
+#pnlBarras
+{
+    width: 100%;
+    height: 270px;
+    float: left; 
+}
+
+#pnlGridAprobacion
+{
+    width: 100%;
+    /*height: 420px;*/
+    float: left; 
+}
+
+#pnlGridPeriodo
+{
+    width: 100%;
+    /*height: 460px;*/
+    
+    float: left; 
+}
+
+
+#pnlPieProceso
+{
+    width: 405px;
+    height: 250px;
+    float: left;    
+}
+
+#pnlGridPieProceso
+{
+    width: 617px;
+    height: 250px;
+    float: left;   
+}
+
+#pnlBarrasProceso
+{
+    width: 100%;
+    height: 270px;
+    float: left; 
+}
+
+#pnlGridProceso
+{
+    width: 100%;
+    /*height: 420px;*/
+    float: left; 
+}
+
+#pnlGridPeriodoProceso
+{
+    width: 100%;
+    /*height: 460px;*/
+    float: left; 
+}

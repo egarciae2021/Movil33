@@ -1,0 +1,2129 @@
+﻿@using System.Web.Script.Serialization;
+@using System.Web.Script.Serialization;
+
+@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Ticket
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@section RenderHeader {
+    <script src="~/Common/Scripts/ajaxupload.js"></script>
+}
+
+<style type="text/css">
+    #btnBorrarFechaInicio:hover, #btnBorrarFechaFin:hover {
+        cursor: pointer;
+    }
+
+    #tbDetalleGrilla td:nth-child(odd) {
+        color: #485CA4;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    #miPopOverTecnicos > .miDvTecnico:nth-child(odd) {
+        background: #F8F8F8;
+    }
+
+    #dvDialogoNotas ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        #dvDialogoNotas ul li {
+            display: inline;
+            list-style-type: none;
+            padding: 0px;
+            margin: 5px;
+            float: left;
+        }
+
+    .miHoverAjaxUpdate {
+        color: #337ab7;
+        cursor: pointer !important;
+    }
+
+    #UploadedFile li:hover {
+        cursor: pointer;
+    }
+
+    .NotaEscalaFinal {
+        width: 700px;
+        margin: 5px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        /*float:left;*/
+    }
+
+        .NotaEscalaFinal > table > tbody > tr:first-child {
+            background: #337ab7;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+    .NotaTecnico {
+        width: 710px;
+        margin: 5px 0px 0px 10px;
+        float: left;
+    }
+
+        .NotaTecnico > div:first-child {
+            width: 680px;
+            float: right;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        .NotaTecnico table:first-child {
+            margin: 0px 0px 5px 0px !important;
+            font-weight: lighter !important;
+            color: #31708f;
+        }
+
+        .NotaTecnico div:nth-child(2) {
+            float: left;
+            width: 680px;
+        }
+
+        .NotaTecnico .glyphicon {
+            color: red;
+            font-weight: bolder;
+        }
+
+    .NotaUsuario {
+        width: 710px;
+        margin: 5px 0px 0px 10px;
+        float: left;
+    }
+
+        .NotaUsuario > div:first-child {
+            width: 680px;
+            float: left;
+            border: 1px solid #e7e7e7;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        .NotaUsuario table:first-child {
+            margin: 0px 0px 5px 0px !important;
+            font-weight: lighter !important;
+            color: #31708f;
+        }
+
+        .NotaUsuario div:nth-child(2) {
+            float: left;
+            width: 680px;
+        }
+
+        .NotaUsuario .glyphicon {
+            color: red;
+            font-weight: bolder;
+        }
+
+    .btn .glyphicon {
+        margin-right: 5px;
+    }
+
+    .tdAdjunto *:hover {
+        cursor: pointer;
+        color: #B30000;
+    }
+
+    .dvEsPrivado td {
+        background-color: #f2dede !important;
+    }
+
+    #ulTap li h4:hover {
+        color: #485CA4 !important;
+        cursor: pointer;
+    }
+
+    .ulTapSelect {
+        border: 1px solid #E9C589;
+        border-bottom: 2px solid white;
+        border-radius: 3px;
+        color: #485CA4 !important;
+    }
+
+    .h4select {
+        color: #485CA4 !important;
+    }
+
+    .navbar-min ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .navbar-min ul li {
+            display: inline;
+            list-style-type: none;
+            padding: 0px;
+            margin: 5px;
+            float: left;
+        }
+
+    #tbDetalleGrilla td {
+        line-height: 0.8 !important;
+    }
+</style>
+
+<div id="dvDialogoNotas" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" style="width: 750px;">
+        <div class="modal-content" style="float: left;">
+            <div class="modal-header alert-info" style="height: 110px; float: left; width: 100%;">
+                <div>
+                    <span style="font-weight: bold; font-weight: bold;">Notas</span>
+                    <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+                </div>
+                <div class="miCajonGroupBox FlotarIzquierda" >
+                    <div class="miGroupBox FlotarIzquierda">
+                        <span style="position: relative; top: -30px; left: 0px; background: #d9edf7 !important;">Origen de notas</span>
+                        <select id="ddlOrigenNota" style="margin-left: -107px;">
+                            <option value="1">Cliente</option>
+                            <option value="2">Escalamiento</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="dvMensajes" class="modal-body" style="height: 430px; overflow-y: scroll; padding: 0px !important; float:left; width: 100%;">
+            </div>
+            <div class="modal-footer" style="height: 100px; padding: 2px !important; margin-top: 10px; float: left; width: 100%;">
+                <ul>
+                    <li>
+                        <input id="txtNota" class="form-control" type="text" placeholder="Escribir nota..." style="width: 630px;" />
+                    </li>
+                    <li>
+                        <button id="btnRegistrarNota" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Enviar</button>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="esOrigenEscalamiento" style="width: 100%; padding: 0px 15px; margin: 0px;">
+                        <div>
+                            <input id="chkEnviarPorCorreo" type="checkbox" />
+                            <small>Enviar por Correo</small>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li style="width: 380px;">
+                        <div id="UploadStatus"></div>
+                        <div id="UploadButton" align="center" class="imgBtn" style="text-align: left;">
+                            <table>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                                    </td>
+                                    <td style="width: 10px;"></td>
+                                    <td>Adjuntar Archivo</td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div id="UploadedFile" style="display: none;"></div>
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <input id="chkMostrarPrivados" type="checkbox" />
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <small>Mostrar sólo notas Privadas</small>
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <input id="chkPrivado" type="checkbox" />
+                    </li>
+                    <li class="esOrigenEscalamiento">
+                        <small>Enviar nota privada</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoEscalamiento" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="font-weight: bold;">
+                Escalamiento
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div style="width: 100%;">
+                    Elija escalamiento :
+                </div>
+                <div style="width: 100%; margin-bottom: 20px;">
+                    <select id="ddlElegirEscala"></select>
+                </div>
+                <div style="width: 100%;">
+                    Descripción de escalamiento :
+                </div>
+                <div style="width: 100%;">
+                    <textarea id="txtDescripcionEscala" cols="20" rows="6" class="form-control" placeholder="Descripción breve de motivo de escalamiento..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button id="btnRegistrarEscalamiento" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Escalar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miDialogoCierreTicket" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header alert-info" style="font-weight: bold;">
+                Cerrar ticket
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div  >
+                   Tipificación:
+                </div>
+                <div  >
+                    <select class="MiSelect form-control" id="ddtipificacionmodal"> 
+                        @for (int i = 0; i < Model.Tipos[0].Tipificaciones.Count; i++)
+                        {
+                            <option value="@Model.Tipos[0].Tipificaciones[i].IdTipificacion">@Model.Tipos[0].Tipificaciones[i].Nombre</option>
+                        }
+                    </select>
+                </div>
+                <div style="width: 100%;">
+                    Conclusión de cierre :
+                </div>
+                <div style="width: 100%;">
+                    <textarea id="txtConclucionTicket" cols="20" rows="6" class="form-control" placeholder="Descripción breve de conclusión de cierre..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button midata="" id="btnRegistrarCierre" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Cerrar Ticket</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="miPopOverTecnicos" style="width: 300px; border: 1px solid #e7e7e7; padding: 2px; border-radius: 3px; z-index: 99; background: white;">
+    @if (Model.Tecnicos.Count > 1)
+    {
+        for (int i = 0; i < Model.Tecnicos.Count; i++)
+        {
+            <div miData="@i" id="miItem-@i" class="miDvTecnicoMenu miDvTecnico FlotarIzquierda" style="margin:1px 0px;  background:@(i % 2 > 0 ? "#F8F8F8" : "white"); display:@(i == 0 ? "none" : "block")">
+                <div class="FlotarIzquierda">
+                    @if (Model.Tecnicos[i].Foto.Tamano > 0)
+                    {
+                        <img src="@(new Control().ResolveUrl("~/Temp/" + Model.Tecnicos[i].Foto.Nombre))" height="100%" width="100%" />
+                    }
+                    else
+                    {
+                        <img src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" height="100%" width="100%" />
+                    }
+                </div>
+                <div class="FlotarIzquierda ">
+                    @Model.Tecnicos[i].Nombres @Model.Tecnicos[i].Apellidos
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        }
+    }
+</div>
+
+<div class="navbar-min" style="">
+    <ul>
+        <li>Técnico: <label id="lblMinTecnico"></label></li>
+        <li id="liCodigoTicket">Código Ticket: <label id="lblMinCodigoTicket"></label></li>
+        <li>Dominio: <label id="lblMinDominio"></label></li>
+        <li>Nivel: <label id="lblMinNivel"></label></li>
+        <li>Bolsa: <label id="lblMinBolsa"></label></li>
+        <li>Grupos: <label id="lblMinGrupos"></label></li>
+        <li>Estado: <label id="lblMinEstado"></label></li>
+        <li>Tipo: <label id="lblMinTipo"></label></li>
+        <li id="liTipificacion">Tipificación: <label id="lblMinTipificacion"></label></li>
+        <li id="liFecha">Fecha: <label id="lblMinFecha"></label></li>
+    </ul>
+    <div id="navbarshow" style="float:right; cursor:pointer; cursor:hand; margin-top:6px;">
+        <img src="~/Common/Images/Mantenimiento/Mostrar.png" />
+    </div>
+</div>
+<nav id="navFiltros" class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            @*<span style="position: relative; top: -30px; left: 0px;">Tecnico</span>*@
+                            <div midata="0" id="middlTecnico" class="miDvTecnico" style="position: relative; top: -25px; left: 0px;">
+                                <div class="FlotarIzquierda">
+                                    @if (Model.Tecnicos[0].Foto.Tamano > 0)
+                                    {
+                                        <img src="@(new Control().ResolveUrl("~/Temp/" + Model.Tecnicos[0].Foto.Nombre))" height="100%" width="100%" />
+                                    }
+                                    else
+                                    {
+                                        <img src="@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))" height="100%" width="100%" />
+                                    }
+                                </div>
+                                <div class="FlotarIzquierda ">
+                                    @Model.Tecnicos[0].Nombres @Model.Tecnicos[0].Apellidos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Código Ticket</span>
+                            <input type="text" id="txtCodigoTicket" style="margin-left: -90px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Dominio </span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlDominio">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Tecnicos[0].Dominios.Count; i++)
+                                {
+                                    <option value="@Model.Tecnicos[0].Dominios[i].IdDominio">@Model.Tecnicos[0].Dominios[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nivel </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlNivel">
+                                @for (int i = 0; i < Model.Tecnicos[0].Niveles.Count; i++)
+                                {
+                                    <option value="@Model.Tecnicos[0].Niveles[i].IdNivel">@Model.Tecnicos[0].Niveles[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Bolsa </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlBolsa">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Tecnicos[0].Niveles.Count > 0)
+                                {
+                                    for (int i = 0; i < Model.Tecnicos[0].Niveles[0].Bolsas.Count; i++)
+                                    {
+                                        <option value="@Model.Tecnicos[0].Niveles[0].Bolsas[i].IdBolsa">@Model.Tecnicos[0].Niveles[0].Bolsas[i].Nombre </option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado </span>
+                            <span style="margin-left: -36px; font-size: 12px;">Grupos</span>
+                            <select class="MiSelect" style="margin-left: 5px;" id="ddlGrupoEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Abiertos</option>
+                                <option value="2">Cerrados</option>
+                            </select>
+                            <select class="MiSelect" style="margin-left: 5px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Estados.Count; i++)
+                                {
+                                    <option value="@Model.Estados[i].Codigo">@Model.Estados[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipo </span>
+                            <select class="MiSelect" style="margin-left: -25px;" id="ddlTipo">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Tecnicos[0].Tipos.Count > 0)
+                                {
+                                    for (int i = 0; i < Model.Tecnicos[0].Tipos.Count; i++)
+                                    {
+                                        <option value="@Model.Tecnicos[0].Tipos[i].IdTipo">@Model.Tecnicos[0].Tipos[i].Nombre</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div id="dvTipificacion" class="miCajonGroupBox FlotarIzquierda" style="display: none;">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Tipificación </span>
+                            <select class="MiSelect" style="margin-left: -65px;" id="ddlTipificacion">
+                                <option value="-1">--Todos--</option>
+                                @if (Model.Tecnicos[0].Tipos.Count > 0)
+                                {
+                                    if (Model.Tecnicos[0].Tipos[0].Tipificaciones.Count > 0)
+                                    {
+                                        for (int i = 0; i < Model.Tecnicos[0].Tipos[0].Tipificaciones.Count; i++)
+                                        {
+                                            <option value="@Model.Tecnicos[0].Tipos[0].Tipificaciones[i].IdTipificacion">@Model.Tecnicos[0].Tipos[0].Tipificaciones[i].Nombre</option>
+                                        }
+                                    }
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Fecha </span>
+                            <span style="margin-left: -36px; font-size: 12px;">Inicio</span>
+                            <input type="text" id="txtFechaInicio" class="MiDateTimePicker" />
+                            <img id="btnBorrarFechaInicio" src="~/Common/Images/Borrar.png" />
+                            <span style="font-size: 12px; margin-left: 10px;">Fin</span>
+                            <input type="text" id="txtFechaFin" class="MiDateTimePicker" />
+                            <img id="btnBorrarFechaFin" src="~/Common/Images/Borrar.png" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    @*<div class="miCajonGroupBox FlotarIzquierda">
+                            <div class="FlotarIzquierda" style="padding:15px 0px 0px 15px;">
+                                <div class="dropdown FlotarIzquierda">
+                                    <button class="btn btn-success dropdown-toggle" type="button" id="ddlCerraTicket" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                        Cerrar Ticket
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="ddlCerraTicket">
+                                        <li class="btnCerrarTicker"><a href="#">Resuelto</a></li>
+                                        <li class="btnCerrarTicker"><a href="#">Anulado</a></li>
+                                        <li class="btnCerrarTicker"><a href="#">Devuelto</a></li>
+                                    </ul>
+                                </div>
+                                <button id="btnEscalar" type="button" class="btn btn-info FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Escalar</button>
+                                <button id="btnAyuda" type="button" class="btn btn-warning FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Ayuda</button>
+                                <button id="btnMostrarNotas" type="button" class="btn btn-primary FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Notas</button>
+                            </div>
+                        </div>*@
+
+                </li>
+            </ul>
+            <div id="navbarhide" style="cursor:pointer; cursor:hand; position: absolute;right: 0px;top: 6px;">
+                <img src="~/Common/Images/Mantenimiento/Ocultar.png" />
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+       
+        <div id="dvGrillaTicket" class="col-xs-24 col-sm-24 col-md-24">
+             
+                <table id="grillaTicket" class="miGrilla table-responsive"></table>
+                <div id="pagerGrillaTicket">  </div>
+             
+        </div>
+
+            <div id="dvDetalleTicketTaps" class="col-xs-24 " style="padding-bottom: 0px;">
+                <div style="width: 100%; height: 50px; border-bottom: 1px solid #E9C589; margin-bottom: 10px;">
+                    <ul id="ulTap" style="margin-left: 1%;" class="MiListaHorizontal">
+                        @*<li class="ulTapSelect" style="padding: 8px; padding-bottom: 0px;">
+                        <h4 class="h4select" style="color: #CE8E2E;">Notas</h4>
+                    </li>*@
+                        <li class="ulTapSelect" style="padding: 8px; padding-bottom: 0px; margin-left: 10px;">
+                            <h4 style="color: #CE8E2E;">Detalles</h4>
+                        </li>
+                    </ul>
+                    <div style="float:right; padding:5px 5px 5px 5px;">
+                        <div class="dropdown FlotarIzquierda">
+                            <button class="btn btn-success dropdown-toggle" type="button" id="ddlCerraTicket" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
+                                Cerrar Ticket
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="ddlCerraTicket">
+                                <li class="btnCerrarTicker"><a href="#">Resuelto</a></li>
+                                <li class="btnCerrarTicker"><a href="#">Anulado</a></li>
+                                <li class="btnCerrarTicker"><a href="#">Devuelto</a></li>
+                            </ul>
+                        </div>
+                        <button id="btnEscalar" type="button" class="btn btn-info FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Escalar</button>
+                        <button id="btnAyuda" type="button" class="btn btn-warning FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Ayuda</button>
+                        <button id="btnMostrarNotas" type="button" class="btn btn-primary FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Notas</button>
+
+                        <button id="btnExportarExcel" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-save" aria-hidden="true"></span>Exportar a Excel</button>
+
+                    </div>
+                </div>
+                <div class="conteiner">
+                    @*<div class="row miPanel" id="rowNotas">
+                    <div id="dvDialogoNotas" class="col-xs-24 col-sm-24 col-md-24" tabindex="-1" role="dialog">
+                        <div class="col-xs-24 col-sm-24 col-md-24 alert-info" style="height: 75px;">
+                            <div class="col-md-3">
+                                <div class="miCajonGroupBox FlotarIzquierda">
+                                <div class="miGroupBox FlotarIzquierda">
+                                    <span style="position: relative; top: -30px; left: 0px; background: #d9edf7 !important;">Origen de notas</span>
+                                    <select id="ddlOrigenNota" style="margin-left: -107px;">
+                                        <option value="1">Cliente</option>
+                                        <option value="2">Escalamiento</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-md-12 modal-footer">
+                                <ul>
+                                    <li>
+                                        <input id="txtNota" class="form-control" type="text" placeholder="Escribir nota..." style="width: 480px;" />
+                                    </li>
+                                    <li>
+                                        <button id="btnRegistrarNota" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>Enviar</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 modal-footer" style="margin-top: 10px;">
+                                <div id="UploadStatus"></div>
+                                <div id="UploadButton" align="center" class="imgBtn" style="text-align: left;">
+                                    <table>
+                                        <tr>
+                                            <td style="text-align: left;">
+                                                <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                                            </td>
+                                            <td style="width: 10px;"></td>
+                                            <td>Adjuntar Archivo</td>
+                                        </tr>
+                                    </table>
+
+                                </div>
+                                <div id="UploadedFile" style="display: none;"></div>
+                            </div>
+                            <div class="col-md-4 modal-footer">
+                                <div class="esOrigenEscalamiento">
+                                    <input id="chkMostrarPrivados" type="checkbox" />
+                                    <small>Mostrar solo notas Privadas</small>
+                                </div>
+                                <div class="esOrigenEscalamiento">
+                                    <input id="chkPrivado" type="checkbox" />
+                                    <small>Enviar nota privada</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dvMensajes" class="col-xs-24 col-sm-24 col-md-24 modal-body" style="height: 430px; overflow-y: scroll; padding: 0px !important;">
+                        </div>
+                    </div>
+                </div>*@
+                    <div class="row miPanel" id="rowDetalles">
+                        <div id="dvDetalleGrilla" class="col-xs-24 col-sm-24 col-md-24">
+                            <table class="table" id="tbDetalleGrilla">
+                                <tr style="background: #F8F8F8;">
+                                    <td colspan="4"></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-xs-4">Fecha Registro:</td>
+                                    <td></td>
+                                    <td class="col-xs-4">Fecha Activación:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Código ticket:
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        Código ticket usuario:
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre usuario:</td>
+                                    <td></td>
+                                    <td>Estado:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Técnico a cargo:</td>
+                                    <td></td>
+                                    <td>Tipificación:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Dominio:</td>
+                                    <td></td>
+                                    <td>Descripción de ticket:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Tipo:</td>
+                                    <td></td>
+                                    <td>Descripción de escalamiento:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Bolsa:</td>
+                                    <td></td>
+                                    <td>Conclusión de escalamiento:</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Asunto:</td>
+                                    <td></td>
+                                    <td>Adjuntos:</td>
+                                    <td id="tdAdjuntos"></td>
+                                </tr>
+                                @*<tr>
+            <td>Descripción de ticket</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Descripción de escalamiento</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Conclusión de escalamiento</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>*@
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<!--estoooo-->
+<div id="dvExportarExcel" class="modal" tabindex="2" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header alert-info" style="color:#485CA4; font-weight: bold;">
+                Exportar a Excel
+                <button type="button" class="close" data-dismiss="modal" style="color:#31708f !important;opacity:0.6!important;">x</button>
+            </div>
+            <div class="modal-body">
+                <div class="conteiner">
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <label>Seleccione la versión de Excel a exportar</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <input type="radio" id="optExportarExcel2003" name="ExportarExcel" checked="checked" value="0" />
+                            <label> Excel 2003 o anterior</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-24 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                            <input type="radio" id="optExportarExcel2007" name="ExportarExcel" checked="checked" value="1" />
+                            <label> Excel 2007 o posterior</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnCancelarExp" class="btn btn-danger" data-dismiss="modal"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cerrar</button>
+                <button type="button" id="btnAceptarExp" class="btn btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Aceptar</button>
+                <a id="LinkDescargarExcel" href="#" style="display:none;">mi enlace</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var MiModeloTicket;
+    var vcFileName = "";
+    var DatosSeleccionados;
+    //iddetipificaciones para actualizar el cierre de tikect JPAREJA
+    var IdTipificacionesddl;
+    function PRM_TicketAccion() {
+        this.IdTicket = -1;
+        this.Mensaje = "";
+        this.CodEstado = "";
+        this.IdBolsaEscalamiento = -1;
+        this.IdUsuario = -1;
+        this.IdTicketExterno = -1;
+        this.IdDominio = -1;
+       //iddetipificaciones para actualizar el cierre de tikect JPAREJA
+        this.IdTipificaciones = 0;
+    }
+
+    function PRM_Ticket() {
+        this.IdDominio= -1;
+        this.IdUsuario = -1;
+        this.IdNivel = -1;
+        this.IdBolsa = -1;
+        this.IdTipo = -1;
+        this.IdTipificacion = -1;
+        this.CodigoTicket = "";
+        this.FechaInicio = "";
+        this.FechaFin = "";
+        this.CodigoEstado = "";
+    }
+
+    function PRM_Nota(){
+        this.IdTicketEscalamiento = -1;
+        this.IdUsuario = -1;
+        this.Nota = "";
+        this.TipoPerfil = -1;
+        this.NombreUsuario = "";
+
+        this.EsPrivado = false;
+        this.EnvioPorCorreo = false;
+
+        this.LeidoUsuario = false;
+        this.LeidoTecnico = false;
+        this.LeidoSupervisor = false;
+
+        this.IdTicketExterno = -1;
+        this.IdDominio = -1;
+    }
+
+    $(function () {
+
+        MiModeloTicket = @Html.Raw(new JavaScriptSerializer().Serialize(Model));
+        fnEventosTicket();
+        fnDiseno();
+        fnGrillaTicket();
+
+        //#region TABS
+        //$(".miPanel").hide();
+        //$("#rowNotas").fadeIn(300);
+        //$("#ulTap li").click(function () {
+        //    $("#ulTap li").removeClass("ulTapSelect");
+        //    $("#ulTap li h4").removeClass("h4select");
+        //    $(this).addClass("ulTapSelect");
+        //    $(this).find("h4").addClass("h4select");
+        //    $(".miPanel").hide();
+        //
+        //    switch ($($(this).find("h4")[0]).text().toUpperCase()) {
+        //        case "NOTAS":
+        //            $("#rowNotas").fadeIn(300);
+        //            break;
+        //        case "DETALLES":
+        //            $("#rowDetalles").fadeIn(300);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    disenoResize();
+        //});
+        //#endregion
+
+        //#region Ocultar Filtro
+        $("#navFiltros").hide();
+        $(".navbar-min").show();
+        $("#navbarshow").click(function() {
+            $("#navFiltros").show(300);
+            $(".navbar-min").hide(300);
+        });
+        $("#navbarhide").click(function() {
+            $("#navFiltros").hide(300);
+            $(".navbar-min").show(300);
+            fnActualizarNavMin();
+        });
+
+        //cargar valores a navegacion-min
+        fnActualizarNavMin();
+
+        function fnActualizarNavMin() {
+            var nTecnico = $("#middlTecnico > div:nth-child(2)").html();
+            var nCodigoTicket = $("#txtCodigoTicket").val();
+            var nDominio = $("#ddlDominio option[value='" + $("#ddlDominio").val() + "']").text();
+            var nNivel = $("#ddlNivel option[value='" + $("#ddlNivel").val() + "']").text();
+            var nBolsa = $("#ddlBolsa option[value='" + $("#ddlBolsa").val() + "']").text();
+            var nGrupos = $("#ddlGrupoEstado option[value='" + $("#ddlGrupoEstado").val() + "']").text();
+            var nEstado = $("#ddlEstado option[value='" + $("#ddlEstado").val() + "']").text();
+            var nTipo = $("#ddlTipo option[value='" + $("#ddlTipo").val() + "']").text();
+            var nTipificacion = $("#ddlTipificacion option[value='" + $("#ddlTipificacion").val() + "']").text();
+            var nFecha = '';
+            if ($("#txtFechaInicio").val() == '' && $("#txtFechaFin").val() != '') {
+                nFecha = 'Hasta ' + $("#txtFechaFin").val();
+            } else if ($("#txtFechaInicio").val() != '' && $("#txtFechaFin").val() == '') {
+                nFecha = 'Desde ' + $("#txtFechaInicio").val();
+            } else if ($("#txtFechaInicio").val() != '' && $("#txtFechaFin").val() != '') {
+                nFecha = $("#txtFechaInicio").val() + ' - ' + $("#txtFechaInicio").val();
+            }
+            $("#lblMinTecnico").text(nTecnico);
+            if (nCodigoTicket == '') {
+                $("#liCodigoTicket").hide();
+            } else {
+                $("#liCodigoTicket").show();
+                $("#lblMinCodigoTicket").text(nCodigoTicket);
+            }
+            $("#lblMinDominio").text(nDominio);
+            $("#lblMinNivel") .text(nNivel);
+            $("#lblMinBolsa") .text(nBolsa);
+            $("#lblMinGrupos").text(nGrupos);
+            $("#lblMinEstado").text(nEstado);
+            $("#lblMinTipo")  .text(nTipo);
+            if (nTipo == '--Todos--') {
+                $("#liTipificacion").hide();
+            } else {
+                $("#liTipificacion").show();
+                $("#lblMinTipificacion").text(nTipificacion);
+            }
+            if (nFecha == ''){
+                $("#liFecha").hide();
+            } else {
+                $("#liFecha").show();
+                $("#lblMinFecha").text(nFecha);
+            }
+        }
+        //#endregion
+    });
+
+        function fnDiseno() {
+            var ancho = 0;
+            for (var i = 0; i < $("#miPopOverTecnicos > .miDvTecnico").length ; i++) {
+                if ($($("#miPopOverTecnicos > .miDvTecnico")[i]).width() >  ancho ) {
+                    ancho = $($("#miPopOverTecnicos > .miDvTecnico")[i]).width() + 15;
+                }
+            }
+            $("#miPopOverTecnicos > .miDvTecnico").width(ancho - 8);
+            $("#miPopOverTecnicos").width(ancho);
+            $("#miPopOverTecnicos").css("display","none");
+        }
+
+        function disenoResize() {
+            $("#grillaTicket").setGridWidth($("#dvGrillaTicket").width() - 3);
+        }
+
+        function GetMiArchivo(pArchivo) {
+            window.open('@Url.Content("~/Temp/")' + pArchivo,'_blank');
+        };
+
+        function DeleteMiArchivo(pArchivo) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("DeleteArchivo", "Ticket")',
+            data: "{'pNombre': '" + pArchivo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    $('#UploadedFile').html("");
+                    $("#UploadButton").show();
+                    vcFileName = "";
+                }
+                else
+                {
+                    miAlerta("Alerta", "Error al borrar elemento", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+
+    function fnEventosTicket() {
+
+        $(".btnMostrarDetFinal").live("click",function(){
+            fnMostrarDetalleFinalizado(this);
+        });
+
+        $("#btnEscalar").click(function(){
+            fnObtenerBolsasEscalada();
+        });
+        $("#btnRegistrarEscalamiento").click(function(){
+            fnRegistrarEscalamiento();
+        });
+        $(".btnCerrarTicker").click(function(){
+            fnBtnCerrarTicket(this);
+        });
+        $("#btnRegistrarCierre").click(function(){
+            fnRegistrarCierre(this);
+        });
+
+        $("#btnAyuda").click(function(){
+
+            var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                if ($(this).text() == "Ayuda") {
+                    miDialogo("Activar ayuda","Se marcará el ticket con estado ayuda de supervisor",fnActivarAyuda);
+                }
+                else
+                {
+                    miDialogo("Activar ticket","Se volverá a estado activo ticket seleccionado",fnActivarTicket);
+                }
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+        });
+
+        $('#dvDialogoNotas').on('shown.bs.modal', function (e) {
+            fnReiniciarModalNotas();
+            fnObtenerNotas();
+        })
+
+        $("#ddlOrigenNota").change(function(){
+            $("#dvMensajes").html("");
+            if ($(this).val() == "2") {
+                $(".esOrigenEscalamiento").hide();
+                fnObtenerNotas();
+            }
+            else
+            {
+                fnObtenerNotas();
+                $(".esOrigenEscalamiento").show();
+            }
+        });
+
+        $("#btnRegistrarNota").click(function () {
+            debugger;
+            if ($.trim($("#txtNota").val()) != "") {
+                fnRegistrarNota();
+            }
+            else
+            {
+                miAlerta("Alerta", "Ingrese nota", "glyphicon-exclamation-sign", "#f0ad4e");
+                $("#txtNota").focus();
+            }
+
+        });
+
+        $("#chkMostrarPrivados").change(function(){
+            $("#chkPrivado").prop("checked" , $(this).prop("checked"));
+            if ($(this).prop("checked")) {
+                $("#chkPrivado").attr("disabled","disabled");
+                $(".dvEsPublico").hide();
+            }
+            else
+            {
+                $("#chkPrivado").removeAttr("disabled");
+                $(".dvEsPublico").show();
+            }
+            $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 300);
+
+
+        });
+
+        var upload = new AjaxUpload('#UploadButton', {
+            action: '@Url.Action("SetArchivo", "Ticket")',
+                hoverClass:'miHoverAjaxUpdate',
+                onComplete: function (file, response) {
+                    //alert(response);
+                    //$("<div class='imgBtn' style='margin-top:1px; height:21px;'><img src='../../Common/Images/remove.png' onclick=\"DeleteFile('" + response + "')\"/>&nbsp;&nbsp;&nbsp;<span id='filesubido' style='text-decoration:underline;' nombre='" + response + "'>" + response + "</span></div>").appendTo('#UploadedFile');
+                    vcFileName = response;
+                    $("#UploadedFile").append('<div nombre="'+response+'"><ul><li onclick="DeleteMiArchivo(\''+response+'\')"><span class="glyphicon glyphicon-remove" aria-hidden="true" style="color:red;"></span></li><li onclick="GetMiArchivo(\''+response+'\')"" >'+response+'</li></ul></div>');
+                    $("#UploadButton").hide();
+                    $("#UploadedFile").fadeIn(300);
+
+                },
+                onSubmit: function (file, ext) {
+                    if (!(ext && /^(txt|doc|docx|xls|xlsx|pdf|jpg|png)$/i.test(ext))) {
+                        miAlerta("Alerta", 'Formato inválido', "glyphicon-exclamation-sign", "#f0ad4e");
+                        return false;
+                    }
+                }
+            });
+            $(upload._input).css("z-index", "99999999");
+
+            $("#btnMostrarNotas").click(function(){
+
+                var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+                if (id) {
+                    $("#dvDialogoNotas").modal('show');
+                }
+                else
+                {
+                    miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                    return;
+                }
+
+            });
+
+            $(window).resize(function () {
+                disenoResize();
+            });
+
+            $(document).click(function(){
+                $("#miPopOverTecnicos").fadeOut(200);
+            });
+
+            $("#middlTecnico").click(function (e) {
+                $("#miPopOverTecnicos").css("position", "absolute");
+
+                $("#miPopOverTecnicos").css("left", $("#middlTecnico").offset().left);
+                //$("#miPopOverTecnicos").css("top", $("#middlTecnico").offset().top + $($(".miCajonGroupBox")[0]).height());
+                $("#miPopOverTecnicos").css("top", $("#middlTecnico").offset().top + 60);
+
+                $("#miPopOverTecnicos").fadeIn(200);
+
+                e.stopPropagation();
+            });
+
+            $(".miDvTecnicoMenu").click(function(){
+                var index = $(this).attr("miData");
+                var select = $("#middlTecnico").attr("miData");
+                $("#miItem-"+select).show();
+                fnActualizarByTecnico(index);
+            });
+
+            $("#ddlGrupoEstado").change(function(){
+                $("#ddlEstado").html("");
+                $("#ddlEstado").append("<option value='-1'>--Todos--</option>");
+                if ($(this).val() == "-1") {
+                    for (var i = 0; i < MiModeloTicket.Estados.length; i++) {
+                        $("#ddlEstado").append("<option value='"+ MiModeloTicket.Estados[i].Codigo +"'>"+MiModeloTicket.Estados[i].Nombre+"</option>");
+                    }
+                }
+                else{
+                    if ($(this).val() == "1") {
+                        for (var i = 0; i < MiModeloTicket.Estados.length; i++) {
+                            if (MiModeloTicket.Estados[i].Codigo != 'ANU' && MiModeloTicket.Estados[i].Codigo != 'RES' && MiModeloTicket.Estados[i].Codigo != 'DEV') {
+                                $("#ddlEstado").append("<option value='"+ MiModeloTicket.Estados[i].Codigo +"'>"+MiModeloTicket.Estados[i].Nombre+"</option>");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (var i = 0; i < MiModeloTicket.Estados.length; i++) {
+                            if (MiModeloTicket.Estados[i].Codigo == 'ANU' || MiModeloTicket.Estados[i].Codigo == 'RES' || MiModeloTicket.Estados[i].Codigo == 'DEV') {
+                                $("#ddlEstado").append("<option value='"+ MiModeloTicket.Estados[i].Codigo +"'>"+MiModeloTicket.Estados[i].Nombre+"</option>");
+                            }
+                        }
+                    }
+                }
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#ddlNivel").change(function(){
+                for (var i = 0; i < MiModeloTicket.Niveles.length; i++) {
+                    if(MiModeloTicket.Niveles[i].IdNivel == $(this).val())
+                    {
+                        $("#ddlBolsa").html("");
+                        $("#ddlBolsa").append("<option value='-1'>--Todos--</option>");
+                        for (var k = 0; k < MiModeloTicket.Niveles[i].Bolsas.length; k++) {
+                            $("#ddlBolsa").append("<option value='"+ MiModeloTicket.Niveles[i].Bolsas[k].IdBolsa +"'>"+MiModeloTicket.Niveles[i].Bolsas[k].Nombre+"</option>");
+                        }
+                        $("#grillaTicket").trigger("reloadGrid");
+                        break;
+                    }
+                }
+            });
+
+            $("#ddlTipo").change(function(){
+                var selecionado = $(this).val();
+                $("#ddlTipificacion").html("");
+                $("#ddlTipificacion").append("<option value='-1'>--Todos--</option>");
+                if (selecionado == "-1") {
+                    $("#dvTipificacion").hide();
+                    $("#grillaTicket").trigger("reloadGrid");
+                }
+                else{
+                    for (var i = 0; i < MiModeloTicket.Tipos.length; i++) {
+                        if(MiModeloTicket.Tipos[i].IdTipo == selecionado)
+                        {
+                            for (var k = 0; k < MiModeloTicket.Tipos[i].Tipificaciones.length; k++) {
+                                $("#ddlTipificacion").append("<option value='"+ MiModeloTicket.Tipos[i].Tipificaciones[k].IdTipificacion +"'>"+MiModeloTicket.Tipos[i].Tipificaciones[k].Nombre+"</option>")
+                            }
+                            $("#grillaTicket").trigger("reloadGrid");
+                            break;
+                        }
+                    }
+                    $("#dvTipificacion").show(200);
+                }
+            });
+
+            $("#btnBorrarFechaInicio").click(function(){
+                $("#txtFechaInicio").val("");
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#btnBorrarFechaFin").click(function(){
+                $("#txtFechaFin").val("");
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $('#txtCodigoTicket').live("keypress", function (e) {
+                if (e.keyCode == 13) {
+                    $("#grillaTicket").trigger("reloadGrid");
+                }
+                else {
+                    return ValidarAlfaNumericoSinEspacios(e);
+                }
+            });
+
+            $("#ddlDominio").change(function(){
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#ddlBolsa").change(function(){
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#ddlTipificacion").change(function(){
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#ddlEstado").change(function(){
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#txtFechaInicio").change(function () {
+
+                $("#txtFechaFin").datepicker("option", "minDate", $("#txtFechaInicio").datepicker("getDate"));
+
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+            $("#txtFechaFin").change(function () {
+
+                $("#txtFechaInicio").datepicker("option", "maxDate", $("#txtFechaFin").datepicker("getDate"));
+
+                $("#grillaTicket").trigger("reloadGrid");
+            });
+
+        }
+
+        function fnActualizarByTecnico(index) {
+            $("#miItem-" + index).hide();
+            $("#middlTecnico").attr("miData", index)
+
+            if (MiModeloTicket.Tecnicos[index].Foto.Tamano > 0) {
+                $("#middlTecnico > div:nth-child(1) > img:first-child").attr("src", "@(new Control().ResolveUrl("~/Temp/"))"  + MiModeloTicket.Tecnicos[index].Foto.Nombre);
+            }
+            else
+            {
+                $("#middlTecnico > div:nth-child(1) > img:first-child").attr("src","@(new Control().ResolveUrl("~/Common/Images/Silueta.jpg"))");
+            }
+
+            $("#middlTecnico > div:nth-child(2)").html("");
+            $("#middlTecnico > div:nth-child(2)").append(MiModeloTicket.Tecnicos[index].Nombres + " " + MiModeloTicket.Tecnicos[index].Apellidos);
+
+            $("#ddlDominio").html("");
+            $("#ddlDominio").append("<option value='-1'>--Todos--</option>")
+            for (var i = 0; i < MiModeloTicket.Tecnicos[index].Dominios.length ; i++) {
+                $("#ddlDominio").append("<option value='"+ MiModeloTicket.Tecnicos[index].Dominios[i].IdDominio +"'>"+MiModeloTicket.Tecnicos[index].Dominios[i].Nombre+"</option>");
+            }
+
+            $("#ddlNivel").html("");
+            $("#ddlBolsa").html("");
+            $("#ddlBolsa").append("<option value='-1'>--Todos--</option>");
+
+            for (var i = 0; i < MiModeloTicket.Tecnicos[index].Niveles.length  ; i++) {
+                $("#ddlNivel").append("<option value='"+ MiModeloTicket.Tecnicos[index].Niveles[i].IdNivel +"'>"+MiModeloTicket.Tecnicos[index].Niveles[i].Nombre+"</option>");
+
+                if (i == 0) {
+
+                    for (var k = 0; k < MiModeloTicket.Niveles[i].Bolsas.length; k++) {
+                        $("#ddlBolsa").append("<option value='"+ MiModeloTicket.Niveles[i].Bolsas[k].IdBolsa +"'>"+MiModeloTicket.Niveles[i].Bolsas[k].Nombre+"</option>");
+                    }
+                }
+            }
+
+            $("#ddlTipo").html("");
+            $("#ddlTipo").append("<option value='-1'>--Todos--</option>")
+            for (var i = 0; i < MiModeloTicket.Tecnicos[index].Tipos.length  ; i++) {
+                $("#ddlTipo").append("<option value='"+ MiModeloTicket.Tecnicos[index].Tipos[i].IdTipo +"'>"+MiModeloTicket.Tecnicos[index].Tipos[i].Nombre+"</option>");
+
+            }
+
+            $("#ddlTipificacion").html("");
+            $("#ddlTipificacion").append("<option value='-1'>--Todos--</option>");
+            $("#dvTipificacion").hide();
+
+            $("#grillaTicket").trigger("reloadGrid");
+    }
+
+   //se agrego esto
+    $("#btnExportarExcel").live("click", function () {
+        fnExportarExcel();
+    });
+
+    function fnExportarExcel() {
+        $("#dvExportarExcel").modal("show");
+    }
+
+     $("#btnAceptarExp").live("click", function ()
+     {
+        var oParametroValue
+        oParametroValue = $("input[name='ExportarExcel']:checked").val() * 1;
+        $.ajax
+        ({
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            url: '@Url.Action("ExportarExcel","Ticket")',
+            data: "{'TipoVersion': '" + oParametroValue + "'}",
+            success: function (result)
+            {
+                $("#grillaTicket").trigger("reloadGrid", [{ current: true }]);
+
+                var NombreArchivo = result.Data;
+
+                if (NombreArchivo != "DataTableVacio") {
+                    GetMiArchivo(NombreArchivo);
+                }
+                else
+                {
+                    if (NombreArchivo == "DataTableVacio")
+                    {
+                        miAlerta("Ticket", 'No hay datos para Exportar.', "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                }
+
+            },
+            error: function () {
+                MostrarErrorAjax(xhr, err, thrErr);
+            }
+        });
+
+    });
+
+    function fnGrillaTicket() {
+        $("#grillaTicket").jqGrid({
+                datatype: function () {
+
+                    var oParametro
+                    oParametro = new PRM_Ticket();
+
+                    if ($("#txtCodigoTicket").val() != null && $.trim($("#txtCodigoTicket").val()) != "" ) {
+                        oParametro.CodigoTicket =  $.trim($("#txtCodigoTicket").val());
+                    }
+
+                    if ($("#ddlDominio").val() != null && $("#ddlDominio").val() != "-1") {
+                        oParametro.IdDominio = $("#ddlDominio").val();
+                    }
+
+                    if ($("#ddlNivel").val() != null && $("#ddlNivel").val() != "-1") {
+                        oParametro.IdNivel = $("#ddlNivel").val();
+                    }
+
+                    if ($("#ddlBolsa").val() != null && $("#ddlBolsa").val() != "-1") {
+                        oParametro.IdBolsa = $("#ddlBolsa").val();
+                    }
+
+                    if ($("#ddlTipo").val() != null && $("#ddlTipo").val() != "-1") {
+                        oParametro.IdTipo = $("#ddlTipo").val();
+                    }
+
+                    if ($("#ddlTipificacion").val() != null && $("#ddlTipificacion").val() != "-1") {
+                        oParametro.IdTipificacion = $("#ddlTipificacion").val();
+                    }
+
+                    if ($.trim($("#txtFechaInicio").val()) != "" ) {
+                        var miFechaInicio = $("#txtFechaInicio").datepicker("getDate");
+                        if (miFechaInicio != undefined) {
+                            var DiaInicio = miFechaInicio.getDate().toString();
+                            var MesInicio = (parseInt(miFechaInicio.getMonth()) + 1).toString();
+                            var AnoInicio = miFechaInicio.getFullYear().toString();
+
+                            if (DiaInicio.length < 2)
+                            { DiaInicio = "0" + DiaInicio; }
+
+                            if (MesInicio.length < 2)
+                            { MesInicio = "0" + MesInicio; }
+
+                            oParametro.FechaInicio = AnoInicio + MesInicio + DiaInicio;
+                        }
+                    }
+
+                    if ($.trim($("#txtFechaFin").val()) != "" ) {
+                        miFechaFin = $("#txtFechaFin").datepicker("getDate");
+
+                        if (miFechaFin != undefined) {
+
+                            var DiaFin = miFechaFin.getDate().toString();
+                            var MesFin = (parseInt(miFechaFin.getMonth()) + 1).toString();
+                            var AnoFin = miFechaFin.getFullYear().toString();
+
+                            if (DiaFin.length < 2)
+                            { DiaFin = "0" + DiaFin; }
+
+                            if (MesFin.length < 2)
+                            { MesFin = "0" + MesFin; }
+
+                            oParametro.FechaFin = AnoFin + MesFin + DiaFin;
+                        }
+                    }
+
+                    if ($("#ddlGrupoEstado").val() == "-1" ) {
+                        if ($("#ddlEstado").val() != "-1") {
+                            oParametro.CodigoEstado = "|" + $("#ddlEstado").val() + "|";
+                        }
+                        else
+                        {
+                            oParametro.CodigoEstado = "|PEN|,|ACT|,|AYU|,|ATE|,|RES|,|ANU|,|DEV|,|ESC|";
+                        }
+                    }
+                    else
+                    {
+                        if ($("#ddlGrupoEstado").val() == "1") {
+                            if ($("#ddlEstado").val() != "-1") {
+                                oParametro.CodigoEstado = "|"+  $("#ddlEstado").val() + "|";
+                            }
+                            else
+                            {
+                                oParametro.CodigoEstado = "|PEN|,|ACT|,|AYU|,|ATE|,|ESC|";
+                            }
+                        }
+                        else{
+                            if ($("#ddlEstado").val() != "-1") {
+                                oParametro.CodigoEstado = "|"+ $("#ddlEstado").val() + "|";
+                            }
+                            else
+                            {
+                                oParametro.CodigoEstado = "|RES|,|ANU|,|DEV|";
+                            }
+                        }
+                    }
+
+                    var miIndex = $("#middlTecnico").attr("midata");
+                    oParametro.IdUsuario = MiModeloTicket.Tecnicos[miIndex].IdUsuario;
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("GetTicket", "Ticket")',
+                        data: "{'inPagTam':'" + $('#grillaTicket').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaTicket').getGridParam("page") + "'," + //FiltroRegistro
+                           "'vcOrdCol':'" + $('#grillaTicket').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaTicket').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc
+                           "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            $("#grillaTicket")[0].addJSONData(result);
+                            disenoResize();
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "Id"
+                },
+                colModel: [
+                    { name: 'Id', index: 'Id', label: 'Id', width: "50px", hidden: true },
+                    { name: 'Identificador', index: 'Identificador', label: 'Identificador', width: "50px", hidden: true },
+                    { name: 'CodigoTicket', index: 'CodigoTicket', label: 'Ticket', width: "78px", align:'center' },            ///////////////////////////////////////
+                    { name: 'CodigoTicketMain', index: 'CodigoTicketMain', label: 'Ticket Principal', width: "97px", align:'center' }, ///100px////////////////////////////////////
+                    { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true },
+                    { name: 'Nombres', index: 'Nombres', label: 'Usuario', width: "58px" }, /////////////90px//////////////////////////
+                    { name: 'IdUsuarioTecnico', index: 'IdUsuarioTecnico', label: 'IdUsuarioTecnico', width: "50px", hidden: true },
+                    { name: 'NombreTecnico', index: 'NombreTecnico', label: 'Técnico', width: "62px" },///////////////////////////////////////
+                    { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+                    { name: 'NombreBolsa', index: 'NombreBolsa', label: 'Bolsa', width: "55px", align: 'center' },///////////////////////////////////////
+                    { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+                    { name: 'IdDominio', index: 'IdDominio', label: 'IdDominio', width: "50px", hidden: true },
+                    { name: 'NombreDominio', index: 'NombreDominio', label: 'Dominio', width: "59px", align: 'center' },///////////////////////////////////////
+                    { name: 'CodigoEstado', index: 'CodigoEstado', label: 'CodigoEstado', width: "50px", hidden: true },
+                    { name: 'NombreEstado', index: 'NombreEstado', label: 'Estado', width: "54px", align: 'center' },///////////////////////////////////////
+                    { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+                    { name: 'NombreTipo', index: 'NombreTipo', label: 'Tipo', width: "68px", align: 'center' },///////////////////////////////////////
+                    { name: 'IdTipificacion', index: 'IdTipificacion', label: 'IdTipificacion', width: "50px", hidden: true },
+                    { name: 'NombreTipificacion', index: 'NombreTipificacion', label: 'Tipificación', width: "83px", align: 'center' },///////////////////////////////////////
+                    { name: 'Asunto', index: 'Asunto', label: 'Asunto', width: "100px" },////////////150pz///////////////////////////
+                    { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "210px" },//////////////250px/////////////////////////
+                    { name: 'FechaRegistro', index: 'FechaRegistro', label: 'Fecha registro', width: "100px", align: 'center' },///////////////////////////////////////
+                    { name: 'FechaActivo', index: 'FechaActivo', label: 'Fecha Activación', width: "105px", align: 'center' },///////////////////////////////////////
+
+
+                    { name: 'FechaCierre', index: 'FechaCierre', label: 'Fecha Cierre', width: "96px", align: 'center' },//jpareja
+                    { name: 'FeIni Cierre', index: 'FeIni Cierre', label: 'FeIni Cierre', width: "110px", align: 'center' , hidden: true },//jpareja
+                    { name: 'FeFin Cierre', index: 'FeFin Cierre', label: 'FeFin Cierre', width: "110px", align: 'center', hidden: true },//jpareja
+
+
+
+
+                    { name: 'IdTicketEscalamiento_Inicial', index: 'IdTicketEscalamiento_Inicial', label: 'IdTicketEscalamiento_Inicial', width: "50px", hidden: true },
+                    { name: 'IdTicketEscalamiento_Final', index: 'IdTicketEscalamiento_Final', label: 'IdTicketEscalamiento_Final', width: "50px", hidden: true },
+
+                    { name: 'IdTicketExterno', index: 'IdTicketExterno', label: 'IdTicketExterno', width: "50px", hidden: true },
+                    { name: 'MotivoEscalamiento', index: 'MotivoEscalamiento', label: 'Motivo Escalamiento', width: "124px", align: 'center' },///////////////////////////////////////
+                    { name: 'ConclucionEscalamiento', index: 'ConclucionEscalamiento', label: 'Conclusion Escalamiento', width: "157px", align: 'center' },///////////////////////////////////////
+                    { name: 'TieneAdjunto', index: 'TieneAdjunto', label: 'Tiene Adjunto', width: "83px", align: 'center' }///////////////////////////////////////
+                    //ddfee
+                    //{ name: 'ctnContestada', index: 'ctnContestada', label: 'Contestadas', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                    //{ name: 'ptjContestada', index: 'ptjContestada', label: '% Contestadas', width: "100px", align: "right" },
+                    //{ name: 'ctnAbandonada', index: 'ctnAbandonada', label: 'Abandonadas', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                    //{ name: 'ptjAbandonada', index: 'ptjAbandonada', label: '% Abandonadas', width: "100px", align: "right" },
+                    //{ name: 'total', index: 'total', label: 'Total', width: "100px", align: "right", formatter: 'currency', formatoptions: { decimalSeparator: '.', thousandsSeparator: ',', decimalPlaces: 0} },
+                    //{ name: 'aceptacion', index: 'aceptacion', label: 'Aceptación', hidden: true },
+                    //{ name: 'PorcenAceptacion', index: 'PorcenAceptacion', label: 'PorcenAceptacion', hidden: true },
+                    //{ name: 'IdConfiguracion', index: 'IdConfiguracion', label: 'IdConfiguracion', hidden: true }
+                    //{ name: 'opAceptacion', index: 'opAceptacion', label: 'Aceptación', hidden: false, width: "70px", align: "center", sortable: false, resizable: false,
+                    //    formatter: function (value, options, rData) { return fnCrearAceptacion(rData[7], rData[9]); }
+                    //},
+                    //{ name: 'opIdConfiguracion', index: 'opIdConfiguracion', label: 'Leyenda', hidden: false, width: "70px", align: "center", sortable: false, resizable: false,
+                    //    formatter: function (value, options, rData) { return fnCreariconoConfiguracion(rData[10]); }
+                    //}
+                    //{ name: 'opDashBoard', index: 'opDashBoard', label: 'DashBoard', hidden: false, width: "70px", align: "center", sortable: false, resizable: true,
+                    //            formatter: function (value, options, rData) { return fnNombreGrilla(rData[0], rData[1]); }
+                    //}
+
+                ],
+                pager: "#pagerGrillaTicket",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                height: "170px", //"470px";
+                //height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 20,
+                gridComplete: function () {
+                    $("#grillaTicket").setGridWidth($("#dvGrillaTicket").width() - 3);
+
+                    $(".ui-jqgrid-bdiv").hover(function () {
+                        $(this).css("overflow-x", "scroll");
+                    }, function () {
+                        $(this).css("overflow-x", "hidden");
+                    });
+
+                    $(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                    if (DatosSeleccionados != undefined) {
+                        $('#grillaTicket').jqGrid('setSelection', DatosSeleccionados.Id);
+                        DatosSeleccionados = $("#grillaTicket").jqGrid('getRowData', DatosSeleccionados.Id);
+                    }
+                    else
+                    {
+                        $('#grillaTicket').jqGrid('setSelection', 1);
+                        DatosSeleccionados = $("#grillaTicket").jqGrid('getRowData', 1);
+                    }
+
+
+
+                    fnMostrarDetalleTicket(DatosSeleccionados);
+                    //fnObtenerNotas(); //agregado para notas en tab wapumayta
+                },
+                beforeSelectRow: function (rowid, e) {
+                    var CurrentSelectIndex = $("#grillaTicket").jqGrid('getInd', rowid);
+                    $('#grillaTicket').jqGrid('setSelection', CurrentSelectIndex);
+                    DatosSeleccionados = $("#grillaTicket").jqGrid('getRowData', CurrentSelectIndex);
+                    fnMostrarDetalleTicket(DatosSeleccionados);
+                    //fnObtenerNotas(); //agregado para notas en tab wapumayta
+                }
+            }).navGrid("#pagerGrillaTicket", { edit: false, add: false, search: false, del: false });
+
+        }
+
+    function fnMostrarDetalleTicket(datos)
+    {
+        let htmlTieneAdjunto = 'No contiene archivos adjuntos';
+        if (datos.TieneAdjunto == "SI") {
+            htmlTieneAdjunto = '<a href="#" id="btnDescargarAdjuntos" onclick="DescargarArchivosAdjuntos(' + datos.Id + ', \'' + datos.CodigoTicket + '\');"><span class="glyphicon glyphicon-save" aria-hidden="true"></span>Descargar Adjuntos</a>'
+        }
+
+            $("#tbDetalleGrilla tr:nth-child(2) td:nth-child(2)").text(datos.FechaRegistro);
+            $("#tbDetalleGrilla tr:nth-child(2) td:nth-child(4)").text(datos.FechaActivo);
+
+            $("#tbDetalleGrilla tr:nth-child(3) td:nth-child(2)").text(datos.CodigoTicket);
+            $("#tbDetalleGrilla tr:nth-child(3) td:nth-child(4)").text(datos.CodigoTicketMain);
+
+            $("#tbDetalleGrilla tr:nth-child(4) td:nth-child(2)").text(datos.Nombres);
+            $("#tbDetalleGrilla tr:nth-child(4) td:nth-child(4)").text(datos.NombreEstado);
+
+            $("#tbDetalleGrilla tr:nth-child(5) td:nth-child(2)").text(datos.NombreTecnico);
+            $("#tbDetalleGrilla tr:nth-child(5) td:nth-child(4)").text(datos.NombreTipificacion);
+
+            $("#tbDetalleGrilla tr:nth-child(6) td:nth-child(2)").text(datos.NombreDominio);
+            $("#tbDetalleGrilla tr:nth-child(6) td:nth-child(4)").text(datos.Descripcion);
+
+            $("#tbDetalleGrilla tr:nth-child(7) td:nth-child(2)").text(datos.NombreTipo);
+            $("#tbDetalleGrilla tr:nth-child(7) td:nth-child(4)").text(datos.MotivoEscalamiento);
+
+            $("#tbDetalleGrilla tr:nth-child(8) td:nth-child(2)").text(datos.NombreBolsa);
+            $("#tbDetalleGrilla tr:nth-child(8) td:nth-child(4)").text(datos.ConclucionEscalamiento);
+
+            $("#tbDetalleGrilla tr:nth-child(9) td:nth-child(2)").text(datos.Asunto);
+            $("#tdAdjuntos").html(htmlTieneAdjunto);
+
+            $("#btnAyuda").html("");
+
+            switch (datos.CodigoEstado)
+            {
+                case 'ACT':
+                    $("#btnAyuda").append('<span class="glyphicon glyphicon-user" aria-hidden="true"></span>Ayuda');
+                    break;
+                case 'AYU':
+                    $("#btnAyuda").append('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Activar');
+                    break;
+                default:
+                    $("#btnAyuda").append('<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Activar');
+                    break;
+            }
+    }
+
+    function DescargarArchivosAdjuntos(idTicket, CodTicket) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("DescargarAdjuntosTicket", "Ticket")',
+            data: "{'idTicket':'" + idTicket + "', 'CodTicket':'" + CodTicket + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Data.indexOf("ERROR") == -1 && result.Data != "") {
+                    GetMiArchivo(result.Data)
+                }
+                else {
+                    miAlerta("Error", "Error en la generación del archivo.", "glyphicon-exclamation-sign", "#d9534f");
+                }
+            }
+        });
+    }
+
+        function fnRegistrarNota() {
+
+            var oParametro
+            oParametro = new PRM_Nota();
+
+            var esSupervisor = $("#middlTecnico").attr("midata") == "0";
+
+            if ($("#ddlOrigenNota").val() == "1") {
+                oParametro.IdTicketEscalamiento = DatosSeleccionados.IdTicketEscalamiento_Inicial;
+                if (esSupervisor) {
+                    oParametro.LeidoTecnico = true;
+                    oParametro.TipoPerfil = 2;
+                }
+                else
+                {
+                    oParametro.LeidoSupervisor = true;
+                    oParametro.TipoPerfil = 3;
+                }
+            }
+            else
+            {
+                oParametro.IdTicketEscalamiento = DatosSeleccionados.IdTicketEscalamiento_Final;
+                oParametro.LeidoUsuario = true;
+                oParametro.TipoPerfil = 1;
+            }
+
+            oParametro.LeidoUsuario = $("#chkPrivado").prop("checked");
+            oParametro.EsPrivado = $("#chkPrivado").prop("checked");
+            oParametro.EnvioPorCorreo = $("#chkEnviarPorCorreo").prop("checked");
+
+            oParametro.Nota = $("#txtNota").val();
+
+            oParametro.IdTicketExterno = DatosSeleccionados.IdTicketExterno;
+            oParametro.IdDominio = DatosSeleccionados.IdDominio;
+
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarNota", "Ticket")',
+                data: "{'pNombreArchivo':'" + vcFileName + "'," +
+                        "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        $("#txtNota").val("");
+                        $("#txtNota").focus();
+
+                        $("#dvDialogoNotas .modal-body").append(result.Data);
+
+                        $('#UploadedFile').html("");
+                        $("#UploadButton").show();
+                        vcFileName = "";
+
+                        $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 1000);
+                    }
+                    else{
+                        miAlerta("Alerta", "Error al registrar Nota", "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+
+        }
+
+        function fnReiniciarModalNotas() {
+            $("#ddlOrigenNota").val("1");
+            $(".esOrigenEscalamiento").show();
+            $("#chkMostrarPrivados").prop("checked",false);
+            $("#chkPrivado").prop("checked", false);
+            $("#chkEnviarPorCorreo").prop("checked", false);
+
+            $("#chkPrivado").removeAttr("disabled");
+            $('#UploadedFile').html("");
+            $("#UploadButton").show();
+            vcFileName = "";
+            $("#txtNota").val("");
+            $("#dvDialogoNotas .modal-body").html("");
+        }
+
+        function fnObtenerNotas() {
+            var datos;
+            var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+            if (id) {
+                datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+                if (datos.CodigoEstado == "ANU" || datos.CodigoEstado == "RES" || datos.CodigoEstado == "DEV") {
+                    $("#dvDialogoNotas .modal-footer").hide();
+                }
+                else
+                {
+                    $("#dvDialogoNotas .modal-footer").show();
+                }
+            }
+            else
+            {
+                miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+
+            var pIdTicket;
+            var pIdTicketEscalamiento;
+            var pTipoPerfil;
+
+            var esSupervisor = $("#middlTecnico").attr("midata") == "0";
+
+            pIdTicket = DatosSeleccionados.Id;
+
+            if ($("#ddlOrigenNota").val() == "1") {
+                pIdTicketEscalamiento = DatosSeleccionados.IdTicketEscalamiento_Inicial;
+                if (esSupervisor) {
+                    pTipoPerfil = 2;
+                }
+                else
+                {
+                    pTipoPerfil = 3;
+                }
+            }
+            else
+            {
+                pTipoPerfil = 1;
+                pIdTicketEscalamiento = DatosSeleccionados.IdTicketEscalamiento_Final;
+
+                if (datos.IdTicketEscalamiento_Final == "-1") {
+                    $("#dvDialogoNotas .modal-footer").hide();
+                }
+                else{
+                    $("#dvDialogoNotas .modal-footer").show();
+                }
+            }
+
+            if ($("#ddlOrigenNota").val() == "1") {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Notas_Inicial", "Ticket")',
+                    data: "{'pIdTicket':'" + pIdTicket + "'," +
+                            "'pIdTicketEscalamiento': '" + pIdTicketEscalamiento + "'," +
+                            "'pTipoPerfil': '" + pTipoPerfil + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        fnPintarNotas(result);
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            } else {
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Notas_Final", "Ticket")',
+                    data: "{'pIdTicket':'" + pIdTicket  + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        fnPintarNotasFinal(result);
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+            }
+        }
+
+    function fnPintarNotasFinal(pNotas) {
+        $("#dvDialogoNotas .modal-body").html("");
+
+        for (var i = 0; i < pNotas[1].length; i++) {
+            $("#dvDialogoNotas .modal-body").append(pNotas[1][i].Html);
+        }
+
+        for (var i = 0; i < pNotas[0].length; i++) {
+            $("#dvDialogoNotas .modal-body").append(pNotas[0][i].Html);
+        }
+
+        $('#UploadedFile').html("");
+        $("#UploadButton").show();
+        vcFileName = "";
+
+        $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 300);
+    }
+
+    function fnPintarNotas(pNotas) {
+        $("#dvDialogoNotas .modal-body").html("");
+        for (var i = 0; i < pNotas.length; i++) {
+            $("#dvDialogoNotas .modal-body").append(pNotas[i].Html);
+        }
+
+        $('#UploadedFile').html("");
+        $("#UploadButton").show();
+        vcFileName = "";
+
+        $("#dvMensajes").animate({ scrollTop: document.getElementById("dvMensajes").scrollHeight }, 300);
+    }
+
+
+    function getChatFile(pIdNota,pNombreArchivo) {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("GetArchivo", "Ticket")',
+            data: "{'pIdNota':'" + pIdNota + "'," +
+                    "'pNombreArchivo': '" + pNombreArchivo + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    window.open('@Url.Content("~/Temp/")' + result.Data.Nombre + '.' + result.Data.Extencion ,'_blank');
+                }
+                else
+                {
+                    miAlerta("Alerta", "Error al obtener Archivo", "glyphicon-exclamation-sign", "#f0ad4e");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+
+    }
+
+    function fnActivarAyuda() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ActivarAyuda", "Ticket")',
+            data: "{'pIdTicket':'" + DatosSeleccionados.Id  + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    $("#grillaTicket").trigger("reloadGrid");
+                    miAlerta("Activar Ayuda", "Activación exitosa", "glyphicon-ok", "#5cb85c");
+                }
+                else
+                {
+                    miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnActivarTicket() {
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("ActivarTicket", "Ticket")',
+            data: "{'pIdTicket':'" + DatosSeleccionados.Id  + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    $("#grillaTicket").trigger("reloadGrid");
+                    miAlerta("Activar Ticket", "Activación exitosa", "glyphicon-ok", "#5cb85c");
+                }
+                else
+                {
+                    miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+    function fnObtenerBolsasEscalada() {
+
+        $("#ddlElegirEscala").html("");
+
+        var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+            if (datos.CodigoEstado != 'ACT' && datos.CodigoEstado != 'AYU' && datos.CodigoEstado != 'ATE') {
+                miAlerta("Escalamiento", "Sólo se pueden escalar tickets ACTIVOS , ATENDIDOS y de AYUDA", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerBolsasEscalamiento", "Ticket")',
+                data: "{'pIdBolsa':'" + datos.IdBolsa + "'," +
+                        "'pIdNivel': '" + datos.IdNivel + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.length > 0) {
+
+                        for (var i = 0; i < result.length; i++) {
+                            $("#ddlElegirEscala").append("<option value=\""+result[i].IdBolsa+"\" >" + result[i].Nombre + "</option>")
+                        }
+
+                        $("#miDialogoEscalamiento").modal("show");
+                    }
+                    else{
+                        miAlerta("Escalamiento", "Este es el último nivel", "glyphicon-exclamation-sign", "#f0ad4e");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else{
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnRegistrarEscalamiento() {
+        var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+        if (id) {
+
+            $("#miDialogoEscalamiento").modal("hide");
+
+            var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+            var oParametro
+            oParametro = new PRM_TicketAccion();
+
+            oParametro.IdTicket = datos.Id;
+            oParametro.IdBolsaEscalamiento = $("#ddlElegirEscala").val();
+            oParametro.Mensaje = $("#txtDescripcionEscala").val();
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EscalarTicket", "Ticket")',
+                data: "{'pParametros':'" + JSON.stringify(oParametro)  + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split("|")[0] == "OK") {
+                        $("#grillaTicket").trigger("reloadGrid", [{ current: true }]);
+                        miAlerta("Escalar Ticket", "Escalamiento exitoso", "glyphicon-ok", "#5cb85c");
+                    }
+                    else
+                    {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+
+        }
+        else{
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnBtnCerrarTicket(pThis) {
+        //debugger;
+        var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+            if (datos.CodigoEstado != 'ACT' && datos.CodigoEstado != 'AYU' && datos.CodigoEstado != 'ATE') {
+                miAlerta("Cerrar Ticket", "Sólo se pueden cerrar tickets ACTIVOS , de AYUDA y ATENDIDOS", "glyphicon-exclamation-sign", "#f0ad4e");
+                return;
+            }
+
+            var codEstado = "";
+            switch ($.trim($($(pThis).find("a")[0]).text())) {
+
+                case "Resuelto":
+                    codEstado = "RES";
+                    break;
+                case "Anulado":
+                    codEstado = "ANU"
+                    break;
+                case "Devuelto":
+                    codEstado = "DEV"
+                    break;
+                default:
+                    break;
+            }
+
+            $("#btnRegistrarCierre").attr("miData",codEstado);
+
+            $("#txtConclucionTicket").val("");
+            let idTipo = datos.IdTipo;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ObtenerDatosTificacion", "Ticket")',
+                data: "{'pTipo':'" + idTipo + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    //debugger;
+                    let html = '';
+                    $("#ddtipificacionmodal").html("");
+                    for (let i = 0; i < result.length; i++) {
+                        html = html + '<option value="' + result[i].IdTipificacion + '">' + result[i].Nombre + '</option>';
+                    }
+                    $("#ddtipificacionmodal").append(html);
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+            $("#miDialogoCierreTicket").modal("show");
+        }
+        else{
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+      }
+    }
+
+    $("#ddtipificacionmodal").change(function (e) {
+        IdTipificacionesddl = e.target.value;
+
+    });
+
+
+
+    function fnRegistrarCierre(pThis) {
+
+        var id = $("#grillaTicket").jqGrid('getGridParam', 'selrow');
+        if (id) {
+            var datos = $("#grillaTicket").jqGrid('getRowData', id);
+
+            if ($.trim($("#txtConclucionTicket").val()) == "") {
+                miAlerta("Alerta", "Ingrese conclusión de cierre", "glyphicon-exclamation-sign", "#f0ad4e");
+                $("#txtConclucionTicket").focus();
+                return;
+            }
+
+            var codEstado = $(pThis).attr("miData");
+            var oParametro
+            oParametro = new PRM_TicketAccion();
+
+            oParametro.IdTicket = datos.Id;
+            oParametro.CodEstado = codEstado;
+            oParametro.Mensaje = $("#txtConclucionTicket").val();
+            oParametro.IdTicketExterno = datos.IdTicketExterno;
+            oParametro.IdDominio = datos.IdDominio;
+            //parametro de tipificaciones del ddl  --JPAREJA
+            oParametro.IdTipificaciones = $("#ddtipificacionmodal").val();
+
+            $("#miDialogoCierreTicket").modal("hide");
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("CerrarTicket", "Ticket")',
+                data: "{'pParametros':'" + JSON.stringify(oParametro)  + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success && result.Mensaje.split("|")[0] == "OK") {
+                        $("#grillaTicket").trigger("reloadGrid", [{ current: true }]);
+                        miAlerta("Cierre Ticket", "Cierre exitoso", "glyphicon-ok", "#5cb85c");
+                    }
+                    else
+                    {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+        else
+        {
+            miAlerta("Alerta", "Seleccione al menos un registro", "glyphicon-exclamation-sign", "#f0ad4e");
+        }
+
+    }
+
+    function fnMostrarDetalleFinalizado(pThis) {
+
+        var codigos = $(pThis).attr("miData");
+        $(pThis).hide();
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Notas_Finalizadas", "Ticket")',
+            data: "{'pIdTicketEscalamiento':'" + codigos.split('|')[0] + "'," +
+                    "'pIdTicketInicio': '" + codigos.split('|')[1] + "'," +
+                    "'pIdTicketFin': '" + codigos.split('|')[2] + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                for (var i = 0; i < result.length; i++) {
+                    $("#dvDetalleFinal_" + codigos.split('|')[0]).append(result[i].Html);
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+    }
+
+</script>
+
+

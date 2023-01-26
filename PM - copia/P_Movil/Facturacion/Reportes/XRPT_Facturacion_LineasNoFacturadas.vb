@@ -1,0 +1,3 @@
+﻿Public Class XRPT_Facturacion_LineasNoFacturadas
+
+End Class

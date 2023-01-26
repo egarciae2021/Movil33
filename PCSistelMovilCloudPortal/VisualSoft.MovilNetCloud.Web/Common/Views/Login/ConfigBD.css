@@ -1,0 +1,105 @@
+﻿
+
+#dvPrincipal
+{
+    background: white;
+    width: 400px;
+    height: 500px;
+    border-radius:20px;
+}
+
+#dvPrincipal *
+{
+    line-height:normal;
+}
+
+#dvPrincipal > div:first-child
+{
+    width:100%;
+    height:50px;
+    background-color:#005C84 /*#063466*/; 
+    text-align:center;
+    color:white;
+    font-weight:bolder;
+    font-size:12pt;
+}
+
+#btnIrLogin
+{
+    float:left;
+    width:50px;
+    height:50px;
+    border-bottom-right-radius:20px;
+    background-color:#005C84 /*#4674C3*/;
+}
+
+#btnIrLogin > span:first-child
+{
+    font-size:18pt;
+    color:#E56C25;
+    margin-top:8px;
+}
+
+#btnIrLogin:hover
+{
+    cursor:pointer;
+    background-color:#41B0CC /*#6D91D0*/;
+}
+
+#btnIrLogin:active
+{
+    background-color:#005C84 /*#28477B*/;
+}
+
+p
+{
+    text-align:left;
+    margin:10px;
+}
+
+#dvPrincipal > div:nth-child(3)
+{
+    width:360px;
+    height:250px;
+    border:0px dotted gray;
+    margin-left:20px;
+}
+
+#dvPrincipal > div:nth-child(3) *
+{
+    text-align:left;
+    width:100%;
+    margin: 0px 0px 15px 0px;
+}
+
+
+#dvPrincipal > div:nth-child(4)
+{
+    width:360px;
+    height:40px;
+    border:0px dotted gray;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+#dvPrincipal > div:nth-child(4) > .glyphicon
+{
+    font-size:24pt;
+    float:left;
+    color:#FFCC33;
+}
+
+#dvPrincipal > div:nth-child(5)
+{
+    width:360px;
+    height:40px;
+    border:0px dotted gray;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+#dvPrincipal > div:nth-child(5) span
+{
+    color:#063466;
+}
+

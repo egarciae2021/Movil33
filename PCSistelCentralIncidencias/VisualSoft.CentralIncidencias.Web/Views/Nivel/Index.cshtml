@@ -1,0 +1,894 @@
+﻿@model VisualSoft.PCSistelMovil.CentralIncidencias.MVVM.MVVM_Nivel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<style type="text/css">
+    #tbDetalleNivel td:nth-child(odd)
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    .tablaSubtitulo
+    {
+        color: #428bca;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal !important;
+    }
+
+    #dvFormularioNivel .conteiner .row
+    {
+        margin:10px 0px;
+    }
+</style>
+
+<nav class="navbar navbar-default miNav" role="navigation" style="z-index: 1 !important;">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miBarGrid">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="miBarGrid">
+
+            <ul class="nav navbar-nav ">
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Nombre Nivel</span>
+                            <input type="text" id="txtNombreNivel" style="margin-left: -90px;" />
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Grado </span>
+                            <select class="MiSelect" style="margin-left: -40px;" id="ddlGrado">
+                                <option value="-1">--Todos--</option>
+                                @for (int i = 0; i < Model.Grados.Count; i++)
+                                {
+                                    <option value="@Model.Grados[i].IdGrado">@Model.Grados[i].Nombre</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="miCajonGroupBox FlotarIzquierda">
+                        <div class="miGroupBox FlotarIzquierda">
+                            <span style="position: relative; top: -30px; left: 0px;">Estado</span>
+                            <select class="MiSelect" style="margin-left: -45px;" id="ddlEstado">
+                                <option value="-1">--Todos--</option>
+                                <option value="1">Activos</option>
+                                <option value="0">Inactivos</option>
+                            </select>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="conteiner" style="margin-top: 0px;">
+    <div class="row">
+        <div id="dvGrillaNivel" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="grillaNivel" class="miGrilla">
+            </table>
+            <div id="pagerGrillaNivel">
+            </div>
+        </div>
+        <div id="dvDetalleGrillaNivel" class="col-xs-24 col-sm-24 col-md-12">
+            <table id="tbDetalleNivel" class="table">
+                <thead>
+                    <tr>
+                        <td colspan="4">
+                            @*<a href="@Url.Action("Nuevo", "Nivel")" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span  class="glyphicon glyphicon-plus" aria-hidden="true"></span>  Nuevo</a>*@
+                            <button id="btnNuevoNivel" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Nuevo</button>
+                            <button id="btnEditarNivel" type="button" class="btn btn-info FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</button>
+                            <button id="btnEliminarNivel" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Eliminar</button>                            
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Nivel :
+                        </td>
+                        <td></td>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Grado :
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="col-xs-6 col-sm-6 col-md-4 col-lg-3">Descripción&nbsp:
+                        </td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <span style="color: #337ab7;" class="glyphicon glyphicon-briefcase" aria-hidden="true"></span><span class="tablaSubtitulo">  Bolsas asignadas :</span>
+            <div style="clear: both;"></div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px;" id="dvGrillaBolsas">
+                <table id="grillaBolsas" class="miGrilla">
+                </table>
+                <div id="pagerGrillaBolsas">
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px; float:left;" id="dvGrillaBolsas_empty">
+                <ul class="MiListaHorizontal">
+                    <li>
+                        <img src="~/Common/Images/Mantenimiento/bolsaWarning_Alfa.png" />
+                    </li>
+                    <li style="padding-top:20px;">
+                        No hay bolsas Asignadas a este nivel
+                    </li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
+            <span style="color: #337ab7;" class="glyphicon glyphicon-user" aria-hidden="true"></span><span class="tablaSubtitulo">  Técnicos de bolsa : </span>
+            <div style="clear: both;"></div>
+            <div style="width: 100%;" id="dvGrillaTecnico">
+                <table id="grillaTecnicos" class="miGrilla">
+                </table>
+                <div id="pagerGrillaTecnicos">
+                </div>
+            </div>
+            <div style="width: 100%; margin: 0px 0px 20px 0px;" id="dvGrillaTecnico_empty">
+                <ul class="MiListaHorizontal">
+                    <li>
+                       <img src="~/Common/Images/Mantenimiento/TecnicoWarning_Alfa.png" />
+                    </li>
+                    <li style="padding-top:20px;">
+                        No hay Técnico asignados
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="dvFormularioNivel" class="col-xs-24 col-sm-24 col-md-12" style="display:none;">
+            <div class="conteiner">
+                <div class="row">
+                    <div class="col-xs-24 ">
+                        <button id="btnCancelar" type="button" class="btn btn-danger FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancelar</button>
+                        <button id="btnRegistrarNivel" type="button" class="btn btn-success FlotarIzquierda" style="margin-left: 10px;"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Guardar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 esInactivo" style="padding: 8px 8px 8px 15px !important;">
+                        <ul class="MiListaHorizontal" >
+                            <li class="tablaSubtitulo">Activar</li>
+                            <li>
+                                <input id="chkActivarNivel" type="checkbox" />
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Nombre: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <input id="txtNombreNiveForm" type="text" class="form-control" placeholder="Nombre de nivel..." />
+                    </div>
+                </div>
+                <div class="row" id="dvFrmGrado">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Grado: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <input id="txtNombreGrado" type="text" class="form-control" placeholder="" readonly/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-24 col-lg-3 tablaSubtitulo" style="padding: 8px 8px 8px 15px !important;">
+                        Descripción: 
+                    </div>
+                    <div class="col-xs-24 col-lg-21">
+                        <textarea id="txtDescripcionNivel" cols="20" rows="4" class="form-control" placeholder="Descripción breve de nivel..." ></textarea>                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var DatosSeleccionados;
+    var DatosSeleccionadosBolsa;
+    var DatosSeleccionadosTecnico;
+    var EditLevel = false;
+
+    function PRM_Nivel() {
+        this.IdNivel = -1;
+        this.Nombre = "";
+        this.IdGrado = -1;
+        this.EsVigente = "";
+    }
+
+    function ENT_CINC_Nivel() {
+        this.IdNivel = -1;
+        this.Nombre = "";
+        this.Descripcion = "";
+        this.EsVigente = false;
+    }
+
+    function PRM_Bolsa() {
+        this.IdBolsa = -1;
+        this.Nombre = "";
+        this.IdNivel = -1;
+        this.IdTipo = -1;
+        this.EsVigente = "";
+        this.IdUsuario = -1;
+    }
+
+    function PRM_Usuario() {
+        this.IdUsuario = -1;
+        this.Usuario = "";
+        this.Nombre = "";
+        this.IdSupervisor = -1;
+        this.IdBolsa = -1;
+    }
+
+    $(function () {
+        fnEventosTicket();
+        fnGrillaNivel();
+    });
+
+    function fnEventosTicket() {
+
+        $("#btnNuevoNivel").click(function ()
+        {
+            EditLevel = false;
+            $("#dvDetalleGrillaNivel").fadeOut(100, function () {
+                $(".esInactivo").hide();
+                $("#txtNombreNiveForm").val("");
+                $("#txtDescripcionNivel").val("");
+                $("#txtNombreNiveForm").focus();
+                $("#dvFrmGrado").hide();
+                $("#dvFormularioNivel").fadeIn(100);
+            })
+        });
+
+        $("#btnEditarNivel").click(function ()
+        {
+            EditLevel = true;
+            fnBtnEditar();
+        });
+
+        $("#btnEliminarNivel").click(function ()
+        {            
+            fnBtnEliminar();
+        });
+
+        $("#btnCancelar").click(function ()
+        {            
+            if (fnValidarFormulario()) {
+                miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnDesactivarFormularioNuevo, undefined);
+            }
+            else {
+                fnDesactivarFormularioNuevo();
+            }
+
+        });
+
+        $("#btnRegistrarNivel").click(function () {
+            var mensaje = ""
+            if (fnValidarFormularioConMensaje())
+            {
+                //if ($("#dvFrmGrado").css("display") == "block")
+                if (EditLevel == true)
+                {
+                    mensaje = "Se actualizará el nivel.";
+                }
+                else
+                {
+                    mensaje = "Se registrará nivel.";
+                }
+
+                miDialogoConfirmacion(mensaje, fnResgitrarNivel, undefined);
+            }
+
+        });
+
+        $(window).resize(function () {
+            disenoResize();
+        });
+
+        $("#ddlGrado, #ddlEstado").change(function () {
+            $("#grillaNivel").trigger("reloadGrid", [{ current: true }]);
+        });
+
+        $('#txtNombreNivel').live("keypress", function (e) {
+            if (e.keyCode == 13) {
+                $("#grillaNivel").trigger("reloadGrid", [{ current: true }]);
+            }
+            else {
+                return ValidarAlfaNumericoSinEspacios(e);
+            }
+        });
+
+    }
+
+    function disenoResize() {
+        $("#grillaNivel").setGridWidth($("#dvGrillaNivel").width() - 10);
+        $("#grillaBolsas").setGridWidth($("#dvGrillaBolsas").width() - 10);
+        $("#grillaTecnicos").setGridWidth($("#dvGrillaTecnico").width() - 10);
+
+        $("#tbDetalleNivel").width($("#dvDetalleGrillaNivel").width() - 2);
+
+        $($("#dvGrillaNivel .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaNivel .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaBolsas .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaBolsas .ui-jqgrid-bdiv")[0]).width() + 5);
+        $($("#dvGrillaTecnico .ui-jqgrid-bdiv")[0]).width($($("#dvGrillaTecnico .ui-jqgrid-bdiv")[0]).width() + 5);
+    }
+
+    function fnGrillaNivel() {
+        $("#grillaNivel").jqGrid({
+            datatype: function () {
+
+                var oParametro;
+                oParametro = new PRM_Nivel();
+
+                if ($.trim($("#txtNombreNivel").val()) != "") {
+                    oParametro.Nombre = $.trim($("#txtNombreNivel").val());
+                }
+
+                if ($("#ddlGrado").val() != "-1") {
+                    oParametro.IdGrado = $("#ddlGrado").val();
+                }
+
+                if ($("#ddlEstado").val() != "-1") {
+                    oParametro.EsVigente = $("#ddlEstado").val();
+                }
+
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ObtenerNiveles", "Nivel")',
+                    data: "{'inPagTam':'" + $('#grillaNivel').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                       "'inPagAct':'" + $('#grillaNivel').getGridParam("page") + "'," + //FiltroRegistro 
+                       "'vcOrdCol':'" + $('#grillaNivel').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                       "'vcTipOrdCol':'" + $('#grillaNivel').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                       "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        $("#grillaNivel")[0].addJSONData(result);
+                        disenoResize();
+                    },
+                    error: function (xhr, err, thrErr) {
+                        MostrarErrorAjax(xhr, err, thrErr);
+                        //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                });
+
+            },
+            jsonReader: {
+                root: "Items",
+                page: "PaginaActual",
+                total: "TotalPaginas",
+                records: "TotalRegistros",
+                repeatitems: true,
+                cell: "Row",
+                id: "Id"
+            },
+            colModel: [
+            { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+            { name: 'Nombre', index: 'Nombre', label: 'Nivel', width: "100px" },
+            { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+            { name: 'IdGrado', index: 'IdGrado', label: 'IdGrado', width: "50px", hidden: true },
+            { name: 'Orden', index: 'Orden', label: 'Orden', width: "50px", hidden: true },
+            { name: 'NombreGrado', index: 'NombreGrado', label: 'Grado', width: "100px" },
+            { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+            ],
+            pager: "#pagerGrillaNivel",
+            loadtext: 'Cargando datos...',
+            recordtext: "{0} - {1} de {2} elementos",
+            pgtext: 'Pág: {0} de {1}',
+            rownumbers: true,
+            //shrinkToFit: false,
+            gridview: true,
+            viewrecords: true,
+            height: "470px",
+            //height: "100%",
+            emptyrecords: "No hay grupos que mostrar",
+            rowNum: 20,
+            gridComplete: function () {
+                
+                $("#grillaNivel").setGridWidth($("#dvGrillaNivel").width() - 3);
+
+                //$(".ui-jqgrid-bdiv").hover(function () {
+                //    $(this).css("overflow-x", "scroll");
+                //}, function () {
+                //    $(this).css("overflow-x", "hidden");
+                //});
+
+                //$(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                if (DatosSeleccionados != undefined) {
+                    //$('#grillaNivel').jqGrid('setSelection', DatosSeleccionados.Id);
+                    //var currentId = $('#grillaNivel').getGridParam('Id');
+                    var selectedRowId = $("#grillaNivel").jqGrid('getGridParam', 'selrow');
+                    DatosSeleccionados = $("#grillaNivel").jqGrid('getRowData', selectedRowId);
+                }
+                else {
+                $('#grillaNivel').jqGrid('setSelection', 1);
+                DatosSeleccionados = $("#grillaNivel").jqGrid('getRowData', 1);
+                }
+
+                fnMostrarDetalleNivel(DatosSeleccionados);
+            },
+            beforeSelectRow: function (rowid, e) {
+
+                if ($("#dvFormularioNivel").css("display") == "block" && fnValidarFormulario()) {
+                    miDialogoConfirmacion("Hay datos ingresados. Aún desea cancelar?", fnSelectedGrillaNivel, undefined, [rowid, e], undefined);
+                }
+                else {
+                    fnSelectedGrillaNivel([rowid, e]);
+                }
+            }
+        }).navGrid("#pagerGrillaNivel", { edit: false, add: false, search: false, del: false });
+    }
+
+
+    function fnGrillaBolsa() {
+        if ($('#grillaBolsas').getGridParam("rowNum") == null) {
+            $("#grillaBolsas").jqGrid({
+                datatype: function () {
+
+                    var oParametro
+                    oParametro = new PRM_Bolsa();
+
+                    if (DatosSeleccionados.IdNivel != "-1") {
+                        oParametro.IdNivel = DatosSeleccionados.IdNivel;
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerBolsas", "Nivel")',
+                        data: "{'inPagTam':'" + $('#grillaBolsas').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaBolsas').getGridParam("page") + "'," + //FiltroRegistro 
+                           "'vcOrdCol':'" + $('#grillaBolsas').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaBolsas').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                           "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+
+                            if (result.Items.length < 1) {
+                                $("#dvGrillaBolsas").hide();
+                                $("#dvGrillaBolsas_empty").show();
+                            }
+                            else {
+                                $("#dvGrillaBolsas").show();
+                                $("#dvGrillaBolsas_empty").hide();
+                            }
+                            $("#grillaBolsas")[0].addJSONData(result);
+                            disenoResize();
+                            
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "Id"
+                },
+                colModel: [
+                { name: 'IdBolsa', index: 'IdBolsa', label: 'IdBolsa', width: "50px", hidden: true },
+                { name: 'Nombre', index: 'Nombre', label: 'Bolsa', width: "100px" },
+                { name: 'IdNivel', index: 'IdNivel', label: 'IdNivel', width: "50px", hidden: true },
+                { name: 'Descripcion', index: 'Descripcion', label: 'Descripción', width: "200px" },
+                { name: 'IdTipo', index: 'IdTipo', label: 'IdTipo', width: "50px", hidden: true },
+                { name: 'btVig', index: 'btVig', label: 'btVig', width: "50px", hidden: true }
+                ],
+                pager: "#pagerGrillaBolsas",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                //shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                //height: "470px",
+                height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 10,
+                gridComplete: function () {
+                    
+
+                    //$(".ui-jqgrid-bdiv").hover(function () {
+                    //    $(this).css("overflow-x", "scroll");
+                    //}, function () {
+                    //    $(this).css("overflow-x", "hidden");
+                    //});
+
+                    //$(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                    //if (DatosSeleccionados != undefined) {
+                    //    $('#grillaBolsas').jqGrid('setSelection', DatosSeleccionados.Id);
+                    //    DatosSeleccionados = $("#grillaBolsas").jqGrid('getRowData', DatosSeleccionados.Id);
+                    //}
+                    //else {
+                    $('#grillaBolsas').jqGrid('setSelection', 1);
+                    DatosSeleccionadosBolsa = $("#grillaBolsas").jqGrid('getRowData', 1);
+                    //}
+
+                    //fnMostrarDetalleNivel(DatosSeleccionados);
+                    if (DatosSeleccionadosBolsa.IdBolsa != undefined) {
+                        $("#dvGrillaTecnico").show();
+                        $("#dvGrillaTecnico_empty").hide();
+                        fnGrillaTecnico();
+                    }
+                    else {
+                        $("#dvGrillaTecnico").hide();
+                        $("#dvGrillaTecnico_empty").show();
+                    }
+
+                    $("#grillaBolsas").setGridWidth($("#dvGrillaBolsas").width() - 3);
+                },
+                beforeSelectRow: function (rowid, e) {
+                    var CurrentSelectIndex = $("#grillaBolsas").jqGrid('getInd', rowid);
+                    $('#grillaBolsas').jqGrid('setSelection', CurrentSelectIndex);
+                    DatosSeleccionadosBolsa = $("#grillaBolsas").jqGrid('getRowData', CurrentSelectIndex);
+                    //fnMostrarDetalleNivel(DatosSeleccionados);
+                    fnGrillaTecnico();
+                }
+            }).navGrid("#pagerGrillaBolsas", { edit: false, add: false, search: false, del: false });
+        }
+        else {
+            $("#grillaBolsas").trigger("reloadGrid");
+        }
+    }
+
+    function fnGrillaTecnico() {
+        if ($('#grillaTecnicos').getGridParam("rowNum") == null) {
+            $("#grillaTecnicos").jqGrid({
+                datatype: function () {
+
+                    var oParametro
+                    oParametro = new PRM_Usuario();
+
+                    if (DatosSeleccionadosBolsa.IdBolsa != "-1") {
+                        oParametro.IdBolsa = DatosSeleccionadosBolsa.IdBolsa;
+                    }
+
+                    $.ajax({
+                        type: "POST",
+                        url: '@Url.Action("ObtenerTecnicos", "Nivel")',
+                        data: "{'inPagTam':'" + $('#grillaTecnicos').getGridParam("rowNum") + "'," + //Tamaño de pagina
+                           "'inPagAct':'" + $('#grillaTecnicos').getGridParam("page") + "'," + //FiltroRegistro 
+                           "'vcOrdCol':'" + $('#grillaTecnicos').getGridParam("sortname") + "'," + //Nombre de columna ordenado
+                           "'vcTipOrdCol':'" + $('#grillaTecnicos').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                      
+                           "'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (result) {
+                            $("#grillaTecnicos")[0].addJSONData(result);
+                            disenoResize();
+                        },
+                        error: function (xhr, err, thrErr) {
+                            MostrarErrorAjax(xhr, err, thrErr);
+                            //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                        }
+                    });
+
+                },
+                jsonReader: {
+                    root: "Items",
+                    page: "PaginaActual",
+                    total: "TotalPaginas",
+                    records: "TotalRegistros",
+                    repeatitems: true,
+                    cell: "Row",
+                    id: "Id"
+                },
+                colModel: [
+                { name: 'IdUsuario', index: 'IdUsuario', label: 'IdUsuario', width: "50px", hidden: true },
+                { name: 'Usuario', index: 'Usuario', label: 'Usuario', width: "50px", hidden: true },
+                { name: 'Nombre', index: 'Nombre', label: 'Técnico', width: "100px" }
+                ],
+                pager: "#pagerGrillaTecnicos",
+                loadtext: 'Cargando datos...',
+                recordtext: "{0} - {1} de {2} elementos",
+                pgtext: 'Pág: {0} de {1}',
+                rownumbers: true,
+                //shrinkToFit: false,
+                gridview: true,
+                viewrecords: true,
+                //height: "470px",
+                height: "100%",
+                emptyrecords: "No hay grupos que mostrar",
+                rowNum: 10,
+                gridComplete: function () {
+                    
+
+                    //$(".ui-jqgrid-bdiv").hover(function () {
+                    //    $(this).css("overflow-x", "scroll");
+                    //}, function () {
+                    //    $(this).css("overflow-x", "hidden");
+                    //});
+
+                    //$(".ui-jqgrid-bdiv").css("overflow-x", "hidden");
+
+                    //if (DatosSeleccionados != undefined) {
+                    //    $('#grillaTecnicos').jqGrid('setSelection', DatosSeleccionados.Id);
+                    //    DatosSeleccionados = $("#grillaTecnicos").jqGrid('getRowData', DatosSeleccionados.Id);
+                    //}
+                    //else {
+                    $('#grillaTecnicos').jqGrid('setSelection', 1);
+                    DatosSeleccionadosTecnico = $("#grillaTecnicos").jqGrid('getRowData', 1);
+                    //}
+
+                    //fnMostrarDetalleNivel(DatosSeleccionados);
+                    $("#grillaTecnicos").setGridWidth($("#dvGrillaTecnico").width() - 3);
+                },
+                beforeSelectRow: function (rowid, e) {
+                    var CurrentSelectIndex = $("#grillaTecnicos").jqGrid('getInd', rowid);
+                    $('#grillaTecnicos').jqGrid('setSelection', CurrentSelectIndex);
+                    DatosSeleccionadosTecnico = $("#grillaTecnicos").jqGrid('getRowData', CurrentSelectIndex);
+                    //fnMostrarDetalleNivel(DatosSeleccionados);
+                }
+            }).navGrid("#pagerGrillaTecnicos", { edit: false, add: false, search: false, del: false });
+        }
+        else {
+            $("#grillaTecnicos").trigger("reloadGrid");
+        }
+    }
+
+    function fnMostrarDetalleNivel(datos) {
+        fnDesactivarFormularioNuevo()
+        $("#tbDetalleNivel tbody tr:nth-child(1) td:nth-child(2)").text(datos.Nombre);
+        $("#tbDetalleNivel tbody tr:nth-child(1) td:nth-child(4)").text(datos.NombreGrado);
+
+        $("#tbDetalleNivel tbody tr:nth-child(2) td:nth-child(2)").text(datos.Descripcion);
+
+        fnGrillaBolsa();
+    }
+
+    function fnValidarFormulario() {
+        var result = true;
+
+        if ($.trim($("#txtNombreNiveForm").val()) == "" && $.trim($("#txtDescripcionNivel").val()) == "") {
+            result = false;
+        }
+
+        return result;
+    }
+
+    function fnValidarFormularioConMensaje() {
+        var result = true;
+
+        if ($.trim($("#txtNombreNiveForm").val()) == "" ) {
+            result = false;
+            miAlerta("Nivel", "Ingrese nombre de nivel", "glyphicon-ok", "#5cb85c");
+            $("#txtNombreNiveForm").focus()
+        }
+        else {
+            if ($.trim($("#txtDescripcionNivel").val()) == "") {
+                result = false;
+                miAlerta("Nivel", "Ingrese decripción de nivel", "glyphicon-ok", "#5cb85c");
+                $("#txtDescripcionNivel").focus()
+            }
+        }
+
+        return result;
+    }
+
+    function fnDesactivarFormularioNuevo()
+    {
+        EditLevel = false;
+
+        $("#dvFormularioNivel").fadeOut(0, function () {
+            $("#dvDetalleGrillaNivel").fadeIn();
+        });
+    }
+
+    function fnActivarFormularioNuevo() {
+        $("#txtNombreNiveForm").val("");
+        $("#txtDescripcionNivel").val("");
+        $("#dvFormularioNivel").fadeOut(100, function () {
+            $("#dvDetalleGrillaNivel").fadeIn(100);
+        })
+    }
+
+    function fnResgitrarNivel() {
+        var oParametro
+        oParametro = new ENT_CINC_Nivel();
+
+        oParametro.Nombre = $("#txtNombreNiveForm").val();
+        oParametro.Descripcion = $("#txtDescripcionNivel").val();
+        oParametro.EsVigente = $("#chkActivarNivel").prop("checked");
+
+        if ($("#dvFrmGrado").css("display") == "block") {
+            oParametro.IdNivel = DatosSeleccionados.IdNivel;
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("EditarNivel", "Nivel")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    if (result.Success) {
+                        //$("#grillaNivel").trigger("reloadGrid");
+                        fnDesactivarFormularioNuevo();
+                        //var currentPage = $('#grillaNivel').getGridParam('page');
+                        //alert(result.Mensaje.split("|")[1]);
+                        miAlerta("Editar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaNivel").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("RegistrarNivel", "Nivel")',
+                data: "{'pParametros': '" + JSON.stringify(oParametro) + "'}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result)
+                {
+                    if (result.Success)
+                    {
+                        fnDesactivarFormularioNuevo();
+                        //alert(result.Mensaje.split("|")[1]);
+                        //var currentPage = $('#grillaNivel').getGridParam('page');
+                        miAlerta("Registrar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                        $("#grillaNivel").trigger("reloadGrid", [{ current: true }]);
+                    }
+                    else
+                    {
+                        miAlerta("Error", result.Mensaje, "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                },
+                error: function (xhr, err, thrErr) {
+                    MostrarErrorAjax(xhr, err, thrErr);
+                    //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+                }
+            });
+        }
+    }
+
+    function fnBtnEditar() {
+
+        if (DatosSeleccionados == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar un nivel", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+
+        if (DatosSeleccionados.IdNivel == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar un nivel", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+
+        if (DatosSeleccionados.btVig == "True") {
+            $(".esInactivo").hide();
+        }
+        else
+        {
+            $(".esInactivo").show();
+        }
+
+        $("#chkActivarNivel").prop("checked", DatosSeleccionados.btVig == "True");
+
+        $("#txtNombreNiveForm").val(DatosSeleccionados.Nombre);
+        $("#txtNombreGrado").val(DatosSeleccionados.NombreGrado);
+        $("#txtDescripcionNivel").val(DatosSeleccionados.Descripcion);
+        
+        $("#dvFrmGrado").show();
+        $("#dvDetalleGrillaNivel").fadeOut(100, function () {
+            $("#dvFormularioNivel").fadeIn(100, function () {
+                $("#txtNombreNiveForm").focus();
+            });
+        })
+    }
+
+    function fnSelectedGrillaNivel(pArrayArguments) {
+        var CurrentSelectIndex = $("#grillaNivel").jqGrid('getInd', pArrayArguments[0]);
+        $('#grillaNivel').jqGrid('setSelection', CurrentSelectIndex);
+        DatosSeleccionados = $("#grillaNivel").jqGrid('getRowData', CurrentSelectIndex);
+        fnMostrarDetalleNivel(DatosSeleccionados);
+    }
+
+    function fnBtnEliminar() {
+
+        if (DatosSeleccionados == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar un nivel", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+
+        if (DatosSeleccionados.IdNivel == undefined) {
+            miAlerta("Seleccionar", "Debe seleccionar un nivel", "glyphicon-info-sign", "#337ab7");
+            return;
+        }
+
+        var miMensaje = ""
+        if (DatosSeleccionados.btVig == "True") {
+            miMensaje = "Se desactivará el nivel. ¿Desea desactivarlo?";
+        }
+        else {
+            miMensaje = "Se eliminará el nivel. ¿Desea eliminarlo?";
+        }
+
+        miDialogoConfirmacion(miMensaje, fnEliminarNivel, undefined, [0]);
+    }
+
+    function fnEliminarNivel(pArgumentos) {
+        
+        var oParametro
+        oParametro = new ENT_CINC_Nivel();
+
+        oParametro.IdNivel = DatosSeleccionados.IdNivel;
+
+        var acep = pArgumentos[0] == 1 ? "true": "false";
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("EliminarNivel", "Nivel")',
+            data: "{'pParametros': '" + JSON.stringify(oParametro) + "'," +
+                    "'pOrden':'" + DatosSeleccionados.Orden + "'," +
+                    "'pAceptacionAislar': " + acep + "  }",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (result) {
+                if (result.Success) {
+                    miAlerta("Eliminar", result.Mensaje.split("|")[1], "glyphicon-ok", "#5cb85c");
+                    $("#grillaNivel").trigger("reloadGrid", [{ current: true }]);
+                }
+                else {
+                    var msg = result.Mensaje;
+                    if (msg.split('|').length > 2) {
+                        miDialogoConfirmacion(msg.split('|')[2], fnEliminarNivel, undefined, [1]);
+                    }
+                    else {
+                        miAlerta("Error", msg.split('|')[1], "glyphicon-exclamation-sign", "#d9534f");
+                    }
+                    
+                }
+            },
+            error: function (xhr, err, thrErr) {
+                MostrarErrorAjax(xhr, err, thrErr);
+                //miAlerta("Error", thrErr, "glyphicon-exclamation-sign", "#d9534f");
+            }
+        });
+        
+    }
+
+    
+
+</script>

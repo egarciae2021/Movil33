@@ -1,0 +1,8 @@
+﻿<table cellspacing='0' rules='all' border='1' id='tbl_M_ORGA-Total-MONTH' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #66CCFF;'>'Código</td><td style='background-color: #66CCFF;'>'Nombre Organización</td><td style='background-color: #66CCFF;'>'Jul 2016</td><td style='background-color: #66CCFF;'>'Ago 2016</td><td style='background-color: #66CCFF;'>'Set 2016</td><td style='background-color: #66CCFF;'>'Oct 2016</td><td style='background-color: #66CCFF;'>'Nov 2016</td><td style='background-color: #66CCFF;'>'Dic 2016</td><td style='background-color: #66CCFF;'>'Total</td>
+	</tr>
+	<tr>
+		<td>&nbsp;100</td><td>&nbsp;UNIQUE</td><td>&nbsp;0.00</td><td>&nbsp;13.10</td><td>&nbsp;0.00</td><td>&nbsp;0.00</td><td>&nbsp;10,323.80</td><td>&nbsp;0.00</td><td>10,336.9</td>
+	</tr>
+</table>

@@ -1,0 +1,29 @@
+﻿.SubTituloPagina {
+    color: #CA6502;
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+    .SubTituloPagina::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #934B05;
+        /*position: absolute;*/
+        bottom: 0;
+        left: 0;
+        box-shadow: 1px 1px #BEBEBE;
+    }
+
+.dvCargandoPage {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}

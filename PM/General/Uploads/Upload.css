@@ -1,0 +1,40 @@
+﻿body
+        {
+            font-family: Verdana;
+            font-size: 10px;
+        }
+        
+        input[type="button"].UploadButton
+        {
+            background: none;
+            border: none;
+            filter: none;
+            cursor: pointer !important;
+            display: inline-block;
+            width: 80px;
+            height: 23px;
+        }
+        
+        .UploadDiv
+        {
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            background-color: #f6f6f6;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: block; /*width:30px;*/
+            display: block;
+            width:20px;
+        }
+        .delete
+        {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        #UploadedFile div
+        {
+            /*border: 1px solid #ccc;*/
+            display: inline-block;
+        }

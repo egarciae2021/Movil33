@@ -1,0 +1,51 @@
+﻿ul.custom-column {
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+    ul.custom-column li {
+        line-height: 1.5em;
+        border-bottom: 1px solid #ccc;
+        float: left;
+        display: inline;
+        width: 100%;
+    }
+
+    ul.custom-column.double li {
+        width: 50%;
+    }
+
+    ul.custom-column.triple li {
+        width: 33.333%;
+    }
+
+    ul.custom-column.quad li {
+        width: 25%;
+    }
+
+    ul.custom-column.six li {
+        width: 16.666%;
+    }
+
+.g-recaptcha > div {
+    width: 100% !important;
+}
+
+.pace .pace-activity {
+    border-top-color: skyblue;
+    border-left-color: royalblue;
+}
+
+.input-validation-error {
+    border-color: #f44336 !important;
+}
+
+.table-condensed td {
+    padding: 5px !important;
+    font-size: 96% !important;
+}
+
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid transparent !important;
+}

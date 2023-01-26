@@ -1,0 +1,387 @@
+﻿body 
+{
+
+}
+
+#Cabecera
+{    
+  background: #5c9ccc url(../Scripts/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50%;
+}
+#MenuInstalacion
+{ 
+
+width:800px;
+/*border: 1px solid #a6c9e2*/
+
+/*border: 1px solid #5c9ccc;*/
+border-radius: 3px;
+/*background-color: #85B5D9;*/
+}
+
+
+#MenuInstalacion2
+{ 
+font-size: 110%;
+font-weight:500;
+color:#363636;
+margin-left:auto;
+margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
+/*width:800px;*/
+border: 1px solid #EEF6FC;
+border-radius: 3px;
+background:#f0f7fc;
+  text-shadow: 0 0 0px black;
+    font-family: 'Helvetica Neue', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;
+}
+
+.table.table-condensed tr td
+{
+    border-bottom: 0px solid red !important; 
+   border-bottom: 2px solid white !important;
+    top: 574px;
+}
+
+label
+{
+   font-size: 125%;
+}
+
+.tblasistente tr td
+{
+    height:35px !important;    
+ }
+
+.tblasistente tr td input[type="text"]
+{
+height:15px !important;  
+width:250px;  
+}
+ .tblconsolidado  tr  td
+{
+    height:25px !important;    
+}
+
+.tblasistente tr td select
+{
+height:25px !important;  
+width:260px;  
+padding:0px !important;
+}
+#MenuAsistenteizquierda
+{
+float:left;
+height:93%;
+width:180px;
+border-right:1px solid #CFDDEE;
+background-color:#f0f7fc;
+/*background-color: #6FA7D1;*/
+/*background-color: #d7edfc;*/
+
+}
+.Contenidomenu
+{
+    padding:12px;
+}
+
+.btn-primary
+{
+background:#87B6D9 !important;
+}
+
+.btn-primary:hover {
+background: #4297D7!important ;
+ border: 1px solid #EEF6FC !important ;
+}
+
+@font-face {font-family: "Helvetica"; src: "url('/fonts/Helvetica.otf') format('truetype');"}
+
+.lblMenu
+{
+    font-size: 70%;
+    font-weight:500;
+    /*color:#6cb2e4; */
+    color: #084B8A;
+    text-shadow: 0 0 0px black;
+    font-family: 'Helvetica Neue', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;
+    
+ 
+ }
+ 
+.tituloPasos
+{
+    font-size: 85%;
+    font-weight:400;
+    color:rgb(53, 54, 58);
+    /*color:#6cb2e4; */
+      line-height: 1.4;    
+    filter: alpha(opacity=0);
+ 
+ }
+
+.dvDetalleItem .marca 
+{  
+  margin-left:15px;
+/*border-left: solid white;*/
+}
+
+#grid_*
+{
+font-size: 45%;    
+}
+
+.btnNormal
+{
+   font-size:12px !important;    
+}
+
+.ui-datepicker-calendar,.ui-datepicker-title
+{
+   font-size:10px !important; 
+ }
+/*
+.btnNormal:active 
+{
+    border: 1px solid #2694e8; 
+ font-weight: bold; 
+ color: #ffffff !important;
+  background: #3baae3 url(../Scripts/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50%; 
+
+}
+*/
+.datos_usuario
+{
+    position:relative;
+    float:right;
+    font-family:Arial;
+    color:Navy;
+    font-size:11px;
+    margin-top:4px;
+    font-weight:bold;
+    height: 2.2em;
+    vertical-align: middle;
+    left: 0px;
+}
+
+.datos_usuario label {
+    margin: -0;
+    position: absolute;
+    top: -50%;
+    transform: translate(0, -50%) }
+
+
+
+
+.logo_str_home
+{
+    font-family:Arial;
+    color:#175296;
+    font-size:20px;
+    font-style:italic;    
+    margin-right:18px;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.link_cerrar
+{
+    font-family:Arial;
+    color:Navy;
+    font-size:12px;
+}
+
+#ui-dialog-title-dvMsgAlertaExterna,.ui-dialog-buttonset
+{
+  font-size: 100% !important;    
+}
+
+/*
+#lblAsist
+{
+     color:rgb(53, 54, 58) !important;
+}*/
+
+#tblcontactos th,#tblcontactos td
+{
+    background-color:#85B5D9;
+    height:20px !important;
+    text-align:center !important;
+}
+#tblcontactos td
+{
+     background-color:white;
+}
+
+#tituloFondo
+{
+    position:relative;
+    float:left;
+    /*background-color:#175296;*/
+    background-image:url("../Common/images/fondo_titulo.png");
+    width:795px;
+    height:29px;
+    text-align:right;
+    font-family:Arial;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.panel-heading
+{
+     background: #5c9ccc url(../Scripts/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50%;
+}
+.panel-title
+{
+colo:white !important;    
+}
+
+.dvLogin
+{
+     border: 1px solid #a6c9e2;
+     border-radius: 3px;
+     margin-left:auto;
+     margin-right:auto;
+     margin-top:80px;
+     margin-bottom:auto;
+     background:#f0f7fc;
+     background-image: url('../Common/images/fondo_login_01.png');
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+   
+}
+.Login-Title
+{
+    background: #5c9ccc url(../Scripts/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png) 50% 50%;
+
+}
+.imgLogo
+{    
+
+ box-shadow: inset 3px 3px 10px 0 #FFFFFF;   
+}
+
+.error_msj
+{
+    position:relative;
+    float:left;
+    padding-top:5px;
+}
+
+.error_ms
+{
+    color:Red;
+    font-size:11px;    
+}
+
+.txt_error
+{
+    position:relative;
+    float:left;
+    color:Red;    
+    text-align:left;
+}
+
+.alfanumerico
+{
+text-align:left !important;     
+}
+
+.TituloMant
+{
+    width: 140px;
+    background: none !important;
+}
+
+.ValorMant
+{
+    background: none !important;
+}
+
+
+.btnNormalLiquidacion
+{                                                
+    display:inline-block;
+    vertical-align:middle;
+    width:100px;
+    height:25px;            
+    background-color:#dfeffc;
+    font-weight: bold;
+    color: #1d5987;	            
+    padding: 0;
+    margin-right: .1em;
+    text-decoration: none !important;
+    cursor: pointer;
+    text-align: center;
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    font-size: 12px !important;	                                       
+    border: 1px solid #79b7e7;                
+    zoom: 1;            
+	border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btnNormalMasivo
+{                                                
+    display:inline-block;
+    vertical-align:middle;
+    width:100px;
+    height:25px;            
+    background-color:#dfeffc;
+    font-weight: bold;
+    color: #1d5987;	            
+    padding: 0;
+    margin-right: .1em;
+    text-decoration: none !important;
+    cursor: pointer;
+    text-align: center;
+    font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+    font-size: 12px !important;	                                       
+    border: 1px solid #79b7e7;                
+    zoom: 1;            
+	border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+        
+.btnDivLiquidaciones
+{
+    width: 14px;
+    vertical-align:middle;
+    margin-top:10px; 
+    display:inline;
+}
+        
+.btnImgLiquidacion
+{
+    width: 14px; 
+    margin-top:5px;
+}
+
+.btnImgMasivo
+{
+    width: 14px; 
+    margin-top:5px;
+}
+
+
+
+#btnMonitorTarea
+{
+    width:90px !important;
+}
+
+#btnImportar
+{
+    width:90px !important;
+}
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+﻿#pBotonesPedido div
+{
+    width: 100px;
+    height: 15px;
+    float:left; 
+    background-color:#E2F0F6;
+    text-align:center;  
+    margin-left:3px;
+    text-decoration:underline;
+}
+
+.k-label, .k-pager-numbers
+{
+    display:none !important;
+}
+
+
+#pIndicadores
+{   
+    /*display:none !important;*/
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+.pMedium
+{
+    width:700px;
+    margin:auto; 
+}
+
+.fIndi
+{
+    height:24px;
+    border-bottom: 1px solid white;
+}
+
+.cGen
+{
+    width:80px;
+    height:24px;
+    float:left;
+    font-size:11px;
+    text-align:center;
+    vertical-align:middle;
+    color: #003F59;
+}
+
+.cGen1
+{
+    margin-left: 50px;
+}
+
+#plineas
+{
+    margin-top:50px;
+}
+
+#dvDivision1
+{
+    display:none;
+}

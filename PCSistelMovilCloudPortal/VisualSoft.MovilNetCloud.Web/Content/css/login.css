@@ -1,0 +1,307 @@
+.pace .pace-progress {
+    width: 100%;
+}
+
+#bg-overlay {
+    background-image: url("../images/FondoLogin.png");
+}
+
+#intercom-container {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+#__styleurl_create_styleurl_shadowdom {
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    display: block;
+    z-index: 2147483647;
+    box-sizing: border-box;
+    bottom: 0px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+    #__styleurl_create_styleurl_shadowdom > div {
+        display: none;
+    }
+
+        #__styleurl_create_styleurl_shadowdom > div.resolved {
+            display: block;
+        }
+
+#alertaSumary ul {
+    list-style: none;
+    margin: 0px;
+    padding: 2px;
+}
+
+#dvRecordarContrasena {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+#dvConfirmacionEnvio {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.content-dvRecordarContrasena {
+    margin: 0px auto;
+    margin-top: 120px;
+    position: relative;
+    padding: 10px;
+    width: 380px;
+    min-height: 200px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px #666666;
+}
+
+.content-dvRecordarTitulo {
+    background: #005C84 /*#063466*/
+    ;
+    margin: -10px -10px 0px -10px;
+    padding-top: 10px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.content-dvRecordarContrasena h2 {
+    color: white;
+    /*border-bottom: 1px solid #063466;*/
+    margin-top: 0;
+    /*padding-bottom: 4px;*/
+    padding: 14px;
+    font-size: large;
+}
+
+.popup-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 89;
+    display: none;
+    background-color: #777777;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.panel-body {
+    margin-top: -20px;
+}
+
+#dvContenido {
+    display: none;
+}
+
+#imgLogoPortal {
+    width: 200px;
+    margin-top: 15px;
+}
+
+#imgConfigBD {
+    width: 24px;
+    margin-top: 0px;
+}
+
+#dv-Ira {
+    background-color: #D5EEFE;
+    display: none;
+}
+
+#dv-Ia-1 {
+    width: 100%;
+    line-height: normal;
+    text-align: left;
+    margin: 10px 0px 0px 0px;
+    font-weight: bold;
+}
+
+#dv-Ia-2 {
+    width: 100%;
+    line-height: normal;
+    text-align: left;
+    margin: 5px 0px 10px 0px;
+    font-weight: bold;
+}
+
+#dvCapcha {
+    display: none;
+}
+
+    #dvCapcha div {
+        width: 100%;
+        line-height: normal;
+        text-align: left;
+        margin: 0px 0px 10px 0px;
+    }
+
+.ManualSistema {
+    position: absolute;
+    z-index: 999999999;
+    right: 20px;
+    margin-top: 3px;
+}
+
+#LblGuiaUsuario {
+    color: black;
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer !important;
+}
+
+#dv-ProductoRelease {
+    text-align: center;
+}
+
+#dvBrowserDetect {
+    display: none;
+}
+
+#dvDialogoContrato {
+    z-index: 999999;
+}
+
+    #dvDialogoContrato .modal-header {
+        background-color: #063466;
+        color: white;
+        font-size: medium;
+        font-weight: bolder
+    }
+
+    #dvDialogoContrato .modal-body {
+        height: 500px;
+    }
+
+#ifContrato {
+    padding: 0px;
+    margin: 0px;
+}
+
+#hKeySessionLocal {
+    display: none;
+}
+
+#ulFooter {
+    float: left;
+    margin: 0px 15px;
+    padding: 0px;
+}
+
+.liFooter {
+    display: inline;
+    list-style-type: none;
+}
+
+#btnVolverLogin {
+    float: right;
+}
+
+    #btnVolverLogin span {
+        color: #E56C25
+    }
+
+#dvConfirmacionEnvio {
+    display: none;
+}
+
+#dvConfirmacionEnvioBody {
+    color: #48484B;
+    padding-bottom: 30px;
+}
+
+#lblCorreoEnvio {
+    margin-bottom: 0px;
+}
+
+#dvConfirmacionEnvioFooter {
+    margin-top: 8px;
+}
+
+    #dvConfirmacionEnvioFooter table {
+        width: 100%;
+    }
+
+#dvFormatInvalid {
+    color: #CF2C2C;
+    font-size: small;
+    text-align: left;
+    display: none;
+}
+
+.campo-td-01 div {
+    width: 100%;
+    line-height: normal;
+    text-align: left;
+    margin: 5px 0px 10px 0px;
+}
+
+.campo-td-02 {
+    height: 25px;
+    vertical-align: top;
+}
+
+#dvCampo {
+    overflow: auto;
+}
+
+.title-dvRecordarTitulo {
+    color: #48484B;
+    padding-bottom: 8px;
+}
+
+.dvBotonesCambiarContrasena {
+    margin-top: 2px;
+}
+
+    .dvBotonesCambiarContrasena table {
+        width: 100%;
+    }
+
+#dvCampo table {
+    width: 99%;
+}
+
+#dvRecordarContrasena {
+    display: none;
+}
+
+#img-jcap {
+    margin-top: 5px;
+}
+
+
+#txtContrasena {
+    background-image: url("../images/visible.png") !important;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+}
+
+    #txtContrasena.visible {
+        background-image: url("../images/invisible.png") !important;
+    }
+
+#toggle-password {
+    display: none;
+}
+
+    #toggle-password + label {
+        text-indent: -9999px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        position: absolute;
+        right: 30px;
+        margin-top: -27px;
+    }

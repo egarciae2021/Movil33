@@ -1,0 +1,48 @@
+﻿@model PCSistelGateway.ViewModels.GatewayP.IndexViewModel
+
+@{
+    ViewBag.Title = "Lista de Dominios OnPremise";
+    ViewBag.PageIcon = "list";
+    ViewBag.Section = "gatewayp";
+}
+
+@section Styles{
+
+    <style>
+        .container {
+            height: 90%;
+            width: 90%;
+        }
+
+            .container img.wide {
+                max-width: 100%;
+                max-height: 50%;
+                height: auto;
+            }
+
+            .container img.tall {
+                max-height: 50%;
+                max-width: 100%;
+                width: auto;
+            }
+
+        ​
+    </style>
+}
+
+@section Scripts {
+
+    <script>
+        $(function () {
+            $('.container').find('img').each(function () {
+                var imgClass = (this.width / this.height > 1) ? 'wide' : 'tall';
+                $(this).addClass(imgClass);
+            })
+        });
+    </script>
+}
+
+<div class="container">
+    <img src="~/Content/images/Fondo_2.png" />
+</div>
+

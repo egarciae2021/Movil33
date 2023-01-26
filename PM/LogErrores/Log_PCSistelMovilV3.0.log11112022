@@ -1,0 +1,770 @@
+2022/11/11 09:22:19.013,[25],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:22:19.024,[25],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:22:19.024,[25],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:22:27.741,[27],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:22:27.741,[27],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:22:27.741,[27],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:22:33.109,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:22:33.109,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:22:33.109,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:22:57.586,[27],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:22:57.587,[27],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:22:57.587,[27],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:29:19.428,[26],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:29:19.428,[26],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:29:19.428,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:29:31.891,[47],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/11 09:29:31.891,[47],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/11 09:29:31.891,[47],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_CargarArchivo.aspx?Formatos=.xls,.xlsx&FormatoTipo=Excel
+2022/11/11 09:30:22.023,[28],INFO  ,Ingresa ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:30:22.023,[28],INFO  ,Salióooooo ActualizarCultura. Página: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:30:22.023,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Common/Page/Adm_Lista.aspx?vcTab=M_EMPL&inCod=35&inTip=4&inTipOri=0
+2022/11/11 09:48:12.339,[34],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:12.339,[34],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:12.339,[34],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:48:12.342,[32],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:12.342,[32],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:12.342,[32],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:48:28.203,[38],INFO  ,Inyecta: <script src='http://localhost:50601/Common/Scripts/Utilitario.js' type='text/javascript'></script>
+2022/11/11 09:48:53.649,[34],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:53.649,[34],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:48:53.649,[34],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:49:00.839,[12],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:49:00.839,[12],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:49:00.839,[12],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:49:05.424,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:49:05.424,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:49:05.424,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:49:17.016,[38],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:49:17.016,[38],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:49:17.016,[38],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:49:25.013,[34],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:49:25.013,[34],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:49:25.013,[34],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:50:34.043,[34],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:50:34.043,[34],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:50:34.043,[34],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:50:43.367,[40],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:50:43.368,[40],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:50:43.368,[40],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:51:15.616,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:51:15.616,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:51:15.616,[5],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:51:21.816,[41],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:51:21.816,[41],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:51:21.816,[41],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:52:19.829,[41],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:52:19.830,[41],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:52:19.830,[41],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:52:34.137,[16],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:52:34.137,[16],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:52:34.137,[16],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:53:07.621,[41],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:53:07.621,[41],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:53:07.621,[41],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:53:32.583,[23],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:53:32.583,[23],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:53:32.583,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:53:38.521,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:53:38.521,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:53:38.521,[15],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:53:41.584,[12],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:53:41.585,[12],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:53:41.585,[12],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:54:14.548,[15],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:54:14.549,[15],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:54:14.549,[15],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:54:21.052,[33],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:54:21.052,[33],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:54:21.052,[33],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:56:49.151,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:56:49.151,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:56:49.151,[53],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:56:53.539,[48],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:56:53.539,[48],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:56:53.539,[48],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:57:00.353,[22],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 09:57:00.353,[22],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 09:57:00.353,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 09:57:07.477,[25],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:57:07.477,[25],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:57:07.477,[25],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 09:57:12.091,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:57:12.091,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:57:12.091,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 09:57:13.321,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:57:13.322,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:57:13.322,[54],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 09:57:17.633,[21],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:57:17.633,[21],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 09:57:17.633,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:01:08.631,[53],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 10:01:08.631,[53],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 10:01:08.631,[53],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 10:01:17.434,[45],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:01:17.434,[45],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:01:17.434,[45],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:01:22.105,[42],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 10:01:22.105,[42],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 10:01:22.105,[42],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 10:01:34.891,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:01:34.891,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:01:34.891,[45],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:01:39.314,[31],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:01:39.314,[31],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:01:39.314,[31],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:02:08.403,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:02:08.403,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:02:08.403,[45],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:14:11.488,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:14:11.488,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:14:11.488,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:14:17.945,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:14:17.945,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:14:17.945,[11],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:16:22.034,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:16:22.034,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:16:22.034,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:16:26.205,[11],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:16:26.205,[11],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:16:26.205,[11],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:17:59.016,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:17:59.033,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:17:59.033,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 10:18:10.062,[7],INFO  ,Inyecta: <script src='http://localhost:50601/Common/Scripts/Utilitario.js' type='text/javascript'></script>
+2022/11/11 10:23:31.092,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 10:23:31.092,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 10:23:31.092,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 10:23:38.629,[28],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:23:38.629,[28],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:23:38.629,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:23:43.565,[31],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:23:43.565,[31],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:23:43.566,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:23:49.401,[25],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:23:49.401,[25],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:23:49.401,[25],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:24:22.441,[7],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 10:24:22.441,[7],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 10:24:22.441,[7],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 10:27:16.361,[8],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 10:27:16.373,[8],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 10:27:16.373,[8],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 10:27:24.107,[13],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:27:24.107,[13],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:27:24.107,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:27:28.972,[10],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:27:28.972,[10],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:27:28.972,[10],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:27:29.340,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:27:29.340,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:27:29.340,[13],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:33:26.668,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:33:26.668,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:33:26.668,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:47:35.641,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:47:35.641,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:47:35.641,[6],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:55:47.325,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:55:47.325,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:55:47.325,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:00.736,[60],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:00.736,[60],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:00.736,[60],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:15.415,[60],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 10:56:15.415,[60],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 10:56:15.415,[60],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 10:56:22.952,[20],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:56:22.952,[20],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:56:22.952,[20],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 10:56:28.008,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:56:28.008,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:56:28.008,[33],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 10:56:35.588,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:35.588,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 10:56:35.588,[66],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:00:11.727,[65],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:00:11.728,[65],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:00:11.728,[65],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:00:26.039,[65],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 11:00:26.039,[65],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 11:00:26.039,[65],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 11:00:45.957,[66],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 11:00:45.957,[66],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 11:00:45.957,[66],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 11:00:50.813,[28],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:00:50.814,[28],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:00:50.814,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:00:57.836,[53],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:00:57.836,[53],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:00:57.836,[53],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:01:02.413,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:01:02.413,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:01:02.413,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:01:06.284,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:01:06.284,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:01:06.284,[18],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:01:33.424,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:01:33.424,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:01:33.424,[66],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:02:25.387,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:02:25.387,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:02:25.387,[54],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:03:03.110,[23],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:03:03.110,[23],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:03:03.110,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:03:10.404,[66],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:03:10.404,[66],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:03:10.404,[66],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:03:15.187,[60],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:03:15.187,[60],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:03:15.187,[60],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:04:32.073,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:04:32.073,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:04:32.073,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:05:51.445,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:05:51.445,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:05:51.445,[66],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:06:06.615,[66],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:06:06.615,[66],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:06:06.615,[66],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:09:25.098,[38],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:09:25.098,[38],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:09:25.098,[38],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:25:56.443,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:25:56.443,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:25:56.443,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:26:00.640,[21],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:26:00.640,[21],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:26:00.640,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:26:14.315,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:26:14.315,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:26:14.315,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:26:21.849,[38],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:26:21.849,[38],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:26:21.849,[38],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:26:31.783,[5],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:26:31.783,[5],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:26:31.783,[5],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:26:35.245,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:26:35.245,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:26:35.245,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:26:51.302,[21],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:26:51.303,[21],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:26:51.303,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:27:31.518,[33],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:27:31.518,[33],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:27:31.518,[33],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:27:38.535,[30],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:27:38.535,[30],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:27:38.535,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:27:43.209,[37],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:27:43.209,[37],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:27:43.209,[37],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:28:06.399,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:28:06.399,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:28:06.399,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:28:12.335,[62],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:28:12.335,[62],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:28:12.335,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:28:53.540,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:28:53.540,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:28:53.540,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:29:00.599,[62],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:29:00.599,[62],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:29:00.599,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:29:05.362,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:29:05.362,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:29:05.362,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:29:08.086,[18],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:08.086,[18],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:08.086,[18],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:14.204,[30],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:29:14.204,[30],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:29:14.205,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:29:36.536,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:36.536,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:36.536,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:29:40.642,[62],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:29:40.642,[62],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:29:40.642,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:31:07.653,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:31:07.653,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:31:07.653,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:21.662,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:21.662,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:21.662,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:30.264,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/11/11 11:36:30.264,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/11/11 11:36:30.264,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/AdministrarTickets/AdmTck_RegistrarTicket.aspx?vcTab=&inCod=79&inTip=3&inTipOri=0
+2022/11/11 11:36:30.820,[47],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:30.820,[47],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:36:30.820,[47],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:21.132,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:21.132,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:21.132,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:22.996,[30],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:22.996,[30],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:22.996,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:30.338,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:30.338,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:37:30.338,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:38:01.214,[30],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:38:01.214,[30],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:38:01.214,[30],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:38:15.916,[34],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:38:15.916,[34],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:38:15.917,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:38:20.475,[34],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 11:38:20.475,[34],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 11:38:20.475,[34],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 11:38:20.688,[35],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:38:20.688,[35],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:38:20.688,[35],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:39:10.506,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:39:10.506,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:39:10.506,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:39:17.839,[19],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:39:17.839,[19],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:39:17.839,[19],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:39:22.397,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:39:22.397,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:39:22.397,[24],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:39:31.524,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:39:31.524,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:39:31.524,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:39:37.541,[30],INFO  ,Ingresa ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:39:37.541,[30],INFO  ,Salióooooo ActualizarCultura. Página: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:39:37.541,[30],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /ErrorAplicacion.aspx?aspxerrorpath=/P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx
+2022/11/11 11:39:51.169,[6],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:39:51.170,[6],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:39:51.170,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:39:57.957,[61],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:39:57.957,[61],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:39:57.957,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:40:02.522,[8],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:40:02.522,[8],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:40:02.522,[8],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:40:11.127,[21],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:40:11.127,[21],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:40:11.128,[21],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:43:56.605,[7],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 11:43:56.616,[7],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 11:43:56.616,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 11:44:04.036,[9],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:44:04.036,[9],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:44:04.036,[9],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 11:44:08.738,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:44:08.738,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:44:08.738,[17],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 11:45:42.559,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:45:42.559,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:45:42.560,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:49:48.499,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:49:48.499,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:49:48.499,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 11:52:13.850,[38],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:52:13.850,[38],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:52:13.850,[38],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 11:55:34.028,[43],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 11:55:34.028,[43],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 11:55:34.028,[43],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:19.190,[70],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:22:19.190,[70],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:22:19.190,[70],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:22:50.583,[70],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:22:50.583,[70],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:22:50.583,[70],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:22:56.972,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:56.972,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:56.972,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:56.982,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:56.982,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:22:56.982,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:23:32.382,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:23:32.382,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:23:32.382,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:23:39.661,[20],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:23:39.661,[20],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:23:39.661,[20],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:24:26.454,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:24:26.454,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:24:26.454,[73],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:24:33.514,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:24:33.514,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:24:33.514,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:04.129,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:31:04.129,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:31:04.129,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:31:38.278,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:31:38.278,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:31:38.278,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:31:57.914,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:57.914,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:57.914,[17],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:57.921,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:57.921,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:31:57.921,[74],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:16.360,[45],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:36:16.360,[45],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:36:16.360,[45],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:36:27.317,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:36:27.317,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:36:27.317,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:36:36.385,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:36.385,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:36.385,[53],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:36.395,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:36.395,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:36:36.395,[51],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:10.049,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:37:10.049,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:37:10.049,[51],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:37:22.639,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:37:22.639,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:37:22.639,[50],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:37:28.848,[44],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:28.848,[44],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:28.848,[44],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:28.857,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:28.857,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:28.857,[54],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:58.905,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:58.905,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:37:58.905,[51],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:07.601,[55],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:38:07.601,[55],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:38:07.601,[55],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:38:18.007,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:38:18.007,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:38:18.007,[51],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:38:36.199,[54],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:36.199,[54],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:36.199,[54],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:36.209,[44],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:36.209,[44],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:38:36.209,[44],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:40:27.098,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:40:27.098,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:40:27.098,[50],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:41:00.778,[24],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:41:00.778,[24],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:41:00.778,[24],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:41:15.212,[56],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:41:15.212,[56],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:41:15.212,[56],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:41:15.218,[60],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:41:15.218,[60],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:41:15.218,[60],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:50:07.576,[75],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:50:07.576,[75],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:50:07.576,[75],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:51:38.997,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:51:38.997,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:51:38.997,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:52:03.445,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:52:03.445,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:52:03.445,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:52:03.453,[39],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:52:03.453,[39],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:52:03.453,[39],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:20.198,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:54:20.198,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:54:20.199,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:54:40.026,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:54:40.026,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:54:40.026,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:54:46.474,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:46.474,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:46.474,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:46.481,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:46.481,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:54:46.481,[53],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:04.800,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:55:04.800,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:55:04.800,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:55:16.847,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:55:16.847,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:55:16.847,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:55:23.807,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:23.807,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:23.807,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:23.816,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:23.816,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:55:23.816,[49],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:16.212,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:59:16.212,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:59:16.212,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 12:59:29.263,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:59:29.263,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:59:29.263,[49],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 12:59:35.833,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:35.833,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:35.833,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:35.843,[49],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:35.843,[49],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 12:59:35.843,[49],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:31.331,[29],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:00:31.331,[29],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:00:31.331,[29],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:00:46.555,[62],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:00:46.555,[62],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:00:46.555,[62],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:00:54.157,[29],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:54.157,[29],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:54.157,[29],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:54.167,[34],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:54.167,[34],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:00:54.167,[34],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:01:10.159,[26],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:01:10.159,[26],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:01:10.159,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:01:45.876,[26],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:01:45.876,[26],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:01:45.876,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 13:02:55.916,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:02:55.916,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:02:55.916,[64],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:03:06.287,[36],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:03:06.287,[36],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:03:06.287,[36],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:03:26.593,[64],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:26.593,[64],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:26.593,[64],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:26.603,[67],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:26.603,[67],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:26.603,[67],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:03:43.973,[55],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:03:43.973,[55],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:03:43.973,[55],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:04:36.201,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:04:36.201,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:04:36.201,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:05:38.051,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:05:38.051,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:05:38.051,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:05:51.677,[65],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:05:51.677,[65],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:05:51.677,[65],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:05:57.758,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:05:57.758,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:05:57.758,[33],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:05:57.769,[46],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:05:57.769,[46],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:05:57.769,[46],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:06:39.338,[17],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:06:39.338,[17],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:06:39.338,[17],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:06:46.356,[6],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:06:46.356,[6],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:06:46.357,[6],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:07:48.659,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:07:48.659,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:07:48.659,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:08:28.885,[42],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:08:28.885,[42],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:08:28.885,[42],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:08:39.703,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:08:39.703,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:08:39.703,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:09:03.037,[26],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:09:03.037,[26],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:09:03.037,[26],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:10:26.275,[33],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:10:26.275,[33],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:10:26.276,[33],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:10:58.975,[55],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:10:58.976,[55],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:10:58.976,[55],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:10:58.988,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:10:58.988,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:10:58.988,[73],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:11:41.244,[63],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:11:41.244,[63],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:11:41.244,[63],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:02.512,[71],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:02.512,[71],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:02.512,[71],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:59.029,[61],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:59.029,[61],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:12:59.029,[61],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:13:32.135,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:13:32.135,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:13:32.135,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:14:48.296,[58],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:14:48.296,[58],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:14:48.296,[58],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:16:25.001,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:16:25.001,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:16:25.001,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:16:56.942,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:16:56.942,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:16:56.943,[13],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:16:56.950,[39],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:16:56.950,[39],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:16:56.950,[39],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:26:25.551,[48],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:26:25.551,[48],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:26:25.551,[48],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 13:27:44.643,[48],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:27:44.643,[48],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:27:44.643,[48],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:28:45.040,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:28:45.040,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:28:45.040,[50],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:28:45.055,[28],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:28:45.055,[28],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:28:45.055,[28],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:29:51.101,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:29:51.101,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:29:51.101,[51],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:40:05.796,[7],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:40:05.796,[7],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:40:05.797,[7],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 13:40:21.590,[22],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:40:21.590,[22],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 13:40:21.590,[22],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:55:03.223,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:55:03.223,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:55:03.223,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:56:00.292,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:56:00.292,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:56:00.292,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:57:26.929,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:57:26.930,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:57:26.930,[85],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:58:25.046,[52],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:58:25.046,[52],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:58:25.046,[52],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:59:16.326,[19],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:59:16.326,[19],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:59:16.326,[19],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 14:59:56.097,[85],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:59:56.097,[85],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 14:59:56.097,[85],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:01:06.126,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:01:06.126,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:01:06.126,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:01:34.533,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:01:34.533,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:01:34.533,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:04:41.964,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:04:41.964,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:04:41.964,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:05:11.756,[83],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:05:11.756,[83],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:05:11.756,[83],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:05:48.450,[69],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:05:48.450,[69],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:05:48.450,[69],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:06:02.254,[89],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:06:02.254,[89],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:06:02.254,[89],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:08:15.336,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:08:15.336,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:08:15.336,[74],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:04.860,[74],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:04.860,[74],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:04.860,[74],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:25.402,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:09:25.402,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:09:25.402,[32],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:09:53.188,[87],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:53.188,[87],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:09:53.188,[87],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:10:23.000,[57],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:10:23.000,[57],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:10:23.000,[57],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:11:58.640,[93],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:11:58.640,[93],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:11:58.640,[93],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:14:22.600,[91],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:14:22.601,[91],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:14:22.601,[91],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:14:52.473,[76],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:14:52.473,[76],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:14:52.473,[76],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:15:24.957,[32],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:15:24.957,[32],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:15:24.957,[32],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:16:08.898,[81],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:16:08.898,[81],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:16:08.898,[81],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:18:20.193,[50],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:18:20.193,[50],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:18:20.193,[50],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:18:40.191,[73],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:18:40.191,[73],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:18:40.191,[73],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:20:10.718,[74],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:20:10.718,[74],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:20:10.718,[74],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 15:20:44.075,[90],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:20:44.075,[90],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:20:44.075,[90],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 15:20:49.150,[70],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 15:20:49.150,[70],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 15:20:49.150,[70],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 15:20:56.614,[79],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:20:56.614,[79],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:20:56.614,[79],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:21:01.150,[82],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 15:21:01.150,[82],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 15:21:01.150,[82],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Jefatura.aspx
+2022/11/11 15:21:20.499,[93],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:21:20.499,[93],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:21:20.499,[93],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:21:37.010,[87],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:21:37.010,[87],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:21:37.010,[87],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=1874981&inTipSol=60&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=AltaDeComentarios&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5250
+2022/11/11 15:21:43.272,[93],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:21:43.272,[93],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:21:43.272,[93],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:21:43.280,[82],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:21:43.280,[82],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:21:43.280,[82],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5250&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:22:03.213,[13],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=EF2A6A9DA2ED&inTipSol=51&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=Activacion&biEscalamiento=False&esVistaPorAutorizar=0&Cod=3673
+2022/11/11 15:22:03.213,[13],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=EF2A6A9DA2ED&inTipSol=51&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=Activacion&biEscalamiento=False&esVistaPorAutorizar=0&Cod=3673
+2022/11/11 15:22:03.213,[13],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=EF2A6A9DA2ED&inTipSol=51&biAdmin=0&biTecnico=0&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=Activacion&biEscalamiento=False&esVistaPorAutorizar=0&Cod=3673
+2022/11/11 15:22:09.491,[23],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=3673&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:22:09.491,[23],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=3673&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:22:09.491,[23],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=3673&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:22:48.089,[80],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:22:48.089,[80],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:22:48.089,[80],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 15:22:57.828,[52],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:22:57.828,[52],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 15:22:57.828,[52],INFO  ,Componente - guadalupe.cruz - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 15:23:02.263,[44],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 15:23:02.264,[44],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 15:23:02.264,[44],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 15:23:09.470,[88],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:23:09.470,[88],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:23:09.470,[88],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 15:23:14.026,[53],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 15:23:14.026,[53],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 15:23:14.026,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2022/11/11 15:23:16.202,[89],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:23:16.202,[89],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:23:16.202,[89],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_ListadoSolicitudes.aspx?vcTab=&inCod=4&inTip=2&inTipOri=0
+2022/11/11 15:23:41.767,[80],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E2EE32DB5F3A&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5283
+2022/11/11 15:23:41.767,[80],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E2EE32DB5F3A&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5283
+2022/11/11 15:23:41.767,[80],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_EditarSolicitudPersonalizada.aspx?vcCodEmp=E2EE32DB5F3A&inTipSol=55&biAdmin=1&biTecnico=1&biResApr=1&inEst=8&inEst_Apr=34&vcTabla=SwitcheoSIMCARD&biEscalamiento=False&esVistaPorAutorizar=0&Cod=5283
+2022/11/11 15:23:48.124,[88],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:23:48.124,[88],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:23:48.125,[88],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:23:48.132,[92],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:23:48.132,[92],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 15:23:48.132,[92],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Movil/Administrar/Solicitudes/Adm_SolicitudNota.aspx?IdSolicitud=5283&IdEstApr=34&IdEstPro=8&BiEscalamiento=False
+2022/11/11 17:34:12.650,[44],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2022/11/11 17:34:12.658,[44],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2022/11/11 17:34:12.658,[44],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2022/11/11 17:36:58.847,[53],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 17:36:58.847,[53],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 17:36:58.847,[53],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2022/11/11 17:37:45.228,[28],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 17:37:45.228,[28],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 17:37:45.228,[28],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2022/11/11 17:38:46.888,[55],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2022/11/11 17:38:46.888,[55],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2022/11/11 17:38:46.888,[55],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx

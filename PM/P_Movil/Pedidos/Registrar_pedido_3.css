@@ -1,0 +1,587 @@
+﻿#general
+{
+    width:100%;
+    border:0px dotted gray;
+}
+
+#principal
+{
+  width:1024px;  
+  border:0px dotted gray;
+  margin:auto;
+}
+
+.cuerpo
+{
+    width:1024px;  
+    border:0px dotted gray;
+    margin:auto;
+}
+
+.cuerpo_pedidos
+{
+    width:1020px;  
+    border:0px solid gray;
+    
+    margin:10px auto;
+        *margin:0px auto;
+            _margin:0px auto;
+}
+
+#titulo
+{
+    margin:auto;
+    width:200px;
+    text-align:center;
+    vertical-align:middle;
+    border:0px dotted gray;
+    font-size:14pt;
+}
+
+#head_pedidos
+{
+    height:0px;    
+}
+
+#body_pedidos
+{
+    height:500px;  
+    border:1px solid skyblue;
+    -ms-border-radius:5px;
+        border-radius:5px;    
+    overflow:hidden;
+}
+
+#pasos
+{
+    width:1020px;
+    height:28px;
+    border: 1px solid skyblue;
+    -ms-border-radius:5px;
+        border-radius:5px;    
+    margin-top:10px;
+        *margin-top:0px;
+            _margin-top:0px;
+    padding:0px !important;
+    overflow:hidden;
+}
+
+#controlPasos
+{
+    margin-top:10px;
+    margin-bottom: 10px;
+    width:1020px;
+    /*height:63px;*/
+    background-color:skyblue;
+    box-shadow:0px 0px 5px gray;
+    float:left;
+}
+
+.paso
+{
+    width:254px;
+    height:80px;
+    float:left;
+    border-right: 1px solid skyblue;
+    text-align:center;
+    vertical-align:middle;
+    font-size:medium;
+}
+
+#paso4
+{
+    border-right-width: 0px;
+    width:255px;
+}
+
+.pasonum
+{
+    width:20px;
+    height:20px;
+    position:relative;
+    left:5px;
+    top:-19px;
+    border: 1px solid skyblue;
+    border-radius:20px;
+        -ms-border-radius:20px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+.controlNum
+{
+    width:20px;
+    height:20px;
+    border: 1px solid skyblue;
+    border-radius:20px;
+    -ms-border-radius:20px;
+    text-align:center;
+    vertical-align:text-top;
+    float:right;
+    font-size:medium;
+    margin-top:5px;
+    margin-left:5px;
+    box-shadow:0px 0px 5px gray;
+}
+
+.controlNum:hover
+{
+    background: skyblue;
+    box-shadow:0px 0px 20px WHITE;
+    cursor:pointer;
+}
+
+#mostrar1
+{
+    left:-1000px;
+    top:-20px;    
+}
+
+#mostrar2
+{
+    left:254px;
+    top:-200px;
+}
+
+#body_pedidos
+{
+    height:600px;
+}
+
+.numElegido
+{
+    background: gray;
+    background: rgba(0, 0, 0, .3);
+}
+
+.pag
+{
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.next
+{
+    margin-top:3px;
+    margin-right:5px;
+    float:right;
+}
+
+.back
+{
+    margin-top:3px;
+    margin-left:5px;
+    float:left;
+}
+
+#productos
+{
+    display:block;
+    
+}
+
+#head_productos
+{
+
+}
+
+#footer_productos
+{
+
+}
+
+#cuerpo_productos
+{
+
+}
+
+.head_gen
+{
+    width:100%;
+    height:50px;
+    border-bottom: 1px solid skyblue;
+}
+
+.footer_gen
+{
+    width:100%;
+    height:30px;
+    border-top: 1px solid skyblue;
+}
+
+.cuerpo_gen
+{
+    width:115%;
+    height:515px;
+    border: 0px dotted gray;
+    overflow-y:scroll;
+}
+
+.producto
+{
+    width:185px;
+    height:185px;    
+    float:left;
+    margin-left:13px;
+    margin-top:13px;
+    padding:1px !important;
+    border:1px solid skyblue;
+    border-radius:5px;
+    /*background-image: url('../../Images/ModeloDispositivo/12.jpg') ; 
+    background-size: cover;*/
+}
+.producto:hover
+{
+    cursor:pointer;
+}
+
+.producto img {
+     width: 100%;
+     max-width: 100%;
+     height: 100%;     
+}
+
+#imgCel {
+     width: 100%;
+     max-width: 100%;
+     height: 100%;     
+}
+
+#opacidad
+{
+    width:100%;
+    height:1024px;
+    position:absolute;
+    left:0px;
+    top:0px;
+    background: white;
+    /*background: rgba(0,0,0,.01);*/
+    display:none;   
+    /*filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);*/
+    z-index:1000;
+}
+
+#mostrar
+{
+    width:1024px;
+    height:1024px;    
+    /*background: rgba(0, 0, 0, .3);*/
+    background:white;
+    margin:auto;
+    box-shadow:0px 0px 100px white;
+    border-left:0px solid skyblue;
+    border-right:0px solid skyblue;
+}
+
+#imaCel
+{
+    width:300px;
+    height:360px;
+    border:0px dotted gray;
+    float:left;
+    /*background-image:url('celu.png');*/
+}
+
+#infoCel 
+{
+    width:400px;
+    height:260px;
+    border-left:3px solid skyblue;
+    float:left;
+    font-size:medium;
+    padding-left:40px;
+}
+
+#comprarCel
+{
+    width:660px;
+    height:100px;
+    border-left:3px solid skyblue;
+    float:left;
+    font-size:medium;
+    padding-left:40px;
+    text-align:right;
+}
+
+#titCel
+{
+    width:100%;
+    height:30px;
+    font-size:large;
+}
+
+#cuerpoTats
+{
+    width:100%;
+    height:500px;
+    border:0px dotted gray;
+    padding:5px;
+}
+
+#navtats
+{
+    width:100%;
+    height:30px;
+    border:0px dotted gray;
+    overflow:hidden;
+    padding-top:30px;
+}
+
+#detalleTabs
+{
+    width:1020px;
+    
+    border:0px dotted gray;
+    
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    margin:auto;
+    box-shadow: 0 0 5px gray;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+.tab
+{
+    width:20%;
+    height:30px;
+    padding-bottom: 6px;
+    float:left;
+    /*border:1px solid white;*/
+    border-left: 2px solid #EAEEF1\9;
+    text-align:center;
+    padding-top:5px;
+    font-size:medium;   
+    cursor:pointer;
+    border-right:0px solid skyblue;
+
+    margin-left:2px;
+}
+
+.tab:hover, .tabSelect
+{
+    border:0px solid skyblue;
+    box-shadow: 0 0 5px gray;
+    color:skyblue;
+    
+ background: rgb(238,238,238); /* Old browsers */
+}
+
+.mostrar
+{
+    width:1000px;
+    height:200px;    
+    background: rgba(0, 0, 0, .3);
+    position:relative;
+    box-shadow: 0 0 200px skyblue;
+}
+
+/*.cuerpo_pedidos
+{
+    width:620px;  
+    border:0px dotted gray;
+    margin:auto;
+}*/
+
+.filtro
+{
+    background: rgb(200, 200, 200);
+    background: rgba(0, 0, 0, .05);
+    border-radius:5px;
+    float:left;
+    margin-top:5px;
+    *width:150px;
+}
+
+#generalCarrito
+{
+    width:380px;
+    height:550px;
+    border: 0px dotted gray;
+    float:left;
+    display:none;
+    padding: 10px;
+}
+
+.prodEle
+{
+    width:360px;
+    height:30px;
+    border:1px solid skyblue;
+    border-top:0px solid skyblue;
+    border-right:0px solid skyblue;
+}
+
+.prodElehead
+{
+    width:360px;
+    height:30px;
+    border:1px solid skyblue;
+    border-top:0px solid skyblue;
+    border-right:0px solid skyblue;
+}
+
+.prodDesc
+{
+    width:156px;
+    height:30px;
+    border-right:1px solid skyblue;
+    font-size:10pt;
+    font-weight:lighter;
+    float:left;
+}
+.prodServ
+{
+    width:150px;
+    height:30px;
+    border-right:1px solid skyblue;
+    font-size:10pt;
+    float:left;
+    /*overflow:hidden;*/
+}
+.prodPre
+{
+    width:51px;
+    height:30px;
+    border-right:1px solid skyblue;
+    font-size:10pt;
+    font-weight:lighter;
+    float:left;
+    text-align:right;
+}
+
+
+#contIndicadores
+{
+    width:235px;
+    /*height:50px;*/
+    padding:3px;
+    margin:3px;
+    float:left;
+    border-right:1px solid white;
+    font-size:8pt;
+}
+
+.indiDisponible 
+{
+    width:100px;
+    height:20px;
+    text-align:left;
+    float:left;
+}
+
+.indiDesc
+{
+    width:60px;
+    height:20px;
+    text-align:left;
+    float:left;
+}
+.indiBar
+{
+    width:70px;
+    
+    margin-top:3px;
+    float:left;
+}
+
+.itemIndicador
+{
+    width:235px;
+    height:20px;
+    float:left;
+}
+
+#contCampaña
+{
+    width:235px;
+    padding:3px;
+    margin:3px;
+    float:left;
+    border:0px solid white;
+    font-size:8pt;
+   
+}
+
+#contItemsCheck
+{
+    width:235px;
+    padding:3px;
+    margin:3px;
+    float:left;
+    border:0px solid white;
+    font-size:8pt;
+   
+}
+
+#btnCarrito
+{
+    width:54px;
+    height:54px;
+    float:right;
+    margin:15px;
+    box-shadow:0px 0px 5px gray;
+    border-radius:10px;
+    
+    
+}
+
+#btnCarrito:hover
+{
+    cursor:pointer;
+    box-shadow:0px 0px 20px WHITE;
+    background: rgb(255,183,107); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,183,107,1) 0%, rgba(255,167,61,1) 23%, rgba(255,124,0,1) 70%, rgba(255,127,4,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,183,107,1)), color-stop(23%,rgba(255,167,61,1)), color-stop(70%,rgba(255,124,0,1)), color-stop(100%,rgba(255,127,4,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 23%,rgba(255,124,0,1) 70%,rgba(255,127,4,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 23%,rgba(255,124,0,1) 70%,rgba(255,127,4,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 23%,rgba(255,124,0,1) 70%,rgba(255,127,4,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,183,107,1) 0%,rgba(255,167,61,1) 23%,rgba(255,124,0,1) 70%,rgba(255,127,4,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb76b', endColorstr='#ff7f04',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+#pDetLin
+{
+    width:800px;
+    
+    margin:auto;
+    border: 2px solid white;
+    box-shadow:0px 0px 10px gray;
+    margin-top=10px;
+}
+
+.fLin
+{
+    width:800px;
+    height:30px;
+    border-bottom:1px solid white;    
+}
+
+.pLinHead
+{
+    background-color:skyblue;    
+}
+
+.cLin
+{
+    width:99px;
+    height:30px;
+    overflow:hidden;
+    text-align:center;
+    float:left;
+    border-right:1px solid white;
+}
+
+.cLinId
+{
+    width:20px;
+}
