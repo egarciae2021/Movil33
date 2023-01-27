@@ -10,3 +10,15 @@ ________________________________________________________________________________
 FechaHora = 27/01/2023 10:59:46
 Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":5950,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":111,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 17; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
 ____________________________________________________________________________________________________
+FechaHora = 27/01/2023 11:17:34
+Mensaje = Entro
+____________________________________________________________________________________________________
+FechaHora = 27/01/2023 11:17:34
+Mensaje = IsPostBack
+____________________________________________________________________________________________________
+FechaHora = 27/01/2023 11:17:35
+Mensaje = Script parte 1: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":5942,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":138,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 5; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;
+____________________________________________________________________________________________________
+FechaHora = 27/01/2023 11:17:35
+Mensaje = Script parte 2: var idCliente = 0; var misAlertas = [{"CantidadNoLeidos":5942,"DescripcionAlerta":"Notas nuevas en solicitudes","RutaClick":"","Tipo":"Solicitudes"},{"CantidadNoLeidos":138,"DescripcionAlerta":"Solicitudes por Procesar","RutaClick":"","Tipo":"Solicitudes"}];var IdTemporizador = -1; var TiempoTemporizador = 0; var ReinciarTemporizador = false; var miTotalSegTrans = 5; var TipoNivelTab;var IdPaginaTab;var TituloTab;var URLTab;TipoNivelTab='3'; IdPaginaTab='#opcion_239'; TituloTab='Facturación'; URLTab='P_Movil/DashBoard/DashBoard_Facturacion.aspx'; 
+____________________________________________________________________________________________________
