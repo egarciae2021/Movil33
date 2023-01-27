@@ -1,4 +1,6 @@
-﻿$(function () {
+﻿/*esta es una prueba*/
+
+$(function () {
     $(".popup-overlay").show();
     $("#txtContrasena1").focus();
 
