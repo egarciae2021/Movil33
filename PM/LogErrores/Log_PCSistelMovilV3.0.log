@@ -34,3 +34,48 @@
 2023/01/27 11:01:09.642,[11],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=7
 2023/01/27 11:01:09.642,[11],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=7
 2023/01/27 11:01:09.642,[11],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/Seguridad/Administrar/CargarImagenUsuario.aspx?CodUsu=7
+2023/01/27 11:17:08.768,[31],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:08.768,[31],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:08.769,[31],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:17:14.159,[51],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:14.159,[51],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:14.159,[51],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:17:30.500,[38],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:30.500,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:30.500,[38],INFO  ,Componente - Administrador - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:17:31.007,[46],INFO  ,Ingresa ActualizarCultura. Página: /index.aspx
+2023/01/27 11:17:31.007,[46],INFO  ,Salióooooo ActualizarCultura. Página: /index.aspx
+2023/01/27 11:17:31.007,[46],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /index.aspx
+2023/01/27 11:17:34.541,[37],INFO  ,Ingresa ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/27 11:17:34.541,[37],INFO  ,Salióooooo ActualizarCultura. Página: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/27 11:17:34.541,[37],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /PlantillaTab.aspx?idp=3&nop=M%C3%B3vil
+2023/01/27 11:17:35.623,[51],INFO  ,Ingresa ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/27 11:17:35.623,[51],INFO  ,Salióooooo ActualizarCultura. Página: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/27 11:17:35.623,[51],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /P_Movil/DashBoard/DashBoard_Facturacion.aspx
+2023/01/27 11:17:39.539,[46],INFO  ,Ingresa ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.7043142157475855
+2023/01/27 11:17:39.539,[46],INFO  ,Salióooooo ActualizarCultura. Página: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.7043142157475855
+2023/01/27 11:17:39.539,[46],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /P_Configuracion/General/MisDatos.aspx?inCod=108&inTip=3&inTipOri=1&al=0.7043142157475855
+2023/01/27 11:17:42.812,[38],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:42.812,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:42.812,[38],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:17:54.030,[38],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:54.030,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:17:54.030,[38],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:18:32.223,[58],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:32.223,[58],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:32.223,[58],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:18:38.332,[58],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:38.333,[58],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:38.333,[58],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:18:41.631,[58],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:41.631,[58],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:41.631,[58],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:18:46.307,[38],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:46.307,[38],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:46.307,[38],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:18:53.154,[46],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:53.154,[46],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:18:53.154,[46],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
+2023/01/27 11:27:22.722,[42],INFO  ,Ingresa ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:27:22.722,[42],INFO  ,Salióooooo ActualizarCultura. Página: /Login.aspx
+2023/01/27 11:27:22.722,[42],INFO  ,Componente - Soporte - Se autoriza el acceso a la siguiente pagina: /Login.aspx
