@@ -25,6 +25,7 @@
                         { name: 'FecInicio', index: 'FecInicio', label: 'Fecha I.', width: 70, align: "center" },
                         { name: 'FecFin', index: 'FecFin', label: 'Fecha F.', width: 70, align: "center" },
                         { name: 'Observacion', index: 'Observacion', label: 'Observacion', width: 310, align: "center" },
+                        { name: 'Usuario Modificador', index: 'Usuario Modificador', label: 'Usuario Modificador', width: 310, align: "center" }, //Edgar Garcia 16012023
             ],
             pager: '#pager',
             loadtext: 'Cargando datos...',
@@ -113,7 +114,8 @@ function MostrarHistorico_Lineas() {
                  "'inPagTam':'" + $('#grid').getGridParam('rowNum') + "'," +
                  "'vcOrdCol':'" + $('#grid').getGridParam("sortname") + "'," + //Nombre de columna ordenado
                  "'vcTipOrd':'" + $('#grid').getGridParam("sortorder") + "'," + //Tipo de orden de columna asc, desc                               
-                 "'inPagAct':'" + parseInt($('#grid').getGridParam('page')) + "'}",
+                 "'inPagAct':'" + parseInt($('#grid').getGridParam('page')) + "'," +
+                 "'vcNomUsuario':'" + $("#hfNombreUsuario").val() + "'}", //Edgar Garcia 16012023
 
         dataType: 'json',
         type: 'post',

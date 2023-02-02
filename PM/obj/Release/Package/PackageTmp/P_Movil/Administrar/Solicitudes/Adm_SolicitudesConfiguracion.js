@@ -4066,7 +4066,7 @@ $(function () {
 			width: 50
 			}
 			,
-			/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA*/
+			/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA corregidosaa*/
 			{
 				name: 'Desistema',
 				index: 'Desistema',
@@ -6513,10 +6513,14 @@ $(function () {
 					for (k = 0; k < vcCam.length; k++) {
 						var rowCam = tbCampos.getRowData(vcCam[k]);
 						//Añadiendo Nombre de Adjunto
-						if (rowCam.Campo == vcCamposEstadoProcesos[j] && rowCam.IdTipoDato == 9) {
-							IdCampo2 = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[rowCam.Campo].IdCampo;
-							XMLCamposPorEstadoProceso += "<DATA IdEstado=\"" + inIdEst + "\" IdCampo=\"AdjNom_" + vcCamposEstadoProcesos[j] + "\" Visible=\"0\" Editable=\"0\" Obligatorio=\"0\" IdCampo2=\"" + IdCampo2 + "\" />";
-						}
+						//Edgar Garcia 10012023 
+						//if (rowCam.Campo == vcCamposEstadoProcesos[j] && rowCam.IdTipoDato == 9) {
+						//	IdCampo2 = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[rowCam.Campo].IdCampo;
+						//	XMLCamposPorEstadoProceso += "<DATA IdEstado=\"" + inIdEst + "\" IdCampo=\"AdjNom_" + vcCamposEstadoProcesos[j] + "\" Visible=\"0\" Editable=\"0\" Obligatorio=\"0\" IdCampo2=\"" + IdCampo2 + "\" />";
+						//}
+
+
+
 					}
 				} else {
 					IdCampo2 = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].IdCampo;

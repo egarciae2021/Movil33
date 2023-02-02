@@ -125,7 +125,6 @@ C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\PCSistelMovilLog45.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\System.ValueTuple.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\uSiteThumbnail.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\VisualSoft.Comun.ActiveDirectoryVS.dll
-C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\VisualSoft.Comun.Auditoria.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\VisualSoft.Comun.Base.BL.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\VisualSoft.Comun.Base.DA.dll
 C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\bin\VisualSoft.Comun.CuentaCobro.dll

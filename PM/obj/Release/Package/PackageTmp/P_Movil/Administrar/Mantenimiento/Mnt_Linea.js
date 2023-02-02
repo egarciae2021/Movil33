@@ -1590,12 +1590,15 @@ $(function () {
         var CamposDinamicos = "";
 
         $(".VARCHAR").each(function (i) {
+            /*EDGAR GARCIA 19012023 QUE NO ACTUALICE EL USUARIOMODIFICADOR*/
+            if ($(this).attr("obj") != "vcNomUsuModif") { 
             //            if (this.value != "") {
             CamposDinamicos += "[" + $(this).attr("obj") + "]";
             CamposDinamicos += " = \"";
             CamposDinamicos += this.value.replace(/'/g, "&#39").replace(/"/g, "&#34").replace(/\\/g, "&#92");
             CamposDinamicos += "\",";
-            //            }
+                //            }
+            }
         });
 
         var ValidacionNumerica = true;

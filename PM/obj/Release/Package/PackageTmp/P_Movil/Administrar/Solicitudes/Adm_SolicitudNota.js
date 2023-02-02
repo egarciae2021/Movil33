@@ -12,7 +12,7 @@ $(function () {
     var hdfimportar = window.parent.document.body.childNodes[1].children['hdfimportar'].value 
     var totalperil = hdfinsertar + hdfactivar + hdfeliminar + hdfexportar + hdfimportar
 
-    debugger
+     
     //edgar garcia 10112022 Bloquear notas si solicitud esta Cerrada
     //edgar garcia 0212022 correción para validar Gestor de solicitudes
     var notabloq = (window.location.search).substr(2).split('&')
