@@ -1,0 +1,16 @@
+vie. 03 Feb. 2023 08:03:31p. m.: 03/03/23 08:03:31 <--> Agregando Destinatario: csejas@pcsistel.com
+vie. 03 Feb. 2023 08:03:52p. m.: 03/03/23 08:03:52 <--> Se encontraron errores: System.Net.Mail.SmtpException: Error al enviar correo. ---> System.Net.WebException: No es posible conectar con el servidor remoto ---> System.Net.Sockets.SocketException: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder 130.1.7.16:587
+   en System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   en System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6)
+   en System.Net.PooledStream.Activate(Object owningObject, Boolean async, GeneralAsyncDelegate asyncCallback)
+   en System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+   en System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en CompCorreo.CSmtp.Enviar(Boolean pbolUI, String pstrDestinatarios, String pstrAsunto, String pstrCuerpo, ArrayList pAttachments, Boolean pbolConfirmacionLectura)
