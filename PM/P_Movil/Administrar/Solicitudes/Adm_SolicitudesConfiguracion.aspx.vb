@@ -1026,7 +1026,7 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
     End Function
 
     <WebMethod()>
-    Public Shared Function Guardar(ByVal vcNomTip As String, ByVal vcDesTip As String, ByVal inIdFinanciamiento As String,
+    Public Shared Function Guardar(ByVal vcNomTip As String, ByVal vcDesTip As String, ByVal vcDesSol As String, ByVal inIdFinanciamiento As String,
                               ByVal biUsaDri As String, ByVal inLinTip As String, ByVal vcPrefijo As String, ByVal vcResApr As String,
                               ByVal XMLCampos As String, ByVal XMLCamposPorEstadoProceso As String, ByVal inNumCam As String, ByVal XMLMensajePorEstado As String,
                               ByVal XMLParametros As String, ByVal vcCodTipsol As String, ByVal biMonFij As String, ByVal dcMonto As String,
@@ -1153,7 +1153,8 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
                 'End If
 
                 'If intResultado = 1 Then
-                strResultado = TipoSolicitud.Insertar(oTipoSolicitud, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
+                'EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
+                strResultado = TipoSolicitud.Insertar(oTipoSolicitud, vcDesSol, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
                                    XMLParametros, XMLReglaEstado, XMLUmbralEstado, XMLCamposCondicion, XMLDetalleCaptura,
                                    XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje)
 
@@ -1187,7 +1188,8 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
                 Dim strAntes As String = oAuditoria.AntesActualizar(New String() {vcCodTipsol})
 
                 'Se actualizan datos....
-                strResultado = TipoSolicitud.Actualizar(oTipoSolicitud, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
+                'EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
+                strResultado = TipoSolicitud.Actualizar(oTipoSolicitud, vcDesSol, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
                                    XMLParametros, Convert.ToInt32(vcCodTipsol), XMLReglaEstado, XMLUmbralEstado,
                                    XMLCamposCondicion, XMLDetalleCaptura, byArchivo, vcLstCodSol, XMLMensajeDevolucion,
                                    XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje)

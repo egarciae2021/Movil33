@@ -52654,6 +52654,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._LabelDescripcionsol">
+<summary>
+Control LabelDescripcionsol.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._TxtDescripcionsol">
+<summary>
+Control TxtDescripcionsol.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._lblFases">
 <summary>
 Control lblFases.

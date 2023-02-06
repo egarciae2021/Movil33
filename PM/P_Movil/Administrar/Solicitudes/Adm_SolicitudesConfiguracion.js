@@ -6109,6 +6109,8 @@ $(function () {
 		var biNecesitaInfoMensaje = "0";
 		var biActivo = "0";
 
+		var vcDescripcionSol = $.trim($("#TxtDescripcionsol").val())
+
 		//ESCALAMIENTO
 		var escalamiento = 0;
 		if ($("#ddlEscalar").val() == "1") {
@@ -6950,7 +6952,7 @@ $(function () {
 													resizable: false,
 													buttons: {
 														"Continuar": function () {
-															fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+															//EDGAR GARCIA 06022023 se agrego vcDescripcionSol															fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 																biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 																XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
 																dcMonto, biActivo, vcFileName, lstRes[2], GenerarXMLDatosMensajeDev(), escalamiento,
@@ -6973,8 +6975,9 @@ $(function () {
 								}
 							}
 						});
-					} else { //se procede con el cambio normal
-						fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+		} else { //se procede con el cambio normal
+							//EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
+						fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 							biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 							XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
 							dcMonto, biActivo, vcFileName, '', '', escalamiento,
@@ -6988,7 +6991,8 @@ $(function () {
 		} else { //guardar normalmente si es una insersión
 
 			if (biEnvioAnticipado) {
-				fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+			  //EDGAR GARCIA 06022023 se agrego vcDescripcionSol												 
+				fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 					biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 					XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
 					dcMonto, biActivo, vcFileName, '', '', escalamiento,
