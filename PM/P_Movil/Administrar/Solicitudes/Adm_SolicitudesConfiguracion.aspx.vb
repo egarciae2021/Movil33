@@ -1154,9 +1154,9 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
 
                 'If intResultado = 1 Then
                 'EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
-                strResultado = TipoSolicitud.Insertar(oTipoSolicitud, vcDesSol, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
+                strResultado = TipoSolicitud.Insertar(oTipoSolicitud, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
                                    XMLParametros, XMLReglaEstado, XMLUmbralEstado, XMLCamposCondicion, XMLDetalleCaptura,
-                                   XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje)
+                                   XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje, vcDesSol)
 
                 'AUDITORIA:Insertar registro
                 oAuditoria.Insertar(New String() {strResultado})
@@ -1189,10 +1189,10 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
 
                 'Se actualizan datos....
                 'EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
-                strResultado = TipoSolicitud.Actualizar(oTipoSolicitud, vcDesSol, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
+                strResultado = TipoSolicitud.Actualizar(oTipoSolicitud, XMLCampos, XMLCamposPorEstadoProceso, Convert.ToInt32(inNumCam), XMLMensajePorEstado,
                                    XMLParametros, Convert.ToInt32(vcCodTipsol), XMLReglaEstado, XMLUmbralEstado,
                                    XMLCamposCondicion, XMLDetalleCaptura, byArchivo, vcLstCodSol, XMLMensajeDevolucion,
-                                   XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje)
+                                   XMLTipoProducto, lstMensajes, XMLCamposDestino, XMLCamposCondicionDestino, XMLCamposAdjuntosPorEstadoMensaje, vcDesSol)
 
                 ''AUDITORIA:Actualizar Después
                 oAuditoria.DespuesActualizar(New String() {strResultado}, strAntes)
