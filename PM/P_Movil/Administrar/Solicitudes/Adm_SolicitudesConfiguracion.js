@@ -9135,7 +9135,8 @@ function fnCargarSolicitudesEnConflictoPaginado() {
 	}
 }
 
-function fnGuardarTipoSolicitud(vcNomTip, vcDesTip, inIdFinanciamiento, biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+//Edgar Garcia 06022023 agregar descripcionSOL
+function fnGuardarTipoSolicitud(vcNomTip, vcDesTip,vcDescripcionSol ,inIdFinanciamiento, biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 	biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 	XMLReglaEstado, XMLCamposCondicion, XMLDetalleCaptura, vcCodTipsol, biMonFij, inTecnicoResponsable, esDevolucion,
 	dcMonto, biActivo, vcNomArcCon, vcLstCodSol, XMLMensajeDevolucion, Escalar,
@@ -9143,6 +9144,7 @@ function fnGuardarTipoSolicitud(vcNomTip, vcDesTip, inIdFinanciamiento, biUsaDri
 	var dataJSON = {
 		vcNomTip: vcNomTip,
 		vcDesTip: vcDesTip,
+		vcDesSol: vcDescripcionSol,
 		inIdFinanciamiento: inIdFinanciamiento,
 		biUsaDri: biUsaDri,
 		inLinTip: inLinTip,

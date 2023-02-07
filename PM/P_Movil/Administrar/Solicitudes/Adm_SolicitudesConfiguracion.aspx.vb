@@ -375,6 +375,10 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
             Dim script As String = ""
             'Tipo de Solicitud
             txtTabla.Text = dtTipoSolicitud.Rows(0)("vcTabla").ToString()
+
+            'Edgar Garcia 06022023 
+            TxtDescripcionsol.Text = dtTipoSolicitud.Rows(0)("vcDescripcionSol").ToString()
+
             txtDescripcionTipo.Text = dtTipoSolicitud.Rows(0)("vcDescripcion").ToString()
             ddlLineaTipo.SelectedValue = dtTipoSolicitud.Rows(0)("inLineaTipo").ToString()
             ddlMosBotRef.SelectedValue = dtTipoSolicitud.Rows(0)("btBotRef").ToString() 'JHERRERA 20150310: Nuevo campo
