@@ -6952,7 +6952,8 @@ $(function () {
 													resizable: false,
 													buttons: {
 														"Continuar": function () {
-															//EDGAR GARCIA 06022023 se agrego vcDescripcionSol															fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+															//EDGAR GARCIA 06022023 se agrego vcDescripcionSol															
+															fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 																biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 																XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
 																dcMonto, biActivo, vcFileName, lstRes[2], GenerarXMLDatosMensajeDev(), escalamiento,
