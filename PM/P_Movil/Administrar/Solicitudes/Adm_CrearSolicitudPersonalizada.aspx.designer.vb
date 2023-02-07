@@ -158,24 +158,6 @@ Partial Public Class P_Movil_Administrar_Solicitudes_Adm_CrearSolicitudPersonali
     Protected WithEvents ifInfoFinanciamiento As Global.System.Web.UI.HtmlControls.HtmlIframe
 
     '''<summary>
-    '''Control tbCamposDinamicos.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents tbCamposDinamicos As Global.System.Web.UI.HtmlControls.HtmlTable
-
-    '''<summary>
-    '''Control trDescripcion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents trDescripcion As Global.System.Web.UI.HtmlControls.HtmlTableRow
-
-    '''<summary>
     '''Control LabelDescripcion.
     '''</summary>
     '''<remarks>
@@ -183,6 +165,15 @@ Partial Public Class P_Movil_Administrar_Solicitudes_Adm_CrearSolicitudPersonali
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents LabelDescripcion As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''Control tbCamposDinamicos.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents tbCamposDinamicos As Global.System.Web.UI.HtmlControls.HtmlTable
 
     '''<summary>
     '''Control trFraccionamiento.

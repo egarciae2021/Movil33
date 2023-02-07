@@ -73,6 +73,10 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_CrearSolicitudPersonalizada
             'Dim ds As DataSet = TipoSolicitud.Mostrar(Convert.ToInt32(hdfCodTipSol.Value))
             'TipoSolicitud.Dispose()
 
+            'Edgar Garcia 06022023 se agrega visualizacion descripcion
+            LabelDescripcion.Text = ds.Tables(1).Rows(0)("vcDescripcionSol").ToString()
+
+
             hdfFraccionamiento.Value = If(Convert.ToBoolean(ds.Tables(1).Rows(0)("biFraccionamiento")), "1", "0")
 
             If IsDBNull(ds.Tables(1).Rows(0)("inTipoFinanciamiento")) Then
