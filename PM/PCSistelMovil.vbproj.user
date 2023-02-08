@@ -9,7 +9,7 @@
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
-    <NameOfLastUsedPublishProfile>C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\My Project\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Fuentes_Cloud\PCSMOVIL_33\2.QA\Web\PM\My Project\PublishProfiles\FPASTOR.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

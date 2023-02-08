@@ -57,7 +57,14 @@
         </div>
 
         <div id="dvCampo" class="dvPanel" style="overflow: auto;">  
+            <%--Edgar Garcia 06022023 agrego descripcion solicitud--%>
+            <asp:Label ID="LabelDescripcion" runat="server" ></asp:Label>
+
             <table id="tbCamposDinamicos" runat="server" width="850px">
+             
+                
+               
+
             <tr id="trFraccionamiento" style="display:none;">
                 <td>Fraccionamiento</td>
                 <td>

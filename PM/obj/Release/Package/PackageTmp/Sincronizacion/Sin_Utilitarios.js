@@ -25,7 +25,8 @@ $(function () {
 
     }
     inicio();
-    $.timer(2500, function (temporizador) {
+    /*Edgar Garcia 06022023 se cambio de 2500 a 5000*/        
+    $.timer(5000, function (temporizador) {
         CargaDatos(temporizador);
     });
 

@@ -86,6 +86,16 @@
                                     <asp:TextBox ID="txtDescripcionTipo" runat="server" Width="200px" MaxLength="50"></asp:TextBox>
                                 </td>
                             </tr>
+                            <%--EDGAR GARCIA 06022023 SE AGREGA LA DESCRIPCION DE SOLICITUD--%>
+                            <tr>
+                                <td class="tdDescripcionSol">
+                                    <asp:Label ID="LabelDescripcionsol" runat="server" Text="Descripción de la solicitud"></asp:Label>
+                                </td>
+                                <td class="">
+                                    <asp:TextBox ID="TxtDescripcionsol" runat="server" Width="200px" MaxLength="50"></asp:TextBox>
+                                </td>
+                            </tr>
+
                             <tr style="display: none;">
                                 <td class="tdEtiqueta">
                                     <asp:Label ID="lblFases" runat="server" Text="Fases"></asp:Label>

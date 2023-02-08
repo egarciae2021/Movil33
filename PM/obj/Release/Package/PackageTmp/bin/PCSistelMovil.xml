@@ -46282,6 +46282,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_CrearSolicitudPersonalizada._LabelDescripcion">
+<summary>
+Control LabelDescripcion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:P_Movil_Administrar_Solicitudes_Adm_CrearSolicitudPersonalizada._tbCamposDinamicos">
 <summary>
 Control tbCamposDinamicos.
@@ -52648,6 +52657,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._txtDescripcionTipo">
 <summary>
 Control txtDescripcionTipo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._LabelDescripcionsol">
+<summary>
+Control LabelDescripcionsol.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion._TxtDescripcionsol">
+<summary>
+Control TxtDescripcionsol.
 </summary>
 <remarks>
 Campo generado automáticamente.

@@ -258,7 +258,8 @@ $(function () {
         $("#txtFechaProgramacion").hide();
     }
 
-    var timer = $.timer(1500, function (temporizador) {
+    //Edgar Garcia 06022023 se cambio de 1500 a 5000
+    var timer = $.timer(5000, function (temporizador) {
         //temporizador.reset(retardo);//cambia el intervalo de tiempo
         CargaDatos(temporizador);
     });
