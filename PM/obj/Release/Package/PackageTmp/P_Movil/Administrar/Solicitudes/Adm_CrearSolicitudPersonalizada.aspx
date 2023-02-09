@@ -28,13 +28,22 @@
             height: 100% !important; 
             width: 100% !important;
         }
+
+        .border-5{
+        border-width: 5px !important;
+        border-color: #DCDCDC
+          } 
+
     </style>
 </head>
 
 <body>
     <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Adm_CrearSolicitudPersonalizada.js")%>" type="text/javascript"></script>
-    
-    <form id="form1" runat="server">
+       <%--Edgar Garcia 06022023 agrego descripcion solicitud--%>
+         <i><asp:Label ID="LabelDescripcion" runat="server" style="font-style:italic"></asp:Label></i>
+         
+     
+    <form id="form1" runat="server" class="border-5;overflow: auto;">
         <asp:HiddenField id="hdfAdmin" runat="server"/>
         <asp:HiddenField id="hdfCodEmp" runat="server"/>
         <asp:HiddenField id="hdfCodTipSol" runat="server"/>
@@ -55,15 +64,12 @@
             <iframe id="ifInfoFinanciamiento" runat="server" style="margin: 0px; padding: 0px;" frameborder="0">
             </iframe>
         </div>
+        
 
         <div id="dvCampo" class="dvPanel" style="overflow: auto;">  
-            <%--Edgar Garcia 06022023 agrego descripcion solicitud--%>
-            <asp:Label ID="LabelDescripcion" runat="server" ></asp:Label>
-
+           
             <table id="tbCamposDinamicos" runat="server" width="850px">
              
-                
-               
 
             <tr id="trFraccionamiento" style="display:none;">
                 <td>Fraccionamiento</td>

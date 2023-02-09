@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\PUBLICACIONES DESAROLLO\PCSISTEL MOVIL\WEB\ProductoMovil</_PublishTargetUrl>
+    <History>False|2023-02-09T21:15:38.7381890Z;False|2023-02-09T16:12:39.4935768-05:00;False|2023-02-09T16:10:01.4164654-05:00;False|2023-02-09T16:09:23.0274270-05:00;</History>
+  </PropertyGroup>
+</Project>
