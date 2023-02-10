@@ -231,6 +231,22 @@
             height: 100% !important; 
             width: 100% !important;
         }
+
+        /*Edgar Garcia 10022023 clase para el toogle tip*/
+        label[title]:hover:after {
+              content: attr(title);
+              position: absolute;
+              padding: 4px 8px;
+              background-color: #Faf850;
+              color: black;
+              white-space: nowrap;
+              z-index: 20;
+             box-shadow: gray 5px 5px 5px; 
+ 
+            }
+
+
+
     </style>
 </head>
 <body>
@@ -302,7 +318,7 @@
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
 
-                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" ></asp:label><%--Edgar Garcia 10022023--%>
+                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" >1213</asp:label><%--Edgar Garcia 10022023--%>
                     </td>  
                     <%--<td>
                     Meses:
