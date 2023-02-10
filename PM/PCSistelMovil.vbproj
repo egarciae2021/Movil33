@@ -732,6 +732,7 @@
     <Content Include="Common\Controles\ToolTipGenerico_red.ascx" />
     <Content Include="Common\Controles\ToolTipGenerico.ascx" />
     <Content Include="Common\Controles\ToolTipGenerico2.ascx" />
+    <Content Include="Common\Controles\WebUserControl1.ascx" />
     <Content Include="Common\Graphics\ControlesJQuery\ColorPicker\css\colorpicker.css" />
     <Content Include="Common\Graphics\ControlesJQuery\ColorPicker\css\layout.css" />
     <Content Include="Common\Graphics\ControlesJQuery\ColorPicker\images\blank.gif" />
@@ -4711,6 +4712,13 @@
     </Compile>
     <Compile Include="Common\Controles\ToolTipGenerico2.ascx.vb">
       <DependentUpon>ToolTipGenerico2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\Controles\WebUserControl1.ascx.designer.vb">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Controles\WebUserControl1.ascx.vb">
+      <DependentUpon>WebUserControl1.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Common\Page\Adm_BusquedaPrincipal.aspx.designer.vb">
@@ -8757,6 +8765,7 @@
     <Folder Include="Common\Swf\" />
     <Folder Include="Content\css\shared\dataTables\" />
     <Folder Include="Dlls\App_Themes\" />
+    <Folder Include="DynamicData\FieldTemplates\" />
     <Folder Include="MDM\Firebase\" />
     <Folder Include="P_Movil\Administrar\Temporal\Organizacion\" />
     <Folder Include="P_Movil\Administrar\Temporal\RRHH\" />

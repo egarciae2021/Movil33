@@ -301,7 +301,9 @@
                     <td>
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
-                    </td>
+
+                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" ></asp:label><%--Edgar Garcia 10022023--%>
+                    </td>  
                     <%--<td>
                     Meses:
                 </td>

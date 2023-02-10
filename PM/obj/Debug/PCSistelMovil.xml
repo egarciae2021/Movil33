@@ -369,6 +369,33 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:PCSistelMovil.WebUserControl1._dvToolTip">
+<summary>
+Control dvToolTip.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:PCSistelMovil.WebUserControl1._DvMensaje">
+<summary>
+Control DvMensaje.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:PCSistelMovil.WebUserControl1._DvMiMensaje">
+<summary>
+Control DvMiMensaje.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:Common_Page_Adm_BusquedaPrincipal._form1">
 <summary>
 Control form1.
