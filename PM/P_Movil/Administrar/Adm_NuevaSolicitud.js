@@ -1370,6 +1370,21 @@ $(function () {
 
     fnValidarListarTipoSolicitudXGrupoEmpleado();
 
+    /*Edgar Garcia 10022023*/
+    $('.tooltip-element').hover(function () { 
+        var title = $(this).attr('title'); 
+        $(this).attr('title', ''); 
+        $(this).append('<span class="tooltip">' + title + '</span>');
+    }, function () { 
+        $(this).attr('title', $('.tooltip').html()); 
+        $(this).children('.tooltip').remove();
+    }).mousemove(function (e) { 
+        var mousex = e.pageX + 20;
+        var mousey = e.pageY + 10;
+        $('.tooltip').css({ top: mousey, left: mousex });
+    });
+
+
 });
 //FIN INICIO
 
@@ -3483,7 +3498,7 @@ function combokendoFormar(control, altura) {
     $("#" + control).kendoComboBox({
         filter: "contains",
         suggest: true,
-        height: altura,
+        height: 1000,
         dataTextField: "text",
         dataValueField: "value"
     });

@@ -19969,1649 +19969,1658 @@ To modify move field declaration from designer file to code-behind file.
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Head1">
 <summary>
-Head1 control.
+Control Head1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tabDetalle">
 <summary>
-tabDetalle control.
+Control tabDetalle.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tabDetalleDatos">
 <summary>
-tabDetalleDatos control.
+Control tabDetalleDatos.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tabDetallePoliticas">
 <summary>
-tabDetallePoliticas control.
+Control tabDetallePoliticas.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._form1">
 <summary>
-form1 control.
+Control form1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfGaleria">
 <summary>
-hdfGaleria control.
+Control hdfGaleria.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodEmpleado">
 <summary>
-hdfCodEmpleado control.
+Control hdfCodEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodEmpleadoAutenticado">
 <summary>
-hdfCodEmpleadoAutenticado control.
+Control hdfCodEmpleadoAutenticado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodIntEmp">
 <summary>
-hdfCodIntEmp control.
+Control hdfCodIntEmp.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfPerfilesEmpleado">
 <summary>
-hdfPerfilesEmpleado control.
+Control hdfPerfilesEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfSolicitudMultipleEspecialista">
 <summary>
-hdfSolicitudMultipleEspecialista control.
+Control hdfSolicitudMultipleEspecialista.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfLineaSel">
 <summary>
-hdfLineaSel control.
+Control hdfLineaSel.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodImeiSel">
 <summary>
-hdfCodImeiSel control.
+Control hdfCodImeiSel.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfAdmin">
 <summary>
-hdfAdmin control.
+Control hdfAdmin.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfJefeArea">
 <summary>
-hdfJefeArea control.
+Control hdfJefeArea.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodModDisActual">
 <summary>
-hdfCodModDisActual control.
+Control hdfCodModDisActual.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodModDis">
 <summary>
-hdfCodModDis control.
+Control hdfCodModDis.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCuentaLinea">
 <summary>
-hdfCuentaLinea control.
+Control hdfCuentaLinea.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfTipoSolicitud">
 <summary>
-hdfTipoSolicitud control.
+Control hdfTipoSolicitud.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfServicioSelect">
 <summary>
-hdfServicioSelect control.
+Control hdfServicioSelect.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfGrupOrigEmp">
 <summary>
-hdfGrupOrigEmp control.
+Control hdfGrupOrigEmp.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodigoOperador">
 <summary>
-hdfCodigoOperador control.
+Control hdfCodigoOperador.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfNombreOperador">
 <summary>
-hdfNombreOperador control.
+Control hdfNombreOperador.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfPlanLineaSel">
 <summary>
-hdfPlanLineaSel control.
+Control hdfPlanLineaSel.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodPlanSel">
 <summary>
-hdfCodPlanSel control.
+Control hdfCodPlanSel.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfSepDecimal">
 <summary>
-hdfSepDecimal control.
+Control hdfSepDecimal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfSepMiles">
 <summary>
-hdfSepMiles control.
+Control hdfSepMiles.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfNumDecimales">
 <summary>
-hdfNumDecimales control.
+Control hdfNumDecimales.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCostoReposicion">
 <summary>
-hdfCostoReposicion control.
+Control hdfCostoReposicion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodLinTip_X_User">
 <summary>
-hdfCodLinTip_X_User control.
+Control hdfCodLinTip_X_User.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfEsModal">
 <summary>
-hdfEsModal control.
+Control hdfEsModal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfDefTipoSolicitud">
 <summary>
-hdfDefTipoSolicitud control.
+Control hdfDefTipoSolicitud.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfEsCulminada">
 <summary>
-hdfEsCulminada control.
+Control hdfEsCulminada.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfMostrarAgregarEmpleado">
 <summary>
-hdfMostrarAgregarEmpleado control.
+Control hdfMostrarAgregarEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfNumeroIngresado">
 <summary>
-hdfNumeroIngresado control.
+Control hdfNumeroIngresado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tdNombreEmpleado1">
 <summary>
-tdNombreEmpleado1 control.
+Control tdNombreEmpleado1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tdNombreEmpleado2">
 <summary>
-tdNombreEmpleado2 control.
+Control tdNombreEmpleado2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblEmpleado">
 <summary>
-lblEmpleado control.
+Control lblEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtEmpleado">
 <summary>
-txtEmpleado control.
+Control txtEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._dvContenedorControlBP">
 <summary>
-dvContenedorControlBP control.
+Control dvContenedorControlBP.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._bpEmpleado">
 <summary>
-bpEmpleado control.
+Control bpEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensaje">
 <summary>
-lblMensaje control.
+Control lblMensaje.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tdNombreEmpleado3">
 <summary>
-tdNombreEmpleado3 control.
+Control tdNombreEmpleado3.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnBusquedaEmpleado">
 <summary>
-btnBusquedaEmpleado control.
+Control btnBusquedaEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image1">
 <summary>
-Image1 control.
+Control Image1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._imgAgregarEmpleado">
 <summary>
-imgAgregarEmpleado control.
+Control imgAgregarEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlTipoSolicitud">
 <summary>
-ddlTipoSolicitud control.
+Control ddlTipoSolicitud.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._LabelDescripcion">
+<summary>
+Control LabelDescripcion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._dvTabs">
 <summary>
-dvTabs control.
+Control dvTabs.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tbSolicitud">
 <summary>
-tbSolicitud control.
+Control tbSolicitud.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeVerificacion">
 <summary>
-lblMensajeVerificacion control.
+Control lblMensajeVerificacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._dvCreacionEstado">
 <summary>
-dvCreacionEstado control.
+Control dvCreacionEstado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCreacionEstado">
 <summary>
-lblCreacionEstado control.
+Control lblCreacionEstado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlEstadoCreacion">
 <summary>
-ddlEstadoCreacion control.
+Control ddlEstadoCreacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeEstado">
 <summary>
-lblMensajeEstado control.
+Control lblMensajeEstado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnEquiSol">
 <summary>
-btnEquiSol control.
+Control btnEquiSol.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image5">
 <summary>
-Image5 control.
+Control Image5.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnAtras">
 <summary>
-btnAtras control.
+Control btnAtras.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image2">
 <summary>
-Image2 control.
+Control Image2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnSiguiente">
 <summary>
-btnSiguiente control.
+Control btnSiguiente.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image3">
 <summary>
-Image3 control.
+Control Image3.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnFinalizar">
 <summary>
-btnFinalizar control.
+Control btnFinalizar.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image4">
 <summary>
-Image4 control.
+Control Image4.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnCancelar">
 <summary>
-btnCancelar control.
+Control btnCancelar.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image6">
 <summary>
-Image6 control.
+Control Image6.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ifGaleria">
 <summary>
-ifGaleria control.
+Control ifGaleria.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ifSolPer">
 <summary>
-ifSolPer control.
+Control ifSolPer.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblLineaSel">
 <summary>
-lblLineaSel control.
+Control lblLineaSel.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._trServicioSeleccionado">
 <summary>
-trServicioSeleccionado control.
+Control trServicioSeleccionado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblServSeleccionado">
 <summary>
-lblServSeleccionado control.
+Control lblServSeleccionado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._trTipoServicio">
 <summary>
-trTipoServicio control.
+Control trTipoServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Label1">
 <summary>
-Label1 control.
+Control Label1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlTipoServicio">
 <summary>
-ddlTipoServicio control.
+Control ddlTipoServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._trServicio">
 <summary>
-trServicio control.
+Control trServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblNuevoServicio">
 <summary>
-lblNuevoServicio control.
+Control lblNuevoServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlServicio">
 <summary>
-ddlServicio control.
+Control ddlServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._trIlimitado">
 <summary>
-trIlimitado control.
+Control trIlimitado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Label2">
 <summary>
-Label2 control.
+Control Label2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._chkIlimitado">
 <summary>
-chkIlimitado control.
+Control chkIlimitado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._trCantidad">
 <summary>
-trCantidad control.
+Control trCantidad.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Label3">
 <summary>
-Label3 control.
+Control Label3.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblValorCatnidad">
 <summary>
-lblValorCatnidad control.
+Control lblValorCatnidad.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtCatnidadSolicitada">
 <summary>
-txtCatnidadSolicitada control.
+Control txtCatnidadSolicitada.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtMotivoActivacion">
 <summary>
-txtMotivoActivacion control.
+Control txtMotivoActivacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._rbtTemporal">
 <summary>
-rbtTemporal control.
+Control rbtTemporal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._rbtPermanente">
 <summary>
-rbtPermanente control.
+Control rbtPermanente.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtFechaInicial">
 <summary>
-txtFechaInicial control.
+Control txtFechaInicial.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtFechaFinal">
 <summary>
-txtFechaFinal control.
+Control txtFechaFinal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblTituloGrillaServ">
 <summary>
-lblTituloGrillaServ control.
+Control lblTituloGrillaServ.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._tbServActuales">
 <summary>
-tbServActuales control.
+Control tbServActuales.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblLinea">
 <summary>
-lblLinea control.
+Control lblLinea.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblGrupoOrigen">
 <summary>
-lblGrupoOrigen control.
+Control lblGrupoOrigen.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblOperador">
 <summary>
-lblOperador control.
+Control lblOperador.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ifDocAdjuntos">
 <summary>
-ifDocAdjuntos control.
+Control ifDocAdjuntos.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPrevisualizacionCab">
 <summary>
-lblPrevisualizacionCab control.
+Control lblPrevisualizacionCab.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblTituloMensaje">
 <summary>
-lblTituloMensaje control.
+Control lblTituloMensaje.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtMensaje">
 <summary>
-txtMensaje control.
+Control txtMensaje.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._dvMensajeObligatorio">
 <summary>
-dvMensajeObligatorio control.
+Control dvMensajeObligatorio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeValidCant">
 <summary>
-lblMensajeValidCant control.
+Control lblMensajeValidCant.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeValidTipo">
 <summary>
-lblMensajeValidTipo control.
+Control lblMensajeValidTipo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._btnLimpiarMensaje">
 <summary>
-btnLimpiarMensaje control.
+Control btnLimpiarMensaje.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Image7">
 <summary>
-Image7 control.
+Control Image7.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeValidTipo2">
 <summary>
-lblMensajeValidTipo2 control.
+Control lblMensajeValidTipo2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblNumWordCaracMensaje">
 <summary>
-lblNumWordCaracMensaje control.
+Control lblNumWordCaracMensaje.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._divDispSolicitado">
 <summary>
-divDispSolicitado control.
+Control divDispSolicitado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtCodigo">
 <summary>
-txtCodigo control.
+Control txtCodigo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtTipo">
 <summary>
-txtTipo control.
+Control txtTipo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtFechaCreacion">
 <summary>
-txtFechaCreacion control.
+Control txtFechaCreacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtEstadoActual">
 <summary>
-txtEstadoActual control.
+Control txtEstadoActual.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblLineaAmp">
 <summary>
-lblLineaAmp control.
+Control lblLineaAmp.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPlanActual">
 <summary>
-lblPlanActual control.
+Control lblPlanActual.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlOperador">
 <summary>
-ddlOperador control.
+Control ddlOperador.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblOperadorLinea">
 <summary>
-lblOperadorLinea control.
+Control lblOperadorLinea.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlPlan">
 <summary>
-ddlPlan control.
+Control ddlPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfCodPlan">
 <summary>
-hdfCodPlan control.
+Control hdfCodPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtModeloSeleccionado">
 <summary>
-txtModeloSeleccionado control.
+Control txtModeloSeleccionado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtCostoModelo">
 <summary>
-txtCostoModelo control.
+Control txtCostoModelo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblAdvertenciaPlan">
 <summary>
-lblAdvertenciaPlan control.
+Control lblAdvertenciaPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._bnPlan">
 <summary>
-bnPlan control.
+Control bnPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._pbnDetallePlan">
 <summary>
-pbnDetallePlan control.
+Control pbnDetallePlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ItemBarraNavegacion1">
 <summary>
-ItemBarraNavegacion1 control.
+Control ItemBarraNavegacion1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblNombrePlan">
 <summary>
-lblNombrePlan control.
+Control lblNombrePlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMontoTotal">
 <summary>
-lblMontoTotal control.
+Control lblMontoTotal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._divSeleccionEmpleado">
 <summary>
-divSeleccionEmpleado control.
+Control divSeleccionEmpleado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._MsgConfirmacionAvance">
 <summary>
-MsgConfirmacionAvance control.
+Control MsgConfirmacionAvance.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtMonto">
 <summary>
-txtMonto control.
+Control txtMonto.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMontoReferencial">
 <summary>
-lblMontoReferencial control.
+Control lblMontoReferencial.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtNombreFinanc">
 <summary>
-txtNombreFinanc control.
+Control txtNombreFinanc.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfIdFInanciamiento">
 <summary>
-hdfIdFInanciamiento control.
+Control hdfIdFInanciamiento.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtMesesCuotas">
 <summary>
-txtMesesCuotas control.
+Control txtMesesCuotas.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMesesCuotas">
 <summary>
-lblMesesCuotas control.
+Control lblMesesCuotas.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtPeriodoGracia">
 <summary>
-txtPeriodoGracia control.
+Control txtPeriodoGracia.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPeriodoGracia">
 <summary>
-lblPeriodoGracia control.
+Control lblPeriodoGracia.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblDispositivo">
 <summary>
-lblDispositivo control.
+Control lblDispositivo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtDispositivoValor">
 <summary>
-txtDispositivoValor control.
+Control txtDispositivoValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblGaleriaTitulo">
 <summary>
-lblGaleriaTitulo control.
+Control lblGaleriaTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtGaleriaValor">
 <summary>
-txtGaleriaValor control.
+Control txtGaleriaValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblOperadorTitulo">
 <summary>
-lblOperadorTitulo control.
+Control lblOperadorTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtOperadorValor">
 <summary>
-txtOperadorValor control.
+Control txtOperadorValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblAmpPlanActualTitulo">
 <summary>
-lblAmpPlanActualTitulo control.
+Control lblAmpPlanActualTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpPlanActualValor">
 <summary>
-txtAmpPlanActualValor control.
+Control txtAmpPlanActualValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCuentaTitulo">
 <summary>
-lblCuentaTitulo control.
+Control lblCuentaTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtCuentaValor">
 <summary>
-txtCuentaValor control.
+Control txtCuentaValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPaquetesTitulo">
 <summary>
-lblPaquetesTitulo control.
+Control lblPaquetesTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lstPaquetesValor">
 <summary>
-lstPaquetesValor control.
+Control lstPaquetesValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPaquetesValor">
 <summary>
-lblPaquetesValor control.
+Control lblPaquetesValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCostoTotalTitulo">
 <summary>
-lblCostoTotalTitulo control.
+Control lblCostoTotalTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtCostoTotalValor">
 <summary>
-txtCostoTotalValor control.
+Control txtCostoTotalValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPlanesTitulo">
 <summary>
-lblPlanesTitulo control.
+Control lblPlanesTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtPlanValor">
 <summary>
-txtPlanValor control.
+Control txtPlanValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblPlanValor">
 <summary>
-lblPlanValor control.
+Control lblPlanValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblServiciosTitulo">
 <summary>
-lblServiciosTitulo control.
+Control lblServiciosTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lstServiciosValor">
 <summary>
-lstServiciosValor control.
+Control lstServiciosValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeTitulo">
 <summary>
-lblMensajeTitulo control.
+Control lblMensajeTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._dvMensajeValor">
 <summary>
-dvMensajeValor control.
+Control dvMensajeValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtMensajeValor">
 <summary>
-txtMensajeValor control.
+Control txtMensajeValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMensajeValor">
 <summary>
-lblMensajeValor control.
+Control lblMensajeValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblDocAdjuntosTitulo">
 <summary>
-lblDocAdjuntosTitulo control.
+Control lblDocAdjuntosTitulo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lstDocAdjuntosValor">
 <summary>
-lstDocAdjuntosValor control.
+Control lstDocAdjuntosValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblDocAdjuntosValor">
 <summary>
-lblDocAdjuntosValor control.
+Control lblDocAdjuntosValor.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpModeloDispositivo">
 <summary>
-txtAmpModeloDispositivo control.
+Control txtAmpModeloDispositivo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpOperado">
 <summary>
-txtAmpOperado control.
+Control txtAmpOperado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpLinea">
 <summary>
-txtAmpLinea control.
+Control txtAmpLinea.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpPlanActual">
 <summary>
-txtAmpPlanActual control.
+Control txtAmpPlanActual.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlAmpPlanes">
 <summary>
-ddlAmpPlanes control.
+Control ddlAmpPlanes.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._txtAmpCuenta">
 <summary>
-txtAmpCuenta control.
+Control txtAmpCuenta.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._bnAmpPlan">
 <summary>
-bnAmpPlan control.
+Control bnAmpPlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._pbnAmpDetallePlan">
 <summary>
-pbnAmpDetallePlan control.
+Control pbnAmpDetallePlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ItemBarraNavegacion2">
 <summary>
-ItemBarraNavegacion2 control.
+Control ItemBarraNavegacion2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblAmpNombrePlan">
 <summary>
-lblAmpNombrePlan control.
+Control lblAmpNombrePlan.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblAmpMontoTotal">
 <summary>
-lblAmpMontoTotal control.
+Control lblAmpMontoTotal.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlTipoServicioAmp">
 <summary>
-ddlTipoServicioAmp control.
+Control ddlTipoServicioAmp.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlServCuentaTipo">
 <summary>
-ddlServCuentaTipo control.
+Control ddlServCuentaTipo.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfAmpCodServ">
 <summary>
-hdfAmpCodServ control.
+Control hdfAmpCodServ.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hdfAmpCodIlimitado">
 <summary>
-hdfAmpCodIlimitado control.
+Control hdfAmpCodIlimitado.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._hddAmpTipoServicio">
 <summary>
-hddAmpTipoServicio control.
+Control hddAmpTipoServicio.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblAmpNombreServ">
 <summary>
-lblAmpNombreServ control.
+Control lblAmpNombreServ.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ddlAmpPaquetes">
 <summary>
-ddlAmpPaquetes control.
+Control ddlAmpPaquetes.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._ifInfoFinanciamiento">
 <summary>
-ifInfoFinanciamiento control.
+Control ifInfoFinanciamiento.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMsjConfirmacion">
 <summary>
-lblMsjConfirmacion control.
+Control lblMsjConfirmacion.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblMsjConfirmUpdPaquete">
 <summary>
-lblMsjConfirmUpdPaquete control.
+Control lblMsjConfirmUpdPaquete.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCostExt_Msj">
 <summary>
-lblCostExt_Msj control.
+Control lblCostExt_Msj.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCostExt_Det1">
 <summary>
-lblCostExt_Det1 control.
+Control lblCostExt_Det1.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._lblCostExt_Det2">
 <summary>
-lblCostExt_Det2 control.
+Control lblCostExt_Det2.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:P_Movil_Administrar_Adm_NuevoDispositivo._Head1">
