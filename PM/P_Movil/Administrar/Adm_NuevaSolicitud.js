@@ -3498,7 +3498,7 @@ function combokendoFormar(control, altura) {
     $("#" + control).kendoComboBox({
         filter: "contains",
         suggest: true,
-        height: 1000,
+        height: altura,
         dataTextField: "text",
         dataValueField: "value"
     });
