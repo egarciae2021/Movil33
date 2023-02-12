@@ -199,7 +199,16 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                         ''End If
 
                         'If dtTipos.Rows(i)("inCodTipSol").ToString() <> "31" Then
-                        ddlTipoSolicitud.Items.Add(New ListItem(dtTipos.Rows(i)("vcNomTipSol").ToString(), dtTipos.Rows(i)("inCodTipSol").ToString))
+
+                        'Edgar Garcia 11022023
+                        Dim item As New ListItem(dtTipos.Rows(i)("vcNomTipSol").ToString(), dtTipos.Rows(i)("inCodTipSol").ToString)
+                        ddlTipoSolicitud.Items.Add(item)
+
+                        Dim item2 As ListItem = ddlTipoSolicitud.Items.FindByValue(dtTipos.Rows(i)("inCodTipSol").ToString)
+                        item2.Attributes("data-value") = "2"
+
+
+
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + " = [];"
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + ".vcNomTipSol = '" + dtTipos.Rows(i)("vcNomTipSol").ToString() + "';"
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + ".biPersonalizado = '" + dtTipos.Rows(i)("biPersonalizado").ToString() + "';"
