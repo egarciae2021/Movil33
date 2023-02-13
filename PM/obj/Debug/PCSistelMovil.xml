@@ -46822,6 +46822,24 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada._dvToolTip">
+<summary>
+Control dvToolTip.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada._ttgInfoSol">
+<summary>
+Control ttgInfoSol.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada._btnRefrescar">
 <summary>
 Control btnRefrescar.

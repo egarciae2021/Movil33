@@ -1,6 +1,12 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada" CodeBehind="Adm_EditarSolicitudPersonalizada.aspx.vb" %>
 
+<%@ Register Src="../../../Common/Controles/ToolTipGenerico.ascx" TagName="ToolTipGenerico" TagPrefix="ttgInfo" %>
+<%@ Register Src="../../../Common/Controles/ToolTipGenerico_red.ascx" TagName="ToolTipGenerico_red" TagPrefix="ttgInfo" %>
+<%@ Register Src="~/Common/Controles/ToolTipGenerico_red.ascx" TagPrefix="uc1" TagName="ToolTipGenerico_red" %>
+
+
 <%@ Register Src="../../../Common/Controles/BusquedaPrincipal.ascx" TagName="BusquedaPrincipal" TagPrefix="uc1" %>
+ 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -99,7 +105,16 @@
         </div>
     </div>--%>
         <div style="overflow: auto; width: 100%; text-align: center;">
-            <asp:Label ID="lblNombreTipoSolicitud" runat="server" Font-Size="Medium" Font-Bold="true"></asp:Label>
+
+            <%--Edgar Garcia 13022023--%> 
+         <div style="display: flex; justify-content: center;">
+          <asp:Label ID="lblNombreTipoSolicitud" runat="server" Font-Size="Medium" Font-Bold="true" style="display:inline-block;"></asp:Label>
+          <div id="dvToolTip" runat="server" style="margin-left:10px"  >
+            <ttgInfo:ToolTipGenerico ID="ttgInfoSol" runat="server" />
+          </div> 
+         </div>
+            <%-----------------------------%>
+
 
             <div id="divBtsGeneral" style="float: right;">
                 <div id="btnRefrescar" class="btnNormal" style="float: right;" title="Voler a cargar página" runat="server">

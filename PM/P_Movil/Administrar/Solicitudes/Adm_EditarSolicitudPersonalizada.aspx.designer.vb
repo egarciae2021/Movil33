@@ -383,6 +383,24 @@ Partial Public Class P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonal
     Protected WithEvents lblNombreTipoSolicitud As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''Control dvToolTip.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dvToolTip As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''Control ttgInfoSol.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ttgInfoSol As Global.ToolTipGenerico
+
+    '''<summary>
     '''Control btnRefrescar.
     '''</summary>
     '''<remarks>
