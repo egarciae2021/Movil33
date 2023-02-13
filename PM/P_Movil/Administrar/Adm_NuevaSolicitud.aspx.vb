@@ -188,30 +188,22 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
 
 
                 'Edgar Garcia 12022023 
-                LstDescripcionSol.Value = ""
+                LstDescripcionSol.Value = "["
 
                 If dtTipos.Rows.Count > 0 Then
                     ddlTipoSolicitud.Items.Add(New ListItem("", "-1"))
 
                     For i As Integer = 0 To dtTipos.Rows.Count - 1
-                        'If dtTipos.Rows(i)("inCodTipSol").ToString() <> "31" And dtTipos.Rows(i)("inCodTipSol").ToString() <> "30" Then
 
-                        'La validación se realiza sobre la carga del combo de tipos de solicitudes..
-                        ''If hdfJefeArea.Value <> "1" And oUsuario.F_vcCodInt = "" Then 'si no es Responsable de área
-                        ''    If dtTipos.Rows(i)("intCategoria").ToString() <> "2" Then 'si la categoria es diferente de General
-                        ''        Continue For
-                        ''    End If
-                        ''End If
-
-                        'If dtTipos.Rows(i)("inCodTipSol").ToString() <> "31" Then
-
-                        'Edgar Garcia 11022023
+                        'Edgar Garcia 11022023 Guardar arreglo de descripcion
                         Dim item As New ListItem(dtTipos.Rows(i)("vcNomTipSol").ToString(), dtTipos.Rows(i)("inCodTipSol").ToString)
                         ddlTipoSolicitud.Items.Add(item)
-
-                        Dim obj As Object = New With {.name = "John", .age = 30, .city = "New York"}
+                        Dim obj As Object = New With {.NumSol = dtTipos.Rows(i)("inCodTipSol").ToString, .DescripSol = dtTipos.Rows(i)("vcDescripcionSol").ToString}
                         Dim jsonString As String = JsonConvert.SerializeObject(obj)
-                        LstDescripcionSol.Value = jsonString
+                        If LstDescripcionSol.Value = "[" Then
+                            LstDescripcionSol.Value = LstDescripcionSol.Value & jsonString
+                        End If
+                        LstDescripcionSol.Value = String.Concat(LstDescripcionSol.Value, ",", jsonString)
 
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + " = [];"
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + ".vcNomTipSol = '" + dtTipos.Rows(i)("vcNomTipSol").ToString() + "';"
@@ -229,7 +221,7 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                         script += "arTiposSolicitud['es" + dtTipos.Rows(i)("inCodTipSol").ToString + "'].inTecnicoResponsable = '" + dtTipos.Rows(i)("inTecnicoResponsable").ToString() + "';"
                         'End If
                     Next
-
+                    LstDescripcionSol.Value = LstDescripcionSol.Value & "]"
                 Else
                     ddlTipoSolicitud.Items.Add(New ListItem("Sin permisos", "-1"))
                 End If

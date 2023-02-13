@@ -1437,6 +1437,11 @@ function fnLimpiarTipoSolicitud(biSetDef, biHayDatos) {
 }
 
 function fnChange() {
+
+    /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
+    console.log("121")
+    $("#LabelDescripcion").val("dq")
+
     var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
     if (tipsol == "2") { // Solicitud Nuevo
         VerificaHabilitadoEmpleado($("#hdfCodEmpleado").val());
