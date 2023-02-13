@@ -39,9 +39,7 @@
 
 <body>
     <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Adm_CrearSolicitudPersonalizada.js")%>" type="text/javascript"></script>
-       <%--Edgar Garcia 06022023 agrego descripcion solicitud--%>
-         <i><asp:Label ID="LabelDescripcion" runat="server" style="font-style:italic"></asp:Label></i>
-         
+     
      
     <form id="form1" runat="server" class="border-5;overflow: auto;">
         <asp:HiddenField id="hdfAdmin" runat="server"/>

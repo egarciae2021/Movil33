@@ -231,11 +231,34 @@
             height: 100% !important; 
             width: 100% !important;
         }
+
+       /*Edgar Garcia 10022023*/
+      .tooltip {
+          position: absolute;
+          padding: 8px;
+          background-color: #Faf850;
+          color: black;
+          white-space: nowrap;
+          z-index: 20;
+          box-shadow: gray 5px 5px 5px;
+        }
+
+
     </style>
 </head>
 <body>
     <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Adm_NuevaSolicitud.js")%>" type="text/javascript"></script>
+ 
+
+    
     <form id="form1" runat="server" autocomplete="off">
+  <%--Edgar Garcia 12022023  Descripcion Solicitud--%>
+    <asp:HiddenField ID="LstDescripcionSol" runat="server" /> 
+    <script type="text/javascript">
+        var variableJS = document.getElementById("<%= LstDescripcionSol.ClientID %>").value;
+    </script>
+  
+
         <asp:HiddenField ID="hdfGaleria" runat="server" />
         <asp:HiddenField ID="hdfCodEmpleado" runat="server" />
         <asp:HiddenField ID="hdfCodEmpleadoAutenticado" runat="server" />
@@ -301,7 +324,11 @@
                     <td>
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
-                    </td>
+
+                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
+
+
+                    </td>  
                     <%--<td>
                     Meses:
                 </td>

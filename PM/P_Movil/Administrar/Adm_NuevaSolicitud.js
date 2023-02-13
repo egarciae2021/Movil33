@@ -1447,7 +1447,7 @@ function fnChange() {
     let desc = FindDescpSol[0].DescripSol
     $("#LabelDescripcion").attr('title', desc)
     if ((desc.length) > 95)
-        $("#LabelDescripcion").html(desc.substring(1,90)+"......")
+        $("#LabelDescripcion").html(desc.substring(0,90)+"......")
     else
         $("#LabelDescripcion").html(desc)
     /*----------------------------------------------*/
