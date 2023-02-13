@@ -185,6 +185,10 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                 vcGruTipSolCre = ""
                 Dim dtTipos As DataTable = (TipoSolicitud.Listar(vcGruTipSolCre)).Tables(0)
 
+
+                'Edgar Garcia 12022023 
+                LstDescripcionSol.Value = ""
+
                 If dtTipos.Rows.Count > 0 Then
                     ddlTipoSolicitud.Items.Add(New ListItem("", "-1"))
 
@@ -204,10 +208,8 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                         Dim item As New ListItem(dtTipos.Rows(i)("vcNomTipSol").ToString(), dtTipos.Rows(i)("inCodTipSol").ToString)
                         ddlTipoSolicitud.Items.Add(item)
 
-                        Dim item2 As ListItem = ddlTipoSolicitud.Items.FindByValue(dtTipos.Rows(i)("inCodTipSol").ToString)
-                        item2.Attributes("data-value") = "2"
-
-
+                        Dim itemDesc As New ListItem(dtTipos.Rows(i)("inCodTipSol").ToString(), "1213")
+                        LstDescripcionSol.Value = itemDesc.Value
 
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + " = [];"
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + ".vcNomTipSol = '" + dtTipos.Rows(i)("vcNomTipSol").ToString() + "';"
@@ -225,6 +227,7 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                         script += "arTiposSolicitud['es" + dtTipos.Rows(i)("inCodTipSol").ToString + "'].inTecnicoResponsable = '" + dtTipos.Rows(i)("inTecnicoResponsable").ToString() + "';"
                         'End If
                     Next
+
                 Else
                     ddlTipoSolicitud.Items.Add(New ListItem("Sin permisos", "-1"))
                 End If

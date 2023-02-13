@@ -248,7 +248,17 @@
 </head>
 <body>
     <script src="<%=UtilitarioWeb.ObtieneVersionArchivoEstatico("Adm_NuevaSolicitud.js")%>" type="text/javascript"></script>
+ 
+
+    
     <form id="form1" runat="server" autocomplete="off">
+  <%--Edgar Garcia 12022023  Descripcion Solicitud--%>
+    <asp:HiddenField ID="LstDescripcionSol" runat="server" /> 
+    <script type="text/javascript">
+        var variableJS = document.getElementById("<%= LstDescripcionSol.ClientID %>").value;
+    </script>
+  
+
         <asp:HiddenField ID="hdfGaleria" runat="server" />
         <asp:HiddenField ID="hdfCodEmpleado" runat="server" />
         <asp:HiddenField ID="hdfCodEmpleadoAutenticado" runat="server" />
