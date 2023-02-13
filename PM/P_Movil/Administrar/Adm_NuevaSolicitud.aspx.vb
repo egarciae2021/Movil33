@@ -15,6 +15,7 @@ Imports UtilitarioWeb.TipoSolicitud
 Imports System.Data.SqlClient
 Imports VisualSoft.Comun.CuentaCobro.BL
 Imports VisualSoft.Comun.CuentaCobro.BE
+Imports Newtonsoft.Json
 
 Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
     Inherits System.Web.UI.Page
@@ -208,8 +209,9 @@ Partial Class P_Movil_Administrar_Adm_NuevaSolicitud
                         Dim item As New ListItem(dtTipos.Rows(i)("vcNomTipSol").ToString(), dtTipos.Rows(i)("inCodTipSol").ToString)
                         ddlTipoSolicitud.Items.Add(item)
 
-                        Dim itemDesc As New ListItem(dtTipos.Rows(i)("inCodTipSol").ToString(), "1213")
-                        LstDescripcionSol.Value = itemDesc.Value
+                        Dim obj As Object = New With {.name = "John", .age = 30, .city = "New York"}
+                        Dim jsonString As String = JsonConvert.SerializeObject(obj)
+                        LstDescripcionSol.Value = jsonString
 
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + " = [];"
                         'script += "arTiposSolicitud.es" + dtTipos.Rows(i)("inCodTipSol").ToString + ".vcNomTipSol = '" + dtTipos.Rows(i)("vcNomTipSol").ToString() + "';"
