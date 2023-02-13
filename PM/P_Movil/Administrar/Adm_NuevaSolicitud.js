@@ -1374,7 +1374,7 @@ $(function () {
     $('.tooltip-element').hover(function () { 
         var title = $(this).attr('title'); 
         $(this).attr('title', ''); 
-        $(this).append('<span class="tooltip">' + title + '</span>');
+        $(this).append('<span class="tooltip" style="white-space: pre-wrap;">' + title + '</span>');
     }, function () { 
         $(this).attr('title', $('.tooltip').html()); 
         $(this).children('.tooltip').remove();
@@ -1438,11 +1438,20 @@ function fnLimpiarTipoSolicitud(biSetDef, biHayDatos) {
 
 function fnChange() {
 
-    /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
-    console.log("121")
-    $("#LabelDescripcion").val("dq")
-
     var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
+
+    /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
+    let FindDescpSol = JSON.parse($("#LstDescripcionSol").val()).filter(function (obj) {
+        return obj.NumSol == tipsol;
+    }); 
+    let desc = FindDescpSol[0].DescripSol
+    $("#LabelDescripcion").attr('title', desc)
+    if ((desc.length) > 95)
+        $("#LabelDescripcion").html(desc.substring(1,90)+"......")
+    else
+        $("#LabelDescripcion").html(desc)
+    /*----------------------------------------------*/
+      
     if (tipsol == "2") { // Solicitud Nuevo
         VerificaHabilitadoEmpleado($("#hdfCodEmpleado").val());
     }
