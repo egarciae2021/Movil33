@@ -350,7 +350,8 @@ $(function () {
     $('#btnResumen').click(function () {
         //        if ($("#txtResumen").data("kendoEditor").value() == "") {
         //vcResumen = "<table><tr><td><b>Campo 1:</b></td><td>Descripción 1</td></tr><tr><td><b>Campo 2:</b></td><td>Descripción 2</td></tr></table>";
-        $("#txtResumen").data("kendoEditor").value(vcResumen);
+        /*Edgar Garcoa 1402023 cambie vcResumen a vcResumenIndividual */
+        $("#txtResumen").data("kendoEditor").value(vcResumenIndividual);
         //        }
 
         $('#divResumen').dialog({

@@ -593,7 +593,8 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada
                     Case "btBotRef" 'JHERRERA 20150311: Nueva configuración (botón refrescar)
                         If dr("Valor").ToString() = "0" Then btnRefrescar.Style("display") = "none"
                     Case "vcResumen"
-                        vcReturn = "var vcResumen = '" + dr("Valor").ToString() + "'; "
+                        'Edgar Garcia 14022023 se agrego el + ,tiene logica y no afecta la declaracion
+                        vcReturn += "var vcResumen = '" + dr("Valor").ToString() + "'; "
                     Case "MontoCIA"
                         If (Not IsDBNull(dr("Valor"))) Then
                             hdfTipoMonto.Value = "CIA"
@@ -603,6 +604,9 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada
                         vcReturn += "var btEnOperRepa = '" + dr("Valor").ToString() + "'; "
                     Case "vcTecnicoCierre"
                         lblTecnicoCierre.Text = dr("Valor").ToString()
+                       'Edgar Garcia 14022023 se agrego el este case para mostrarlo en el resumen de solicitud  
+                    Case "vcResumenIndividual"
+                        vcReturn += "var vcResumenIndividual = '" + dr("Valor").ToString() + "'; "
                 End Select
             Next
 

@@ -1,6 +1,10 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="P_Movil_Administrar_Adm_NuevaSolicitud"
     CodeBehind="Adm_NuevaSolicitud.aspx.vb" %>
 
+<%@ Register Src="../../Common/Controles/ToolTipGenerico.ascx" TagName="ToolTipGenerico" TagPrefix="ttgInfo" %>
+<%@ Register Src="../../Common/Controles/ToolTipGenerico_red.ascx" TagName="ToolTipGenerico_red" TagPrefix="ttgInfo" %>
+<%@ Register Src="~/Common/Controles/ToolTipGenerico_red.ascx" TagPrefix="uc1" TagName="ToolTipGenerico_red" %>
+
 <%@ Register Assembly="VisualSoft.Comun.LibreriaJQ" Namespace="VisualSoft.Comun.LibreriaJQ" TagPrefix="cc1" %>
 <%@ Register Src="../../Common/Controles/BusquedaPrincipal.ascx" TagName="BusquedaPrincipal"
     TagPrefix="uc1" %>
@@ -322,12 +326,12 @@
                     <td style="width: 90px;">Tipo Solicitud
                     </td>
                     <td>
+                        <div style="display:inline-block;">
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
-
-                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
-
-
+                         <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
+                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px;display: none;" class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
+                         </div>   
                     </td>  
                     <%--<td>
                     Meses:

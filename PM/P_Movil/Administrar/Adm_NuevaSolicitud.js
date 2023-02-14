@@ -1441,6 +1441,11 @@ function fnChange() {
     var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
 
     /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
+
+    $("#Span1").css("display", "inline-block");
+    $("#LabelDescripcion").css("display", "inline-block");
+
+
     let FindDescpSol = JSON.parse($("#LstDescripcionSol").val()).filter(function (obj) {
         return obj.NumSol == tipsol;
     }); 
