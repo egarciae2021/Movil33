@@ -143,21 +143,18 @@ function CargarDetalle(tipo, empleado) {
 }
  // Edgar Garcia 14022023
 function obtenerTamanoPantalla() {
-    const ancho = window.innerWidth;
-    const alto = window.innerHeight;
+     
     let anchototal = document.getElementById('DescripcionSol').clientWidth
     const anchocombox = 235
     let icono = document.getElementById('Span1').clientWidth
-    let etiquetadescSol= document.getElementById('LabelDescripcion').clientWidth
-    
+    let etiquetadescSol= document.getElementById('LabelDescripcion').clientWidth 
     let restante = anchototal - anchocombox - icono
-
-    console.log(`El tamaño de la pantalla es: ${ancho} x ${alto}`);
+    console.log(restante)
+    console.log(etiquetadescSol)
 
     if (restante > etiquetadescSol) {
         fnChange()
     }
-
 
     if (restante < etiquetadescSol) {
         document.getElementById('LabelDescripcion').innerHTML='re'
@@ -177,7 +174,21 @@ function obtenerTamanoPantalla() {
     }
 
 }
+function ResizeEtiquetaDescSol(x) { 
 
+    let anchototal = document.getElementById('DescripcionSol').clientWidth
+    const anchocombox = 235
+    let icono = document.getElementById('Span1').clientWidth
+    let etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    let restante = anchototal - anchocombox - icono
+
+    //$("#LabelDescripcion").attr('title', desc)
+    //if ((a.length) > 90)
+    //    $("#LabelDescripcion").html(a.substring(0, 90) + "......")
+    //else
+    //    $("#LabelDescripcion").html(a)
+}
+//
 
 $(function () {
     //    $("#divFinanciamiento").hide();
@@ -1489,11 +1500,14 @@ function fnChange() {
         return obj.NumSol == tipsol;
     }); 
     let desc = FindDescpSol[0].DescripSol
+
+
     $("#LabelDescripcion").attr('title', desc)
     if ((desc.length) > 90)
-        $("#LabelDescripcion").html(desc.substring(0,90)+"......")
+        $("#LabelDescripcion").html(desc.substring(0, 90) + "......")
     else
-        $("#LabelDescripcion").html(desc)
+        $("#LabelDescripcion").html(90)
+
     /*----------------------------------------------*/
       
     if (tipsol == "2") { // Solicitud Nuevo
