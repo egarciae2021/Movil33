@@ -141,11 +141,29 @@ function CargarDetalle(tipo, empleado) {
     //console.log("tipo", tipo)
     //console.log("empleado", empleado)
 }
+ // Edgar Garcia 14022023
+function obtenerTamanoPantalla() {
+    const ancho = window.innerWidth;
+    const alto = window.innerHeight;
+    console.log(`El tamaño de la pantalla es: ${ancho} x ${alto}`);
+    if (document.getElementById('DescripcionSol').clientWidth < 255) {
+        $("#Span1").css("display", "none");
+        $("#LabelDescripcion").css("display", "none");
+    }
+    else {
+        $("#Span1").css("display", "inline-block");
+        $("#LabelDescripcion").css("display", "inline-block"); 
+    }
+
+}
 
 
 $(function () {
     //    $("#divFinanciamiento").hide();
 
+   
+    // Edgar Garcia 14022023 agregar un event listener al objeto window para detectar el evento resize
+    window.addEventListener("resize", obtenerTamanoPantalla);
 
 
     var mostrarAgregarEmpleado = $("#hdfMostrarAgregarEmpleado").val();
