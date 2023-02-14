@@ -326,7 +326,7 @@
                     <td style="width: 90px;">Tipo Solicitud
                     </td>
                     <td>
-                        <div style="display:inline-block;">
+                        <div style="display:inline-block;" id="DescripcionSol">
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
                          <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
