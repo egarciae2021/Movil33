@@ -145,11 +145,32 @@ function CargarDetalle(tipo, empleado) {
 function obtenerTamanoPantalla() {
     const ancho = window.innerWidth;
     const alto = window.innerHeight;
+    let anchototal = document.getElementById('DescripcionSol').clientWidth
+    const anchocombox = 235
+    let icono = document.getElementById('Span1').clientWidth
+    let etiquetadescSol= document.getElementById('LabelDescripcion').clientWidth
+    
+    let restante = anchototal - anchocombox - icono
+
     console.log(`El tamaño de la pantalla es: ${ancho} x ${alto}`);
-    if (document.getElementById('DescripcionSol').clientWidth < 255) {
+
+    if (restante > etiquetadescSol) {
+        fnChange()
+    }
+
+
+    if (restante < etiquetadescSol) {
+        document.getElementById('LabelDescripcion').innerHTML='re'
+    }
+
+    if (document.getElementById('DescripcionSol').clientWidth < 236) {
         $("#Span1").css("display", "none");
         $("#LabelDescripcion").css("display", "none");
     }
+    if (document.getElementById('DescripcionSol').clientWidth < 252) {
+        $("#LabelDescripcion").css("display", "none");
+    }
+
     else {
         $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "inline-block"); 
@@ -808,6 +829,10 @@ $(function () {
     //    $("#ddlTipoSolicitud").change(function () {
     $("#ddlTipoSolicitud").live("change", function () {
         //        $("#lblMensajeVerificacion").html("");
+
+        $("#Span1").css("display", "inline-block");  //Edgar Garcia 14022023
+        $("#LabelDescripcion").css("display", "inline-block");//Edgar Garcia 14022023
+
         fnChange();
     }); //FIN SET TABS
 
@@ -1459,10 +1484,6 @@ function fnChange() {
     var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
 
     /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
-
-    $("#Span1").css("display", "inline-block");
-    $("#LabelDescripcion").css("display", "inline-block");
-
 
     let FindDescpSol = JSON.parse($("#LstDescripcionSol").val()).filter(function (obj) {
         return obj.NumSol == tipsol;
