@@ -446,6 +446,15 @@ Partial Public Class P_Movil_Administrar_Adm_NuevaSolicitud
     Protected WithEvents ddlTipoSolicitud As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control Span1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Span1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''Control LabelDescripcion.
     '''</summary>
     '''<remarks>

@@ -181,6 +181,9 @@ function ResizeEtiquetaDescSol(xmensaje) {
     let etiquetadescSol  
     let restante = anchototal - anchocombox - icono - 10
     $("#LabelDescripcion").attr('title', xmensaje)
+    $("#Span1").attr('title', xmensaje)
+    $("#Span1").html(xmensaje)
+
 
     etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
 
@@ -191,12 +194,10 @@ function ResizeEtiquetaDescSol(xmensaje) {
     console.log("restante" + restante)
     console.log("etiqueta" + etiquetadescSol)
      
-    if (etiquetadescSol > restante && etiquetadescSol < 100) {
-        console.log("llego")
+    if (etiquetadescSol > restante && etiquetadescSol < 100) { 
         $("#LabelDescripcion").css("display", "none");
     }
-    if (etiquetadescSol > restante && etiquetadescSol > 100) {
-        console.log("llego1")
+    if (etiquetadescSol > restante && etiquetadescSol > 100) { 
         $("#LabelDescripcion").html(xmensaje)
         $("#LabelDescripcion").css("width", (restante * 0.8) + "px"); 
 
