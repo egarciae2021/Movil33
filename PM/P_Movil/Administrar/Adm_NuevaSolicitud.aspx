@@ -327,12 +327,11 @@
                     <td style="width: 90px;">Tipo Solicitud
                     </td>
                     <td id="DescripcionSol" >
-                        <div style="display:inline;overflow:hidden;white-space: nowrap; "  id="DivDescripcionSol">
-                        <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
-                        </asp:DropDownList>
-                         <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
-                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px;display: none; " class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
-                         </div>   
+                        <div style="display: inline-block; " id="DivDescripcionSol">
+                          <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px"></asp:DropDownList>
+                          <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
+                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none;" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
+                        </div>  
                     </td>  
                     <%--<td>
                     Meses:
