@@ -141,11 +141,95 @@ function CargarDetalle(tipo, empleado) {
     //console.log("tipo", tipo)
     //console.log("empleado", empleado)
 }
+ // Edgar Garcia 14022023
+function obtenerTamanoPantalla() {
+     
+    let anchototal = document.getElementById('DescripcionSol').clientWidth
+    const anchocombox = 239
+    let icono = document.getElementById('Span1').clientWidth
+    let etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    let restante = anchototal - anchocombox - icono -10
 
+    fnChange()
+    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    if (etiquetadescSol == 0) {
+        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
+    } 
+    restante = anchototal - anchocombox - icono - 10
+
+    if (document.getElementById('DescripcionSol').clientWidth < 235 ) {
+        $("#Span1").css("display", "none");
+        $("#LabelDescripcion").css("display", "none");
+    }
+    if (document.getElementById('DescripcionSol').clientWidth > 235 && document.getElementById('DescripcionSol').clientWidth < 253 && restante > etiquetadescSol) {
+        $("#Span1").css("display", "inline-block");
+        $("#LabelDescripcion").css("display", "none");
+    }
+
+    if (document.getElementById('DescripcionSol').clientWidth > 253 && restante > etiquetadescSol ) {
+        $("#Span1").css("display", "inline-block");
+        $("#LabelDescripcion").css("display", "inline-block");
+    }
+     
+    fnChange()
+}
+function ResizeEtiquetaDescSol(xmensaje) { 
+
+    let anchototal = document.getElementById('DescripcionSol').clientWidth
+    const anchocombox = 235
+    let icono = document.getElementById('Span1').clientWidth
+    let etiquetadescSol  
+    let restante = anchototal - anchocombox - icono - 10
+    let vermas
+    $("#LabelDescripcion").attr('title', xmensaje)
+    $("#Span1").attr('title', xmensaje)
+    $("#Span1").html(xmensaje)
+
+    if (xmensaje != '') {
+
+        $("#LabelDescripcion").toggleClass('tooltip-element');
+
+        etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+
+        if (etiquetadescSol == 0) {
+            etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
+        }
+        console.log("restante" + restante)
+        console.log("etiqueta" + etiquetadescSol)
+
+        if (etiquetadescSol > restante && etiquetadescSol < 100) {
+            $("#LabelDescripcion").css("display", "none");
+        }
+        if (etiquetadescSol > restante && etiquetadescSol > 100) {
+            $("#LabelDescripcion").html(xmensaje)
+            $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+            vermas = $("#LabelDescripcion").text().length
+            $("#LabelDescripcion").html(xmensaje.substring(0, xmensaje.length - 5) + "..(+)")
+        }
+        if (etiquetadescSol < restante) {
+            $("#LabelDescripcion").html(xmensaje)
+            $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+            vermas = $("#LabelDescripcion").text().length
+            $("#LabelDescripcion").html(xmensaje.substring(0, xmensaje.length - 5) + "..(+)")
+        }
+    }
+    else {
+        $("#LabelDescripcion").removeClass('tooltip-element')
+        $("#LabelDescripcion").attr('display', 'none') 
+        $("#LabelDescripcion").html('')
+
+    }
+    
+}
+
+//
 
 $(function () {
     //    $("#divFinanciamiento").hide();
 
+   
+    // Edgar Garcia 14022023 agregar un event listener al objeto window para detectar el evento resize
+    window.addEventListener("resize", obtenerTamanoPantalla);
 
 
     var mostrarAgregarEmpleado = $("#hdfMostrarAgregarEmpleado").val();
@@ -790,6 +874,10 @@ $(function () {
     //    $("#ddlTipoSolicitud").change(function () {
     $("#ddlTipoSolicitud").live("change", function () {
         //        $("#lblMensajeVerificacion").html("");
+
+        $("#Span1").css("display", "inline-block");  //Edgar Garcia 14022023
+        $("#LabelDescripcion").css("display", "inline-block");//Edgar Garcia 14022023
+
         fnChange();
     }); //FIN SET TABS
 
@@ -1441,15 +1529,13 @@ function fnChange() {
     var tipsol = $("#ddlTipoSolicitud").data("kendoComboBox").value();
 
     /*Edgar Garcia 12022023 Agregar Descripcion Solicitud*/
+
     let FindDescpSol = JSON.parse($("#LstDescripcionSol").val()).filter(function (obj) {
         return obj.NumSol == tipsol;
-    }); 
+    });
     let desc = FindDescpSol[0].DescripSol
-    $("#LabelDescripcion").attr('title', desc)
-    if ((desc.length) > 95)
-        $("#LabelDescripcion").html(desc.substring(0,90)+"......")
-    else
-        $("#LabelDescripcion").html(desc)
+ 
+    ResizeEtiquetaDescSol(desc)
     /*----------------------------------------------*/
       
     if (tipsol == "2") { // Solicitud Nuevo

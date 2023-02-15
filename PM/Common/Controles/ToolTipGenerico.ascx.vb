@@ -5,6 +5,7 @@
 
     Private _Mensaje As String = String.Empty
     Private _Ancho As String = String.Empty
+    Private _AnchoBanner As String = String.Empty
 
     Public Property Mensaje As String
         Get
@@ -24,20 +25,33 @@
             _Ancho = value
         End Set
     End Property
+    Public Property AnchoBanner As String
+        Get
+            Return _AnchoBanner
+        End Get
+        Set(value As String)
+            _AnchoBanner = value
+        End Set
+    End Property
 
 #End Region
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             Me.DvMiMensaje.InnerText = Me._Mensaje
+            Dim Ancho As String
+            Dim AnchoBanner As String
+            If (String.IsNullOrEmpty(Me._AnchoBanner)) Then
 
-
-            If (String.IsNullOrEmpty(Me._Ancho)) Then
-                Dim Ancho = "134px"
+                Ancho = "134px"
             End If
 
-            Me.DvMiMensaje.Style("width") = Me._Ancho
-            Me.DvMensaje.Style("width") = Me._Ancho
+            If (String.IsNullOrEmpty(Me._Ancho)) Then
+                AnchoBanner = "150px"
+            End If
+
+            Me.DvMiMensaje.Style("width") = Ancho
+            Me.DvMensaje.Style("width") = AnchoBanner
 
 
             IncrustarJavaScript()

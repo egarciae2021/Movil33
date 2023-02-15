@@ -20399,6 +20399,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._Span1">
+<summary>
+Control Span1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:P_Movil_Administrar_Adm_NuevaSolicitud._LabelDescripcion">
 <summary>
 Control LabelDescripcion.

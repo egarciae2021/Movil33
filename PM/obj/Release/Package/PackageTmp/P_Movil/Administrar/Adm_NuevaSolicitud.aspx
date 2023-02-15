@@ -1,6 +1,10 @@
 ﻿<%@ Page Language="VB" AutoEventWireup="false" Inherits="P_Movil_Administrar_Adm_NuevaSolicitud"
     CodeBehind="Adm_NuevaSolicitud.aspx.vb" %>
 
+<%@ Register Src="../../Common/Controles/ToolTipGenerico.ascx" TagName="ToolTipGenerico" TagPrefix="ttgInfo" %>
+<%@ Register Src="../../Common/Controles/ToolTipGenerico_red.ascx" TagName="ToolTipGenerico_red" TagPrefix="ttgInfo" %>
+<%@ Register Src="~/Common/Controles/ToolTipGenerico_red.ascx" TagPrefix="uc1" TagName="ToolTipGenerico_red" %>
+
 <%@ Register Assembly="VisualSoft.Comun.LibreriaJQ" Namespace="VisualSoft.Comun.LibreriaJQ" TagPrefix="cc1" %>
 <%@ Register Src="../../Common/Controles/BusquedaPrincipal.ascx" TagName="BusquedaPrincipal"
     TagPrefix="uc1" %>
@@ -233,7 +237,7 @@
         }
 
        /*Edgar Garcia 10022023*/
-      .tooltip {
+      .tooltip{
           position: absolute;
           padding: 8px;
           background-color: #Faf850;
@@ -241,8 +245,13 @@
           white-space: nowrap;
           z-index: 20;
           box-shadow: gray 5px 5px 5px;
-        }
+        } 
 
+      #DivDescripcionSol{ 
+          max-height: 36px;
+          overflow: hidden;
+        } 
+       
 
     </style>
 </head>
@@ -294,8 +303,8 @@
 
         <asp:HiddenField ID="hdfNumeroIngresado" runat="server" />
 
-        <div id="dvContenido" class="dvPanel">
-            <table width="100%">
+        <div id="dvContenido" class="dvPanel"   >
+            <table width="100%"   >
                 <tr>
                     <td style="width: 80px;" runat="server" id="tdNombreEmpleado1">Empleado
                     </td>
@@ -319,15 +328,14 @@
 
                     </td>
 
-                    <td style="width: 90px;">Tipo Solicitud
+                    <td style="width: 90px;vertical-align:central;">Tipo Solicitud
                     </td>
-                    <td>
-                        <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
-                        </asp:DropDownList>
-
-                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px" class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
-
-
+                    <td id="DescripcionSol" style="height:36px;overflow: hidden;" >
+                        <div  id="DivDescripcionSol" style="display: inline;overflow: hidden; ">
+                          <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px" style="display: inline-block;vertical-align:top;"></asp:DropDownList>
+                          <asp:Label id="Span1"  runat="server" class="ui-icon ui-icon-info" style="display: none;vertical-align:top;overflow: hidden" title=""></asp:Label><%--Edgar Garcia 14022023--%>
+                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;vertical-align:top;font-style: italic" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
+                        </div>  
                     </td>  
                     <%--<td>
                     Meses:
@@ -570,7 +578,7 @@
                         <tr><td><label id="lblAdjutnosValidTamanoMax" style="padding-left:20px;">3 mb</label></td></tr>
                     </table>
                 </td>--%>
-                    <td align="center" style="width: 800;" colspan="6">
+                    <td align="center" style="width: 800px;" colspan="6">
                         <iframe id="ifDocAdjuntos" runat="server" src="Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0"
                             width="430" height="330" style="margin: 0px; padding: 0px;" frameborder="0"></iframe>
                     </td>
@@ -1007,7 +1015,7 @@
                 </table>
             </div>
         </div>
-        <div id="divPaquetes" style="display: none; height: 315;">
+        <div id="divPaquetes" style="display: none; height: 315px;">
             <table>
                 <tr>
                     <td valign="top" style="width: 310px;">
