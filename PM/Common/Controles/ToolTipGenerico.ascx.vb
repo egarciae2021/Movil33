@@ -4,6 +4,7 @@
 #Region "propiedades"
 
     Private _Mensaje As String = String.Empty
+    Private _Ancho As String = String.Empty
 
     Public Property Mensaje As String
         Get
@@ -14,11 +15,30 @@
         End Set
     End Property
 
+
+    Public Property Ancho As String
+        Get
+            Return _Ancho
+        End Get
+        Set(value As String)
+            _Ancho = value
+        End Set
+    End Property
+
 #End Region
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             Me.DvMiMensaje.InnerText = Me._Mensaje
+
+
+            If (String.IsNullOrEmpty(Me._Ancho)) Then
+                Dim Ancho = "134px"
+            End If
+
+            Me.DvMiMensaje.Style("width") = Me._Ancho
+            Me.DvMensaje.Style("width") = Me._Ancho
+
 
             IncrustarJavaScript()
         Catch ex As Exception

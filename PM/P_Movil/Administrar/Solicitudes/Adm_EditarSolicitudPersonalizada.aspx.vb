@@ -289,6 +289,7 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada
                 'Nombre de tipo de solicitud
                 lblNombreTipoSolicitud.Text = dsCampos.Tables(2).Rows(0)("vcNomTipSol").ToString().ToUpper()
                 ttgInfoSol.Mensaje = dsCampos.Tables(2).Rows(0)("Descripcion1").ToString()  'edgar garcia 13022023
+                ttgInfoSol.Ancho = "200px" 'edgar garcia 15022023
 
                 Dim solicitudTerminada As Integer = 0
 
