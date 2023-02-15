@@ -597,7 +597,7 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_EditarSolicitudPersonalizada
                         If dr("Valor").ToString() = "0" Then btnRefrescar.Style("display") = "none"
                     Case "vcResumen"
                         'Edgar Garcia 14022023 se agrego el + ,tiene logica y no afecta la declaracion
-                        vcReturn += "var vcResumen = '" + dr("Valor").ToString() + "'; "
+                        vcReturn = "var vcResumen = '" + dr("Valor").ToString() + "'; "
                     Case "MontoCIA"
                         If (Not IsDBNull(dr("Valor"))) Then
                             hdfTipoMonto.Value = "CIA"
