@@ -147,10 +147,9 @@ function obtenerTamanoPantalla() {
     let anchototal = document.getElementById('DescripcionSol').clientWidth
     const anchocombox = 235
     let icono = document.getElementById('Span1').clientWidth
-    let etiquetadescSol= document.getElementById('LabelDescripcion').clientWidth 
+    let etiquetadescSol 
     let restante = anchototal - anchocombox - icono
-    console.log("restante"+restante)
-    console.log("etiqueta" + etiquetadescSol)
+    
 
     /*if (restante > etiquetadescSol) {*/
      fnChange()
@@ -159,19 +158,26 @@ function obtenerTamanoPantalla() {
     //if (restante < etiquetadescSol) {
     //    document.getElementById('LabelDescripcion').innerHTML='re'
     //}
+    $("#LabelDescripcion").attr('title', xmensaje)
+    $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth 
 
     if (document.getElementById('DescripcionSol').clientWidth < 280) {
         $("#Span1").css("display", "none");
         $("#LabelDescripcion").css("display", "none");
     }
-    if (document.getElementById('DescripcionSol').clientWidth > 280 && document.getElementById('DescripcionSol').clientWidth < 330) {
+    if (document.getElementById('DescripcionSol').clientWidth > 280 && document.getElementById('DescripcionSol').clientWidth < 352) {
         $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "none");
     }
 
-    if (document.getElementById('DescripcionSol').clientWidth > 330) {
+    if (document.getElementById('DescripcionSol').clientWidth > 352 && restante > etiquetadescSol) {
         $("#Span1").css("display", "inline-block");
-        $("#LabelDescripcion").css("display", "inline-block"); 
+        $("#LabelDescripcion").css("display", "inline-block");
+    }
+    else {
+        $("#Span1").css("display", "none");
+        $("#LabelDescripcion").css("display", "none");
     }
 
 }
@@ -180,19 +186,25 @@ function ResizeEtiquetaDescSol(xmensaje) {
     let anchototal = document.getElementById('DescripcionSol').clientWidth
     const anchocombox = 235
     let icono = document.getElementById('Span1').clientWidth
-    let etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    let etiquetadescSol  
     let restante = anchototal - anchocombox - icono
 
-    $("#LabelDescripcion").attr('title', xmensaje)
+   
 
+    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+
+    if (etiquetadescSol == 0) {
+        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45}
+
+    console.log("restante" + restante)
+    console.log("etiqueta" + etiquetadescSol)
     
     if (etiquetadescSol > restante && etiquetadescSol > 100) {
         console.log("llego")
         $("#LabelDescripcion").css("display", "none");
     }
     if (etiquetadescSol < restante) {
-        $("#LabelDescripcion").html(xmensaje)
-        $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+        $("#LabelDescripcion").html(xmensaje+"....")
         }
 
 
