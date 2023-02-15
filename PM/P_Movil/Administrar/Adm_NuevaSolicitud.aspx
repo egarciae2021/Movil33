@@ -301,8 +301,8 @@
 
         <asp:HiddenField ID="hdfNumeroIngresado" runat="server" />
 
-        <div id="dvContenido" class="dvPanel">
-            <table width="100%">
+        <div id="dvContenido" class="dvPanel"   >
+            <table width="100%"  style="height: 36px;">
                 <tr>
                     <td style="width: 80px;" runat="server" id="tdNombreEmpleado1">Empleado
                     </td>
