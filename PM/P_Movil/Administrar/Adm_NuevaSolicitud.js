@@ -152,29 +152,29 @@ function obtenerTamanoPantalla() {
     console.log(restante)
     console.log(etiquetadescSol)
 
-    if (restante > etiquetadescSol) {
-        fnChange()
-    }
+    //if (restante > etiquetadescSol) {
+    //    fnChange()
+    //}
 
-    if (restante < etiquetadescSol) {
-        document.getElementById('LabelDescripcion').innerHTML='re'
-    }
+    //if (restante < etiquetadescSol) {
+    //    document.getElementById('LabelDescripcion').innerHTML='re'
+    //}
 
-    if (document.getElementById('DescripcionSol').clientWidth < 236) {
-        $("#Span1").css("display", "none");
-        $("#LabelDescripcion").css("display", "none");
-    }
-    if (document.getElementById('DescripcionSol').clientWidth < 252) {
-        $("#LabelDescripcion").css("display", "none");
-    }
+    //if (document.getElementById('DescripcionSol').clientWidth < 236) {
+    //    $("#Span1").css("display", "none");
+    //    $("#LabelDescripcion").css("display", "none");
+    //}
+    //if (document.getElementById('DescripcionSol').clientWidth < 252) {
+    //    $("#LabelDescripcion").css("display", "none");
+    //}
 
-    else {
-        $("#Span1").css("display", "inline-block");
-        $("#LabelDescripcion").css("display", "inline-block"); 
-    }
+    //else {
+    //    $("#Span1").css("display", "inline-block");
+    //    $("#LabelDescripcion").css("display", "inline-block"); 
+    //}
 
 }
-function ResizeEtiquetaDescSol(x) { 
+function ResizeEtiquetaDescSol() { 
 
     let anchototal = document.getElementById('DescripcionSol').clientWidth
     const anchocombox = 235
@@ -182,11 +182,10 @@ function ResizeEtiquetaDescSol(x) {
     let etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
     let restante = anchototal - anchocombox - icono
 
-    //$("#LabelDescripcion").attr('title', desc)
-    //if ((a.length) > 90)
-    //    $("#LabelDescripcion").html(a.substring(0, 90) + "......")
+    //if ((desc.length) > 90)
+    //    $("#LabelDescripcion").html(desc.substring(0, 90) + "......")
     //else
-    //    $("#LabelDescripcion").html(a)
+    //    $("#LabelDescripcion").html(90)
 }
 //
 
@@ -1498,16 +1497,10 @@ function fnChange() {
 
     let FindDescpSol = JSON.parse($("#LstDescripcionSol").val()).filter(function (obj) {
         return obj.NumSol == tipsol;
-    }); 
+    });
     let desc = FindDescpSol[0].DescripSol
-
-
     $("#LabelDescripcion").attr('title', desc)
-    if ((desc.length) > 90)
-        $("#LabelDescripcion").html(desc.substring(0, 90) + "......")
-    else
-        $("#LabelDescripcion").html(90)
-
+    $("#LabelDescripcion").html(desc.substring(0, 90) + "......")
     /*----------------------------------------------*/
       
     if (tipsol == "2") { // Solicitud Nuevo

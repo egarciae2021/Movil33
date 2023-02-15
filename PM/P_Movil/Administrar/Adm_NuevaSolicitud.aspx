@@ -247,6 +247,9 @@
           box-shadow: gray 5px 5px 5px;
         }
 
+      #LabelDescripcion {
+          overflow: hidden;
+        }
 
     </style>
 </head>
@@ -1011,7 +1014,7 @@
                 </table>
             </div>
         </div>
-        <div id="divPaquetes" style="display: none; height: 315;">
+        <div id="divPaquetes" style="display: none; height: 315px;">
             <table>
                 <tr>
                     <td valign="top" style="width: 310px;">
