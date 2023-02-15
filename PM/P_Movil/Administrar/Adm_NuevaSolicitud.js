@@ -156,19 +156,20 @@ function obtenerTamanoPantalla() {
         fnChange()
     }
 
-    if (restante < etiquetadescSol) {
-        document.getElementById('LabelDescripcion').innerHTML='re'
-    }
+    //if (restante < etiquetadescSol) {
+    //    document.getElementById('LabelDescripcion').innerHTML='re'
+    //}
 
-    if (document.getElementById('DescripcionSol').clientWidth < 236) {
+    if (document.getElementById('DescripcionSol').clientWidth < 280) {
         $("#Span1").css("display", "none");
         $("#LabelDescripcion").css("display", "none");
     }
-    if (document.getElementById('DescripcionSol').clientWidth < 252) {
+    if (document.getElementById('DescripcionSol').clientWidth > 280 && document.getElementById('DescripcionSol').clientWidth < 330) {
+        $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "none");
     }
 
-    else {
+    if (document.getElementById('DescripcionSol').clientWidth > 330) {
         $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "inline-block"); 
     }
@@ -184,12 +185,10 @@ function ResizeEtiquetaDescSol(xmensaje) {
 
     $("#LabelDescripcion").attr('title', xmensaje)
 
-    if ((xmensaje.length) > 90)
-        $("#LabelDescripcion").html(xmensaje.substring(0, 90) + "......")
+    if ((xmensaje.length) > restante/5.5)
+        $("#LabelDescripcion").html(xmensaje.substring(0, restante) + "......")
     else
-        $("#LabelDescripcion").html(90)
-     
-
+        $("#LabelDescripcion").html(xmensaje.length)
 }
 //
 

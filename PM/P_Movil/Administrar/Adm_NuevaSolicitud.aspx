@@ -247,9 +247,7 @@
           box-shadow: gray 5px 5px 5px;
         }
 
-      #LabelDescripcion {
-          overflow: hidden;
-        }
+      
 
     </style>
 </head>
@@ -302,7 +300,7 @@
         <asp:HiddenField ID="hdfNumeroIngresado" runat="server" />
 
         <div id="dvContenido" class="dvPanel"   >
-            <table width="100%"  style="height: 36px;">
+            <table width="100%"   >
                 <tr>
                     <td style="width: 80px;" runat="server" id="tdNombreEmpleado1">Empleado
                     </td>
@@ -329,11 +327,11 @@
                     <td style="width: 90px;">Tipo Solicitud
                     </td>
                     <td id="DescripcionSol" >
-                        <div style="display:inline-block;"  id="DivDescripcionSol">
+                        <div style="display:inline;overflow:hidden;white-space: nowrap; "  id="DivDescripcionSol">
                         <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px">
                         </asp:DropDownList>
                          <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
-                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px;display: none;" class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
+                         <asp:label ID="LabelDescripcion" runat="server" Style="padding-left:10px;display: none; " class="tooltip-element" title="" ></asp:label><%--Edgar Garcia 10022023--%>
                          </div>   
                     </td>  
                     <%--<td>
@@ -577,7 +575,7 @@
                         <tr><td><label id="lblAdjutnosValidTamanoMax" style="padding-left:20px;">3 mb</label></td></tr>
                     </table>
                 </td>--%>
-                    <td align="center" style="width: 800;" colspan="6">
+                    <td align="center" style="width: 800px;" colspan="6">
                         <iframe id="ifDocAdjuntos" runat="server" src="Adm_AdjuntarArchivos.aspx?pagOri=NuevaSolicitud&estSol=0"
                             width="430" height="330" style="margin: 0px; padding: 0px;" frameborder="0"></iframe>
                     </td>
