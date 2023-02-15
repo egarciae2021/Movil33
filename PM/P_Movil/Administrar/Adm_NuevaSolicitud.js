@@ -145,41 +145,33 @@ function CargarDetalle(tipo, empleado) {
 function obtenerTamanoPantalla() {
      
     let anchototal = document.getElementById('DescripcionSol').clientWidth
-    const anchocombox = 235
+    const anchocombox = 239
     let icono = document.getElementById('Span1').clientWidth
-    let etiquetadescSol 
-    let restante = anchototal - anchocombox - icono
-    
+    let etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    let restante = anchototal - anchocombox - icono -10
 
-    /*if (restante > etiquetadescSol) {*/
-     fnChange()
-    /*}*/
+    fnChange()
+    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+    if (etiquetadescSol == 0) {
+        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
+    } 
+    restante = anchototal - anchocombox - icono - 10
 
-    //if (restante < etiquetadescSol) {
-    //    document.getElementById('LabelDescripcion').innerHTML='re'
-    //}
-    $("#LabelDescripcion").attr('title', xmensaje)
-    $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
-    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth 
-
-    if (document.getElementById('DescripcionSol').clientWidth < 280) {
+    if (document.getElementById('DescripcionSol').clientWidth < 235 ) {
         $("#Span1").css("display", "none");
         $("#LabelDescripcion").css("display", "none");
     }
-    if (document.getElementById('DescripcionSol').clientWidth > 280 && document.getElementById('DescripcionSol').clientWidth < 352) {
+    if (document.getElementById('DescripcionSol').clientWidth > 235 && document.getElementById('DescripcionSol').clientWidth < 253 && restante > etiquetadescSol) {
         $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "none");
     }
 
-    if (document.getElementById('DescripcionSol').clientWidth > 352 && restante > etiquetadescSol) {
+    if (document.getElementById('DescripcionSol').clientWidth > 253 && restante > etiquetadescSol ) {
         $("#Span1").css("display", "inline-block");
         $("#LabelDescripcion").css("display", "inline-block");
     }
-    else {
-        $("#Span1").css("display", "none");
-        $("#LabelDescripcion").css("display", "none");
-    }
-
+     
+    fnChange()
 }
 function ResizeEtiquetaDescSol(xmensaje) { 
 
@@ -187,28 +179,36 @@ function ResizeEtiquetaDescSol(xmensaje) {
     const anchocombox = 235
     let icono = document.getElementById('Span1').clientWidth
     let etiquetadescSol  
-    let restante = anchototal - anchocombox - icono
-
-   
+    let restante = anchototal - anchocombox - icono - 10
+    $("#LabelDescripcion").attr('title', xmensaje)
 
     etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
 
     if (etiquetadescSol == 0) {
-        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45}
-
+        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
+    } 
+ 
     console.log("restante" + restante)
     console.log("etiqueta" + etiquetadescSol)
-    
-    if (etiquetadescSol > restante && etiquetadescSol > 100) {
+     
+    if (etiquetadescSol > restante && etiquetadescSol < 100) {
         console.log("llego")
         $("#LabelDescripcion").css("display", "none");
     }
+    if (etiquetadescSol > restante && etiquetadescSol > 100) {
+        console.log("llego1")
+        $("#LabelDescripcion").html(xmensaje)
+        $("#LabelDescripcion").css("width", (restante * 0.8) + "px"); 
+
+    }
     if (etiquetadescSol < restante) {
-        $("#LabelDescripcion").html(xmensaje+"....")
+        $("#LabelDescripcion").html(xmensaje)
+        $("#LabelDescripcion").css("width", (restante * 0.8) + "px"); 
+        //$("#LabelDescripcion").html(xmensaje.substring(0, restante / 5.5) + "....")
         }
-
-
+    
 }
+
 //
 
 $(function () {

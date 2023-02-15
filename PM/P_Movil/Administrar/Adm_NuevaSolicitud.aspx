@@ -254,6 +254,7 @@
 
 
 
+
     </style>
 </head>
 <body>
@@ -331,11 +332,11 @@
 
                     <td style="width: 90px;vertical-align:central;">Tipo Solicitud
                     </td>
-                    <td id="DescripcionSol" style="height:36px;" >
-                        <div  id="DivDescripcionSol" style="display: inline; ">
+                    <td id="DescripcionSol" style="height:36px;overflow: hidden;" >
+                        <div  id="DivDescripcionSol" style="display: inline;overflow: hidden; ">
                           <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px" style="display: inline-block;vertical-align:top;"></asp:DropDownList>
-                          <span id="Span1" class="ui-icon ui-icon-info" style="display: none;vertical-align:top;"></span><%--Edgar Garcia 14022023--%>
-                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;;vertical-align:top" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
+                          <span id="Span1" class="ui-icon ui-icon-info" style="display: none;vertical-align:top;overflow: hidden"></span><%--Edgar Garcia 14022023--%>
+                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;vertical-align:top" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
                         </div>  
                     </td>  
                     <%--<td>
