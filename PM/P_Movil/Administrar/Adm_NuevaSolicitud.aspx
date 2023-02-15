@@ -328,7 +328,7 @@
                         <div  id="DivDescripcionSol" Style="display: inline;">
                           <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px" style="display: inline-block;"></asp:DropDownList>
                           <span id="Span1" class="ui-icon ui-icon-info" style="display: none;"></span><%--Edgar Garcia 14022023--%>
-                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none;" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
+                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
                         </div>  
                     </td>  
                     <%--<td>

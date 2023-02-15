@@ -149,8 +149,8 @@ function obtenerTamanoPantalla() {
     let icono = document.getElementById('Span1').clientWidth
     let etiquetadescSol= document.getElementById('LabelDescripcion').clientWidth 
     let restante = anchototal - anchocombox - icono
-    console.log(restante)
-    console.log(etiquetadescSol)
+    console.log("restante"+restante)
+    console.log("etiqueta" + etiquetadescSol)
 
     /*if (restante > etiquetadescSol) {*/
      fnChange()
@@ -185,10 +185,17 @@ function ResizeEtiquetaDescSol(xmensaje) {
 
     $("#LabelDescripcion").attr('title', xmensaje)
 
-    if (etiquetadescSol > restante)
-        $("#LabelDescripcion").html(xmensaje.substring(0, 5) + "......")
-    else
-        $("#LabelDescripcion").html(xmensaje.length)
+    
+    if (etiquetadescSol > restante && etiquetadescSol > 100) {
+        console.log("llego")
+        $("#LabelDescripcion").css("display", "none");
+    }
+    if (etiquetadescSol < restante) {
+        $("#LabelDescripcion").html(xmensaje)
+        $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+        }
+
+
 }
 //
 
@@ -1502,6 +1509,7 @@ function fnChange() {
         return obj.NumSol == tipsol;
     });
     let desc = FindDescpSol[0].DescripSol
+ 
     ResizeEtiquetaDescSol(desc)
     /*----------------------------------------------*/
       
@@ -5150,4 +5158,3 @@ function fnLimpiarDatosServicio() {
     $("#ddlServCuentaTipo").html('');
     $("#ddlServCuentaTipo").append($("<option></option>").val(-2).text('<Seleccione Tipo>'));
 }
-                
