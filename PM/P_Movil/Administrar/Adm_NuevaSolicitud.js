@@ -152,9 +152,9 @@ function obtenerTamanoPantalla() {
     console.log(restante)
     console.log(etiquetadescSol)
 
-    if (restante > etiquetadescSol) {
-        fnChange()
-    }
+    /*if (restante > etiquetadescSol) {*/
+     fnChange()
+    /*}*/
 
     //if (restante < etiquetadescSol) {
     //    document.getElementById('LabelDescripcion').innerHTML='re'
@@ -185,8 +185,8 @@ function ResizeEtiquetaDescSol(xmensaje) {
 
     $("#LabelDescripcion").attr('title', xmensaje)
 
-    if ((xmensaje.length) > restante/5.5)
-        $("#LabelDescripcion").html(xmensaje.substring(0, restante) + "......")
+    if (etiquetadescSol > restante)
+        $("#LabelDescripcion").html(xmensaje.substring(0, 5) + "......")
     else
         $("#LabelDescripcion").html(xmensaje.length)
 }
@@ -5150,3 +5150,4 @@ function fnLimpiarDatosServicio() {
     $("#ddlServCuentaTipo").html('');
     $("#ddlServCuentaTipo").append($("<option></option>").val(-2).text('<Seleccione Tipo>'));
 }
+                
