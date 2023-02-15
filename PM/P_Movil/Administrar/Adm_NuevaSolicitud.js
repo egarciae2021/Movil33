@@ -180,33 +180,45 @@ function ResizeEtiquetaDescSol(xmensaje) {
     let icono = document.getElementById('Span1').clientWidth
     let etiquetadescSol  
     let restante = anchototal - anchocombox - icono - 10
+    let vermas
     $("#LabelDescripcion").attr('title', xmensaje)
     $("#Span1").attr('title', xmensaje)
     $("#Span1").html(xmensaje)
 
+    if (xmensaje != '') {
 
-    etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
+        $("#LabelDescripcion").toggleClass('tooltip-element');
 
-    if (etiquetadescSol == 0) {
-        etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
-    } 
- 
-    console.log("restante" + restante)
-    console.log("etiqueta" + etiquetadescSol)
-     
-    if (etiquetadescSol > restante && etiquetadescSol < 100) { 
-        $("#LabelDescripcion").css("display", "none");
-    }
-    if (etiquetadescSol > restante && etiquetadescSol > 100) { 
-        $("#LabelDescripcion").html(xmensaje)
-        $("#LabelDescripcion").css("width", (restante * 0.8) + "px"); 
+        etiquetadescSol = document.getElementById('LabelDescripcion').clientWidth
 
-    }
-    if (etiquetadescSol < restante) {
-        $("#LabelDescripcion").html(xmensaje)
-        $("#LabelDescripcion").css("width", (restante * 0.8) + "px"); 
-        //$("#LabelDescripcion").html(xmensaje.substring(0, restante / 5.5) + "....")
+        if (etiquetadescSol == 0) {
+            etiquetadescSol = document.getElementById("LabelDescripcion").innerHTML.length * 0.45
         }
+        console.log("restante" + restante)
+        console.log("etiqueta" + etiquetadescSol)
+
+        if (etiquetadescSol > restante && etiquetadescSol < 100) {
+            $("#LabelDescripcion").css("display", "none");
+        }
+        if (etiquetadescSol > restante && etiquetadescSol > 100) {
+            $("#LabelDescripcion").html(xmensaje)
+            $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+            vermas = $("#LabelDescripcion").text().length
+            $("#LabelDescripcion").html(xmensaje.substring(0, xmensaje.length - 5) + "..(+)")
+        }
+        if (etiquetadescSol < restante) {
+            $("#LabelDescripcion").html(xmensaje)
+            $("#LabelDescripcion").css("width", (restante * 0.8) + "px");
+            vermas = $("#LabelDescripcion").text().length
+            $("#LabelDescripcion").html(xmensaje.substring(0, xmensaje.length - 5) + "..(+)")
+        }
+    }
+    else {
+        $("#LabelDescripcion").removeClass('tooltip-element')
+        $("#LabelDescripcion").attr('display', 'none') 
+        $("#LabelDescripcion").html('')
+
+    }
     
 }
 

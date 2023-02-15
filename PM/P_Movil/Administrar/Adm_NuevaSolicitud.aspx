@@ -237,7 +237,7 @@
         }
 
        /*Edgar Garcia 10022023*/
-      .tooltip {
+      .tooltip{
           position: absolute;
           padding: 8px;
           background-color: #Faf850;
@@ -333,8 +333,8 @@
                     <td id="DescripcionSol" style="height:36px;overflow: hidden;" >
                         <div  id="DivDescripcionSol" style="display: inline;overflow: hidden; ">
                           <asp:DropDownList ID="ddlTipoSolicitud" runat="server" Width="235px" style="display: inline-block;vertical-align:top;"></asp:DropDownList>
-                          <asp:Label id="Span1"  runat="server" class="  ui-icon ui-icon-info" style="display: none;vertical-align:top;overflow: hidden" title=""></asp:Label><%--Edgar Garcia 14022023--%>
-                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;vertical-align:top" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
+                          <asp:Label id="Span1"  runat="server" class="ui-icon ui-icon-info" style="display: none;vertical-align:top;overflow: hidden" title=""></asp:Label><%--Edgar Garcia 14022023--%>
+                          <asp:Label ID="LabelDescripcion" runat="server" Style="padding-left: 10px; display: none; height: 36px;overflow: hidden;vertical-align:top;font-style: italic" class="tooltip-element" title=""></asp:Label><%--Edgar Garcia 10022023--%>
                         </div>  
                     </td>  
                     <%--<td>
