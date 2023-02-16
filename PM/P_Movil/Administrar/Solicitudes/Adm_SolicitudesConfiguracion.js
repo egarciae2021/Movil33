@@ -4123,7 +4123,10 @@ $(function () {
 			var colModels = tbCamposDestino.getGridParam("colModel");
 			/*edgar garcia 29122022 lo comente*/
 			var rowCampos = tbCampos.getRowData(rowid);
-			if (rowCampos.Desistema == 1||rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1)
+
+			 
+
+			if (rowCampos.Desistema == 1 || ((rowCampos.Campo.indexOf('_IdDescripcion') > -1) || (rowCampos.Campo.indexOf('AdjNom_') > -1) && rowCampos.campo !== undefined))
 			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" || rowid == "in0_inUsuarioCreacion" ||
 			//	rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
 			{
