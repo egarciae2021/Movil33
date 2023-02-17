@@ -6506,12 +6506,17 @@ $(function () {
 					var biVisible = "0",
 						biEditable = "0",
 						biObligatorio = "0";
-					IdCampo2 = '';
+					    IdCampo2 = '';
 
 					biVisible = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Visible;
 					biEditable = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Editable;
 					biObligatorio = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Obligatorio;
 					IdCampo2 = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].IdCampo;
+
+					/*Edgar Garcia 16022023*/
+					if (typeof (biVisible) == 'undefined') { biVisible = "0" }
+					if (typeof (biEditable) == 'undefined') { biEditable = "0" }
+					if (typeof (biObligatorio) == 'undefined') { biObligatorio = "0" }
 
 					XMLCamposPorEstadoProceso += "<DATA IdEstado=\"" + inIdEst + "\" IdCampo=\"" + vcCamposEstadoProcesos[j] + "\" Visible=\"" + biVisible;
 					XMLCamposPorEstadoProceso += "\" Editable=\"" + biEditable + "\" Obligatorio=\"" + biObligatorio + "\" IdCampo2=\"" + IdCampo2 + "\" />";
