@@ -127,7 +127,7 @@ function fnValidacionControlTipoCierre() {
 }
 
 $(function () {
-    //debugger;
+    debugger;
     solicitudMultipleEspecialista = $('#hdfSolicitudesMultipleEspecialista').val() === 'True';
     bAreaRequiereAutorizacion = $('#hdfAreaRequiereAutorizacion').val() === '1';
     bSolRequiereAutorizacion = $('#hdfSolRequiereAutorizacion').val() === '1';
