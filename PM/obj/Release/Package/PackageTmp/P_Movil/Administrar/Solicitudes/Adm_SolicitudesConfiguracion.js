@@ -51,7 +51,7 @@ var mydata = [{
 	ValidaNumero: "",
 	PermiteAdicionar: "",
 	Activo: "True",
-	Desistema:"True"
+	Desistema: "True"
 }, {
 	Idd: "in0_daFechaModificacion",
 	Campo: "daFechaModificacion",
@@ -226,7 +226,7 @@ var tabContenidoRowId;
 var arExt_AdjOper = ['htm', 'html', 'doc', 'docx', 'xls', 'xlsx', 'txt'];
 $(function () {
 
-	 
+
 
 	//activar opciones de escalamiento externo cuando se detecte dominio (modo cloud activo)
 	if (window.top.$("#hdfCodigoDominio").val() == "") {
@@ -2123,7 +2123,7 @@ $(function () {
 			$("#TextBox1_1").removeAttr('disabled');
 
 		}
-		else { 
+		else {
 			$("#TextBox1_1").attr('disabled', 'disabled');
 			$("#TextBox1_1").val('');
 			$("#dvMensajeUmbApr").hide();
@@ -2137,7 +2137,7 @@ $(function () {
 			/*Edgar Garcia 05012023*/
 			$("#TextBox6").removeAttr('disabled');
 		}
-		else { 
+		else {
 			$("#TextBox6").attr('disabled', 'disabled');
 			$("#TextBox6").val('');
 			$("#dvMensajeUmbPro").hide();
@@ -3106,7 +3106,7 @@ $(function () {
 					if (LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 10) {
 						vcCampo2 = vcCampo2 + '_IdDescripcion'
 					}
-					else { vcCampo2 = 'AdjNom_'+vcCampo2 }
+					else { vcCampo2 = 'AdjNom_' + vcCampo2 }
 					var datos = {
 						Idd: "in_1000" + vcCampo, /*Lo agrego para luego excluirlo en la creación del XML*/
 						Campo: vcCampo2,
@@ -3128,7 +3128,7 @@ $(function () {
 					}
 					tbCampos.jqGrid('addRowData', datos.Idd, datos);
 				}
-				 
+
 
 
 				var vcEstadoProcesos = Object.keys(arTipSol.EstadoProceso);
@@ -3157,14 +3157,12 @@ $(function () {
 				//tbCamposEstadoProceso.trigger("reloadGrid");
 
 				//EDGAR GARCIA 03012023 - solo visual el _idDescripcion y Adjn_
-				if (LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 9|| LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 10) {
-						if (LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 10)
-						{
-							vcCampo3 = vcCampo3 + '_IdDescripcion' 
-						 }
-						else
-						{ vcCampo3 = 'AdjNom_' + vcCampo3 }	
-						var datosAcciones = { 
+				if (LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 9 || LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 10) {
+					if (LongDat[$("#ddlTipoDato").prop('selectedIndex')] == 10) {
+						vcCampo3 = vcCampo3 + '_IdDescripcion'
+					}
+					else { vcCampo3 = 'AdjNom_' + vcCampo3 }
+					var datosAcciones = {
 						vcCampo: vcCampo3,
 						vcDescripcion: vcDescripcion,
 						ddlVisible: "100", /*Lo agrego para luego excluirlo en la creación del XML*/
@@ -3172,8 +3170,8 @@ $(function () {
 						ddlObligatorio: "-1",
 						Activo: 'True'
 					}
-					tbCamposEstadoProceso.jqGrid('addRowData', vcCampo, datosAcciones); 
-                }
+					tbCamposEstadoProceso.jqGrid('addRowData', vcCampo, datosAcciones);
+				}
 
 
 
@@ -3494,25 +3492,24 @@ $(function () {
 						var inLen = vcEstadoProcesos.length;
 						tbCampos.delRowData(tbCampos.getGridParam('selrow')); //eliminar de campo
 						tbCamposEstadoProceso.delRowData(row["Campo"]);//eliminar de campos por estado 
-						/*Edgar Garcia 05012023 Borrar Adj y Ref creados*/ 
-						tbCampos.delRowData('in_1000' + row["Campo"]); 
-						if(row["IdTipoDato"] == 9 || row["IdTipoDato"] == 10)
-						{
-							var strfind  
+						/*Edgar Garcia 05012023 Borrar Adj y Ref creados*/
+						tbCampos.delRowData('in_1000' + row["Campo"]);
+						if (row["IdTipoDato"] == 9 || row["IdTipoDato"] == 10) {
+							var strfind
 							var ids = tbCampos.getDataIDs();
 							if (row["IdTipoDato"] == 9) {
-								strfind = 'AdjNom_' + row["Campo"] 
+								strfind = 'AdjNom_' + row["Campo"]
 							}
 							else {
-								strfind = row["Campo"]+'_IdDescripcion' 
+								strfind = row["Campo"] + '_IdDescripcion'
 							}
-							for (i = 0; i < ids.length; i++) { 
-								if (ids[i].toString().includes(strfind)) { 
+							for (i = 0; i < ids.length; i++) {
+								if (ids[i].toString().includes(strfind)) {
 									tbCampos.delRowData(ids[i]);
 									tbCamposEstadoProceso.delRowData(strfind);
-                                }
-                            }
-                        }
+								}
+							}
+						}
 
 
 						for (i = 0; i < inLen; i++) {
@@ -3668,7 +3665,7 @@ $(function () {
 				label: 'Campo',
 				hidden: false,
 				autowidth: true,
-				shrinkToFit:false,
+				shrinkToFit: false,
 				//Edgar garcia 29122022
 				//width: 150,
 				sortable: false
@@ -3813,12 +3810,12 @@ $(function () {
 				formatter: function (value, options, rData) {
 					if (value == 'True') {
 						return '1';
-					}  else {
+					} else {
 						return '0';
 					}
 				}
-            }
- 		],
+			}
+		],
 		loadtext: 'Cargando datos...',
 		emptyrecords: 'No hay resultados',
 		sortname: "Idd", //sortname: idTabla, //Default SortColumn
@@ -3834,17 +3831,18 @@ $(function () {
 		beforeSelectRow: function (rowid, e) {
 			//inNumSolicitudes > 0 ||
 			//EDGAR GARCIA 29122022 LO COMENTE AGREGE TAMBIEN EL INDEXOF
-				//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
-				//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
-				//	return false;
-				//else
-				//return true;
-			var rowCampos = tbCampos.getRowData(rowid); 
-			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_')>-1){
+			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
+			//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
+			//	return false;
+			//else
+			//return true;
+			var rowCampos = tbCampos.getRowData(rowid);
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
+			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1) {
 				return false;
 			}
 			else { return true; }
-			}
+		}
 		,
 		ondblClickRow: function (rowid, aData, rowelem) {
 			//debugger;
@@ -3852,6 +3850,7 @@ $(function () {
 			var rowCampos = tbCampos.getRowData(rowid);
 			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
 			//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion")
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
 			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1) {
 				return false;
 			} else {
@@ -3862,11 +3861,12 @@ $(function () {
 		},
 		afterInsertRow: function (rowid, aData, rowelem) {
 			//debugger;
-				//EDGAR GARCIA 29122022 LO COMENTE
+			//EDGAR GARCIA 29122022 LO COMENTE
 			var rowCampos = tbCampos.getRowData(rowid);
 			var colModels = tbCampos.getGridParam("colModel");
 			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" || rowid == "in0_inUsuarioCreacion" ||
 			//	rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo") {
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
 			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1) {
 				var colModels = tbCampos.getGridParam("colModel");
 				var i;
@@ -4064,23 +4064,23 @@ $(function () {
 			label: 'ListaActivos',
 			hidden: true,
 			width: 50
-			}
+		}
 			,
-			/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA corregidosaa*/
-			{
-				name: 'Desistema',
-				index: 'Desistema',
-				label: 'Desistema',
-				hidden: true,
-				width: 50,
-				formatter: function (value, options, rData) {
-					if (value == 'True') {
-						return '1';
-					} else {
-						return '0';
-					}
+		/*EDGAR GARCIA 29122022 AGREGE MODEL DESISTEMA corregidosaa*/
+		{
+			name: 'Desistema',
+			index: 'Desistema',
+			label: 'Desistema',
+			hidden: true,
+			width: 50,
+			formatter: function (value, options, rData) {
+				if (value == 'True') {
+					return '1';
+				} else {
+					return '0';
 				}
-			}  
+			}
+		}
 		],
 		loadtext: 'Cargando datos...',
 		emptyrecords: 'No hay resultados',
@@ -4098,9 +4098,10 @@ $(function () {
 			//inNumSolicitudes > 0 || 
 			/*edgar garcia 29122022 lo comente*/
 			var rowCampos = tbCampos.getRowData(rowid);
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
 			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1)
-			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
-			//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
+				//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
+				//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
 				return false;
 			else
 				return true;
@@ -4108,7 +4109,8 @@ $(function () {
 		ondblClickRow: function (rowid, aData, rowelem) {
 			/*edgar garcia 29122022 lo comente*/
 			var rowCampos = tbCampos.getRowData(rowid);
-			if (rowCampos.Desistema == 1||rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1)
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
+			if (rowCampos.Desistema == 1 || rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1)
 			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" ||
 			//	rowid == "in0_inUsuarioCreacion" || rowid == "in0_inUsuarioModificacion")
 			{
@@ -4123,7 +4125,11 @@ $(function () {
 			var colModels = tbCamposDestino.getGridParam("colModel");
 			/*edgar garcia 29122022 lo comente*/
 			var rowCampos = tbCampos.getRowData(rowid);
-			if (rowCampos.Desistema == 1||rowCampos.Campo.indexOf('_IdDescripcion') > -1 || rowCampos.Campo.indexOf('AdjNom_') > -1)
+
+			if (typeof (rowCampos.Campo) == 'undefined') { rowCampos.Campo = '' }
+
+
+			if (rowCampos.Desistema == 1 || ((rowCampos.Campo.indexOf('_IdDescripcion') > -1) || (rowCampos.Campo.indexOf('AdjNom_') > -1) ))
 			//if (rowid == "in0_F_inFasSol" || rowid == "in0_F_vcCodEmp" || rowid == "in0_daFechaCreacion" || rowid == "in0_daFechaModificacion" || rowid == "in0_inUsuarioCreacion" ||
 			//	rowid == "in0_inUsuarioModificacion" || rowid == "in0_vcCodigo")
 			{
@@ -4250,12 +4256,12 @@ $(function () {
 					$("#tdCondiciones").html('');
 					var inNumContCreados = numCondicion;
 
- 
+
 					if (lstCondiciones.length > 0) {
 						var i = 0;
 						for (i = 0; i < lstCondiciones.length; i++) {
 							//Edgar Garcia 26122022 se cambio  Nombre por IdCampo
-							if (lstCondiciones[i].IdCampo ==   IdCampo) {
+							if (lstCondiciones[i].IdCampo == IdCampo) {
 								NuevaCondicion1();
 								$("#ddlCampoEntidadCondicion_" + inNumContCreados).val(lstCondiciones[i].IdCamEnt);
 								$("#ddlCampoEntidadCondicion_" + inNumContCreados).change();
@@ -4469,15 +4475,15 @@ $(function () {
 					/*Edgar Garcia 03012023 valdiamos si es adjunto o referencia y mostrar como No editable*/
 					if (rData.vcCampo.indexOf('AdjNom_') > -1 || rData.vcCampo.indexOf('_IdDescripcion') > -1) {
 						return "<label id='" + rData.vcCampo + "_ddlVisible'>NO</label>";
-					} 
+					}
 
 					return "<select id='" + rData.vcCampo + "_ddlVisible' class='Visible'><option value='-1'></option><option value='1'>SI</option><option value='0'>NO</option></select>";
 
 				}
 				//                            }
 			}
-			},
-			{
+		},
+		{
 			name: 'ddlEditable',
 			index: 'ddlEditable',
 			label: 'Editable',
@@ -4500,14 +4506,14 @@ $(function () {
 					/*Edgar Garcia 03012023 valdiamos si es adjunto o referencia y mostrar como No editable*/
 					if (rData.vcCampo.indexOf('AdjNom_') > -1 || rData.vcCampo.indexOf('_IdDescripcion') > -1) {
 						return "<label id='" + rData.vcCampo + "_ddlEditable'>NO</label>";
-					} 
+					}
 
 					return "<select id='" + rData.vcCampo + "_ddlEditable' class='Editable'><option value='-1'></option><option value='1'>SI</option><option value='0'>NO</option></select>";
 
 				}
 			}
-			},
-			{
+		},
+		{
 			name: 'ddlObligatorio',
 			index: 'ddlObligatorio',
 			label: 'Obligatorio',
@@ -4530,12 +4536,12 @@ $(function () {
 					/*Edgar Garcia 03012023 valdiamos si es adjunto o referencia y mostrar como No editable*/
 					if (rData.vcCampo.indexOf('AdjNom_') > -1 || rData.vcCampo.indexOf('_IdDescripcion') > -1) {
 						return "<label id='" + rData.vcCampo + "_ddlObligatorio'>NO</label>";
-					} 
+					}
 					return "<select id='" + rData.vcCampo + "_ddlObligatorio' class='Obligatorio'><option value='-1'></option><option value='1'>SI</option><option value='0'>NO</option></select>";
 				}
 			}
-			},
-			{
+		},
+		{
 			name: 'IdCampo',
 			index: 'IdCampo',
 			label: 'IdCampo',
@@ -4552,8 +4558,8 @@ $(function () {
 					}
 				}
 			}
-			},
-			{
+		},
+		{
 			name: 'Activo',
 			index: 'Activo',
 			label: 'Activo',
@@ -4624,11 +4630,11 @@ $(function () {
 				ddlEditable: "-1",
 				ddlObligatorio: "-1",
 				Activo: 'True'
-			}; 
-			tbCamposEstadoProceso.jqGrid('addRowData', mydata[i].Campo, datosAcciones); 
+			};
+			tbCamposEstadoProceso.jqGrid('addRowData', mydata[i].Campo, datosAcciones);
 			//$("#tbCamposEstadoProceso").jqGrid('addRowData', mydata[i].Campo, { "vcCampo: mydata[i].Campo, vcDescripcion: mydata[i].Descripcion, ddlVisible: "-1", ddlEditable: "0" });
 		}
- 
+
 	}
 
 
@@ -5815,19 +5821,18 @@ $(function () {
 	//------------------------------------------------------EDITAR TIPO DE SOLICITUD-------------------------------------------------------//
 	if ($("#hdfCodTipSol").val() != "") {
 		debugger
- 		$("#dvTabs").show();
+		$("#dvTabs").show();
 
 		tbCampos.jqGrid("clearGridData")
 		tbCamposEstadoProceso.jqGrid("clearGridData")
 
 
 		var i = 0;
-		for (i = 0; i < dtCampos.length; i++)
-		{
+		for (i = 0; i < dtCampos.length; i++) {
 			tbCampos.jqGrid('addRowData', dtCampos[i].Idd, dtCampos[i]);
-			
 
-		} 
+
+		}
 
 		for (i = 0; i < dtCamposDestino.length; i++)
 			tbCamposDestino.jqGrid('addRowData', dtCamposDestino[i].Idd, dtCamposDestino[i]);
@@ -5920,7 +5925,7 @@ $(function () {
 		}
 	}
 
-	
+
 
 	//------------------------------------------------------EDITAR TIPO DE SOLICITUD------------------------------------------------------->>
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -6501,12 +6506,17 @@ $(function () {
 					var biVisible = "0",
 						biEditable = "0",
 						biObligatorio = "0";
-					IdCampo2 = '';
+					    IdCampo2 = '';
 
 					biVisible = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Visible;
 					biEditable = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Editable;
 					biObligatorio = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].Obligatorio;
 					IdCampo2 = arTipSol.EstadoProceso[vcEstadoProcesos[i]].Campos[vcCamposEstadoProcesos[j]].IdCampo;
+
+					/*Edgar Garcia 16022023*/
+					if (typeof (biVisible) == 'undefined') { biVisible = "0" }
+					if (typeof (biEditable) == 'undefined') { biEditable = "0" }
+					if (typeof (biObligatorio) == 'undefined') { biObligatorio = "0" }
 
 					XMLCamposPorEstadoProceso += "<DATA IdEstado=\"" + inIdEst + "\" IdCampo=\"" + vcCamposEstadoProcesos[j] + "\" Visible=\"" + biVisible;
 					XMLCamposPorEstadoProceso += "\" Editable=\"" + biEditable + "\" Obligatorio=\"" + biObligatorio + "\" IdCampo2=\"" + IdCampo2 + "\" />";
@@ -6649,7 +6659,7 @@ $(function () {
 			XMLCamposDestino += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
 
 		}
-		  
+
 		var XMLDetalleCaptura = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?><ROOT>";
 
 		//if ($("#hdfPersonalizada").val() == 'true') {
@@ -6660,49 +6670,49 @@ $(function () {
 			var str_vcCampos = vcCampos.toString();
 			var inNumCam = 0;
 			for (j = 0; j < vcCampos.length; j++) {
-				var rowCampos = tbCampos.getRowData(vcCampos[j]); 
+				var rowCampos = tbCampos.getRowData(vcCampos[j]);
 				//debugger;
-				if (rowCampos.Idd.indexOf('in_1000') < 0 ) { 
-                    inNumCam = inNumCam + 1;
-                    XMLCampos += "<DATA IdSolicitudTipo=\"-1\" Nombre=\"" + rowCampos.Campo + "\" Descripcion=\"" + rowCampos.Descripcion + "\" F_inCodTipDat=\"" + rowCampos.IdTipoDato;
-                    XMLCampos += "\" Longitud=\"" + rowCampos.Tamano + "\" Orden=\"" + inNumCam;
-                    XMLCampos += "\" LongitudMinima=\"" + rowCampos.LongitudMin;
-                    XMLCampos += "\" ValidaTexto=\"" + (rowCampos.ValidaTexto.toLowerCase() === 'si' ? '1' : '0');
-                    XMLCampos += "\" ValidaNumero=\"" + (rowCampos.ValidaNumero.toLowerCase() === 'si' ? '1' : '0');
-                    XMLCampos += "\" PermiteAdicionar=\"" + (rowCampos.PermiteAdicionar.toLowerCase() === 'si' ? '1' : '0');
-                    XMLCampos += "\" IdCampo=\"" + rowCampos.IdCampo + "\"";
+				if (rowCampos.Idd.indexOf('in_1000') < 0) {
+					inNumCam = inNumCam + 1;
+					XMLCampos += "<DATA IdSolicitudTipo=\"-1\" Nombre=\"" + rowCampos.Campo + "\" Descripcion=\"" + rowCampos.Descripcion + "\" F_inCodTipDat=\"" + rowCampos.IdTipoDato;
+					XMLCampos += "\" Longitud=\"" + rowCampos.Tamano + "\" Orden=\"" + inNumCam;
+					XMLCampos += "\" LongitudMinima=\"" + rowCampos.LongitudMin;
+					XMLCampos += "\" ValidaTexto=\"" + (rowCampos.ValidaTexto.toLowerCase() === 'si' ? '1' : '0');
+					XMLCampos += "\" ValidaNumero=\"" + (rowCampos.ValidaNumero.toLowerCase() === 'si' ? '1' : '0');
+					XMLCampos += "\" PermiteAdicionar=\"" + (rowCampos.PermiteAdicionar.toLowerCase() === 'si' ? '1' : '0');
+					XMLCampos += "\" IdCampo=\"" + rowCampos.IdCampo + "\"";
 
-                    XMLCampos += " Activo=\"" + (rowCampos.Activo == 'True' || rowCampos.Activo == 'Activo' ? "1" : "0") + "\""; //ACTIVAR Y DESACTIVAR CAMPOS //wapumayta
-                    XMLCampos += " ListaActivos=\"" + rowCampos.ListaActivos.replace(/2/g, '1') + "\""; //estados de los valores de una lista
+					XMLCampos += " Activo=\"" + (rowCampos.Activo == 'True' || rowCampos.Activo == 'Activo' ? "1" : "0") + "\""; //ACTIVAR Y DESACTIVAR CAMPOS //wapumayta
+					XMLCampos += " ListaActivos=\"" + rowCampos.ListaActivos.replace(/2/g, '1') + "\""; //estados de los valores de una lista
 
-                    if (rowCampos.Idd.substring(0, 3) == "in0")
-                        XMLCampos += " DeSistema = \"1\""; //XMLCampos += " DeSistema = \"1\" />";
-                    else
-                        XMLCampos += " DeSistema = \"0\""; //XMLCampos += " DeSistema = \"0\" />"; 
-                    //Nuevos campos para referencia
-                    XMLCampos += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
+					if (rowCampos.Idd.substring(0, 3) == "in0")
+						XMLCampos += " DeSistema = \"1\""; //XMLCampos += " DeSistema = \"1\" />";
+					else
+						XMLCampos += " DeSistema = \"0\""; //XMLCampos += " DeSistema = \"0\" />"; 
+					//Nuevos campos para referencia
+					XMLCampos += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
 
-                    //Añadiendo Nombre de Adjunto
-					if (rowCampos.IdTipoDato == 9 ) { 
-                        //Edgar Garcia 03012023 se agregar el numero de orden
+					//Añadiendo Nombre de Adjunto
+					if (rowCampos.IdTipoDato == 9) {
+						//Edgar Garcia 03012023 se agregar el numero de orden
 						inNumCam = inNumCam + 1;
 
 						if (str_vcCampos.indexOf("AdjNom_" + rowCampos.Campo) < 0) { XMLCampos += "<DATA IdSolicitudTipo=\"-1\" Nombre=\"AdjNom_" + rowCampos.Campo + "\" Descripcion=\"AdjNom_" + rowCampos.Campo + "\" F_inCodTipDat=\"3\" Longitud=\"200\" Orden=\"" + inNumCam + "\" "; }
 
 						XMLCampos += "IdCampo=\"" + rowCampos.IdCampo + "\" DeSistema = \"1\"  Activo = \"1\"";
-                        XMLCampos += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
+						XMLCampos += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
 
 					}
-					if (rowCampos.IdTipoDato == 10 ) {
+					if (rowCampos.IdTipoDato == 10) {
 						//Edgar Garcia 03012023 se agregar el numero de orden
 						inNumCam = inNumCam + 1;
-						if (str_vcCampos.indexOf(rowCampos.Campo + "_IdDescripcion") < 0 ) { XMLCampos += "<DATA IdSolicitudTipo=\"-1\" Nombre=\"" + rowCampos.Campo + "_IdDescripcion\" Descripcion=\"" + rowCampos.Campo + "_IdDescripcion\" F_inCodTipDat=\"3\" Longitud=\"200\" Orden=\"" + inNumCam + "\" "; }
+						if (str_vcCampos.indexOf(rowCampos.Campo + "_IdDescripcion") < 0) { XMLCampos += "<DATA IdSolicitudTipo=\"-1\" Nombre=\"" + rowCampos.Campo + "_IdDescripcion\" Descripcion=\"" + rowCampos.Campo + "_IdDescripcion\" F_inCodTipDat=\"3\" Longitud=\"200\" Orden=\"" + inNumCam + "\" "; }
 
 						XMLCampos += "IdCampo=\"" + rowCampos.IdCampo + "\" DeSistema = \"1\"  Activo = \"1\"";
 						XMLCampos += " IdEntidad=\"" + rowCampos.IdEntidad + "\" IdCamPK=\"" + rowCampos.IdCamPK + "\" IdCamDes=\"" + rowCampos.IdCamDes + "\" />";
 
 					}
-                }
+				}
 			}
 
 			var vcCodTipSol = "-1";
@@ -6976,8 +6986,8 @@ $(function () {
 								}
 							}
 						});
-		} else { //se procede con el cambio normal
-							//EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
+					} else { //se procede con el cambio normal
+						//EDGAR GARCIA 06022023 se agrego vcDescripcionSol		 
 						fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 							biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 							XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
@@ -6992,7 +7002,7 @@ $(function () {
 		} else { //guardar normalmente si es una insersión
 
 			if (biEnvioAnticipado) {
-			  //EDGAR GARCIA 06022023 se agrego vcDescripcionSol												 
+				//EDGAR GARCIA 06022023 se agrego vcDescripcionSol												 
 				fnGuardarTipoSolicitud(vcTabla, vcDescripcionTipo, vcDescripcionSol, $("#ddlFinanciamiento").val(), biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 					biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 					XMLReglaEstado, XMLCamposReferenciaCondicion, XMLDetalleCaptura, $("#hdfCodTipSol").val(), biMonFij, $("#hdfTecnicoResponsable").val(), esDevolucion,
@@ -9136,7 +9146,7 @@ function fnCargarSolicitudesEnConflictoPaginado() {
 }
 
 //Edgar Garcia 06022023 agregar descripcionSOL
-function fnGuardarTipoSolicitud(vcNomTip, vcDesTip,vcDescripcionSol ,inIdFinanciamiento, biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
+function fnGuardarTipoSolicitud(vcNomTip, vcDesTip, vcDescripcionSol, inIdFinanciamiento, biUsaDri, inLinTip, vcPrefijo, vcResApr, biPropie,
 	biUsuEsp, biResAre, XMLCampos, XMLCamposPorEstadoProceso, inNumCam, XMLMensajePorEstado, XMLParametros, XMLUmbralEstado,
 	XMLReglaEstado, XMLCamposCondicion, XMLDetalleCaptura, vcCodTipsol, biMonFij, inTecnicoResponsable, esDevolucion,
 	dcMonto, biActivo, vcNomArcCon, vcLstCodSol, XMLMensajeDevolucion, Escalar,

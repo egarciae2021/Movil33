@@ -127,7 +127,7 @@ function fnValidacionControlTipoCierre() {
 }
 
 $(function () {
-    //debugger;
+    debugger;
     solicitudMultipleEspecialista = $('#hdfSolicitudesMultipleEspecialista').val() === 'True';
     bAreaRequiereAutorizacion = $('#hdfAreaRequiereAutorizacion').val() === '1';
     bSolRequiereAutorizacion = $('#hdfSolRequiereAutorizacion').val() === '1';
@@ -350,7 +350,7 @@ $(function () {
     $('#btnResumen').click(function () {
         //        if ($("#txtResumen").data("kendoEditor").value() == "") {
         //vcResumen = "<table><tr><td><b>Campo 1:</b></td><td>Descripción 1</td></tr><tr><td><b>Campo 2:</b></td><td>Descripción 2</td></tr></table>";
-        /*Edgar Garcoa 1402023 cambie vcResumen a vcResumenIndividual */
+        /*Edgar Garcia 1402023 cambie vcResumen a vcResumenIndividual */
         $("#txtResumen").data("kendoEditor").value(vcResumenIndividual);
         //        }
 
