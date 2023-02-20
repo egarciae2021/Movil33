@@ -1,0 +1,109 @@
+﻿<style> TD { mso-number-format:\@; } </style><table cellspacing='0' rules='all' border='1' id='tbl_Rep_Historico' style='border-collapse:collapse;'>
+	<tr style='font-weight:bolder;'>
+		<td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Línea</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Cod. Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Empleado</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>IMEI</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Modelo de Dispositivo</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Cod. Centro Costo</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Situación</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Inicio</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Fecha Fin</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Observación</td><td style='background-color: #25476a; color: #FFFFFF; text-aling: center; border: 1px solid;'>Usuario Modificador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>0000000000</td><td>EMPLEADO DESCONOCIDO</td><td>351813092160077</td><td>SAMSUNG GALAXY J7 PRIME</td><td></td><td>Disponible</td><td>07/12/2021</td><td>08/12/2021</td><td>INGRESO SISTEMA - CARGA DATA INICIAL</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>EB8AE683D57B</td><td>MELCHOR AGUILAR AGUILAR</td><td>351813092160077</td><td>SAMSUNG GALAXY J7 PRIME</td><td>100</td><td>Asignado</td><td>08/12/2021</td><td>20/02/2023</td><td>INGRESO SISTEMA - CARGA DATA INICIAL</td><td>prueba</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Cuenta Hija</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Dispositivo</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Plan</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Cuenta</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Empleado</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: SIMCARD</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha de Alta</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha Inicio de Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha Termino Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Meses de Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Observación para líneas</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: SIM</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Cuenta Hija</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Dispositivo</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Plan</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Cuenta</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Empleado</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: SIMCARD</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha de Alta</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td></td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha Inicio de Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Fecha Termino Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Meses de Contrato</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: Observación para líneas</td><td>Administrador</td>
+	</tr>
+	<tr>
+		<td>2212722264</td><td>1358105</td><td>LUIS FERNANDO JIMENEZ GARCIA</td><td>865841038906401</td><td>HUAWEI P SMART</td><td>100</td><td>Asignado</td><td>20/02/2023</td><td></td><td>Cambio en: SIM</td><td>Administrador</td>
+	</tr>
+
+	</tr>
+</table>
