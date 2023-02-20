@@ -1195,84 +1195,88 @@ Partial Class Common_Controles_BusquedaPrincipal
                 Campo = New BL_ENT_Campo(_TipoOrigen, oUsuario.IdCliente)
                 Dim lstCampo As List(Of ENT_ENT_Campo) = Campo.Listar(_vcTab, oUsuario, tipoCreacion)
 
-                'If (Me.Descripcion = "vcNomMarca") Then
-                '    _CodigoInterno = "vcCodMarca"
-                'End If
+                'Edgar Garcia 19022023 estaba comentado lo descomente
+                If (Me.Descripcion = "vcNomMarca") Then
+                    _CodigoInterno = "vcCodMarca"
+                End If
+
+
+
 
                 Dim dsDetalle As DataSet = Campo.ListarDetallePaginadoBusqueda(1, 1, _Codigo, "asc", vcTab, lstCampo, "",
                                                                                _CodigoInterno, "", _CodigoValor, Integer.Parse(_FiltroRegistro), "", "", 0, 0, _SolicitudTerminada) '_Condicion.Replace("###", "'").Replace("|", "'")
-                Campo.Dispose()
-                If dsDetalle.Tables.Count > 0 AndAlso dsDetalle.Tables(1).Rows.Count > 0 Then
+                    Campo.Dispose()
+                    If dsDetalle.Tables.Count > 0 AndAlso dsDetalle.Tables(1).Rows.Count > 0 Then
 
-                    Dim strCodigoValor As String = ""
-                    If _Codigo <> "" Then strCodigoValor = dsDetalle.Tables(1).Rows(0)(_Codigo)
-                    Dim strDescripcionValor As String = "" & dsDetalle.Tables(1).Rows(0)(_Descripcion)
-                    sbScript.AppendLine("   if (" & Me.ClientID & "_Valor != '') {")
-                    sbScript.AppendLine("       var id = " & Me.ClientID & "_Valor;")
-                    sbScript.AppendLine("       var descripcion ='" & strDescripcionValor & "';")
-                    sbScript.AppendLine("       var valorIdDescripcion = '';")
-                    sbScript.AppendLine("       var valorIdDescripcion_Texto = '';")
-                    If (Me.IdDescripcion <> "") Then
-                        sbScript.AppendLine("       try{")
-                        sbScript.AppendLine("           valorIdDescripcion = " & Me.IdDescripcion)
-                        sbScript.AppendLine("           valorIdDescripcion_Texto = valorIdDescripcion.split('|')[1]; ")
-                        sbScript.AppendLine("       } catch (e){")
-                        sbScript.AppendLine("           valorIdDescripcion_Texto = '';")
-                        sbScript.AppendLine("       }")
-                    End If
-                    If _Codigo = "" Then
-                        sbScript.AppendLine("       $('#" & Me.ClientID & "_txtValorBusqueda').val(descripcion);")
-                    Else
-                        sbScript.AppendLine("       var codigo ='" & strCodigoValor & "';")
-                        sbScript.AppendLine("       if (codigo != undefined)")
-                        sbScript.AppendLine("           $('#" & Me.ClientID & "_txtValorBusqueda').val(codigo + '=' + descripcion);")
-                    End If
+                        Dim strCodigoValor As String = ""
+                        If _Codigo <> "" Then strCodigoValor = dsDetalle.Tables(1).Rows(0)(_Codigo)
+                        Dim strDescripcionValor As String = "" & dsDetalle.Tables(1).Rows(0)(_Descripcion)
+                        sbScript.AppendLine("   if (" & Me.ClientID & "_Valor != '') {")
+                        sbScript.AppendLine("       var id = " & Me.ClientID & "_Valor;")
+                        sbScript.AppendLine("       var descripcion ='" & strDescripcionValor & "';")
+                        sbScript.AppendLine("       var valorIdDescripcion = '';")
+                        sbScript.AppendLine("       var valorIdDescripcion_Texto = '';")
+                        If (Me.IdDescripcion <> "") Then
+                            sbScript.AppendLine("       try{")
+                            sbScript.AppendLine("           valorIdDescripcion = " & Me.IdDescripcion)
+                            sbScript.AppendLine("           valorIdDescripcion_Texto = valorIdDescripcion.split('|')[1]; ")
+                            sbScript.AppendLine("       } catch (e){")
+                            sbScript.AppendLine("           valorIdDescripcion_Texto = '';")
+                            sbScript.AppendLine("       }")
+                        End If
+                        If _Codigo = "" Then
+                            sbScript.AppendLine("       $('#" & Me.ClientID & "_txtValorBusqueda').val(descripcion);")
+                        Else
+                            sbScript.AppendLine("       var codigo ='" & strCodigoValor & "';")
+                            sbScript.AppendLine("       if (codigo != undefined)")
+                            sbScript.AppendLine("           $('#" & Me.ClientID & "_txtValorBusqueda').val(codigo + '=' + descripcion);")
+                        End If
 
-                    If _TraerDatosFila Then
-                        'sbScript.AppendLine("       var datos = $('#" & Me.ClientID & "_grid').jqGrid('getRowData', 1);")
-                        'dsDetalle.Tables(1).Rows(0)
-                        sbScript.AppendLine("       fnEstadoOK_" & Me.ClientID & "(" + ObtieneFilaString(dsDetalle.Tables(1).Rows(0), lstCampos) + ");")
-                    Else
+                        If _TraerDatosFila Then
+                            'sbScript.AppendLine("       var datos = $('#" & Me.ClientID & "_grid').jqGrid('getRowData', 1);")
+                            'dsDetalle.Tables(1).Rows(0)
+                            sbScript.AppendLine("       fnEstadoOK_" & Me.ClientID & "(" + ObtieneFilaString(dsDetalle.Tables(1).Rows(0), lstCampos) + ");")
+                        Else
+                            sbScript.AppendLine("       fnEstadoOK_" & Me.ClientID & "(id);")
+                        End If
+                        sbScript.AppendLine("      if (valorIdDescripcion_Texto != '' && valorIdDescripcion_Texto != undefined) { ")
+                        sbScript.AppendLine("         $('#" & Me.ClientID & "_txtValorBusqueda').val(valorIdDescripcion_Texto);")
+                        sbScript.AppendLine("      }")
+                        sbScript.AppendLine("   }")
+
+                    ElseIf (_CodigoValor <> "") Then
+                        Dim strCodigoValor As String = ""
+                        If _Codigo <> "" Then strCodigoValor = _CodigoValor
+                        Dim strDescripcionValor As String = "" & _CodigoValor
+                        sbScript.AppendLine("   if (" & Me.ClientID & "_Valor != '') {")
+                        sbScript.AppendLine("       var id = " & Me.ClientID & "_Valor;")
+                        sbScript.AppendLine("       var descripcion ='" & strDescripcionValor & "';")
+                        sbScript.AppendLine("       var valorIdDescripcion = '';")
+                        sbScript.AppendLine("       var valorIdDescripcion_Texto = '';")
+                        If (Me.IdDescripcion <> "") Then
+                            sbScript.AppendLine("       try{")
+                            sbScript.AppendLine("           valorIdDescripcion = " & Me.IdDescripcion)
+                            sbScript.AppendLine("           valorIdDescripcion_Texto = valorIdDescripcion.split('|')[1]; ")
+                            sbScript.AppendLine("       } catch (e){")
+                            sbScript.AppendLine("           valorIdDescripcion_Texto = '';")
+                            sbScript.AppendLine("       }")
+                        End If
+                        If _Codigo = "" Then
+                            sbScript.AppendLine("       $('#" & Me.ClientID & "_txtValorBusqueda').val(descripcion);")
+                        Else
+                            sbScript.AppendLine("       var codigo ='" & strCodigoValor & "';")
+                            sbScript.AppendLine("       if (codigo != undefined)")
+                            sbScript.AppendLine("           $('#" & Me.ClientID & "_txtValorBusqueda').val(codigo + '=' + descripcion);")
+                        End If
+
                         sbScript.AppendLine("       fnEstadoOK_" & Me.ClientID & "(id);")
+                        sbScript.AppendLine("      if (valorIdDescripcion_Texto != '' && valorIdDescripcion_Texto != undefined) { ")
+                        sbScript.AppendLine("         $('#" & Me.ClientID & "_txtValorBusqueda').val(valorIdDescripcion_Texto);")
+                        sbScript.AppendLine("      }")
+                        sbScript.AppendLine("   }")
                     End If
-                    sbScript.AppendLine("      if (valorIdDescripcion_Texto != '' && valorIdDescripcion_Texto != undefined) { ")
-                    sbScript.AppendLine("         $('#" & Me.ClientID & "_txtValorBusqueda').val(valorIdDescripcion_Texto);")
-                    sbScript.AppendLine("      }")
-                    sbScript.AppendLine("   }")
-
-                ElseIf (_CodigoValor <> "") Then
-                    Dim strCodigoValor As String = ""
-                    If _Codigo <> "" Then strCodigoValor = _CodigoValor
-                    Dim strDescripcionValor As String = "" & _CodigoValor
-                    sbScript.AppendLine("   if (" & Me.ClientID & "_Valor != '') {")
-                    sbScript.AppendLine("       var id = " & Me.ClientID & "_Valor;")
-                    sbScript.AppendLine("       var descripcion ='" & strDescripcionValor & "';")
-                    sbScript.AppendLine("       var valorIdDescripcion = '';")
-                    sbScript.AppendLine("       var valorIdDescripcion_Texto = '';")
-                    If (Me.IdDescripcion <> "") Then
-                        sbScript.AppendLine("       try{")
-                        sbScript.AppendLine("           valorIdDescripcion = " & Me.IdDescripcion)
-                        sbScript.AppendLine("           valorIdDescripcion_Texto = valorIdDescripcion.split('|')[1]; ")
-                        sbScript.AppendLine("       } catch (e){")
-                        sbScript.AppendLine("           valorIdDescripcion_Texto = '';")
-                        sbScript.AppendLine("       }")
-                    End If
-                    If _Codigo = "" Then
-                        sbScript.AppendLine("       $('#" & Me.ClientID & "_txtValorBusqueda').val(descripcion);")
-                    Else
-                        sbScript.AppendLine("       var codigo ='" & strCodigoValor & "';")
-                        sbScript.AppendLine("       if (codigo != undefined)")
-                        sbScript.AppendLine("           $('#" & Me.ClientID & "_txtValorBusqueda').val(codigo + '=' + descripcion);")
-                    End If
-
-                    sbScript.AppendLine("       fnEstadoOK_" & Me.ClientID & "(id);")
-                    sbScript.AppendLine("      if (valorIdDescripcion_Texto != '' && valorIdDescripcion_Texto != undefined) { ")
-                    sbScript.AppendLine("         $('#" & Me.ClientID & "_txtValorBusqueda').val(valorIdDescripcion_Texto);")
-                    sbScript.AppendLine("      }")
-                    sbScript.AppendLine("   }")
                 End If
-            End If
-            sbScript.AppendLine("}")
+                sbScript.AppendLine("}")
 
             Return sbScript.ToString
         Catch ex As Exception
