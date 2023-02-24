@@ -8543,8 +8543,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Browsers\firefox.browser" />
-    <Content Include="App_Browsers\ie.browser" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Common\ControlesJQuery\ColorPicker\images\Thumbs.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
