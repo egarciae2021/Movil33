@@ -92,7 +92,7 @@
                                     <asp:Label ID="LabelDescripcionsol" runat="server" Text="Descripción de la solicitud"></asp:Label>
                                 </td>
                                 <td class="">
-                                    <asp:TextBox ID="TxtDescripcionsol" runat="server" Width="200px" MaxLength="5000" ></asp:TextBox>
+                                    <asp:Textbox  ID="TxtDescripcionsol" runat="server" Width="200px" MaxLength="5000" TextMode="MultiLine"></asp:Textbox>
                                 </td>
                             </tr>
                           
