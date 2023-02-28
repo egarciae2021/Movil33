@@ -1131,6 +1131,7 @@ $(function () {
     });
 
     $("#btnGuardar").on("click", function () {
+        debugger
         if ($("#hdfMensajeLinea").val() != '') {
             alerta($("#lblMensajeLinea").text());
             return;
