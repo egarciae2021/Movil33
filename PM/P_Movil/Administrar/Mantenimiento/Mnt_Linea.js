@@ -4,7 +4,7 @@
 //jherrera 20130423 Se agrego el campo F_inCodTip
 //------------------------------------------------------------
 var boolCargarServicios = 0; //0=No tienen valor asignado, 1=IFrame está listo, 2=Servicios listos, cargar despues del load del iframe //20141029 wapumayta
-var PermitirGuardar = true;
+var PermitirGuardar = true; AceptarGuardar=true
 function linea(P_vcNum, dcPerFacIni, dcPerFacFin, dcMon, btVig, F_inCodTip, NombreCampana, FechaInicioContrato, MesesContrato, IdCampana, FechaAlta) {
     this.P_vcNum = P_vcNum;
     this.Empleado = new empleado();
