@@ -299,11 +299,7 @@ var EdicionConConfirmacion = true;
 var vValorControlActual = '';
 var vcFechaAsignacionEmpleado = '';
 var vcFechaAsignacionDispositivo = '';
-$(function () {
-
-
-   
-
+$(function () { 
 
     $('#ddlSimCard').select2();
     $('#ddlPlan').select2();
@@ -1130,8 +1126,58 @@ $(function () {
         }
     });
 
+    //EDGAR GARCIA 01032023
+    var Linea_Old = new Object();
+    Linea_Old.emp = $("#txtEmpleado").val()
+    Linea_Old.simcard = $("#select2-ddlSimCard-container").text()
+    Linea_Old.simcard = $("#select2-ddlPlan-container").text()
+    Linea_Old.fechaAlta = $("#txtFechaAlta").val()
+    Linea_Old.MesesContrato = $("#txtMesesContrato").val()
+    Linea_Old.Dispositivo = $("#hdfCodDispositivos").val()
+    Linea_Old.DarBaja = $("#chkDarBaja").val()
+    Linea_Old.Observacion = $("#txt_Observacion2").val()
+    Linea_Old.Sim = $("#txt_SIM").val()
+    Linea_Old.Region = $("#txt_Region").val()
+    Linea_Old.Responsabilidad = $("#txt_Responsabilidad").val()
+    Linea_Old.UnidadNegocio = $("#txt_UnidadNegocio").val()
+    Linea_Old.Estatus = $("#ddl_EstatusTelefono").val()
+    Linea_Old.Estatus = $("#ddl_EstatusCuenta").val()
+    Linea_Old.FechaTermino = $("#txt_FechaTerminoContrato").val()
+    Linea_Old.Vencimiento = $("#txt_Vencimiento").val()
+    Linea_Old.CuentaHija = $("#txt_CuentaHija").val()
+    Linea_Old.PlanOperador = $("#txt_CodigoPlanOperador").val()
+    Linea_Old.NombrePlanOperador = $("#txt_NomPlanOperador").val()
+    Linea_Old.ContactoUN = $("#txt_ContactoUN").val()
+    Linea_Old.UltimaActualizacion = $("#ddl_UltimaActualizacion").val() 
+    // 
+
     $("#btnGuardar").on("click", function () {
-        debugger
+        var Linea_New = new Object();
+        Linea_New.emp = $("#txtEmpleado").val()
+        Linea_New.simcard = $("#select2-ddlSimCard-container").text()
+        Linea_New.simcard = $("#select2-ddlPlan-container").text()
+        Linea_New.fechaAlta = $("#txtFechaAlta").val()
+        Linea_New.MesesContrato = $("#txtMesesContrato").val()
+        Linea_New.Dispositivo = $("#hdfCodDispositivos").val()
+        Linea_New.DarBaja = $("#chkDarBaja").val()
+        Linea_New.Observacion = $("#txt_Observacion2").val()
+        Linea_New.Sim = $("#txt_SIM").val()
+        Linea_New.Region = $("#txt_Region").val()
+        Linea_New.Responsabilidad = $("#txt_Responsabilidad").val()
+        Linea_New.UnidadNegocio = $("#txt_UnidadNegocio").val()
+        Linea_New.Estatus = $("#ddl_EstatusTelefono").val()
+        Linea_New.Estatus = $("#ddl_EstatusCuenta").val()
+        Linea_New.FechaTermino = $("#txt_FechaTerminoContrato").val()
+        Linea_New.Vencimiento = $("#txt_Vencimiento").val()
+        Linea_New.CuentaHija = $("#txt_CuentaHija").val()
+        Linea_New.PlanOperador = $("#txt_CodigoPlanOperador").val()
+        Linea_New.NombrePlanOperador = $("#txt_NomPlanOperador").val()
+        Linea_New.ContactoUN = $("#txt_ContactoUN").val()
+        Linea_New.UltimaActualizacion = $("#ddl_UltimaActualizacion").val()
+    //
+
+
+
         if ($("#hdfMensajeLinea").val() != '') {
             alerta($("#lblMensajeLinea").text());
             return;
