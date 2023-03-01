@@ -377,7 +377,8 @@ Partial Class P_Movil_Administrar_Solicitudes_Adm_SolicitudesConfiguracion
             txtTabla.Text = dtTipoSolicitud.Rows(0)("vcTabla").ToString()
 
             'Edgar Garcia 06022023 
-            TxtDescripcionsol.Text = dtTipoSolicitud.Rows(0)("vcDescripcionSol").ToString().Replace("\n", vbCrLf)
+            TxtDescripcionsol.Text = dtTipoSolicitud.Rows(0)("vcDescripcionSol")
+
 
             txtDescripcionTipo.Text = dtTipoSolicitud.Rows(0)("vcDescripcion").ToString()
             ddlLineaTipo.SelectedValue = dtTipoSolicitud.Rows(0)("inLineaTipo").ToString()
