@@ -176,7 +176,6 @@ function obtenerTamanoPantalla() {
 function ResizeEtiquetaDescSol(xmensaje) { 
 
     let anchototal = document.getElementById('DescripcionSol').clientWidth
-    xmensaje = xmensaje.replace(/\\n/g, '\n')
     const anchocombox = 235
      
 

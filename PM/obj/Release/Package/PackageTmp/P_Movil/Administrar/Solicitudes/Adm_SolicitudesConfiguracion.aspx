@@ -83,7 +83,7 @@
                                     <asp:Label ID="lblDescripcionTipo" runat="server" Text="Descripción Tipo"></asp:Label>
                                 </td>
                                 <td class="">
-                                    <asp:TextBox ID="txtDescripcionTipo" runat="server" Width="200px" MaxLength="50"></asp:TextBox>
+                                    <asp:TextBox ID="txtDescripcionTipo" runat="server" Width="200px"   MaxLength="50"></asp:TextBox>
                                 </td>
                             </tr>
                             <%--EDGAR GARCIA 06022023 SE AGREGA LA DESCRIPCION DE SOLICITUD--%>
@@ -92,7 +92,7 @@
                                     <asp:Label ID="LabelDescripcionsol" runat="server" Text="Descripción de la solicitud"></asp:Label>
                                 </td>
                                 <td class="">
-                                    <asp:Textbox  ID="TxtDescripcionsol" runat="server" Width="200px" MaxLength="5000" TextMode="MultiLine"></asp:Textbox>
+                                    <asp:Textbox  ID="TxtDescripcionsol" runat="server" Width="400px" Height="75px" MaxLength="5000" TextMode="MultiLine" style="resize:none;"></asp:Textbox>
                                 </td>
                             </tr>
                           

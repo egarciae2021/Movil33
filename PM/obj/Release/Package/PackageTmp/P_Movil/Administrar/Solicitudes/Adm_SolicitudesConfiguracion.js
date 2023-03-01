@@ -5820,7 +5820,7 @@ $(function () {
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	//------------------------------------------------------EDITAR TIPO DE SOLICITUD-------------------------------------------------------//
 	if ($("#hdfCodTipSol").val() != "") {
-		debugger
+		
 		$("#dvTabs").show();
 
 		tbCampos.jqGrid("clearGridData")
@@ -6115,7 +6115,6 @@ $(function () {
 		var biActivo = "0";
 
 		var vcDescripcionSol = $.trim($("#TxtDescripcionsol").val())
-		vcDescripcionSol = vcDescripcionSol.replace(/[\r\n]+/g, "\\n");
 
 		//ESCALAMIENTO
 		var escalamiento = 0;
