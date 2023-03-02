@@ -1127,75 +1127,74 @@ $(function () {
     }); 
 
     //EDGAR GARCIA 01032023 control de cambios linea
-    var Linea_Old = new Object();
-    Linea_Old.emp = $("#txtEmpleado").val()
-    Linea_Old.simcard = $("#select2-ddlSimCard-container").text()
-    Linea_Old.plan = $("#hdfCodPlan").val()
-    Linea_Old.fechaAlta = $("#txtFechaAlta").val()
-    Linea_Old.MesesContrato = $("#txtMesesContrato").val()
-    Linea_Old.Dispositivo = $("#hdfCodDispositivos").val()
-    Linea_Old.DarBaja = $('#chkDarBaja').prop('checked')
-    Linea_Old.Observacion = $("#txt_Observacion2").val()
-    Linea_Old.Sim = $("#txt_SIM").val()
-    Linea_Old.Region = $("#txt_Region").val()
-    Linea_Old.Responsabilidad = $("#txt_Responsabilidad").val()
-    Linea_Old.UnidadNegocio = $("#txt_UnidadNegocio").val()
-    Linea_Old.EstatusTelf = $("#ddl_EstatusTelefono").val()
-    Linea_Old.EstatusCuenta = $("#ddl_EstatusCuenta").val()
-    Linea_Old.FechaTermino = $("#txt_FechaTerminoContrato").val()
-    Linea_Old.Vencimiento = $("#txt_Vencimiento").val()
-    Linea_Old.CuentaHija = $("#hdfCodCuenta").val()
-    Linea_Old.PlanOperador = $("#txt_CodigoPlanOperador").val()
-    Linea_Old.NombrePlanOperador = $("#txt_NomPlanOperador").val()
-    Linea_Old.ContactoUN = $("#txt_ContactoUN").val()
-    Linea_Old.UltimaActualizacion = $("#ddl_UltimaActualizacion").val() 
-    //Edgar Garcia 01032023 
-    function compararObjetos(obj1, obj2) { 
-        // Recorremos las propiedades del primer objeto
-        for (let propiedad in obj1) { 
-                // Comprobamos si los valores de ambas propiedades son iguales
-            console.log( propiedad)
+    //var Linea_Old = new Object();
+    //Linea_Old.emp = $("#txtEmpleado").val()
+    //Linea_Old.simcard = $("#select2-ddlSimCard-container").text()
+    //Linea_Old.plan = $("#hdfCodPlan").val()
+    //Linea_Old.fechaAlta = $("#txtFechaAlta").val()
+    //Linea_Old.MesesContrato = $("#txtMesesContrato").val()
+    //Linea_Old.Dispositivo = $("#hdfCodDispositivos").val()
+    //Linea_Old.DarBaja = $('#chkDarBaja').prop('checked')
+    //Linea_Old.Observacion = $("#txt_Observacion2").val()
+    //Linea_Old.Sim = $("#txt_SIM").val()
+    //Linea_Old.Region = $("#txt_Region").val()
+    //Linea_Old.Responsabilidad = $("#txt_Responsabilidad").val()
+    //Linea_Old.UnidadNegocio = $("#txt_UnidadNegocio").val()
+    //Linea_Old.EstatusTelf = $("#ddl_EstatusTelefono").val()
+    //Linea_Old.EstatusCuenta = $("#ddl_EstatusCuenta").val()
+    //Linea_Old.FechaTermino = $("#txt_FechaTerminoContrato").val()
+    //Linea_Old.Vencimiento = $("#txt_Vencimiento").val()
+    //Linea_Old.CuentaHija = $("#hdfCodCuenta").val()
+    //Linea_Old.PlanOperador = $("#txt_CodigoPlanOperador").val()
+    //Linea_Old.NombrePlanOperador = $("#txt_NomPlanOperador").val()
+    //Linea_Old.ContactoUN = $("#txt_ContactoUN").val()
+    //Linea_Old.UltimaActualizacion = $("#ddl_UltimaActualizacion").val() 
+    ////Edgar Garcia 01032023 
+    //function compararObjetos(obj1, obj2) { 
+    //    // Recorremos las propiedades del primer objeto
+    //    for (let propiedad in obj1) { 
+    //            // Comprobamos si los valores de ambas propiedades son iguales
+    //        console.log( propiedad)
 
-            if (obj1[propiedad] !== obj2[propiedad]) {
-                    return false;
-                } 
-        }
-        // Si hemos llegado hasta aquí, es que los objetos tienen las mismas propiedades y valores
-        return true;
-    }
+    //        if (obj1[propiedad] !== obj2[propiedad]) {
+    //                return false;
+    //            } 
+    //    }
+    //    // Si hemos llegado hasta aquí, es que los objetos tienen las mismas propiedades y valores
+    //    return true;
+    //}
      
     $("#btnGuardar").on("click", function () {
-        var Linea_New = new Object();
-        Linea_New.emp = $("#txtEmpleado").val()
-        Linea_New.simcard = $("#select2-ddlSimCard-container").text()
-        Linea_New.plan = $("#ddlPlan option:selected").val()
-        Linea_New.fechaAlta = $("#txtFechaAlta").val()
-        Linea_New.MesesContrato = $("#txtMesesContrato").val()
-        Linea_New.Dispositivo = $("#txt_Dispositivos").val().split('-')[0]
-        Linea_New.DarBaja = $('#chkDarBaja').prop('checked')
-        Linea_New.Observacion = $("#txt_Observacion2").val()
-        Linea_New.Sim = $("#txt_SIM").val()
-        Linea_New.Region = $("#txt_Region").val()
-        Linea_New.Responsabilidad = $("#txt_Responsabilidad").val()
-        Linea_New.UnidadNegocio = $("#txt_UnidadNegocio").val()
-        Linea_New.EstatusTelf = $("#ddl_EstatusTelefono").val()
-        Linea_New.EstatusCuenta = $("#ddl_EstatusCuenta").val()
-        Linea_New.FechaTermino = $("#txt_FechaTerminoContrato").val()
-        Linea_New.Vencimiento = $("#txt_Vencimiento").val()
-        Linea_New.CuentaHija = $("#select2-ddlCuenta-container").text()
-        Linea_New.PlanOperador = $("#txt_CodigoPlanOperador").val()
-        Linea_New.NombrePlanOperador = $("#txt_NomPlanOperador").val()
-        Linea_New.ContactoUN = $("#txt_ContactoUN").val()
-        Linea_New.UltimaActualizacion = $("#ddl_UltimaActualizacion").val()
+        //var Linea_New = new Object();
+        //Linea_New.emp = $("#txtEmpleado").val()
+        //Linea_New.simcard = $("#select2-ddlSimCard-container").text()
+        //Linea_New.plan = $("#ddlPlan option:selected").val()
+        //Linea_New.fechaAlta = $("#txtFechaAlta").val()
+        //Linea_New.MesesContrato = $("#txtMesesContrato").val()
+        //Linea_New.Dispositivo = $("#txt_Dispositivos").val().split('-')[0]
+        //Linea_New.DarBaja = $('#chkDarBaja').prop('checked')
+        //Linea_New.Observacion = $("#txt_Observacion2").val()
+        //Linea_New.Sim = $("#txt_SIM").val()
+        //Linea_New.Region = $("#txt_Region").val()
+        //Linea_New.Responsabilidad = $("#txt_Responsabilidad").val()
+        //Linea_New.UnidadNegocio = $("#txt_UnidadNegocio").val()
+        //Linea_New.EstatusTelf = $("#ddl_EstatusTelefono").val()
+        //Linea_New.EstatusCuenta = $("#ddl_EstatusCuenta").val()
+        //Linea_New.FechaTermino = $("#txt_FechaTerminoContrato").val()
+        //Linea_New.Vencimiento = $("#txt_Vencimiento").val()
+        //Linea_New.CuentaHija = $("#select2-ddlCuenta-container").text()
+        //Linea_New.PlanOperador = $("#txt_CodigoPlanOperador").val()
+        //Linea_New.NombrePlanOperador = $("#txt_NomPlanOperador").val()
+        //Linea_New.ContactoUN = $("#txt_ContactoUN").val()
+        //Linea_New.UltimaActualizacion = $("#ddl_UltimaActualizacion").val()
 
-        console.log(Linea_Old) 
-        console.log(Linea_New) 
+       
        
 
-        if ( compararObjetos(Linea_Old, Linea_New)) { 
-            alerta("Sin cambios en la linea");
-            return ;
-        } 
+        //if ( compararObjetos(Linea_Old, Linea_New)) { 
+        //    alerta("Sin cambios en la linea");
+        //    return ;
+        //} 
           //
 
         if ($("#hdfMensajeLinea").val() != '') {
