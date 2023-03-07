@@ -5,7 +5,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\publicaciones qa activacel\ProductoMovil</_PublishTargetUrl>
-    <History>True|2023-03-01T19:46:47.8072784Z;True|2023-02-15T14:54:00.9070417-05:00;True|2023-02-13T09:12:06.2854361-05:00;True|2023-02-09T17:02:21.4857793-05:00;</History>
+    <History>True|2023-03-07T01:12:13.3344146Z;True|2023-03-01T14:46:47.8072784-05:00;True|2023-02-15T14:54:00.9070417-05:00;True|2023-02-13T09:12:06.2854361-05:00;True|2023-02-09T17:02:21.4857793-05:00;</History>
+    <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Browsers/firefox.browser">
@@ -375,13 +376,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/13/2012 07:19:34</publishTime>
     </File>
     <File Include="bin/PCSistelMovil.dll">
-      <publishTime>03/01/2023 14:46:17</publishTime>
+      <publishTime>03/06/2023 20:11:30</publishTime>
     </File>
     <File Include="bin/PCSistelMovil.pdb">
-      <publishTime>03/01/2023 14:46:17</publishTime>
+      <publishTime>03/06/2023 20:11:30</publishTime>
     </File>
     <File Include="bin/PCSistelMovil.xml">
-      <publishTime>03/01/2023 14:46:15</publishTime>
+      <publishTime>03/06/2023 20:11:24</publishTime>
     </File>
     <File Include="bin/PCSistelMovilLog45.dll">
       <publishTime>01/12/2023 11:10:42</publishTime>
@@ -10860,7 +10861,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/07/2022 16:01:30</publishTime>
     </File>
     <File Include="P_Movil/Administrar/Mantenimiento/Mnt_Linea.js">
-      <publishTime>03/01/2023 13:22:04</publishTime>
+      <publishTime>03/02/2023 17:48:37</publishTime>
     </File>
     <File Include="P_Movil/Administrar/Mantenimiento/Mnt_LineaServicio.aspx">
       <publishTime>11/03/2022 21:47:12</publishTime>
